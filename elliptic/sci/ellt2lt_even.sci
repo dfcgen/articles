@@ -1,0 +1,53 @@
+// $Id: ellt2lt_even.sci,v 1.1 2004-09-27 19:55:08 ralf Exp $
+//
+// Scilab plot of second elliptic transformation for even degree
+// from x=0 to x=1
+//
+
+filename="ellt2lt_even.fig";
+segs=400;               // sample points in each (imag, real) direction
+n = 6;                  // degree of polynomial
+k = 1/sqrt(2);          // module k = 0.7071
+
+// derived variables
+mx = k*k;
+Kx = %k(mx);            // real quarter period of sn(x;k)
+Kxc = %k(1-mx);      // imag quarter period of sn(x;k)
+
+deff('[y]=%cn(x,m)', 's=%sn(x, m); y=sqrt(1 - s.*s);');
+
+i = 2:2:n-2;                    // calculation of even coefficients a[i]
+arge = i * (Kxc/n);
+ae = %sn(arge, 1-mx) ./ %cn(arge, 1-mx);
+
+j = 1:2:n-1;                    // calculation of odd coefficients a[i]
+argo = j * (Kxc/n);
+ao = %sn(argo, 1-mx) ./ %cn(argo, 1-mx);
+
+M = prod(1 + ae.^(-2)) / prod(1 + ao.^(-2));
+xe = 1/(1-(1-mx) * (%sn(Kxc/n, 1-mx))^2);
+lambda = M/real(sqrt(xe)) * prod(1 + xe * ao.^(-2)) / prod(1 + xe * ae.^(-2));
+my = lambda*lambda;             // y = sn(u/M; lambda)
+
+x_min = 1;                      // plot from x = 0
+x_max = 1/k;                    // to 1/k
+y_min = 1;                      // y bounds
+y_max = real(1/lambda);
+
+bound_rect=[x_min, y_min, x_max, y_max]
+
+driver('Fig');                  // do the plot directly into the .fig-file
+xinit(filename);
+
+
+// Second segment: plot for complex u from K+j0 to K+jK'
+// x=nd(Im{u}; k')    y=nd(Im{u}/M;lambda')
+// This corresponds to x=1..1/k, y=1..1/lambda
+u = 0:Kxc/segs:Kxc;
+x = real(%sn(Kx+%i*u, mx));
+y = real(%sn((Kx+%i*u)/M, my));
+plot2d(x, y, 1, "011", "1", bound_rect, [1, 1, 1, 1]);
+
+xend();
+unix("xfig -a -exportLanguage eps -paper_size A4 -rigid " + filename);
+// exit;
