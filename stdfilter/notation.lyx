@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: notation.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
+Version: $Id: notation.lyx,v 1.3 2005-01-09 16:49:23 ralf Exp $
 \end_inset 
 
 
@@ -122,10 +122,18 @@ begin{multicols}{2}
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\D$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
  Drosselung (chrakteristische Funktion)
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\usf(t)$
+\end_inset 
+
+ Einheitssprung
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -162,15 +170,15 @@ begin{multicols}{2}
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\gd$
+\begin_inset Formula $\gd(x)$
 \end_inset 
 
  
 \noun on 
 Gudermann
 \noun default 
--Funktion 
-\begin_inset Formula $\arctan(\sinh)$
+-Funktion: 
+\begin_inset Formula $\arctan(\sinh\, x)$
 \end_inset 
 
 
@@ -190,6 +198,14 @@ Gudermann
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\irf(t)$
+\end_inset 
+
+ Impulsantwort
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\mathbb{C}$
 \end_inset 
 
@@ -198,7 +214,7 @@ Gudermann
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\cos$
+\begin_inset Formula $\cos(x)$
 \end_inset 
 
  Kosinus
@@ -209,8 +225,8 @@ Gudermann
 \begin_inset Formula $\cosec$
 \end_inset 
 
- Kosekans 
-\begin_inset Formula $\left(\sin^{-1}\right)$
+(x) Kosekans: 
+\begin_inset Formula $\sin^{-1}x$
 \end_inset 
 
 
@@ -225,7 +241,11 @@ Gudermann
 \noun on 
 Laplace
 \noun default 
--Variable
+-Variable 
+\begin_inset Formula $\lps=\alpha+\jw$
+\end_inset 
+
+
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -250,11 +270,11 @@ Laplace
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula ${\zn[{\scriptscriptstyle (\D)}]{\omega}{}}$
+\begin_inset Formula ${\zn[{\scriptscriptstyle (\drf)}]{\omega}{}}$
 \end_inset 
 
  Nullstelle von 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
 
@@ -284,11 +304,11 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula ${\pn[{\scriptscriptstyle (\D)}]{\omega}{}}$
+\begin_inset Formula ${\pn[{\scriptscriptstyle (\drf)}]{\omega}{}}$
 \end_inset 
 
  Pol von 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
 
@@ -324,11 +344,11 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\sec$
+\begin_inset Formula $\sec(x)$
 \end_inset 
 
- Sekans 
-\begin_inset Formula $\left(\cos^{-1}\right)$
+ Sekans: 
+\begin_inset Formula $\cos^{-1}x$
 \end_inset 
 
 
@@ -336,7 +356,7 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\sin$
+\begin_inset Formula $\sin(x)$
 \end_inset 
 
  Sinus
@@ -344,7 +364,7 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\tan$
+\begin_inset Formula $\tan(x)$
 \end_inset 
 
  Tangens
