@@ -1,0 +1,338 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Properties of algebraic polynomials
+\layout Standard
+
+Version: $Id: polynomials.lyx,v 1.1 2004-09-30 22:43:35 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+Definition
+\layout Standard
+
+Algebraische Polynome sind Funktionen der Form
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(x)=\poly{a}{x}{n}=\sum_{i=0}^{n}a_{i}x^{i}\label{eq:poly_sum}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+mit reellen Koeffizienten 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+.
+ Sie werden als normiert bezeichnet, wenn der Leitkoeffizient 
+\begin_inset Formula $a_{n}=1$
+\end_inset 
+
+ ist.
+ Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors 
+\begin_inset Formula $K=a_{n}$
+\end_inset 
+
+ immer möglich.
+\layout Standard
+
+
+\begin_inset Formula \[
+p(x)=K\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^{n}+\sum_{i=0}^{n-1}b_{i}x^{i}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die letzte Form ist vor allem dann zwingend notwendig, wenn die Linearfaktordars
+tellung mit Hilfe der 
+\begin_inset Formula $n$
+\end_inset 
+
+ Nullstellen 
+\begin_inset Formula $\zn{x}{i}$
+\end_inset 
+
+ Anwendung finden soll.
+ 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(x)=K(x-\zn{x}{1})\cdot(x-\zn{x}{2})\cdots(x-\zn{x}{n})=K\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
+
+\end_inset 
+
+
+\layout Section
+
+Erste Ableitung
+\layout Standard
+
+Die Ableitung eines Polynoms in Summendarstellung, also aus den Koeffizienten,
+ ist trivial
+\layout Standard
+
+
+\begin_inset Formula \[
+p'(x)=\sum_{i=1}^{n}i\, a_{i}x^{i-1}=\sum_{k=0}^{n-1}(k+1)a_{k+1}x^{k}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Interessant ist jedoch die Gewinnung der ersten Ableitung von 
+\begin_inset Formula $p(x)$
+\end_inset 
+
+ aus den Nullstellen 
+\begin_inset Formula $\zn{x}{i}$
+\end_inset 
+
+.
+ Dazu geht man von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:poly_prd}
+
+\end_inset 
+
+ aus und verwendet (wegen der störenden Produkte) logarithmische Differentiation
+ in Verbindung mit der Regel 
+\begin_inset Formula $\left[\ln x\right]'=x^{-1}$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+p'(x) & =p(x)\frac{p'(x)}{p(x)}=p(x)\left[\ln p(x)\right]'\\
+ & =Kp(x)\left[\ln\prod_{i=1}^{n}(x-\zn{x}{i})\right]'\\
+ & =Kp(x)\sum_{i=1}^{n}\left[\ln(x-\zn{x}{i})\right]'\\
+p'(x) & =Kp(x)\sum_{i=1}^{n}\frac{1}{x-\zn{x}{i}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Dieses bemerkenswerte Ergebnis gibt uns die Möglichkeit die Ableitung eines
+ Polynoms an der Stelle 
+\begin_inset Formula $x=\xi$
+\end_inset 
+
+ mittels der Nullstellen zu bestimmen.
+ Für die Berechnung der Ableitung an einer der Nullstellen 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+ selbst, scheint letzte Formel wegen 
+\begin_inset Formula $\lim_{x\rightarrow\zn{x}{k}}p(x)/(x-\zn{x}{k})\rightarrow0/0$
+\end_inset 
+
+ zuerst ungeeignet.
+ Schreibt man die ganze Formel aber ausführlich und setzt 
+\begin_inset Formula $x=\zn{x}{k}$
+\end_inset 
+
+, also
+\layout Standard
+
+
+\begin_inset Formula \[
+p'(\zn{x}{k})=K\left[\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\ldots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{p(x)}{x-\zn{x}{i}}}_{i=k}+\ldots+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+dann ist zu erkennen, daß
+\layout Enumerate
+
+wegen 
+\begin_inset Formula $p(\zn{x}{k})=0$
+\end_inset 
+
+ alle Summanden mit 
+\begin_inset Formula $i\neq k$
+\end_inset 
+
+ verschwinden
+\layout Enumerate
+
+und für 
+\begin_inset Formula $i=k$
+\end_inset 
+
+ der Faktor 
+\begin_inset Formula $x-\zn{x}{i}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $x-\zn{x}{k}$
+\end_inset 
+
+, welcher in Zähler und Nenner vorhanden ist, gekürzt werden kann.
+\layout Standard
+
+Die Ableitung an der Nullstelle 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+ nimmt deshalb folgende einfachen Form an:
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+p'(\zn{x}{k}) & = & K^{2}\prod_{\substack{i=1\\
+i\neq k}
+}^{n}(\zn{x}{k}-\zn{x}{i})\msp.\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Section
+
+Nullstellen
+\layout Standard
+
+Die Produktdarstellung nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:poly_prd}
+
+\end_inset 
+
+ wurde erstmals von C.\SpecialChar ~
+F.
+ Gauss in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Gauss:1799}
+
+\end_inset 
+
+ bewiesen und ermöglicht (bei vorausgesetzten reellen Koeffizienten 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+) grundsätzliche Aussagen zu den Nullstellen.
+ Eine der wichtigsten ist, daß Nullstellen entweder konjugiert komplex (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ imaginär) auftreten oder aber reell sind.
+ Wäre diese Bedingung nicht erfüllt, dann würde Ausmultiplizieren der Produktdar
+stellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:poly_prd}
+
+\end_inset 
+
+ (zur Gewinnung der Form nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:poly_sum}
+
+\end_inset 
+
+) nicht zu reellen Koeffizienten 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+ führen.
+\layout Standard
+
+Die Nullstellen eines Polynoms müssen nicht notwendigerweise alle verschieden
+ sein, oftmals sind sogenannte 
+\begin_inset Quotes eld
+\end_inset 
+
+mehrfache
+\begin_inset Quotes erd
+\end_inset 
+
+ Nullstellen vorhanden.
+ Dieser Umstand spiegelt sich dann in der Darstellungsmöglichkeit als Linearfakt
+or der Form 
+\begin_inset Formula $(x-\zn{x}{k})^{m}$
+\end_inset 
+
+ wieder, in der 
+\begin_inset Formula $m$
+\end_inset 
+
+ die Vielfachheit der Nullstelle angibt.
+ Die allgemeine Definition der Vielfachheit einer Nullstelle 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+ hat aber etwas mit den Ableitungen von 
+\begin_inset Formula $p(x)$
+\end_inset 
+
+ an dieser Stelle zu tun
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein weiterer Zusammenhang besteht zur Aussage, eine Funktion sei an einer
+ Stelle maximal flach.
+\end_inset 
+
+.
+\the_end
