@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.7 2004-12-24 17:13:40 ralf Exp $
+Version: $Id: probabil.lyx,v 1.8 2005-01-02 15:24:26 ralf Exp $
 \end_inset 
 
 
@@ -126,7 +126,7 @@ end{htmlonly}
 
 \layout Title
 
-Zufallsgrößen
+Zufallsgrößen und -prozesse
 \layout Author
 
 Copyright 
@@ -141,6 +141,39 @@ copyright
 
 \SpecialChar ~
 Ralf Hoppe
+\layout Abstract
+
+Das vorliegende Papier richtet sich in erster Linie an Ingenieure und Studenten
+ technischer Fachrichtungen, die gelegentlich mit Zufallsgrößen und -prozessen
+ in Berührung kommen und ihr Wissen in diesem Zusammenhang auffrischen wollen
+ (oder auch müssen).
+ Dabei werden mit Schwerpunkt die kontinuierlichen Zufallsgrößen und -prozesse
+ betrachtet sowie (am Schluß) einige Anwendungen gegeben, mit denen ich
+ selbst Berührung hatte.
+ Möglicherweise besteht inhaltlich eine gewisse Tendenz zu Fachrichtungen
+ wie der Nachrichtentechnik, Signalverarbeitung oder der theoretischen Elektrote
+chnik, die dann meinen Interessen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der Ausbildung zugeschrieben werden muß.
+\layout Abstract
+
+Prinzipiell vorausgesetzt werden die Grundkenntnisse der höheren Mathematik,
+ insbesondere der Analysis, Differential- und Integralrechnung, der 
+\noun on 
+Fourier
+\noun default 
+-Transformation sowie etwas Kombinatorik.
+ Um jedoch die praktische Anwendbarkeit nicht aus den Augen zu verlieren,
+ bleiben Beweise und manchmal auch Notationen auf einer Ebene, die nicht
+ unbedingt von mathematischer Exaktheit geprägt ist.
 \layout Standard
 
 
@@ -158,7 +191,7 @@ Diskrete Zufallsgrößen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!diskrete}
+\begin_inset LatexCommand \index{Zufallsgrößen!diskrete|(}
 
 \end_inset 
 
@@ -171,7 +204,7 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \begin_inset Formula $N$
 \end_inset 
 
- verschiedene und diskrete Werte 
+ verschiedene diskrete Werte 
 \begin_inset Formula $x_{i}$
 \end_inset 
 
@@ -185,7 +218,12 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \end_inset 
 
  betragen.
- Die Wahrscheinlichkeit dafür, daß 
+ Die Wahrscheinlichkeit
+\begin_inset LatexCommand \index{Wahrscheinlichkeit}
+
+\end_inset 
+
+ dafür, daß 
 \begin_inset Formula $X$
 \end_inset 
 
@@ -240,7 +278,7 @@ Oftmals auch geschrieben als typischer Operator
 
 
 \begin_inset Formula \begin{equation}
-\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}\end{equation}
+\boxed{\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}}\label{eq:prob_discrete_mean}\end{equation}
 
 \end_inset 
 
@@ -281,11 +319,11 @@ Auch häufig anzutreffen als
 \end_inset 
 
 .
- Außerdem als Größe 
+ Ebenso oft wird auch die Größe 
 \begin_inset Formula $\sigma=\sqrt{\smash[b]{\var(X)}}$
 \end_inset 
 
- Standardabweichung
+ angegeben, welche Standardabweichung
 \begin_inset LatexCommand \index{Standardabweichung}
 
 \end_inset 
@@ -300,7 +338,7 @@ status Collapsed
 resp
 \end_inset 
 
- Streuung genannt.
+ Streuung genannt wird.
 \end_inset 
 
  der Zufallsgröße 
@@ -311,9 +349,21 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-\var(X) & = & \sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}\\
-\var(X) & = & \mean\left[X-\mean(X)\right]^{2}\label{eq:prob_generic_var}\end{eqnarray}
+\begin_inset Formula \begin{equation}
+\boxed{\var(X)=\mean\left[X-\mean(X)\right]^{2}}\label{eq:prob_generic_var}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Speziell für den Fall diskreter Zufallsgrößen hat sie die folgende Berechnungsvo
+rschrift:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\var(X)=\sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}}\label{eq:prob_discrete_var}\end{equation}
 
 \end_inset 
 
@@ -370,13 +420,21 @@ Dieser Schritt stellt eine Verallgemeinerung dar --- deshalb sind alle folgenden
 \end_inset 
 
 .
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!diskrete|)}
+
+\end_inset 
+
+
 \layout Subsection
 
 Kontinuierliche Zufallsgrößen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche}
+\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche|(}
 
 \end_inset 
 
@@ -433,7 +491,12 @@ Die (jetzt) kontinuierliche Größe
 \begin_inset Formula $p$
 \end_inset 
 
- gibt die Wahrscheinlichkeit an, mit der die Zufallsgröße 
+ gibt die Wahrscheinlichkeit
+\begin_inset LatexCommand \index{Wahrscheinlichkeit}
+
+\end_inset 
+
+ an, mit der die Zufallsgröße 
 \begin_inset Formula $X$
 \end_inset 
 
@@ -466,7 +529,7 @@ Die (jetzt) kontinuierliche Größe
 
  bezeichnet wird.
  Die Wahrscheinlichkeit 
-\begin_inset Formula $P$
+\begin_inset Formula $\pr$
 \end_inset 
 
 , daß 
@@ -482,7 +545,7 @@ Die (jetzt) kontinuierliche Größe
 
 
 \begin_inset Formula \begin{equation}
-\pr(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\,\tdc x\label{eq:prob_continuous}\end{equation}
+\boxed{\pr(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\,\tdc x}\label{eq:prob_continuous}\end{equation}
 
 \end_inset 
 
@@ -528,8 +591,8 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=\pr(-\infty\leq X\leq x)=\pr(X\leq x)\label{eq:prob_distribution}\end{align}
+\begin_inset Formula \begin{equation}
+\pr(-\infty\leq X\leq x)=\pr(X\leq x)=\boxed{F(x)=\int\limits _{-\infty}^{x}p(u)\,\tdc u}\label{eq:prob_distribution}\end{equation}
 
 \end_inset 
 
@@ -584,12 +647,12 @@ nlichkeitsdichte
 
 \end_inset 
 
- im Umkehrschluß
+ im Umkehrschluß:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p(x)=\tdiff{F(x)}{x}\msp.\label{eq:prob_continuous_differential}\end{equation}
+\boxed{p(x)=\tdiff{F(x)}{x}}\label{eq:prob_continuous_differential}\end{equation}
 
 \end_inset 
 
@@ -660,14 +723,35 @@ Stieltjes
 
 
 \begin_inset Formula \begin{equation}
-\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\label{eq:prob_continuous_mean}\end{equation}
+\boxed{\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x}\label{eq:prob_continuous_mean}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
+In ähnlicher Art und Weise
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Erwartungswert, Varianz und alle weiteren Integrale der Form 
+\begin_inset Formula $\int x^{i}p(x)\,\tdc x$
+\end_inset 
+
+ nennt man (mit 
+\begin_inset Formula $i=1,2,\ldots$
+\end_inset 
+
+) Momente der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+.
+\end_inset 
+
+ (und unter Berücksichtigung von Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_continuous_unity}
 
@@ -682,11 +766,22 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-\var(X) & =\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\,\tdc x\label{eq:prob_continuous_var}\\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\,\tdc x\nonumber \\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\mean(X)\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\mean^{2}(X)\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\nonumber \\
-\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)=\mean(X^{2})-\mean^{2}(X)\label{eq:prob_continuous_var_rms}\end{align}
+\begin_inset Formula \begin{equation}
+\boxed{\var(X)=\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\,\tdc x}\label{eq:prob_continuous_var}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+und im weiteren
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\,\tdc x\\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\mean(X)\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\mean^{2}(X)\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\msp.\end{align*}
 
 \end_inset 
 
@@ -695,7 +790,18 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 
 Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
  des Erwartungswertes der Zufallsgröße.
- Andersherum gilt
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\var(X)=\mean(X^{2})-\mean^{2}(X)}\label{eq:prob_continuous_var_rms}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Umgekehrt gilt:
 \layout Standard
 
 
@@ -707,8 +813,8 @@ Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
 
 \layout Standard
 
-Für Zufallsgrößen mit verschwindendem Mittelwert ist demzufolge die Varianz
- gleich dem Quadrat des Effektivwertes
+Für Zufallsgrößen mit verschwindendem Mittelwert ist die Varianz gleich
+ dem Quadrat des Effektivwertes
 \begin_inset LatexCommand \index{Effektivwert}
 
 \end_inset 
@@ -735,8 +841,8 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \layout Standard
 
 
-\begin_inset Formula \[
-\var(X)=\mean(X^{2})\]
+\begin_inset Formula \begin{equation}
+\boxed{\var(X)\overset{\mean(X)=0}{=}\mean(X^{2})=\tilde{X}^{2}}\label{eq:prob_continuous_var_mean_zero}\end{equation}
 
 \end_inset 
 
@@ -822,9 +928,17 @@ Die Varianz ermittelt sich nach Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\var(X) & =\int\limits _{a}^{b}\frac{\left[x-\mean(X)\right]^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\cdot\left.\left[x-\mean(X)\right]^{3}\right|_{a}^{b}\nonumber \\
- & =\frac{1}{3(b-a)}\cdot\left\{ \left[b-\mean(X)\right]^{3}-\left[a-\mean(X)\right]^{3}\right\} =\frac{1}{3(b-a)}\cdot\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
+\var(X) & =\int\limits _{a}^{b}\frac{\left[x-\mean(X)\right]^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\left.\left[x-\mean(X)\right]^{3}\right|_{a}^{b}\nonumber \\
+ & =\frac{1}{3(b-a)}\left\{ \left[b-\mean(X)\right]^{3}-\left[a-\mean(X)\right]^{3}\right\} =\frac{1}{3(b-a)}\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
 \var(X) & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche|)}
 
 \end_inset 
 
@@ -837,6 +951,11 @@ Mehrdimensionale Zufallsgrößen
 Definition und Eigenschaften
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale|(}
+
+\end_inset 
+
 Ein Vektor 
 \begin_inset Formula $\mvec{X}=(X_{1},X_{2},\ldots,X_{n})$
 \end_inset 
@@ -845,12 +964,7 @@ Ein Vektor
 \begin_inset Formula $n$
 \end_inset 
 
--dimensionale Zufallsgröße
-\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale}
-
-\end_inset 
-
- genannt, wenn jede der Einzelgrößen 
+-dimensionale Zufallsgröße genannt, wenn jede der Einzelgrößen 
 \begin_inset Formula $X_{k}$
 \end_inset 
 
@@ -906,12 +1020,12 @@ F_{X}(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})\
 
 \layout Standard
 
-liefert zu jedem Wert 
+liefert zu jedem Tupel 
 \begin_inset Formula $(x_{1},x_{2},\ldots,x_{n})$
 \end_inset 
 
  die Wahrscheinlichkeit 
-\begin_inset Formula $\pr(X_{1}<x_{1}\cap X_{2}<x_{2}\cap\cdots\cap X_{n}<x_{n})$
+\begin_inset Formula $\pr\left[(X_{1}<x_{1})\cap(X_{2}<x_{2})\cap\cdots\cap(X_{n}<x_{n})\right]$
 \end_inset 
 
 .
@@ -951,7 +1065,7 @@ itsdichte
 
 
 \begin_inset Formula \begin{equation}
-F_{X}(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_multi}\end{equation}
+\boxed{F_{X}(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}}\label{eq:prob_distribution_multi}\end{equation}
 
 \end_inset 
 
@@ -967,7 +1081,7 @@ Umgekehrt läßt sich durch partielle Differentiation nach allen
 
 
 \begin_inset Formula \begin{equation}
-p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\label{eq:prob_density_multi}\end{equation}
+\boxed{p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}}\label{eq:prob_density_multi}\end{equation}
 
 \end_inset 
 
@@ -983,10 +1097,14 @@ n von
 \layout Itemize
 
 Für alle 
-\begin_inset Formula $x_{k}$
+\begin_inset Formula $x_{i}$
 \end_inset 
 
- gilt: 
+ (mit 
+\begin_inset Formula $1\leq i\leq n$
+\end_inset 
+
+) gilt: 
 \begin_inset Formula $0\leq F_{X}(x_{1},x_{2},\ldots,x_{n})\leq1$
 \end_inset 
 
@@ -1001,7 +1119,7 @@ Es existiert der Grenzwert
 \layout Itemize
 
 Für 
-\begin_inset Formula $x_{1},x_{2},\ldots,x_{k-1},x_{k+1},\ldots,x_{n}\rightarrow\infty$
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{i-1},x_{i+1},\ldots,x_{n}\rightarrow\infty$
 \end_inset 
 
  (
@@ -1015,7 +1133,7 @@ ie
 \end_inset 
 
  alle, außer 
-\begin_inset Formula $x_{k}$
+\begin_inset Formula $x_{i}$
 \end_inset 
 
 ) entartet 
@@ -1028,15 +1146,15 @@ ie
 \end_inset 
 
  
-\begin_inset Formula $F_{k}(x_{k})$
+\begin_inset Formula $F_{i}(x_{i})$
 \end_inset 
 
 , die nur noch von 
-\begin_inset Formula $x_{k}$
+\begin_inset Formula $x_{i}$
 \end_inset 
 
  abhängt und die Wahrscheinlichkeit 
-\begin_inset Formula $\pr(X_{k}<x_{k})$
+\begin_inset Formula $\pr(X_{i}<x_{i})$
 \end_inset 
 
  ausdrückt.
@@ -1045,8 +1163,8 @@ ie
 
 
 \begin_inset Formula \begin{align*}
-F_{k}(x_{k}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{x_{k}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{k+1}\,\tdc u_{k}\,\tdc u_{k-1}\cdots\tdc u_{2}\,\tdc u_{1}\\
- & =\int\limits _{-\infty}^{x_{k}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{k+1}\,\tdc u_{k-1}\cdots\tdc u_{2}\,\tdc u_{1}\,\tdc u_{k}\end{align*}
+F_{i}(x_{i}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{i+1}\,\tdc u_{i}\,\tdc u_{i-1}\cdots\tdc u_{2}\,\tdc u_{1}\\
+ & =\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{i+1}\,\tdc u_{i-1}\cdots\tdc u_{2}\,\tdc u_{1}\,\tdc u_{i}\end{align*}
 
 \end_inset 
 
@@ -1054,11 +1172,11 @@ F_{k}(x_{k}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\c
 \layout Standard
 
 Partielle Differentiation der Randverteilung 
-\begin_inset Formula $F_{k}(x_{k})$
+\begin_inset Formula $F_{i}(x_{i})$
 \end_inset 
 
  nach 
-\begin_inset Formula $x_{k}$
+\begin_inset Formula $x_{i}$
 \end_inset 
 
  führt zur (Rand-) Wahrscheinlichkeitsdichte
@@ -1071,7 +1189,7 @@ Partielle Differentiation der Randverteilung
 
 
 \begin_inset Formula \[
-p_{k}(x_{k})=\pdiff{F_{k}(x_{k})}{x_{k}}=\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{k+1}\,\tdc x_{k-1}\cdots\tdc x_{2}\,\tdc x_{1}\]
+p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{i+1}\,\tdc x_{i-1}\cdots\tdc x_{2}\,\tdc x_{1}\]
 
 \end_inset 
 
@@ -1189,7 +1307,7 @@ Umgestellt nach
 
 
 \begin_inset Formula \begin{equation}
-\pr(A\cap B)=\pr(A)\pr(B\mid A)=\pr(B)\pr(A\mid B)\label{eq:prob_dependent_mult}\end{equation}
+\boxed{\pr(A\cap B)=\pr(A)\pr(B\mid A)=\pr(B)\pr(A\mid B)}\label{eq:prob_dependent_mult}\end{equation}
 
 \end_inset 
 
@@ -1330,7 +1448,7 @@ resp
 
 
 \begin_inset Formula \[
-\mean(X_{k})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{k}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1},\qquad0\leq k\leq n\]
+\boxed{\mean(X_{i})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{i}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}}\qquad1\leq i\leq n\]
 
 \end_inset 
 
@@ -1344,7 +1462,7 @@ ung
 \end_inset 
 
  für 
-\begin_inset Formula $X_{k}$
+\begin_inset Formula $X_{i}$
 \end_inset 
 
  handelt.
@@ -1353,11 +1471,11 @@ ung
 
 
 \begin_inset Formula \[
-\mvec{\mean(X_{k})}=\left(\begin{array}{c}
+\mvec{\mean(X_{i})}=\left(\begin{array}{c}
 \mean(X_{1})\\
 \mean(X_{2})\\
 \vdots\\
-\mean(X_{k})\\
+\mean(X_{i})\\
 \vdots\\
 \mean(X_{n})\end{array}\right)\]
 
@@ -1384,7 +1502,7 @@ Die Varianz(en) einer
 
 
 \begin_inset Formula \[
-\var(X_{k})=\mean\left[X_{k}-\mean(X_{k})\right]^{2},\qquad0\leq k\leq n\]
+\boxed{\var(X_{i})=\mean\left[X_{i}-\mean(X_{i})\right]^{2}}\qquad1\leq i\leq n\]
 
 \end_inset 
 
@@ -1430,7 +1548,7 @@ und
 
 
 \begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\cdot\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}\end{equation}
+\boxed{\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\left[X_{2}-\mean(X_{2})\right]\right\} }\label{eq:prob_covariance_def}\end{equation}
 
 \end_inset 
 
@@ -1485,23 +1603,47 @@ die Trivialität
 \end_inset 
 
  anwendet.
+\begin_deeper 
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-\cov(X_{1},X_{2}) & = & \mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\nonumber \\
-\cov(X_{1},X_{2}) & = & \mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}\end{eqnarray}
+\begin_inset Formula \[
+\cov(X_{1},X_{2})=\mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\]
 
 \end_inset 
 
 
 \layout Standard
 
-Im Fall 
-\begin_inset Formula $X=X_{1}=X_{2}$
+
+\begin_inset Formula \begin{equation}
+\boxed{\cov(X_{1},X_{2})=\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})}\label{eq:prob_cov_shift}\end{equation}
+
 \end_inset 
 
- entartet die Kovarianz zur Varianz (
+
+\end_deeper 
+\layout Standard
+
+Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarianz
+ dem Erwartungswert des Produktes der beiden Größen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\cov(X_{1},X_{2})\overset{\mean{X_{i}}=0}{=}\mean(X_{1}X_{2}),\qquad\qquad i=1,2\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Unter diesen Bedingungen spricht man auch von der Korrelation
+\begin_inset LatexCommand \index{Korrelation}
+
+\end_inset 
+
+ beider Zufallsgrößen (
 \begin_inset ERT
 status Collapsed
 
@@ -1511,7 +1653,26 @@ status Collapsed
 cf
 \end_inset 
 
- Formel\SpecialChar ~
+ Abschnitte\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_prd}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_process}
+
+\end_inset 
+
+).
+\layout Standard
+
+Im Fall 
+\begin_inset Formula $X=X_{1}=X_{2}$
+\end_inset 
+
+ entartet die Kovarianz zur Varianz (siehe Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
 
@@ -1529,12 +1690,13 @@ cf
 
 \layout Standard
 
-Für stetige Zufallsgößen kann die Kovarianz wiefolgt konkretisiert werden:
+Für kontinuierliche Zufallsgößen kann die Kovarianz wiefolgt konkretisiert
+ werden:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\label{eq:prob_cov_continuous}\end{equation}
+\boxed{\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}}\label{eq:prob_cov_continuous}\end{equation}
 
 \end_inset 
 
@@ -1564,7 +1726,7 @@ Dabei geht man davon aus, daß der Vektor
 
 
 \begin_inset Formula \[
-p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})\]
+p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})\]
 
 \end_inset 
 
@@ -1582,7 +1744,7 @@ und deshalb auch das Doppelintegral von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\cov(X_{1},X_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})\cdot p_{2}(x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
+\cov(X_{1},X_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
  & =\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\,\tdc x_{2}\\
  & =\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\,\tdc x_{2}\end{align*}
 
@@ -1627,11 +1789,15 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\mean(X_{1}X_{2})=\mean(X_{1})\,\mean(X_{2})\msp.\label{eq:prob_cov_zero_mean}\end{equation}
+\boxed{\mean(X_{1}X_{2})\overset{\cov(X_{1},X_{2})=0}{=}\mean(X_{1})\,\mean(X_{2})}\msp,\label{eq:prob_cov_zero_mean}\end{equation}
 
 \end_inset 
 
 
+\layout Standard
+
+was als Kriterium unkorrelierter Zufallsgrößen in seiner Umkehrung ebenfalls
+ verwendbar ist.
 \layout Subsubsection
 
 Varianz-Kovarianz-Matrix
@@ -1641,27 +1807,45 @@ Für einen mehrdimensionalen Zufallsvektor
 \begin_inset Formula $\mvec{X}=(X_{1},X_{2},\ldots,X_{n})$
 \end_inset 
 
- kann man eine sogenannte Varianz-Kovarianz-Matrix 
+ kann man eine sogenannte Varianz-Kovarianz-Matrix
+\begin_inset LatexCommand \index{Kovarianz}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+ 
 \begin_inset Formula $\mvec{C}$
 \end_inset 
 
-angeben, deren Elemente 
-\begin_inset Formula $c_{i,k}$
-\end_inset 
-
- die Kovarianz
+ angeben,
 \layout Standard
 
 
 \begin_inset Formula \[
-c_{i,k}=\cov(X_{i},X_{k})=\mean\left\{ \left[X_{i}-\mean(X_{i})\right]\cdot\left[X_{k}-\mean(X_{k})\right]\right\} \]
+c_{i,k}=\cov(X_{i},X_{k})=\mean\left\{ \left[X_{i}-\mean(X_{i})\right]\left[X_{k}-\mean(X_{k})\right]\right\} \]
 
 \end_inset 
 
 
 \layout Standard
 
-repräsentieren.
+deren Elemente 
+\begin_inset Formula $c_{i,k}$
+\end_inset 
+
+ die Kovarianz zwischen der Zufallsgröße 
+\begin_inset Formula $X_{i}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{k}$
+\end_inset 
+
+ repräsentieren.
 \layout Standard
 
 
@@ -1695,11 +1879,16 @@ symmetrisch (wegen
 \layout Itemize
 
 und hat die Hauptdiagonalwerte 
-\begin_inset Formula $\cov(X_{k},X_{k})=\var(X_{k})$
+\begin_inset Formula $\cov(X_{i},X_{i})=\var(X_{i})$
 \end_inset 
 
 .
 \layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:prob_corr}
+
+\end_inset 
 
 Korrelationskoeffizient
 \layout Standard
@@ -1709,12 +1898,29 @@ Der Korrelationskoeffizient
 
 \end_inset 
 
- ist ein Maß für die Abhängigkeit zweier Zufallsgrößen.
+ ist ein Maß für die Abhängigkeit zweier Zufallsgrößen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+In dieser Form wird 
+\begin_inset Formula $\corr(X_{1},X_{2})$
+\end_inset 
+
+ auch als 
+\noun on 
+Pearson
+\noun default 
+- oder Produkt-Moment-Korrelationskoeffizient bezeichnet.
+\end_inset 
+
+.
 \layout Standard
 
 
-\begin_inset Formula \[
-\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\cdot\var(X_{2})}}\]
+\begin_inset Formula \begin{equation}
+\boxed{\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\var(X_{2})}}}\label{eq:prob_corr_def}\end{equation}
 
 \end_inset 
 
@@ -1725,7 +1931,7 @@ Zu den Eigenschaften des Korrelationskoeffizienten:
 \layout Enumerate
 
 Wegen der Ungleichung 
-\begin_inset Formula $\left|\cov(X_{1},X_{2})\right|\leq\sqrt{\smash[b]{\var(X_{1})\cdot\var(X_{2})}}$
+\begin_inset Formula $\left|\cov(X_{1},X_{2})\right|\leq\sqrt{\smash[b]{\var(X_{1})\var(X_{2})}}$
 \end_inset 
 
  gilt immer: 
@@ -1762,6 +1968,47 @@ Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
 \end_inset 
 
 .
+\layout Standard
+
+Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
+ entsprechend der Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_cov_zero_mean}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_mean_zero}
+
+\end_inset 
+
+ auf 
+\begin_inset Formula $\cov(X_{1},X_{2})=\mean(X_{1}X_{2})$
+\end_inset 
+
+ und 
+\begin_inset Formula $\var(X)=\mean(X^{2})=\tilde{X}^{2}$
+\end_inset 
+
+ und deshalb auch der Korrelationskoeffizient auf
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\corr(X_{1},X_{2})\overset{\mean X_{i}=0}{=}\frac{\mean(X_{1}X_{2})}{\tilde{X}_{1}\tilde{X}_{2}}}\msp.\label{eq:prob_corr_mean_zero}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale|)}
+
+\end_inset 
+
+
 \layout Section
 
 Funktionen von Zufallsgrößen
@@ -1929,7 +2176,23 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 
  unmöglich.
  In solchen Fällen muß man die Mehrdeutigkeit in die Wahrscheinlichkeitsbetracht
-ungen mit einbeziehen.
+ungen mit einbeziehen (siehe 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_prd}
+
+\end_inset 
+
+, was das Produkt von Zufallsgrößen angeht).
 \end_inset 
 
 .
@@ -2053,7 +2316,7 @@ Transformationsfunktion
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\left[h(y)\right]\cdot\left|h'(y)\right|\label{eq:prob_transform_single}\end{equation}
+\boxed{p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\left[h(y)\right]\left|h'(y)\right|}\label{eq:prob_transform_single}\end{equation}
 
 \end_inset 
 
@@ -2069,7 +2332,7 @@ p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\
 \end_inset 
 
  und 
-\begin_inset Formula $x=h'(y)$
+\begin_inset Formula $h'(y)$
 \end_inset 
 
  deren Ableitung nach 
@@ -2167,12 +2430,12 @@ resp
  zu ersetzen.
 \end_inset 
 
-, ergibt sich
+, ergibt sich:
 \layout Standard
 
 
-\begin_inset Formula \[
-F_{Y}(y)=F_{X}\left[h(y)\right]\msp.\]
+\begin_inset Formula \begin{equation}
+\boxed{F_{Y}(y)=F_{X}\left[h(y)\right]}\end{equation}
 
 \end_inset 
 
@@ -2232,14 +2495,11 @@ Die Eingangsgröße
 
 
 \begin_inset Formula \[
-p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\msp.\]
+p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\msp.\]
 
 \end_inset 
 
 
-\layout Standard
-
-Diese Gleichung kann man auch als Wahrscheinlichkeitsdichte des Sinus auffassen.
 \layout Subsection*
 
 Lineare Übertragungsfunktion
@@ -2259,7 +2519,7 @@ Die Eingangsgröße
 \end_inset 
 
 .
- Dann gilt für die Dichtefunktion 
+ Dann gilt für die Dichtefunktion: 
 \layout Standard
 
 
@@ -2327,9 +2587,8 @@ reibweisen der Art
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-\mvec{Y} & =\mvec{f}(\mvec{X})\\
-\mvec{X} & =\mvec{h}(\mvec{Y})\end{align*}
+\begin_inset Formula \begin{equation}
+\mvec{Y}=\mvec{f}(\mvec{X})\qquad\qquad\mvec{X}=\mvec{f}^{(-1)}(\mvec{Y})=\mvec{h}(\mvec{Y})\label{eq:prob_transform_func_vectors}\end{equation}
 
 \end_inset 
 
@@ -2373,7 +2632,7 @@ n von
 
 
 \begin_inset Formula \begin{equation}
-p_{X}(\mvec{x})\,\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\msp.\label{eq:prob_transform_density_differential}\end{equation}
+p_{X}(\mvec{x})\,\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_density_differential}\end{equation}
 
 \end_inset 
 
@@ -2419,11 +2678,11 @@ eg
 \end_inset 
 
  Flächenmomente (
-\begin_inset Formula $dF=\tdc x\,\tdc y$
+\begin_inset Formula $\tdc F=\tdc x\,\tdc y$
 \end_inset 
 
 ) oder Volumenmomente (
-\begin_inset Formula $dV=\tdc x\,\tdc y\,\tdc z$
+\begin_inset Formula $\tdc V=\tdc x\,\tdc y\,\tdc z$
 \end_inset 
 
 ).
@@ -2444,7 +2703,7 @@ collapsed true
 \layout Standard
 
 Substitutionssatz für Mehrfach-Integrale: 
-\begin_inset Formula $\int_{h(B)}f(\mvec{x})\,\tdc\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\cdot\left|\mvec{J}_{h}\right|\,\tdc\mvec{z}$
+\begin_inset Formula $\int_{h(B)}f(\mvec{x})\,\tdc\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec{J}_{h}\right|\,\tdc\mvec{z}$
 \end_inset 
 
 .
@@ -2464,7 +2723,17 @@ resp
 \noun on 
 Jacobi
 \noun default 
--Determinante 
+-Determinante
+\begin_inset LatexCommand \index{Funktionaldeterminante}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Jacobi-Determinante@\noun{Jacobi}-Determinante}
+
+\end_inset 
+
+ 
 \begin_inset Formula $\left|\mvec{J}\right|$
 \end_inset 
 
@@ -2493,7 +2762,7 @@ Jacobi
 \end_inset 
 
  nach einer Variablen 
-\begin_inset Formula $y_{k}$
+\begin_inset Formula $y_{i}$
 \end_inset 
 
  enthält.
@@ -2505,13 +2774,39 @@ Jacobi
 \layout Standard
 
 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvstretch
+\end_inset 
+
+
+\layout Standard
+
+
 \begin_inset Formula \[
 \left|\mvec{J}_{h}\right|=\left|\begin{array}{cccc}
-\pdiff{h_{1}(\mvec{y})}{y_{1}} & \pdiff{h_{1}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{1}(\mvec{y})}{y_{n}}\\
-\pdiff{h_{2}(\mvec{y})}{y_{1}} & \pdiff{h_{2}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{2}(\mvec{y})}{y_{n}}\\
-\vdots & \vdots & \cdots & \vdots\\
-\pdiff{h_{n}(\mvec{y})}{y_{1}} & \pdiff{h_{n}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{n}(\mvec{y})}{y_{n}}\end{array}\right|\msp,\]
+\mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{n}}}\\
+\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{n}}}\\
+\vdots & \vdots & \ddots & \vdots\\
+\mbig{\pdiff{h_{n}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{n}}}\end{array}\right|\msp,\]
 
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvnormal
 \end_inset 
 
 
@@ -2545,7 +2840,7 @@ wobei wir die Betragszeichen sowohl als Kennzeichnung für eine Determinante
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(\mvec{y})=\left|\mvec{J}_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}\end{equation}
+\boxed{p_{Y}(\mvec{y})=\left|\mvec{J}_{h}\right|\, p_{X}(\mvec{x})}\label{eq:prob_transform_density_multi}\end{equation}
 
 \end_inset 
 
@@ -2651,7 +2946,7 @@ Auf der Grundlage von Formel\SpecialChar ~
 \end_inset 
 
  lassen sich nun auch die Erwartungswerte 
-\begin_inset Formula $\mvec{\mean(Y)}$
+\begin_inset Formula $\mvec{\mean}(Y_{i})$
 \end_inset 
 
  berechnen.
@@ -2659,8 +2954,8 @@ Auf der Grundlage von Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{eqnarray*}
-\mean(Y_{k}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}y_{k}\cdot p_{Y}(y_{1},y_{2},\ldots,y_{n})\,\tdc y_{n}\cdots\tdc y_{2}\,\tdc y_{1}\\
- & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{k}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\end{eqnarray*}
+\mean(Y_{i}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}y_{i}p_{Y}(y_{1},y_{2},\ldots,y_{n})\,\tdc y_{n}\cdots\tdc y_{2}\,\tdc y_{1}\\
+ & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\end{eqnarray*}
 
 \end_inset 
 
@@ -2676,7 +2971,7 @@ Für den zweidimensionalen Spezialfall
 
 
 \begin_inset Formula \begin{equation}
-\mean(Y)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}\msp.\label{eq:prob_mean_func_dual}\end{equation}
+\boxed{\mean(Y)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}}\label{eq:prob_mean_func_dual}\end{equation}
 
 \end_inset 
 
@@ -2695,7 +2990,12 @@ Wahrscheinlichkeitsdichte
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Summe von}
+\begin_inset LatexCommand \index{Summe von Zufallsgrößen|(}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Summe von|(}
 
 \end_inset 
 
@@ -2721,7 +3021,17 @@ eine
 \begin_inset Formula $Y$
 \end_inset 
 
- haben, müssen wir die Darstellung 
+ haben, müssen wir die (nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_func_vectors}
+
+\end_inset 
+
+) notwendige Ordnung 
+\begin_inset Formula $n=2$
+\end_inset 
+
+ für 
 \begin_inset Formula $\mvec{Y}=\mvec{f}(\mvec{X})$
 \end_inset 
 
@@ -2789,13 +3099,39 @@ und mit deren Hilfe die Funktionaldeterminante gewonnen.
 \layout Standard
 
 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvstretch
+\end_inset 
+
+
+\layout Standard
+
+
 \begin_inset Formula \[
 \left|\mvec{J}_{h}\right|=\left|\begin{array}{cc}
-\pdiff{h_{1}(\mvec{y})}{y_{1}} & \pdiff{h_{1}(\mvec{y})}{y_{2}}\\
-\pdiff{h_{2}(\mvec{y})}{y_{1}} & \pdiff{h_{2}(\mvec{y})}{y_{2}}\end{array}\right|=\left|\begin{array}{cc}
+\mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
+\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\left|\begin{array}{cc}
 1/2 & 1/2\\
 1/2 & -1/2\end{array}\right|=-\frac{1}{2}\]
 
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvnormal
 \end_inset 
 
 
@@ -2861,13 +3197,14 @@ ie
 \begin_inset Formula $Y_{1}$
 \end_inset 
 
- berechnen 
+ (nach Formel\SpecialChar ~
+
 \begin_inset LatexCommand \ref{eq:prob_density_dual}
 
 \end_inset 
 
-.
- bei diesem Schritt können wir auch gleich wieder 
+) berechnen.
+ Bei diesem Schritt können wir auch gleich wieder 
 \begin_inset Formula $Y_{1}$
 \end_inset 
 
@@ -2914,7 +3251,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{X}\left(z,y-z\right)\,\tdc z\label{eq:prob_continuous_add_dep}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{X}\left(z,y-z\right)\,\tdc z}\label{eq:prob_continuous_add_dep}\end{equation}
 
 \end_inset 
 
@@ -2990,7 +3327,7 @@ ie
 \end_inset 
 
  es gilt 
-\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\, p_{2}(x_{2})$
 \end_inset 
 
 , so vereinfacht sich Gleichung\SpecialChar ~
@@ -2999,12 +3336,12 @@ ie
 
 \end_inset 
 
- zu
+ zu:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\,\tdc z\msp.\label{eq:prob_continuous_convolution}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\,\tdc z}\label{eq:prob_continuous_convolution}\end{equation}
 
 \end_inset 
 
@@ -3012,12 +3349,30 @@ p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\,\tdc z\msp.\label
 \layout Standard
 
 Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
-er Zufallsgrößen also genau die Faltung der einzelnen Dichtefunktionen.
+er Zufallsgrößen also genau die Faltung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Faltung zweier Funktionen: 
+\begin_inset Formula $(f_{1}*f_{2})(t)=\int_{-\infty}^{\infty}f_{1}(u)f_{2}(t-u)\,\tdc u$
+\end_inset 
+
+.
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ der einzelnen Dichtefunktionen.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(y)=(p_{1}*p_{2})\,(y)\end{equation}
+\boxed{p_{Y}(y)=(p_{1}*p_{2})\,(y)}\end{equation}
 
 \end_inset 
 
@@ -3028,7 +3383,7 @@ Für die Summe von
 \begin_inset Formula $n$
 \end_inset 
 
- unabhängigen Zufallsgrößen gilt demzufolge
+ unabhängigen Zufallsgrößen gilt demzufolge:
 \layout Standard
 
 
@@ -3152,7 +3507,7 @@ Gleichgültig ob beide Zufallsgößen abhängig oder unabhängig sind.
 
 
 \begin_inset Formula \begin{equation}
-\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{1})\label{eq:prob_sum_mean}\end{equation}
+\boxed{\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{1})}\label{eq:prob_sum_mean}\end{equation}
 
 \end_inset 
 
@@ -3196,41 +3551,12 @@ Mit einem kleinen Rückgriff auf Abschnitt\SpecialChar ~
 
 \end_inset 
 
- kann man die letzte Formel auch folgendermaßen schreiben
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_sum_var}
-
-\end_inset 
-
-) zu 
-\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
-\end_inset 
-
-.
-\end_inset 
-
-:
+ kann man die letzte Formel auch folgendermaßen schreiben:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\label{eq:prob_sum_var}\end{equation}
+\boxed{\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})}\label{eq:prob_sum_var}\end{equation}
 
 \end_inset 
 
@@ -3245,11 +3571,27 @@ Sind die Zufallsgrößen
 \begin_inset Formula $X_{2}$
 \end_inset 
 
- unabhängig, dann gilt bekanntlich 
+ unabhängig, dann gilt 
 \begin_inset Formula $\cov(X_{1},X_{2})=0$
 \end_inset 
 
- und deshalb für die Varianz
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+
+\end_inset 
+
+) und deshalb für die Varianz:
 \layout Standard
 
 
@@ -3330,18 +3672,18 @@ ie
 
 
 \begin_inset Formula \[
-\tilde{Y}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}}\msp.\]
+\tilde{Y}\overset{\mean(X_{i})=0}{=}\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}},\qquad\qquad i=1,2\msp.\]
 
 \end_inset 
 
 
 \layout Standard
 
-Iterative Fortsetzung ergibt für den Effektivwert der Summe 
+Induktive Fortsetzung ergibt für den Effektivwert der Summe 
 \begin_inset Formula $n$
 \end_inset 
 
- unabhängiger, mittelwertfreier Zufallsgrößen:
+ unabhängiger, mittelwertfreier Zufallsgrößen in diesem Spezialfall:
 \layout Standard
 
 
@@ -3351,7 +3693,7 @@ Iterative Fortsetzung ergibt für den Effektivwert der Summe
 \end_inset 
 
 
-\layout Subsubsection
+\layout Subsubsection*
 
 Superposition bei Normalverteilung
 \layout Standard
@@ -3415,7 +3757,7 @@ resp
 
 
 \begin_inset Formula \begin{equation}
-p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\end{equation}
+p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\end{equation}
 
 \end_inset 
 
@@ -3424,7 +3766,7 @@ p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{x-\mu_{
 
 und additiv überlagert.
  Die Berechnung der resultierenden Dichtefunktion 
-\begin_inset Formula $p(x)$
+\begin_inset Formula $p_{Y}(y)$
 \end_inset 
 
  kann dann durch Anwendung der Faltungsformel\SpecialChar ~
@@ -3438,7 +3780,7 @@ und additiv überlagert.
 \noun on 
 Fourier
 \noun default 
--Transformation ausführen.
+-Transformation berechnen.
  Dazu werden die Dichtefunktionen 
 \begin_inset Formula $p_{i}(x)$
 \end_inset 
@@ -3448,7 +3790,7 @@ Fourier
 
 
 \begin_inset Formula \[
-\FT\left\{ p_{i}(x)\right\} =e^{-\mu_{i}}\cdot e^{-2\left(\pi\sigma_{i}f\right)^{2}}\]
+\ft\left\{ p_{i}(x)\right\} =\e^{-\mu_{i}}\e^{-2\left(\pi\sigma_{i}f\right)^{2}}\]
 
 \end_inset 
 
@@ -3460,7 +3802,7 @@ und dann einfach multipliziert (Faltungssatz).
 
 
 \begin_inset Formula \[
-\FT\left\{ p(x)\right\} =e^{-(\mu_{1}+\mu_{2})}\cdot e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
+\ft\left\{ p_{Y}(y)\right\} =\e^{-(\mu_{1}+\mu_{2})}\e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
 
 \end_inset 
 
@@ -3468,7 +3810,7 @@ und dann einfach multipliziert (Faltungssatz).
 \layout Standard
 
 Die Rücktransformation von 
-\begin_inset Formula $\FT\left\{ p(x)\right\} $
+\begin_inset Formula $\ft\left\{ p_{Y}(y)\right\} $
 \end_inset 
 
  liefert sofort die Lösung.
@@ -3476,7 +3818,7 @@ Die Rücktransformation von
 
 
 \begin_inset Formula \[
-p(x)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}},\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\mu=\mu_{1}+\mu_{2}\]
+p_{Y}(y)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right],\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\mu=\mu_{1}+\mu_{2}\]
 
 \end_inset 
 
@@ -3523,7 +3865,25 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 \end_inset 
 
 .
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Summe von Zufallsgrößen|)}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Summe von|)}
+
+\end_inset 
+
+
 \layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:prob_prd}
+
+\end_inset 
 
 Produkt von Zufallsgrößen
 \layout Subsubsection
@@ -3537,7 +3897,12 @@ Wahrscheinlichkeitsdichte
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von}
+\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von|(}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Produkt von Zufallsgrößen|(}
 
 \end_inset 
 
@@ -3545,7 +3910,7 @@ Um die Wahrscheinlichkeitsdichte eines Produkts von zwei Zufallsgrößen
 \begin_inset Formula $Y=X_{1}X_{2}$
 \end_inset 
 
- zu bestimmen, interpretieren wir dieses Produkt als Funktion 
+ zu bestimmen, interpretieren wir dieses Produkt wieder als Funktion 
 \begin_inset Formula $f(X_{1},X_{2})$
 \end_inset 
 
@@ -3604,8 +3969,15 @@ collapsed true
 
 \layout Standard
 
-Den Verlust der halben (differentiellen) Wahrscheinlichkeit gleichen wir
- später wieder aus.
+Den Verlust der halben (differentiellen) Wahrscheinlichkeit durch die 
+\begin_inset Quotes eld
+\end_inset 
+
+Vorzeichen-Mehrdeutigkeit
+\begin_inset Quotes erd
+\end_inset 
+
+ gleichen wir später wieder aus.
 \end_inset 
 
 .
@@ -3670,7 +4042,16 @@ wenden wir wieder auf Gleichung\SpecialChar ~
 \end_inset 
 
  an, berücksichten aber, daß die differentielle Wahrscheinlichkeit doppelt
- so groß ausfällt.
+ so groß ausfällt
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Einleuchtende Erklärung notwendig
+\end_inset 
+
+.
 \layout Standard
 
 
@@ -3682,7 +4063,7 @@ p_{Y}(y_{1},y_{2})=2\left|\mvec{J}_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\l
 
 \layout Standard
 
-Da die ZUfallsgröße 
+Da die Zufallsgröße 
 \begin_inset Formula $Y_{2}$
 \end_inset 
 
@@ -3827,7 +4208,7 @@ n gilt also:
 
 
 \begin_inset Formula \begin{equation}
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\,\tdc z\msp.\label{eq:prob_continuous_prd}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\,\tdc z}\msp.\label{eq:prob_continuous_prd}\end{equation}
 
 \end_inset 
 
@@ -3926,7 +4307,7 @@ ie
 \end_inset 
 
  es gilt 
-\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})$
 \end_inset 
 
 , so vereinfacht sich Formel\SpecialChar ~
@@ -3935,12 +4316,12 @@ ie
 
 \end_inset 
 
- zu
+ zu:
 \layout Standard
 
 
-\begin_inset Formula \[
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\,\tdc z\msp.\]
+\begin_inset Formula \begin{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\,\tdc z}\msp.\end{equation}
 
 \end_inset 
 
@@ -3967,15 +4348,15 @@ Den Erwartungswert von
 
  für die Funktion einer zweidimensionalen Zufallsgröße bestimmen.
  Dazu setzt man als Funktion 
-\begin_inset Formula $f(X_{1},X_{2})=X_{1}\cdot X_{2}$
+\begin_inset Formula $f(X_{1},X_{2})=X_{1}X_{2}$
 \end_inset 
 
  und erhält für den allgemeinen Fall abhängiger Zufallsgrößen:
 \layout Standard
 
 
-\begin_inset Formula \[
-\mean(X_{1}X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}\]
+\begin_inset Formula \begin{equation}
+\boxed{\mean(X_{1}X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}}\msp.\label{eq:prob_prd_continuous_mean}\end{equation}
 
 \end_inset 
 
@@ -3990,7 +4371,11 @@ Sind
 \begin_inset Formula $X_{2}$
 \end_inset 
 
- stochastisch unabhängig, 
+ stochastisch 
+\emph on 
+unabhängig
+\emph default 
+, 
 \begin_inset ERT
 status Collapsed
 
@@ -4001,21 +4386,44 @@ ie
 \end_inset 
 
  es gibt die Faktorisierung 
-\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\, p_{2}(x_{2})$
 \end_inset 
 
-, kann man weiter vereinfachen.
+, dann kann man weiter vereinfachen
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-\mean(X_{1}X_{2}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{2}\,\tdc x_{1}\nonumber \\
- & = & \int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\nonumber \\
- & = & \mean(X_{1})\mean(X_{2})\label{eq:prob_prd_mean}\end{eqnarray}
+\begin_inset Formula \begin{eqnarray*}
+\mean(X_{1}X_{2}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{2}\,\tdc x_{1}\\
+ & = & \int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\end{eqnarray*}
 
 \end_inset 
 
 
+\layout Standard
+
+und erhält als Ergebnis:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\mean(X_{1}X_{2})=\mean(X_{1})\mean(X_{2})}\msp.\label{eq:prob_prd_mean}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Verschwindet der Erwartungswert des Produkts sogar überall, also gilt 
+\begin_inset Formula $\mean(X_{1}X_{2})=0$
+\end_inset 
+
+, dann werden die beiden Zufallsgrößen als orthogonal
+\begin_inset LatexCommand \index{Zufallsgrößen!orthogonale}
+
+\end_inset 
+
+ zueinander bezeichnet.
 \layout Subsubsection
 
 Varianz
@@ -4045,8 +4453,8 @@ Einsetzen von Gleichung\SpecialChar ~
 
 \end_inset 
 
- sowie (wieder) die Substitution 
-\begin_inset Formula $w=x/u$
+ sowie die Substitution 
+\begin_inset Formula $w=y/u$
 \end_inset 
 
  angewendet.
@@ -4054,10 +4462,10 @@ Einsetzen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\\
- & =\int\limits _{x=-\infty}^{\infty}x^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x-\mean^{2}(X)\\
- & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x/u)\tdc x\tdc u-\mean^{2}(X)\\
- & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(X)\\
+\var(Y) & =\int\limits _{-\infty}^{\infty}y^{2}p(y)\,\tdc y-\mean^{2}(Y)\\
+ & =\int\limits _{x=-\infty}^{\infty}y^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
  & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\int\limits _{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean(X_{1})\mean(X_{2})\\
  & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean(X_{1})\mean(X_{2})\\
  & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\cdot\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean(X_{1})\mean(X_{2})\end{align*}
@@ -4077,7 +4485,7 @@ Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
 
 
 \begin_inset Formula \begin{equation}
-\var(X)=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})\label{eq:prob_prd_var}\end{equation}
+\boxed{\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})}\label{eq:prob_prd_var}\end{equation}
 
 \end_inset 
 
@@ -4114,8 +4522,9 @@ Ausgehend von Gleichung\SpecialChar ~
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\mean(X^{2})=\var(X)+\mean^{2}(X)=\mean(X_{1}^{2})\mean(X_{2}^{2})\end{equation}
+\begin_inset Formula \begin{eqnarray*}
+\mean(Y^{2}) & = & \var(Y)+\mean^{2}(Y)=\mean(X_{1}^{2})\mean(X_{2}^{2})\\
+\tilde{Y}^{2} & = & \tilde{X}_{1}^{2}\,\tilde{X}_{2}^{2}\end{eqnarray*}
 
 \end_inset 
 
@@ -4126,26 +4535,49 @@ Für den Effektivwert des Produkts
 \begin_inset Formula $n$
 \end_inset 
 
- unabhängiger Zufallsgrößen gilt dann
+ unabhängiger Zufallsgrößen gilt dann:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\tilde{X}=\tilde{X}_{1}\cdot\tilde{X}_{2}\cdot\tilde{X}_{3}\cdot\cdots\cdot\tilde{X}_{n-1}\cdot\tilde{X}_{n}\msp.\end{equation}
+\tilde{Y}=\tilde{X}_{1}\tilde{X}_{2}\tilde{X}_{3}\cdots\tilde{X}_{n-1}\tilde{X}_{n}\msp.\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Produkt von Zufallsgrößen|)}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von|)}
 
 \end_inset 
 
 
 \layout Section
 
+
+\begin_inset LatexCommand \label{sec:prob_process}
+
+\end_inset 
+
 Zufallsprozesse
 \layout Subsection
 
-Definition
+Einführung
 \layout Standard
 
-Das Modell des stochstischen Prozesses geht davon aus, daß beliebig viele
- stochastische Vorgänge 
+
+\begin_inset LatexCommand \index{Zufallsprozesse|(}
+
+\end_inset 
+
+Das Modell des Zufallsprozesses geht davon aus, daß beliebig viele stochastische
+ Vorgänge 
 \begin_inset Formula $\mvec{X}(t)$
 \end_inset 
 
@@ -4158,8 +4590,8 @@ stationäre
 \emph on 
 ergodische
 \emph default 
- Prozesse gilt, daß die beschreibenden Prozeßparameter vom Betrachtungszeitpunkt
- 
+ Prozesse gilt einschränkend, daß die beschreibenden Prozeßparameter vom
+ Betrachtungszeitpunkt 
 \begin_inset Formula $t$
 \end_inset 
 
@@ -4179,7 +4611,7 @@ collapsed true
 
 \layout Standard
 
-Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte identisch sein sollen.
+Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte identisch sind.
 \end_inset 
 
 , Varianz 
@@ -4221,15 +4653,2074 @@ einer
 \end_inset 
 
 
-\layout Comment
+\layout Subsection
 
-Autokorrelation
-\layout Comment
 
-Kreuzkorrelation
+\begin_inset LatexCommand \label{sec:prob_acf}
+
+\end_inset 
+
+Autokorrelationsfunktion
+\layout Standard
+
+Nehmen wir nun an, wir betrachten eine Realisierung 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+ zu zwei Zeitpunkten 
+\begin_inset Formula $t_{0}$
+\end_inset 
+
+ und 
+\begin_inset Formula $t_{0}+\tau$
+\end_inset 
+
+.
+ Obwohl für stationäre Zufallsprozesse der Zeitpunkt 
+\begin_inset Formula $t$
+\end_inset 
+
+ keine Rolle spielt, wird trotzdem (zumindest unter dem Blickwinkel der
+ Allgemeinheit) eine stochastische Abhängigkeitsbeziehung zwischen 
+\begin_inset Formula $X(t_{0})$
+\end_inset 
+
+ und 
+\begin_inset Formula $X(t_{0}+\tau)$
+\end_inset 
+
+ bestehen.
+ Bezeichnen wir nun zwei Zufallsvariablen mit 
+\begin_inset Formula $X_{1}=X(t_{0})$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}=X(t_{0}+\tau)$
+\end_inset 
+
+ und stellen die Frage nach einer der wesentlichsten Eigenschaften des Zufallsve
+ktors 
+\begin_inset Formula $(X_{1},X_{2})$
+\end_inset 
+
+ --- nämlich der Abhängigkeit (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Unabhängigkeit) von 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+.
+ Dazu haben wir schon geeignete Maße kennengelernt, nämlich die Kovarianz
+ und den Korrelationskoeffizienten.
+ Um ausgehend von deren Definition jedoch fortfahren zu können, müssen wir
+ noch Existenz und Kenntnis der verbundenen Wahrscheinlichkeitsdichte des
+ zweidimensionalen Vektors 
+\begin_inset Formula $p_{X}(X_{1},X_{2})$
+\end_inset 
+
+ voraussetzen.
+ Nun definieren wir eine neue (aber dennoch mit 
+\begin_inset Formula $\corr(\cdot)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\cov(\cdot)$
+\end_inset 
+
+ eng verwandte) Größe
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
+ (Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_prd}
+
+\end_inset 
+
+) sowie der Kovarianz
+\begin_inset LatexCommand \index{Kovarianz}
+
+\end_inset 
+
+ mittelwertfreier Zufallsgrößen (Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+
+\end_inset 
+
+) schon begegnet ist.
+\end_inset 
+
+ und bezeichnen sie als Korrelation
+\begin_inset LatexCommand \index{Korrelation}
+
+\end_inset 
+
+ 
+\begin_inset Formula $r(X_{1},X_{2})$
+\end_inset 
+
+ zweier Zufallsgrößen:
+\layout Standard
+
+
+\begin_inset Formula \[
+r(X_{1},X_{2})=\mean(X_{1}X_{2})\]
+
+\end_inset 
+
+
+\layout Standard
+
+Gleichbedeutend ist auch der folgende Ausdruck, wenn man Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_cov_shift}
+
+\end_inset 
+
+ berücksichtigt.
+\layout Standard
+
+
+\begin_inset Formula \[
+r(X_{1},X_{2})=\cov(X_{1},X_{2})+\mean(X_{1})\,\mean(X_{2})\]
+
+\end_inset 
+
+
+\layout Standard
+
+Erinnern wir uns an den Ausgangspunkt und ersetzen die (zur besseren Anschauung
+ eingeführten) Zufallsgrößen 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ wieder durch die Realisierung 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+r\left[X(t_{0}),X(t_{0}+\tau)\right]=\mean\left[X(t_{0})X(t_{0}+\tau)\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
+ 
+\begin_inset Formula $t_{0}$
+\end_inset 
+
+ keine Bedeutung hat --- und definieren die sogenannte Autokorrelationsunktion
+\begin_inset LatexCommand \index{Autokorrelationsunktion}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\acf_{xx}(\tau)=\mean\left[X(t)X(t+\tau)\right]\overset{\mean(X)=0}{=}\cov\left[X(t),X(t+\tau)\right]}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für eine kontinuierliche Realisierung 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+ des Zufallsprozesses 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+ berechnet sich dieser Erwartungswert wiefolgt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_prd}
+
+\end_inset 
+
+):
+\layout Standard
+
+
+\begin_inset Formula \[
+\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)p_{X}\left[x(t)x(t+\tau)\right]\,\tdc x(t)\,\tdc x(t+\tau)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für ergodische Prozesse nimmt man nun zusätzlich noch an, daß der Erwartungswert
+ 
+\begin_inset Formula $\mean\left[X(t)X(t+\tau)\right]$
+\end_inset 
+
+ aus der Zeitfunktion 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ als (Selbst-) Ähnlichkeitsmaß folgendermaßen bestimmt werden kann.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{xx}(\tau)=\mean\left[x(t)x(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\,\tdc t=\overline{x(t)x(t+\tau)}}\label{eq:prob_acf_def}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die dadurch definierte Autokorrelationsfunktion (AKF) hat folgende Eigenschaften
+:
+\layout Enumerate
+
+
+\begin_inset LatexCommand \label{enu:prob_acf_even}
+
+\end_inset 
+
+Die AKF ist bezüglich 
+\begin_inset Formula $\tau$
+\end_inset 
+
+ eine gerade Funktion, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $\acf_{xx}(-\tau)=\acf_{xx}(\tau)$
+\end_inset 
+
+.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\acf_{xx}(-\tau) & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t-\tau)\,\tdc t\\
+ & \overset{u:=t-\tau}{=} & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(u+\tau)x(u)\,\tdc u=\acf_{xx}(\tau)\end{eqnarray*}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+
+\begin_inset LatexCommand \label{enu:prob_acf_zero}
+
+\end_inset 
+
+Für 
+\begin_inset Formula $\tau\rightarrow0$
+\end_inset 
+
+ ist ist sie gleich dem Quadrat des Effektivwertes (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der mittleren Leistung 
+\begin_inset Formula $P$
+\end_inset 
+
+ des Signals), vorausgesetzt 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+ ist keine aperiodische oder determinierte Funktion, sondern ein echter
+ Zufallsprozeß.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\,\tdc t=\mean\left[X^{2}(t)\right]=\tilde{X}^{2}=P\label{eq:prob_acf_zero}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+In der Umgebung von 
+\begin_inset Formula $\tau=0$
+\end_inset 
+
+ ist insbesondere der Abfall von 
+\begin_inset Formula $\acf_{xx}(\tau)$
+\end_inset 
+
+ ein Maß für die Regellosigkeit des Prozesses.
+\layout Standard
+
+Ist 
+\begin_inset Formula $X(t)$
+\end_inset 
+
+ aber ein determiniertes Energiesignal
+\begin_inset LatexCommand \index{Energiesignal}
+
+\end_inset 
+
+ (charakterisiert durch 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t<\infty$
+\end_inset 
+
+), dann wird üblicherweise die Definition der AKF (sowie aller daraus abgeleitet
+en Größen) geringfügig modifiziert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ansonsten würde wegen der Division durch 
+\begin_inset Formula $T$
+\end_inset 
+
+ im Limes immer 
+\begin_inset Formula $\acf_{xx}(\tau)\rightarrow0$
+\end_inset 
+
+ gehen.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)\,\tdc t\label{eq:prob_acf_energy_signals}\end{equation}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Für 
+\begin_inset Formula $\tau\rightarrow\pm\infty$
+\end_inset 
+
+ kann man annehmen, daß 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $x(t+\tau)$
+\end_inset 
+
+ vollständig unabhängig sind, weshalb dann
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\,\tdc t\cdot\int\limits _{T}x(t)\,\tdc t=\left[\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\,\tdc t\right]^{2}=\overline{x(t)}^{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+gilt.
+ Hat der Zufallsprozeß keine systematischen (oder determinierte) Anteile
+ und außerdem einen zeitlichen Mittelwert 
+\begin_inset Formula $\overline{x(t)}=0$
+\end_inset 
+
+, dann verschwindet die Autokorrelationsfunktion im Unendlichen: 
+\begin_inset Formula $\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=0$
+\end_inset 
+
+.
+\end_deeper 
+\layout Enumerate
+
+Wegen Punkt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{enu:prob_acf_zero}
+
+\end_inset 
+
+ gilt immer die Relation
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Hintergrund ist die 
+\noun on 
+Cauchy-Schwarz
+\noun default 
+'sche Ungleichung in der Form 
+\begin_inset Formula $\left|\int f\cdot g\,\tdc x\right|^{2}\leq\int\left|f\right|^{2}\,\tdc x\cdot\int\left|g\right|^{2}\,\tdc x$
+\end_inset 
+
+.
+\end_inset 
+
+ 
+\begin_inset Formula $\left|\acf_{xx}(\tau)\right|\leq\acf_{xx}(0)$
+\end_inset 
+
+.
+\layout Enumerate
+
+Aus Eigenschaft\SpecialChar ~
+
+\begin_inset LatexCommand \ref{enu:prob_acf_even}
+
+\end_inset 
+
+ ergibt sich die Ausdrucksmöglichkeit der AKF als Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\acf_{xx}(\tau)=\acf_{xx}(-\tau) & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x[t]x[-(\tau-t)]\,\tdc t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x[t]x[-(\tau-t)]\,\tdc t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\conjgt{x})(\tau)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}}\label{eq:prob_acf_conv}\end{equation}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Subsection
+
+Kreuzkorrelationsfunktion
+\layout Standard
+
+Mit ähnlichem Hintergrund wie bei der Autokorrelationsfunktion kann man
+ auch den Zusammenhang zwischen 
+\emph on 
+zwei
+\emph default 
+ Zufallsprozessen 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mvec{Y}(t)$
+\end_inset 
+
+ durch ein Ähnlichkeitsmaß erklären, welches Kreuzkorrelationsfunktion
+\begin_inset LatexCommand \index{Kreuzkorrelationsfunktion}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\ccf_{xy}(\tau)$
+\end_inset 
+
+ genannt wird.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\ccf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\, y(t+\tau)\,\tdc t}\label{eq:prob_ccf_def}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Genau wie die Autokorrelationsfunktion ist auch die Kreuzkorrelationsfunktion
+ auf eine Faltung zurückzuführen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\ccf_{xy}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*\conjgt{y}(t)\right|_{t=\tau}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Verschwindet die Kreuzkorrelationsfunktion für jedes 
+\begin_inset Formula $\tau$
+\end_inset 
+
+, dann besteht keine Korrelation zwischen den Zufallsprozessen 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mvec{Y}(t)$
+\end_inset 
+
+.
+ Liegt jedoch Korrelation vor, dann gibt es typischerweise ein 
+\begin_inset Formula $\tau$
+\end_inset 
+
+, für daß die Kreuzkorrelationsfunktion maximal wird.
+\layout Standard
+
+Für Energiesignale existiert wieder eine abgewandelte Form von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_ccf_def}
+
+\end_inset 
+
+, in welcher der Limes entfällt.
+\layout Standard
+
+
+\begin_inset Formula \[
+\ccf_{xy}(\tau)=\int\limits _{-\infty}^{\infty}x(t)y(t+\tau)\,\tdc t\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Spektrale Leistungsdichte
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Leistungsdichte!Spektrale}
+
+\end_inset 
+
+Machen wir nun einen weiteren Schritt von den Zufallsprozessen zu Zufallssignale
+n, der allerdings eher eine Notationsfrage
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\noun on 
+Fourier
+\noun default 
+-Transformierte werden, wie Zufallsgrößen auch, mit Großbuchstaben bezeichnet.
+\end_inset 
+
+ als etwas Grundsätzliches ist.
+ Dabei stellen wir die Frage nach der spektralen Leistungsdichte eines stationär
+en, ergodischen Zufallsprozesses, also nach infinitesimalen Leistungsanteilen
+ in einem Frequenzbereich 
+\begin_inset Formula $\tdc f$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\tdc\omega$
+\end_inset 
+
+), der einem Zufallssignal 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ zugeordnet ist.
+ Von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_zero}
+
+\end_inset 
+
+ wissen wir, daß für die Gesamtleistung 
+\begin_inset Formula $P$
+\end_inset 
+
+ von 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ die Formel
+\layout Standard
+
+
+\begin_inset Formula \[
+P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\,\tdc t\]
+
+\end_inset 
+
+
+\layout Standard
+
+gilt.
+ Aus dem Gebiet der Harmonischen Analyse ist außerdem bekannt, daß die spektrale
+ 
+\begin_inset Quotes eld
+\end_inset 
+
+Leistungsamplitude
+\begin_inset Quotes erd
+\end_inset 
+
+ an der (Kreis-) Frequenz 
+\begin_inset Formula $\omega$
+\end_inset 
+
+ durch 
+\begin_inset Formula $\left|X(\jw)\right|^{2}=\left|\ft\{ x(t)\}\right|^{2}$
+\end_inset 
+
+ gekennzeichnet ist.
+ Die 
+\noun on 
+Fourier
+\noun default 
+-Transformation als uneigentliches Integral
+\layout Standard
+
+
+\begin_inset Formula \[
+X(\omega)=\int\limits _{-\infty}^{\infty}x(t)\,\e^{-\jw t}\,\tdc t\]
+
+\end_inset 
+
+
+\layout Standard
+
+muß für die Exsitenz von 
+\begin_inset Formula $X(\omega)$
+\end_inset 
+
+ aber konvergieren, was man bei Zufallsprozessen wegen 
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc x(t)\Rightarrow\infty$
+\end_inset 
+
+ normalerweise nicht gewährleisten kann.
+ Trotzdem kann man für diesen Fall (mitunter durch Einsatz von 
+\noun on 
+Dirac
+\noun default 
+'scher Deltafunktionen) eine Größe entwickeln, die spektrale Leistungsdichte
+ 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ des Zufallsprozesses 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+ genannt wird.
+ Dazu bilden wir die 
+\noun on 
+Fourier
+\noun default 
+-Transformierte der Autokorrelationsfunktion
+\layout Standard
+
+
+\begin_inset Formula \[
+\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\acf_{xx}(\tau)\,\e^{-\jw\tau}\,\tdc\tau\]
+
+\end_inset 
+
+
+\layout Standard
+
+und ersetzen mit Hilfe von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_def}
+
+\end_inset 
+
+ formal 
+\begin_inset Formula $\acf_{xx}(\tau)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\left[\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\,\tdc t\right]\,\e^{-\jw\tau}\,\tdc\tau\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}\int\limits _{-T/2}^{T/2}x(t)x(t+\tau)\,\e^{-\jw\tau}\,\tdc t\,\tdc\tau\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Nun wird die Integrationsreihenfolge vertauscht und danach 
+\begin_inset Formula $u=t+\tau$
+\end_inset 
+
+ substituiert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei die Integrationsgrenzen 
+\begin_inset Formula $\pm T$
+\end_inset 
+
+ nur deshalb erhalten bleiben, weil der 
+\begin_inset Formula $\lim_{T\rightarrow\infty}$
+\end_inset 
+
+ vor dem Integral steht und deshalb 
+\begin_inset Formula $t$
+\end_inset 
+
+ bei der Substitution der Grenzen unbedeutend wird.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(t+\tau)\,\e^{-\jw\tau}\,\tdc\tau\,\tdc t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw(u-t)}\,\tdc u\,\tdc t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\jw(-t)}\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\,\tdc u\,\tdc t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\ji(-\omega)t}\tdc t\cdot\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\,\tdc u\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\jw)X(\jw)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Auch wenn das 
+\noun on 
+Fourier
+\noun default 
+-Integral 
+\begin_inset Formula $X(\jw)$
+\end_inset 
+
+ selbst nicht konvergiert, so ist doch 
+\begin_inset Formula $\lim_{T\rightarrow\infty}T^{-1}\left|X(\jw)\right|^{2}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\lim_{T\rightarrow\infty}T^{-1}\int x^{2}(t)\,\tdc t$
+\end_inset 
+
+ endlich
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man kann sich auch vorstellen, daß 
+\begin_inset Formula $\left|X(\jw)\right|^{2}$
+\end_inset 
+
+ nur das Doppelintegral 
+\begin_inset Formula $\int\int x(t)x(t+\tau)\,\e^{-\jw\tau}\,\tdc t\,\tdc\tau$
+\end_inset 
+
+ über 
+\begin_inset Formula $T$
+\end_inset 
+
+ repräsentiert.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\jw)\right|^{2}=\spd_{xx}(\omega)}\label{eq:prob_psd_wiener_chintchin}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Man nennt den so gewonnen Ausdruck die spektrale Leistungsdichte 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ des Zufallsprozesses 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ das 
+\noun on 
+Wiener
+\noun default 
+-
+\noun on 
+Chintchin
+\noun default 
+-Theorem
+\begin_inset LatexCommand \index{Wiener-Chintchin-Theorem@\noun{Wiener-Chintchin}-Theorem}
+
+\end_inset 
+
+.
+ Interessant ist auch, daß sich diese Gleichung\SpecialChar ~
+(
+\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+
+\end_inset 
+
+) ganz einfach ergibt, wenn man den Faltungssatz
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Formula $(f*g)(t)\,\lft F(\jw)\, G(\jw)$
+\end_inset 
+
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Faltungssatz}
+
+\end_inset 
+
+ der Fourier-Transformation auf die Form der Autokorrelationsfunktion von
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_conv}
+
+\end_inset 
+
+ anwendet.
+\layout Standard
+
+
+\begin_inset Formula \[
+\ft\left\{ \acf_{xx}(\tau)\right\} =\ft\left\{ \lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\ft\left\{ x(t)*x(-t)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\jw)X(\jw)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Grundaussage des Satzes von 
+\noun on 
+Wiener
+\noun default 
+ und 
+\noun on 
+Chintchin
+\noun default 
+, nämlich das die spektrale Leistungsdichte mit der Autokorrelationsfunktion
+ über die 
+\noun on 
+Fourier
+\noun default 
+-Transformation verbunden ist, rechtfertigt natürlich auch die Umkehrformel:
+\layout Standard
+
+
+\begin_inset Formula \[
+\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\acf_{xx}(\tau)\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ symbolische Darstellung der 
+\noun on 
+Fourier
+\noun default 
+-Transformation.
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\acf_{xx}(\tau)\,\rft\,\spd_{xx}(\omega)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die spektrale Leistungsdichte eines Zufallsprozesses hat einige interessante
+ Eigenschaften:
+\layout Enumerate
+
+Da (schon) die Autokorrelationsfunktion eine gerade Funktion ist, muß die
+ spektrale Leistungsdichte 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ reelwertig und positiv sein
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Insbesondere gehen alle Phaseninformationen, die in 
+\begin_inset Formula $X(\jw)$
+\end_inset 
+
+ noch enthalten sind, 
+\begin_inset Quotes eld
+\end_inset 
+
+verloren
+\begin_inset Quotes erd
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Enumerate
+
+
+\begin_inset LatexCommand \label{enu:prob_psd_power}
+
+\end_inset 
+
+Die mittlere Leistung 
+\begin_inset Formula $P$
+\end_inset 
+
+ des stochastischen Prozesses kann durch Integration über die gesamte spektrale
+ Leistungsdichte 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ gewonnen werden.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+P=\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für diesen Nachweis geht man am Besten von der bekannten Beziehung 
+\begin_inset Formula $P=\acf_{xx}(0)$
+\end_inset 
+
+ aus.
+\layout Standard
+
+
+\begin_inset Formula \[
+P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\e^{\jw\tau}\,\tdc\omega=\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Nach Punkt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{enu:prob_psd_power}
+
+\end_inset 
+
+ kann man 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ auch wirklich als Leistungsdichte auffassen, wenn man den Hauptsatz der
+ Differential- und Integralrechnung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\begin_inset Formula $\frac{d}{dx}\int_{a}^{x}f(\xi)\msp d\xi=f(x)$
+\end_inset 
+
+
+\end_inset 
+
+ hinzuzieht.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\tdc P}{\tdc\omega}=\spd_{xx}(\omega)\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Subsection*
+
+Weißes Rauschen
+\layout Standard
+
+Weißes Rauschen
+\begin_inset LatexCommand \index{Rauschen!Weißes}
+
+\end_inset 
+
+ hat sowohl für die Theorie als auch in praktischen Anwendungen eine große
+ Bedeutung.
+ Diese liegt vor allem in der gleichmäßigen spektralen Verteilung, die sich
+ über das gesamte (theoretische) Frequenzband mit konstanter Leistungsdichte
+ (die mit 
+\begin_inset Formula $\spd_{0}$
+\end_inset 
+
+ bezeichnet sein soll) zieht
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Deshalb auch 
+\emph on 
+weißes
+\emph default 
+ Rauschen --- wie weißes Licht, also Licht in dem alle Frequenzen gleichermaßen
+ enthalten sind.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\spd_{xx}(\omega)=\spd_{0}\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\noun on 
+Fourier
+\noun default 
+-Rücktransformation der spektralen Leistungsdichte ergibt nach dem 
+\noun on 
+Wiener-Chintchin
+\noun default 
+-Theorem die Autokorrelationsfunktion und bei Umkehrung wieder die spektrale
+ Leistungsdichte.
+\layout Standard
+
+
+\begin_inset Formula \[
+\spd_{xx}(\omega)=\spd_{0}\;\rft\;\acf_{xx}(\tau)=\spd_{0}\,\delta(\tau)\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Spektrale Energiedichte
+\layout Standard
+
+Bei Anwendung der modifizierten Formel 
+\begin_inset LatexCommand \ref{eq:prob_acf_energy_signals}
+
+\end_inset 
+
+ für die Autokorrelationsfunktion von Energiesignalen entfällt der Limes
+ in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+
+\end_inset 
+
+ und man erhält für die spektrale Energiedichte
+\begin_inset LatexCommand \index{Energiedichte}
+
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\sed_{xx}(\omega)=\left|X(\jw)\right|^{2}=\ft\left\{ \acf_{xx}(\tau)\right\} \msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wenn nach dem 
+\noun on 
+Parseval
+\noun default 
+'schen Theorem für die Gesamt-Signalenergie 
+\begin_inset Formula $E$
+\end_inset 
+
+ gilt:
+\layout Standard
+
+
+\begin_inset Formula \[
+E=\int\limits _{-\infty}^{\infty}\left|X(\jw)\right|^{2}\tdc\omega=\int\limits _{-\infty}^{\infty}\sed_{xx}(\omega)\,\tdc\omega\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+dann bestätigt uns das Differential
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\tdc E}{\tdc\omega}=\sed_{xx}(\omega)\]
+
+\end_inset 
+
+
+\layout Standard
+
+in der Korrektheit des Begriffs einer Energiedichte.
+\layout Subsection
+
+Kreuzleistungs- und Energiedichten
+\layout Standard
+
+Eine Verallgemeinerung zur spektralen Leistungsdichte (eines Zufallssignals)
+ stellt die Kreuzleistungsdichte
+\begin_inset LatexCommand \index{Leistungsdichte!Kreuz-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\spd_{xy}(\jw)$
+\end_inset 
+
+ dar.
+ Sie beschreibt den Zusammenhang zwischen zwei Zufallssignalen 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ im Frequenzbereich und ist als
+\layout Standard
+
+
+\begin_inset Formula \[
+\spd_{xy}(\jw)=\lim_{T\rightarrow\infty}\frac{1}{T}X(\jw)\,\conjgt{Y}(\jw)\]
+
+\end_inset 
+
+
+\layout Standard
+
+definiert.
+ Im Gegensatz zur spektralen 
+\begin_inset Quotes eld
+\end_inset 
+
+Auto
+\begin_inset Quotes erd
+\end_inset 
+
+-Leistungsdichte 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ ist sie eine komplexe Größe.
+\layout Standard
+
+Was den Zusammenhang mit den zeitlichen Zufallsprozessen angeht, ist auch
+ sie eine 
+\noun on 
+Fourier
+\noun default 
+-Transformierte
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\noun on 
+Wiener
+\noun default 
+-
+\noun on 
+Chintchin
+\noun default 
+-Theorem für die Kreuzkorrelation.
+\end_inset 
+
+, nämlich der Kreuzkorrelationsfunktion
+\begin_inset LatexCommand \index{Kreuzkorrelationsfunktion}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_ccf_def}
+
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Formula \[
+\spd_{xy}(\jw)=\ft\left\{ \ccf_{xy}(\tau)\right\} \]
+
+\end_inset 
+
+
+\layout Standard
+
+Für Energiesignale (
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t\,<\infty$
+\end_inset 
+
+) ist die Kreuzenergiedichte
+\begin_inset LatexCommand \index{Kreuzenergiedichte}
+
+\end_inset 
+
+, in ähnlicher Art und Weise wie auch schon die Kreuzkorrelationsfunktion,
+ in einer modifizierten Form definiert.
+\layout Standard
+
+
+\begin_inset Formula \[
+\sed_{xy}(\jw)=X(\jw)\,\conjgt{Y}(\jw)\;\rft\;\ccf_{xy}(\tau)\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Zufallsprozesse|)}
+
+\end_inset 
+
+
 \layout Section
 
-Anwendungen
+Spezielle Anwendungen
+\layout Subsection
+
+LTI-Systeme
+\layout Standard
+
+
+\begin_inset LatexCommand \index{LTI-Systeme}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsprozeß}
+
+\end_inset 
+
+Bei den aus der Systemtheorie her bekannten linearen zeit-invarianten (LTI)
+ Systemen (der Art von Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:prob_system_transform}
+
+\end_inset 
+
+) kann man die Frage stellen, wie ein Zufallsprozeß 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+ am Eingang auf 
+\begin_inset Formula $\mvec{Y}(t)$
+\end_inset 
+
+ am Ausgang übertragen wird.
+ Aus Sicht des Ein- und Ausgangssignals 
+\begin_inset Formula $X(\jw)$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $Y(\jw)$
+\end_inset 
+
+ im Bildbereich wissen wir, daß ein solches System durch die Gleichung
+\layout Standard
+
+
+\begin_inset Formula \[
+Y(\jw)=\trf(\jw)X(\jw)\]
+
+\end_inset 
+
+
+\layout Standard
+
+beschrieben werden kann.
+ Dabei ist 
+\begin_inset Formula $\trf(\jw)$
+\end_inset 
+
+ die komplexe Übertragungsfunktion des Systems im Bildbereich der 
+\noun on 
+Fourier
+\noun default 
+-Transformation.
+ Sicherlich rechtfertigt diese Beziehung auch den durch einfache Variablensubsti
+tution entstehenden Ausdruck 
+\begin_inset Formula $Y(-\jw)=\trf(-\jw)X(-\jw)$
+\end_inset 
+
+ oder äquivalent 
+\begin_inset Formula $\conjgt{Y}(\jw)=\conjgt{\trf}(\jw)\,\conjgt{X}(\jw)$
+\end_inset 
+
+.
+ Multipliziert man jetzt die Gleichungen für 
+\begin_inset Formula $Y(\jw)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\conjgt{Y}(\jw)$
+\end_inset 
+
+ miteinander, dann erhält man den quadratischen Amplitudengang des Systems.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+Y(\jw)\conjgt{Y}(\jw) & = & \trf(\jw)\conjgt{\trf}(\jw)\, X(\jw)\conjgt{X}(\jw)\\
+\left|Y(\jw)\right|^{2} & = & \left|\trf(\jw)\right|^{2}\left|X(\jw)\right|^{2}\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Berücksichtigt man außerdem, daß
+\layout Itemize
+
+für stabile Systeme das 
+\noun on 
+Fourier
+\noun default 
+-Integral 
+\begin_inset Formula $\trf(\jw)$
+\end_inset 
+
+ existiert;
+\layout Itemize
+
+für Leistungssignale die Fourier-Transformierten 
+\begin_inset Formula $X(\jw)$
+\end_inset 
+
+ und 
+\begin_inset Formula $Y(\jw)$
+\end_inset 
+
+ nicht konvergieren;
+\layout Itemize
+
+die 
+\noun on 
+Fourier
+\noun default 
+-Transformierten der Autokorrelationsfunktionen 
+\begin_inset Formula $\acf_{xx}(\tau)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\acf_{yy}(\tau)$
+\end_inset 
+
+ die spektralen Leistungsdichten 
+\begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\spd_{yy}(\omega)$
+\end_inset 
+
+ sind;
+\layout Standard
+
+und bildet sowohl links- als auch rechtsseitig mit 
+\begin_inset Formula $\lim_{T\rightarrow\infty}1/T$
+\end_inset 
+
+ den Grenzwert, 
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{T\rightarrow\infty}\frac{1}{T}\left|Y(\jw)\right|^{2}=\left|\trf(\jw)\right|^{2}\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\jw)\right|^{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+so erhält man auf der Grundlage des 
+\noun on 
+Wiener-Chintchin
+\noun default 
+-Theorems (Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+
+\end_inset 
+
+) die Beziehung zwischen den spektralen Leistungsdichten der Ein- und Ausgangspr
+ozesse im Frequenzbereich.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\spd_{yy}(\omega)=\left|\trf(\jw)\right|^{2}\spd_{xx}(\omega)}\label{eq:prob_lti_frequency_domain}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Im Zeitbereich ergibt sich daraus bei Anwendung des Faltungssatzes der 
+\noun on 
+Fourier
+\noun default 
+-Transformation
+\layout Standard
+
+
+\begin_inset Formula \[
+\ft^{(-1)}\left\{ \spd_{yy}(\omega)\right\} =\ft^{(-1)}\left\{ \left|\trf(\jw)\right|^{2}\right\} *\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} \]
+
+\end_inset 
+
+
+\layout Standard
+
+und so für die (zeitinvarianten) Autokorrelationsfunktionen:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{yy}(\tau)=\ft^{(-1)}\left\{ \left|\trf(\jw)\right|^{2}\right\} *\acf_{xx}(\tau)\msp.}\label{eq:prob_lti_time_domain}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Bedenkt man noch, daß die Übertragungsfunktion eines LTI-Systems gleichzeitig
+ die Fourier-Transformierte der Impulsantwort 
+\begin_inset Formula $g(t)$
+\end_inset 
+
+ ist,
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\jw)\rft\; g(t)\qquad\qquad\conjgt{\trf}(\jw)\rft\;\conjgt{g}(t)=g(-t)\]
+
+\end_inset 
+
+
+\layout Standard
+
+und immer die Beziehung 
+\begin_inset Formula $\left|\trf(\jw)\right|^{2}=\trf(\jw)\,\conjgt{\trf}(\jw)$
+\end_inset 
+
+ gilt, so kann man (wieder mit dem Faltungssatz der 
+\noun on 
+Fourier
+\noun default 
+-Transformation) Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_lti_time_domain}
+
+\end_inset 
+
+ als zweifache Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ darstellen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{yy}(\tau)=(g*\conjgt{g}*\acf_{xx})(\tau)}\label{eq:prob_lti_time_conv}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Sind 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ Signale mit endlicher Energie
+\begin_inset LatexCommand \index{Energiesignale}
+
+\end_inset 
+
+, dann muß man (wie gewohnt) nur die Division durch 
+\begin_inset Formula $\lim_{T\rightarrow\infty}T$
+\end_inset 
+
+ überall weglassen, was 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ aus Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_lti_frequency_domain}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\sed_{yy}(\omega)=\left|\trf(\jw)\right|^{2}\sed_{xx}(\omega)\]
+
+\end_inset 
+
+
+\layout Standard
+
+macht.
+\layout Subsection
+
+Optimalfilter
+\layout Standard
+
+Optimalfilter
+\begin_inset LatexCommand \index{Optimalfilter}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Matched Filter}
+
+\end_inset 
+
+ sind (LTI-) Systeme
+\begin_inset LatexCommand \index{LTI-Systeme}
+
+\end_inset 
+
+, die eine (angepaßte) Übertragungsfunktion derart besitzen, daß ein additiv
+ gestörtes Nutzsignal möglichst sicher zu detektieren ist.
+ Nach dem Modell in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:prob_optimal_filter}
+
+\end_inset 
+
+ benennen wir mit 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ das determinierte Signal (der Gesamtenergie 
+\begin_inset Formula $E$
+\end_inset 
+
+) und mit 
+\begin_inset Formula $n(t)$
+\end_inset 
+
+ weißes Rauschen
+\begin_inset LatexCommand \index{Rauschen!Weißes}
+
+\end_inset 
+
+ der spektralen Leistungsdichte 
+\begin_inset Formula $\spd_{xx}(\omega)=\spd_{0}$
+\end_inset 
+
+, welches auf dem Übertragungskanal induziert wird.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename optimal.eps
+	scale 90
+	keepAspectRatio
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:prob_optimal_filter}
+
+\end_inset 
+
+Übertragungskanal mit Optimalfilter
+\end_inset 
+
+
+\layout Standard
+
+Das Optimierungsproblem besteht nun darin, zum Abtastzeitpunkt 
+\begin_inset Formula $t_{0}$
+\end_inset 
+
+ das Verhältnis von Momentan-Nutzleistung 
+\begin_inset Formula $y^{2}(t_{0})$
+\end_inset 
+
+ zur Rauschleisung am Ausgang zu maximieren.
+ Dabei ist (nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_zero}
+
+\end_inset 
+
+, Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_acf}
+
+\end_inset 
+
+) die Störleistung genau die Autokorrelationsfunktion 
+\begin_inset Formula $\acf_{yy}(0)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}\Rightarrow\textrm{Max.}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Zuerst
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Bei LTI-Systemen kann man vom Superpositionsprinzip von Nutz- und Störsignal
+ ausgehen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ wir können beide Anteile an jeder Stelle des Modells separat betrachten.
+\end_inset 
+
+ drücken wir 
+\begin_inset Formula $y(t_{0})$
+\end_inset 
+
+ durch die (für LTI-Systeme typische) Faltung von 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ mit der Impulsantwort 
+\begin_inset Formula $g(t)\,\lft\,\trf_{opt}(\jw)$
+\end_inset 
+
+ aus.
+\layout Standard
+
+
+\begin_inset Formula \[
+y^{2}(t_{0})=\left[\left.(g*x)\right|_{t=t_{0}}\right]^{2}=\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Rauschleistung kann 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ ermittelt werden, indem man ausgehend von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_lti_time_conv}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\acf_{yy}(\tau)$
+\end_inset 
+
+ bestimmt.
+ Führt man die gesamte Berechnung im Zeitbereich durch, dann ist in Verbindung
+ mit der Autokorrelationsfunktion des weißen Rauschens 
+\begin_inset Formula $\acf_{xx}(\tau)=\spd_{0}\delta(t)$
+\end_inset 
+
+ das Ausblendtheorem
+\begin_inset LatexCommand \index{Ausblendtheorem}
+
+\end_inset 
+
+ der Deltafunktion
+\begin_inset LatexCommand \index{Deltafunktion}
+
+\end_inset 
+
+ 
+\begin_inset Formula $f(t)*\delta(t-t_{0})=f(t_{0})$
+\end_inset 
+
+ hilfreich einzusetzen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\acf_{yy}(\tau)=(g*\conjgt{g}*\acf_{xx})(\tau)=\spd_{0}\left.g(\tau)*g(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t\]
+
+\end_inset 
+
+
+\layout Standard
+
+Bringen wir nun beide Zwischenergebnisse zusammen
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und erweitern den Bruch noch um 
+\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t$
+\end_inset 
+
+, welches mit der Substitution 
+\begin_inset Formula $t:=t_{0}-t$
+\end_inset 
+
+ in 
+\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t$
+\end_inset 
+
+ übergeht.
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Etwas umsortiert (und gesichtet) ist festzustellen, daß hier der Korrelationskoe
+ffizient
+\begin_inset LatexCommand \index{Korrelationskoeffizient}
+
+\end_inset 
+
+ nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_corr_mean_zero}
+
+\end_inset 
+
+ in der zeitlichen Form für Energiesignale
+\layout Standard
+
+
+\begin_inset Formula \[
+\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int\limits _{-\infty}^{\infty}x_{1}(t)x_{2}(t)\,\tdc t}{\sqrt{\int\limits _{-\infty}^{\infty}x_{1}^{2}(t)\,\tdc t\;\int\limits _{-\infty}^{\infty}x_{2}^{2}(t)\,\tdc t}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+zwischen 
+\begin_inset Formula $g(t)$
+\end_inset 
+
+ und 
+\begin_inset Formula $x(t_{0}-t)$
+\end_inset 
+
+ enthalten ist.
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int\limits _{-\infty}^{\infty}g(u)x(t_{0}-u)\,\tdc u\right]^{2}}{\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t}=\frac{E}{\spd_{0}}\corr^{2}\left[g(t),x(t_{0}-t)\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wie wir aus Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_corr}
+
+\end_inset 
+
+ wissen, ist der Korrelationskoeffizient dann am größten, wenn beide Funktionen
+ linear abhängig sind, also 
+\begin_inset Formula $g(t)=k\, x(t_{0}-t)$
+\end_inset 
+
+ gilt.
+ Durch 
+\noun on 
+Fourier
+\noun default 
+-Transformation dieser Beziehung gelangt man zur Übertragungsfunktion des
+ Optimalfilters im Bildbereich.
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\trf_{opt}=k\,\conjgt{X}\e^{-\jw t_{0}}\;\rft\; k\, x(t_{0}-t)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für das Nutzsignal ergeben sich folgerichtig die Beziehungen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Das Nutzsignal 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ stellt im Sinne von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_conv}
+
+\end_inset 
+
+ die um 
+\begin_inset Formula $t_{0}$
+\end_inset 
+
+ verschobene Energie-AKF von 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+ dar.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+y(t) & =x(t)*g(t)=k\, x(t)*x(t_{0}-t)\\
+Y(\jw) & =\trf(\jw)\, X(\jw)=k\, X(\jw)\conjgt{X}\e^{-\jw t_{0}}=k\,\left|X(\jw)\right|^{2}\e^{-\jw t_{0}}\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Leistungsbilanz zum Zeitpunkt 
+\begin_inset Formula $t_{0}$
+\end_inset 
+
+ fällt mit 
+\begin_inset Formula $\corr(\cdot)=1$
+\end_inset 
+
+ folgendermaßen aus:
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\msp.\]
+
+\end_inset 
+
+
+\layout Comment
+
+Markoff-Ketten
 \layout Subsection
 
 Quantisierung
@@ -4539,17 +7030,12 @@ Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR)
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Signal-Rausch-Abstand}
+\begin_inset LatexCommand \index{Signal-Rausch-Abstand (SNR)}
 
 \end_inset 
 
-
-\begin_inset LatexCommand \index{SNR}
-
-\end_inset 
-
-Diese Größe ist als logarithmisches Verhältnis von Signalleistung zur Rauschleis
-tung definiert.
+Die SNR ist als logarithmisches Verhältnis von Signalleistung zur Rauschleistung
+ definiert.
 \layout Standard
 
 
@@ -4611,7 +7097,7 @@ ie
 \end_inset 
 
  
-\begin_inset Formula $U_{0}=\sqrt{\smash[b]{2}}\cdot\tilde{s}$
+\begin_inset Formula $U_{0}=\sqrt{\smash[b]{2}}\,\tilde{s}$
 \end_inset 
 
  anzusetzen.
@@ -4772,7 +7258,7 @@ chkeitsdichten
 
 
 \begin_inset Formula \[
-p_{i}(t)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\msp.\]
+p_{i}(t)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\msp.\]
 
 \end_inset 
 
@@ -4808,7 +7294,7 @@ cf
 
 
 \begin_inset Formula \[
-\pr(T_{i}<t)=F_{i}(t)=\int\limits _{-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
+\pr(T_{i}<t)=F_{i}(t)=\int\limits _{-\infty}^{t}\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{u-\mu_{i}}{\sigma_{i}}\right)^{2}\right]\tdc u\msp.\]
 
 \end_inset 
 
@@ -4846,8 +7332,8 @@ Mittelwertfreie Normalverteilung mit
 
 
 \begin_inset Formula \begin{eqnarray}
-F_{i}(t) & = & \int\limits _{-\infty}^{\frac{t-\mu_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
-\cnorm(x) & = & \int\limits _{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{u^{2}}{2}}\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
+F_{i}(t) & = & \int\limits _{-\infty}^{(t-\mu_{i})/\sigma_{i}}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{z^{2}}{2}\right)\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
+\cnorm(x) & = & \int\limits _{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{u^{2}}{2}\right)\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
 
 \end_inset 
 
@@ -5008,6 +7494,18 @@ Notation
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\acf_{xx}$
+\end_inset 
+
+ Autokorrelationsfunktion des Zufallsprozesses 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\log$
 \end_inset 
 
@@ -5048,6 +7546,58 @@ Notation
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\exp(x)$
+\end_inset 
+
+ Exponentialfunktion
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\e$
+\end_inset 
+
+ 
+\noun on 
+Euler
+\noun default 
+'sche Zahl
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $*$
+\end_inset 
+
+ Faltungs-Operator
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\conjgt{x}(t)$
+\end_inset 
+
+ Konjugierte Funktion 
+\begin_inset Formula $x(-t)$
+\end_inset 
+
+ im Zeitbereich
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\conjgt{X}(\jw)$
+\end_inset 
+
+ Konjugiert komplexe Funktion 
+\begin_inset Formula $X(-\jw)$
+\end_inset 
+
+ im Bildbereich
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\cov(X_{1},X_{2})$
 \end_inset 
 
@@ -5072,6 +7622,18 @@ Notation
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\ccf_{xy}$
+\end_inset 
+
+ Kreuzkorrelationsfunktion der Zufallsprozesse 
+\begin_inset Formula $\mvec{X}(t),\mvec{Y}(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\mean(X^{2})$
 \end_inset 
 
@@ -5088,10 +7650,58 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\spd_{xx}$
+\end_inset 
+
+ Spektrale Leistungsdichte des Zufallsprozesses 
+\begin_inset Formula $\mvec{X}(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\spd_{xy}$
+\end_inset 
+
+ Spektrale Kreuzleistungsdichte der Zufallsprozesse 
+\begin_inset Formula $\mvec{X}(t),\mvec{Y}(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\sed_{xx}$
+\end_inset 
+
+ Spektrale Energiedichte des Signals 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\cnorm(x)$
 \end_inset 
 
  Standard-Normalverteilung
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $f^{(-1)}(x)$
+\end_inset 
+
+ Umkehrfunktion von 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -5165,6 +7775,18 @@ SNR Signal-Rausch-Abstand
 
  Wahrscheinlichkeitsdichte des Zufallsvektors 
 \begin_inset Formula $\mvec{X}$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\overline{x(t)}$
+\end_inset 
+
+ Zeit-Mittelwert des Zufallssignals 
+\begin_inset Formula $x(t)$
 \end_inset 
 
 
