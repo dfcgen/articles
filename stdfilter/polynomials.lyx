@@ -35,7 +35,7 @@ collapsed false
 Properties of algebraic polynomials
 \layout Standard
 
-Version: $Id: polynomials.lyx,v 1.2 2004-10-09 20:08:00 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.3 2004-11-07 16:50:34 ralf Exp $
 \end_inset 
 
 
@@ -44,7 +44,12 @@ Version: $Id: polynomials.lyx,v 1.2 2004-10-09 20:08:00 ralf Exp $
 Algebraische Funktionen
 \layout Standard
 
-Algebraische Funktionen verknüpfen ein Argument 
+Algebraische Funktionen
+\begin_inset LatexCommand \index{Funktion!algebraische}
+
+\end_inset 
+
+ verknüpfen ein Argument 
 \begin_inset Formula $x$
 \end_inset 
 
@@ -149,18 +154,18 @@ Die beiden ersten Fälle werden deshalb rational genannt, weil ein Ergebnis
 
 \end_inset 
 
-Ganzrationale Funktionen (Polynome)
+Ganzrationale Funktionen (Polynome
+\begin_inset LatexCommand \index{Polynome|(}
+
+\end_inset 
+
+)
 \layout Subsection
 
 Definition
 \layout Standard
 
-Polynome
-\begin_inset LatexCommand \index{Polynom}
-
-\end_inset 
-
- sind ganzrationale Funktionen
+Polynome sind ganzrationale Funktionen
 \begin_inset LatexCommand \index{Funktion!ganzrationale}
 
 \end_inset 
@@ -170,14 +175,14 @@ Polynome
 
 
 \begin_inset Formula \begin{equation}
-P(x)=\poly{a}{x}{n}=\sum_{i=0}^{n}a_{i}x^{i}\label{eq:poly_sum}\end{equation}
+P(x)=\poly{a}{x}{n}=\sum_{i=0}^{n}a_{i}x^{i},\qquad a_{n}\neq0\label{eq:poly_sum}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-mit reellen Koeffizienten 
+mit (hier reellen) Koeffizienten 
 \begin_inset Formula $a_{i}$
 \end_inset 
 
@@ -337,10 +342,10 @@ wegen
 \begin_inset Formula $i\neq k$
 \end_inset 
 
- verschwinden
+ verschwinden und
 \layout Enumerate
 
-und für 
+für 
 \begin_inset Formula $i=k$
 \end_inset 
 
@@ -386,6 +391,11 @@ i\neq k}
 Nullstellen
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Nullstellen!eines Polynoms}
+
+\end_inset 
+
 Bei der Linearfaktordarstellung nach Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
@@ -412,7 +422,8 @@ Jedes algebraische Polynom
 \begin_inset Quotes erd
 \end_inset 
 
- 
+\SpecialChar ~
+
 \begin_inset LatexCommand \cite{Gauss:1799}
 
 \end_inset 
@@ -422,17 +433,8 @@ Jedes algebraische Polynom
 \begin_inset Formula $a_{i}$
 \end_inset 
 
- müssen diese Nullstellen entweder konjugiert komplex (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- imaginär) auftreten oder aber reell sein.
+ müssen diese Nullstellen entweder konjugiert komplex (als Spezialfall imaginär)
+ auftreten oder aber reell sein.
  Wäre diese Bedingung nicht erfüllt, dann würde Ausmultiplizieren der Produktdar
 stellung\SpecialChar ~
 
@@ -582,6 +584,10 @@ ie
 
 -te jedoch nicht.
  Diese Aussage stellt eine Verallgemeinerung des Begriffes der Vielfachheit
+\begin_inset LatexCommand \index{Nullstelle!Vielfachheit}
+
+\end_inset 
+
  einer Nullstelle dar
 \begin_inset Foot
 collapsed true
@@ -597,6 +603,199 @@ Außerdem wird eine Funktion mit solchen Eigenschaften als maximal flach
 \end_inset 
 
 .
+\layout Standard
+
+Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
+ von den Koeffizienten in Summenformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:poly_sum}
+
+\end_inset 
+
+ Aussagen zu deren Lage machen
+\begin_inset LatexCommand \index{Nullstelle!Lage}
+
+\end_inset 
+
+.
+ Hier sei nur der Lokalisierungssatz von 
+\noun on 
+Cauchy
+\noun default 
+ erwähnt, weitere findet man 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[6.2.2.]{Kaiser:1980}
+
+\end_inset 
+
+.
+\layout Quote
+
+Ist 
+\begin_inset Formula $A$
+\end_inset 
+
+ der Maximalwert der Beträge aller Koeffizienten 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $i=0\ldots n-1$
+\end_inset 
+
+, also 
+\begin_inset Formula $A=\max\left(\left|a_{0}\right|,\left|a_{1}\right|,\left|a_{2}\right|\ldots\left|a_{n-1}\right|\right)$
+\end_inset 
+
+, dann sind die Beträge sämtlicher Nullstellen kleiner als
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+1+\frac{A}{\left|a_{n}\right|}\msp.\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Proof
+
+An einer Nullstelle gilt bekanntermaßen 
+\begin_inset Formula $P(x)=0$
+\end_inset 
+
+ und somit
+\layout Proof
+
+
+\begin_inset Formula \[
+-a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=R(x)\msp.\]
+
+\end_inset 
+
+
+\layout Proof
+
+Wir bilden nun auf beiden Seiten den Betrag
+\layout Proof
+
+
+\begin_inset Formula \[
+\left|a_{n}\zn[n]{x}{}\right|=\left|R(\zn{x}{})\right|\]
+
+\end_inset 
+
+
+\layout Proof
+
+und betrachten den Wert von 
+\begin_inset Formula $\left|R(\zn{x}{})\right|$
+\end_inset 
+
+.
+ Er ist sicherlich dann am größten, wenn alle Koeffizienten positiv und
+ nahezu dem Wert 
+\begin_inset Formula $A$
+\end_inset 
+
+ entsprechen.
+ Aus diesem Grund gilt die Ungleichung
+\layout Proof
+
+
+\begin_inset Formula \[
+\left|a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}\right|\leq A\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\]
+
+\end_inset 
+
+
+\layout Proof
+
+und gleichbedeutend
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\left|R(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
+\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Proof
+
+Die rechte Seite kann man auch als Quotient zweier Polynome darstellen,
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\layout Proof
+
+
+\begin_inset Formula \[
+\left|a_{n}\zn[n]{x}{}\right|\leq A\frac{\left|\zn{x}{}\right|^{n}-1}{\left|\zn{x}{}\right|-1}\msp.\]
+
+\end_inset 
+
+
+\layout Proof
+
+Ausklammern von 
+\begin_inset Formula $\left|\zn{x}{}\right|^{n}$
+\end_inset 
+
+ führt zu
+\layout Proof
+
+
+\begin_inset Formula \[
+\left|a_{n}\right|\leq A\frac{1-\left|\zn{x}{}\right|^{-n}}{\left|\zn{x}{}\right|-1}\stackrel{\left|\zn{x}{}\right|>1}{\quad\leq\quad}A\frac{1}{\left|\zn{x}{}\right|-1}\]
+
+\end_inset 
+
+
+\layout Proof
+
+und damit zu 
+\noun on 
+Cauchy
+\noun default 
+'s oberer Grenze für den Betrag der Nullstellen.
+\layout Proof
+
+
+\begin_inset Formula \[
+\left|\zn{x}{}\right|\leq1+\frac{A}{\left|a_{n}\right|}\]
+
+\end_inset 
+
+
+\layout Proof
+
+
+\begin_inset LatexCommand \index{Polynome|)}
+
+\end_inset 
+
+
 \layout Section
 
 Gebrochenrationale Funktionen
