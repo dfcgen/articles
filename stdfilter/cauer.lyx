@@ -1,0 +1,565 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize a4paper
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: cauer.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+
+\noun on 
+
+\begin_inset LatexCommand \label{sec:filter_cauer}
+
+\end_inset 
+
+Cauer
+\noun default 
+-Tiefpaß
+\layout Subsection
+
+
+\lang english
+Amplitudencharakteristik
+\layout Standard
+
+
+\noun on 
+W.\SpecialChar ~
+Cauer
+\noun default 
+ hat unter anderem das Problem der Bestapproximation des idealen Tiefpaß-Amplitu
+dengangs 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der charakteristischen Funktion (Drosselung) in seinen Arbeiten untersucht\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Cauer:1954}
+
+\end_inset 
+
+.
+ Dabei ist er in wissenschaftlicher Art und Weise von der elektrotechnischen
+ Problemstellung zur mathematischen Lösung gelangt.
+ Wir wollen hier (der Kürze halber) auf die Erkenntnisse aus Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elliptic}
+
+\end_inset 
+
+, insbesondere die zu den elliptischen Haupttransformationen höherer Ordnung
+ zurückgreifen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Dieser Filtertyp ist eine konsequente Anwendung der elliptischen Transformations
+theorie, welche schon im 19.\SpecialChar ~
+Jahrhundert etabliert war.
+\end_inset 
+
+.
+\layout Standard
+
+Für die Drosselungsfunktion 
+\begin_inset Formula $\D(\omega)$
+\end_inset 
+
+ gibt es in der Literatur die verschiedensten Darstellungen\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979}
+
+\end_inset 
+
+, welche sich aber immer nur in der Skalierung von Amplituden- und Frequenzachse
+ unterscheiden.
+ Im Folgenden werden die Lösungsformeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_poly}
+
+\end_inset 
+
+ der ersten elliptischen Haupttransformation nach 
+\noun on 
+C.\SpecialChar ~
+G.\SpecialChar ~
+J.
+ Jacobi
+\noun default 
+ als Ausgangspunkt dienen, die grundsätzliche Argumentation sich aber auf
+ 
+\noun on 
+E.\SpecialChar ~
+I.
+ Solotareff
+\noun default 
+ und dessen drittes Approximationsproblem stützen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\noun on 
+Solotareff
+\noun default 
+'s Problemstellung (sowie dessen Lösungsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_solution}
+
+\end_inset 
+
+) hat den Nachteil, daß der Durchlaßbereich nicht (wie üblich) am typischen
+ Normierungswert 
+\begin_inset Formula $\omega=1$
+\end_inset 
+
+, sondern bei 
+\begin_inset Formula $\omega=\sqrt{k}$
+\end_inset 
+
+ enden würde, wenn man sie direkt als Ausgangspunkt für die Drosselung 
+\begin_inset Formula $\D(\omega)$
+\end_inset 
+
+ nimmt.
+\end_inset 
+
+.
+\layout Standard
+
+Wir gehen also von den genannten Gleichungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_poly}
+
+\end_inset 
+
+ aus und definieren eine Funktion
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Zu Ehren von 
+\noun on 
+W.\SpecialChar ~
+Cauer
+\noun default 
+ mit dem Symbol 
+\begin_inset Formula $\textup{C}$
+\end_inset 
+
+.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\efunc{\textup{C}}{x}{k}=\left\{ \begin{array}{ll}
+\mbig{\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
+\mbig{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.}\]
+
+\end_inset 
+
+
+\layout Standard
+
+mit den Koeffizienten
+\layout Standard
+
+
+\begin_inset Formula \[
+a_{\nu}=\esn{\nu\frac{K}{n}}{k}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Der Parameter 
+\begin_inset Formula $k$
+\end_inset 
+
+ wird das (elliptische) Modul genannt, welches auch häufig als Modulwinkel
+ 
+\begin_inset Formula $\Theta=\sin(k)$
+\end_inset 
+
+ anzutreffen ist.
+ Der Multiplikator 
+\begin_inset Formula $M$
+\end_inset 
+
+ ist ein nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_M}
+
+\end_inset 
+
+ berechneter Vorfaktor.
+ Die zur Berechnung der Koeffizienten benötigte Größe 
+\begin_inset Formula $K$
+\end_inset 
+
+ ist das sogenannte elliptische Integral erster Art 
+\begin_inset Formula $K=\eK{k}$
+\end_inset 
+
+ nach Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elliptic_integral_K}
+
+\end_inset 
+
+.
+ Mit 
+\begin_inset Formula $\jsn$
+\end_inset 
+
+ wird der elliptische Sinus abgekürzt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elliptic_func}
+
+\end_inset 
+
+).
+ Der Verlauf dieser Funktion ist in den Abbildungen 
+\begin_inset LatexCommand \ref{fig:elltr1_odd_function}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:elltr1_even_function}
+
+\end_inset 
+
+ des Anhangs\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr}
+
+\end_inset 
+
+ zu den elliptischen Transformationen (speziell 
+\begin_inset LatexCommand \ref{sec:elltr1_odd_n}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr1_even_n}
+
+\end_inset 
+
+), welcher sich schwerpunktmäßig mit den Eigenschaften solcher Funktionen
+ auseinandersetzt, dargestellt.
+\layout Standard
+
+Die Funktion 
+\begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
+\end_inset 
+
+ ist aber vor allem deshalb von besonderem Interesse, da sie der Approximationsv
+orschrift eines 
+\noun on 
+Cauer
+\noun default 
+-Tiefpaß', nämlich der gleichmäßigen Approximation des Dämpfungs- 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Amplitudenverlaufs im gesamten Frequenzbereich am Besten entspricht (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:zolotarev}
+
+\end_inset 
+
+, 
+\noun on 
+Solotareff
+\noun default 
+'s drittes Problem).
+ Wir setzen aus vorgenannten Gründen 
+\begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
+\end_inset 
+
+ als Drosselung an
+\layout Standard
+
+
+\begin_inset Formula \[
+\eD{\omega}{k}=\efunc{\textup{C}}{\omega}{k}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und erhalten für die Amplitudencharakteristik
+\layout Standard
+
+
+\lang english
+
+\begin_inset Formula \begin{equation}
+\TRF(\omega)=\frac{1}{\sqrt{1+\delta^{2}\msp\efunc[2]{\textup{C}}{\omega}{k}}}\msp.\label{eq:filter_cauer_amplitude}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit den ebenfalls aus Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr}
+
+\end_inset 
+
+ bekannten Werten
+\layout Standard
+
+
+\lang english
+
+\begin_inset Formula \begin{xalignat*}{2}
+\efunc{\textup{C}}{1}{k} & =\pm1 & \efunc{\textup{C}}{\frac{1}{k}}{k} & =\frac{1}{\lambda}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\lang english
+lassen sich die Dämpfungswerte 
+\begin_inset Formula $A_{max}$
+\end_inset 
+
+ und 
+\begin_inset Formula $A_{min}$
+\end_inset 
+
+aus dem Tiefpaß-Toleranzschema angeben.
+\layout Standard
+
+
+\lang english
+
+\begin_inset Formula \begin{align*}
+A_{max} & =-20\log\TRF(1)=10\log\left(1+\delta^{2}\right)\\
+A_{min} & =-20\log\TRF(1/k)=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
+\textrm{mit}\\
+\lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\lang english
+Variation des Parameters 
+\begin_inset Formula $k$
+\end_inset 
+
+ zeigt, 
+\lang german
+daß er die Steilheit im Übergangsbereich 
+\begin_inset Formula $1<\omega<\omega_{k}$
+\end_inset 
+
+, aber auch die Welligkeit 
+\begin_inset Formula $A_{max}$
+\end_inset 
+
+ im Durchlaßbereich 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Mindestdämpfung 
+\begin_inset Formula $A_{min}$
+\end_inset 
+
+ im Sperrbereich wesentlich beeinflußt.
+ In den Abbildungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:cauer_attenuation_even}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:cauer_attenuation_odd}
+
+\end_inset 
+
+ ist der Dämpfungsverlauf eines 
+\noun on 
+Cauer
+\noun default 
+-Tiefpaß für geraden und ungeraden Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ dargestellt.
+\layout Standard
+
+
+\lang english
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Graphics
+	filename cauer_even.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:cauer_attenuation_even}
+
+\end_inset 
+
+Dämpfungsverlauf des
+\noun on 
+ Cauer
+\noun default 
+-Tiefpaß' für gerade Ordnung 
+\begin_inset Formula $n$
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+
+\lang english
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Graphics
+	filename cauer_odd.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:cauer_attenuation_odd}
+
+\end_inset 
+
+Dämpfungsverlauf des
+\noun on 
+ Cauer
+\noun default 
+-Tiefpaß' für ungerade Ordnung 
+\begin_inset Formula $n$
+\end_inset 
+
+
+\end_inset 
+
+
+\the_end

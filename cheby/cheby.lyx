@@ -1,0 +1,1727 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize a4paper
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: cheby.lyx,v 1.1 2004-09-27 19:30:07 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+
+\begin_inset LatexCommand \label{chap_cheby}
+
+\end_inset 
+
+Einleitung
+\layout Standard
+
+Dieser Typ von Funktionen wurde insbesondere durch 
+\noun on 
+P.\SpecialChar ~
+L.
+ Tschebyscheff
+\noun default 
+ im Zusammenhang mit Approximationsproblemen unter\SpecialChar \-
+sucht\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Chebyshev:1899,Achieser:1967,Meinardus:1964}
+
+\end_inset 
+
+.
+ Eine verständliche Einführung in diese Funktionen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Meist sehr stark konzentriert auf die 
+\noun on 
+Tschebyscheff
+\noun default 
+-Funktionen erster Art.
+\end_inset 
+
+ enthalten 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Haemmerlin:1992,Kaiser:1980}
+
+\end_inset 
+
+ sowie\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Sieber:1988}
+
+\end_inset 
+
+, übersichtliche Zusammenfassungen der Beziehungen untereinander 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ zu anderen speziellen Funktionen enthält\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Abramowitz:1972}
+
+\end_inset 
+
+, numerische Aspekte werden in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Press:1992}
+
+\end_inset 
+
+ behandelt.
+\layout Section
+
+
+\noun on 
+
+\begin_inset LatexCommand \index{Tschebyscheff-Funktion@\noun{Tschebyscheff}-Funktion!erster Art}
+
+\end_inset 
+
+Tschebyscheff
+\noun default 
+-Funktionen erster Art
+\layout Subsection
+
+Definition
+\layout Subsubsection
+
+Analytische Darstellung
+\layout Standard
+
+Die 
+\noun on 
+Tschebyscheff
+\noun default 
+'sche Funktion erster Art 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ ist definiert als
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\T_{n}(x)=\cos(n\arccos x)}\msp.\label{eq:chebyt_cos_def}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen 
+\begin_inset Formula $\cos(\ji\varphi)=\cosh\varphi$
+\end_inset 
+
+ entartet 
+\begin_inset Formula $\T_{n}$
+\end_inset 
+
+ für 
+\begin_inset Formula $x>1$
+\end_inset 
+
+ in 
+\layout Standard
+
+
+\begin_inset Formula \[
+\T_{n}(x)=\cosh(n\arcosh x)\msp.\]
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Parameterdarstellung 
+\layout Standard
+
+Nimmt man die Substitutionen
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+x & =\cos\varphi\label{eq:chebyt_param_def}\\
+\T_{n}(x) & =\cos(n\varphi)\nonumber \end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+in Ausgangsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+
+\end_inset 
+
+ vor, dann erhält man für 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ eine Parameterdarstellung durch transzendente Funktionen.
+ Wenn 
+\begin_inset Formula $\varphi$
+\end_inset 
+
+ von 
+\begin_inset Formula $-\pi/2$
+\end_inset 
+
+ nach 
+\begin_inset Formula $+\pi/2$
+\end_inset 
+
+ läuft, dann bewegt sich 
+\begin_inset Formula $x$
+\end_inset 
+
+ von 
+\begin_inset Formula $-1$
+\end_inset 
+
+ nach 
+\begin_inset Formula $+1$
+\end_inset 
+
+ und 
+\begin_inset Formula $y$
+\end_inset 
+
+ alterniert im gleichen Intervall.
+ Andere Werte für 
+\begin_inset Formula $x$
+\end_inset 
+
+, die außerhalb des Intervalls 
+\begin_inset Formula $[-1,+1]$
+\end_inset 
+
+ liegen, erhält man, wenn der Parameter 
+\begin_inset Formula $\varphi$
+\end_inset 
+
+ imaginär wird.
+ Für diesen Fall gilt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Denn für imaginäres Argument geht der Kosinus ja bekanntlich in die entsprechend
+e Hyperbelfunktion über, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $\cos(\ji\left|\varphi\right|)=\cosh\left|\varphi\right|$
+\end_inset 
+
+.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+x & =\cosh\left|\varphi\right|\label{eq:chebyt_iparam_def}\\
+y & =\cosh(n\left|\varphi\right|)\msp.\nonumber \end{align}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Rekursive (algebraische) Darstellung
+\layout Standard
+
+Die 
+\noun on 
+Tschebyscheff
+\noun default 
+'schen Funktionen haben eine ganz bemerkenswerte Eigenschaft --- sie sind
+ (rekursiv) als algebraische Polynome in 
+\begin_inset Formula $x$
+\end_inset 
+
+ darstellbar
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Aus diesem Grund wird häufig auch der Begriff der 
+\noun on 
+Tschebyscheff
+\noun default 
+-Polynome verwendet.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\T_{n}(x)=2x\T_{n-1}(x)-\T_{n-2}(x)}\label{eq:chebyt_recursiv_def}\end{equation}
+
+\end_inset 
+
+
+\layout Proof
+
+Die Rekursionsformel soll ausgehend von der Ordnung 
+\begin_inset Formula $n-1$
+\end_inset 
+
+ und unter Zuhilfenahme des Additionstheorems 
+\begin_inset Formula $\cos(\alpha+\beta)=\cos\alpha\cos\beta-\sin\alpha\sin\beta$
+\end_inset 
+
+ abgeleitet werden.
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\T_{n+1}(x) & =\cos\left[(n+1)\varphi\right]\\
+ & =\cos(n\varphi+\varphi)\\
+ & =\cos(n\varphi)\cos\varphi-\sin(n\varphi)\sin\varphi\\
+ & =x\T_{n}(x)-\sin(n\varphi)\sin\varphi\end{align*}
+
+\end_inset 
+
+
+\layout Proof
+
+Mit der trigonometrischen Multiplikationsformel 
+\begin_inset Formula $\sin\alpha\sin\beta=\left[\cos(\alpha-\beta)-\cos(\alpha+\beta)\right]/2$
+\end_inset 
+
+ ergibt sich weiter
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\T_{n+1}(x) & =x\T_{n}(x)-\sin(n\varphi)\sin\varphi\\
+2\T_{n+1}(x) & =2x\T_{n}(x)-\cos\left[(n-1)\varphi\right]+\cos\left[(n+1)\varphi\right]\\
+2\T_{n+1}(x) & =2x\T_{n}(x)-\T_{n-1}(x)+\T_{n+1}(x)\\
+\T_{n+1}(x) & =2x\T_{n}(x)-\T_{n-1}(x)\end{align*}
+
+\end_inset 
+
+
+\layout Proof
+
+was nach Umindizierung Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+ beweist.
+\layout Standard
+
+Die Anfangswerte für 
+\begin_inset Formula $n=0,1$
+\end_inset 
+
+ ergeben sich direkt aus Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\T_{0}(x) & =1\\
+\T_{1}(x) & =x\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Exemplarisch sind hier noch die nächsten zwei Polynome aufgeführt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Weitere Polynome bis 
+\begin_inset Formula $n=12$
+\end_inset 
+
+ kann man 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[bibreftab{22.3}]{Abramowitz:1972}
+
+\end_inset 
+
+ finden.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\T_{2}(x) & =2x^{2}-1\\
+\T_{3}(x) & =4x^{3}-3x\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Aus der Rekursionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+ ist außerdem erkennber, daß das Polynom 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ den Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ besitzt.
+\layout Subsubsection
+
+Irrationale Darstellung
+\layout Standard
+
+Eine weitere Form der 
+\noun on 
+Tschebyscheff
+\noun default 
+'schen Funktion 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ ist
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\T_{n}(x)=\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2}}\msp.\label{eq:chebyt_irrat_def}\end{equation}
+
+\end_inset 
+
+
+\layout Proof
+
+Die irrationale Darstellungsform dieser Art von 
+\noun on 
+Tschebyscheff
+\noun default 
+-Funktionen kann man aus der Parametergleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+
+\end_inset 
+
+ erhalten, wenn man die 
+\noun on 
+Euler
+\noun default 
+'schen Formeln der triginometrischen Funktionen anwendet.
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\T_{n}(x) & =\cos\varphi=\frac{e^{\ji n\varphi}+e^{-\ji n\varphi}}{2}\\
+ & =\frac{(\cos\varphi+\ji\sin\varphi)^{n}+(\cos\varphi-\ji\sin\varphi)^{n}}{2}\\
+ & =\frac{\left(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\right)^{n}+\left(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\right)^{n}}{2}\\
+\T_{n}(x) & =\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_irrat_def}
+
+\end_inset 
+
+ kann auch der Leitkoeffizient, also der Koeffizient vor 
+\begin_inset Formula $x^{n}$
+\end_inset 
+
+, bestimmt werden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Der Wert des Leitkoeffizienten ist auch direkt aus der rekursiven Darstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+ zu entnehmen.
+\end_inset 
+
+.
+ Dazu geht man von der allgemeinen Formel für ein algebraisches Polynom
+ aus
+\layout Standard
+
+
+\begin_inset Formula \[
+\T_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und bildet einen Grenzwert wiefolgt:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\lim_{x\rightarrow\infty}\frac{\T_{n}(x)}{x^{n}} & =\lim_{x\rightarrow\infty}\frac{\sum\limits _{k=0}^{n}a_{k}x^{k}}{x^{n}}\\
+ & =\sum_{k=0}^{n}\lim_{x\rightarrow\infty}a_{k}x^{k-n}\\
+ & =a_{n}\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Umstellen und Zuhilfenahme der irrationalen Darstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_irrat_def}
+
+\end_inset 
+
+ liefert den Wert des Koeffizienten 
+\begin_inset Formula $a_{n}$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+a_{n} & =\lim_{x\rightarrow\infty}\frac{\T_{n}(x)}{x^{n}}\\
+ & =\lim_{x\rightarrow\infty}\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2x^{n}}\\
+ & =\frac{1}{2}\lim_{x\rightarrow\infty}\left(1+\sqrt{1-x^{-1}}\right)^{n}+\frac{1}{2}\lim_{x\rightarrow\infty}\left(1-\sqrt{1-x^{-1}}\right)^{n}\\
+a_{n} & =2^{n-1}\end{align*}
+
+\end_inset 
+
+
+\layout Subsection
+
+Spezielle Werte
+\layout Standard
+
+Die folgenden Werte ergeben sich direkt aus Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\T_{n}(-1) & =\left\{ \begin{array}{ll}
++1 & \qquad n=0,2,4,\ldots\\
+-1 & \qquad n=1,3,5,\ldots\end{array}\right.\\
+\T_{n}(0) & =\left\{ \begin{array}{ll}
++1 & \qquad n=0,4,8,\ldots\\
+-1 & \qquad n=2,6,10,\ldots\\
+0 & \qquad n=1,3,5,\ldots\end{array}\right.\\
+\T_{n}(1) & =1\end{align*}
+
+\end_inset 
+
+
+\layout Subsection
+
+Funktionsverlauf
+\layout Standard
+
+Die 
+\noun on 
+Tschebyscheff
+\noun default 
+'sche Funktion 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ ist für geraden Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ auch eine gerade Funktion, für ungeraden Grad eine ungerade Funktion.
+\layout Proof
+
+
+\begin_inset Formula \begin{align}
+\T_{n}(-x) & =\cos\left[n\arccos(-x)\right]\nonumber \\
+ & =\cos\left[n(\arccos x-\pi)\right]\nonumber \\
+ & =\cos(n\arccos x-n\pi)\nonumber \\
+\T_{n}(-x) & =(-1)^{n}\cos(n\arccos x)=(-1)^{n}\T_{n}(x)\label{eq:chebyt_negx}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Form des Polynoms kann deshalb folgendermaßen angenommen werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\T_{n}(x)=\left\{ \begin{array}{ll}
+\sum\limits _{k=0}^{n/2}c_{k}x^{2k} & \qquad n=0,2,4,\ldots\\
+x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \qquad n=1,3,5,\ldots\end{array}\right.\label{eq:chebyt_poly}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Der Funktionsverlauf von 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ ist für einige Werte 
+\begin_inset Formula $n$
+\end_inset 
+
+ in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:chebyt_plot}
+
+\end_inset 
+
+ dargestellt.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename chebyt.eps
+	display monochrome
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:chebyt_plot}
+
+\end_inset 
+
+Tschebyscheff-Funktionen 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+Die Funktionen 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ approximieren im Intervall 
+\begin_inset Formula $[-1,+1]$
+\end_inset 
+
+ für eine gegebene Ordnung die Nullinie gleichmäßig
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Funktion 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ erfüllt im Sinne der gleichmäßigen Approximation 
+\begin_inset Formula $\left\Vert f-g_{n}\right\Vert _{\infty}\Rightarrow\min$
+\end_inset 
+
+ die Zielfunktion 
+\begin_inset Formula $g(x)=0$
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Außerdem bilden die 
+\noun on 
+Tschebyscheff
+\noun default 
+'schen Funktionen ein sogenanntes Orthonormalsystem
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Orthogonale Funktionen spielen eine wichtige Rolle bei der stetigen Approximatio
+n im Mittel (
+\noun on 
+Gauß
+\noun default 
+-Approximation), denn sie ermöglichen die einfache Berechnung der Koeffizienten
+ für die Näherungsfunktion\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Oelschlaegel:1974}
+
+\end_inset 
+
+.
+\end_inset 
+
+, welches für 
+\begin_inset Formula $n>0$
+\end_inset 
+
+ durch die Beziehung 
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx=\delta_{n\msp m}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+gekennzeichnet ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Haemmerlin:1992}
+
+\end_inset 
+
+.
+\layout Proof
+
+Ausgehend von der Parameterdarstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+
+\end_inset 
+
+ und der Ableitung 
+\begin_inset Formula $dx/d\varphi=-\sin\varphi=-\sqrt{1-x^{2}}$
+\end_inset 
+
+ läßt sich das Integral auch folgendermaßen schreiben.
+\layout Proof
+
+
+\begin_inset Formula \[
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx=\frac{2}{\pi}\int_{\varphi=0}^{\pi}\cos(n\varphi)\cos(m\varphi)\msp d\varphi\]
+
+\end_inset 
+
+
+\layout Proof
+
+Durch Erweiterung des Integrationsintervalls auf 
+\begin_inset Formula $[-\pi,+\pi]$
+\end_inset 
+
+ erhält man ein bekanntes (vollständiges) trigonometrisches Integral.
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx & =\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\msp d\varphi\\
+ & =\left\{ \begin{array}{ll}
+0 & \qquad n\neq m\\
+\pi & \qquad n=m\end{array}\right.\end{align*}
+
+\end_inset 
+
+
+\layout Proof
+
+Die rechte Seite der letzten Gleichung ist nun aber genau das sogenannte
+ 
+\noun on 
+Kronecker
+\noun default 
+-Symbol
+\begin_inset LatexCommand \index{Kronecker-Symbol@\noun{Kronecker}-Symbol}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\delta_{m\msp n}$
+\end_inset 
+
+.
+\layout Subsection
+
+Nullstellen
+\layout Standard
+
+Die Nullstellen 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+ sind leicht aus der (reellen) Parameterdarstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ zu bestimmen
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Imaginäre (oder komplexe) Nullstellen existieren nicht, da 
+\begin_inset Formula $\T_{n}(\ji x)=\cosh(n\arcosh|x|)$
+\end_inset 
+
+ die x-Achse niemals schneidet.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+y & =0\\
+n\varphi_{k} & =\frac{\pi}{2}+k\pi\\
+\varphi_{k} & =\left(k+\frac{1}{2}\right)\frac{\pi}{n},\qquad k\in\mathbb{Z}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Damit gilt für 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+\zn{x}{k} & =\cos\varphi_{k}\nonumber \\
+ & =\cos\left[\left(k+\frac{1}{2}\right)\frac{\pi}{n}\right]\nonumber \\
+\zn{x}{k} & =\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right],\qquad k=1,2,\ldots,n-1,n\msp.\label{eq:chebyt_roots}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Einschränkung des Wertebereiches für 
+\begin_inset Formula $k$
+\end_inset 
+
+ ist an dieser Stelle sinnvoll, da sich wegen der Periodizität des Kosinus
+ sonst Werte für 
+\begin_inset Formula $\zn{x}{k}$
+\end_inset 
+
+ wiederholen würden
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Die Anzahl der Nullstellen deckt sich außerdem ausgezeichnet mit dem Grad
+ 
+\begin_inset Formula $n$
+\end_inset 
+
+ des Polynoms 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Bei ungeradem Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ existiert eine Nullstelle 
+\begin_inset Formula $\zn{x}{k}=0$
+\end_inset 
+
+ für den Index 
+\begin_inset Formula $k=(n+1)/2$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename chebyt_roots_even.eps
+	display monochrome
+	width 45col%
+	subcaption
+	subcaptionText "$n=6$"
+
+\end_inset 
+
+
+\hfill 
+
+\begin_inset Graphics
+	filename chebyt_roots_odd.eps
+	display monochrome
+	width 45col%
+	subcaption
+	subcaptionText "$n=5$"
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:chebyt_roots}
+
+\end_inset 
+
+Nullstellenverteilung (
+\begin_inset Formula $\Delta\varphi=\pi/n$
+\end_inset 
+
+)
+\end_inset 
+
+
+\layout Standard
+
+Betragsmäßig wiederholen sich also die Nullstellen wenn 
+\begin_inset Formula $k$
+\end_inset 
+
+ den Symmetriepunkt 
+\begin_inset Formula $(n+1)/2$
+\end_inset 
+
+ über- 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ unterschreitet, vgl.
+ Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:chebyt_roots}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Haemmerlin:1992}
+
+\end_inset 
+
+.
+ Dieser Fakt kann auch durch die Beziehung 
+\begin_inset Formula $\zn{x}{n-k+1}=-\zn{x}{k}$
+\end_inset 
+
+ ausgedrückt werden.
+\layout Proof
+
+
+\begin_inset Formula \begin{align*}
+\zn{x}{n-k+1} & =\cos\left[\left(n-k+\frac{1}{2}\right)\frac{\pi}{n}\right]\\
+ & =\cos\left[\pi-\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right]\\
+ & =-\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right]\\
+ & =-\zn{x}{k}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Linearfaktordarstellung des Polynoms 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ kann mit dieser Erkenntnis und dem schon bekannten Leitkoeffizienten 
+\begin_inset Formula $2^{n-1}$
+\end_inset 
+
+ vereinfacht werden.
+ Dazu sei zuerst von ungeradem Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ ausgegangen.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\T_{n}(x) & =2^{n-1}\prod_{k=1}^{n}\left(x-\zn{x}{k}\right)\\
+ & =2^{n-1}x\prod_{k=1}^{(n-1)/2}\left(x-\zn{x}{k}\right)\left(x+\zn{x}{k}\right)\\
+ & =2^{n-1}x\prod_{k=1}^{(n-1)/2}\left(x^{2}-\zn[2]{x}{k}\right)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Für gerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ gilt
+\layout Standard
+
+
+\begin_inset Formula \[
+\T_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}\left(x^{2}-\zn[2]{x}{k}\right)\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Erste Ableitung
+\layout Standard
+
+Die erste Ableitung ist zum Beispiel aus der Parameterform\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+
+\end_inset 
+
+ zu gewinnen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Noch einfacher ist die Anwendung der Kettenregel auf die analytische Darstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\frac{dx}{d\varphi} & =-\sin\varphi\\
+ & =-\sqrt{1-\cos^{2}\varphi}\\
+ & =-\sqrt{1-x^{2}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit der (in gleicher Art und Weise gewonnenen) Ableitung von 
+\begin_inset Formula $y$
+\end_inset 
+
+ nach dem Parameter 
+\begin_inset Formula $\varphi$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\frac{dy}{d\varphi} & =-n\sin(n\varphi)\\
+ & =-n\sqrt{1-\cos^{2}(n\varphi)}\\
+ & =-n\sqrt{1-y^{2}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+ergibt sich 
+\begin_inset Formula $\T'_{n}(x)$
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+\T'_{n}(x) & =\frac{dy}{dx}\nonumber \\
+ & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\T_{n}^{2}(x)}{1-\T_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
+ & =\frac{n\sqrt{1-\cos^{2}(n\arccos x)}}{\sqrt{1-x^{2}}}\nonumber \\
+ & =\frac{n\sin(n\arccos x)}{\sqrt{1-x^{2}}}\nonumber \\
+\T'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\msp.\label{eq:chebyt_diff_trigo}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Extremwerte liegen offensichtlich bei 
+\begin_inset Formula $\cos(k\pi/n)$
+\end_inset 
+
+ wobei 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ an diesen Stellen abwechselnd die Werte 
+\begin_inset Formula $\pm1$
+\end_inset 
+
+ annimmt.
+ In Polynomform kann man die Ableitung von 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ recht einfach aus Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_poly}
+
+\end_inset 
+
+ gewinnen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\T'_{n}(x)=\left\{ \begin{array}{ll}
+2x\sum_{k=0}^{n/2}kc_{k}x^{2(k-1)} & \qquad n=0,2,4,\ldots\\[12pt]
+\sum_{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & \qquad n=1,3,5,\ldots\end{array}\right..\label{eq:chebyt_diff_explicit}\end{equation}
+
+\end_inset 
+
+ 
+\layout Standard
+
+Ähnlich wie 
+\begin_inset Formula $\T_{n}$
+\end_inset 
+
+ ist auch 
+\begin_inset Formula $\T'_{n}(x)$
+\end_inset 
+
+ in Abhängigkeit von 
+\begin_inset Formula $n$
+\end_inset 
+
+ eine gerade oder eine ungerade Funktion.
+\layout Proof
+
+
+\begin_inset Formula \begin{align}
+\T'_{n}(-x) & =\frac{n\sin\left[n\arccos(-x)\right]}{\sin\left[\arccos(-x)\right]}\nonumber \\
+ & =\frac{n\sin\left[n(\arccos x-\pi)\right]}{\sin(\arccos x-\pi)}\nonumber \\
+ & =-\frac{n\sin(n\arccos x-n\pi)}{\sin(\arccos x)}\nonumber \\
+\T'_{n}(-x) & =\frac{n(-1)^{n+1}\sin(n\arccos x)}{\sin(\arccos x)}=(-1)^{n+1}\T'_{n}(x)\label{eq:chebyu_negx}\end{align}
+
+\end_inset 
+
+
+\layout Subsection
+
+Differentialgleichung
+\layout Standard
+
+Mit den ersten Ableitungen nach dem Parameter 
+\begin_inset Formula $\varphi$
+\end_inset 
+
+ kann man durch Gleichsetzen mit 
+\begin_inset Formula $d\varphi$
+\end_inset 
+
+ die folgende Differentialgleichung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die gleiche Differentialgleichung ergibt sich, wenn man 
+\begin_inset Formula $x=\sin u=\cos(u-\pi/2)$
+\end_inset 
+
+ und 
+\begin_inset Formula $y=\cos\left[n(u-\pi/2)\right]$
+\end_inset 
+
+ substituiert.
+ Außerdem steckt dieser Ansatz schon implizit in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_diff_irrat}
+
+\end_inset 
+
+.
+ 
+\end_inset 
+
+ entwickeln\SpecialChar ~
+
+\begin_inset LatexCommand \cite[§4]{Meinardus:1964}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+d\varphi=-\frac{dx}{\sqrt{1-x^{2}}} & =-\frac{dy}{n\sqrt{1-y^{2}}}\nonumber \\
+\frac{dy}{n\sqrt{1-y^{2}}} & =\frac{dx}{\sqrt{1-x^{2}}}\nonumber \\
+(1-x^{2})\left[\T'_{n}(x)\right]^{2} & =n^{2}\left[1-\T_{n}^{2}(x)\right]\label{eq:chebyt_deqn}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Sie wird durch die Tschebyscheff-Polynome 
+\begin_inset Formula $\T_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}$
+\end_inset 
+
+ erfüllt, deren Koeffizienten 
+\begin_inset Formula $a_{k}$
+\end_inset 
+
+ entweder
+\layout Itemize
+
+rekursiv durch Anwendung von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+;
+\layout Itemize
+
+durch Berechnung der Nullstellen nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_roots}
+
+\end_inset 
+
+ gefolgt von Ausmultiplizieren der Linearfaktordarstellung 
+\begin_inset Formula $\T_{n}(x)=2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})$
+\end_inset 
+
+;
+\layout Itemize
+
+oder aber durch Lösung des sich ergebenden Gleichungssystems\SpecialChar ~
+ aus der Differentia
+lgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_deqn}
+
+\end_inset 
+
+
+\layout Standard
+
+bestimmt werden können.
+ An dieser Stelle soll die letztgenannte Methode weiter untersucht werden,
+ wozu ersteinmal Differentialgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_deqn}
+
+\end_inset 
+
+ etwas ausführlicher wird.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+(1-x)(1+x)\left[\T'_{n}(x)\right]^{2}=n^{2}\left[1-\T_{n}(x)\right]\left[1+\T_{n}(x)\right]\label{eq:chebyt_deqn_ext}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen der Vereinfachungsformeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_negx}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyu_negx}
+
+\end_inset 
+
+ ist es für ungerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ nun ausreichend nur die Gleichung (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ das Gleichungssystem) 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+(1-x)\T'_{n}(x)=n\left[1-\T_{n}(x)\right]\label{eq:chebyt_deqn_odd}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+zu lösen.
+\layout Proof
+
+Setzt man in diese Gleichung das Argument 
+\begin_inset Formula $-x$
+\end_inset 
+
+ ein
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auch für negative Argumente muß sie ja gültig sein.
+\end_inset 
+
+, dann ergibt sich mit den Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_negx}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyu_negx}
+
+\end_inset 
+
+ für negative Argumente
+\layout Proof
+
+
+\begin_inset Formula \[
+(1+x)(-1)^{n+1}\T'_{n}(x)=n\left[1-(-1)^{n}\T_{n}(x)\right]\msp.\]
+
+\end_inset 
+
+
+\layout Proof
+
+
+\begin_inset Marginal
+collapsed true
+
+\layout Standard
+
+Was ist mit geradem 
+\begin_inset Formula $n$
+\end_inset 
+
+?
+\end_inset 
+
+Konkretisiert für ungerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ stellt sich die Gleichung folgendermaßen dar.
+\layout Proof
+
+
+\begin_inset Formula \[
+(1+x)\T'_{n}(x)=n\left[1+\T_{n}(x)\right]\]
+
+\end_inset 
+
+
+\layout Proof
+
+Multiplikation beider Seiten mit Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_deqn_odd}
+
+\end_inset 
+
+ ergibt wieder Differentialgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_deqn}
+
+\end_inset 
+
+ und beweist somit die Aussage.
+\layout Standard
+
+Setzt man für ungerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_deqn_odd}
+
+\end_inset 
+
+ die expliziten Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_poly}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_diff_explicit}
+
+\end_inset 
+
+ ein, dann erhält man die ausführliche Form
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+(1-x)\sum_{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & =n-nx\sum_{k=0}^{(n-1)/2}c_{k}x^{2k}\\
+\sum_{k=0}^{(n-1)/2}c_{k}x^{2k}\left[(1-x)(2k+1)+nx\right] & =n\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Einsetzen von 
+\begin_inset Formula $(n+1)/2$
+\end_inset 
+
+ verschiedenen 
+\begin_inset Formula $x$
+\end_inset 
+
+-Werten führt zu einem linearen Gleichungssystem mit der gleichen Anzahl
+ unbekannter Koeffizienten 
+\begin_inset Formula $c_{k}$
+\end_inset 
+
+.
+ Die Lösung kann durch geschickte Wahl der 
+\begin_inset Formula $x$
+\end_inset 
+
+-Werte (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ 
+\begin_inset Formula $x=-\left[n-(2k+1)\right]^{-1}$
+\end_inset 
+
+) relativ einfach mit den üblichen Lösungsmethoden für solche Gleichungssysteme
+ gewonnen werden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Bestimmung der Koeffizienten aus der Differentialgleichung ist wohl
+ eher ein theoretischer Weg.
+ Praktisch wird fast immer die Rekursionsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+ oder aber eine geschlossene Lösungsformel (die hier nicht abgeleitet wurde,
+ vgl.\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S 4.2.]{Meinardus:1964}
+
+\end_inset 
+
+) zur Anwendung kommen.
+\end_inset 
+
+.
+\layout Section
+
+
+\noun on 
+
+\begin_inset LatexCommand \index{Tschebyscheff-Funktion@\noun{Tschebyscheff}-Funktion!zweiter Art}
+
+\end_inset 
+
+Tschebyscheff
+\noun default 
+-Funktionen zweiter Art
+\layout Standard
+
+Die Tschebyscheff-Funktion zweiter Art ist definiert durch
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\U_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Vergleich mit Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_diff_trigo}
+
+\end_inset 
+
+ zeigt, daß es sich bei 
+\begin_inset Formula $\U_{n}(x)$
+\end_inset 
+
+ um die erste Ableitung der Funktion 
+\begin_inset Formula $\T_{n+1}(x)$
+\end_inset 
+
+ handelt.
+\layout Standard
+
+
+\begin_inset Formula \[
+\U_{n}(x)=\frac{1}{n+1}\T'_{n+1}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Es handelt sich bei diesen Funktionen ebenfalls um orthogonale Polynome,
+ die nach folgender Formel auch rekursiv beschrieben werden können.
+\layout Standard
+
+
+\begin_inset Formula \[
+\U_{n}(x)=2x\U_{n-1}(x)-\U_{n-2}(x)\]
+
+\end_inset 
+
+
+\layout Standard
+
+In Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:chebyu_plot}
+
+\end_inset 
+
+ ist der Verlauf von 
+\begin_inset Formula $\U_{n}(x)$
+\end_inset 
+
+ für unterschiedlichen Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ dargestellt.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename chebyu.eps
+	display monochrome
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:chebyu_plot}
+
+\end_inset 
+
+Tschebyscheff-Funktionen 
+\begin_inset Formula $\U_{n}(x)$
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+Weitere Informationen zu dieser zweiten Art von 
+\noun on 
+Tschebyscheff
+\noun default 
+-Funktionen kann man 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Abramowitz:1972}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite{Haemmerlin:1992}
+
+\end_inset 
+
+ oder\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Meinardus:1964}
+
+\end_inset 
+
+ nachlesen.
+\the_end

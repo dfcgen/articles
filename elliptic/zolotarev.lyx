@@ -1,0 +1,1260 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: zolotarev.lyx,v 1.1 2004-09-27 19:33:20 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+
+\begin_inset LatexCommand \label{sec:zolotarev}
+
+\end_inset 
+
+
+\noun on 
+Solotareff
+\noun default 
+'s drittes Problem
+\begin_inset LatexCommand \index{Solotareff's drittes Problem@\noun{Solotareff}'s drittes Problem}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\noun on 
+E.\SpecialChar ~
+I.
+ Solotareff 
+\noun default 
+hat sich in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Zolotarev:1932}
+
+\end_inset 
+
+ mit mehreren praktischen Problemen der gleichm‰ﬂigen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\noun on 
+Tschebyscheff
+\noun default 
+-Approximation
+\begin_inset LatexCommand \index{Approximation!gleichm"a{\ss}ige}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Approximation}
+
+\end_inset 
+
+ auseinandergesetzt, von denen insbesondere das dritte Problem hier von
+ Interesse sei
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Kurze Darstellungen sind auch in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Todd:1983}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\bibrefchap{II}]{Achieser:1967}
+
+\end_inset 
+
+ und 
+\begin_inset LatexCommand \cite[\S 50]{Achieser:1970}
+
+\end_inset 
+
+ sowie\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Piloty:1954}
+
+\end_inset 
+
+ zu finden.
+\end_inset 
+
+.
+ Es widmet sich der Suche nach einer rationalen Polynomfunktion 
+\begin_inset Formula $f(x)=U(x)/V(x)$
+\end_inset 
+
+, welche im Intervall 
+\begin_inset Formula $\left|x\right|\leq\sqrt{k}$
+\end_inset 
+
+ am wenigsten von Null abweicht (mit 
+\begin_inset Formula $0<k<1$
+\end_inset 
+
+), dagegen f¸r 
+\begin_inset Formula $\left|x\right|\geq1/\sqrt{k}$
+\end_inset 
+
+ am st‰rksten von Null verschieden ist.
+ Dabei sollen 
+\begin_inset Formula $U(x)$
+\end_inset 
+
+ und 
+\begin_inset Formula $V(x)$
+\end_inset 
+
+ algebraische Polynome der Form 
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+U(x) & =\sum_{\upsilon=0}^{n}c_{\upsilon}x^{\upsilon}=\poly{c}{x}{n}\label{eq:zolotar_poly_start}\\
+V(x) & =\sum_{\mu=0}^{m}d_{\mu}x^{\mu}=\poly{d}{x}{m}\nonumber \end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+sein, deren Koeffizienten 
+\begin_inset Formula $c_{\upsilon}$
+\end_inset 
+
+und 
+\begin_inset Formula $d_{\mu}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Nullstellen der Linearfaktordarstellung entsprechend der Zielvorgabe (f¸r
+ die Fehlerfunktion, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Toleranzschema in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:zolotar_tol}
+
+\end_inset 
+
+)
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\left.\begin{array}{l}
+\max\limits _{\left|x\right|\leq\sqrt{k}}f(x)\\
+\max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}\end{array}\right\} \Rightarrow\min}\label{eq:zolotar_goal}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+bestimmt werden.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename zolotarev_problem3.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:zolotar_tol}
+
+\end_inset 
+
+Toleranzschema f¸r 
+\begin_inset Formula $\left|f(x)\right|$
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+
+\noun on 
+Solotareff
+\noun default 
+ hat nun aus Symmetrieeigenschaften sowie der Bedingung
+\layout Standard
+
+
+\begin_inset Formula \[
+f(x)\cdot f\left(\frac{1}{x}\right)=1\]
+
+\end_inset 
+
+
+\layout Standard
+
+die folgende Form von 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ geschluﬂfolgert\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Todd:1983}
+
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+f(x)\sim\prod\frac{b_{\upsilon}^{2}-x^{2}}{1-b_{\upsilon}^{2}x^{2}}\label{eq:zolotar_rational_base}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Lˆsung dieser Approximationsaufgabe 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der nach\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_goal}
+
+\end_inset 
+
+ beruht auf 
+\noun on 
+Jacobi
+\noun default 
+'schen elliptischen Funktionen in Verbindung mit der ersten elliptischen
+ Haupttransformation.
+ Um den speziellen Intervallgrenzen in 
+\noun on 
+Zolotareff
+\noun default 
+'s drittem Problem Rechnung zu tragen, m¸ssen die Achsen allerdings noch
+ passend skaliert werden.
+ Dazu setzt man in den rationalen Transformationsbeziehungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_poly}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+x\Rightarrow\frac{x}{\sqrt{k}},\qquad y\Rightarrow\frac{f(x)}{\sqrt{\lambda}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und erh‰lt
+\layout Standard
+
+
+\begin_inset Formula \[
+\efunc{f}{x}{k}=\left\{ \begin{array}{ll}
+\mbig{\sqrt{\frac{\lambda}{k}}\cdot\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
+\mbig{\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ nach den Parameterdarstellungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_param_y}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_param_y}
+
+\end_inset 
+
+ der ersten elliptischen Haupttransformation:
+\layout Standard
+
+
+\begin_inset Formula \[
+x=\sqrt{k}\msp\esn{u}{k},\qquad\efunc{f}{x}{k}=\sqrt{\lambda}\msp\cdot\left\{ \begin{array}{ll}
+\esn{u/M}{\lambda} & \qquad(n\textrm{ ungerade})\\
+\ecd{u/M}{\lambda} & \qquad(n\textrm{ gerade})\end{array}\right.\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Verschiebung der ehemaligen Extremwerte 
+\begin_inset Formula $y=\pm1$
+\end_inset 
+
+ und 
+\begin_inset Formula $y=\pm\lambda^{-1}$
+\end_inset 
+
+ hin zu 
+\begin_inset Formula $\pm\lambda^{1/2}$
+\end_inset 
+
+ und 
+\begin_inset Formula $\pm\lambda^{-1/2}$
+\end_inset 
+
+ entspricht dem Toleranzschema nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:zolotar_tol}
+
+\end_inset 
+
+, wenn man die Verl‰ufe der ersten elliptischen Haupttransformation in den
+ zugehˆrigen Abbildungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:elltr1_odd_function}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:elltr1_even_function}
+
+\end_inset 
+
+ betrachtet.
+\layout Standard
+
+Passt man auch die Berechnungsformeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_lambda}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_lambda}
+
+\end_inset 
+
+ f¸r 
+\begin_inset Formula $\lambda$
+\end_inset 
+
+ an, dann ist auch 
+\begin_inset Formula $\varepsilon=\sqrt{\lambda}$
+\end_inset 
+
+ leicht zu ermitteln.
+\layout Standard
+
+
+\begin_inset Formula \[
+\varepsilon=\left\{ \begin{array}{ll}
+\sqrt{k}\prod\limits _{\nu=1,3,5,\ldots}^{n-2}k\msp\esn[2]{\nu\frac{K}{n}}{k} & \qquad(n\textrm{ ungerade})\\
+\prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\msp\esn[2]{\nu\frac{K}{n}}{k} & \qquad(n\textrm{ gerade})\end{array}\right.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Ber¸cksichtigt man f¸r den Fall eines ungeraden 
+\begin_inset Formula $n$
+\end_inset 
+
+ die Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_lambda_coeff}
+
+\end_inset 
+
+ und f¸r gerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ entsprechend\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_lambda}
+
+\end_inset 
+
+ in der Form
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\frac{\lambda}{kM^{2}} & =\prod_{\nu=2,4,6,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ ungerade})\\
+\lambda & =\prod_{\nu=1,3,5,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ gerade})\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+dann ergeben sich noch die folgenden Vereinfachungen:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\efunc{f}{x}{k}=\left\{ \begin{array}{ll}
+\mbig{(-1)^{\frac{n-1}{2}}x\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
+\mbig{(-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.}\label{eq:zolotar_solution}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Bez¸glich des 
+\noun on 
+Solotareff
+\noun default 
+'schen Ausgangspunktes nach Beziehung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_rational_base}
+
+\end_inset 
+
+ kann man nun die Unbestimmten 
+\begin_inset Formula $b_{\nu}$
+\end_inset 
+
+ angeben.
+\layout Standard
+
+
+\begin_inset Formula \[
+b_{\upsilon}=\sqrt{k}\msp a_{\nu}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen der Skalierung der x-Achse verschieben sich nat¸rlich auch alle Nullstelle
+n und Pole nach den Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_poles}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_zeroes}
+
+\end_inset 
+
+ (
+\begin_inset Formula $n$
+\end_inset 
+
+ ungerade) sowie\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_zeroes}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_poles}
+
+\end_inset 
+
+ (
+\begin_inset Formula $n$
+\end_inset 
+
+ gerade).
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{1}
+\zn{x}{\nu} & =\sqrt{k}\msp\esn{\nu\frac{K}{n}}{k}\\
+\pn{x}{\nu} & =\frac{1}{\sqrt{k}\msp\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Berechnungsformeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_coeffs}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_even_zeroes}
+
+\end_inset 
+
+ f¸r die Koeffizienten 
+\begin_inset Formula $a_{\nu}$
+\end_inset 
+
+ bleiben unver‰ndert bei:
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{a_{\nu}=\esn{\nu\frac{K}{n}}{k}}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Sie repr‰sentieren letztlich das Ergebnis der Bestapproximation.
+\layout Proof
+
+Der Beweis der Bestapproximation beruht auf 
+\noun on 
+Tschebyscheff
+\noun default 
+'s Alternantensatz
+\begin_inset LatexCommand \index{Tschebyscheff'sche Alternantenbedingung@\noun{Tschebyscheff}'sche Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Approximation!Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Alternantensatz}
+
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibreftheorem{23}]{Meinardus:1964}
+
+\end_inset 
+
+, welcher angewandt auf die Ausgangspolynome\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_poly_start}
+
+\end_inset 
+
+ in kurzer Form lautet\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~6]{Meinardus:1964}
+
+\end_inset 
+
+:
+\layout Proof
+
+Die Funktion 
+\begin_inset Formula $\efunc{f}{x}{k}=U(x)/V(x)$
+\end_inset 
+
+ stellt dann eine Minimallˆsung dar, wenn die absolute Fehlerfunktion
+\layout Proof
+
+
+\begin_inset Formula \[
+\varepsilon(x)=\left\{ \begin{array}{ll}
+\efunc{f}{x}{k}, & \left|x\right|\leq\sqrt{k}\\
+\mbig{\frac{1}{\efunc{f}{x}{k}}}, & \left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}}\end{array}\right.\]
+
+\end_inset 
+
+
+\layout Proof
+
+im Approximationsintervall genau 
+\begin_inset Formula $m+n+3$
+\end_inset 
+
+ Extremalpunkte hat
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\begin_inset Formula $n+1$
+\end_inset 
+
+ unbekannte Koeffizienten im Z‰hler und 
+\begin_inset Formula $m+1$
+\end_inset 
+
+ im Nenner, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Dimension ist demzufolge 
+\begin_inset Formula $m+n+2$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite[\bibreftheorem{23}]{Meinardus:1964}
+
+\end_inset 
+
+.
+\end_inset 
+
+, an denen sie alternierend den Wert 
+\begin_inset Formula $\pm\varepsilon$
+\end_inset 
+
+ annimmt.
+ Ber¸cksichtigt man den Polynomgrad in Z‰hler und Nenner der Lˆsungsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_solution}
+
+\end_inset 
+
+, dann gilt:
+\layout Proof
+
+
+\begin_inset Formula \[
+m=\left\{ \begin{array}{ll}
+n-1 & \qquad(n\textrm{ ungerade})\\
+n & \qquad(n\textrm{ gerade})\end{array}\right.\msp.\]
+
+\end_inset 
+
+
+\layout Proof
+
+Betrachtet man nun einfach die Funktionsverl‰ufe der ersten elliptischen
+ Haupttransformation in den Abbildungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:elltr1_odd_function}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:elltr1_even_function}
+
+\end_inset 
+
+, dann ist zu erkennen, daﬂ 
+\begin_inset Formula $\varepsilon(x)$
+\end_inset 
+
+ genau 
+\begin_inset Formula $n+1$
+\end_inset 
+
+ Alternantenpunkte im Intervall 
+\begin_inset Formula $0\leq\left|x\right|\leq k^{1/2}$
+\end_inset 
+
+ und dazu nocheinmal 
+\begin_inset Formula $m+2$
+\end_inset 
+
+ solcher Punkte im Intervall 
+\begin_inset Formula $k^{-1/2}\leq\left|x\right|\leq\infty$
+\end_inset 
+
+ hat.
+\layout Proof
+
+Aufgrund ihrer Anzahl sowie des alternierenden Fehlers 
+\begin_inset Formula $\pm\sqrt{\lambda}$
+\end_inset 
+
+ an den Stellen 
+\begin_inset Formula $x=\pm\esn{\nu K/n}{k}$
+\end_inset 
+
+ ist die 
+\noun on 
+Tschebyscheff
+\noun default 
+'sche Alternantenbedingung erf¸llt und die Funktion 
+\begin_inset Formula $\efunc{f}{x}{k}$
+\end_inset 
+
+ stellt folgerichtig eine Bestapproximation dar.
+\layout Comment
+
+
+\begin_inset Formula \[
+\efunc{f}{x}{k}=\sqrt{\lambda}\msp\esn{\frac{u}{M}}{\lambda}\]
+
+\end_inset 
+
+
+\layout Comment
+
+
+\begin_inset Formula \[
+\edn[2]{\frac{u}{M}}{\lambda}=1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}=1-\lambda\efunc[2]{f}{x}{k}=1-\varepsilon^{2}\efunc[2]{g}{x}{k}\]
+
+\end_inset 
+
+
+\layout Comment
+
+Wir wollen hier einen Zugang nach\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S 39]{Achieser:1967}
+
+\end_inset 
+
+ verfolgen, der sich mit dem Auffinden einer rationalen Funktion 
+\begin_inset Formula $g(x)=U(x)/V(x)$
+\end_inset 
+
+ vom Grade 
+\begin_inset Formula $m$
+\end_inset 
+
+ befaﬂt, so daﬂ der relative Fehler einer Abweichung von der Zielfunktion
+\layout Comment
+
+
+\begin_inset Formula \[
+f(x)=\frac{1}{\sqrt{1-k^{2}x}}\msp,\qquad\qquad0\leq k\leq1\]
+
+\end_inset 
+
+
+\layout Comment
+
+minimiert wird.
+\layout Comment
+
+
+\begin_inset Formula \[
+\max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\min\]
+
+\end_inset 
+
+
+\layout Comment
+
+Es ist erkennbar, daﬂ es sich bei dieser Aufgabenstellung um eine Bestapproximat
+ion der Konstante\SpecialChar ~
+
+\begin_inset Formula $1$
+\end_inset 
+
+ durch die Funktion 
+\begin_inset Formula $g(x)/f(x)$
+\end_inset 
+
+ handelt.
+\layout Comment
+
+
+\begin_inset Formula \[
+\max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\min\]
+
+\end_inset 
+
+
+\layout Comment
+
+Die Lˆsung der Approximationsaufgabe beruht auf 
+\noun on 
+Jacobi
+\noun default 
+schen elliptischen Funktionen in Verbindung mit der ersten elliptischen
+ Haupttransformation nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_dn_x}
+
+\end_inset 
+
+.
+ Dazu wird in genannter Gleichung noch 
+\begin_inset Formula $x^{2}$
+\end_inset 
+
+ zu 
+\begin_inset Formula $x$
+\end_inset 
+
+ (und notwendigerweise
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Es sei daran erinnert, daﬂ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_dn_x}
+
+\end_inset 
+
+ f¸r ungerades 
+\begin_inset Formula $n$
+\end_inset 
+
+ gilt.
+\end_inset 
+
+ auch 
+\begin_inset Formula $n$
+\end_inset 
+
+ zu 
+\begin_inset Formula $2m+1$
+\end_inset 
+
+) substituiert, wodurch man eine rationale Funktion vom Grade 
+\begin_inset Formula $m$
+\end_inset 
+
+ multipliziert mit 
+\begin_inset Formula $\sqrt{1-k^{2}x}$
+\end_inset 
+
+ erh‰lt.
+\layout Comment
+
+
+\begin_inset Formula \begin{align}
+x & =\esn[2]{u}{k}\label{eq:zolotar_solution}\\
+\edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\label{eq:zolotar_solution_dn}\end{align}
+
+\end_inset 
+
+
+\layout Comment
+
+Das Modul 
+\begin_inset Formula $\lambda$
+\end_inset 
+
+ sowie der Multiplikator 
+\begin_inset Formula $M$
+\end_inset 
+
+ sind schon in Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elliptic}
+
+\end_inset 
+
+ bestimmt worden, die Berechnung dieser Grˆﬂen kann mittels Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_odd_M}
+
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr1_lambda}
+
+\end_inset 
+
+ erfolgen.
+\layout Comment
+
+Hintergrund ist nun der Gedanke, daﬂ die Funktionswerte von 
+\begin_inset Formula $\edn{u/M}{\lambda}$
+\end_inset 
+
+ immer zwischen 
+\begin_inset Formula $1$
+\end_inset 
+
+ und 
+\begin_inset Formula $\lambda'$
+\end_inset 
+
+ liegen und demzufolge um den Mittelwert 
+\begin_inset Formula $(1+\lambda')/2$
+\end_inset 
+
+ schwanken.
+ Multipliziert man 
+\begin_inset Formula $\edn{u/M}{\lambda}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $2/(1+\lambda')$
+\end_inset 
+
+, dann erh‰lt man eine Bestapproximation
+\begin_inset LatexCommand \index{Approximation!Bestapproximation}
+
+\end_inset 
+
+ der Konstante\SpecialChar ~
+
+\begin_inset Formula $1$
+\end_inset 
+
+ bez¸glich der Norm 
+\begin_inset Formula $L_{\infty}$
+\end_inset 
+
+, also entsprechend unserer Eingangsbetrachtungen
+\layout Comment
+
+
+\begin_inset Formula \begin{equation}
+\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\msp.\label{eq:zolotar_approx_func}\end{equation}
+
+\end_inset 
+
+
+\layout Comment
+
+Der Beweis der Bestapproximation beruht auf 
+\noun on 
+Tschebyscheff
+\noun default 
+'s Alternantensatzes
+\begin_inset LatexCommand \index{Tschebyscheff'sche Alternantenbedingung@\noun{Tschebyscheff}'sche Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Approximation!Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Alternantenbedingung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Alternantensatz}
+
+\end_inset 
+
+, welcher in kurzer Form lautet:
+\layout Comment
+
+Die Funktion 
+\begin_inset Formula $g(x)/f(x)$
+\end_inset 
+
+ stellt genau dann eine Bestapproximation (der Konstante\SpecialChar ~
+
+\begin_inset Formula $1$
+\end_inset 
+
+) dar, wenn die Fehlerfunktion im Approximationsintervall 
+\begin_inset Formula $0\leq x\leq1$
+\end_inset 
+
+ genau 
+\begin_inset Formula $2m+2$
+\end_inset 
+
+ Extremalpunkte hat, an denen sie alternierend den Wert 
+\begin_inset Formula $\pm\varepsilon$
+\end_inset 
+
+ annimmt.
+\layout Comment
+
+Der Abstand zwischen den Extremalstellen der Funktion 
+\begin_inset Formula $g(x)/f(x)$
+\end_inset 
+
+ nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_approx_func}
+
+\end_inset 
+
+ ist genau 
+\begin_inset Formula $M\Lambda$
+\end_inset 
+
+ (
+\begin_inset Formula $\Lambda=\eK{\lambda}$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr1}
+
+\end_inset 
+
+).
+ ƒhnlich wie in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr_general_solution}
+
+\end_inset 
+
+ muﬂ 
+\begin_inset Formula $u$
+\end_inset 
+
+ wegen Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_solution}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $0$
+\end_inset 
+
+ bis 
+\begin_inset Formula $K$
+\end_inset 
+
+ laufen, wenn 
+\begin_inset Formula $x$
+\end_inset 
+
+ im Approximationsintervall von 
+\begin_inset Formula $0$
+\end_inset 
+
+ nach 
+\begin_inset Formula $1$
+\end_inset 
+
+ laufen soll.
+ Da die Division der reellen Periode durch 
+\begin_inset Formula $2m+1$
+\end_inset 
+
+ eine charakteristische Eigenschaft der ersten elliptischen Transformation
+ ist 
+\layout Comment
+
+
+\begin_inset Formula \[
+M\Lambda=\frac{K}{2m+1}\msp,\]
+
+\end_inset 
+
+
+\layout Comment
+
+befinden sich also 
+\begin_inset Formula $2m+2$
+\end_inset 
+
+ Extremalwerte im Intervall 
+\begin_inset Formula $0\leq x\leq1$
+\end_inset 
+
+.
+ Sie liegen bei 
+\begin_inset Formula $u_{\upsilon}=\upsilon M\Lambda$
+\end_inset 
+
+ und deshalb bez¸glich 
+\begin_inset Formula $x$
+\end_inset 
+
+ bei
+\layout Comment
+
+
+\begin_inset Formula \[
+x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\msp.\]
+
+\end_inset 
+
+
+\layout Comment
+
+Aufgrund ihrer Anzahl sowie der Fehlerfunktion
+\layout Comment
+
+
+\begin_inset Formula \[
+\varepsilon=1-\frac{2}{1+\lambda'}\edn{\frac{u_{\upsilon}}{M}}{\lambda}=\pm\frac{1-\lambda'}{1+\lambda'}\]
+
+\end_inset 
+
+
+\layout Comment
+
+ist die 
+\noun on 
+Tschebyscheff
+\noun default 
+'sche Alternantenbedingung erf¸llt und die Funktion 
+\begin_inset Formula $g(x)/f(x)$
+\end_inset 
+
+ stellt folgerichtig eine Bestapproximation dar.
+\layout Comment
+
+Da 
+\begin_inset Formula $\edn{u/M}{\lambda}$
+\end_inset 
+
+ nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:zolotar_solution_dn}
+
+\end_inset 
+
+ selbst den Faktor 
+\begin_inset Formula $f^{-1}(x)$
+\end_inset 
+
+ enth‰lt, ist die Approximationsfunktion 
+\begin_inset Formula $g(x)$
+\end_inset 
+
+ bestimmt durch
+\layout Comment
+
+
+\begin_inset Formula \begin{align*}
+g(x) & =f(x)\cdot\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}\\
+ & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\msp.\end{align*}
+
+\end_inset 
+
+
+\the_end

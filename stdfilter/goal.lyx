@@ -1,0 +1,698 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize Default
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: goal.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+Approximation des Amplitudengangs
+\begin_inset LatexCommand \label{sec:approx_ampl}
+
+\end_inset 
+
+
+\layout Standard
+
+Für die gleichmäßige
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Diese Art der Approximation wird auch als absolut, 
+\begin_inset Formula $L_{\infty}$
+\end_inset 
+
+- oder Tschebyscheff-Approximation bezeichnet.
+\end_inset 
+
+ Approximation des Amplitudengangs 
+\begin_inset Formula $\left|T(\jw)\right|$
+\end_inset 
+
+ eines Filters gibt es einige bekannte Standardlösungen, die immer eine
+ absolute Näherung dieser Zielfunktion anstreben.
+\layout Standard
+
+
+\noun on 
+P.\SpecialChar ~
+L.
+ Tschebyscheff
+\noun default 
+ hat im 19.\SpecialChar ~
+Jahrhundert mit dem nach ihm benannten 
+\emph on 
+Alternantensatz
+\emph default 
+ die Grundlage für die Aussagen in den folgenden Abschnitten geschaffen.
+ In kurzer Form ist der Inhalt folgender:
+\layout Quote
+
+Eine Bestapproximation
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Im Sinne der Bestimmung von 
+\begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
+\end_inset 
+
+, wenn 
+\begin_inset Formula $n$
+\end_inset 
+
+ die Dimension des durch 
+\begin_inset Formula $g_{n}(x)$
+\end_inset 
+
+ aufgespannten Raumes ist.
+\end_inset 
+
+ 
+\begin_inset Formula $g_{n}(x;c_{n},c_{n-1},\ldots,c_{2},c_{1})$
+\end_inset 
+
+ der Funktion 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ im Intervall 
+\begin_inset Formula $[a,b]$
+\end_inset 
+
+ durch eine Funktion geringster Abweichung 
+\begin_inset Formula $g(x)$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ eine Näherung für die folgende 
+\noun on 
+Tschebyscheff
+\noun default 
+-Norm gilt:
+\layout Quotation
+
+
+\begin_inset Formula \begin{equation}
+\left\Vert f-g_{n}\right\Vert _{\infty}=\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\min\label{eq:approx_cheby_goal}\end{equation}
+
+\end_inset 
+
+
+\layout Quote
+
+ist dadurch gekennzeichnet, daß die Fehlerfunktion 
+\begin_inset Formula $\varepsilon(x)=f(x)-g_{n}(x)$
+\end_inset 
+
+ an 
+\begin_inset Formula $n+1$
+\end_inset 
+
+ verschiedenen Punkten 
+\begin_inset Formula $x_{\nu}$
+\end_inset 
+
+ 
+\begin_inset Formula $(\nu=0,1,\ldots,n)$
+\end_inset 
+
+ alternierend den Wert 
+\begin_inset Formula $\pm\varepsilon$
+\end_inset 
+
+ annimmt.
+ Dabei muß der Punkt 
+\begin_inset Formula $x_{0}$
+\end_inset 
+
+ genau auf den Intervallanfang 
+\begin_inset Formula $a$
+\end_inset 
+
+ und 
+\begin_inset Formula $x_{n}$
+\end_inset 
+
+ auf den Endpunkt 
+\begin_inset Formula $b$
+\end_inset 
+
+ fallen.
+\layout Standard
+
+In der Filtertheorie wird als Zielfunktion jedoch nicht 
+\begin_inset Formula $\left|T(\jw)\right|$
+\end_inset 
+
+, sondern meist die Drosselung 
+\begin_inset Formula $\left|D(\jw)\right|$
+\end_inset 
+
+, auch bekannt als charakteristische Funktion, approximiert.
+ Bezüglich des Alternanten\SpecialChar \-
+satzes sind beide Funktionen gleichwertig, wenn
+ 
+\begin_inset Formula $\left|T(\jw)\right|$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\left|T(\jw)\right|^{-1}$
+\end_inset 
+
+ eine Konstante
+\emph on 
+ 
+\emph default 
+
+\begin_inset Formula $L_{T}$
+\end_inset 
+
+ approximieren soll.
+ Die Definition der Drosselung aus
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left|T(\jw)\right|=\frac{1}{\sqrt{1+\left|\D(\jw)\right|^{2}}}\label{eq:approx_discrimination}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+macht klar, daß eine Alternante für den Amplitudengang gleichzeitig auch
+ eine für die Drosselung ist, wobei sich natürlich der Betrag des absoluten
+ Fehlers und der Wert der Konstante unterscheiden.
+\layout Standard
+
+Für eine Approximation im Durchlaßbereich gilt nämlich 
+\begin_inset Formula $\left|T(j\omega_{\nu})\right|-L_{T}=\pm\varepsilon_{T}$
+\end_inset 
+
+ an den Alternantenpunkten, so daß man für 
+\begin_inset Formula $\left|D(\jw)\right|$
+\end_inset 
+
+ schreiben kann 
+\begin_inset Formula $\left|\D(\jw_{\nu})\right|=\sqrt{(L_{T}\pm\varepsilon_{T})^{-2}-1}$
+\end_inset 
+
+.
+ Die entsprechenden Werte für den absoluten Fehler 
+\begin_inset Formula $\varepsilon_{D}$
+\end_inset 
+
+ und die approximierte Konstante 
+\begin_inset Formula $L_{D}$
+\end_inset 
+
+ bezüglich der Drosselung ergeben sich dann folgendermaßen
+\layout Standard
+
+
+\begin_inset Formula \[
+\varepsilon_{D}=\frac{\left|\D(\jw_{\nu})\right|-\left|\D(\jw_{\nu+1})\right|}{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+L_{D}=\frac{\left|\D(\jw_{\nu})\right|+\left|\D(\jw_{\nu+1})\right|}{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Aus Sicht der technischen Realisierbarkeit gibt es ein wesentliches Argument
+ für die charakteristische Funktion 
+\begin_inset Formula $\left|D(\jw)\right|$
+\end_inset 
+
+ --- die Einschränkungen in Bezug auf Koeffizienten des Nenner- und Zählerpolyno
+ms sind viel schwächer, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ fast jede rationale Funktion ist hier erlaubt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Im Gegensatz dazu muß z.B.
+ der Nenner der Übertragungsfunktion 
+\begin_inset Formula $T(s)$
+\end_inset 
+
+ immer ein Hurwitzpolynom sein.
+\end_inset 
+
+.
+ Auch wird die Drosselung als Zielgröße deshalb bevorzugt, weil sie das
+ Filter-Problem besser zum Ausdruck bringt --- denn der Durchlaßbereich
+ in der Filtercharakteristik ist durch 
+\begin_inset Formula $\left|\D(\jw)\right|=0$
+\end_inset 
+
+ und der Sperrbereich durch die Forderung 
+\begin_inset Formula $\left|\D(\jw)\right|\rightarrow\infty$
+\end_inset 
+
+ gekennzeichnet
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Gleichbedeutend mit der Forderung für den Sperrbereich ist auch 
+\begin_inset Formula $\left|D(\jw)\right|^{-1}=0$
+\end_inset 
+
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename lp_tol_scheme.eps
+	display color
+	width 100text%
+
+\end_inset 
+
+
+\layout Caption
+
+Tiefpaß-Toleranzfeld
+\begin_inset LatexCommand \label{fig_lp_tol_scheme}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+Um eine gewisse Skalierbarkeit bezüglich der maximalen Durchlaßdämpfung
+ 
+\begin_inset Formula $A_{max}$
+\end_inset 
+
+ oder minimalen Sperrdämpfung 
+\begin_inset Formula $A_{min}$
+\end_inset 
+
+ (siehe Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig_lp_tol_scheme}
+
+\end_inset 
+
+) zu erreichen, führt man üblicherweise noch einen Vorfaktor 
+\begin_inset Formula $\delta$
+\end_inset 
+
+ folgendermaßen ein 
+\begin_inset Formula $\left|D(j\omega)\right|=\delta\left|\hat{D}(\jw)\right|$
+\end_inset 
+
+.
+ Ausgehend von
+\layout Standard
+
+
+\begin_inset Formula \[
+A=-20\lg\left|T(\jw)\right|=10\lg(1+\left|D(\jw)\right|^{2})=10\lg(1+\delta^{2}\left|\hat{D}(\jw)\right|^{2})\]
+
+\end_inset 
+
+
+\layout Standard
+
+ergibt sich an den beiden Kreisfrequenzen 
+\begin_inset Formula $\omega_{g}$
+\end_inset 
+
+ und 
+\begin_inset Formula $\omega_{k}$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+A_{min} & =10\lg(1+\left|D(\jw_{g})\right|^{2})=10\lg(1+\delta^{2}\left|\hat{D}(\jw_{k})\right|^{2})\\
+A_{max} & =10\lg(1+\left|D(\jw_{k})\right|^{2})=10\lg(1+\delta^{2}\left|\hat{D}(\jw_{g})\right|^{2})\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+wodurch der Vorfaktor 
+\begin_inset Formula $\delta$
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \[
+\delta=\frac{\sqrt{10^{A_{min}/10}-1}}{\hat{D}(\jw_{k})}=\frac{\sqrt{10^{A_{max}/10}-1}}{\left|\hat{D}(\jw_{g})\right|}\]
+
+\end_inset 
+
+
+\layout Standard
+
+bestimmt ist.
+\layout Standard
+
+Die charakteristische Funktion 
+\begin_inset Formula $D(\jw)$
+\end_inset 
+
+ eines Filters der Ordnung 
+\begin_inset Formula $N$
+\end_inset 
+
+ kann folgendermaßen dargestellt werden
+\layout Standard
+
+
+\begin_inset Formula \[
+D(\jw)=\frac{A(\jw)}{B(\jw)}=\frac{\sum\limits _{\mu=0}^{N}a_{\mu}(\jw)^{\mu}}{\sum\limits _{\nu=0}^{M}b_{\nu}(\jw)^{\nu}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Um die Approximationsaufgabe besser zu definieren wenden wir uns dem Betragsquad
+rat der Drosselung 
+\begin_inset Formula $\left|D(\jw)\right|^{2}=\re^{2}[D(\jw)]+\im^{2}[D(\jw)]$
+\end_inset 
+
+ zu, welches über die Polynome 
+\begin_inset Formula $\left|A(\jw)\right|^{2}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\left|B(\jw)\right|^{2}$
+\end_inset 
+
+ ermittelt wird.
+ Dazu wissen wir aus den Grundlagen, daß sich der Realteil aus den geraden
+ Potenzen, der Imaginärteil aus den jeweils ungeraden zusammensetzt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+\left|A(\jw)\right|^{2} & =\re^{2}[A(\jw)]+\im{2}[A(\jw)]\nonumber \\
+ & =\left(\sum_{i=0}^{\left\lfloor N/2\right\rfloor }a_{2i}\omega^{2i}\right)^{2}+\left(\sum_{k=0}^{\left\lfloor (N-1)/2\right\rfloor }a_{2k+1}\omega^{2k+1}\right)^{2}\label{eq:with_floor_1}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Substituiert man noch 
+\begin_inset Formula $\omega^{2}=x$
+\end_inset 
+
+ und klammert im Imaginärteil einmal 
+\begin_inset Formula $\omega$
+\end_inset 
+
+ aus, so kann man 
+\begin_inset Formula $\left|A(\jw)\right|^{2}$
+\end_inset 
+
+ als Polynom vom Grad 
+\begin_inset Formula $N$
+\end_inset 
+
+ in 
+\begin_inset Formula $x$
+\end_inset 
+
+ darstellen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+In den Gleichungungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:with_floor_1}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:with_floor_2}
+
+\end_inset 
+
+ stellt 
+\begin_inset Formula $\left\lfloor x\right\rfloor $
+\end_inset 
+
+ die 
+\emph on 
+floor
+\emph default 
+ Funktion dar, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die größte ganze Zahl kleiner oder gleich 
+\begin_inset Formula $x$
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+\left|A(\jw)\right|^{2} & =\left(\sum_{i=0}^{\left\lfloor N/2\right\rfloor }a_{2i}x^{i}\right)^{2}+x\left(\sum_{k=0}^{\left\lfloor (N-1)/2\right\rfloor }a_{2k+1}x^{k}\right)^{2}\nonumber \\
+ & =\tilde{A}(x)=\tilde{A}(-s^{2})\label{eq:with_floor_2}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Entsprechendes gilt dann natürlich auch für 
+\begin_inset Formula $\left|B(\jw)\right|^{2}$
+\end_inset 
+
+ und die Approximation des Quadrats der Drosselung 
+\begin_inset Formula $\left|D(\jw)\right|^{2}$
+\end_inset 
+
+ kann vorteilhaft als Näherungsaufgabe in 
+\begin_inset Formula $x$
+\end_inset 
+
+ für 
+\begin_inset Formula $\tilde{D}(x)=\tilde{A}(x)/\tilde{B}(x)$
+\end_inset 
+
+ erfolgen.
+\layout Standard
+
+Da 
+\begin_inset Formula $\left|D(\jw)\right|$
+\end_inset 
+
+ genau 
+\begin_inset Formula $M+N$
+\end_inset 
+
+ wahlfreie Koeffizienten besitzt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Anzahl der Nullstellen und Pole, sprich Wurzeln von Zähler- und Nennerpolyno
+m, ist hier entscheidend.
+\end_inset 
+
+, müssen also nach 
+\noun on 
+Tschebyscheff
+\noun default 
+ im zusammenhängenden Approximationsintervall genau 
+\begin_inset Formula $M+N+1$
+\end_inset 
+
+ Extremalwerte liegen.
+ Um ein solches Näherungsintervall zu erzeugen muß man unter Umständen geeignete
+ Abbildungsfunktionen einführen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Da 
+\begin_inset Formula $\left|D(\jw)\right|$
+\end_inset 
+
+ eine gerade Funktion ist, muß man immer zwei Intervalle approximieren ---
+ im Positiven 
+\begin_inset Formula $[a,b]$
+\end_inset 
+
+ und im Negativen 
+\begin_inset Formula $[-b,-a]$
+\end_inset 
+
+.
+ Unproblematisch ist dabei der Fall, wenn beide Teilintervalle über 
+\begin_inset Formula $a=0$
+\end_inset 
+
+ oder 
+\begin_inset Formula $b=\pm\infty$
+\end_inset 
+
+ verbunden sind.
+\end_inset 
+
+.
+ Für den Durchlaß- und Sperrbereich haben wir dies mit der Substitution
+ 
+\begin_inset Formula $\omega^{2}=x$
+\end_inset 
+
+ schon erreicht, denn es wird jeweils über 
+\begin_inset Formula $\omega=0$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\omega=\infty$
+\end_inset 
+
+ der negative Frequenzbereich auf die positive Seite abgebildet.
+ Unter Berücksichtigung nur der positiven Frequenzen reduziert sich die
+ Anzahl der Extremalwerte in 
+\begin_inset Formula $x$
+\end_inset 
+
+ auf 
+\begin_inset Formula $(M+N)/2+1$
+\end_inset 
+
+, wobei 
+\begin_inset Formula $M+N$
+\end_inset 
+
+ hier gerade sein muß.
+\the_end

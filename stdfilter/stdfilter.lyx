@@ -1,0 +1,231 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsbook
+\begin_preamble
+\input{text-inc}
+\input{math-inc}
+\input{electr-inc}
+\input{pdf-inc}
+
+%% \usepackage{showlabels}
+%% \usepackage{showidx}
+%% \usepackage{bibcheck}
+%% \usepackage{refcheck}
+%% \usepackage{import}
+
+\usepackage{multicol}
+\usepackage{html}
+\end_preamble
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\float_placement htbp
+\paperfontsize default
+\spacing onehalf 
+\papersize a4paper
+\paperpackage widemarginsa4
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: stdfilter.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+%% PDF Setup (see file "preferences" in 
+\backslash 
+LyX Dir)
+\newline 
+%%
+\newline 
+%% dvips -Z -G0 -Ppdf
+\newline 
+%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.2 -dSubsetFonts=true -dEmbedAllFonts=true
+\newline 
+
+\newline 
+
+\backslash 
+hypersetup{
+\newline 
+    pdfauthor = {
+\backslash 
+textcopyright ~ Ralf Hoppe},
+\newline 
+    pdftitle = {Analoge Standard-Filter},
+\newline 
+    pdfsubject = {Analoge Standard-Filter},
+\newline 
+    pdfkeywords = {Jacobi, Landen, AGM, Elliptisches Integral, Elliptische Funktionen, Modultransformation, sn, cn, dn}
+\newline 
+}
+\layout Standard
+
+\end_inset 
+
+
+\layout Title
+
+Analoge Standard-Filter
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset FloatList figure
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset FloatList table
+
+\end_inset 
+
+
+\layout Chapter
+
+Analoge Standard-Filter
+\layout Standard
+
+
+\begin_inset Include \include{goal.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{butterworth.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{cauer.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \printindex{}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp,computers,crypto,math}
+
+\end_inset 
+
+
+\layout Chapter
+\start_of_appendix 
+Tschebyscheff-Funktionen
+\layout Standard
+
+
+\begin_inset Include \include{cheby/cheby.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Chapter
+
+
+\begin_inset LatexCommand \label{sec:elliptic}
+
+\end_inset 
+
+Elliptische Integrale und Funktionen
+\layout Standard
+
+
+\begin_inset Include \include{elliptic/elliptic.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{elliptic/zolotarev.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Chapter
+
+Notation
+\layout Standard
+
+
+\begin_inset Include \include{notation.lyx}
+preview false
+
+\end_inset 
+
+
+\the_end
