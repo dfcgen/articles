@@ -1,0 +1,6807 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\begin_preamble
+\input{text-inc}
+\input{pdf-inc}
+\input{math-inc}
+
+\usepackage{html}
+\usepackage{multicol}
+
+\DeclareMathOperator{\crc}{CRC}
+
+%% \newcommand{\res} [2] {\overline{#1}} % residue class
+%% \newcommand{\res} [2] {{\left\{ {#1} \right\} }_{#2}} % residue class
+\newcommand{\res} [2] {{\left[ {#1} \right] }_{#2}} % residue class
+\end_preamble
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\float_placement htbp
+\paperfontsize default
+\spacing single 
+\papersize a4paper
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 0
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Section
+
+Algebraische Strukturen
+\begin_inset LatexCommand \index{Algebra}
+
+\end_inset 
+
+
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_group}
+
+\end_inset 
+
+Gruppen
+\begin_inset LatexCommand \index{Gruppe}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_group_def}
+
+\end_inset 
+
+Allgemeine Definition
+\layout Standard
+
+Eine Gruppe
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Der Begriff wurde zuerst von 
+\noun on 
+Galois
+\noun default 
+ benutzt.
+\end_inset 
+
+ 
+\begin_inset Formula $(G,\diamond)$
+\end_inset 
+
+ ist ein algebraisches System, daß aus einer nichtleeren Menge von Elementen
+ 
+\begin_inset Formula $G$
+\end_inset 
+
+ besteht
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Menge 
+\begin_inset Formula $G$
+\end_inset 
+
+ kann aus einer endlichen oder unendlichen Anzahl von Elementen bestehen.
+\end_inset 
+
+, für die eine Operation 
+\begin_inset Formula $\diamond$
+\end_inset 
+
+ mit folgenden Eigenschaften definiert ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{2.1}]{Peterson:1972}
+
+\end_inset 
+
+:
+\layout Enumerate
+
+die Anwendung der Operation 
+\begin_inset Formula $\diamond$
+\end_inset 
+
+ auf zwei Elemente muß wieder zu einem Element in 
+\begin_inset Formula $G$
+\end_inset 
+
+ führen (Abgeschlossenheit
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+): 
+\begin_inset Formula $\diamond:G\times G\rightarrow G$
+\end_inset 
+
+;
+\layout Enumerate
+
+für alle 
+\begin_inset Formula $a,b,c\in G$
+\end_inset 
+
+ muß gelten: 
+\begin_inset Formula $a\diamond(b\diamond c)=(a\diamond b)\diamond c$
+\end_inset 
+
+ (Assoziativität
+\begin_inset LatexCommand \index{Assoziativität}
+
+\end_inset 
+
+);
+\layout Enumerate
+
+ein neutrales Element
+\begin_inset LatexCommand \index{Element!neutrales}
+
+\end_inset 
+
+ 
+\begin_inset Formula $e\in G$
+\end_inset 
+
+ muß existieren, so daß gilt: 
+\begin_inset Formula $x\diamond e=x$
+\end_inset 
+
+ mit 
+\begin_inset Formula $x\in G$
+\end_inset 
+
+ (Identität
+\begin_inset LatexCommand \index{Identität}
+
+\end_inset 
+
+);
+\layout Enumerate
+
+für jedes Element 
+\begin_inset Formula $a\in G$
+\end_inset 
+
+ muß ein inverses Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $b\in G$
+\end_inset 
+
+ existieren, so daß 
+\begin_inset Formula $a\diamond b=e$
+\end_inset 
+
+ gilt.
+\layout Standard
+
+Ist außerdem die Zusatzbedingung 
+\begin_inset Formula $a\diamond b=b\diamond a$
+\end_inset 
+
+ erfüllt, wird die Gruppe kommutativ
+\begin_inset LatexCommand \index{Gruppe!kommutative}
+
+\end_inset 
+
+ genannt und als 
+\noun on 
+Abel
+\noun default 
+'sch
+\begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
+
+\end_inset 
+
+ bezeichnet.
+ Die Ordnung
+\begin_inset LatexCommand \index{Ordnung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gruppe!Ordnung}
+
+\end_inset 
+
+ (auch Mächtigkeit
+\begin_inset LatexCommand \index{Mächtigkeit}
+
+\end_inset 
+
+) einer Gruppe ist die Anzahl der Elemente in 
+\begin_inset Formula $G$
+\end_inset 
+
+, geschrieben als 
+\begin_inset Formula $\ord(G)$
+\end_inset 
+
+, 
+\begin_inset Formula $\left|G\right|$
+\end_inset 
+
+ oder auch 
+\begin_inset Formula $\# G$
+\end_inset 
+
+.
+\layout Standard
+
+Ist 
+\begin_inset Formula $U$
+\end_inset 
+
+ eine Teilmenge von 
+\begin_inset Formula $G$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $U\subseteq G$
+\end_inset 
+
+, dann wird 
+\begin_inset Formula $(U,\diamond)$
+\end_inset 
+
+ als Untergruppe
+\begin_inset LatexCommand \index{Gruppe!Unter-}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $(G,\diamond)$
+\end_inset 
+
+ bezeichnet, wenn mit derselben Operation 
+\begin_inset Formula $\diamond$
+\end_inset 
+
+ auch 
+\begin_inset Formula $U$
+\end_inset 
+
+ alle Eigenschaften einer Gruppe erfüllt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefchap{1}]{Bosch:1996}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\bibrefsec{2.4}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Der Zusammenhang zwischen der Ordnung von 
+\begin_inset Formula $U$
+\end_inset 
+
+ und der von 
+\begin_inset Formula $G$
+\end_inset 
+
+ wird durch den Satz von 
+\noun on 
+Lagrange
+\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+
+\end_inset 
+
+
+\noun default 
+ beschrieben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Interessant ist in diesem Zusammenhang die Erkenntnis, daß die Ordnung der
+ Untergruppe 
+\begin_inset Formula $U$
+\end_inset 
+
+ höchstens halb so groß sein kann, wie die der Gruppe 
+\begin_inset Formula $G$
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|G\right|=i\cdot\left|U\right|\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Ordnung 
+\begin_inset Formula $\left|U\right|$
+\end_inset 
+
+ ist danach ein Teiler von 
+\begin_inset Formula $\left|G\right|$
+\end_inset 
+
+ und 
+\begin_inset Formula $i$
+\end_inset 
+
+ der sogenannte Index
+\begin_inset LatexCommand \index{Index}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $G$
+\end_inset 
+
+ über 
+\begin_inset Formula $U$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Index von 
+\begin_inset Formula $U$
+\end_inset 
+
+ in 
+\begin_inset Formula $G$
+\end_inset 
+
+), welcher auch als 
+\begin_inset Formula $i=\left|G:U\right|$
+\end_inset 
+
+ geschrieben wird
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Bezeichnungsweise des Index in der Form 
+\begin_inset Formula $\left|G:U\right|$
+\end_inset 
+
+ ist dabei durch den Quotienten 
+\begin_inset Formula $\frac{\left|G\right|}{\left|U\right|}$
+\end_inset 
+
+ motiviert.
+\end_inset 
+
+.
+\layout Subsubsection
+
+Additive Gruppen
+\begin_inset LatexCommand \index{Gruppe!additive}
+
+\end_inset 
+
+
+\layout Standard
+
+Entsprechend der allgemeinen Definition wird eine Menge 
+\begin_inset Formula $G$
+\end_inset 
+
+ additive Gruppe 
+\begin_inset Formula $(G,+)$
+\end_inset 
+
+ genannt, wenn für sie
+\layout Enumerate
+
+eine assoziative Operation 
+\begin_inset Formula $a+(b+c)=(a+b)+c$
+\end_inset 
+
+ mit 
+\begin_inset Formula $a,b,c\in G$
+\end_inset 
+
+ definiert ist;
+\layout Enumerate
+
+ein neutrales (Null-) Element 
+\begin_inset Formula $e_{(+)}=0\in G$
+\end_inset 
+
+ mit der Beziehung 
+\begin_inset Formula $a+0=0+a=a$
+\end_inset 
+
+ für alle 
+\begin_inset Formula $a\in G$
+\end_inset 
+
+ existiert;
+\layout Enumerate
+
+und für sie außerdem ein inverses Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $-a\in G$
+\end_inset 
+
+ zu 
+\begin_inset Formula $a\in G$
+\end_inset 
+
+ mit der Relation 
+\begin_inset Formula $a+(-a)=0$
+\end_inset 
+
+ definiert ist.
+\layout Standard
+
+Das bekannteste Beispiel einer solchen Gruppe ist die der ganzen Zahlen
+\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(\mathbb{Z},+)$
+\end_inset 
+
+.
+\layout Subsubsection
+
+Multiplikative Gruppen
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+
+\layout Standard
+
+Für die multiplikative Gruppe 
+\begin_inset Formula $(G,\cdot)$
+\end_inset 
+
+ gilt äquivalent:
+\layout Itemize
+
+eine assoziative Operation 
+\begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
+\end_inset 
+
+ mit 
+\begin_inset Formula $a,b,c\in G$
+\end_inset 
+
+,
+\layout Itemize
+
+ein neutrales (Eins-) Element
+\begin_inset LatexCommand \index{Einselement}
+
+\end_inset 
+
+ 
+\begin_inset Formula $e_{(\cdot)}=1\in G$
+\end_inset 
+
+ mit der Identität 
+\begin_inset Formula $a\cdot1=1\cdot a=a$
+\end_inset 
+
+ für 
+\begin_inset Formula $a\in G$
+\end_inset 
+
+,
+\layout Itemize
+
+und ein inverses Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $a^{-1}\in G$
+\end_inset 
+
+ zu jedem 
+\begin_inset Formula $a\in G$
+\end_inset 
+
+ mit der Relation 
+\begin_inset Formula $a\cdot a^{-1}=1$
+\end_inset 
+
+
+\layout Standard
+
+sind definiert.
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_ring}
+
+\end_inset 
+
+Ringe
+\begin_inset LatexCommand \index{Ring}
+
+\end_inset 
+
+
+\layout Standard
+
+Eine Menge 
+\begin_inset Formula $R$
+\end_inset 
+
+ nennt man einen Ring 
+\begin_inset Formula $(R,+,\cdot)$
+\end_inset 
+
+, wenn auf ihr sowohl Addition als auch Multiplikation mit 
+\begin_inset Formula $R\times R\rightarrow R$
+\end_inset 
+
+ erklärt sind\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{2.2}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Speziell müssen folgende Axiome gelten:
+\layout Enumerate
+
+Bezüglich der Addition bildet 
+\begin_inset Formula $R$
+\end_inset 
+
+ eine 
+\noun on 
+Abel
+\noun default 
+'sche Gruppe 
+\begin_inset Formula $(R,+)$
+\end_inset 
+
+.
+\layout Enumerate
+
+
+\begin_inset Formula $(R,\cdot)$
+\end_inset 
+
+ ist eine sogenannte Halbgruppe
+\begin_inset LatexCommand \index{Halbgruppe}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gruppe!Halb-}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein inverses Element wird dabei 
+\emph on 
+nicht
+\emph default 
+ gefordert, wenngleich einzelne Elemente von 
+\begin_inset Formula $R$
+\end_inset 
+
+ ein Inverses besitzen können.
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\begin_deeper 
+\layout Itemize
+
+
+\begin_inset Formula $(R,\cdot)$
+\end_inset 
+
+ ist abgeschlossen (
+\begin_inset Formula $\cdot:R\times R\rightarrow R$
+\end_inset 
+
+)
+\layout Itemize
+
+und es gilt das Assoziativgesetz 
+\begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
+\end_inset 
+
+ für 
+\begin_inset Formula $a,b,c\in R$
+\end_inset 
+
+.
+\end_deeper 
+\layout Enumerate
+
+Außerdem muß für 
+\begin_inset Formula $a,b,c\in R$
+\end_inset 
+
+ das Distributivgesetz
+\begin_inset LatexCommand \index{Distributivgesetz}
+
+\end_inset 
+
+ gelten 
+\begin_inset Formula $a\cdot(b+c)=ab+ac$
+\end_inset 
+
+.
+\layout Standard
+
+Existiert zusätzlich noch die Identität 
+\begin_inset Formula $e_{(\cdot)}=1\in R$
+\end_inset 
+
+ mit 
+\begin_inset Formula $a\cdot1=1\cdot a=a$
+\end_inset 
+
+ für alle 
+\begin_inset Formula $a\in R$
+\end_inset 
+
+, dann wird 
+\begin_inset Formula $(R,+,\cdot)$
+\end_inset 
+
+ Monoid
+\begin_inset LatexCommand \index{Monoid}
+
+\end_inset 
+
+ oder Ring
+\begin_inset LatexCommand \index{Ring!mit Eins}
+
+\end_inset 
+
+ mit 
+\emph on 
+Eins
+\emph default 
+ genannt.
+\layout Standard
+
+Zur Multiplikation ist zu bemerken, daß nichtnegative Potenzen
+\begin_inset LatexCommand \index{Element!Potenzierung}
+
+\end_inset 
+
+ eines Ringelements induktiv definiert sind
+\layout Standard
+
+
+\begin_inset Formula \[
+a^{0}=e_{(\cdot)}=1,\qquad a^{n+1}=a\cdot a^{n},\]
+
+\end_inset 
+
+
+\layout Standard
+
+also durch 
+\begin_inset Formula $n$
+\end_inset 
+
+-malige Multiplikation 
+\layout Standard
+
+
+\begin_inset Formula \[
+a^{n}=\underbrace{a\cdot a\cdot\ldots\cdot a}_{n\text{{-mal}}}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Ein Ring wird außerdem als 
+\emph on 
+
+\begin_inset LatexCommand \index{Ring!kommutativer}
+
+\end_inset 
+
+kommutativ
+\emph default 
+ bezeichnet, wenn auch für die Multiplikation das Kommutativgesetz
+\begin_inset LatexCommand \index{Kommutativgesetz}
+
+\end_inset 
+
+ gilt 
+\begin_inset Formula $a\cdot b=b\cdot a$
+\end_inset 
+
+.
+ Ein typisches Beispiel hierfür ist der Ring
+\begin_inset LatexCommand \index{Ring!$\mathbb{Z}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(\mathbb{Z},+,\cdot)$
+\end_inset 
+
+ der ganzen Zahlen
+\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+
+\end_inset 
+
+, denn er erfüllt offensichtlich alle Axiome.
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_field}
+
+\end_inset 
+
+Körper\SpecialChar ~
+(Field)
+\begin_inset LatexCommand \index{Körper}
+
+\end_inset 
+
+
+\layout Standard
+
+Ein Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ wird durch ein System von Elementen (endlich oder unendlich) gebildet,
+ die sich durch die definierten Operationen Addition, Subtraktion, Multiplikatio
+n und Division verknüpfen lassen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Jede dieser Operationen muß wieder zu einem Element dieses Körpers führen
+ (Abgeschlossenheit).
+\end_inset 
+
+ und für die das Distributivgesetz gilt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{2.3}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Präzise heißt das:
+\layout Enumerate
+
+
+\begin_inset Formula $(K,+,\cdot)$
+\end_inset 
+
+ ist ein kommutativer Ring (zu den Eigenschaften 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_ring}
+
+\end_inset 
+
+).
+\layout Enumerate
+
+
+\begin_inset Formula $(K\setminus\{0\},\cdot)$
+\end_inset 
+
+ ist eine kommutative Gruppe, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ alle Elemente der Menge 
+\begin_inset Formula $K$
+\end_inset 
+
+, ausgenommen 
+\begin_inset Formula $0$
+\end_inset 
+
+ (oft auch geschrieben als 
+\begin_inset Formula $K^{*}=K\setminus\{0\}$
+\end_inset 
+
+), müssen ein inverses Element besitzen.
+\layout Standard
+
+Die bekanntesten Körper sind die der 
+\layout Itemize
+
+reellen Zahlen
+\begin_inset LatexCommand \index{Zahlen!reelle $\mathbb{R}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(\mathbb{R},+,\cdot)$
+\end_inset 
+
+,
+\begin_inset Note
+collapsed true
+
+\layout Standard
+
+mathbb{} ist für sogenannte double-line capitals
+\layout Standard
+
+in Font "Blackboard-Bold"
+\end_inset 
+
+
+\layout Itemize
+
+komplexen Zahlen
+\begin_inset LatexCommand \index{Zahlen!komplexe $\mathbb{C}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(\mathbb{C},+,\cdot)$
+\end_inset 
+
+,
+\layout Itemize
+
+rationalen Zahlen
+\begin_inset LatexCommand \index{Zahlen!rationale $\mathbb{Q}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(\mathbb{Q},+,\cdot)$
+\end_inset 
+
+
+\begin_inset Note
+collapsed true
+
+\layout Standard
+
+Umfaßt nicht die transzendent entwickelten Zahlen wie Pi, e etc.
+\end_inset 
+
+
+\layout Itemize
+
+sowie der endliche Körper
+\begin_inset LatexCommand \index{Körper!endlicher}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{Z}_{2}:=\{0,1\}$
+\end_inset 
+
+.
+\layout Standard
+
+Eine Menge von Funktionen über einem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ kann selbst auch wieder ein Körper sein, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ die Menge der rationalen Funktionen 
+\begin_inset Formula $\mathbb{R}(x)$
+\end_inset 
+
+ über 
+\begin_inset Formula $\mathbb{R}$
+\end_inset 
+
+, geschrieben 
+\begin_inset Formula $(\mathbb{R}(x),+,\cdot)$
+\end_inset 
+
+.
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_vector_space}
+
+\end_inset 
+
+Vektorraum
+\begin_inset LatexCommand \index{Vektorraum}
+
+\end_inset 
+
+
+\layout Standard
+
+Eine Menge von Vektoren
+\begin_inset LatexCommand \index{Vektor}
+
+\end_inset 
+
+ 
+\begin_inset Formula $V:=\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\ldots\}$
+\end_inset 
+
+, jeder bestehend aus einem geordneten 
+\begin_inset Formula $n$
+\end_inset 
+
+-Tupel von Elementen 
+\begin_inset Formula $a$
+\end_inset 
+
+ aus einem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+, wird Vektorraum über dem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ genannt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite[\bibrefsec{2.5}]{Peterson:1972}
+
+\end_inset 
+
+), wenn:
+\layout Enumerate
+
+die additive Gruppe 
+\begin_inset Formula $(V,+)$
+\end_inset 
+
+ existiert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Entscheidend in Bezug auf den Begriff des Vektorraumes (in Relation zu einer
+ Algebra, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_algebra}
+
+\end_inset 
+
+) ist, daß nur die Addition zwischen Vektoren (
+\noun on 
+Abel
+\noun default 
+'sche Gruppe) sowie die Multiplikation mit einem Skalar aus 
+\begin_inset Formula $K$
+\end_inset 
+
+ definiert ist.
+\end_inset 
+
+ und vom 
+\noun on 
+abel
+\noun default 
+'schen Typ ist (
+\begin_inset Formula $+:V\times V\rightarrow V$
+\end_inset 
+
+);
+\layout Enumerate
+
+für jeden Vektor 
+\begin_inset Formula $\mathbf{v}\in V$
+\end_inset 
+
+ die Multiplikation mit einem Körperelement (Skalar) 
+\begin_inset Formula $a$
+\end_inset 
+
+ definiert ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die mit 
+\begin_inset Formula $\cdot$
+\end_inset 
+
+ gekennzeichnete Operation nennt man auch die äußere,
+\begin_inset Formula $+$
+\end_inset 
+
+ die innere Verknüpfung.
+\end_inset 
+
+ und wieder zu einem Vektor 
+\begin_inset Formula $\mathbf{u}=a\mathbf{v}\in V$
+\end_inset 
+
+ führt (Abgeschlossenheit
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+ der Abbildung 
+\begin_inset Formula $\cdot:K\times V\rightarrow V$
+\end_inset 
+
+ );
+\layout Enumerate
+
+bezüglich zweier Skalare 
+\begin_inset Formula $a,b$
+\end_inset 
+
+ und der Vektoren 
+\begin_inset Formula $\mathbf{u},\mathbf{v}$
+\end_inset 
+
+ die folgenden Distributivgesetze
+\begin_inset LatexCommand \index{Distributivgesetz}
+
+\end_inset 
+
+ gelten:
+\newline 
+
+\begin_inset Formula \begin{align*}
+a(\mathbf{u}+\mathbf{v}) & =a\mathbf{u}+a\mathbf{v}\\
+\mathbf{v}(a+b) & =a\mathbf{v}+b\mathbf{v}\end{align*}
+
+\end_inset 
+
+
+\layout Enumerate
+
+das Assoziativgesetz
+\begin_inset LatexCommand \index{Assoziativgesetz}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(ab)\mathbf{v}=a(b\mathbf{v})$
+\end_inset 
+
+ gilt;
+\layout Enumerate
+
+und es ein multiplikativ neutrales Element
+\begin_inset LatexCommand \index{Element!neutrales}
+
+\end_inset 
+
+ in Bezug auf die Vektoren in 
+\begin_inset Formula $V$
+\end_inset 
+
+ gibt.
+\layout Standard
+
+Wenn (wie schon erwähnt) mit 
+\begin_inset Formula $n$
+\end_inset 
+
+ die Anzahl der Tupel eines Vektors 
+\begin_inset Formula $\mathbf{v}$
+\end_inset 
+
+ bezeichnet wird, dann nennt man den zugehörigen Vektorraum üblicherweise
+ 
+\begin_inset Formula $V_{n}(K)$
+\end_inset 
+
+ oder kurz 
+\begin_inset Formula $V=K^{n}$
+\end_inset 
+
+, also 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{R}^{3}$
+\end_inset 
+
+ oder 
+\begin_inset Formula $\mathbb{Z}_{2}^{n}$
+\end_inset 
+
+.
+ Entsprechend ist auch das neutrale Element
+\begin_inset LatexCommand \index{Element!neutrales}
+
+\end_inset 
+
+, welches als 
+\begin_inset Formula $\mathbf{0}=(0,0,\ldots,0)^{T}$
+\end_inset 
+
+ geschrieben wird, ein Vektor mit 
+\begin_inset Formula $n$
+\end_inset 
+
+ Elementen.
+\layout Standard
+
+Kann man jeden Vektor von 
+\begin_inset Formula $V$
+\end_inset 
+
+ als Linearkombination
+\begin_inset LatexCommand \index{Linearkombination}
+
+\end_inset 
+
+ von unabhängigen Vektoren 
+\begin_inset Formula $\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{m}\in U\subseteq V$
+\end_inset 
+
+ darstellen, also als
+\layout Standard
+
+
+\begin_inset Formula \[
+\mathbf{v}=\sum_{i=1}^{m}\alpha_{i}\mathbf{u}_{i}\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+so nennt man 
+\begin_inset Formula $\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{m}$
+\end_inset 
+
+ die Basis
+\begin_inset LatexCommand \index{Vektorraum!Basis}
+
+\end_inset 
+
+, 
+\begin_inset Formula $\alpha_{1},\alpha_{2},\ldots,\alpha_{m}$
+\end_inset 
+
+ die Koeffizienten und 
+\begin_inset Formula $m$
+\end_inset 
+
+ die Dimension
+\begin_inset LatexCommand \index{Vektorraum!Dimension}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $V$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+m=\dim(V)=\left|V\right|\]
+
+\end_inset 
+
+
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_algebra}
+
+\end_inset 
+
+Algebra (Verband)
+\begin_inset LatexCommand \index{Verband}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Algebra}
+
+\end_inset 
+
+
+\layout Standard
+
+Eine Algebra über einem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ ist eine Erweiterung des Begriffs Vektorraum in Bezug auf die Vektormultiplikat
+ion
+\begin_inset LatexCommand \index{Vektor!-multiplikation}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ohne für jeden Vektor ein multiplikativ inverses Element zu fordern.
+ Man spricht deshalb auch manchmal von einem assoziativen Vektorring.
+\end_inset 
+
+.
+ Speziell sind es folgende Axiome, die eine Algebra auszeichnen:
+\layout Enumerate
+
+die Menge 
+\begin_inset Formula $V$
+\end_inset 
+
+ ist ein Vektorraum über einem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+
+\end_inset 
+
+);
+\layout Enumerate
+
+für zwei Vektoren 
+\begin_inset Formula $\mathbf{u},\mathbf{v}\in V$
+\end_inset 
+
+ ist ein Produkt
+\begin_inset LatexCommand \index{Vektor!-produkt}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbf{uv}$
+\end_inset 
+
+ definiert und in Bezug auf 
+\begin_inset Formula $V$
+\end_inset 
+
+ abgeschlossen
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+ (
+\begin_inset Formula $\cdot:V\times V\rightarrow V$
+\end_inset 
+
+);
+\layout Enumerate
+
+das Assoziativgesetz
+\begin_inset LatexCommand \index{Assoziativgesetz}
+
+\end_inset 
+
+ für Vektoren 
+\begin_inset Formula $(\mathbf{uv})\mathbf{w}=\mathbf{u}(\mathbf{vw})$
+\end_inset 
+
+ ist erfüllt;
+\layout Enumerate
+
+auch das Distributivgesetz
+\begin_inset LatexCommand \index{Distributivgesetz}
+
+\end_inset 
+
+ läßt sich auf Vektoren anwenden: 
+\begin_inset Formula $(\mathbf{u}+\mathbf{v})\mathbf{w}=\mathbf{uw}+\mathbf{vw}$
+\end_inset 
+
+.
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{app_modulo}
+
+\end_inset 
+
+Restklassen
+\begin_inset LatexCommand \index{Restklasse}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Einführung
+\layout Standard
+
+Restklassen sind Kongruenzen
+\begin_inset LatexCommand \index{Kongruenz}
+
+\end_inset 
+
+ von Elementen (einer algebraischen Struktur) modulo eines fixen Elements
+ 
+\begin_inset Formula $m$
+\end_inset 
+
+.
+ Das Rechnen mit solchen Elementen wird als modulare
+\begin_inset LatexCommand \index{Arithmetik!modulare}
+
+\end_inset 
+
+ oder Modulo-Arithmetik
+\begin_inset LatexCommand \index{Arithmetik!Modulo-}
+
+\end_inset 
+
+ und 
+\begin_inset Formula $m$
+\end_inset 
+
+ als das Modul
+\begin_inset LatexCommand \index{Modul}
+
+\end_inset 
+
+ bezeichnet.
+ In diesem Sinne definiert man
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+r\equiv a\bmod m\label{eq:algebra_def_mod}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+als den Rest 
+\begin_inset Formula $r$
+\end_inset 
+
+, der bei der 
+\begin_inset Quotes eld
+\end_inset 
+
+Division
+\begin_inset Quotes erd
+\end_inset 
+
+ 
+\begin_inset Formula $a/m$
+\end_inset 
+
+ entsteht und sagt 
+\begin_inset Formula $r$
+\end_inset 
+
+ ist kongruent 
+\begin_inset Formula $a$
+\end_inset 
+
+ modulo 
+\begin_inset Formula $m$
+\end_inset 
+
+.
+ Im Umkehrschluß sind die Restklassenelemente
+\begin_inset LatexCommand \index{Element!Restklassen-}
+
+\end_inset 
+
+ durch die Relation
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+a=qm+r,\qquad0\leq r<m\label{eq:algebra_mod_reverse}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+bestimmt.
+ Die Äquivalenzrelation 
+\begin_inset Formula $r\equiv a\bmod m$
+\end_inset 
+
+ kann man 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ im Ring der ganzen Zahlen
+\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{Z}$
+\end_inset 
+
+ definieren, ist aber nicht auf diesen beschränkt.
+ Im allgemeinen Fall 
+\begin_inset Formula $a\in R$
+\end_inset 
+
+ schreibt man für die Restklasse
+\layout Standard
+
+
+\begin_inset Formula \[
+\res{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Restklasse 
+\begin_inset Formula $\res{r}{m}$
+\end_inset 
+
+ ist die Menge aller Elemente 
+\begin_inset Formula $a\in R$
+\end_inset 
+
+, die bei der Division modulo 
+\begin_inset Formula $m$
+\end_inset 
+
+ genau den Rest 
+\begin_inset Formula $r$
+\end_inset 
+
+ ergeben.
+ Ein Beispiel für 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset 
+
+ mit einem Modul von 
+\begin_inset Formula $m=4$
+\end_inset 
+
+ soll das veranschaulichen.
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\res{0}{4} & =\{\ldots,-12,-8,-4,0,4,8,\ldots\} & \res{2}{4} & =\{\ldots,-10,-6,-2,2,6,10,\ldots\}\\
+\res{1}{4} & =\{\ldots,-11,-7,-3,1,5,9,\ldots\} & \res{3}{4} & =\{\ldots,-9,-5,-1,3,7,11,\ldots\}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Im allgemeinen Fall bezeichnet man die Menge aller Restklassen mit
+\layout Standard
+
+
+\begin_inset Formula \[
+R_{m}=\{\res{r_{0}}{m},\res{r_{1}}{m},\ldots,\res{r_{n-1}}{m}\},\]
+
+\end_inset 
+
+
+\layout Standard
+
+und mit 
+\begin_inset Formula $m$
+\end_inset 
+
+ deren Anzahl (Ordnung
+\begin_inset LatexCommand \index{Ordnung}
+
+\end_inset 
+
+).
+ Im speziellen Fall der ganzen Zahlen 
+\begin_inset Formula $a\in\mathbb{Z}$
+\end_inset 
+
+ modulo 
+\begin_inset Formula $m$
+\end_inset 
+
+ schreibt man, falls 
+\begin_inset Formula $n=m$
+\end_inset 
+
+ gilt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auch eine Einschränkung auf 
+\begin_inset Formula $n<m$
+\end_inset 
+
+ ist möglich, nur darf man dann (von vornherein) nicht alle Elemente aus
+ 
+\begin_inset Formula $\mathbb{Z}_{m}$
+\end_inset 
+
+ zulassen.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\res{0}{m},\res{1}{m},\ldots,\res{m-1}{m}\}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Im allgemeinen werden Vernüpfungsoperationen (Addition, Multiplikation usw.)
+ zwischen zwei Restklassen dadurch definiert, daß man jeweils einen Vertreter
+ aus den Restklassen auswählt und dann die Operation mit diesem Repräsentanten
+ durchführt.
+ Kann man die eine oder andere Art solcher Operationen auf der Menge aller
+ Restklassen definieren, dann lassen sich Restklassenringe, -gruppen oder
+ sogar -körper angeben.
+\layout Subsubsection
+
+Restklassenringe
+\begin_inset LatexCommand \index{Ring!Restklassen-}
+
+\end_inset 
+
+
+\layout Standard
+
+Um von einem Restklassenring 
+\begin_inset Formula $(R_{m},+,\cdot)$
+\end_inset 
+
+ sprechen zu können ist der Nachweis (bzw.
+ die Definition) aller Ringaxiome von Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_ring}
+
+\end_inset 
+
+ in Bezug auf die Menge der Restklassen 
+\begin_inset Formula $R_{m}$
+\end_inset 
+
+ notwendig\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefchap{5}]{Welschenbach:2001}
+
+\end_inset 
+
+.
+ Dazu geht man von der Modulo-Arithmetik entsprechend Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_def_mod}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_mod_reverse}
+
+\end_inset 
+
+ aus und prüft jeden Punkt durch Einzelbetrachtung:
+\layout Enumerate
+
+Bezüglich der Addition muß 
+\begin_inset Formula $(R_{m},+,\cdot)$
+\end_inset 
+
+ eine 
+\noun on 
+Abel
+\noun default 
+'sche Gruppe
+\begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
+
+\end_inset 
+
+ bilden, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\begin_deeper 
+\layout Enumerate
+
+die Addition existiert und ist abgeschlossen
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Operation führt immer wieder auf ein Element in 
+\begin_inset Formula $R_{m}$
+\end_inset 
+
+.
+\end_inset 
+
+; 
+\begin_inset Formula \begin{eqnarray*}
+\res{r}{m} & = & \res{r_{1}}{m}+\res{r_{2}}{m}=(a_{1}-mq_{1}+a_{2}-mq_{2})\bmod m\\
+ & = & (a_{1}+a_{2})\bmod m-\left[m(q_{1}+q_{2})\right]\bmod m=(r_{1}+r_{2})\bmod m\\
+ & = & \res{r_{1}+r_{2}}{m}\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Enumerate
+
+sie ist außerdem sowohl assoziativ als auch kommutativ (
+\noun on 
+Abel
+\noun default 
+'sch); 
+\begin_inset Formula \[
+\res{r_{1}}{m}+(\res{r_{2}}{m}+\res{r_{3}}{m})=(\res{r_{1}}{m}+\res{r_{2}}{m})+\res{r_{3}}{m}=\res{r_{3}}{m}+\res{r_{2}}{m}+\res{r_{1}}{m}\]
+
+\end_inset 
+
+
+\layout Enumerate
+
+das neutrale Element
+\begin_inset LatexCommand \index{Element!neutrales}
+
+\end_inset 
+
+ 
+\begin_inset Formula $e_{(+)}=\res{0}{m}=mq_{0}$
+\end_inset 
+
+ existiert;
+\begin_inset Formula \[
+\res{r}{m}+\res{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\res{r}{m}\]
+
+\end_inset 
+
+
+\layout Enumerate
+
+jedes Element besitzt ein inverses Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $-\res{r}{m}=(m-a)\bmod m$
+\end_inset 
+
+ mit 
+\begin_inset Formula \[
+\res{r}{m}+(-\res{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\res{0}{m}.\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Für die Multiplikation muß 
+\begin_inset Formula $(R_{m},+,\cdot)$
+\end_inset 
+
+ eine Halbgruppe
+\begin_inset LatexCommand \index{Halbgruppe}
+
+\end_inset 
+
+ darstellen, also
+\begin_deeper 
+\layout Enumerate
+
+ebenfalls abgeschlossen
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+ sein; 
+\begin_inset Formula \begin{align*}
+\res{r}{m} & =\res{r_{1}}{m}\cdot\res{r_{2}}{m}=(r_{1}-mq_{1})\cdot(r_{2}-mq_{2})\bmod m\\
+ & =\left[r_{1}r_{2}+m(mq_{1}q_{2}-r_{1}q_{2}-r_{2}q_{1})\right]\bmod m=(r_{1}\cdot r_{2})\bmod m\\
+ & =\res{r_{1}\cdot r_{2}}{m}\end{align*}
+
+\end_inset 
+
+
+\layout Enumerate
+
+und das Assoziativgesetz
+\begin_inset LatexCommand \index{Assoziativgesetz}
+
+\end_inset 
+
+ für 
+\begin_inset Formula $\res{r_{i}}{m}\in R_{m}$
+\end_inset 
+
+ erfüllen;
+\begin_inset Formula \[
+\res{r_{1}}{m}\cdot(\res{r_{2}}{m}\cdot\res{r_{3}}{m})=(\res{r_{1}}{m}\cdot\res{r_{2}}{m})\cdot\res{r_{3}}{m}\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Außerdem muß für alle 
+\begin_inset Formula $\res{r_{i}}{m}\in R_{m}$
+\end_inset 
+
+ das Distributivgesetz
+\begin_inset LatexCommand \index{Distributivgesetz}
+
+\end_inset 
+
+ erfüllt sein.
+\newline 
+
+\begin_inset Formula \begin{alignat*}{1}
+\res{r_{1}}{m}\cdot(\res{r_{2}}{m}+\res{r_{3}}{m}) & =(r_{1}-mq_{1})\cdot\left[r_{2}+r_{3}-m(q_{2}+q_{3})\right]\bmod m\\
+ & =(r_{1}r_{2}+r_{1}r_{3})\bmod m\\
+ & =\res{r_{1}}{m}\cdot\res{r_{2}}{m}+\res{r_{1}}{m}\cdot\res{r_{3}}{m}\end{alignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Da 
+\begin_inset Formula $(R_{m},\cdot)$
+\end_inset 
+
+ ein neutrales Element
+\begin_inset LatexCommand \index{Element!neutrales}
+
+\end_inset 
+
+ 
+\begin_inset Formula $e_{(\cdot)}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\res{r}{m}\cdot e_{(\cdot)}=\res{r}{m}$
+\end_inset 
+
+ besitzt, handelt es sich sogar um einen
+\begin_inset LatexCommand \index{Ring!mit Eins}
+
+\end_inset 
+
+ 
+\emph on 
+Ring mit Eins
+\emph default 
+.
+\begin_inset Formula \[
+\res{r}{m}\cdot\res{1}{m}=(r\cdot1)\bmod m=r\bmod m=\res{r}{m}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
+\begin_inset LatexCommand \index{Restklasse!$\mathbb{Z}_m$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $R_{m}=\mathbb{Z}_{m}$
+\end_inset 
+
+ alle diese Bedingungen für 
+\begin_inset Formula $m\geq2$
+\end_inset 
+
+ erfüllen und somit einen kommutativen Ring mit Einselement bilden.
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_residue_field}
+
+\end_inset 
+
+Restklassenkörper
+\begin_inset LatexCommand \index{Restklassenkörper}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper!Restklassen-}
+
+\end_inset 
+
+
+\layout Paragraph
+
+
+\begin_inset LatexCommand \index{Galois-Körper}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper!Galois-}
+
+\end_inset 
+
+Galois-Field 
+\begin_inset Formula $\GF(q)$
+\end_inset 
+
+, 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+
+\layout Standard
+
+Für den Übergang zu einem endlichen Körper ist es notwendig, daß zu den
+ Eigenschaften eines Ringes 
+\begin_inset Formula $\left(R_{m},+,\cdot\right)$
+\end_inset 
+
+ noch die einer multiplikativen Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ kommt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_group}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_field}
+
+\end_inset 
+
+).
+ Einziges zusätzliches Kriterium ist danach die Existenz eines multiplikativ
+ inversen Elements
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $r^{-1}$
+\end_inset 
+
+ zu jedem 
+\begin_inset Formula $r\in R_{m}\setminus\{0\}$
+\end_inset 
+
+, so daß 
+\begin_inset Formula $r\cdot r^{-1}=e_{(\cdot)}=1$
+\end_inset 
+
+ gilt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Das Nullelement muß man natürlich von dieser Forderung ausnehmen.
+\end_inset 
+
+.
+ Endliche Körper
+\begin_inset LatexCommand \index{Körper!endlicher}
+
+\end_inset 
+
+ nennt man auch 
+\noun on 
+Galois
+\noun default 
+-Field
+\begin_inset LatexCommand \index{Galois-Körper}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper!Galois-}
+
+\end_inset 
+
+ und bezeichnet sie mit 
+\begin_inset Formula $\GF(q)$
+\end_inset 
+
+ oder 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+, wobei der Parameter 
+\begin_inset Formula $q$
+\end_inset 
+
+ die Ordnung
+\begin_inset LatexCommand \index{Ordnung}
+
+\end_inset 
+
+ des Körpers ist (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite[\bibrefsec{6.6}]{Peterson:1972}
+
+\end_inset 
+
+).
+\layout Standard
+
+In einem Restklassenkörper muß man dementsprechend für das inverse Element
+ 
+\begin_inset Formula $\res{r}{m}\cdot{\res{r}{m}}^{-1}=\res{1}{m}$
+\end_inset 
+
+ fordern, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Frage nach der Division im Restklassenring
+\begin_inset LatexCommand \index{Restklassenring}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(R_{m},+,\cdot)$
+\end_inset 
+
+ klären.
+ Ausgangspunkt soll deshalb das Auffinden einer Lösung 
+\begin_inset Formula $x$
+\end_inset 
+
+ in der Kongruenz
+\begin_inset LatexCommand \index{Kongruenz}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+rx\equiv a\pmod m,\qquad a,m\in\mathbb{F}\]
+
+\end_inset 
+
+
+\layout Standard
+
+sein.
+ Es ist sofort erkennbar, daß mit Hilfe des inversen Vertreterelements
+\begin_inset LatexCommand \index{Element!Vertreter-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $r^{-1}$
+\end_inset 
+
+ eine solche direkt bestimmt werden kann.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+r^{-1}rx & \equiv & r^{-1}a\pmod m\\
+x & \equiv & r^{-1}a\pmod m\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Existenz eines inversen Elements
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ ist allerdings nur dann gegeben, wenn 
+\begin_inset Formula $m$
+\end_inset 
+
+ und (jedes beliebige) 
+\begin_inset Formula $r$
+\end_inset 
+
+ teilerfremd sind, also 
+\begin_inset Formula $\gcd(r,m)=1$
+\end_inset 
+
+ gilt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibreftheorem{6.4}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Bezieht man diese Aussage 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ auf den Ring 
+\begin_inset Formula $\mathbb{Z}_{m}\setminus\{0\}$
+\end_inset 
+
+, dann müssen (wenn keine weiteren Forderungen an 
+\begin_inset Formula $m$
+\end_inset 
+
+ gestellt werden) alle Elemente 
+\begin_inset Formula $r$
+\end_inset 
+
+, für die 
+\begin_inset Formula $\gcd(r,m)=1$
+\end_inset 
+
+ nicht erfüllt werden kann, aus dem Ring
+\begin_inset LatexCommand \index{Ring!$\mathbb{Z}_m$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{Z}_{m}$
+\end_inset 
+
+ ausgeschlossen werden.
+ Sowohl im allgemeinen als auch speziellen Fall von 
+\begin_inset Formula $\mathbb{Z}_{m}^{*}=\mathbb{Z}_{m}\setminus\{0\}=\{1,2,3,\ldots,m-1\}$
+\end_inset 
+
+ ist diese Bedingung grundsätzlich hinfällig, wenn 
+\begin_inset Formula $m$
+\end_inset 
+
+ ein Primelement
+\begin_inset LatexCommand \index{Primelement}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Element!Prim-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Primzahlenkörper}
+
+\end_inset 
+
+ ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Also in Bezug auf den Ring 
+\begin_inset Formula $\mathbb{Z}_{m}$
+\end_inset 
+
+ eine Primzahl 
+\begin_inset Formula $p\in\mathbb{P}$
+\end_inset 
+
+ ist.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibreftheorem{6.4}]{Peterson:1972}
+
+\end_inset 
+
+.
+\layout Standard
+
+Ist nämlich 
+\begin_inset Formula $m$
+\end_inset 
+
+ kein primes Element, dann läßt es sich mindestens in zwei Faktoren 
+\begin_inset Formula $r,s\in R_{m}$
+\end_inset 
+
+ zerlegen (und die nicht Vielfache von 
+\begin_inset Formula $m$
+\end_inset 
+
+ sind, also 
+\begin_inset Formula $r,s\bmod m\neq0$
+\end_inset 
+
+).
+ Da nun 
+\begin_inset Formula $m\bmod m=0$
+\end_inset 
+
+ ist, gilt für die Restklassenmultiplikation 
+\begin_inset Formula $\res{r}{m}\cdot\res{s}{m}=\res{m}{m}=0$
+\end_inset 
+
+.
+ Soll aber 
+\begin_inset Formula $\res{r}{m}$
+\end_inset 
+
+ eine inverse Restklasse 
+\begin_inset Formula $\res{r}{m}^{-1}$
+\end_inset 
+
+ besitzen, dann kann man beide Seiten des Produktes mit 
+\begin_inset Formula ${\res{r}{m}}^{-1}$
+\end_inset 
+
+ multiplizieren.
+\layout Standard
+
+
+\begin_inset Formula \[
+\underbrace{{\res{r}{m}}^{-1}\res{r}{m}}_{e_{(\cdot)}=1}\cdot\res{s}{m}=\res{s}{m}={\res{r}{m}}^{-1}\res{m}{m}=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula $\res{s}{m}$
+\end_inset 
+
+ ist aber nach Voraussetzung nicht 
+\begin_inset Formula $0$
+\end_inset 
+
+, demzufolge kann ein Inverses zu 
+\begin_inset Formula $\res{r}{m}$
+\end_inset 
+
+ für den Fall dieser Zerlegung nicht existieren.
+\layout Standard
+
+Im Gegenzug bleibt noch nachzuweisen, daß, wenn 
+\begin_inset Formula $m$
+\end_inset 
+
+ ein Primelement ist, für jede Restklasse 
+\begin_inset Formula $\res{r}{m}$
+\end_inset 
+
+ aus 
+\begin_inset Formula $R_{m}$
+\end_inset 
+
+ ein inverses Element 
+\begin_inset Formula ${\res{r}{m}}^{-1}$
+\end_inset 
+
+ auch wirklich existiert.
+ Zu diesem Zweck betrachten wir alle 
+\begin_inset Formula $\res{r}{m}\in R_{m}$
+\end_inset 
+
+, ausgenommen die Restklasse 
+\begin_inset Formula $\res{1}{m}$
+\end_inset 
+
+, welche bei der Inversion bekanntlich auf sich selbst abgebildet wird.
+ Da wegen der Modulo-Reduktion (wir verwenden jetzt wieder den Vertreter
+ der Restklasse) immer 
+\begin_inset Formula $m>r$
+\end_inset 
+
+ gilt, kann nur 
+\begin_inset Formula $r$
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $m$
+\end_inset 
+
+ sein und nicht umgekehrt.
+ Aber auch dies ist nicht möglich, wenn nach Voraussetzung 
+\begin_inset Formula $m$
+\end_inset 
+
+ relativ prim zu 
+\begin_inset Formula $r$
+\end_inset 
+
+ ist.
+ Deshalb kann der größte gemeinsame Teiler von 
+\begin_inset Formula $r$
+\end_inset 
+
+ und 
+\begin_inset Formula $m$
+\end_inset 
+
+ nur das Einselement sein.
+ Berücksichtigt man jetzt noch die aus dem euklidischen Algorithmus
+\begin_inset LatexCommand \index{Euklidischer Algorithmus}
+
+\end_inset 
+
+ stammende Erkenntnis, daß der größte gemeinsame Teiler 
+\begin_inset Formula $d$
+\end_inset 
+
+ zweier Elemente 
+\begin_inset Formula $r,s$
+\end_inset 
+
+ eines (gleichnamigen) Ringes in der Form 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+d=\gcd(r,s)=ar+bs\label{eq:algebra_gcd_general}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+darstellbar ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Lemma von B
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+'{e}
+\end_inset 
+
+zout.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{2.4}]{Bosch:1996}
+
+\end_inset 
+
+, dann gilt speziell hier
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\gcd(r,m)=1 & \equiv ar+bm=ar\pmod m\\
+\res{1}{m} & =\res{a}{m}\cdot\res{r}{m}\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Das inverse Element von 
+\begin_inset Formula $\res{r}{m}$
+\end_inset 
+
+ ist demzufolge
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auf der Grundlage von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_gcd_general}
+
+\end_inset 
+
+ ergibt sich damit die Möglichkeit der Ermittlung von 
+\begin_inset Formula $r^{-1}$
+\end_inset 
+
+ (Erweiterter euklidischer 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\noun on 
+Berlekamp
+\noun default 
+-Algorithmus).
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\res{a}{m}={\res{r}{m}}^{-1}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Von praktischer Bedeutung ist insbesondere der Körper
+\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Restklasse!$\mathbb{Z}_2$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\GF(2):=\mathbb{Z}_{2}$
+\end_inset 
+
+, denn er bildet häufig die Grundlage technischer Realisierungen.
+ Die beiden Elemente von 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset 
+
+ werden mit 
+\begin_inset Formula $\{\res{0}{2},\res{1}{2}\}$
+\end_inset 
+
+ oder kürzer mit 
+\begin_inset Formula $0,1$
+\end_inset 
+
+ bezeichnet.
+ Wegen ihrer einfachen Implementierung sind die Operationen in 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset 
+
+ besonders effizient.
+\layout Enumerate
+
+
+\begin_inset LatexCommand \label{enum:algebra_mod2_operations}
+
+\end_inset 
+
+Die Addition (modulo 
+\begin_inset Formula $2$
+\end_inset 
+
+) ist mit
+\newline 
+
+\begin_inset Formula \begin{xalignat}{2}
+0+0 & =0 & 1+1 & =2\bmod2=0\label{eq:algebra_mod2_add_inv}\\
+0+1 & =1 & 1+0 & =1\nonumber \end{xalignat}
+
+\end_inset 
+
+ geradezu primitiv und entspricht dem logischen 
+\emph on 
+Exklusiv-Oder
+\begin_inset LatexCommand \index{Exklusiv-Oder}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Oftmals auch mit 
+\emph on 
+XOR
+\emph default 
+ oder dem Symbol 
+\begin_inset Formula $\oplus$
+\end_inset 
+
+ bezeichnet.
+\end_inset 
+
+
+\emph default 
+.
+ Wie man sofort sieht ist das neutrale Element die 
+\begin_inset Formula $0$
+\end_inset 
+
+ und wegen Beziehung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_mod2_add_inv}
+
+\end_inset 
+
+ das additiv Inverse die 
+\begin_inset Formula $1$
+\end_inset 
+
+.
+ Addition und Subtraktion sind in diesem Sinne gleichwertig, denn es gilt
+ ja 
+\begin_inset Formula $-1=1$
+\end_inset 
+
+.
+\layout Enumerate
+
+Ebenfalls eine einfache Operation ist die Multiplikation, denn sie entspricht
+ dem logischen 
+\emph on 
+Und
+\emph default 
+.
+\newline 
+
+\begin_inset Formula \begin{xalignat*}{2}
+0\cdot0 & =0 & 1\cdot1 & =1\\
+0\cdot1 & =0 & 1\cdot0 & =0\end{xalignat*}
+
+\end_inset 
+
+
+\layout Enumerate
+
+Die Division erklärt sich mit Hilfe des inversen Elements in 
+\begin_inset Formula $\mathbb{Z}_{2}^{*}=\mathbb{Z}_{2}\setminus\{0\}=\{1\}$
+\end_inset 
+
+, welches ja die Bedingung 
+\begin_inset Formula $1\cdot1^{-1}=e_{(\cdot)}=1$
+\end_inset 
+
+ erfüllen muß.
+ Einzig mögliche Schlußfolgerung ist die, daß es sich bei dem inversen Element
+ 
+\begin_inset Formula $1^{-1}$
+\end_inset 
+
+ um 
+\begin_inset Formula $1$
+\end_inset 
+
+ selbst handelt.
+\layout Paragraph
+
+Multiplikative Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+
+\layout Standard
+
+Die multiplikative Gruppe 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ eines 
+\noun on 
+Galois
+\noun default 
+-Körpers 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ ist wegen ihrer Eigenschaften bezüglich der Potenzierung von Gruppenelementen
+ sehr interessant
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+An dieser Stelle sei darauf hingewiesen, daß fast alle der folgenden Aussagen
+ auf endliche Körper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ im Allgemeinen zutreffen und nicht auf Restklassen beschränkt sind.
+\end_inset 
+
+.
+ Dazu soll die Folge aller Potenzen
+\begin_inset LatexCommand \index{Element!Potenzierung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $r^{1},r^{2},r^{3},r^{4},\ldots$
+\end_inset 
+
+ irgendeines Elements 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ betrachtet werden.
+ Nach dem Prinzip der Abgeschlossenheit
+\begin_inset LatexCommand \index{Abgeschlossenheit}
+
+\end_inset 
+
+ (Gruppenaxiom) wird auch jede Potenz von 
+\begin_inset Formula $r$
+\end_inset 
+
+ wieder in 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ liegen.
+ Wegen der endlichen Zahl von Elementen in 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+, muß sich deshalb ab irgendeiner Potenz 
+\begin_inset Formula $l$
+\end_inset 
+
+ die Folge wiederholen
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß 
+\begin_inset Formula $l$
+\end_inset 
+
+ für jedes Element 
+\begin_inset Formula $r$
+\end_inset 
+
+ verschieden sein kann (also eine Funktion vn 
+\begin_inset Formula $r$
+\end_inset 
+
+ ist).
+\end_inset 
+
+.
+ Die Wiederholung der Folge ab einem bestimmten 
+\begin_inset Formula $l$
+\end_inset 
+
+ läßt den Ansatz 
+\begin_inset Formula $r^{i}=r^{l}$
+\end_inset 
+
+ zu.
+ Multiplikation mit dem inversen Element von 
+\begin_inset Formula $r^{i}$
+\end_inset 
+
+ ergibt 
+\begin_inset Formula $1=r^{l-i}$
+\end_inset 
+
+, was wegen 
+\begin_inset Formula $l>i$
+\end_inset 
+
+ wiederum die Schlußfolgerung zuläßt, das es immer ein Element
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray}
+r^{k} & = & 1,\qquad r\in\mathbb{F}_{q}^{*}\label{eq:algebra_ord_elem}\\
+r^{k}-1 & = & 0\msp.\label{eq:algebra_ord_elem_root}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+gibt.
+ Die Folge 
+\begin_inset Formula $\{ r,r^{2},r^{3},\ldots,r^{k-1},r^{k}=1=r^{0}\}$
+\end_inset 
+
+ nennt man die vom Element 
+\begin_inset Formula $r$
+\end_inset 
+
+ erzeugte Untergruppe
+\begin_inset LatexCommand \index{Gruppe!Unter-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Untergruppe}
+
+\end_inset 
+
+ und kennzeichnet sie mit
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left\langle r\right\rangle =\left\{ \left.r^{\nu}\right|0\leq\nu\leq k-1\right\} \subseteq\mathbb{F}_{q}^{*}\msp.\label{eq:algebra_subgroup_elem}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Das Element 
+\begin_inset Formula $r$
+\end_inset 
+
+ wird als erzeugendes Element
+\begin_inset LatexCommand \index{Element!erzeugendes}
+
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Generator
+\begin_inset LatexCommand \index{Generator!-element}
+
+\end_inset 
+
+ der Untergruppe 
+\begin_inset Formula $\left\langle r\right\rangle $
+\end_inset 
+
+ bezeichnet.
+ Ist 
+\begin_inset Formula $k$
+\end_inset 
+
+ die kleinste Potenz, die zu 
+\begin_inset Formula $r^{k}=1$
+\end_inset 
+
+ führt, dann wird 
+\begin_inset Formula $k=\left|\left\langle r\right\rangle \right|$
+\end_inset 
+
+ die Ordnung
+\begin_inset LatexCommand \index{Ordnung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Element!Ordnung}
+
+\end_inset 
+
+ des Elements 
+\begin_inset Formula $r$
+\end_inset 
+
+ genannt.
+\layout Standard
+
+Eine Ausdrucksmöglichkeit für die Potenzen 
+\begin_inset Formula $r^{\nu}$
+\end_inset 
+
+ zeigt sich, wenn man nocheinmal deren Abfolge betrachtet.
+ Da auf 
+\begin_inset Formula $r^{k-1}$
+\end_inset 
+
+ wieder das Element 
+\begin_inset Formula $r^{0}$
+\end_inset 
+
+ folgt, kann man sie wiefolgt definieren
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ohne dabei zu vergessen, daß jede Potenz 
+\begin_inset Formula $r^{\nu}$
+\end_inset 
+
+ (bedingt durch die Modulo-Reduktion 
+\begin_inset Formula $\bmod m$
+\end_inset 
+
+) auf ein anderes Element 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ abgebildet wird.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left\langle r\right\rangle =\left\{ \left.r^{\nu}\bmod\left(r^{k}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\label{eq:algebra_subgroup_elem_mod}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Betrachtet man jedes 
+\begin_inset Formula $r^{\nu}$
+\end_inset 
+
+ für jeden Exponenten 
+\begin_inset Formula $\nu$
+\end_inset 
+
+, dann ist die Richtigkeit der Modulo-Schreibweise mittels 
+\begin_inset Formula $\bmod\left(r^{k}-1\right)$
+\end_inset 
+
+ einfach zu belegen.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+r^{0}\bmod(r^{k}-1) & =r^{0}\\
+r^{1}\bmod(r^{k}-1) & =r^{1}\\
+r^{2}\bmod(r^{k}-1) & =r^{2}\\
+ & \vdots\\
+r^{k-1}\bmod(r^{k}-1) & =r^{k-1}\\
+r^{k}\bmod(r^{k}-1) & =1=r^{0}\\
+ & \vdots\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Nun erhält man aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+
+\end_inset 
+
+ durch Multiplikation mit 
+\begin_inset Formula $r^{-1}$
+\end_inset 
+
+ auch die Berechnungsvorschrift für das inverse Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+r^{-1}=r^{k-1}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Nach dem Satz von 
+\noun on 
+Lagrange
+\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+
+\end_inset 
+
+
+\noun default 
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_group_def}
+
+\end_inset 
+
+) ist die Ordnung der von 
+\begin_inset Formula $r$
+\end_inset 
+
+ erzeugten Untergruppe 
+\begin_inset Formula $(\left\langle r\right\rangle ,\cdot)$
+\end_inset 
+
+ ein Teiler der Gruppenordnung 
+\begin_inset Formula $\left|\mathbb{F}_{q}^{*}\right|$
+\end_inset 
+
+.
+ Man kann die Ordnung der multiplikativen Gruppe 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ deshalb auch folgendermaßen ausdrücken\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{1.2}, \bibreftheorem{3}]{Bosch:1996}
+
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\mathbb{F}_{q}^{*}\right|=q-1=i\cdot k\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Das die Ordnung von 
+\begin_inset Formula $\left\langle r\right\rangle $
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $\left|\mathbb{F}_{q}^{*}\right|$
+\end_inset 
+
+ ist, kann auch mit Hilfe von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+
+\end_inset 
+
+ nachgewiesen werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+r^{q-1} & =r^{i\cdot k}=\left(r^{k}\right)^{i}=1^{i}=\underbrace{1\cdot1\cdot1\cdots1\cdot1}_{i\textrm{-mal}}=1\label{eq:algebra_ord_divider}\\
+r^{q} & =r\label{eq:algebra_ord_cyclic}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Anschaulich bedeutet dies, daß sich die Potenzen 
+\begin_inset Formula $r^{\nu}$
+\end_inset 
+
+ (mit 
+\begin_inset Formula $0\leq\nu\leq k-1$
+\end_inset 
+
+) immer nach 
+\begin_inset Formula $k$
+\end_inset 
+
+ Werten wiederholen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\underbrace{\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}}_{k\textrm{ Elemente}},\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}},\ldots,\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}}}_{q-1\textrm{ Elemente }(i\textrm{ Zyklen})}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
+ Zerlegung 
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+r^{q-1}-1=r^{i\cdot k}-1 & =\left(r^{k}-1\right)\cdot\left[r^{(i-1)k}+r^{(i-2)k}+\ldots+r^{2k}+r^{k}+1\right]\\
+ & =\left(r^{k}-1\right)\cdot\left[\left(r^{k}\right)^{i-1}+\left(r^{k}\right)^{i-2}+\ldots+\left(r^{k}\right)^{2}+\left(r^{k}\right)^{1}+\left(r^{k}\right)^{0}\right]\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+welche außerdem zeigt, daß 
+\begin_inset Formula $r^{k}-1$
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $r^{q-1}-1$
+\end_inset 
+
+ ist (gegebene Voraussetzug war, daß 
+\begin_inset Formula $k$
+\end_inset 
+
+ die Ordnung 
+\begin_inset Formula $q-1$
+\end_inset 
+
+ teilt).
+\layout Standard
+
+Eine für die praktische Anwendung von Restklassenkörpern (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in der Kodierungstheorie) sehr wichtige Schlußfolgerung aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_divider}
+
+\end_inset 
+
+, also 
+\begin_inset Formula $r^{q-1}\equiv1\pmod{m}$
+\end_inset 
+
+ist die, daß wegen 
+\begin_inset Formula $0\equiv m\pmod m$
+\end_inset 
+
+ das Modul 
+\begin_inset Formula $m$
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $r^{q-1}-1$
+\end_inset 
+
+ sein muß.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+r^{q-1}-1=h\cdot m\msp.\label{eq:algebra_ord_mod_factor}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Für den Körper
+\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_5$}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{Z}_{5}$
+\end_inset 
+
+, also dem Fall einer multiplikativen Gruppe der Ordnung 
+\begin_inset Formula $q-1=4$
+\end_inset 
+
+, gilt beispielsweise:
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{5}
+r_{1} & =1 & \left\langle r_{1}\right\rangle  & =\left\{ 1\right\}  & r_{1}^{k}-1 & =0 & r_{1}^{p-1}-1 & =0\\
+r_{2} & =2 & \left\langle r_{2}\right\rangle  & =\left\{ 1,2,4,3\right\}  & r_{2}^{k}-1 & =15\equiv0 & r_{2}^{p-1}-1 & =15\equiv0 & \pmod{5}\\
+r_{3} & =3 & \left\langle r_{3}\right\rangle  & =\left\{ 1,3,4,2\right\}  & r_{3}^{k}-1 & =80\equiv0 & r_{3}^{p-1}-1 & =80\equiv0 & \pmod{5}\\
+r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4\right\}  & r_{4}^{k}-1 & =15\equiv0 & r_{4}^{p-1}-1 & =255\equiv0 & \pmod{5}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \label{page:algebra_zeroes_split}
+
+\end_inset 
+
+In Vorbereitung des Abschnittes\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_extfield}
+
+\end_inset 
+
+ zu den Erweiterungskörpern wenden wir uns jetzt einer etwas anderen Sichtweise
+ auf die Elemente des endlichen Körpers 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ zu, nämlich der Betrachtung über Nullstellen
+\begin_inset LatexCommand \index{Nullstellen}
+
+\end_inset 
+
+.
+ Dazu gehen wir von dem speziellen Polynom 
+\begin_inset Formula $\varphi(x)=x^{q-1}-1$
+\end_inset 
+
+ mit 
+\begin_inset Formula $x,\varphi(x)\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+aus, welches die Nullstellen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Einheitswurzeln 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ haben soll.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\alpha^{q-1}-1=0\msp.\label{eq:algebra_zeroes_poly}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
+ 
+\begin_inset Formula $\varphi(x)$
+\end_inset 
+
+ genau 
+\begin_inset Formula $q-1$
+\end_inset 
+
+ Nullstellen haben muß.
+ Nach Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_divider}
+
+\end_inset 
+
+ wird diese Bedingung aber auch durch jedes einzelne Element aus 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ erfüllt.
+ Da deren Anzahl genau mit der Anzahl der Nullstellen übereinstimmt, kann
+ es sich bei den Elementen 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*},\msp q>1$
+\end_inset 
+
+ nur (und genau) um die 
+\begin_inset Formula $q-1$
+\end_inset 
+
+ Nullstellen von 
+\begin_inset Formula $\varphi(x)$
+\end_inset 
+
+ handeln\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibreftheorem{6.18}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Das mehrfache Nullstellen nicht vorhanden sind, kann man (in Verbindung
+ mit Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_zeroes_poly}
+
+\end_inset 
+
+) durch Ableitung von 
+\begin_inset Formula $\varphi(x)$
+\end_inset 
+
+ an den Stellen 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ nachprüfen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\left.\frac{d\varphi(x)}{dx}\right|_{x=\alpha}=\left.(q-1)x^{q-2}\right|_{x=\alpha}=(q-1)\alpha^{-1}\alpha^{q-1}=(q-1)\alpha^{-1}\neq0\]
+
+\end_inset 
+
+
+\layout Standard
+
+Mit diesen Erkenntnissen läßt sich für 
+\begin_inset Formula $\varphi(x)$
+\end_inset 
+
+ eine Linearfaktordarstellung auf Basis der Elemente 
+\begin_inset Formula $r$
+\end_inset 
+
+ angeben.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\varphi(x)=x^{q-1}-1=\prod_{r\in\mathbb{F}_{q}^{*}}\left[x-r\right]\label{eq:algebra_group_factors_split}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Nimmt man jetzt noch das Nullelement 
+\begin_inset Formula $r=0$
+\end_inset 
+
+ hinzu, dehnt also die Betrachtung von der multiplikativen Gruppe 
+\begin_inset Formula $\mathbb{F}_{q}^{*}=\mathbb{F}_{q}\setminus\{0\}$
+\end_inset 
+
+ auf alle Elemente des Körpers 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ aus, dann muß man das Element 
+\begin_inset Formula $r=0$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ den Linearfaktor 
+\begin_inset Formula $x-0$
+\end_inset 
+
+ mit einbeziehen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\psi(x)=x\cdot\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\label{eq:algebra_field_factors_split}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Ausmultiplizieren der rechten Seite, gefolgt von einem Koeffizientenvergleich
+ für 
+\begin_inset Formula $x^{0}$
+\end_inset 
+
+, führt noch zu der interessanten Äquivalenz
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+1+\prod_{r\in\mathbb{F}_{q}^{*}}r=0\msp.\label{eq:algebra_product_elements}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
+ 
+\begin_inset Formula $\mathbb{Z}_{p>2}$
+\end_inset 
+
+, so handelt es sich bei den Zahlen 
+\begin_inset Formula $r=1\ldots p-1$
+\end_inset 
+
+ um die 
+\begin_inset Formula $p-1$
+\end_inset 
+
+ Nullstellen 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ des Polynoms 
+\begin_inset Formula $\varphi(x)=x^{p-1}-1\pmod{p}$
+\end_inset 
+
+.
+ Anwendung von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_product_elements}
+
+\end_inset 
+
+ auf 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset 
+
+ ergibt folgerichtig zum Satz von 
+\noun on 
+Wilson
+\noun default 
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
+ bei 
+\begin_inset Formula $p$
+\end_inset 
+
+ wirklich um eine Primzahl handelt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+(p-1)!\equiv-1\equiv p-1\pmod{p}\label{eq:algebra_lemma_wilson}\end{equation}
+
+\end_inset 
+
+
+\layout Paragraph
+
+Zyklische Gruppe
+\begin_inset LatexCommand \index{Gruppe!zyklische}
+
+\end_inset 
+
+ in 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+
+\layout Standard
+
+Eine multiplikative Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+, bei der alle Potenzen
+\begin_inset LatexCommand \index{Element!Potenzierung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $g^{i}$
+\end_inset 
+
+ eines bestimmten Generatorelements
+\begin_inset LatexCommand \index{Element!Generator-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $g\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ genau alle Elemente 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ in irgendeiner Abfolge durchläuft,
+\layout Standard
+
+
+\begin_inset Formula \[
+\left\langle g\right\rangle :=\left\{ 1,g^{1},g^{2},g^{3},\ldots,g^{q-1}\right\} =\mathbb{F}_{q}^{*}\]
+
+\end_inset 
+
+
+\layout Standard
+
+bezeichnet man als zyklische Gruppe.
+ Die Ordnung dieses sogenannten primitiven
+\begin_inset LatexCommand \index{Element!primitives}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \label{page:algebra_cyclic_primitive}
+
+\end_inset 
+
+ (Generator-) Elements muß demzufolge gleich der Ordnung der Gruppe 
+\begin_inset Formula $\mathbb{F}^{*}$
+\end_inset 
+
+ sein
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Man kann mit Hilfe von 
+\noun on 
+Euler
+\noun default 
+'s Totient-Funktion nachweisen, daß es in einem 
+\noun on 
+Galois
+\noun default 
+-Körper immer mindestens ein erzeugendes (primitives) Element 
+\begin_inset Formula $g$
+\end_inset 
+
+ gibt.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+k=\left|g\right|=q-1\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der Index
+\begin_inset LatexCommand \index{Index}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ über 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset 
+
+ genau Eins
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Man spricht auch von einer maximalen Periode und meint damit 
+\begin_inset Formula $\left|g\right|=\left|\mathbb{F}_{q}^{*}\right|$
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Da auch das Generatorelement 
+\begin_inset Formula $g$
+\end_inset 
+
+ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_elem_root}
+
+\end_inset 
+
+ erfüllen muß, gilt äquivalent
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+g^{q-1}-1=0\msp.\label{eq:algebra_generator_cond}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Ähnliches trifft auf die Darstellung von 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset 
+
+ entsprechend Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_subgroup_elem_mod}
+
+\end_inset 
+
+ zu, welche sich folgendermaßen konkretisieren läßt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\mathbb{F}_{q}^{*}=\left\{ \left.g^{\nu}\bmod\left(g^{q-1}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wie schon früher festgestellt, beschränken sich für einen Körper
+\begin_inset LatexCommand \index{Körper!endlicher}
+
+\end_inset 
+
+ die erlaubten Module 
+\begin_inset Formula $m$
+\end_inset 
+
+ auf Primelemente, speziell wieder im Restklassenkörper 
+\begin_inset Formula $\mathbb{Z}_{m}^{*}$
+\end_inset 
+
+ also auf Primzahlen 
+\begin_inset Formula $p\in\mathbb{Z}$
+\end_inset 
+
+.
+ Da die Ordnung der multiplikativen Gruppe 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}=\mathbb{Z}_{p}\setminus\{0\}=\{1,2,3,\ldots,p-1\}$
+\end_inset 
+
+ genau 
+\begin_inset Formula $p-1$
+\end_inset 
+
+ ist, kann man mit Hilfe von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_generator_cond}
+
+\end_inset 
+
+ den kleinen Satz von 
+\noun on 
+Fermat
+\noun default 
+ formulieren.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+g^{p-1}\equiv1\pmod p,\quad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_extfield}
+
+\end_inset 
+
+Erweiterungskörper
+\begin_inset LatexCommand \index{Körper!Erweiterungs-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Erweiterungskörper}
+
+\end_inset 
+
+
+\layout Paragraph
+
+Vorbetrachtungen
+\layout Standard
+
+Ein Erweiterungskörper 
+\begin_inset Formula $M/K$
+\end_inset 
+
+ ist ein Körper 
+\begin_inset Formula $(M,+,\cdot)$
+\end_inset 
+
+, der einen anderen Körper 
+\begin_inset Formula $(K,+,\cdot)$
+\end_inset 
+
+ als Teilkörper
+\begin_inset LatexCommand \index{Körper!Teil-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Teilkörper}
+
+\end_inset 
+
+ enthält\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{6.5}]{Peterson:1972}
+
+\end_inset 
+
+.
+ Der Grad der Körpererweiterung
+\begin_inset LatexCommand \index{Körper!-erweiterung}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $M$
+\end_inset 
+
+ über 
+\begin_inset Formula $K$
+\end_inset 
+
+ ist die Dimension von 
+\begin_inset Formula $M$
+\end_inset 
+
+ als (sogenannter) 
+\begin_inset Formula $K$
+\end_inset 
+
+-Vektorraum und wird als 
+\begin_inset Formula $[M:K]$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\dim_{K}M$
+\end_inset 
+
+ geschrieben
+\begin_inset LatexCommand \index{Dimension}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Zum Beispiel erweitert 
+\begin_inset Formula $\mathbb{C}$
+\end_inset 
+
+ den Körper 
+\begin_inset Formula $\mathbb{R}$
+\end_inset 
+
+, wobei die Dimension von 
+\begin_inset Formula $\mathbb{C}$
+\end_inset 
+
+ als 
+\begin_inset Formula $\mathbb{R}$
+\end_inset 
+
+-Vektorraum genau 
+\begin_inset Formula $[\mathbb{C}:\mathbb{R}]=2$
+\end_inset 
+
+ ist.
+\end_inset 
+
+.
+ Jeder Vektor in 
+\begin_inset Formula $M$
+\end_inset 
+
+ besteht entsprechend der Definition des Vektorraumes
+\begin_inset LatexCommand \index{Vektorraum}
+
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+
+\end_inset 
+
+) aus jeweils 
+\begin_inset Formula $[M:K]$
+\end_inset 
+
+ Tupeln in 
+\begin_inset Formula $K$
+\end_inset 
+
+.
+ Bekannte Beispiele für Körpererweiterungen sind:
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+{[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension auf eine imaginäre Komponente;}\\
+{[\mathbb{R}:\mathbb{Q}]} & = & \infty,\textrm{ hier sind die rationalen Zahlen noch abzählbar.}\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Ausgehend von diesen (ersten) Vorbetrachtungen konstruieren wir jetzt einen
+ endlichen Polynomring
+\begin_inset LatexCommand \index{Ring!Polynom-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $(K[x],+,\cdot)$
+\end_inset 
+
+ auf dem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+.
+ 
+\begin_inset Formula \begin{align}
+K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\}\right|n\in\mathbb{N},\; a_{i}\in K\label{eq:algebra_residue_poly}\\
+f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Darin seinen die üblichen Polynomoperationen, wie Addition und Multiplikation
+ gültig, weshalb man auch von einem Vektorraum der Polynome in der Unbestimmten
+ 
+\begin_inset Formula $x$
+\end_inset 
+
+ mit Koeffizienten aus dem Körper 
+\begin_inset Formula $K$
+\end_inset 
+
+ spricht.
+ Ist der Leitkoeffizient 
+\begin_inset Formula $a_{n-1}=1$
+\end_inset 
+
+, dann wird das Polynom als normiert bezeichnet, 
+\begin_inset Formula $a_{n-1}x^{n-1}$
+\end_inset 
+
+ ist das sogenannte Leitmonom.
+\layout Standard
+
+Wird anschließend eine Restklassendivision
+\begin_inset LatexCommand \index{Restklassendivision}
+
+\end_inset 
+
+ dieser Polynome 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ durch ein Polynom
+\begin_inset LatexCommand \index{Generator!-polynom}
+
+\end_inset 
+
+ 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ mit Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ definiert, also 
+\begin_inset Formula $r(x)=f(x)\bmod m(x)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $r(x)\in K[x]/m(x)$
+\end_inset 
+
+, dann bildet die Menge der darin enthaltenen Restklassen wieder einen Restklass
+enring
+\begin_inset LatexCommand \index{Restklassenring}
+
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefchap{6}]{Peterson:1972}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\bibrefsec{2.5.4}]{Menezes:1992}
+
+\end_inset 
+
+:
+\layout Enumerate
+
+Da bei einer Polynomaddition die einzelen Koeffizienten unabhängig voneinander
+ (und jeder für sich) addiert werden und außerdem nach Voraussetzung immer
+ 
+\begin_inset Formula $\deg r(x)<\deg m(x)=n$
+\end_inset 
+
+ gilt, bildet 
+\begin_inset Formula $K[x]/m(x)$
+\end_inset 
+
+ eine additive 
+\noun on 
+Abel
+\noun default 
+'sche Gruppe.
+\begin_deeper 
+\layout Enumerate
+
+Das Assoziativgesetz gilt: 
+\begin_inset Formula $r(x)+\left[g(x)+h(x)\right]=\left[r(x)+g(x)\right]+h(x)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $r(x),g(x),h(x)\in K[x]/m(x)$
+\end_inset 
+
+.
+\layout Enumerate
+
+Das neutrale Element 
+\begin_inset Formula $e_{(+)}=0\in K\left[x\right]/m(x)$
+\end_inset 
+
+ mit der Beziehung 
+\begin_inset Formula $r(x)+e_{(+)}=r(x)$
+\end_inset 
+
+ ist das Nullpolynom.
+\layout Enumerate
+
+Ein additiv inverses Element
+\begin_inset LatexCommand \index{Element!inverses}
+
+\end_inset 
+
+ 
+\begin_inset Formula $-r\left(x\right)\in K\left[x\right]/m(x)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $r\left(x\right)+\left[-r(x)\right]=0$
+\end_inset 
+
+ ist vorhanden.
+ Es ergibt sich aus den inversen Elementen der Koeffizienten 
+\begin_inset Formula $a_{\nu}\in K$
+\end_inset 
+
+ zu 
+\begin_inset Formula $-r(x)=\sum_{\nu=0}^{n-1}-a_{\nu}x^{\nu}=-\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}$
+\end_inset 
+
+.
+\end_deeper 
+\layout Enumerate
+
+
+\begin_inset Formula $(K[x]/m(x),\cdot)$
+\end_inset 
+
+ ist eine multiplikative Halbgruppe
+\begin_inset LatexCommand \index{Halbgruppe}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gruppe!Halb-}
+
+\end_inset 
+
+, denn:
+\begin_deeper 
+\layout Enumerate
+
+Aufgrund der Modulo-Reduktion ist 
+\begin_inset Formula $(K[x]/m(x),\cdot)$
+\end_inset 
+
+ abgeschlossen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ wenn 
+\begin_inset Formula $r(x),g(x)\in K[x]/m(x)$
+\end_inset 
+
+ angenommen wird, dann gilt für die Multiplikation 
+\begin_inset Formula $r(x)\cdot g(x)\equiv h(x)\pmod{m(x)}$
+\end_inset 
+
+ gleichfalls 
+\begin_inset Formula $h(x)\in K[x]/m(x)$
+\end_inset 
+
+.
+\layout Enumerate
+
+Auch das Assoziativgesetz 
+\begin_inset Formula $r(x)\cdot\left[g(x)\cdot h(x)\right]=\left[r(x)\cdot g(x)\right]\cdot h(x)$
+\end_inset 
+
+ ist in einem Restklassenring von Polynomen erfüllt.
+\end_deeper 
+\layout Enumerate
+
+Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
+ mit Polynomoperationen zu schlußfolgern, daß das Distributivgesetz
+\begin_inset LatexCommand \index{Distributivgesetz}
+
+\end_inset 
+
+ ebenfalls gilt: 
+\begin_inset Formula $r(x)\cdot\left[g(x)+h(x)\right]=r(x)g(x)+r(x)h(x)$
+\end_inset 
+
+.
+\layout Paragraph
+
+Endlicher Erweiterungskörper
+\layout Standard
+
+Der Übergang zu einem Körper wird möglich, wenn 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ ein Primelement
+\begin_inset LatexCommand \index{Element!Prim-}
+
+\end_inset 
+
+ in Bezug auf die Menge der Polynome 
+\begin_inset Formula $K[x]$
+\end_inset 
+
+ ist, es sich also um ein (sogenanntes) irreduzibles
+\begin_inset LatexCommand \index{Polynom!irreduzibles}
+
+\end_inset 
+
+ Polynom handelt.
+ Ein solches Polynom ist dadurch gekennzeichnet, daß es nicht weiter in
+ Teilpolynome mit Koeffizienten aus 
+\begin_inset Formula $K$
+\end_inset 
+
+ reduzierbar ist
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Ausführliche Betrachtungen zu irreduziblen und primitiven Polynomen sind
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{4.5}]{Menezes:1992}
+
+\end_inset 
+
+, Tabellen irreduzibler Polynome in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefapp{C}]{Peterson:1972}
+
+\end_inset 
+
+ zu finden.
+\end_inset 
+
+.
+\layout Standard
+
+Es sei nun 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ ein Restklassenpolynom mit Koeffizienten 
+\begin_inset Formula $a$
+\end_inset 
+
+ aus dem endlichen Grundkörper
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Häufig handelt es sich bei dem (hier mit 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset 
+
+ bezeichneten) Grundkörper um 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+.
+\end_inset 
+
+ 
+\begin_inset Formula $K:=\mathbb{Z}_{p}$
+\end_inset 
+
+ und 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ vom Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+.
+ Dann handelt es sich bei 
+\begin_inset Formula $\mathbb{Z}_{p}[x]/m(x)$
+\end_inset 
+
+ um einen endlichen Körper mit 
+\begin_inset Formula $q=p^{n}$
+\end_inset 
+
+ Elementen (Polynomen)\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{3.8}]{Bosch:1996}
+
+\end_inset 
+
+.
+ Man spricht auch von einem Vektorraum
+\begin_inset LatexCommand \index{Vektorraum}
+
+\end_inset 
+
+ 
+\begin_inset Formula $V$
+\end_inset 
+
+ der Dimension 
+\begin_inset Formula $n$
+\end_inset 
+
+ über 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+, denn auf diese Weise wird (im Sinne von Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+
+\end_inset 
+
+) jedem Vektor 
+\begin_inset Formula $\mathbf{v}=(v_{1},v_{2},v_{3},\ldots,v_{n})^{T}$
+\end_inset 
+
+ ein Polynom 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ vom Grad 
+\begin_inset Formula $n-1$
+\end_inset 
+
+ zugeordnet.
+ Es handelt sich folglich nur um eine andere Darstellung der 
+\begin_inset Formula $n$
+\end_inset 
+
+ Tupel des Vektors 
+\begin_inset Formula $\mathbf{v}$
+\end_inset 
+
+ in der Art 
+\begin_inset Formula $a_{0}=v_{1},a_{1}=v_{2},\ldots,a_{n-1}=v_{n}$
+\end_inset 
+
+.
+ Die Polynome 
+\begin_inset Formula $x^{0},x^{1},x^{2},\ldots,x^{n-2},x^{n-1}$
+\end_inset 
+
+ bilden demzufolge die Basis des Vektorraumes 
+\begin_inset Formula $V$
+\end_inset 
+
+ über 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+.
+ Entsprechend ist die Dimension des Erweiterungskörpers 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ über dem Grundkörper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+ genau 
+\begin_inset Formula $\left[\mathbb{F}_{q}:\mathbb{Z}_{p}\right]=n$
+\end_inset 
+
+.
+\layout Standard
+
+Ein Erweiterungskörper schafft somit die Möglichkeit, daß auch Potenzen
+ von Primelementen noch als Körperordnung zulässig sind.
+ Die entsprechende Notation für einen solchen Körper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ ist deshalb auch 
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
+\end_inset 
+
+ oder 
+\begin_inset Formula $\mathbb{F}_{p}^{n}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\GF\left(q^{n}\right)$
+\end_inset 
+
+.
+\layout Standard
+
+Mit diesen Vorbemerkungen lassen sich alle Aussagen zu Restklassenkörpern,
+ wie sie in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_residue_field}
+
+\end_inset 
+
+ allgemein formuliert wurden, auf den Erweiterungskörper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ anwenden:
+\layout Enumerate
+
+Das Modul
+\begin_inset LatexCommand \index{Modul}
+
+\end_inset 
+
+ 
+\begin_inset Formula $m$
+\end_inset 
+
+ (von Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_field}
+
+\end_inset 
+
+) wird nun als das irreduzible Polynom 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ interpretiert.
+\layout Enumerate
+
+Die Restklassendivision
+\begin_inset LatexCommand \index{Restklassendivision}
+
+\end_inset 
+
+ ist definiert als 
+\begin_inset Formula $r(x)\equiv f(x)\bmod{m(x)}$
+\end_inset 
+
+, was grundsätzlich immer zu einem Grad kleiner als 
+\begin_inset Formula $n$
+\end_inset 
+
+ für 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ führt.
+ Die Kennzeichung der zu 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ gehörenden Restklasse
+\begin_inset LatexCommand \index{Restklasse}
+
+\end_inset 
+
+ erfolgt wie gewohnt mit 
+\begin_inset Formula $\res{r(x)}{m(x)}$
+\end_inset 
+
+, wird meistens jedoch weggelassen.
+ Das Element 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ steht also auch hier wieder als Restklassenvertreter aller Polynome 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+, welche die Bedingung 
+\begin_inset Formula $f(x)=s(x)m(x)+r(x)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\deg r(x)<\deg m(x)$
+\end_inset 
+
+ erfüllen.
+\layout Enumerate
+
+Das Nullelement ist das Nullpolynom
+\begin_inset LatexCommand \index{Polynom!Null-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $r(x)=0\pmod{m(x)}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ dessen Restklasse 
+\begin_inset Formula $\res{0}{m(x)}$
+\end_inset 
+
+, das Einselement das Einheitspolynom
+\begin_inset LatexCommand \index{Polynom!Einheits-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $x^{0}=1$
+\end_inset 
+
+.
+\layout Enumerate
+
+Addition und Multiplikation (von Polynomen) in 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ sind wohldefiniert und abgeschlossen, die ensprechenden Gruppen 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mathbb{F}_{q}^{+}$
+\end_inset 
+
+ also existent.
+\layout Enumerate
+
+Die Anzahl der Elemente 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ im Restklassenkörper 
+\begin_inset Formula $\mathbb{F}_{q}:=\mathbb{Z}_{p}[x]/m(x)$
+\end_inset 
+
+ ist aufgrund der Anzahl von möglichen Koeffizientenkombinationen 
+\begin_inset Formula $p^{n}$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $\left|\mathbb{F}_{q}\right|=p^{n}$
+\end_inset 
+
+.
+ Bei 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ handelt es sich folglich um ein 
+\begin_inset Formula $\GF\left(p^{n}\right)$
+\end_inset 
+
+, wobei dessen multiplikative Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ die Ordnung 
+\begin_inset Formula $p^{n}-1$
+\end_inset 
+
+ hat
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Das Nullelement muß man wie gewohnt wieder ausschließen.
+\end_inset 
+
+.
+\layout Enumerate
+
+
+\begin_inset LatexCommand \label{enum:algebra_extfield_gen}
+
+\end_inset 
+
+Jedes Element 
+\begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ hat eine Ordnung
+\begin_inset LatexCommand \index{Ordnung}
+
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Periode
+\begin_inset LatexCommand \index{Periode}
+
+\end_inset 
+
+ 
+\begin_inset Formula $k=\left|\left\langle r(x)\right\rangle \right|$
+\end_inset 
+
+, welche sich aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+
+\end_inset 
+
+ ableitet:
+\newline 
+
+\begin_inset Formula \[
+\left[r(x)\right]^{k}-1\equiv0\pmod m(x)\msp.\]
+
+\end_inset 
+
+Nach dem Satz von 
+\noun on 
+Lagrange
+\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+
+\end_inset 
+
+
+\noun default 
+ teilt die Ordnung 
+\begin_inset Formula $k$
+\end_inset 
+
+ des Elements wieder die der multiplikativen Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $q-1=p^{n}-1=i\cdot k$
+\end_inset 
+
+ und demzufolge ist
+\newline 
+
+\begin_inset Formula \begin{equation}
+\left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\msp.\label{eq:algebra_extfield_zeroes_base}\end{equation}
+
+\end_inset 
+
+
+\layout Enumerate
+
+Jedes erzeugende (primitive) Element
+\begin_inset LatexCommand \index{Element!primitives}
+
+\end_inset 
+
+ 
+\begin_inset Formula $g(x)$
+\end_inset 
+
+ von 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ erfüllt die Bedingung der maximalen Zykluslänge
+\begin_inset LatexCommand \index{Periode!maximale}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zykluslänge}
+
+\end_inset 
+
+, hat also die Ordnung 
+\begin_inset Formula $\left|\left\langle g(x)\right\rangle \right|=p^{n}-1$
+\end_inset 
+
+.
+ Es ist damit geeignet, als Basiselement für die Erzeugung aller anderen
+ Elemente 
+\begin_inset Formula $r(x)\in\mathbb{F}_{q}$
+\end_inset 
+
+ verwendet zu werden.
+\layout Enumerate
+
+Aus Punkt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{enum:algebra_extfield_gen}
+
+\end_inset 
+
+ läßt sich (in Übereinstimmung mit Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_mod_factor}
+
+\end_inset 
+
+) schlußfolgern, daß für jedes Element 
+\begin_inset Formula $r(x)\in\mathbb{F}_{q}$
+\end_inset 
+
+ das Modul 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $\left[r(x)\right]^{q-1}-1$
+\end_inset 
+
+ ist, also die Zerlegung 
+\begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\cdot m(x)$
+\end_inset 
+
+ hat.
+ Setzt man insbesondere 
+\begin_inset Formula $r(x)=x$
+\end_inset 
+
+ als das kleinste Element (mit einem Grad größer als 
+\begin_inset Formula $0$
+\end_inset 
+
+) aus 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+, so erhält man die bekannten Beziehungen
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Welche auch die Äquivalenz 
+\begin_inset Formula $h(x)\cdot m(x)\equiv0\pmod{x^{q-1}-1}$
+\end_inset 
+
+ rechtfertigen.
+\end_inset 
+
+:
+\newline 
+
+\begin_inset Formula \begin{eqnarray}
+x^{q-1}-1 & = & h(x)\cdot m(x)\\
+x^{q-1}-1 & \equiv & 0\pmod{m(x)}\\
+x^{q} & \equiv & x\pmod{m(x)}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Paragraph
+
+Zerfällungskörper
+\begin_inset LatexCommand \index{Körper!Zerfällungs-}
+
+\end_inset 
+
+
+\layout Comment
+
+Siehe 
+\noun on 
+
+\begin_inset LatexCommand \htmlurl[Diskrete Mathematik]{file://~ralf/archiv/math/algebra/discrete_math_schnorr.pdf}
+
+\end_inset 
+
+
+\noun default 
+, Abschnitt\SpecialChar ~
+8.2 von Prof.
+ Dr.
+ 
+\noun on 
+C.P.\SpecialChar ~
+Schnorr 
+\layout Standard
+
+Nach dem Hauptsatz der elementaren Zahlentheorie kann man für jede natürliche
+ Zahl eine eindeutigen Primfaktorzerlegung der Form
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{1}^{n_{1}}\cdot p_{2}^{n_{2}}\cdot p_{3}^{n_{3}}\cdot\ldots\cdot p_{k}^{n_{k}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+finden.
+ Gleiches trifft auch für Polynome zu, nur daß es sich statt um Primzahlen
+ um irreduzible Polynome handelt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Von denen einige sogar primitiv sein können.
+\end_inset 
+
+.
+ Jedes dieser Polynome hat eine vom Grad abhängige Anzahl von Nullstellen
+ 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+, die entweder im Grundkörper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+ und/oder in einem Erweiterungskörper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ liegen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Betrachtung der Nullstellen ist typisch für die polynomiale Repräsentation
+ (im Gegensatz zur Normalbasisdarstellung
+\begin_inset LatexCommand \index{Normalbasis}
+
+\end_inset 
+
+) des Erweiterungskörpers.
+\end_inset 
+
+.
+\layout Standard
+
+Speziell das Polynom 
+\begin_inset Formula $\psi(x)=x^{q}-x$
+\end_inset 
+
+ mit 
+\begin_inset Formula $q=p^{n}$
+\end_inset 
+
+, dessen Linearfaktordarstellung wir schon im Zusammenhang mit der multiplikativ
+en Gruppe von endlichen Körpern betrachtet haben (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Seite\SpecialChar ~
+
+\begin_inset LatexCommand \pageref{page:algebra_zeroes_split}
+
+\end_inset 
+
+), ist in dieser Hinsicht von Bedeutung.
+ Es hat (da vom Grad 
+\begin_inset Formula $q=p^{n}$
+\end_inset 
+
+) genau 
+\begin_inset Formula $p^{n}$
+\end_inset 
+
+ Nullstellen 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+, von denen maximal 
+\begin_inset Formula $p=\left|\mathbb{Z}_{p}\right|$
+\end_inset 
+
+ im Grundkörper liegen können.
+ Alle anderen Nullstellen müssen deshalb aus dem Erweiterungskörper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ stammen.
+ In Verbindung mit der, auf dieser Grundlage möglichen Linearfaktorzerlegung
+ von 
+\begin_inset Formula $\psi(x)$
+\end_inset 
+
+, nennt man den Erweiterungskörper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ auch den kleinsten Körper über den 
+\begin_inset Formula $\psi(x)\in\mathbb{Z}_{p}[x]$
+\end_inset 
+
+ nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_group_factors_split}
+
+\end_inset 
+
+ vollständig in Linearfaktoren zerfällt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man sagt auch 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ sei ein Zerfällungskörper von 
+\begin_inset Formula $x^{q}-x$
+\end_inset 
+
+.
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ 
+\begin_inset LatexCommand \cite[\bibrefsec{4.5}]{Bosch:1996}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\psi(x)=x^{q}-x=x\cdot\varphi(x)=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wie eingangs erwähnt kann man 
+\begin_inset Formula $\varphi(x)=x^{q-1}-1$
+\end_inset 
+
+ nun in irreduzible Polynome 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ zerlegen,
+\layout Standard
+
+
+\begin_inset Formula \[
+\varphi(x)=\prod f(x),\qquad f(x)=\sum_{\nu=0}^{d}a_{\nu}x^{\nu}\]
+
+\end_inset 
+
+
+\layout Standard
+
+wobei jedem dieser Polynome abhängig von dessen Grad genau 
+\begin_inset Formula $d$
+\end_inset 
+
+ Nullstellen 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ zuzuordnen sind.
+\layout Standard
+
+Interessant ist nun, daß wenn man die Nullstelle 
+\begin_inset Formula $\alpha\neq0$
+\end_inset 
+
+ eines irreduziblen Polynoms 
+\begin_inset Formula $f(\alpha)=0$
+\end_inset 
+
+ kennt, die restlichen 
+\begin_inset Formula $d-1$
+\end_inset 
+
+ Nullstellen derselben Funktion 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ genau die Potenzen 
+\begin_inset Formula $\alpha^{p},\alpha^{p^{2}},\ldots,\alpha^{p^{d-2}},\alpha^{p^{d}}=\alpha$
+\end_inset 
+
+ sind.
+ Der (induktive) Beweis dieses Satzes geht von der Hilfsformel
+\layout Standard
+
+
+\begin_inset Formula \[
+(b+c)^{p}=\sum_{k=0}^{p}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}+\sum_{k=1}^{p-1}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}\]
+
+\end_inset 
+
+
+\layout Standard
+
+aus, welche berücksichtigt, daß mit 
+\begin_inset Formula $b,c\in\mathbb{Z}_{p}$
+\end_inset 
+
+ der Binomialkoeffizient 
+\begin_inset Formula $\binom{p}{k}=\frac{p!}{k!(p-k)!}$
+\end_inset 
+
+ für 
+\begin_inset Formula $k\neq0,p$
+\end_inset 
+
+ immer durch 
+\begin_inset Formula $p$
+\end_inset 
+
+ teilbar ist und demzufolge 
+\begin_inset Formula $\binom{p}{k}\bmod p=0$
+\end_inset 
+
+ gilt.
+ Außerdem stützt er sich auf die Tatsache, daß im Grundkörper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+ jedes Element die Relation 
+\begin_inset Formula $a^{p}=a$
+\end_inset 
+
+ erfüllt (siehe Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_cyclic}
+
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Formula \[
+f\left(\alpha^{p}\right)=\sum_{\nu=0}^{d}a_{\nu}\alpha^{\nu p}=\sum_{\nu=0}^{d}a_{\nu}^{p}\alpha^{\nu p}=\sum_{\nu=0}^{d}\left(a_{\nu}\alpha^{\nu}\right)^{p}=\left(\sum_{\nu=0}^{d}a_{\nu}\alpha^{\nu}\right)^{p}=\left[f(\alpha)\right]^{p}=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+Aus diesem Grund läßt sich für jedes der irreduziblen Polynome 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ und insbesondere auch 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ die folgende Linearfaktordarstellung angeben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Das irreduzible Polynom 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ wird auch Minimalpolynom
+\begin_inset LatexCommand \index{Minimalpolynom}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Polynom!Minimal-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Minimalfunktion}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ über 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+ genannt.
+ Bei einer Minimalfunktion handelt es sich allgemein um ein normiertes Polynom
+ 
+\begin_inset Formula $f(x)\in\mathbb{Z}_{p}[x]$
+\end_inset 
+
+ 
+\emph on 
+kleinsten
+\emph default 
+ Grades, welches beim Einsetzen eines Elementes 
+\begin_inset Formula $\alpha\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ die Gleichung 
+\begin_inset Formula $f(\alpha)=0$
+\end_inset 
+
+ erfüllt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefsec{6.5}]{Peterson:1972}
+
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+f(x)=\prod_{\nu=0}^{d-1}\left(x-\alpha^{p^{\nu}}\right)\]
+
+\end_inset 
+
+
+\layout Paragraph
+
+Erweiterungskörper 
+\begin_inset Formula $\mathbb{Z}_{2^{n}}$
+\end_inset 
+
+
+\layout Standard
+
+Für eine Erweiterung des Primzahlenkörpers 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset 
+
+ auf 
+\begin_inset Formula $n$
+\end_inset 
+
+ Dimensionen ist ein irreduzibles Polynom 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ vom Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ notwendig.
+ Der dadurch entstehende Körper 
+\begin_inset Formula $\mathbb{Z}_{2^{n}}$
+\end_inset 
+
+ soll am Beispiel des Polynoms 
+\begin_inset Formula $m(x)=x^{2}+x+1$
+\end_inset 
+
+ mit Koeffizienten aus 
+\begin_inset Formula $\mathbb{Z}_{2}$
+\end_inset 
+
+ (zu den Rechenoperationen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Seite\SpecialChar ~
+
+\begin_inset LatexCommand \pageref{enum:algebra_mod2_operations}
+
+\end_inset 
+
+) jetzt kurz betrachtet werden.
+ Nach Darstellung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_residue_poly}
+
+\end_inset 
+
+ gehören genau 
+\begin_inset Formula $q=p^{n}=4$
+\end_inset 
+
+ Polynome zum Erweiterungskörper
+\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2^2$}
+
+\end_inset 
+
+ (
+\begin_inset Formula $p=2$
+\end_inset 
+
+, 
+\begin_inset Formula $n=2$
+\end_inset 
+
+), nämlich:
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+r_{0}(x) & =0 & r_{1}(x) & =1\\
+r_{2}(x) & =x & r_{3}(x) & =x+1\msp.\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Wie sich leicht feststellen läßt, ist 
+\begin_inset Formula $r_{3}(x)$
+\end_inset 
+
+ das erzeugende Element
+\begin_inset LatexCommand \index{Element!erzeugendes}
+
+\end_inset 
+
+ der multiplikativen Gruppe 
+\begin_inset Formula $\left\{ r_{1}(x),r_{2}(x),r_{3}(x)\right\} $
+\end_inset 
+
+, denn die anderen Elemente ergeben sich als Potenzen 
+\begin_inset Formula $r_{3}^{\nu}(x)\bmod m(x)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+(x+1)^{0} & =1\\
+(x+1)^{1} & =x+1\\
+(x+1)^{2} & =x^{2}+x+x+1=x^{2}+1\equiv x\pmod{x^{2}+x+1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Außerdem sind alle Elemente (abgesehen von 
+\begin_inset Formula $r_{0}(x)$
+\end_inset 
+
+) wirklich Nullstellen des Polynoms 
+\begin_inset Formula $x^{q-1}-1=x^{3}-1=m(x)\cdot(x-1)$
+\end_inset 
+
+.
+ Auch gut erkennen läßt sich, daß 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ für jedes Element 
+\begin_inset Formula $r(x)$
+\end_inset 
+
+ ein Teiler von 
+\begin_inset Formula $\left[r(x)\right]^{q-1}-1$
+\end_inset 
+
+ ist.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\left[r_{1}(x)\right]^{3}-1 & =0\\
+\left[r_{2}(x)\right]^{3}-1 & =x^{3}-1=(x-1)\cdot\left(x^{2}+x+1\right)\equiv0\pmod{x^{2}+x+1}\\
+\left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\cdot\left(x^{2}+x+1\right)\equiv0\pmod{x^{2}+x+1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Äquivalent dazu ist das Produkt aller Elemente (konform zu Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_product_elements}
+
+\end_inset 
+
+) auch genau das neutrale Element 
+\begin_inset Formula $e_{(\cdot)}$
+\end_inset 
+
+ der multiplikativen Gruppe
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Welches in der additiven Gruppe 
+\begin_inset Formula $(\mathbb{Z}_{2},\cdot)$
+\end_inset 
+
+ gleich dem Inversen von 
+\begin_inset Formula $1$
+\end_inset 
+
+ ist, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ zur Erinnerung 
+\begin_inset Formula $-1\equiv+1$
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2}+x+1}\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+begin{latexonly}
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Vertikale Zellen (siehe folgende Tabelle) sind bei der HTML-Umwandlung nicht
+ möglich.
+ Deshalb wird dieser Teil einfach ausgeschlossen!
+\end_inset 
+
+
+\layout Subsection
+
+Zusammenfassung
+\layout Standard
+
+Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \ref{tab:algebraic_structures}
+
+\end_inset 
+
+ gibt einen Überblick zu den verschiedenen algebraischen Grundstrukturen
+ und den zugehörigen Existenzbedingungen.
+\layout Standard
+
+
+\begin_inset Float table
+placement H
+wide false
+collapsed false
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{tab:algebraic_structures}
+
+\end_inset 
+
+Eigenschaften algebraischer Strukturen
+\begin_inset LatexCommand \index{Gruppe!additive}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gruppe!Halb-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Monoid}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Ring}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Körper!Schief-}
+
+\end_inset 
+
+
+\layout Standard
+\align center 
+
+\begin_inset  Tabular
+<lyxtabular version="3" rows="10" columns="10">
+<features>
+<column alignment="left" valignment="top" leftline="true" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" leftline="true" width="0(null)">
+<column alignment="center" valignment="top" leftline="true" width="0(null)">
+<column alignment="center" valignment="top" leftline="true" width="0(null)">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" rightline="true" width="0(null)">
+<column alignment="center" valignment="top" rightline="true" width="0(null)">
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Addition
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Multiplikation
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+assoziativ
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+kommutativ
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+neutral
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+invers
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+assoziativ
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+kommutativ
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+neutral
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+invers
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+distributiv
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Additive Gruppe
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+(Multiplikative) Halbgruppe
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Monoid
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Multiplikative Gruppe
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+(Multiplikative) 
+\noun on 
+Abel
+\noun default 
+'sche Gruppe
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Ring
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Schiefkörper
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+Körper
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\layout Standard
+
+
+\begin_inset Formula $\times$
+\end_inset 
+
+
+\end_inset 
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+end{latexonly}
+\end_inset 
+
+
+\layout Subsection
+
+Notation
+\begin_inset LatexCommand \index{Notation}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Symbole}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+begin{multicols}{2}
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\forall$
+\end_inset 
+
+ Für alle 
+\begin_inset Formula $\ldots$
+\end_inset 
+
+ (Allquantor)
+\layout Description
+
+
+\begin_inset Formula $\left\langle a\right\rangle $
+\end_inset 
+
+ Vom Element 
+\begin_inset Formula $a$
+\end_inset 
+
+ erzeugte Untergruppe
+\layout Description
+
+
+\begin_inset Formula $\left|a\right|$
+\end_inset 
+
+ Ordnung des Elements 
+\begin_inset Formula $a$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\{ a_{1},a_{2},a_{3},\ldots\}$
+\end_inset 
+
+ Menge von Elementen 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{C}$
+\end_inset 
+
+ Komplexe Zahlen
+\layout Description
+
+
+\begin_inset Formula $\deg{\left[h(x)\right]}$
+\end_inset 
+
+ Grad des Polynoms 
+\begin_inset Formula $h(x)$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\dim(V)$
+\end_inset 
+
+ Dimension des Vektorraums 
+\begin_inset Formula $V$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $(G,\diamond)$
+\end_inset 
+
+ Gruppe mit Operation 
+\begin_inset Formula $\diamond$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\left|G\right|$
+\end_inset 
+
+ Ordnung der Gruppe 
+\begin_inset Formula $G$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula ${\# G}$
+\end_inset 
+
+ Ordnung der Gruppe 
+\begin_inset Formula $G$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\GF(q)$
+\end_inset 
+
+ Galois-Field mit 
+\begin_inset Formula $q$
+\end_inset 
+
+ Elementen
+\layout Description
+
+
+\begin_inset Formula $\left|G:H\right|$
+\end_inset 
+
+ Index der Gruppe 
+\begin_inset Formula $G$
+\end_inset 
+
+ über 
+\begin_inset Formula $H$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula ${[M:K]}$
+\end_inset 
+
+ Grad der Körpererweiterung von 
+\begin_inset Formula $M$
+\end_inset 
+
+ über 
+\begin_inset Formula $K$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{F}^{*}$
+\end_inset 
+
+ Multiplikative Gruppe des Körpers 
+\begin_inset Formula $\mathbb{F}$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+ Endlicher Körper mit 
+\begin_inset Formula $q$
+\end_inset 
+
+ Elementen
+\layout Description
+
+
+\begin_inset Formula $K$
+\end_inset 
+
+ Körper
+\layout Description
+
+
+\begin_inset Formula $\mathbb{N}$
+\end_inset 
+
+ Natürliche Zahlen
+\layout Description
+
+
+\begin_inset Formula $\ord(G)$
+\end_inset 
+
+ Ordnung der Gruppe 
+\begin_inset Formula $G$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $p$
+\end_inset 
+
+ Primzahl
+\layout Description
+
+
+\begin_inset Formula $\mathbb{P}$
+\end_inset 
+
+ Primzahlen
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Q}$
+\end_inset 
+
+ Rationale Zahlen
+\layout Description
+
+
+\begin_inset Formula $\res{r}{n}$
+\end_inset 
+
+ Restklasse zum Modul 
+\begin_inset Formula $n$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{R}$
+\end_inset 
+
+ Reelle Zahlen
+\layout Description
+
+
+\begin_inset Formula $R(+,\cdot)$
+\end_inset 
+
+ Ring
+\layout Description
+
+
+\begin_inset Formula $R^{*}$
+\end_inset 
+
+ Multiplikative Gruppe des Ringes 
+\begin_inset Formula $R(+,\cdot)$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $(R_{m},+,\cdot)$
+\end_inset 
+
+ Restklassenring
+\layout Description
+
+
+\begin_inset Formula $R{[x]}$
+\end_inset 
+
+ Polynomring in der Variablen 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset 
+
+ Ganze Zahlen
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Z}_{m}$
+\end_inset 
+
+ Restklassenring der ganzen Zahlen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die ganzen Zahlen von 
+\begin_inset Formula $0$
+\end_inset 
+
+ bis 
+\begin_inset Formula $m-1$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ modulo 
+\begin_inset Formula $m$
+\end_inset 
+
+.
+\end_inset 
+
+ 
+\begin_inset Formula $\mod m$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+ Primzahlenkörper 
+\begin_inset Formula $\mathbb{Z}/p\mathbb{Z}$
+\end_inset 
+
+, 
+\begin_inset Formula $p\in\mathbb{P}$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset 
+
+ Multiplikative Gruppe des Körpers 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $\mathbb{Z}/m\mathbb{Z}$
+\end_inset 
+
+ Restklassenring der ganzen Zahlen 
+\begin_inset Formula $\mod m$
+\end_inset 
+
+
+\layout Description
+
+
+\begin_inset Formula $V$
+\end_inset 
+
+ Vektorraum
+\layout Description
+
+
+\begin_inset Formula $\mathbf{v}$
+\end_inset 
+
+ Vektor
+\layout Description
+
+
+\begin_inset Formula $\mathbf{v}^{T}$
+\end_inset 
+
+ Transponierter Vektor
+\layout Description
+
+
+\begin_inset Formula $\diamond$
+\end_inset 
+
+ Operation
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+end{multicols}
+\end_inset 
+
+
+\the_end
