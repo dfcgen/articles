@@ -1,0 +1,221 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\begin_preamble
+\input{text-inc}
+\input{math-inc}
+\input{electr-inc}
+\input{pdf-inc}
+
+%% \usepackage{showlabels}
+%% \usepackage{showidx}
+%% \usepackage{bibcheck}
+%% \usepackage{refcheck}
+%% \usepackage{import}
+
+\usepackage{multicol}
+\usepackage{html}
+\end_preamble
+\options intlimits,reqno
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\float_placement htbp
+\paperfontsize default
+\spacing onehalf 
+\papersize a4paper
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Comment
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Normally this file is provided for HTML conversion only.
+ If used for PDF generation there will be some unresolved references to
+ labels defined in the elliptic integrals/functions chapters (elliptic.lyx,
+ zolotarev.lyx, cheby.lyx).
+ This part is not included here, but referenced by external labels (see
+ 
+\backslash 
+externallables commands below).
+\layout Standard
+
+Version: $Id: stdfilter_article.lyx,v 1.1 2004-09-28 13:53:01 ralf Exp $
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+%% HTML setup
+\layout Standard
+
+\backslash 
+begin{htmlonly}
+\newline 
+
+\newline 
+    
+\backslash 
+externallabels{../elliptic}{../elliptic/html/labels.pl}
+\newline 
+    
+\backslash 
+externallabels{../cheby}{../cheby/html/labels.pl}
+\newline 
+
+\newline 
+    
+\backslash 
+originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
+\newline 
+    
+\backslash 
+htmlmeta{<META HTTP-EQUIV="content-language" CONTENT="de">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="robots" CONTENT="index, follow">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="Algebra - Strukturen">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Tschebyscheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="classification" LANG ="de" CONTENT="Elektrotechnik, Signalverarbeitung">}
+\newline 
+    
+\backslash 
+germanTeX
+\newline 
+
+\newline 
+    
+\backslash 
+renewenvironment{algorithm}[1][htbp] 
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
+\backslash 
+end{rawhtml} }
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <br> <hr> <br> <br> 
+\backslash 
+end{rawhtml} }
+\newline 
+
+\newline 
+
+\backslash 
+end{htmlonly}
+\end_inset 
+
+
+\layout Title
+
+Analoge Standard-Filter
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{goal.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{butterworth.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{cauer.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Section
+
+Notation
+\layout Standard
+
+
+\begin_inset Include \input{notation.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp,computers,crypto,math}
+
+\end_inset 
+
+
+\the_end
