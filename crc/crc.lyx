@@ -1,0 +1,1156 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\begin_preamble
+\input{text-inc}
+\input{math-inc}
+
+%% \usepackage{chapterbib}
+
+\DeclareMathOperator{\crc}{CRC}
+
+\newcommand{\tabx} [1] {\ding{#1}}
+%% \newcommand{\res} [2] {\overline{#1}} % residue class
+%% \newcommand{\res} [2] {{\left\{ {#1} \right\} }_{#2}} % residue class
+\newcommand{\res} [2] {{\left[ {#1} \right] }_{#2}} % residue class
+\end_preamble
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\float_placement htbp
+\paperfontsize default
+\spacing single 
+\papersize a4paper
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+
+\layout Title
+
+Zyklische Kodes & CRC
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\backslash 
+
+\end_inset 
+
+ Ralf Hoppe
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Section
+
+Einführung
+\layout Standard
+
+Oft besteht die Forderung den Verlust (oder auch die Manipulation) von Daten
+ mit relativ einfachen Mitteln nachzuweisen.
+ Einer der häufigsten Anwendungsfälle ist die Datenübertragung, bei welcher
+ die Informationen meist blockweise strukturiert sind.
+ Ein bevorzugtes Verfahren für diese Aufgabe ist das sogenannte CRC (Cyclic
+ Redundancy Check), welches 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ als 
+\emph on 
+Frame Check Sequence
+\emph default 
+ (FCS) oder 
+\emph on 
+Error Detection Code
+\emph default 
+ (FCS) angewendet wird.
+\layout Standard
+
+Das CRC-Verfahren ist eine relativ leistungsfähige (als auch einfach zu
+ implementierende) Methode zur Fehlererkennung.
+ Grundlage bilden sogenannte zyklische Kodes (ein Spezialfall der linearen
+ Blockkodes), welche aus theoretischer Sicht mittlerweile hinreichend untersucht
+ sind.
+ Dieser Beitrag wird die wesentlichen Eigenschaften solcher Kodes präsentieren
+ sowie den Zusammenhang mit dem häufig zitierten Begriff 
+\emph on 
+CRC
+\emph default 
+ herstellen\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Born:Toolbox:1989}
+
+\end_inset 
+
+.
+\layout Section
+
+Grundlagen
+\layout Standard
+
+Eine grundlegende Vorbetrachtung für alle folgenden Ausführungen ist die,
+ daß man einem beliebigen Bitstring der Länge 
+\begin_inset Formula $n$
+\end_inset 
+
+ ein äquivalentes Polynom 
+\begin_inset Formula $P(x)=a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_{2}x^{2}+a_{1}x+a_{0}$
+\end_inset 
+
+ zuordnen kann.
+ Setzt man nun für 
+\begin_inset Formula $x$
+\end_inset 
+
+ Elemente eines Körpers 
+\begin_inset Formula $\mathbb{F}$
+\end_inset 
+
+ (im binären Fall 
+\begin_inset Formula $\mathbb{F}_{2}$
+\end_inset 
+
+) ein, so erhält man ein Polynom, daß auf dem Körper 
+\begin_inset Formula $\mathbb{F}_{2^{n}}$
+\end_inset 
+
+ definiert ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+In der Sprachweise der Mathematiker auch Galois-Feld 
+\begin_inset Formula $GF(2)$
+\end_inset 
+
+ genannt: 
+\begin_inset Formula $P(x)\in GF(2)$
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Die Koeffizienten 
+\begin_inset Formula $a_{0}\ldots a_{n-1}$
+\end_inset 
+
+ sind ebenfalls Elemente des Körpers 
+\begin_inset Formula $\mathbb{F}_{2}$
+\end_inset 
+
+ und nehmen deshalb nur die Werte 
+\begin_inset Formula $0$
+\end_inset 
+
+ oder 
+\begin_inset Formula $1$
+\end_inset 
+
+ an.
+\layout Standard
+
+Ein solches Polynom heißt irreduzibel über 
+\begin_inset Formula $\mathbb{F}_{2^{n}}$
+\end_inset 
+
+, wenn es sich nicht als Produkt von Polynomen kleineren Grades darstellen
+ läßt.
+\layout Standard
+
+Bei Berechnungen muß im Körper 
+\begin_inset Formula $\mathbb{F}_{2}$
+\end_inset 
+
+ muß in diesem Zusamenhang immer berücksichtigt werden, daß statt der üblichen
+ Addition eine modulo-2 Addition (entspricht Exklusiv-Oder) ausgeführt wird.
+\layout Section
+
+Erzeugung zyklischer Kodes
+\layout Standard
+
+Zyklische Kodes gehören zu den linearen Block-Kodes.
+ Sie haben die bemerkenswerte Eigenschaft, daß man ausgehend von einem bekannten
+ Kodewort alle anderen durch zyklische Verschiebung und Addition bestimmen
+ kann\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Sweeney:1992}
+
+\end_inset 
+
+.
+ Bezeichnet man mit 
+\begin_inset Formula $n$
+\end_inset 
+
+ die Länge (in Bit) eines Kodewortes, 
+\layout Standard
+
+Der zu sichernde Datenblock mit einer Länge von 
+\begin_inset Formula $n$
+\end_inset 
+
+ Bit wird zur Bildung eines zyklischen Kodes als erstes um 
+\begin_inset Formula $k$
+\end_inset 
+
+\SpecialChar ~
+Bit nach links verschoben.
+ Dies bedeutet für das zugeordnete Polynom 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ eine Multiplikation mit 
+\begin_inset Formula $x^{k}$
+\end_inset 
+
+.
+ Danach wird 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ durch ein sogenanntes Generatorpolynom 
+\begin_inset Formula $G(x)=g_{k}x^{k}+g_{k-1}x^{k-1}+\ldots+g_{2}x^{2}+g_{1}x+g_{0}$
+\end_inset 
+
+ vom Grad 
+\begin_inset Formula $k$
+\end_inset 
+
+ im Körper 
+\begin_inset Formula $\GF(2)$
+\end_inset 
+
+ dividiert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auch binäre Polynomarithmetik genannt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\frac{x^{k}M(x)}{G(x)}=F(x)+\frac{R(x)}{G(x)}\label{eq:crc_base_div}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Der dabei entstehende Divisionsrest
+\layout Standard
+
+
+\begin_inset Formula \[
+R(x)=\crc\{ M(x)\}=x^{k}M(x)\bmod{G(x)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+dessen Gard 
+\begin_inset Formula $k-1$
+\end_inset 
+
+ ist, wird zur Kontrolle des Informationsblocks 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ verwendet
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\begin_inset Formula $F(x)$
+\end_inset 
+
+ als ganzer Anteil, der bei der Division entsteht, ist für das Prüfverfahren
+ nicht von Bedeutung.
+\end_inset 
+
+.
+ Dazu wird der entstandene CRC-Rest 
+\begin_inset Formula $R(x)$
+\end_inset 
+
+ einfach an den Datenblock 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ angehängt und so ein (gültiges) Kodewort 
+\begin_inset Formula $C(x)$
+\end_inset 
+
+ des zu 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ gehörigen zyklischen Kodes gebildet.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+C(x)=x^{k}M(x)+R(x)\label{eq:crc_code_word}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ definiert also alle Kodeworte des zugeordneten Alphabets eindeutig und
+ wird deshalb auch das erzeugende Polynom bzw.
+ Generatorpolynom genannt.
+\layout Section
+
+Verifikation
+\layout Subsection
+
+Prinzip
+\layout Standard
+
+Das Prinzip der Fehlererkennung besteht nun darin, daß sich jedes gültige
+ Kodewort als 
+\begin_inset Formula $C(x)=F(x)G(x)$
+\end_inset 
+
+ darstellen läßt, also ohne Rest durch 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ teilbar sein muß.
+ Ein Nachweis dieser Eigenschaft ist recht schnell durch Kombination der
+ Gleichungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_base_div}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_code_word}
+
+\end_inset 
+
+ erbracht, wenn man die spezielle Modulo-2 Addition 
+\begin_inset Formula $H+H=0$
+\end_inset 
+
+ berücksichtigt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+C(x) & =x^{k}M(x)+R(x)\\
+ & =F(x)G(x)+R(x)+R(x)\\
+ & =F(x)G(x)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Teilbarkeit des Kodewortes 
+\begin_inset Formula $C(x)$
+\end_inset 
+
+ durch das Generatorpolynom 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ kann somit als Prüfkriterium für die Fehlerfreiheit der Übertragung verwendet
+ werden.
+\layout Standard
+
+
+\begin_inset Formula \[
+C(x)\bmod G(x)=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wird im Fehlerfall 
+\begin_inset Formula $C(x)$
+\end_inset 
+
+ durch ein Fehlerpolynom 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ überlagert, dann ist die Summe mit hoher Wahrscheinlichkeit nicht mehr
+ ohne Rest durch 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ teilbar
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\begin_inset Formula $C(x)+E(x)$
+\end_inset 
+
+ gehört mit hoher Wahrscheinlichkeit nicht mehr zum Kodealphabet.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+[C(x)+E(x)]\bmod{G(x)}\neq0\label{eq:crc_err_cond}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+An dieser Stelle soll noch darauf hingeweisen sein, daß bei echten zyklischen
+ Kodes die Blocklänge 
+\begin_inset Formula $m=n+k$
+\end_inset 
+
+ nicht frei wählbar ist.
+ Statt dessen ist sie die kleinste Zahl 
+\begin_inset Formula $m$
+\end_inset 
+
+, für die 
+\begin_inset Formula $(x^{m}+1)\bmod G(x)=0$
+\end_inset 
+
+ gilt, also 
+\begin_inset Formula $x^{m}+1$
+\end_inset 
+
+ ohne Rest durch 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ teilbar ist.
+ 
+\begin_inset Formula $m$
+\end_inset 
+
+ ist also ein vom Generatorpolynom abhängiger Wert, der dann seinen Maximalwert
+ von 
+\begin_inset Formula $m=2^{k}-1$
+\end_inset 
+
+ erreicht, wenn 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ ein nicht weiter reduzierbares (also irreduzibles) Polynom ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+ Aus praktischen Grnden wird 
+\begin_inset Formula $m$
+\end_inset 
+
+ allerdings oft kleiner gewählt -- man nennt diese Kodes dann verkürzte
+ zyklische Kodes.
+ Sie besitzen die gleichen fehlererkennenden Eigenschaften wie echte zyklische
+ Kodes\SpecialChar ~
+
+\begin_inset LatexCommand \cite[8.10]{Peterson:1972}
+
+\end_inset 
+
+.
+ 
+\end_inset 
+
+.
+\layout Subsection
+
+Fehlererkennende Eigenschaften
+\layout Standard
+
+Da ja bekanntlich kein System ideal ist, muß man auch hier einräumen, daß
+ es eine gewisse Anzahl nicht erkennbarer Fehler gibt -- die sogenannte
+ Restfehlerwahrscheinlichkeit.
+ Sie entsteht dadurch, daß manchmal auch 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ ohne Rest durch 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ teilbar sein kann und so genau wieder ein gültiges Kodewort entsteht.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+[C(x)+E(x)]\bmod{G(x)} & =C(x)\bmod{G(x)}+E(x)\bmod{G(x)}\nonumber \\
+ & =F(x)G(x)\bmod{G(x)}+E(x)\bmod{G(x)}\nonumber \\
+ & =E(x)\bmod{G(x)}\label{eq:crc_err}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+An dieser Stelle seinen noch die wichtigsten fehlererkennenden Eigenschaften
+ der (verkürzten) zyklischen Kodes aufgezählt:
+\layout Enumerate
+
+Es werden grundstzlich alle Einfachfehler (1 Bit verändert) erkannt.
+\layout Enumerate
+
+Es werden alle Fehler erkannt bei denen Anfang und Ende des Störmusters
+ nicht weiter als 
+\begin_inset Formula $k$
+\end_inset 
+
+\SpecialChar ~
+Bit auseinanderliegen (Burstfehler).
+\layout Enumerate
+
+Statistisch gesehen ist die Restfehlerwahrscheinlichkeit für Bitfehler höchstens
+ 
+\begin_inset Formula $2^{-k}$
+\end_inset 
+
+.
+\layout Enumerate
+
+Für bestimmte Generatorpolynome 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ lassen sich außerdem noch weitere Spezialisierungen angeben:
+\begin_deeper 
+\layout Itemize
+
+Generatorpolynome 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+, die durch 
+\begin_inset Formula $1+x$
+\end_inset 
+
+ teilbar sind, erkennen grundsätzlich jeden Fehlerburst, der eine ungerade
+ Anzahl von Bit verändert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Schon allein diese Eigenschaft lässt einen Mathematiker gewöhnlich immer
+ ein Generatorpolynom wählen, welches als 
+\begin_inset Formula $G(x)=(1+x)P(x)$
+\end_inset 
+
+ darstellbar ist.
+\end_inset 
+
+.
+\layout Itemize
+
+Alle Polynome 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ erkennen bis zu einer maximalen Blocklänge 
+\begin_inset Formula $m$
+\end_inset 
+
+ alle Zweifachfehler (für CRCs mit 
+\begin_inset Formula $k=16$
+\end_inset 
+
+ ist 
+\begin_inset Formula $m$
+\end_inset 
+
+ meist 
+\begin_inset Formula $32767$
+\end_inset 
+
+).
+\layout Itemize
+
+Polynome, für die beide erstgenannten Punkte zutreffen, erkennen jeden Dreifachf
+ehler.
+\end_deeper 
+\layout Standard
+
+Bestimmte Klassen von Generatorpolynomen weisen in Bezug auf bestimmte Fehlerart
+en unter Umständen noch günstigere fehlererkennende Eigenschaften auf.
+ Vor allem zwei Typen von linearen Gruppenkodes seien für Interessierte
+ noch erwähnt: die 
+\noun on 
+Fire
+\noun default 
+-Kodes und die 
+\noun on 
+Bose-Chaudhuri-Hocquenghem
+\noun default 
+ (BCH) Kodes\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Peterson:1972}
+
+\end_inset 
+
+.
+ Mit Hilfe von 
+\noun on 
+Fire
+\noun default 
+-Kodes ist nicht nur eine Fehlererkennung sondern sogar eine Korrektur von
+ bestimmten Fehlern möglich.
+\layout Subsubsection
+
+Erkennung von Einfachfehlern
+\layout Standard
+
+Wir wollen nun den Nachweis erbringen, daß zyklische Kodes jeden Einfachfehler
+ erkönnen können.
+ Das Fehlerpolynom kann bei dieser Art von Störung (eines einzelnen Bits)
+ als 
+\begin_inset Formula $E(x)=x^{r}$
+\end_inset 
+
+ modelliert werden.
+ Es gilt also, die allgemeine Erkennbarkeitsbedingung entsprechend Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_err}
+
+\end_inset 
+
+ auf diesen Spezielfall dieses Fehlerpolynoms 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ anzuwenden.
+\layout Standard
+
+
+\begin_inset Formula \[
+E(x)\bmod{G(x)}=x^{r}\bmod{G(x)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für 
+\begin_inset Formula $r<k$
+\end_inset 
+
+ ist sofort ersichtlich, daß der Divisionsrest 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ selbst ist, also 
+\begin_inset Formula $x^{r}\bmod{G(x)}=x^{r}$
+\end_inset 
+
+ gilt.
+\layout Subsubsection
+
+Erkennung von Burstfehlern
+\layout Comment
+
+Wir wollen nun untersuchen, welche Burstfehler unter Benutzung eines zyklischen
+ Kodes erkennbar sind.
+ Das Fehlerpolynom soll dabei die Form u E(x) = xõ elxl besitzen, wobei
+ man e0=1 setzen kann .
+ l=0 Die Frage, die damit verbunden ist, lautet : Welche Polynome E(x) sind
+ ohne Rest durch G(x) teilbar : E(x) mod G(x) = 0 ? Gleichbedeutend ist
+ die Fragestellung nach einem Polynom F(x), welches multipliziert mit G(x)
+ genau das Fehlerpolynom E(x) ergibt - und genau mit diesem Problem wollen
+ wir uns nachfolgend auseinander setzen.
+ Als erstes werden wir F(x) in allgemeiner Form mit G(x) multiplizieren
+ .
+ v F(x) = õ fjxj j=0 v k v k F(x)G(x) = õ (fjxj) õ (gixi) = õ õ fjgix(i+j)
+ j=0 i=0 j=0 i=0 Um die Koeffizienten fr F(x) zu ermitteln, mssen wir dieses
+ Ergebnis E(x) gleichsetzen, denn es soll ja genau das Fehlerpolynom (ohne
+ Rest) entstehen.
+ v k u õ õ fjgix(i+j) = xõ elxl j=0 i=0 l=0 Daraus ergibt sich ein Gleichungssys
+tem, da diese Gleichung fr alle Potenzen i+j = l = 0..+u erfllt sein mu.
+ Potenz Bedingung f0g0 = 0 0 f0 = 0 f1g0 + f0g1 = 0 1 f1 = 0 f2g0 + f1g1
+ + f0g2 = 0 2 f2 = 0 f3g0 + f2g1 + f1g2 + f0g3 = 0 3 f3 = 0 : : : : : :
+ : : : : : : 
+\layout Comment
+
+f3g0 + f2g1 + f1g2 + f0g3 = 0 3 f3 = 0
+\layout Section
+
+Realisierung
+\layout Subsection
+
+Bitweise Verarbeitung
+\layout Standard
+
+Die bitorientierten Realisierungsvarianten sind insbesondere bei Hardware-Implem
+entierungen sehr effizient, können aber auch softwaretechnisch emuliert
+ werden.
+ Die Verarbeitung erfolgt dabei mittels rückgekoppelter Schieberegister
+ (Linear Feedback Shift Register, LFSR), dessen Inhalt nach der letzten
+ Verschiebung den (modulo-2) Divisionsrest darstellt\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Zaks:1982}
+
+\end_inset 
+
+.
+ In Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:lfsr}
+
+\end_inset 
+
+ ist das Grundprinzip eines solchen Divisions-Schieberegisters, welches
+ 
+\begin_inset Formula $M(x)\bmod{G(x)}$
+\end_inset 
+
+ berechnet, dargestellt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Eine Bedingung für diese Realisierung ist immer 
+\begin_inset Formula $g_{0}=g_{k}=1$
+\end_inset 
+
+, was praktisch keine wesentliche Einschränkung darstellt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Graphics
+	filename lfsr.eps
+	display monochrome
+	scale 75
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:lfsr}
+
+\end_inset 
+
+Divisions-Schieberegister
+\end_inset 
+
+
+\layout Standard
+
+Die Stellung der XOR-Gatter (Symbol\SpecialChar ~
+
+\begin_inset Graphics
+	filename xor.eps
+	display monochrome
+	scale 50
+	rotateOrigin leftBaseline
+
+\end_inset 
+
+) wird durch die Koeffizienten 
+\begin_inset Formula $g_{i}$
+\end_inset 
+
+ von 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+, für die 
+\begin_inset Formula $g_{i}=1$
+\end_inset 
+
+ gilt, bestimmt.
+\layout Standard
+
+Nachteil dieser Variante ist, daß die Multiplikation 
+\begin_inset Formula $x^{k}M(x)$
+\end_inset 
+
+, also das Nachstellen von 
+\begin_inset Formula $k$
+\end_inset 
+
+ Null-Bits vor der Verarbeitung im LFSR notwendig ist.
+ Eine Alternative dazu zeigt Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:lfsrmul}
+
+\end_inset 
+
+, in der diese Operation durch Einspeisen von 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $x^{k}$
+\end_inset 
+
+ durch das Schieberegister selbst vorgenommen wird.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Graphics
+	filename lfsrmul.eps
+	display monochrome
+	scale 75
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:lfsrmul}
+
+\end_inset 
+
+LFSR mit Vormultiplikation
+\end_inset 
+
+
+\layout Standard
+
+An dieser Stelle soll noch geklärt werden, welchen Einfluß ein bestimmter
+ Start- bzw.
+ Anfangsrest, auf den das LFSR in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:lfsr}
+
+\end_inset 
+
+ voreingestellt wird, auf den ursprünglich nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_base_div}
+
+\end_inset 
+
+ berechneten CRC-Wert hat
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Oftmals werden alle Register auf 1 gesetzt, so daß auch wenn 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ das Nullpolynom ist, ein von Null verschiedener CRC-Rest entsteht
+\end_inset 
+
+.
+ Dazu kann der Anfangswert 
+\begin_inset Formula $R_{0}(x)$
+\end_inset 
+
+ als der Nachricht 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ vorangestellt aufgefaßt werden.
+\layout Standard
+
+
+\begin_inset Formula \[
+M'(x)=x^{m}R_{0}(x)+M(x)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Bildet man nun den CRC-Rest für die Gesamtnachricht 
+\begin_inset Formula $M'(x)$
+\end_inset 
+
+, also
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\crc\{ M'(x)\} & = & x^{k}\left[x^{m}R_{0}(x)+M(x)\right]\bmod{G(x)}\\
+ & = & x^{k}x^{m}R_{0}(x)\bmod{G(x)}+x^{k}M(x)\bmod{G(x)}\\
+ & = & \crc\left\{ x^{m}R_{0}(x)\right\} +\crc\left\{ M(x)\right\} ,\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+dann ist sofort erkennbar, daß der ohne Anfangsrest entstehende Rest 
+\begin_inset Formula $R(x)=\crc\left\{ M(x)\right\} $
+\end_inset 
+
+durch Modulo-2-Addition mit 
+\begin_inset Formula $\crc\left\{ x^{m}R_{0}(x)\right\} $
+\end_inset 
+
+ modifiziert wird
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man kann den Fall ohne Anfangsrest (
+\begin_inset Formula $R_{0}(x)=0$
+\end_inset 
+
+) jetzt auch als Spezialfall dieser verallgemeinerten Darstellung auffassen.
+\end_inset 
+
+.
+\layout Standard
+
+In der Praxis ist das Verfahren außerdem noch in bestimmten Modifikationen
+ anzutreffen, z.
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+,
+\end_inset 
+
+B.
+ Anhängen des invertierten CRC-Restes beim HDLC-Protokoll.
+\layout Subsection
+
+Byteweise Verarbeitung
+\layout Standard
+
+Nimmt man wieder an, daß 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ die zu sichernde Nachricht ist, dann wird bei der Bildung des 
+\begin_inset Formula $\crc\{ M(x)\}=R(x)$
+\end_inset 
+
+ folgende Restklassendivision durchgeführt
+\layout Standard
+
+
+\begin_inset Formula \[
+R(x)=x^{k}M(x)\bmod{G(x)}.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Es wird also der Polynomrest 
+\begin_inset Formula $R(x)$
+\end_inset 
+
+ so bestimmt, daß
+\layout Standard
+
+
+\begin_inset Formula \[
+x^{k}M(x)=F(x)G(x)+R(x)\]
+
+\end_inset 
+
+
+\layout Standard
+
+unter der Nebenbedingung 
+\begin_inset Formula $R(x)<G(x)$
+\end_inset 
+
+ erfüllt ist.
+\layout Standard
+
+Nimmt man zur Nachricht 
+\begin_inset Formula $M(x)$
+\end_inset 
+
+ nun ein weiteres Byte 
+\begin_inset Formula $B(x)$
+\end_inset 
+
+ hinzu, bildet also einen neue Nachricht
+\layout Standard
+
+
+\begin_inset Formula \[
+M'(x)=x^{8}M(x)+B(x),\]
+
+\end_inset 
+
+
+\layout Standard
+
+dann gilt für den zugehörigen CRC-Rest 
+\begin_inset Formula $R'(x)=\crc\{ M'(x)\}$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+R'(x) & =x^{k}M'(x)\bmod{G(x)}\nonumber \\
+ & =[x^{8}x^{k}M(x)+x^{k}B(x)]\bmod{G(x)}\nonumber \\
+ & =[x^{8}R(x)+x^{k}B(x)]\bmod{G(x)}.\label{eq:crc_table_general}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Zerlegt man jetzt 
+\begin_inset Formula $R(x)$
+\end_inset 
+
+ so in zwei Teile 
+\begin_inset Formula $R(x)=x^{k-8}R_{1}(x)+R_{0}(x)$
+\end_inset 
+
+, daß dessen höherwertiger Teil 
+\begin_inset Formula $R_{1}(x)$
+\end_inset 
+
+ durch 8\SpecialChar ~
+Bit und der niederwertige Teil 
+\begin_inset Formula $R_{0}(x)$
+\end_inset 
+
+ entsprechend durch 
+\begin_inset Formula $k-8$
+\end_inset 
+
+ Bit repräsentiert wird, dann gilt
+\layout Standard
+
+
+\begin_inset Formula \[
+x^{8}R_{0}(x)\bmod{G(x)}=x^{8}R_{0}(x)\]
+
+\end_inset 
+
+
+\layout Standard
+
+und Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_table_general}
+
+\end_inset 
+
+ vereinfacht sich zu:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+R'(x) & =[x^{k}R_{1}(x)+x^{k}B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
+ & =x^{k}[R_{1}(x)+B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
+ & =\crc\{ R_{1}(x)+B(x)\}+x^{8}R_{0}(x).\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Für die durch 
+\begin_inset Formula $8$
+\end_inset 
+
+\SpecialChar ~
+Bit darstellbaren 256\SpecialChar ~
+Werte ist es grundsätzlich kein Problem den CRC-Rest
+ vorauszuberechnen und auf dieser Grundlage den Term 
+\begin_inset Formula $\crc\{ R_{1}(x)+B(x)\}$
+\end_inset 
+
+ über einen Tabellenzugriff sehr schnell zu ermitteln.
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[gerplain]{adsp,computers,crypto,math}
+
+\end_inset 
+
+
+\layout Standard
+\start_of_appendix 
+
+\begin_inset Include \input{../algebra/algebra.lyx}
+preview false
+
+\end_inset 
+
+
+\the_end
