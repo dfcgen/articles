@@ -16,15 +16,16 @@
 \usepackage{multicol}
 \usepackage{html}
 \end_preamble
+\options intlimits, reqno
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement htbp
+\float_placement hbtp
 \paperfontsize default
 \spacing onehalf 
 \papersize a4paper
-\paperpackage widemarginsa4
+\paperpackage a4wide
 \use_geometry 0
 \use_amsmath 1
 \use_natbib 0
@@ -37,7 +38,7 @@
 \quotes_language english
 \quotes_times 2
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 
 \layout Standard
@@ -48,7 +49,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: stdfilter.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.2 2004-10-09 20:07:13 ralf Exp $
 \end_inset 
 
 
@@ -180,6 +181,18 @@ preview false
 
 \layout Chapter
 \start_of_appendix 
+Algebraische Funktionen
+\layout Standard
+
+
+\begin_inset Include \include{polynomials.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Chapter
+
 Tschebyscheff-Funktionen
 \layout Standard
 
