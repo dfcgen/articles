@@ -30,11 +30,11 @@
 
 
 \begin_inset Note
-collapsed true
+collapsed false
 
 \layout Standard
 
-Version: $Id: bessel.lyx,v 1.1 2005-01-08 16:51:11 ralf Exp $
+Version: $Id: bessel.lyx,v 1.2 2005-01-09 16:47:57 ralf Exp $
 \end_inset 
 
 
@@ -94,7 +94,7 @@ resp
 
 
 \begin_inset Formula \[
-\delta(t-t_{0})\;\lpt\;\trf(\lps)=\e^{-\lps\, t_{0}}\]
+\delta(t-t_{0})\;\lpt\;\trf(\lps)=\e^{-\lps\, t_{0}}\;\Rightarrow\;\e^{-\jw\, t_{0}}\]
 
 \end_inset 
 
@@ -160,7 +160,12 @@ und die Näherung für
 \noun on 
 Hurwitz
 \noun default 
--Polynom (als Bedingung für stabile Systeme).
+-Polynom
+\begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
+
+\end_inset 
+
+ (als Bedingung für stabile Systeme).
 \layout Standard
 
 Besser ist an dieser Stelle eine Kettenbruchentwicklung --- mit den vorteilhafte
@@ -194,13 +199,13 @@ Bricht man diese Entwicklung nach
 \end_inset 
 
  Schritten ab, so kann man daraus eine rationalen Bruch 
-\begin_inset Formula $\coth x\approx A_{n}/B_{n}$
+\begin_inset Formula $\coth x\approx P_{n}/Q_{n}$
 \end_inset 
 
  bestimmen.
  Durch vollständige Induktion
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -212,9 +217,9 @@ e.
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray*}
-A_{n} & = & (2n-1)A_{n-1}+x^{2}A_{n-2},\qquad A_{0}=1,\: A_{-1}=0\\
-B_{n} & = & (2n-1)B_{n-1}+x^{2}B_{n-2},\qquad B_{0}=0,\: B_{-1}=\frac{1}{x}\end{eqnarray*}
+\begin_inset Formula \begin{alignat*}{3}
+P_{n} & =(2n-1)P_{n-1}+x^{2}P_{n-2}, & \qquad P_{0} & =1, & \quad P_{-1} & =0\\
+Q_{n} & =(2n-1)Q_{n-1}+x^{2}Q_{n-2}, & \qquad Q_{0} & =0, & \quad Q_{-1} & =\frac{1}{x}\end{alignat*}
 
 \end_inset 
 
@@ -223,23 +228,23 @@ B_{n} & = & (2n-1)B_{n-1}+x^{2}B_{n-2},\qquad B_{0}=0,\: B_{-1}=\frac{1}{x}\end{
 
 gehorchen.
  Berücksichtigt man die Anfangswerte 
-\begin_inset Formula $A_{0}$
+\begin_inset Formula $P_{0}$
 \end_inset 
 
 , 
-\begin_inset Formula $B_{0}$
+\begin_inset Formula $Q_{0}$
 \end_inset 
 
 , 
-\begin_inset Formula $A_{-1}$
+\begin_inset Formula $P_{-1}$
 \end_inset 
 
  und 
-\begin_inset Formula $B_{-1}$
+\begin_inset Formula $Q_{-1}$
 \end_inset 
 
 , dann lassen die Formeln sofort erkennen, daß das Zählerpolynom 
-\begin_inset Formula $A_{n}$
+\begin_inset Formula $P_{n}$
 \end_inset 
 
  nur gerade Potenzen von 
@@ -247,7 +252,7 @@ gehorchen.
 \end_inset 
 
  enthält, das Nennerpolynom 
-\begin_inset Formula $B_{n}$
+\begin_inset Formula $Q_{n}$
 \end_inset 
 
  dagegen alle Ungeraden.
@@ -258,11 +263,11 @@ Kommen wir nun zurück zur Approximation von
 \end_inset 
 
  und interpretieren 
-\begin_inset Formula $A_{n}$
+\begin_inset Formula $P_{n}$
 \end_inset 
 
  und 
-\begin_inset Formula $B_{n}$
+\begin_inset Formula $Q_{n}$
 \end_inset 
 
  als Näherung für Zähler und Nenner in
@@ -270,7 +275,7 @@ Kommen wir nun zurück zur Approximation von
 
 
 \begin_inset Formula \[
-\coth x=\frac{\cosh x}{\sinh x}\approx\frac{A_{n}}{B_{n}}\]
+\coth x=\frac{\cosh x}{\sinh x}\approx\frac{P_{n}}{Q_{n}}\]
 
 \end_inset 
 
@@ -287,7 +292,7 @@ und in Konsequenz als Summenterme in der Exponentialfunktion
 
 
 \begin_inset Formula \[
-\e^{x}=\cosh x+\sinh x\approx A_{n}+B_{n}=(2n-1)\,\left(A_{n-1}+B_{n-1}\right)+x^{2}\left(A_{n-2}+B_{n-2}\right)\msp.\]
+\e^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\msp.\]
 
 \end_inset 
 
@@ -365,7 +370,7 @@ angeben, wobei
 
  hinzugefügt wurde.
  Da in der Kettenbruchentwicklung des Quotienten 
-\begin_inset Formula $A_{n}/B_{n}$
+\begin_inset Formula $P_{n}/Q_{n}$
 \end_inset 
 
  nach Formel\SpecialChar ~
