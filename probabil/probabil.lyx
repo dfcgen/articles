@@ -6,7 +6,6 @@
 \input{math-inc.tex}
 \input{electr-inc.tex}
 
-%% \usepackage{floatfig}
 \usepackage{html}
 \end_preamble
 \options intlimits,reqno
@@ -42,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.1 2004-10-17 18:34:17 ralf Exp $
+Version: $Id: probabil.lyx,v 1.2 2004-10-23 20:35:56 ralf Exp $
 \end_inset 
 
 
@@ -79,7 +78,7 @@ htmlmeta{<META NAME="description" LANG ="de" CONTENT="Zufallsgr&ouml;ssen">}
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Wahrscheinlichkeit, Zufall">}
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Wahrscheinlichkeit, Zufall, Quantisierung, Rauschen">}
 \newline 
     
 \backslash 
@@ -141,6 +140,11 @@ Zufallsgrößen
 Diskrete Zufallsgrößen
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Zufallsgrößen!diskrete}
+
+\end_inset 
+
 Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
  
 \begin_inset Formula $X$
@@ -188,42 +192,92 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 
 \layout Standard
 
-Der Erwartungswert 
+Der 
+\begin_inset LatexCommand \index{Erwartungswert}
+
+\end_inset 
+
+Erwartungswert 
 \begin_inset Formula $\bar{x}$
 \end_inset 
 
- (lineare Mittelwert) ergibt sich aus der Wichtung aller Werte 
+ (lineare Mittelwert
+\begin_inset LatexCommand \index{Mittelwert}
+
+\end_inset 
+
+) ergibt sich aus der Wichtung aller Werte 
 \begin_inset Formula $x_{i}$
 \end_inset 
 
- mit der Wahrscheinlichkeit ihres Auftretens.
+ mit der Wahrscheinlichkeit ihres Auftretens
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Oftmals auch geschrieben als 
+\begin_inset Formula $\bar{x}=\textrm{E}X$
+\end_inset 
+
+ oder 
+\begin_inset Formula $\textrm{E}\left[X\right]$
+\end_inset 
+
+.
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:discrete_mean}\end{equation}
+\bar{x}=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Die Varianz 
+Die 
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+Varianz 
 \begin_inset Formula $\sigma^{2}$
 \end_inset 
 
- ist der Erwartungswert der quadratischen Abweichung vom Mittelwert.
+ ist der Erwartungswert der quadratischen Abweichung vom Erwartungswert.
  Sie ist dadurch ein gutes Maß für die Streuung
+\begin_inset LatexCommand \index{Streuung}
+
+\end_inset 
+
+
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-Die Größe 
-\begin_inset Formula $\sigma$
+Häufig auch geschrieben als 
+\begin_inset Formula $\sigma^{2}=\var X$
 \end_inset 
 
- wird Standardabweichung genannt.
+ oder 
+\begin_inset Formula $\textrm{D}X$
+\end_inset 
+
+, außerdem als Größe 
+\begin_inset Formula $\sigma=\sqrt{\smash[b]{\var X}}$
+\end_inset 
+
+ Standardabweichung
+\begin_inset LatexCommand \index{Standardabweichung}
+
+\end_inset 
+
+ genannt.
 \end_inset 
 
  der Zufallsgröße 
@@ -235,14 +289,19 @@ Die Größe
 
 
 \begin_inset Formula \begin{equation}
-\sigma^{2}=\sum_{i=1}^{N}p_{i}\left(x_{i}-\bar{x}\right)^{2}\label{eq:discrete_variance}\end{equation}
+\sigma^{2}=\sum_{i=1}^{N}p_{i}\left(x_{i}-\bar{x}\right)^{2}\label{eq:prob_discrete_var}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Für mittelwertfreie Zufallsgrößen, 
+Für mittelwertfreie Zufallsgrößen
+\begin_inset LatexCommand \index{Zufallsgrößen!mittelwertfreie}
+
+\end_inset 
+
+, 
 \begin_inset ERT
 status Collapsed
 
@@ -276,7 +335,7 @@ Kann
 \begin_inset Formula $x$
 \end_inset 
 
- annehmen, kommt man zu kontinuierlichen Zufallsgrößen
+ annehmen, dann kommt man zu kontinuierlichen Zufallsgrößen
 \begin_inset Foot
 collapsed true
 
@@ -292,6 +351,11 @@ Dieser Schritt stellt eine Verallgemeinerung dar --- deshalb sind alle folgenden
 Kontinuierliche Zufallsgrößen
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche}
+
+\end_inset 
+
 Die Zufallsgröße 
 \begin_inset Formula $X$
 \end_inset 
@@ -302,7 +366,7 @@ Die Zufallsgröße
 
  aus einem endlichen oder unendlichen Intervall annehmen
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -311,7 +375,7 @@ Wobei streng gesehen ein ganz konkreter Wert
 \end_inset 
 
  mit der Wahrscheinlichkeit 
-\begin_inset Formula $p(x)=0$
+\begin_inset Formula $P(X=x)=0$
 \end_inset 
 
  angenommen wird.
@@ -328,8 +392,8 @@ status Collapsed
 resp
 \end_inset 
 
- differentiell große Intervalle, so kann man ausgehend von den diskreten
- Zufallsgrößen den Begriff der Wahrscheinlichkeit erweitern.
+ infinitesimal große Intervalle, so kann man ausgehend von den diskreten
+ Zufallsgrößen den Quantifizierungsbegriff der Wahrscheinlichkeit erweitern.
 \layout Standard
 
 
@@ -366,7 +430,17 @@ Die (jetzt) kontinuierliche Größe
 \begin_inset Formula $p(x)$
 \end_inset 
 
- auch als Dichtefunktion bezeichnet wird.
+ auch als Dichtefunktion
+\begin_inset LatexCommand \index{Dichtefunktion}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte}
+
+\end_inset 
+
+ bezeichnet wird.
  Die Wahrscheinlichkeit 
 \begin_inset Formula $P$
 \end_inset 
@@ -379,7 +453,7 @@ Die (jetzt) kontinuierliche Größe
 \begin_inset Formula $\left[a,b\right]$
 \end_inset 
 
- annimmt muß dann durch Integration bestimmt werden.
+ annimmt, muß nun durch Integration bestimmt werden.
 \layout Standard
 
 
@@ -417,7 +491,7 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 
 \end_inset 
 
- zu integrieren wird oft die sogenannte Verteilungsfunktion
+ zu integrieren, wird oft die sogenannte Verteilungsfunktion
 \begin_inset LatexCommand \index{Verteilungsfunktion}
 
 \end_inset 
@@ -431,7 +505,7 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=P(-\infty\leq X\leq x)=P(X\leq x)\label{eq:prob_distribution}\end{align}
+F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=P(-\infty\leq X\leq x)=P(X\leq x)\msp.\label{eq:prob_distribution}\end{align}
 
 \end_inset 
 
@@ -439,12 +513,17 @@ F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=P(-\infty\leq X\leq x)=P(X\leq x)
 \layout Standard
 
 Nach dem Hauptsatz der Differential- und Intgeralrechnung gilt für die Wahrschei
-nlichkeitsdichte im Umkehrschluß
+nlichkeitsdichte
+\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte}
+
+\end_inset 
+
+ im Umkehrschluß
 \layout Standard
 
 
-\begin_inset Formula \[
-p(x)=\tdiff{F(x)}{x}\msp.\]
+\begin_inset Formula \begin{equation}
+p(x)=\tdiff{F(x)}{x}\msp.\end{equation}
 
 \end_inset 
 
@@ -475,9 +554,13 @@ P(a\leq x\leq b) & =F(b)-F(a)\end{align}
 
 \layout Standard
 
-Der lineare Mittelwert ergibt sich wie bei den diskreten Zufallsgrößen ---
- jetzt wird aber jeder Wert mit der differentiellen Wahrscheinlichkeit seines
- Auftretens multipliziert.
+Der Erwartungswert
+\begin_inset LatexCommand \index{Erwartungswert}
+
+\end_inset 
+
+ ergibt sich wie bei den diskreten Zufallsgrößen --- jetzt wird aber jeder
+ Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert.
 \layout Standard
 
 
@@ -496,14 +579,19 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 \end_inset 
 
 ) ergibt sich für die Varianz
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+
 \layout Standard
 
 
 \begin_inset Formula \begin{align}
-\sigma^{2} & =\int\limits _{-\infty}^{\infty}\left(x-\bar{x}\right)^{2}p(x)\,\tdc x\label{eq:prob_continuous_variance}\\
+\sigma^{2} & =\int\limits _{-\infty}^{\infty}\left(x-\bar{x}\right)^{2}p(x)\,\tdc x\label{eq:prob_continuous_var}\\
  & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\bar{x}\, p(x)+\bar{x}^{2}p(x)\,\tdc x\nonumber \\
  & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\bar{x}\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\bar{x}^{2}\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\nonumber \\
-\sigma^{2} & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}=\tilde{x}^{2}-\bar{x}^{2}\end{align}
+\sigma^{2} & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}=\tilde{x}^{2}-\bar{x}^{2}\label{eq:prob_continuous_var_rms}\end{align}
 
 \end_inset 
 
@@ -516,7 +604,12 @@ Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
 \begin_inset Formula $\bar{x}=0$
 \end_inset 
 
-) ist folglich die Varianz gleich dem Quadrat des Effektivwertes
+) ist demzufolge die Varianz gleich dem Quadrat des Effektivwertes
+\begin_inset LatexCommand \index{Effektivwert}
+
+\end_inset 
+
+
 \begin_inset Foot
 collapsed true
 
@@ -545,6 +638,11 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 Gleichverteilung
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Gleichverteilung}
+
+\end_inset 
+
 Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
  Gleichverteilung
 \begin_inset LatexCommand \index{Gleichverteilung}
@@ -552,7 +650,7 @@ Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
 \end_inset 
 
 .
- Sie hat auf dem  Intervall 
+ Sie hat auf dem Intervall 
 \begin_inset Formula $\left[a,b\right]$
 \end_inset 
 
@@ -577,8 +675,8 @@ muß sie folgender Gleichung für die Dichtefunktion genügen:
 \layout Standard
 
 
-\begin_inset Formula \[
-p(x)=\frac{1}{b-a}\msp.\]
+\begin_inset Formula \begin{equation}
+p(x)=\frac{1}{b-a}\msp.\label{eq:prob_equal_distribution}\end{equation}
 
 \end_inset 
 
@@ -591,12 +689,12 @@ Der Erwartungswert nach Formel\SpecialChar ~
 
 \end_inset 
 
- ergibt sich zu
+ bestimmt sich aus den Intervallgrenzen zu
 \layout Standard
 
 
-\begin_inset Formula \[
-\bar{x}=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\]
+\begin_inset Formula \begin{equation}
+\bar{x}=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\label{eq:prob_equal_mean}\end{equation}
 
 \end_inset 
 
@@ -605,7 +703,7 @@ Der Erwartungswert nach Formel\SpecialChar ~
 
 Die Varianz ermittelt sich nach Formel\SpecialChar ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_variance}
+\begin_inset LatexCommand \ref{eq:prob_continuous_var}
 
 \end_inset 
 
@@ -616,12 +714,17 @@ Die Varianz ermittelt sich nach Formel\SpecialChar ~
 \begin_inset Formula \begin{align}
 \sigma^{2} & =\int\limits _{a}^{b}\frac{\left(x-\bar{x}\right)^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\cdot\left.\left(x-\bar{x}\right)^{3}\right|_{a}^{b}\nonumber \\
  & =\frac{1}{3(b-a)}\cdot\left[\left(b-\bar{x}\right)^{3}-\left(a-\bar{x}\right)^{3}\right]=\frac{1}{3(b-a)}\cdot\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
-\sigma^{2} & =\frac{(b-a)^{2}}{12}\end{align}
+\sigma^{2} & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}\end{align}
 
 \end_inset 
 
 
 \layout Section
+
+
+\begin_inset LatexCommand \label{sec:prob_transform}
+
+\end_inset 
 
 Transformation von Verteilungen
 \layout Standard
@@ -635,7 +738,12 @@ Die Transformation der Verteilung einer kontinuierlichen Zufallsgröße
 \end_inset 
 
  zugeordnet sein soll, wird in der Praxis häufig verlangt.
- Anwendungen in der Nachrichtentechnik und Signalverarbeitung sind 
+ Anwendungen in der Nachrichtentechnik und Signalverarbeitung sind unter
+ anderem:
+\layout Itemize
+
+Berechnung des Quantisierungsrauschens bei nichtlinearen Quantisierungskennlinie
+n (
 \begin_inset ERT
 status Collapsed
 
@@ -645,19 +753,15 @@ status Collapsed
 eg
 \end_inset 
 
-:
-\layout Itemize
-
-Berechnung des Quantisierungsrauschens bei nichtlinearen Quantisierungskennlinie
-n (
+ 
 \begin_inset Formula $\mu$
 \end_inset 
 
- oder 
+- oder 
 \begin_inset Formula $A$
 \end_inset 
 
--Kennlinie bei Pulscodemodulation);
+-Kennlinie);
 \layout Itemize
 
 Transformation von Zufallszahlen-Verteilungen;
@@ -714,7 +818,6 @@ collapsed false
 
 \begin_inset Graphics
 	filename system.eps
-	keepAspectRatio
 
 \end_inset 
 
@@ -744,7 +847,7 @@ Die Wahrscheinlichkeitsdichte für
 \begin_inset Formula $Y$
 \end_inset 
 
- dann 
+ entsprechend 
 \begin_inset Formula $p_{y}(y)$
 \end_inset 
 
@@ -776,9 +879,7 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 \end_inset 
 
 .
-\layout Standard
-
-Angenommen nun, 
+ Angenommen nun, 
 \begin_inset Formula $Y$
 \end_inset 
 
@@ -812,14 +913,17 @@ Angenommen nun,
 \begin_inset Formula $Y$
 \end_inset 
 
- aber einen Wert im Intervall mit der gleichen Wahrscheinlichkeit an (siehe
- Abbildung\SpecialChar ~
+ (nach Abbildung\SpecialChar ~
 
-\begin_inset LatexCommand \ref{fig_prob_function_transform}
+\begin_inset LatexCommand \ref{fig:prob_function_transform}
 
 \end_inset 
 
-).
+) aber einen Wert im Intervall 
+\begin_inset Formula $\left[y-\tdc y/2,y+\tdc y/2\right]$
+\end_inset 
+
+ mit der gleichen Wahrscheinlichkeit an.
 \layout Standard
 
 
@@ -839,7 +943,7 @@ collapsed false
 \layout Caption
 
 
-\begin_inset LatexCommand \label{fig_prob_function_transform}
+\begin_inset LatexCommand \label{fig:prob_function_transform}
 
 \end_inset 
 
@@ -880,9 +984,15 @@ status Collapsed
 resp
 \end_inset 
 
- zunehmen
-\begin_inset Foot
-collapsed true
+ zunehmen.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\left[f^{-1}(y)\right]\cdot\left|f'(y)\right|\end{equation}
+
+\end_inset 
+
 
 \layout Standard
 
@@ -890,7 +1000,7 @@ collapsed true
 \begin_inset Formula $f^{-1}(y)$
 \end_inset 
 
- ist die Umkehrfunktion von 
+ ist hierbei die Umkehrfunktion von 
 \begin_inset Formula $f(x)$
 \end_inset 
 
@@ -903,18 +1013,6 @@ collapsed true
 \end_inset 
 
 .
-\end_inset 
-
-.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\left[f^{-1}(y)\right]\cdot\left|f'(y)\right|\end{equation}
-
-\end_inset 
-
-
 \layout Standard
 
 Der Zusammenhang zwischen den Verteilungsfunktionen 
@@ -1006,6 +1104,11 @@ Die wesentliche Erkenntnis daraus ist, daß die Verteilungsfunktion direkt
 Trigonometrische Übertragungsfunktion (bei Gleichverteilung)
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Gleichverteilung}
+
+\end_inset 
+
 Die Eingangsgröße 
 \begin_inset Formula $X$
 \end_inset 
@@ -1028,12 +1131,12 @@ Die Eingangsgröße
 \begin_inset Formula $-1\leq Y\leq1$
 \end_inset 
 
- ergibt sich zu
+ ergibt sich zu:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\end{equation}
+p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\msp.\end{equation}
 
 \end_inset 
 
@@ -1060,16 +1163,16 @@ Die Eingangsgröße
 \end_inset 
 
 .
- Dann ergibt sich für die Dichtefunktion 
+ Dann gilt für die Dichtefunktion 
 \begin_inset Formula $p_{y}(y)$
 \end_inset 
 
-
+:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\end{equation}
+p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\msp.\end{equation}
 
 \end_inset 
 
@@ -1079,14 +1182,29 @@ p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\end{equation}
 Kombination von unabhängigen Zufallsgrößen
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec:prob_sum}
+
+\end_inset 
+
 Summe von (unabhängigen) Zufallsgrößen
 \layout Subsubsection
 
 Verteilungsdichte
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Summe von}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte!einer Summe}
+
+\end_inset 
+
 Vorraussetzung soll die Definition der Dichtefunktion für die Summe 
-\begin_inset Formula $Y$
+\begin_inset Formula $X$
 \end_inset 
 
  sowie für die unkorrelierten Summanden 
@@ -1102,7 +1220,7 @@ Vorraussetzung soll die Definition der Dichtefunktion für die Summe
 
 
 \begin_inset Formula \begin{xalignat*}{3}
-p(y) & =P\left(Y=y\pm\frac{\tdc y}{2}\right) & p(x_{1}) & =P\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p(x_{2}) & =P\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+p(x) & =P\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =P\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =P\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
 \end_inset 
 
@@ -1142,15 +1260,15 @@ Für diesen Fall muß aber
 \end_inset 
 
  den Wert 
-\begin_inset Formula $x_{2}=y-u$
+\begin_inset Formula $x_{2}=x-u$
 \end_inset 
 
  annehmen, damit die Summe (also 
-\begin_inset Formula $Y$
+\begin_inset Formula $X$
 \end_inset 
 
 ) den Wert 
-\begin_inset Formula $y$
+\begin_inset Formula $x$
 \end_inset 
 
  annimmt.
@@ -1165,7 +1283,7 @@ en Wahrscheinlichkeiten summiert (integriert) werden.
 
 
 \begin_inset Formula \begin{equation}
-p(y)=\int\limits _{-\infty}^{\infty}p_{1}(u)\, p_{2}(y-u)\,\tdc u\label{eq:prob_continuous_convolution}\end{equation}
+p(x)=\int\limits _{-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\label{eq:prob_continuous_convolution}\end{equation}
 
 \end_inset 
 
@@ -1178,7 +1296,7 @@ Nach dieser Gleichung ist die Dichte der Summe zweier unabhängiger Zufallsgrößen
 
 
 \begin_inset Formula \begin{equation}
-p(y)=p_{1}(x)*p_{2}(x)\end{equation}
+p(x)=p_{1}(x)*p_{2}(x)\end{equation}
 
 \end_inset 
 
@@ -1194,7 +1312,7 @@ Für die Summe von
 
 
 \begin_inset Formula \[
-p(y)=p_{1}(x)*p_{2}(x)*p_{3}(x)*\cdots*p_{n-1}(x)*p_{n}(x)\msp.\]
+p(x)=p_{1}(x)*p_{2}(x)*p_{3}(x)*\cdots*p_{n-1}(x)*p_{n}(x)\msp.\]
 
 \end_inset 
 
@@ -1204,8 +1322,13 @@ p(y)=p_{1}(x)*p_{2}(x)*p_{3}(x)*\cdots*p_{n-1}(x)*p_{n}(x)\msp.\]
 Erwartungswert
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Erwartungswert}
+
+\end_inset 
+
 Ausgangspunkt zur Bestimmung des Erwartungswertes von 
-\begin_inset Formula $Y$
+\begin_inset Formula $X$
 \end_inset 
 
  ist dessen Definitionsgleichung\SpecialChar ~
@@ -1233,12 +1356,12 @@ Ausgangspunkt zur Bestimmung des Erwartungswertes von
 
 
 \begin_inset Formula \begin{align*}
-\bar{y} & =\int\limits _{y=-\infty}^{\infty}y\, p(y)\,\tdc y=\int\limits _{y=-\infty}^{\infty}y\int\limits _{u=-\infty}^{\infty}p_{1}(u)\, p_{2}(y-u)\,\tdc u\,\tdc y\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{y=-\infty}^{\infty}y\, p_{2}(y-u)\,\tdc y\,\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{y=-\infty}^{\infty}(y+u)\, p_{2}(y)\,\tdc y\,\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{y=-\infty}^{\infty}yp_{2}(y)\,\tdc y+\int\limits _{y=-\infty}^{\infty}up_{2}(y)\,\tdc y\right]\tdc u\\
+\bar{x} & =\int\limits _{x=-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\,\tdc x\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x-u)\,\tdc x\,\tdc u\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)\, p_{2}(x)\,\tdc x\,\tdc u\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}up_{2}(x)\,\tdc x\right]\tdc u\\
  & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\cdot\left(\bar{x}_{2}+u\right)\,\tdc u\\
- & =\bar{x}_{2}\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\tdc u+\int\limits _{u=-\infty}^{\infty}up_{1}(u)\,\tdc u=\bar{x}_{2}+\bar{x}_{1}\end{align*}
+ & =\bar{x}_{2}\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\tdc u+\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\bar{x}_{2}+\bar{x}_{1}\end{align*}
 
 \end_inset 
 
@@ -1251,7 +1374,7 @@ Der Erwartungswert der Summe zweier Zufallsgrößen ist also unabhängig von
 
 
 \begin_inset Formula \begin{equation}
-\bar{y}=\bar{x}_{1}+\bar{x}_{2}\label{eq:prob_sum_mean}\end{equation}
+\bar{x}=\bar{x}_{1}+\bar{x}_{2}\label{eq:prob_sum_mean}\end{equation}
 
 \end_inset 
 
@@ -1261,13 +1384,18 @@ Der Erwartungswert der Summe zweier Zufallsgrößen ist also unabhängig von
 Varianz
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
 Die Varianz 
 \begin_inset Formula $\sigma^{2}$
 \end_inset 
 
  bestimmt sich ausgehend von der Definition in Gleichung\SpecialChar ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_variance}
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
 
 \end_inset 
 
@@ -1281,8 +1409,8 @@ Die Varianz
 \layout Standard
 
 
-\begin_inset Formula \[
-\sigma^{2}=\int\limits _{-\infty}^{\infty}\left(y-\bar{y}\right)^{2}p(y)\,\tdc y=\int\limits _{-\infty}^{\infty}y^{2}p(y)\,\tdc y-\bar{y}^{2}\]
+\begin_inset Formula \begin{equation}
+\sigma^{2}=\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}\label{eq:prob_sum_var}\end{equation}
 
 \end_inset 
 
@@ -1291,7 +1419,7 @@ Die Varianz
 
 Den folgenden Teilschritt überspringen wir, da er genauso verläuft wie beim
  Erwartungswert, nur daß diesmal mit einem quadratischen 
-\begin_inset Formula $y$
+\begin_inset Formula $x$
 \end_inset 
 
  gerechnet werden muß.
@@ -1299,9 +1427,9 @@ Den folgenden Teilschritt überspringen wir, da er genauso verläuft wie beim
 
 
 \begin_inset Formula \begin{align*}
-\sigma^{2} & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{y=-\infty}^{\infty}(y+u)^{2}p_{2}(y)\,\tdc y\,\tdc u-\bar{y}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{y=-\infty}^{\infty}y^{2}p_{2}(y)\,\tdc y-2u\int\limits _{y=-\infty}^{\infty}y\, p_{2}(y)\,\tdc y+\int\limits _{y=-\infty}^{\infty}u^{2}p_{2}(y)\,\tdc y\right]\tdc u-\bar{y}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}-2u\bar{x}_{2}+u^{2}\right)\,\tdc u-\bar{y}^{2}\\
+\sigma^{2} & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)^{2}p_{2}(x)\,\tdc x\,\tdc u-\bar{x}^{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x)\,\tdc x-2u\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}u^{2}p_{2}(x)\,\tdc x\right]\tdc u-\bar{x}^{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}-2u\bar{x}_{2}+u^{2}\right)\,\tdc u-\bar{x}^{2}\\
  & =\sigma_{2}^{2}+\bar{x}_{2}^{2}-2\bar{x}_{1}\bar{x}_{2}+\sigma_{1}^{2}+\bar{x}_{1}^{2}-\left(\bar{x}_{2}+\bar{x}_{1}\right)^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}\end{align*}
 
 \end_inset 
@@ -1325,6 +1453,11 @@ Auch die Varianz der Summe zweier Zufallsgrößen ist also unabhängig von
 Effektivwert
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Effektivwert}
+
+\end_inset 
+
 Ausgehend von Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_continuous_rms}
@@ -1332,7 +1465,7 @@ Ausgehend von Gleichung\SpecialChar ~
 \end_inset 
 
  gilt für den Effektivwert von 
-\begin_inset Formula $Y$
+\begin_inset Formula $X$
 \end_inset 
 
 
@@ -1340,7 +1473,7 @@ Ausgehend von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\tilde{y}^{2}=\sigma^{2}+\bar{y}^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}+\bar{x}_{1}+\bar{x}_{2}=\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}\msp.\]
+\tilde{x}^{2}=\sigma^{2}+\bar{x}^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}+\bar{x}_{1}+\bar{x}_{2}=\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}\msp.\]
 
 \end_inset 
 
@@ -1353,7 +1486,7 @@ Iterative Fortsetzung ergibt für den Effektivwert der Summe
 
  unabhängiger Zufallsgrößen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1361,8 +1494,12 @@ Angewandt auf
 \begin_inset Formula $n$
 \end_inset 
 
- unabhängige Rauschquellen ist interessant, daß nicht einfach die Effektivwerte
- zu addieren sind.
+ unabhängige Rauschquellen
+\begin_inset LatexCommand \index{Rauschen}
+
+\end_inset 
+
+ ist interessant, daß nicht einfach die Effektivwerte zu addieren sind.
 \end_inset 
 
 
@@ -1370,7 +1507,7 @@ Angewandt auf
 
 
 \begin_inset Formula \[
-\tilde{y}=\sqrt{\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}+\tilde{x}_{3}^{2}+\ldots+\tilde{x}_{n-1}^{2}+\tilde{x}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{x}_{i}^{2}}\msp.\]
+\tilde{x}=\sqrt{\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}+\tilde{x}_{3}^{2}+\ldots+\tilde{x}_{n-1}^{2}+\tilde{x}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{x}_{i}^{2}}\msp.\]
 
 \end_inset 
 
@@ -1379,6 +1516,16 @@ Angewandt auf
 
 Superposition bei Normalverteilung
 \layout Standard
+
+
+\begin_inset LatexCommand \index{Normalverteilung}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Gauss-Verteilung@\noun{Gau\ss}-Verteilung}
+
+\end_inset 
 
 Zwei unabhängige Zufallsgrößen 
 \begin_inset Formula $X_{1}$
@@ -1389,11 +1536,39 @@ Zwei unabhängige Zufallsgrößen
 \end_inset 
 
  seien normalverteilt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\noun on 
+Gauß
+\noun default 
+-Verteilung 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Glockenkurve
+\begin_inset LatexCommand \index{Glockenkurve}
+
+\end_inset 
+
+.
+\end_inset 
+
+
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{\left(x-\bar{x}_{i}\right)^{2}}{2\sigma_{i}^{2}}},\qquad i=0,1\end{equation}
+p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{x-\bar{x}_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\end{equation}
 
 \end_inset 
 
@@ -1401,8 +1576,8 @@ p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{\left(x-\bar{x}_{i}\righ
 \layout Standard
 
 und additiv überlagert.
- Die Berechnung der resultierenden Größe 
-\begin_inset Formula $Y=X_{1}+X_{2}$
+ Die Berechnung der resultierenden Dichtefunktion 
+\begin_inset Formula $p(x)$
 \end_inset 
 
  kann dann durch Anwendung der Faltungsformel\SpecialChar ~
@@ -1438,7 +1613,7 @@ und dann einfach multipliziert (Faltungssatz).
 
 
 \begin_inset Formula \[
-\FT\left\{ p(y)\right\} =e^{-\left(\bar{x}_{1}+\bar{x}_{2}\right)}\cdot e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
+\FT\left\{ p(x)\right\} =e^{-\left(\bar{x}_{1}+\bar{x}_{2}\right)}\cdot e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
 
 \end_inset 
 
@@ -1446,7 +1621,7 @@ und dann einfach multipliziert (Faltungssatz).
 \layout Standard
 
 Die Rücktransformation von 
-\begin_inset Formula $\FT\left\{ p(y)\right\} $
+\begin_inset Formula $\FT\left\{ p(x)\right\} $
 \end_inset 
 
  liefert sofort die Lösung.
@@ -1454,7 +1629,7 @@ Die Rücktransformation von
 
 
 \begin_inset Formula \[
-p(y)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{\left(y-\bar{y}\right)^{2}}{2\sigma^{2}}},\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\bar{y}=\bar{x}_{1}+\bar{x}_{2}\]
+p(x)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{1}{2}\left(\frac{x-\bar{x}}{\sigma}\right)^{2}},\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\bar{x}=\bar{x}_{1}+\bar{x}_{2}\]
 
 \end_inset 
 
@@ -1470,84 +1645,920 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 \begin_inset Formula $\sigma_{i}^{2}$
 \end_inset 
 
- ist wieder normalverteilt mit dem Erwartungswert 
+ ist wieder normalverteilt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
+ allgemeingültigen Gleichungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_mean}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_var}
+
+\end_inset 
+
+.
+\end_inset 
+
+ mit dem Erwartungswert 
 \begin_inset Formula $\bar{x}_{1}+\bar{x}_{2}$
 \end_inset 
 
  und der Varianz 
-\begin_inset Formula $\sqrt{\smash[b]{\sigma_{1}^{2}+\sigma_{2}^{2}}}$
+\begin_inset Formula $\sigma_{1}^{2}+\sigma_{2}^{2}$
 \end_inset 
 
 .
 \layout Subsection
 
 Produkt von (unabhängigen) Zufallsgrößen
+\layout Subsubsection
+
+Verteilungsdichte
 \layout Standard
 
-Ähnlich wie in Kapitel 1.4.
- wird wieder von der Definition der Dichtefunktion für X sowie für die unkorreli
-erten Faktoren und ausgegangen.
- 
+
+\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte!eines Produkts}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von}
+
+\end_inset 
+
+Ähnlich wie in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_sum}
+
+\end_inset 
+
+ wird wieder von der Definition der Dichtefunktion für 
+\begin_inset Formula $X$
+\end_inset 
+
+ sowie für die unkorrelierten Faktoren 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ ausgegangen.
 \layout Standard
 
-Für einen willkürlich gewählten Wert u, den annimt, gilt .
- Für diesen Fall muß aber den Wert annehmen, damit das Produkt (also X)
- gleich x wird.
- 
+
+\begin_inset Formula \begin{xalignat*}{3}
+p(x) & =P\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =P\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =P\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+
+\end_inset 
+
+
 \layout Standard
 
-Aus Kapitel 1.3.
- ist außerdem bekannt, daß bei einer linearen Transformation von über u
- sich die Dichtefunktion folgendermaßen ändert Da es unendlich viele disjunkte
- Werte u gibt, die man hier ansetzen kann, müssen wieder die differentiellen
- Wahrscheinlichkeiten für alle diese Werte summiert (integriert) werden.
- Als Dichtefunktion für das Produkt ergibt sich damit (1.20) Erwartungswert
- von X Einsetzen von Gl.
- 1.20 in Gl.
- 1.7 sowie Vertauschung der Integrationsreihenfolge in Verbindung mit der
- Substitution liefert den Zusammenhang mit den einzelnen Erwartungswerten.
- (1.21) Auch in diesem Fall können also die Erwartungswerte einfach multipliziert
+Für einen willkürlich gewählten Wert 
+\begin_inset Formula $u$
+\end_inset 
+
+, den 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ annimt, gilt 
+\begin_inset Formula $p_{1}(u)=P\left(X_{1}=u\pm\tdc u/2\right)$
+\end_inset 
+
+.
+ Für diesen Fall muß aber 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ den Wert 
+\begin_inset Formula $x_{2}=x/u$
+\end_inset 
+
+, 
+\begin_inset Formula $\tdc x_{2}=\tdc x/u$
+\end_inset 
+
+ annehmen, damit das Produkt (also 
+\begin_inset Formula $X$
+\end_inset 
+
+) gleich 
+\begin_inset Formula $x$
+\end_inset 
+
+ wird.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{2}\left(\frac{x}{u}\right)=P\left(X_{2}=\frac{x}{u}\pm\frac{\tdc x}{2u}\right)=P\left(uX_{2}=x\pm\frac{\tdc x}{2}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Aus Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_transform}
+
+\end_inset 
+
+ ist außerdem bekannt, daß bei einer linearen Transformation von 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ über 
+\begin_inset Formula $u$
+\end_inset 
+
+ sich die Dichtefunktion folgendermaßen ändert.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{2}(x)=\frac{1}{u}\cdot p_{2}\left(\frac{x}{u}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da es unendlich viele disjunkte Werte 
+\begin_inset Formula $u$
+\end_inset 
+
+ gibt, müssen wieder die differentiellen Wahrscheinlichkeiten für alle diese
+ Werte summiert (integriert) werden.
+ Als Dichtefunktion für das Produkt ergibt sich damit
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p(x)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(u)p_{2}(x/u)}{u}\tdc u\label{eq:prob_continuous_prd}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Erwartungswert
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Erwartungswert}
+
+\end_inset 
+
+Einsetzen von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+
+\end_inset 
+
+ in 
+\begin_inset LatexCommand \ref{eq:prob_continuous_mean}
+
+\end_inset 
+
+, gefolgt von Vertauschung der Integrationsreihenfolge in Verbindung mit
+ der Substitution 
+\begin_inset Formula $w=x/u$
+\end_inset 
+
+ liefert den Zusammenhang zwischen den Erwartungswerten.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\bar{x} & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\\
+ & =\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}\frac{x\, p_{2}(x/u)}{u}\tdc x\tdc u\\
+ & =\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\int\limits _{w=-\infty}^{\infty}w\, p_{2}(w)\tdc w\tdc u\\
+ & =\bar{x}_{2}\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\bar{x}_{1}\bar{x}_{2}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Auch in diesem Fall können also die Erwartungswerte einfach multipliziert
  werden.
- Varianz von X Einsetzen von Gl.
- 1.20 in die Definitionsgleichung für die Varianz (Gl.
- 1.8) führt auch hier zum Ergebnis.
- Außerdem wird die im vorigen Kapitel abgeleitete Gl.
- 1.21 und die Substitution angewandt.
- (1.22) Bemerkenswert ist in diesem Zusammenhang, daß, abgesehen von mittelwertfr
-eien Zufallsgrößen, nicht einfach die Varianzen zu multiplizieren sind.
- Effektivwert von X Ausgehend von Gl.
- 1.9 gilt für den Effektivwert von X (1.23) und damit für den Effektivwert
- des Produkts N unabhängiger Zufallsgrößen7 (1.24) Zufallsprozesse Es wird
- angenommen, daß unendlich viele stochastische Vorgänge x(t) in der Zeit
- gleichzeitig ablaufen.
- Für sogenannte stationäre und ergodische Prozesse gilt, daß die beschreibenden
- Prozeßparameter vom Betrachtungszeitpunkt t unabhängig sind (Stationarität)
- und eine ausgewählte Realisierung x(t) des Prozesses X(t) zur Bestimmung
- seiner statistischen Parameter ausreicht (Ergodizität).
- Dies bedeutet insbesondere, daß die zeitlichen Mittelwerte, wie dargestellt,
- mit den Ensemble-Mittelwerten übereinstimmen.
- (1.25) 
 \layout Standard
 
-1 Die Größe wird Standardabweichung genannt.
- 2 Dieser Schritt stellt eine Verallgemeinerung dar, deshalb sind alle folgenden
- Aussagen auch wieder auf diskrete Zufallsgrößen anwendbar.
- 3 Der Effektivwert ist definiert zu 4 Wenn die Transformationsfunktion
- nicht monoton verläuft, ist die eineindeutige Zuordnung von X und Y nicht
- mehr möglich.
- 5 Die Lösung des Integrals ist oft relativ schwierig, weshalb zur Lösung
- nicht selten die Fourier-Transformation herangezogen wird.
- 6 Angewand auf unabhängige Rauschquellen ist interessant, daß nicht einfach
- die Effektivwerte zu addieren sind, um die Rauschamplitude der Überlagerung
- zu ermitteln.
- 7 Die Einfachheit der Rechenoperation prädestiniert den Effektivwert gegenüber
- der Varianz als Beschreibungsgröße unabhängiger Zufallsgrößen.
+
+\begin_inset Formula \begin{equation}
+\bar{x}=\bar{x}_{1}\bar{x}_{2}\label{eq:prob_prd_mean}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Varianz
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+Einsetzen von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+
+\end_inset 
+
+ in die Definitionsgleichung der Varianz (Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var}
+
+\end_inset 
+
+) führt auch hier schnell zum Ergebnis.
+ Außerdem wird die im vorigen Abschnitt abgeleitete Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+
+\end_inset 
+
+ sowie (wieder) die Substitution 
+\begin_inset Formula $w=x/u$
+\end_inset 
+
+ angewendet.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\sigma^{2} & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}\\
+ & =\int\limits _{x=-\infty}^{\infty}x^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x-\bar{x}^{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x/u)\tdc x\tdc u-\bar{x}^{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\bar{x}^{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\int\limits _{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\bar{x}_{1}\bar{x}_{2}\\
+ & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\tdc u-\bar{x}_{1}\bar{x}_{2}\\
+\sigma^{2} & =\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\left(\sigma_{1}^{2}+\bar{x}_{1}^{2}\right)-\bar{x}_{1}\bar{x}_{2}=\sigma_{1}^{2}\sigma_{2}^{2}+\bar{x}_{1}^{2}\sigma_{2}^{2}+\bar{x}_{2}^{2}\sigma_{1}^{2}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Bemerkenswert ist hierbei daß, abgesehen von mittelwertfreien Zufallsgrößen
+\begin_inset LatexCommand \index{Zufallsgrößen!mittelwertfreie}
+
+\end_inset 
+
+, nicht einfach die Varianzen zu multiplizieren sind.
+\layout Subsubsection
+
+Effektivwert
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Effektivwert}
+
+\end_inset 
+
+Ausgehend von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+
+\end_inset 
+
+ kann mit Hilfe der Varianz 
+\begin_inset Formula $\sigma^{2}$
+\end_inset 
+
+ der Effektivwert von 
+\begin_inset Formula $X$
+\end_inset 
+
+ bestimmt werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\tilde{x}=\sqrt{\sigma^{2}+\bar{x}^{2}}=\sqrt{\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\left(\sigma_{1}^{2}+\bar{x}_{1}^{2}\right)}=\tilde{x}_{1}\tilde{x}_{2}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Für den Effektivwert des Produkts 
+\begin_inset Formula $n$
+\end_inset 
+
+ unabhängiger Zufallsgrößen gilt dann
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\tilde{x}=\tilde{x}_{1}\cdot\tilde{x}_{2}\cdot\tilde{x}_{3}\cdot\cdots\cdot\tilde{x}_{n-1}\cdot\tilde{x}_{n}\msp.\end{equation}
+
+\end_inset 
+
+
+\layout Comment
+
+Zufallsprozesse
+\layout Comment
+
+Es soll angenommen sein, daß unendlich viele stochastische Vorgänge 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ in der Zeit gleichzeitig ablaufen.
+ Für sogenannte stationäre und ergodische Prozesse gilt, daß die beschreibenden
+ Prozeßparameter vom Betrachtungszeitpunkt 
+\begin_inset Formula $t$
+\end_inset 
+
+ unabhängig sind (Stationarität) und eine ausgewählte Realisierung 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ des Prozesses 
+\begin_inset Formula $Y(t)$
+\end_inset 
+
+ zur Bestimmung seiner statistischen Parameter ausreicht (Ergodizität).
+ Dies bedeutet unter anderem, daß alle statistischen Kenngrößen (Momente,
+ wie Erwartungswert, Varianz 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+etc
+\end_inset 
+
+) des Ensambles zu einem Zeitpunkt 
+\begin_inset Formula $t$
+\end_inset 
+
+ mit denselben Größen einer Realisierung 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+, über die Zeit betrachtet, übereinstimmen müssen.
+\layout Section
+
+Informationstechnische Anwendungen
+\layout Subsection
+
+Quantisierung
+\layout Subsubsection
+
+Quantisierungsrauschen
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Quantisierungsrauschen}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Quantisierung!Rauschen}
+
+\end_inset 
+
+Die Wandlung eines zeitkontinuierlichen Eingangssignals 
+\begin_inset Formula $f(t)$
+\end_inset 
+
+ in ein digitalisiertes Ausgangssignal 
+\begin_inset Formula $q(kT)$
+\end_inset 
+
+ ist ein Vorgang, der üblicherweise aus den Schritten: Abtasten und Quantisierun
+g
+\begin_inset LatexCommand \index{Quantisierung}
+
+\end_inset 
+
+ besteht\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefchap{3.7}]{Azizi:1990}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\bibrefchap{1.7.4}]{Embree:1991}
+
+\end_inset 
+
+.
+ Die Quantisierung in diskrete Amplitudenwerte erfolgt fast immer durch
+ Einsatz eines Analog/Digital-Wandlers (A/D-Converter, ADC).
+ Aufgrund der endlichen Anzahl an Quantisierungsstufen entsteht dabei ein
+ Fehler, der sich als Quantisierungsrauschen 
+\begin_inset Formula $n(t)$
+\end_inset 
+
+ repräsentiert (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:prob_quant_linear}
+
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename quantsteps.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:prob_quant_linear}
+
+\end_inset 
+
+Lineare Quantisierung
+\end_inset 
+
+
+\layout Standard
+
+Für stationäre ergodische Prozesse ist die Betrachtung von 
+\begin_inset Formula $q(t)$
+\end_inset 
+
+ zu einem beliebigen Abstastzeitpunkt 
+\begin_inset Formula $kT$
+\end_inset 
+
+ ausreichend
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Statt 
+\begin_inset Formula $n(t)=f(t)-q(t)$
+\end_inset 
+
  
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $n(kT)$
+\end_inset 
+
+ wird deshalb im Weiteren nur noch 
+\begin_inset Formula $n$
+\end_inset 
+
+ geschrieben.
+\end_inset 
+
+.
+ Wenn 
+\begin_inset Formula $\Delta$
+\end_inset 
+
+ die Höhe einer Quantisierungsstufe
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wir betrachten hier nur linearer Quantisierung, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ alle Quantisierungsstufen sind äquidistant.
+\end_inset 
+
+ darstellt, dann wird der Signalwert 
+\begin_inset Formula $f(kT)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\Lambda\leq f(kT)\leq\Lambda+\Delta$
+\end_inset 
+
+ bei idealer Quantisierung entweder auf den Wert 
+\begin_inset Formula $\Lambda$
+\end_inset 
+
+ oder aber 
+\begin_inset Formula $\Lambda+\Delta$
+\end_inset 
+
+ --- und zwar mit gleicher Wahrscheinlichkeit --- quantisiert.
+ Dadurch ist der Fehler
+\begin_inset LatexCommand \index{Quantisierung!Fehler}
+
+\end_inset 
+
+ 
+\begin_inset Formula $n$
+\end_inset 
+
+ im Intervall 
+\begin_inset Formula $-\Delta/2\leq n\leq\Delta/2$
+\end_inset 
+
+ gleichverteilt
+\begin_inset LatexCommand \index{Gleichverteilung}
+
+\end_inset 
+
+ mit der Verteilungsdichte 
+\begin_inset Formula $p(n)=\Delta^{-1}$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_equal_distribution}
+
+\end_inset 
+
+).
+ Der Effektivwert des Quantisierungsrauschens kann nun ausgehend von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+
+\end_inset 
+
+, mit Hilfe der für die Gleichverteilung gültigen Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_equal_mean}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_equal_var}
+
+\end_inset 
+
+, gewonnen werden.
+ Beim Einsetzen der konkreten Werte für die Intervallgrenzen (
+\begin_inset Formula $a=-\Delta/2$
+\end_inset 
+
+, 
+\begin_inset Formula $b=+\Delta/2$
+\end_inset 
+
+) fällt sofort auf, daß der Mittelwert verschwindet und sich die Effektivwertfor
+mel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+
+\end_inset 
+
+ weiter vereinfacht.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray}
+\tilde{n}^{2} & = & \sigma^{2}=\frac{(b-a)^{2}}{12}=\frac{\Delta^{2}}{12}\nonumber \\
+\tilde{n} & = & \frac{\Delta}{\sqrt{12}}\approx\frac{\Delta}{3,46}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+In der Praxis ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
+ des Quantisierungsrauschens aus den zugehörigen technischen Daten ermittelbar.
+ Dazu bestimmt man aus der Anzahl von Bit 
+\begin_inset Formula $B$
+\end_inset 
+
+ (die typischerweise den A/D-Wandler charakterisieren
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei in 
+\begin_inset Formula $B$
+\end_inset 
+
+ das Vorzeichen-Bit nicht enthalten sein soll.
+\end_inset 
+
+) und der maximal erlaubten Größe des Eingangssignals (üblicherweise die
+ Referenzspannung 
+\begin_inset Formula $U_{0}$
+\end_inset 
+
+) die Anzahl der Quantisierungsstufen zu 
+\begin_inset Formula $N=2^{B}$
+\end_inset 
+
+.
+ Bei linearer Quantisierung ergibt sich als Effektivwert für das dadurch
+ hervorgerufene Rauschen
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\tilde{n}=\frac{\Delta}{\sqrt{12}}=\frac{U_{0}}{N\sqrt{12}}=2^{-B}\frac{U_{0}}{\sqrt{12}}\msp.\label{eq:prob_noise_magnitude_bits}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR)
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Signal-Rausch-Abstand}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{SNR}
+
+\end_inset 
+
+Diese Größe ist als logarithmisches Verhältnis von Signalleistung zur Rauschleis
+tung definiert.
+\layout Standard
+
+
+\begin_inset Formula \[
+\textrm{SNR}=10\log\frac{P_{s}}{P_{n}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
+ mittels der Effektivwerte des Bezugssignals 
+\begin_inset Formula $\tilde{s}$
+\end_inset 
+
+ und des Quantisierungsrauschens
+\begin_inset LatexCommand \index{Quantisierungsrauschen}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\tilde{n}$
+\end_inset 
+
+ ausgedrückt werden.
+\layout Standard
+
+
+\begin_inset Formula \[
+\textrm{SNR}=10\log\left(\frac{\tilde{s}}{\tilde{n}}\right)^{2}=20\log\frac{\tilde{s}}{\tilde{n}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Bei einem sinusförmigen Nutzsignal 
+\begin_inset Formula $\tilde{s}$
+\end_inset 
+
+ maximaler Aussteuerung ist als größter Spitzenwert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Der durch den A/D-Wandler verzerrungsfrei, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ linear verarbeitet werden kann.
+\end_inset 
+
+ 
+\begin_inset Formula $U_{0}=\sqrt{\smash[b]{2}}\cdot\tilde{s}$
+\end_inset 
+
+ anzusetzen.
+ Durch Anwendung der Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_noise_magnitude_bits}
+
+\end_inset 
+
+ für die effektive Rauschamplitude kann der maximal erreichbare Signal-Rausch-Ab
+stand bestimmt werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+\textrm{SNR} & =20\log\left(\frac{U_{0}}{\sqrt{2}}\cdot\frac{2^{B}\sqrt{12}}{U_{0}}\right)\nonumber \\
+\textrm{SNR} & =10\log6+B\cdot20\log2\\
+\textrm{SNR} & \approx7,78\textrm{dB}+B\cdot6,02\textrm{dB}\nonumber \end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Wesentlich ist die Erkenntnis, daß bei einer Erhöhung der Auflösung des
+ A/D-Wandlers um ein Bit der Signal-Rausch-Abstand linear um 
+\begin_inset Formula $6,02\textrm{dB}$
+\end_inset 
+
+ zunimmt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Selbst wenn man andere Signalformen zugrunde legt, ändert sich dieser Fakt
+ nicht.
+\end_inset 
+
+.
+\layout Subsection
+
+Pulsbreitendiskriminierung
 \layout Standard
 
 
 \begin_inset LatexCommand \printindex{}
 
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[plain]{adsp}
+
+\end_inset 
+
+
+\layout Section
+\start_of_appendix 
+Notation
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\log$
+\end_inset 
+
+ Dekadischer Logarithmus
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\tilde{x}$
+\end_inset 
+
+ Effektivwert der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\bar{x}$
+\end_inset 
+
+ Erwartungswert der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\textrm{E}X$
+\end_inset 
+
+ Erwartungswert der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+SNR Signal-Rausch-Abstand
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\sigma^{2}$
+\end_inset 
+
+ Varianz einer Zufallsgröße
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\var\{ X\}$
+\end_inset 
+
+ Varianz der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $F(x)$
+\end_inset 
+
+ Verteilungsfunktion der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $P$
+\end_inset 
+
+ Wahrscheinlichkeit
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $p(x)$
+\end_inset 
+
+ Wahrscheinlichkeitsdichte der Zufallsgröße 
+\begin_inset Formula $X$
 \end_inset 
 
 
