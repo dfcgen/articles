@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.5 2004-11-07 16:48:25 ralf Exp $
+Version: $Id: probabil.lyx,v 1.6 2004-12-05 18:26:48 ralf Exp $
 \end_inset 
 
 
@@ -137,6 +137,9 @@ Zufallsgrößen
 
 \layout Section
 
+Eindimensionale Zufallsgrößen
+\layout Subsection
+
 Diskrete Zufallsgrößen
 \layout Standard
 
@@ -159,16 +162,12 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \end_inset 
 
  annehmen kann.
- Die Wahrscheinlichkeit 
-\begin_inset Formula $P$
-\end_inset 
-
-, daß der Wert 
+ Die Wahrscheinlichkeit, daß der Wert 
 \begin_inset Formula $x_{i}$
 \end_inset 
 
  angenommen wird, soll 
-\begin_inset Formula $p_{i}=P(X=x_{i})$
+\begin_inset Formula $p_{i}=\pr(X=x_{i})$
 \end_inset 
 
  betragen.
@@ -180,7 +179,7 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \begin_inset Formula $x_{i}$
 \end_inset 
 
- annimmt ist folgerichtig das sogenannte sichere Ereignis.
+ annimmt ist folgerichtig das sichere Ereignis.
 \layout Standard
 
 
@@ -255,7 +254,7 @@ collapsed true
 
 \layout Standard
 
-Oftmals auch anzutreffen als 
+Auch häufig anzutreffen als 
 \begin_inset Formula $\sigma^{2}$
 \end_inset 
 
@@ -357,7 +356,7 @@ Dieser Schritt stellt eine Verallgemeinerung dar --- deshalb sind alle folgenden
 \end_inset 
 
 .
-\layout Section
+\layout Subsection
 
 Kontinuierliche Zufallsgrößen
 \layout Standard
@@ -386,7 +385,7 @@ Wobei streng gesehen ein ganz konkreter Wert
 \end_inset 
 
  mit der Wahrscheinlichkeit 
-\begin_inset Formula $P(X=x)=0$
+\begin_inset Formula $\pr(X=x)=0$
 \end_inset 
 
  angenommen wird.
@@ -409,7 +408,7 @@ resp
 
 
 \begin_inset Formula \[
-p(x)=P\left(x-\frac{\tdc x}{2}\leq X\leq x+\frac{\tdc x}{2}\right)\]
+p(x)=\pr\left(x-\frac{\tdc x}{2}\leq X\leq x+\frac{\tdc x}{2}\right)\]
 
 \end_inset 
 
@@ -469,7 +468,7 @@ Die (jetzt) kontinuierliche Größe
 
 
 \begin_inset Formula \begin{equation}
-P(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\,\tdc x\label{eq:prob_continuous}\end{equation}
+\pr(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\,\tdc x\label{eq:prob_continuous}\end{equation}
 
 \end_inset 
 
@@ -516,7 +515,7 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=P(-\infty\leq X\leq x)=P(X\leq x)\msp.\label{eq:prob_distribution}\end{align}
+F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=\pr(-\infty\leq X\leq x)=\pr(X\leq x)\msp.\label{eq:prob_distribution}\end{align}
 
 \end_inset 
 
@@ -534,7 +533,7 @@ nlichkeitsdichte
 
 
 \begin_inset Formula \begin{equation}
-p(x)=\tdiff{F(x)}{x}\msp.\end{equation}
+p(x)=\tdiff{F(x)}{x}\msp.\label{eq:prob_continuous_differential}\end{equation}
 
 \end_inset 
 
@@ -556,9 +555,9 @@ Die Existenz des uneigentlichen Integrals in Definitionsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-P(a\leq x\leq b) & =\int\limits _{a}^{b}p(x)\,\tdc x\nonumber \\
+\pr(a\leq x\leq b) & =\int\limits _{a}^{b}p(x)\,\tdc x\nonumber \\
  & =\lim_{c\rightarrow-\infty}\left[\int\limits _{c}^{b}p(x)\,\tdc x-\int\limits _{c}^{a}p(x)\,\tdc x\right]\nonumber \\
-P(a\leq x\leq b) & =F(b)-F(a)\end{align}
+\pr(a\leq x\leq b) & =F(b)-F(a)\end{align}
 
 \end_inset 
 
@@ -571,7 +570,36 @@ Der Erwartungswert
 \end_inset 
 
  ergibt sich wie bei den diskreten Zufallsgrößen --- jetzt wird aber jeder
- Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert.
+ Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Mit Hilfe von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_differential}
+
+\end_inset 
+
+ kann man diese Formel als sogennanntes 
+\noun on 
+Stieltjes
+\noun default 
+-Integral darstellen\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~25]{Gnedenko:1958}
+
+\end_inset 
+
+: 
+\begin_inset Formula $\mean(X)=\int_{-\infty}^{\infty}x\,\tdc F(x)$
+\end_inset 
+
+.
+\end_inset 
+
+.
 \layout Standard
 
 
@@ -657,7 +685,7 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \end_inset 
 
 
-\layout Subsection*
+\layout Subsubsection*
 
 Gleichverteilung
 \layout Standard
@@ -745,12 +773,896 @@ Die Varianz ermittelt sich nach Formel\SpecialChar ~
 
 \layout Section
 
+Mehrdimensionale Zufallsgrößen
+\layout Subsection
+
+Definition und Eigenschaften
+\layout Standard
+
+Ein Vektor 
+\begin_inset Formula $\mvec{X}=(X_{1},X_{2},\ldots,X_{n})$
+\end_inset 
+
+ wird 
+\begin_inset Formula $n$
+\end_inset 
+
+-dimensionale Zufallsgröße
+\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale}
+
+\end_inset 
+
+ genannt, wenn jede der Einzelgrößen 
+\begin_inset Formula $X_{i}$
+\end_inset 
+
+ eine Zufallsgröße (über der gleichen Ereignisalgebra
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Eine Ereignisalgebra beschreibt die zu einem Vorgang 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ System (mit zufälligem Ergebnis) gehörigen Einzelereignisse, denen man
+ eine Wahrscheinlichkeit zuordnen möchte.
+\end_inset 
+
+) ist.
+ Die verbundene 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ gemeinsame Verteilungsfunktion
+\begin_inset LatexCommand \index{Verteilungsfunktion}
+
+\end_inset 
+
+ des Zufallsvektors 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+F(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})\]
+
+\end_inset 
+
+
+\layout Standard
+
+liefert zu jedem Wert 
+\begin_inset Formula $(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ die Wahrscheinlichkeit 
+\begin_inset Formula $\pr(X_{1}<x_{1}\cap X_{2}<x_{2}\cap\cdots\cap X_{n}<x_{n})$
+\end_inset 
+
+.
+\layout Standard
+
+Betrachten wir (der Einfachheit halber) den Fall 
+\begin_inset Formula $n=2$
+\end_inset 
+
+, dann lassen sich ähnlich zum eindimensionalen Fall folgende Eigenschaften
+ von 
+\begin_inset Formula $F(x_{1},x_{2})$
+\end_inset 
+
+ feststellen:
+\layout Itemize
+
+Für alle 
+\begin_inset Formula $x_{1},x_{2}$
+\end_inset 
+
+ gilt: 
+\begin_inset Formula $0\leq F(x_{1},x_{2})\leq1$
+\end_inset 
+
+.
+\layout Itemize
+
+Es existiert der Grenzwert 
+\begin_inset Formula $\lim_{x_{1}\rightarrow-\infty}F(x_{1},x_{2})=\lim_{x_{2}\rightarrow-\infty}F(x_{1},x_{2})=0$
+\end_inset 
+
+.
+\layout Itemize
+
+Für 
+\begin_inset Formula $x_{1}\rightarrow\infty$
+\end_inset 
+
+ entartet 
+\begin_inset Formula $F(x_{1},x_{2})$
+\end_inset 
+
+ zu einer eindimensionalen Randverteilung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ursache ist, daß die Variable 
+\begin_inset Formula $x_{1}$
+\end_inset 
+
+ beim Grenzübergang verschwindet und damit (im kontinuierlichen Fall nach
+ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+
+\end_inset 
+
+) der Integrand des äußeren Integrals in 
+\begin_inset Formula $\lim_{x_{1}\rightarrow\infty}F(x_{1},x_{2})=\int_{-\infty}^{x_{2}}\left[\lim_{x_{1}\rightarrow\infty}\int_{-\infty}^{x_{1}}p(u_{1},u_{2})\,\tdc u_{1}\right]\,\tdc u_{2}$
+\end_inset 
+
+ nur noch eine Funktion von 
+\begin_inset Formula $u_{2}$
+\end_inset 
+
+ ist.
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Randverteilung}
+
+\end_inset 
+
+, die nur noch von 
+\begin_inset Formula $x_{2}$
+\end_inset 
+
+ abhängt und die Wahrscheinlichkeit 
+\begin_inset Formula $\pr(X_{2}<x_{2})$
+\end_inset 
+
+ ausdrückt.
+ Gleiches gilt natürlich im umgekehrten Fall für 
+\begin_inset Formula $x_{2}$
+\end_inset 
+
+, also 
+\begin_inset Formula $\lim_{x_{2}\rightarrow\infty}F(x_{1},x_{2})=\pr(X_{1}<x_{1})$
+\end_inset 
+
+.
+\layout Standard
+
+Der Zusammenhang zwischen Dichte- und Verteilungsfunktion hat auch für den
+ Fall einer mehrdimensionalen Zufallsgröße Bestand, nur daß die Dichtefunktion
+ 
+\begin_inset Formula $p(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ ebenfalls mehrdimensional ist.
+ Für kontinuierliche Zufallsgrößen gibt sie die Wahrscheinlichkeit dafür,
+ daß 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+ im differentiellen Intervall 
+\begin_inset Formula $(x_{1}\pm\tdc x_{1}/2,x_{2}\pm\tdc x_{2}/2,\ldots,x_{n}\pm\tdc x_{n}/2)$
+\end_inset 
+
+ liegt.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+F(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\ldots\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_multi}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Umgekehrt lässt sich durch partielle Differentiation nach allen 
+\begin_inset Formula $x_{i}$
+\end_inset 
+
+ daraus wieder die Dichtefunktion ermitteln.
+\layout Standard
+
+
+\begin_inset Formula \[
+p(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Unabhängigkeit
+\layout Standard
+
+Als unabhängig werden Zufallsgrößen bezeichnet, deren Verteilungsfunktion
+ der folgenden Gleichung genügen:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n}) & =\pr(X_{1}<x_{1})\pr(X_{2}<x_{2})\cdots\pr(X_{n}<x_{n})\\
+F(x_{1},x_{2},\ldots,x_{n}) & =F(x_{1})F(x_{2})\cdots F(x_{n})\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Grundvoraussetzung für diese Äquivalenz ist die Definition der bedingten
+ Wahrscheinlichkeit
+\begin_inset LatexCommand \index{Wahrscheinlichkeit!bedingte}
+
+\end_inset 
+
+ zweier Ereignisse (beispielsweise 
+\begin_inset Formula $A$
+\end_inset 
+
+ und 
+\begin_inset Formula $B$
+\end_inset 
+
+), welche lautet:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\pr(B\mid A)=\frac{\pr(A\cap B)}{\pr(A)}\msp.\label{eq:prob_dependent_events}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Dabei ist 
+\begin_inset Formula $\pr(B\mid A)$
+\end_inset 
+
+ die (bedingte) Wahrscheinlichkeit daß Ereignis 
+\begin_inset Formula $B$
+\end_inset 
+
+ eintritt, unter der Voraussetzung das 
+\begin_inset Formula $A$
+\end_inset 
+
+ schon eingetreten ist.
+ 
+\begin_inset Formula $\pr(A\cap B)$
+\end_inset 
+
+ ist die Wahrscheinlichkeit, daß 
+\begin_inset Formula $A$
+\end_inset 
+
+ 
+\emph on 
+UND
+\emph default 
+ 
+\begin_inset Formula $B$
+\end_inset 
+
+ eintreten und 
+\begin_inset Formula $\pr(A)$
+\end_inset 
+
+ die Wahrscheinlichkeit für das (bedingungslose) Eintreten von Ereignis
+ 
+\begin_inset Formula $A$
+\end_inset 
+
+.
+\layout Standard
+
+Umgestellt nach 
+\begin_inset Formula $\pr(A\cap B)$
+\end_inset 
+
+ ergibt sich der sogenannte Multiplikationssatz.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\pr(A\cap B)=\pr(A)\pr(B\mid A)=\pr(B)\pr(A\mid B)\label{eq:prob_dependent_mult}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit dieser Formel wird auch anschaulich klar, weshalb die bedingte Wahrscheinlic
+hkeit genau so wie in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_dependent_events}
+
+\end_inset 
+
+ definiert ist --- sie bestimmt die Wahrscheinlichkeit des Eintretens von
+ Ereignis 
+\begin_inset Formula $A$
+\end_inset 
+
+ 
+\emph on 
+UND
+\emph default 
+ 
+\begin_inset Formula $B$
+\end_inset 
+
+ unter der Voraussetzung, daß 
+\begin_inset Formula $A$
+\end_inset 
+
+ eingetreten 
+\emph on 
+UND
+\emph default 
+ von 
+\begin_inset Formula $B$
+\end_inset 
+
+ (unter dieser Bedingung) gefolgt ist.
+\layout Standard
+
+Besteht eine solche Abhängigkeit nicht, dann gilt 
+\begin_inset Formula $\pr(A\mid B)=\pr(A)$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\pr(B\mid A)=\pr(B)$
+\end_inset 
+
+ und deshalb
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Grundlagen der Kombinatorik, 
+\noun on 
+Bool
+\noun default 
+'sche Algebra sowie die Rechenregeln für Wahrscheinlichkeiten (Produkt:
+ 
+\begin_inset Formula $\pr(A\cap B)=\pr(A)\pr(B)$
+\end_inset 
+
+, Summe: 
+\begin_inset Formula $\pr(A\cup B)=\pr(A)+\pr(B)-\pr(A\cap B)$
+\end_inset 
+
+, Komplement: 
+\begin_inset Formula $\pr(\bar{A})=1-\pr(A)$
+\end_inset 
+
+) werden hier vorausgesetzt.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\pr(A\cap B)=\pr(A)\pr(B)\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Kenngrößen
+\layout Subsubsection
+
+Erwartungswert
+\layout Standard
+
+Konsequent kann man auch die Definition des Erwartungswertes
+\begin_inset LatexCommand \index{Erwartungswert}
+
+\end_inset 
+
+ einer 
+\begin_inset Formula $n$
+\end_inset 
+
+-dimensionalen Zufallsgröße aus dem der eindimensionalen Größe ableiten,
+ wenn man außerdem Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ den Ideenkreis um sie herum, berücksichtigt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~25ff.]{Gnedenko:1958}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\mean(X_{k})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{k}p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1},\qquad0\leq k\leq n\]
+
+\end_inset 
+
+
+\layout Standard
+
+Man muß allerdings hinzufügen, daß es sich um den Erwartungswert der Randverteil
+ung
+\begin_inset LatexCommand \index{Randverteilung}
+
+\end_inset 
+
+ für 
+\begin_inset Formula $X_{k}$
+\end_inset 
+
+ handelt.
+ Praktisch ergibt sich dadurch ein Erwartungswerte-Vektor.
+\layout Standard
+
+
+\begin_inset Formula \[
+\mvec{\mean(X_{k})}=\left(\begin{array}{c}
+\mean(X_{1})\\
+\mean(X_{2})\\
+\vdots\\
+\mean(X_{k})\\
+\vdots\\
+\mean(X_{n})\end{array}\right)\]
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Varianz
+\layout Standard
+
+Die Varianz(en) einer 
+\begin_inset Formula $n$
+\end_inset 
+
+-dimensionalen Zufallsgröße können aus der allgemeinen Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_generic_var}
+
+\end_inset 
+
+ in Verbindung mit dem Erwartungswert (von eben) ermittelt werden.
+\layout Standard
+
+
+\begin_inset Formula \[
+\var(X_{k})=\mean\left[X_{k}-\mean(X_{k})\right]^{2},\qquad0\leq k\leq n\]
+
+\end_inset 
+
+
+\layout Standard
+
+Auch hier muß man hinzufügen, daß es sich um die Varianz der Randverteilungen
+ handelt.
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:prob_covariance_dependent}
+
+\end_inset 
+
+Kovarianz
+\layout Standard
+
+Sind 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
+ die folgende Größe Kovarianz
+\begin_inset LatexCommand \index{Kovarianz}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\cdot\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Kovarianz 
+\begin_inset Formula $\cov(X_{1},X_{2})$
+\end_inset 
+
+ kann auch noch anders ausgedrückt werden (Verschiebungssatz), wenn man
+\layout Itemize
+
+die Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_mean}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+
+\end_inset 
+
+ für den Erwartungswert von Produkten 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Summen von Zufallsgrößen berücksichtigt;
+\layout Itemize
+
+bedenkt, daß 
+\begin_inset Formula $\mean(X_{1})$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mean(X_{2})$
+\end_inset 
+
+ quasi konstante Faktoren sind;
+\layout Itemize
+
+die Trivialität 
+\begin_inset Formula $\mean(1)=1$
+\end_inset 
+
+ anwendet.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray}
+\cov(X_{1},X_{2}) & = & \mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\nonumber \\
+\cov(X_{1},X_{2}) & = & \mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+Im Fall 
+\begin_inset Formula $X=X_{1}=X_{2}$
+\end_inset 
+
+ entartet die Kovarianz zur Varianz (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Formula \[
+\cov(X,X)=\var(X)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für stetige Zufallsgößen kann man die Kovarianz wiefolgt konkretisieren:
+\layout Standard
+
+
+\begin_inset Formula \[
+\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Dabei geht man davon aus, daß der Vektor 
+\begin_inset Formula $\mvec{X}=(X_{1},X_{2})$
+\end_inset 
+
+ eine zweidimensionale Zufallsgröße mit der Dichtefunktion 
+\begin_inset Formula $p(x_{1},x_{2})$
+\end_inset 
+
+ ist.
+ Sind die Zufallsgrößen 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ stochastisch unabhängig, dann ist die Verteilungsfunktion 
+\begin_inset Formula $F$
+\end_inset 
+
+ von 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+ durch einfache Multiplikation zu bestimmen.
+\layout Standard
+
+
+\begin_inset Formula \[
+F(x_{1},x_{2})=\pr(X_{1}\leq x_{1}\cap X_{2}\leq x_{2})=F_{1}(x_{1})\cdot F_{2}(x_{2})\]
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Korrelationskoeffizient
+\layout Standard
+
+Der Korrelationskoeffizient
+\begin_inset LatexCommand \index{Korrelationskoeffizient}
+
+\end_inset 
+
+ ist ein Maß für die Abhängigkeit zweier Zufallsgrößen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\cdot\var(X_{2})}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Zu den Eigenschaften des Korrelationskoeffizienten:
+\layout Enumerate
+
+Wegen der Ungleichung 
+\begin_inset Formula $\left|\cov(X_{1},X_{2})\right|\leq\sqrt{\smash[b]{\var(X_{1})\cdot\var(X_{2})}}$
+\end_inset 
+
+ gilt immer: 
+\begin_inset Formula $-1\leq\corr(X_{1},X_{2})\leq+1$
+\end_inset 
+
+.
+\layout Enumerate
+
+Linear abhängige Zufallsgrößen (
+\begin_inset Formula $X_{2}=aX_{1}+b)$
+\end_inset 
+
+ führen immer zu: 
+\begin_inset Formula $\corr(X_{1},X_{2})=\pm1$
+\end_inset 
+
+.
+\layout Enumerate
+
+Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ die Kovarianz identisch Null ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
+ umgekehrt ist die Aussage jedoch gültig.
+\end_inset 
+
+: 
+\begin_inset Formula $\corr(X_{1},X_{2})=0$
+\end_inset 
+
+.
+\layout Section
+
+Funktionen von Zufallsgrößen
+\layout Standard
+
+Allgemein kann das Problem von Funktionen mehrdimensionaler Zufallsgrößen
+ folgendermaßen dargestellt werden:
+\layout Quotation
+
+Gesucht ist die Verteilungsfunktion 
+\begin_inset Formula $G(y_{1},y_{2},\ldots,y_{n})$
+\end_inset 
+
+ der Zufallsgröße 
+\begin_inset Formula $\mvec{Y}$
+\end_inset 
+
+, die sich aus der Transformation der Zufallsgröße 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+ mit der Verteilungsfunktion 
+\begin_inset Formula $F(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ und der Wahrscheinlichkeitsdichte 
+\begin_inset Formula $p(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ durch relle Funktionen 
+\begin_inset Formula $f_{1},f_{2},\ldots,f_{n}$
+\end_inset 
+
+ dergestalt
+\layout Quotation
+
+
+\begin_inset Formula \begin{eqnarray*}
+Y_{1} & = & f_{1}(X_{1},X_{2},\ldots,X_{n})\\
+Y_{2} & = & f_{2}(X_{1},X_{2},\ldots,X_{n})\\
+\vdots & = & \vdots\\
+Y_{n} & = & f_{n}(X_{1},X_{2},\ldots,X_{n})\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Quotation
+
+ergibt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~23]{Gnedenko:1958}
+
+\end_inset 
+
+.
+\layout Standard
+
+Theoretisch ist die Lösung durch Anwendung von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+
+\end_inset 
+
+ zu erlangen,
+\layout Standard
+
+
+\begin_inset Formula \[
+G(y_{1},y_{2},\ldots,y_{n})=\int\limits _{-\infty}^{y_{1}}\int\limits _{-\infty}^{y_{2}}\cdots\int\limits _{-\infty}^{y_{n}}p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+praktisch haben vor allem die Spezialfälle der folgenden Abschnitte Bedeutung.
+\layout Standard
+
+In ähnlicher Art und Weise kann man die Erwartungswerte der resultierenden
+ Größen 
+\begin_inset Formula $Y_{i}$
+\end_inset 
+
+ bestimmen
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\mean(Y_{1}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{1}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\\
+\mean(Y_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{1}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\\
+\vdots & =\vdots\\
+\mean(Y_{n}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{n}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+was etwas leichter lesbar so aussieht:
+\layout Standard
+
+
+\begin_inset Formula \[
+\mvec{\mean(Y)}=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\mvec{f}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
 
 \begin_inset LatexCommand \label{sec:prob_transform}
 
 \end_inset 
 
-Transformation von Verteilungen
+Funktion einer eindimensionalen Zufallsgröße
 \layout Standard
 
 Die Transformation der Verteilung einer kontinuierlichen Zufallsgröße 
@@ -800,7 +1712,7 @@ Rosa);
 
 oder die Bestimmung der Amplitudenverteilung analytischer Funktionen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{2.5}]{Schruefer:1990}
+\begin_inset LatexCommand \cite[2.5]{Schruefer:1990}
 
 \end_inset 
 
@@ -1128,7 +2040,13 @@ Die wesentliche Erkenntnis daraus ist, daß die Verteilungsfunktion direkt
 \begin_inset Formula $\left|f'(x)\right|$
 \end_inset 
 
- transformiert wird.
+ transformiert wird\SpecialChar ~
+
+\begin_inset LatexCommand \cite[A.2.1.7.5]{Birolini:1997}
+
+\end_inset 
+
+.
 \layout Subsection*
 
 Trigonometrische Übertragungsfunktion (bei Gleichverteilung)
@@ -1203,17 +2121,14 @@ p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\msp.\end{equat
 \end_inset 
 
 
-\layout Section
-
-Unabhängige Zufallsgrößen
 \layout Subsection
 
 
-\begin_inset LatexCommand \label{sec:prob_sum}
+\begin_inset LatexCommand \label{sec:prob_sum_independent}
 
 \end_inset 
 
-Summe von (unabhängigen) Zufallsgrößen
+Summe unabhängiger Zufallsgrößen
 \layout Subsubsection
 
 Verteilungsdichte
@@ -1246,7 +2161,7 @@ Vorraussetzung soll die Definition der Dichtefunktion für die Summe
 
 
 \begin_inset Formula \begin{xalignat*}{3}
-p(x) & =P\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =P\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =P\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+p(x) & =\pr\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =\pr\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
 \end_inset 
 
@@ -1274,7 +2189,7 @@ Für einen willkürlich gewählten Wert
 
 
 \begin_inset Formula \[
-p(u)=P\left(X_{1}=u\pm\frac{\tdc u}{2}\right)\]
+p(u)=\pr\left(X_{1}=u\pm\frac{\tdc u}{2}\right)\]
 
 \end_inset 
 
@@ -1671,7 +2586,7 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 
  ist wieder normalverteilt
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -1702,7 +2617,94 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 .
 \layout Subsection
 
-Produkt von (unabhängigen) Zufallsgrößen
+Summe abhängiger Zufallsgrößen
+\layout Subsubsection
+
+Varianz
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Zufallsgrößen!Summe von}
+
+\end_inset 
+
+Anders als bei den unabhängigen Zufallsgrößen ist die Varianz der Summe
+ zweier (allgemein abhängiger) Zufallsgrößen nicht einfach die bloße Additionen
+ der einzelnen Varianzen.
+ Sie ergibt sich statt dessen aus (und unter Zuhilfenahme von) Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\var(X_{1}+X_{2}) & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\\
+ & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit einem kleinen Rückgriff auf Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+
+\end_inset 
+
+ kann man die letzte Formel auch folgendermaßen schreiben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_var}
+
+\end_inset 
+
+) zu 
+\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
+\end_inset 
+
+.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Produkt unabhängiger Zufallsgrößen
 \layout Subsubsection
 
 Verteilungsdichte
@@ -1720,7 +2722,7 @@ Verteilungsdichte
 
 Ähnlich wie in Abschnitt\SpecialChar ~
 
-\begin_inset LatexCommand \ref{sec:prob_sum}
+\begin_inset LatexCommand \ref{sec:prob_sum_independent}
 
 \end_inset 
 
@@ -1741,7 +2743,7 @@ Verteilungsdichte
 
 
 \begin_inset Formula \begin{xalignat*}{3}
-p(x) & =P\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =P\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =P\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+p(x) & =\pr\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =\pr\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
 \end_inset 
 
@@ -1757,7 +2759,7 @@ Für einen willkürlich gewählten Wert
 \end_inset 
 
  annimt, gilt 
-\begin_inset Formula $p_{1}(u)=P\left(X_{1}=u\pm\tdc u/2\right)$
+\begin_inset Formula $p_{1}(u)=\pr\left(X_{1}=u\pm\tdc u/2\right)$
 \end_inset 
 
 .
@@ -1786,7 +2788,7 @@ Für einen willkürlich gewählten Wert
 
 
 \begin_inset Formula \[
-p_{2}\left(\frac{x}{u}\right)=P\left(X_{2}=\frac{x}{u}\pm\frac{\tdc x}{2u}\right)=P\left(uX_{2}=x\pm\frac{\tdc x}{2}\right)\]
+p_{2}\left(\frac{x}{u}\right)=\pr\left(X_{2}=\frac{x}{u}\pm\frac{\tdc x}{2u}\right)=\pr\left(uX_{2}=x\pm\frac{\tdc x}{2}\right)\]
 
 \end_inset 
 
@@ -2010,312 +3012,51 @@ Für den Effektivwert des Produkts
 
 \layout Section
 
-Abhängige Zufallsgrößen
-\layout Subsection
-
-Varianz
-\layout Standard
-
-
-\begin_inset LatexCommand \index{Varianz}
-
-\end_inset 
-
-Anders als bei den unabhängigen Zufallsgrößen ist die Varianz der Summe
- zweier (jetzt abhängiger) Zufallsgrößen nicht einfach die bloße Additionen
- der einzelnen Varianzen.
- Sie ergibt sich statt dessen aus (und unter Zuhilfenahme von) Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
-
-\end_inset 
-
- zu
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\var(X_{1}+X_{2}) & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\\
- & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\\
- & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\\
- & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\msp.\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-Mit einem kleinen Vorgriff auf den nächsten Abschnitt kann man die abschließende
- Formel auch folgendermaßen schreiben
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_sum_var}
-
-\end_inset 
-
-) zu 
-\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
-\end_inset 
-
-.
-\end_inset 
-
-:
-\layout Standard
-
-
-\begin_inset Formula \[
-\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\]
-
-\end_inset 
-
-
-\layout Subsection
-
-Kovarianz
-\layout Standard
-
-Sind 
-\begin_inset Formula $X_{1}$
-\end_inset 
-
- und 
-\begin_inset Formula $X_{2}$
-\end_inset 
-
- zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
- die folgende Größe Kovarianz
-\begin_inset LatexCommand \index{Kovarianz}
-
-\end_inset 
-
- von 
-\begin_inset Formula $X_{1}$
-\end_inset 
-
-und 
-\begin_inset Formula $X_{2}$
-\end_inset 
-
-.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\cdot\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Die Kovarianz 
-\begin_inset Formula $\cov(X_{1},X_{2})$
-\end_inset 
-
- kann auch noch anders ausgedrückt werden (Verschiebungssatz), wenn man
-\layout Itemize
-
-die Formeln\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_sum_mean}
-
-\end_inset 
-
- und\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_prd_mean}
-
-\end_inset 
-
- für den Erwartungswert von Produkten 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- Summen von Zufallsgrößen berücksichtigt;
-\layout Itemize
-
-bedenkt, daß 
-\begin_inset Formula $\mean(X_{1})$
-\end_inset 
-
- und 
-\begin_inset Formula $\mean(X_{2})$
-\end_inset 
-
- quasi konstante Faktoren sind;
-\layout Itemize
-
-die Trivialität 
-\begin_inset Formula $\mean(1)=1$
-\end_inset 
-
- anwendet.
-\layout Standard
-
-
-\begin_inset Formula \begin{eqnarray}
-\cov(X_{1},X_{2}) & = & \mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\nonumber \\
-\cov(X_{1},X_{2}) & = & \mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}\end{eqnarray}
-
-\end_inset 
-
-
-\layout Standard
-
-Im Fall 
-\begin_inset Formula $X=X_{1}=X_{2}$
-\end_inset 
-
- reduziert sich die Kovarianz zur Varianz von 
-\begin_inset Formula $X$
-\end_inset 
-
- (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
-
-\end_inset 
-
-).
-\layout Standard
-
-
-\begin_inset Formula \[
-\cov(X,X)=\var(X)\]
-
-\end_inset 
-
-
-\layout Standard
-
-Für stetige Zufallsgößen kann man die Kovarianz wiefolgt konkretisieren:
-\layout Standard
-
-
-\begin_inset Formula \[
-\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\]
-
-\end_inset 
-
-
-\layout Subsection
-
-Korrelationskoeffizient
-\layout Standard
-
-Der Korrelationskoeffizient
-\begin_inset LatexCommand \index{Korrelationskoeffizient}
-
-\end_inset 
-
- ist ein Maß für die Abhängigkeit zweier Zufallsgrößen.
-\layout Standard
-
-
-\begin_inset Formula \[
-\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\cdot\var(X_{2})}}\]
-
-\end_inset 
-
-
-\layout Standard
-
-Wegen der Ungleichung 
-\begin_inset Formula $\left|\cov(X_{1},X_{2})\right|\leq\sqrt{\smash[b]{\var(X_{1})\cdot\var(X_{2})}}$
-\end_inset 
-
- gilt immer: 
-\begin_inset Formula $-1\leq\corr(X_{1},X_{2})\leq+1$
-\end_inset 
-
-.
- Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- die Kovarianz identisch Null ist
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
- umgekehrt ist die Aussage jedoch gültig.
-\end_inset 
-
-: 
-\begin_inset Formula $\corr(X_{1},X_{2})=0$
-\end_inset 
-
-.
-\layout Section
-
 Zufallsprozesse
 \layout Subsection
 
 Definition
-\layout Comment
+\layout Standard
 
-Es soll angenommen sein, daß unendlich viele stochastische Vorgänge 
-\begin_inset Formula $y(t)$
+Das Modell des stochstischen Prozesses geht davon aus, daß beliebig viele
+ stochastische Vorgänge 
+\begin_inset Formula $\mvec{X}(t)$
 \end_inset 
 
  in der Zeit gleichzeitig ablaufen.
- Für sogenannte stationäre und ergodische Prozesse gilt, daß die beschreibenden
- Prozeßparameter vom Betrachtungszeitpunkt 
+ Für 
+\emph on 
+stationäre
+\emph default 
+ und 
+\emph on 
+ergodische
+\emph default 
+ Prozesse gilt, daß die beschreibenden Prozeßparameter vom Betrachtungszeitpunkt
+ 
 \begin_inset Formula $t$
 \end_inset 
 
  unabhängig sind (Stationarität) und eine ausgewählte Realisierung 
-\begin_inset Formula $y(t)$
+\begin_inset Formula $X(t)$
 \end_inset 
 
  des Prozesses 
-\begin_inset Formula $Y(t)$
+\begin_inset Formula $\mvec{X}(t)$
 \end_inset 
 
  zur Bestimmung seiner statistischen Parameter ausreicht (Ergodizität).
  Dies bedeutet unter anderem, daß alle statistischen Kenngrößen (Momente,
- wie Erwartungswert, Varianz 
+ wie Erwartungswert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte identisch sein sollen.
+\end_inset 
+
+, Varianz 
 \begin_inset ERT
 status Collapsed
 
@@ -2325,15 +3066,35 @@ status Collapsed
 etc
 \end_inset 
 
-) des Ensambles zu einem Zeitpunkt 
-\begin_inset Formula $t$
+) des Ensembles zu einem Zeitpunkt 
+\begin_inset Formula $t_{0}$
 \end_inset 
 
- mit denselben Größen einer Realisierung 
-\begin_inset Formula $y(t)$
+ mit denselben Größen 
+\emph on 
+einer
+\emph default 
+ Realisierung 
+\begin_inset Formula $X(t)$
 \end_inset 
 
-, über die Zeit betrachtet, übereinstimmen müssen.
+, über die Zeit betrachtet, übereinstimmen müssen 
+\begin_inset LatexCommand \cite{Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\mean\left[\mvec{X}(t_{0})\right] & =\mean\left[X(t)\right]\\
+\var\left[\mvec{X}(t_{0})\right] & =\var\left[X(t)\right]\\
+ & \vdots\end{align*}
+
+\end_inset 
+
+
 \layout Subsection
 
 Autokorrelation
@@ -2377,12 +3138,12 @@ g
 
  besteht\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{3.7}]{Azizi:1990}
+\begin_inset LatexCommand \cite[3.7]{Azizi:1990}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{1.7.4}]{Embree:1991}
+\begin_inset LatexCommand \cite[1.7.4]{Embree:1991}
 
 \end_inset 
 
@@ -2606,7 +3367,7 @@ mel\SpecialChar ~
 
 \layout Standard
 
-In der Praxis ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
+In der Theorie ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
  des Quantisierungsrauschens aus den zugehörigen technischen Daten ermittelbar.
  Dazu bestimmt man aus der Anzahl von Bit 
 \begin_inset Formula $B$
@@ -2614,7 +3375,7 @@ In der Praxis ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
 
  (die typischerweise den A/D-Wandler charakterisieren
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -2817,7 +3578,7 @@ cf
 \begin_inset Formula $T_{2}$
 \end_inset 
 
- handelt ist dann das komplementäre Ereignis.
+ handelt, ist dann das komplementäre Ereignis.
 \layout Standard
 
 
@@ -2921,15 +3682,15 @@ cf
 
 
 \begin_inset Formula \[
-P(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
+\pr(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
 
 \end_inset 
 
 
 \layout Standard
 
-Substitutiert man 
-\begin_inset Formula $z=\left(u-\mu_{i}\right)/\sigma_{i}$
+Substituiert man 
+\begin_inset Formula $z=(u-\mu_{i})/\sigma_{i}$
 \end_inset 
 
  mit 
@@ -2980,7 +3741,7 @@ Die Wahrscheinlichkeit, daß der Impuls mit der Länge
 
 
 \begin_inset Formula \[
-P(T_{1}<T)=\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right)\]
+\pr(T_{1}<T)=\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right)\]
 
 \end_inset 
 
@@ -2996,7 +3757,7 @@ Entsprechend gilt für die Wahrscheinlichkeit den Impuls mit der Breite
 
 
 \begin_inset Formula \[
-P(T_{2}>T)=1-P(T_{2}<T)=1-\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\mu_{2}-T}{\sigma_{2}}\right)\]
+\pr(T_{2}>T)=1-\pr(T_{2}<T)=1-\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\mu_{2}-T}{\sigma_{2}}\right)\]
 
 \end_inset 
 
@@ -3012,7 +3773,7 @@ Gesucht wird nun der optimale Abtastzeitpunkt
 
 
 \begin_inset Formula \begin{align*}
-P(T_{1}<T) & =P(T_{2}>T)\\
+\pr(T_{1}<T) & =\pr(T_{2}>T)\\
 \cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right) & =\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)\\
 \frac{T-\mu_{1}}{\sigma_{1}} & =\frac{\mu_{2}-T}{\sigma_{2}}\end{align*}
 
@@ -3064,7 +3825,7 @@ Bei Berücksichtigung der Beziehung
 
 
 \begin_inset Formula \[
-P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{T-\mu_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\mu_{2}-\mu_{1}}{2\sigma}\right)\msp.\]
+\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{T-\mu_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\mu_{2}-\mu_{1}}{2\sigma}\right)\msp.\]
 
 \end_inset 
 
@@ -3109,7 +3870,7 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 
 
 \begin_inset Formula \[
-P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{1}{\varepsilon}\cdot\frac{\mu_{2}-\mu_{1}}{\mu_{2}+\mu_{1}}\right)\msp.\]
+\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{1}{\varepsilon}\cdot\frac{\mu_{2}-\mu_{1}}{\mu_{2}+\mu_{1}}\right)\msp.\]
 
 \end_inset 
 
@@ -3141,11 +3902,43 @@ Notation
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\mu$
+\end_inset 
+
+ Erwartungswert der Normalverteilung
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\mean(X)$
 \end_inset 
 
  Erwartungswert der Zufallsgröße 
 \begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\cov(X_{1},X_{2})$
+\end_inset 
+
+ Kovarianz der Zufallsgrößen 
+\begin_inset Formula $X_{1},X_{2}$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\corr(X_{1},X_{2})$
+\end_inset 
+
+ Korrelationskoeffizient der Zufallsgrößen 
+\begin_inset Formula $X_{1},X_{2}$
 \end_inset 
 
 
@@ -3197,14 +3990,6 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\mu$
-\end_inset 
-
- Erwartungswert der Normalverteilung
-\layout List
-\labelwidthstring 00.00.0000
-
-
 \begin_inset Formula $F(x)$
 \end_inset 
 
@@ -3217,7 +4002,7 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $P$
+\begin_inset Formula $\pr$
 \end_inset 
 
  Wahrscheinlichkeit
@@ -3236,7 +4021,7 @@ SNR Signal-Rausch-Abstand
 \layout Standard
 
 
-\begin_inset LatexCommand \BibTeX[geralpha]{adsp}
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp,math}
 
 \end_inset 
 
