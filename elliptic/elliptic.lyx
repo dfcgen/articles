@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic.lyx,v 1.1 2004-09-27 19:33:19 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.2 2004-10-09 20:09:16 ralf Exp $
 \end_inset 
 
 
@@ -3062,7 +3062,7 @@ Weitere ausgewählte Formeln für
 \end_inset 
 
  und 
-\begin_inset Formula $\jcn$
+\begin_inset Formula $\jdn$
 \end_inset 
 
  sind
@@ -3070,8 +3070,8 @@ Weitere ausgewählte Formeln für
 
 
 \begin_inset Formula \begin{eqnarray*}
-\jcn(u+a)\jcn(u-a) & = & \frac{\jcn^{2}u\jcn^{2}a-{k'}^{2}\jsn^{2}u\jsn^{2}a}{1-k^{2}\jsn^{2}u\cdot\jsn^{2}v}\\
-\jdn(u+a)\jdn(u-a) & = & \frac{\jdn^{2}u\jdn^{2}a+k^{2}{k'}^{2}\jsn^{2}u\jsn^{2}a}{1-k^{2}\jsn^{2}u\cdot\jsn^{2}v}\msp.\end{eqnarray*}
+\jcn(u+a)\jcn(u-a) & = & \frac{\jcn^{2}u\jcn^{2}a-{k'}^{2}\jsn^{2}u\jsn^{2}a}{1-k^{2}\jsn^{2}u\cdot\jsn^{2}a}\\
+\jdn(u+a)\jdn(u-a) & = & \frac{\jdn^{2}u\jdn^{2}a+k^{2}{k'}^{2}\jsn^{2}u\jsn^{2}a}{1-k^{2}\jsn^{2}u\cdot\jsn^{2}a}\msp.\end{eqnarray*}
 
 \end_inset 
 
@@ -3192,19 +3192,12 @@ Die Gleichungen für halbe Argumente sind aus dem Gleichungssystem für doppelte
 
 \layout Subsection
 
-Imaginäre Argumente
-\layout Subsubsection
-
 
 \begin_inset LatexCommand \label{sec:ellsn_imag}
 
 \end_inset 
 
-Imaginäre Transformation von 
-\begin_inset Formula $\jsn$
-\end_inset 
-
-
+Imaginäre Argumente
 \layout Standard
 
 
@@ -3306,7 +3299,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\esn{\ji v}{k}=\ji\esc{\nu}{k'}}\label{eq:ellsn_imag}\end{equation}
+\boxed{\esn{\ji v}{k}=\ji\esc{v}{k'}}\label{eq:ellsn_imag}\end{equation}
 
 \end_inset 
 
@@ -3431,13 +3424,6 @@ Liouville
 \end_inset 
 
 
-\layout Subsubsection
-
-
-\begin_inset Formula $\jcn$
-\end_inset 
-
- für imaginäre Argumente
 \layout Standard
 
 Für 
@@ -3458,26 +3444,23 @@ Für
 \begin_inset Formula \begin{align}
 \ecn{\ji v}{k} & =\sqrt{1-\esn[2]{\ji v}{k}}\nonumber \\
  & =\sqrt{1+\esc[2]{v}{k'}}\nonumber \\
- & =\frac{1}{\ecn{v}{k'}}=\enc{\nu}{k'}\label{eq:ellcn_imag}\end{align}
+ & =\frac{1}{\ecn{v}{k'}}=\enc{v}{k'}\label{eq:ellcn_imag}\end{align}
 
 \end_inset 
 
 
-\layout Subsubsection
-
-
-\begin_inset Formula $\jdn$
-\end_inset 
-
- für imaginäre Argumente
 \layout Standard
 
-Für die elliptische Delta-Amplitude gilt:
+Gleichermaßen für die elliptische Delta-Amplitude 
+\begin_inset Formula $\edn{\ji v}{k}$
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\edn{\ji v}{k}=\edc{\nu}{k'}\msp.\label{eq:elldn_imag}\end{equation}
+\edn{\ji v}{k}=\edc{v}{k'}\msp.\label{eq:elldn_imag}\end{equation}
 
 \end_inset 
 
@@ -3500,9 +3483,9 @@ Ausgehend von der Definitionsgleichung\SpecialChar ~
 
 \begin_inset Formula \begin{align*}
 \edn{\ji v}{k} & =\sqrt{1-k^{2}\esn[2]{\ji v}{k}}\\
- & =\sqrt{1-k^{2}\ji^{2}\frac{\esn[2]{\nu}{k'}}{\ecn[2]{\nu}{k'}}}\\
- & =\sqrt{\frac{\ecn[2]{\nu}{k'}+k^{2}\esn[2]{\nu}{k'}}{\ecn[2]{\nu}{k'}}}\\
- & =\frac{\sqrt{1-k'^{2}\esn[2]{\nu}{k'}}}{\ecn{v}{k'}}\\
+ & =\sqrt{1-k^{2}\ji^{2}\frac{\esn[2]{v}{k'}}{\ecn[2]{v}{k'}}}\\
+ & =\sqrt{\frac{\ecn[2]{v}{k'}+k^{2}\esn[2]{v}{k'}}{\ecn[2]{v}{k'}}}\\
+ & =\frac{\sqrt{1-k'^{2}\esn[2]{v}{k'}}}{\ecn{v}{k'}}\\
  & =\frac{\edn{v}{k'}}{\ecn{v}{k'}}=\edc{v}{k'}\msp.\end{align*}
 
 \end_inset 
@@ -3510,22 +3493,29 @@ Ausgehend von der Definitionsgleichung\SpecialChar ~
 
 \layout Standard
 
-Bemerkenswert an Gleichung\SpecialChar ~
+Abschließend noch (ohne Beweis) die anderen elliptischen Funktionen für
+ imaginäre Argumente.
+\layout Standard
 
-\begin_inset LatexCommand \ref{eq:elldn_imag}
+
+\begin_inset Formula \begin{xalignat*}{3}
+\esc{\ji v}{k} & =\ji\esn{v}{k'} & \esd{\ji v}{k} & =\ji\esd{v}{k'} & \ens{\ji v}{k} & =-\ji\ecs{v}{k'}\\
+\ecs{\ji v}{k} & =-\ji\ens{v}{k'} & \ecd{\ji v}{k} & =\ejnd{v}{k'} & \enc{\ji v}{k} & =\enc{v}{k'}\\
+\eds{\ji v}{k} & =-\ji\eds{v}{k'} & \edc{\ji v}{k} & =\edn{v}{k'} & \ejnd{\ji v}{k} & =\ecd{v}{k'}\end{xalignat*}
 
 \end_inset 
 
- ist vor allem der Fakt, daß die elliptische Delta-Amplitude trotz imaginären
- Arguments reel bleibt.
- Aber am bedeutsamsten ist wohl die Tatsache, daß alle 
+
+\layout Standard
+
+Bemerkenswert ist, daß alle 
 \noun on 
 Jacobi
 \noun default 
 'schen elliptischen Funktionen sowohl für imaginäre als auch reelle Argumente
- grundsätzlich immer periodisch sind
+ immer periodisch sind
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -4190,7 +4180,7 @@ status Collapsed
 cf
 \end_inset 
 
-\SpecialChar ~
+ Abschnitt\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:elltr}
 
@@ -5977,7 +5967,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-F(x,y)=p_{n}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x)\msp,\label{eq:elltr_general_algfunc}\end{equation}
+F(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x)\msp,\label{eq:elltr_general_algfunc}\end{equation}
 
 \end_inset 
 
@@ -5985,7 +5975,7 @@ F(x,y)=p_{n}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x)\m
 \layout Standard
 
 wobei 
-\begin_inset Formula $p_{0},p_{1},\ldots p_{n-1},p_{n}$
+\begin_inset Formula $p_{0},p_{1},\ldots p_{m-1},p_{m}$
 \end_inset 
 
  Polynome in 
@@ -7330,7 +7320,7 @@ Der Spezialfall
 \end_inset 
 
  wird dabei als die 1.\SpecialChar ~
-elliptische Haupttransformation (
+elliptische Haupt-Transformation (
 \begin_inset Formula $n$
 \end_inset 
 
@@ -7343,7 +7333,7 @@ elliptische Haupttransformation (
 \end_inset 
 
  als 2.\SpecialChar ~
-elliptische Haupttransformation (
+elliptische Haupt-Transformation (
 \begin_inset Formula $n$
 \end_inset 
 
@@ -7527,7 +7517,7 @@ Weitere Eigenschaften der Lösungsfunktion ergeben sich aus den Betrachtungen
 \begin_inset Formula $u$
 \end_inset 
 
- insbesondere für die elliptischen Haupttransformationen (
+ insbesondere für die elliptischen Haupt-Transformationen (
 \begin_inset Formula $\gamma=n$
 \end_inset 
 
@@ -8513,8 +8503,8 @@ Nun soll noch nachgewiesen werden, daß die Koeffizienten
 
 
 \begin_inset Formula \begin{align}
-\pn{x}{\mu} & =\frac{1}{k\zn{x}{\nu}}\label{eq:elltr_poles_per_zeroes}\\
-\zn{x}{\nu}\cdot\pn{x}{\nu} & =\frac{1}{k}\end{align}
+\pn{x}{\mu} & =\frac{1}{k\zn{x}{\nu}}\nonumber \\
+\zn{x}{\nu}\cdot\pn{x}{\mu} & =\frac{1}{k}\label{eq:elltr_poles_per_zeroes}\end{align}
 
 \end_inset 
 
@@ -10842,24 +10832,24 @@ g
 
 \end_inset 
 
-Erste elliptische Haupttransformation, 
-\begin_inset Formula $n$
-\end_inset 
-
+Erste elliptische Haupt-Transformation, 
+\shape italic 
+n
+\shape default 
  ungerade
 \layout Subsubsection
 
-Periodenbeziehungen der ersten elliptischen Haupttransformation
+Periodenbeziehungen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupttransformation!erste elliptische!$n$ ungerade}
+\begin_inset LatexCommand \index{Haupt-Transformation!erste elliptische!$n$ ungerade}
 
 \end_inset 
 
 Charakteristisch für die 1.\SpecialChar ~
-elliptische Haupttransformation ist, daß die reelle
- Periode 
+elliptische Haupt-Transformation ist, daß die
+ reelle Periode 
 \begin_inset Formula $2\Omega=4M\Lambda$
 \end_inset 
 
@@ -11259,7 +11249,7 @@ collapsed false
 
 \end_inset 
 
-Erste elliptische Haupttransformation für 
+Erste elliptische Haupt-Transformation für 
 \begin_inset Formula $n=7$
 \end_inset 
 
@@ -12694,10 +12684,10 @@ Mit
 
 \end_inset 
 
-Erste elliptische Haupttransformation, 
-\begin_inset Formula $n$
-\end_inset 
-
+Erste elliptische Haupt-Transformation, 
+\shape italic 
+n
+\shape default 
  gerade
 \layout Subsubsection
 
@@ -12705,7 +12695,7 @@ Funktionsverlauf
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupttransformation!erste elliptische!$n$ gerade}
+\begin_inset LatexCommand \index{Haupt-Transformation!erste elliptische!$n$ gerade}
 
 \end_inset 
 
@@ -12873,7 +12863,7 @@ collapsed false
 
 \end_inset 
 
-Erste elliptische Haupttransformation für 
+Erste elliptische Haupt-Transformation für 
 \begin_inset Formula $n=6$
 \end_inset 
 
@@ -13559,11 +13549,7 @@ eg
 
 \layout Subsubsection
 
-Der Multiplikator 
-\begin_inset Formula $M$
-\end_inset 
-
-
+Der Multiplikator M
 \layout Standard
 
 Der Multiplikator 
@@ -13938,10 +13924,10 @@ k'=\frac{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}
 
 \layout Subsection
 
-Zweite elliptische Haupttransformation, 
-\begin_inset Formula $n$
-\end_inset 
-
+Zweite elliptische Haupt-Transformation, 
+\shape italic 
+n
+\shape default 
  ungerade
 \layout Subsubsection
 
@@ -13949,7 +13935,7 @@ Periodenbeziehungen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupttransformation!zweite elliptische!$n$ ungerade}
+\begin_inset LatexCommand \index{Haupt-Transformation!zweite elliptische!$n$ ungerade}
 
 \end_inset 
 
@@ -14283,7 +14269,7 @@ collapsed false
 
 \end_inset 
 
-Zweite elliptische Haupttransformation (
+Zweite elliptische Haupt-Transformation (
 \begin_inset Formula $n=7$
 \end_inset 
 
@@ -14300,7 +14286,7 @@ Die Form der rationalen Lösungsfunktion
 \begin_inset Formula $y=\efunc{f}{x}{k}$
 \end_inset 
 
- für die zweite elliptische Haupttransformation bei ungeradem Grad 
+ für die zweite elliptische Haupt-Transformation bei ungeradem Grad 
 \begin_inset Formula $n$
 \end_inset 
 
@@ -14493,7 +14479,7 @@ Sie entspricht genau Transformationsbeziehung\SpecialChar ~
 
 \end_inset 
 
- für die erste elliptische Haupttransformation bei ungeradem Grad 
+ für die erste elliptische Haupt-Transformation bei ungeradem Grad 
 \begin_inset Formula $n$
 \end_inset 
 
@@ -14933,8 +14919,8 @@ Ausgehend von der Transformationsfunktion nach Gleichung\SpecialChar ~
 \begin_inset Formula $M$
 \end_inset 
 
- ein und stützt sich (genauso wie bei der ersten elliptischen Haupttransformatio
-n, 
+ ein und stützt sich (genauso wie bei der ersten elliptischen Haupt-Transformati
+on, 
 \begin_inset ERT
 status Collapsed
 
@@ -14968,15 +14954,15 @@ cf
 
 \layout Subsection
 
-Zweite elliptische Haupttransformation, 
-\begin_inset Formula $n$
-\end_inset 
-
+Zweite elliptische Haupt-Transformation, 
+\shape italic 
+n
+\shape default 
  gerade
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupttransformation!zweite elliptische!$n$ gerade}
+\begin_inset LatexCommand \index{Haupt-Transformation!zweite elliptische!$n$ gerade}
 
 \end_inset 
 
@@ -15059,7 +15045,7 @@ collapsed false
 
 \end_inset 
 
-Zweite elliptische Haupttransformation für 
+Zweite elliptische Haupt-Transformation für 
 \begin_inset Formula $n=6$
 \end_inset 
 
