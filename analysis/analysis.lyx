@@ -1,0 +1,1009 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\begin_preamble
+\input{text-inc.tex}
+\input{math-inc.tex}
+\input{electr-inc.tex}
+
+\usepackage{html}
+\end_preamble
+\options reqno
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics dvips
+\float_placement !hbtp
+\paperfontsize default
+\spacing onehalf 
+\papersize a4paper
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: analysis.lyx,v 1.1 2005-01-16 17:39:26 ralf Exp $
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+begin{htmlonly}
+\newline 
+    
+\backslash 
+originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
+\newline 
+    
+\backslash 
+htmlmeta{<META HTTP-EQUIV="content-language" CONTENT="de">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="robots" CONTENT="index, follow">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="Analysis f&uuml;r Systemtheorie">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Systemtherie, SIgnalverarbeitung, Analysis">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="classification" LANG ="de" CONTENT="Mathematik, Analysis">}
+\newline 
+    
+\backslash 
+germanTeX
+\newline 
+
+\newline 
+    
+\backslash 
+renewcommand{
+\backslash 
+qedsymbol}{
+\backslash 
+Box}
+\newline 
+
+\newline 
+    
+\backslash 
+renewenvironment{algorithm}[1][htbp] 
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
+\backslash 
+end{rawhtml} }
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <br> <hr> <br> <br> 
+\backslash 
+end{rawhtml} }
+\newline 
+
+\newline 
+
+\backslash 
+end{htmlonly}
+\end_inset 
+
+
+\layout Title
+
+Funktionentheorie --- Grundlagen
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
+\layout Abstract
+
+Das vorliegende Papier richtet sich in erster Linie an Ingenieure und Studenten
+ der Theoretischen Elektrotechnik, Signalverarbeitung sowie Nachrichtentechnik.
+ Es soll die mathematischen Grundlagen zum Verständnis von Beweisen, Formeln
+ und Schlußfolgerungen der Systemtheorie ins Gedächtnis zurückrufen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ als 
+\begin_inset Quotes eld
+\end_inset 
+
+schmales
+\begin_inset Quotes erd
+\end_inset 
+
+ praktisches Nachschlagewerk dienen.
+ Empfehlenswert für einen tieferen Einstieg halte ich vor allem\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Whittaker:1927}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Section
+
+Eigenschaften analytischer Funktionen
+\layout Subsection
+
+Holomorphie
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Funktionen!Analytische}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Funktionen!Holomorphe}
+
+\end_inset 
+
+Analytische (im Sinne der Analysis) 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ holomorphe
+\begin_inset LatexCommand \index{Holomorphie}
+
+\end_inset 
+
+ Funktionen sind solche, deren Grenzwert
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\frac{\tdc f(z)}{\tdc z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+existiert und eindeutig
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die 
+\begin_inset Quotes eld
+\end_inset 
+
+Einwertigkeit
+\begin_inset Quotes erd
+\end_inset 
+
+ des Grenzwertes (
+\emph on 
+One-Valued
+\emph default 
+) spielt auf Funktionen an, bei denen er davon abhängt, aus welcher Richtung
+ man sich nähert.
+\end_inset 
+
+ ist, die also an der Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ differenzierbar sind.
+ Man fordert hierbei nicht unbedingt, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ für alle 
+\begin_inset Formula $z$
+\end_inset 
+
+ einen solchen Grenzwert hat --- man kann sich auch auf ein bestimmtes Gebiet
+ beschränken, auf welchem die Funktion als analytisch bezeichnet wird.
+ Nicht analytisch sind 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ die Funktionen 
+\begin_inset Formula $1/(z-a)$
+\end_inset 
+
+ bei 
+\begin_inset Formula $a$
+\end_inset 
+
+ oder auch 
+\begin_inset Formula $\log z$
+\end_inset 
+
+ für 
+\begin_inset Formula $z=0$
+\end_inset 
+
+.
+\layout Standard
+
+Eine Schlußfolgerung von 
+\noun on 
+B.
+ Riemann
+\noun default 
+ in Bezug auf die 
+\begin_inset Quotes eld
+\end_inset 
+
+Einwertigkeit
+\begin_inset Quotes erd
+\end_inset 
+
+ des Differentialquotienten einer holomorphen Funktion 
+\begin_inset Formula $f(z)=u(z)+\ji v(z)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $z=x+\ji y$
+\end_inset 
+
+ war, daß bei Annäherung in 
+\begin_inset Formula $x$
+\end_inset 
+
+-Richtung, also bei konstantem 
+\begin_inset Formula $y$
+\end_inset 
+
+ (horizontal) der gleiche Grenzwert gelten muß, wie bei Annäherung aus 
+\begin_inset Formula $y$
+\end_inset 
+
+-Richtung (bei konstantem 
+\begin_inset Formula $x$
+\end_inset 
+
+, also vertikal).
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\frac{\pdc f(z)}{\pdc x} & = & \frac{\pdc f(z)}{\pdc\ji y}\\
+\frac{\pdc u}{\pdc x}+\ji\frac{\pdc v}{\pdc x} & = & -\ji\frac{\pdc u}{\pdc y}+\frac{\pdc v}{\pdc y}\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Vergleich von Real- und Imaginärteil liefert die 
+\noun on 
+Cauchy-Riemann
+\noun default 
+'sche Differentialgleichung
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Sie ist eine notwendige Bedingung für die Differenzierbarkeit von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+.
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Cauchy-Riemann'sche@\noun{Cauchy-Riemann}'sche!Differentialgleichung}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\frac{\pdc u}{\pdc x}=\frac{\pdc v}{\pdc y}\msp,\qquad\frac{\pdc u}{\pdc y}=-\frac{\pdc v}{\pdc x}}\label{eq:analysis_integrability_cond}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+und wegen der Unabhängigkeit des Grenzwertes von jedweder Annäherungsrichtung
+ (
+\begin_inset Formula $\tdc f/\tdc z=\pdc f/\pdc x=\pdc f/\pdc y$
+\end_inset 
+
+)
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f'(z)=\frac{\tdc f(z)}{\tdc z}=\frac{\pdc u}{\pdc x}+\ji\frac{\pdc v}{\pdc x}=\frac{\pdc v}{\pdc y}-\ji\frac{\pdc u}{\pdc y}}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Für eine holomorphe Funktion ist im Umkehrschluß die Existenz einer Stammfunktio
+n 
+\begin_inset Formula $F(z)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $f(z)=\tdc F(z)/\tdc z$
+\end_inset 
+
+ gegeben.
+ Die Wegunabhängigkeit der Integration auf einer Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ mit dem Anfangspunkt 
+\begin_inset Formula $z_{1}$
+\end_inset 
+
+ und dem Endpunkt 
+\begin_inset Formula $z_{2}$
+\end_inset 
+
+ bedeutet dann
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\int_{(C)}f(z)\,\tdc z=F(z_{2})-F(z_{1})}\msp,\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+ist also nur von den beiden Grenzwerten, nicht aber vom Weg abhängig.
+ Ist die Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ sogar geschlossen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $z_{2}$
+\end_inset 
+
+ nähert sich 
+\begin_inset Formula $z_{1}$
+\end_inset 
+
+, dann kommt man zum Integralsatz von 
+\noun on 
+Cauchy
+\noun default 
+.
+\layout Subsection
+
+Satz von 
+\noun on 
+Cauchy
+\layout Standard
+
+Der Integralsatz von 
+\noun on 
+Cauchy
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Satz von}
+
+\end_inset 
+
+
+\noun default 
+ lautet:
+\layout Quote
+
+Ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ eine Funktion von 
+\begin_inset Formula $z$
+\end_inset 
+
+, analytisch
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Voraussetzung ist eigentlich nur, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ innerhalb und auf 
+\begin_inset Formula $C$
+\end_inset 
+
+ kontinuierlich ist (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Anmerkungen und Beweis in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \cdot 2$]{Whittaker:1927}
+
+\end_inset 
+
+).
+\end_inset 
+
+ an allen Punkten auf und innerhalb der geschlossenen Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+, dann gilt:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\oint_{(C)}f(z)\,\tdc z=0}\msp.\label{eq:analysis_cauchy_integral}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Diese als Wegunabhängigkeit
+\begin_inset LatexCommand \index{Wegunabhängigkeit}
+
+\end_inset 
+
+ bezeichnete Eigenschaft ist aufgrund der Voraussetzung, daß es sich um
+ eine holomorphe Funktion (innerhalb von 
+\begin_inset Formula $C$
+\end_inset 
+
+) handelt, an die Integrabilitätsbedingung
+\begin_inset LatexCommand \index{Integrabilitätsbedingung}
+
+\end_inset 
+
+ nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond}
+
+\end_inset 
+
+ gebunden.
+\layout Standard
+
+Als ein Resultat des Satzes von 
+\noun on 
+Cauchy
+\noun default 
+ kann man jeden Wert 
+\begin_inset Formula $f(z_{0})$
+\end_inset 
+
+, wobei die Funktion 
+\begin_inset Formula $f$
+\end_inset 
+
+ analytisch sei, durch ein Kurvenintegral ausdrücken.
+ Dazu definiert man 
+\begin_inset Formula $f(z)/(z-z_{0})$
+\end_inset 
+
+ als neue Funktion, welche ausschließlich am Punkt 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ nicht holomorph ist, und integriert auf einer den Punkt 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ einschließenden (geschlossenen) Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+.
+ Da sich der Integralsatz von 
+\noun on 
+Cauchy
+\noun default 
+ nur auf Funktionen anwenden läßt, die im Innern von 
+\begin_inset Formula $C$
+\end_inset 
+
+ analytisch sind, greifen wir zu dem Trick nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_cauchy}
+
+\end_inset 
+
+.
+ Dabei wird die Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ zuerst in zwei halbkreisförmige Teilkurven 
+\begin_inset Formula $C_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $C_{2}$
+\end_inset 
+
+ nach Teilbild\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_cauchy_step1}
+
+\end_inset 
+
+ zerlegt.
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z=\int_{(C_{1})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{2})}\frac{f(z)}{z-z_{0}}\,\tdc z\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename cauchy_step1.eps
+	subcaption
+	subcaptionText "Offene Kurven\label{fig:analysis_cauchy_step1}"
+
+\end_inset 
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+hspace{3cm}
+\end_inset 
+
+
+\begin_inset Graphics
+	filename cauchy_step2.eps
+	subcaption
+	subcaptionText "Geschlossene Kurven\label{fig:analysis_cauchy_step2}"
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:analysis_cauchy}
+
+\end_inset 
+
+Kurvenintegral
+\end_inset 
+
+
+\layout Standard
+
+Danach werden 
+\begin_inset Formula $C_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $C_{2}$
+\end_inset 
+
+ entsprechend Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_cauchy_step2}
+
+\end_inset 
+
+ separiert und als Kurven so geschlossen, daß jede für sich analytisch ist.
+ Außerdem sollen sich beide Kurven aus dem originalen Stück des äußeren
+ Halbkreises, benannt 
+\begin_inset Formula $C_{1}^{\prime}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $C_{2}^{\prime}$
+\end_inset 
+
+ sowie dem inneren Halbkreis (inklusive der waagerechten Teilstücken) 
+\begin_inset Formula $C_{1}^{\prime\prime}$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $C_{2}^{\prime\prime}$
+\end_inset 
+
+ zusammensetzen.
+ Dann gilt nach 
+\noun on 
+Cauchy
+\noun default 
+'s Integralsatz\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_integral}
+
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{(C_{\nu})}\frac{f(z)}{z-z_{0}}\,\tdc z=\int_{(C_{\nu}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=0,\qquad\textrm{mit  }\nu=1,2\]
+
+\end_inset 
+
+
+\layout Standard
+
+und deshalb
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{(C_{\nu}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=-\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Mit der Substitution
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+z-z_{0}=r\,\e^{\ji\theta},\qquad\qquad\frac{\tdc z}{\tdc\theta}=\ji r\,\e^{\ji\theta}\label{eq:analysis_cauchy_substitution}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+kann man für jeden der Integralausdrücke auf den inneren Kurven
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=\ji\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{r\,\e^{\ji\theta}}r\,\e^{\ji\theta}\,\tdc\theta=\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0}+r\,\e^{\ji\theta})\,\tdc\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+schreiben.
+ Lassen wir jetzt den Radius 
+\begin_inset Formula $r$
+\end_inset 
+
+ gegen Null gehen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ wir betrachten den Wert auf 
+\begin_inset Formula $C_{\nu}^{\prime\prime}$
+\end_inset 
+
+ in der Umgebung von 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{r\rightarrow0}\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0}+r\,\e^{\ji\theta})\,\tdc\theta=-\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0})\,\tdc\theta=-\ji f(z_{0})\left.\theta\right|_{(C_{\nu}^{\prime\prime})}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da sich die Integrale auf dem analytischen Teil der 
+\begin_inset Quotes eld
+\end_inset 
+
+glattgezogenen
+\begin_inset Quotes erd
+\end_inset 
+
+ Kurven 
+\begin_inset Formula $C_{\nu}^{\prime\prime}$
+\end_inset 
+
+ wegen der entgegengesetzten Richtung kompensieren, der Wert an der Singularität
+ 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ aber zu berücksichtigen ist, ergibt sich schlußendlich
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z & =\int_{(C_{1}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{2}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z\\
+ & =-\ji f(z_{0})\left[\left.\theta\right|_{(C_{1}^{\prime\prime})}+\left.\theta\right|_{(C_{2}^{\prime\prime})}\right]\\
+ & =-\ji f(z_{0})(-2\pi-0)=\ji2\pi f(z_{0})\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Ein ausschließlich rechnerischer Beweis ist folgendermaßen zu erbringen:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z & =\oint_{(C)}\frac{f(z)-f(z_{0})+f(z_{0})}{z-z_{0}}\,\tdc z\\
+ & =\oint_{(C)}\frac{f(z)-f(z_{0})}{z-z_{0}}\,\tdc z+f(z_{0})\oint_{(C)}\frac{\tdc z}{z-z_{0}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Der erste Summand stellt für 
+\begin_inset Formula $z\rightarrow z_{0}$
+\end_inset 
+
+ eine behebbare Singularität dar, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ der Grenzwert
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{z\rightarrow z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}=f'(z)\]
+
+\end_inset 
+
+
+\layout Standard
+
+existiert.
+ Damit ist der Integrand eine analytische Funktion für 
+\begin_inset Formula $z\rightarrow z_{0}$
+\end_inset 
+
+und wegen des Satzes von 
+\noun on 
+Cauchy
+\noun default 
+ das Integral
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{(C)}\frac{f(z)-f(z_{0})}{z-z_{0}}\,\tdc z=0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Der zweite Summand ist mit der Substitution nach 
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_substitution}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+f(z_{0})\oint_{(C)}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{(C)}\tdc\theta=\ji f(z_{0})\int_{0}^{2\pi}\tdc\theta=\ji2\pi f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+und somit
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z=\ji2\pi f(z_{0})\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Benennt man noch die Variablen zu 
+\begin_inset Formula $z_{0}:=z$
+\end_inset 
+
+ und 
+\begin_inset Formula $z:=\psi$
+\end_inset 
+
+ um, dann erhält man die 
+\noun on 
+Cauchy
+\noun default 
+'sche Integralformel
+\begin_inset LatexCommand \index{Cauchy'sche Integralformel@\noun{Cauchy}'sche Integralformel}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f(z)=\frac{1}{2\pi\ji}\oint_{(C)}\frac{f(\psi)}{\psi-z}\,\tdc\psi}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+Ableitungen analytischer Funktionen
+\layout Standard
+
+
+\begin_inset LatexCommand \cite[\S $5 \cdot 22$]{Whittaker:1927}
+
+\end_inset 
+
+
+\layout Subsection
+
+Residuensatz
+\layout Subsection
+
+Laurent-Reihen
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp,math}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \printindex{}
+
+\end_inset 
+
+
+\the_end
