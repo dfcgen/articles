@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.4 2004-10-26 16:07:43 ralf Exp $
+Version: $Id: probabil.lyx,v 1.5 2004-11-07 16:48:25 ralf Exp $
 \end_inset 
 
 
@@ -298,8 +298,9 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\var(X)=\sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}\end{equation}
+\begin_inset Formula \begin{eqnarray}
+\var(X) & = & \sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}\\
+\var(X) & = & \mean\left[X-\mean(X)\right]^{2}\label{eq:prob_generic_var}\end{eqnarray}
 
 \end_inset 
 
@@ -325,7 +326,7 @@ ie
 \begin_inset Formula $\mean(X)=0$
 \end_inset 
 
- gilt, ergibt sich:
+ gilt, ergibt sich
 \layout Standard
 
 
@@ -610,7 +611,7 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 
 Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
  des Erwartungswertes der Zufallsgröße.
- Andersherum gilt:
+ Andersherum gilt
 \layout Standard
 
 
@@ -1160,7 +1161,7 @@ Die Eingangsgröße
 \begin_inset Formula $-1\leq Y\leq1$
 \end_inset 
 
- ergibt sich zu:
+ ergibt sich zu
 \layout Standard
 
 
@@ -1193,10 +1194,6 @@ Die Eingangsgröße
 
 .
  Dann gilt für die Dichtefunktion 
-\begin_inset Formula $p_{y}(y)$
-\end_inset 
-
-:
 \layout Standard
 
 
@@ -1208,7 +1205,7 @@ p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\msp.\end{equat
 
 \layout Section
 
-Kombination von unabhängigen Zufallsgrößen
+Unabhängige Zufallsgrößen
 \layout Subsection
 
 
@@ -1403,7 +1400,7 @@ Der Erwartungswert der Summe zweier Zufallsgrößen ist also unabhängig von
 
 
 \begin_inset Formula \begin{equation}
-\mean(X)=\mean(X_{1})+\mean(X_{2})\label{eq:prob_sum_mean}\end{equation}
+\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{2})\label{eq:prob_sum_mean}\end{equation}
 
 \end_inset 
 
@@ -1467,8 +1464,8 @@ Einen kleinen Teilschritt überspringen wir, da er genauso verläuft wie beim
 
 \layout Standard
 
-Auch die Varianz der Summe zweier Zufallsgrößen ist also unabhängig von
- deren Verteilung immer gleich der Summe der einzelnen Varianzen.
+Auch die Varianz der Summe zweier (unabhängiger) Zufallsgrößen ist immer
+ gleich der Summe der einzelnen Varianzen.
 \layout Subsubsection
 
 Effektivwert
@@ -1886,7 +1883,7 @@ Auch in diesem Fall können also die Erwartungswerte einfach multipliziert
 
 
 \begin_inset Formula \begin{equation}
-\mean(X)=\mean(X_{1})\,\mean(X_{2})\label{eq:prob_prd_mean}\end{equation}
+\mean(X_{1}\cdot X_{2})=\mean(X_{1})\,\mean(X_{2})\label{eq:prob_prd_mean}\end{equation}
 
 \end_inset 
 
@@ -2011,9 +2008,291 @@ Für den Effektivwert des Produkts
 \end_inset 
 
 
-\layout Comment
+\layout Section
+
+Abhängige Zufallsgrößen
+\layout Subsection
+
+Varianz
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Varianz}
+
+\end_inset 
+
+Anders als bei den unabhängigen Zufallsgrößen ist die Varianz der Summe
+ zweier (jetzt abhängiger) Zufallsgrößen nicht einfach die bloße Additionen
+ der einzelnen Varianzen.
+ Sie ergibt sich statt dessen aus (und unter Zuhilfenahme von) Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\var(X_{1}+X_{2}) & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\\
+ & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit einem kleinen Vorgriff auf den nächsten Abschnitt kann man die abschließende
+ Formel auch folgendermaßen schreiben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_var}
+
+\end_inset 
+
+) zu 
+\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
+\end_inset 
+
+.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \[
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Kovarianz
+\layout Standard
+
+Sind 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
+ die folgende Größe Kovarianz
+\begin_inset LatexCommand \index{Kovarianz}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\cdot\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Kovarianz 
+\begin_inset Formula $\cov(X_{1},X_{2})$
+\end_inset 
+
+ kann auch noch anders ausgedrückt werden (Verschiebungssatz), wenn man
+\layout Itemize
+
+die Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_mean}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+
+\end_inset 
+
+ für den Erwartungswert von Produkten 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Summen von Zufallsgrößen berücksichtigt;
+\layout Itemize
+
+bedenkt, daß 
+\begin_inset Formula $\mean(X_{1})$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mean(X_{2})$
+\end_inset 
+
+ quasi konstante Faktoren sind;
+\layout Itemize
+
+die Trivialität 
+\begin_inset Formula $\mean(1)=1$
+\end_inset 
+
+ anwendet.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray}
+\cov(X_{1},X_{2}) & = & \mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\nonumber \\
+\cov(X_{1},X_{2}) & = & \mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+Im Fall 
+\begin_inset Formula $X=X_{1}=X_{2}$
+\end_inset 
+
+ reduziert sich die Kovarianz zur Varianz von 
+\begin_inset Formula $X$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Formula \[
+\cov(X,X)=\var(X)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für stetige Zufallsgößen kann man die Kovarianz wiefolgt konkretisieren:
+\layout Standard
+
+
+\begin_inset Formula \[
+\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Korrelationskoeffizient
+\layout Standard
+
+Der Korrelationskoeffizient
+\begin_inset LatexCommand \index{Korrelationskoeffizient}
+
+\end_inset 
+
+ ist ein Maß für die Abhängigkeit zweier Zufallsgrößen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\cdot\var(X_{2})}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen der Ungleichung 
+\begin_inset Formula $\left|\cov(X_{1},X_{2})\right|\leq\sqrt{\smash[b]{\var(X_{1})\cdot\var(X_{2})}}$
+\end_inset 
+
+ gilt immer: 
+\begin_inset Formula $-1\leq\corr(X_{1},X_{2})\leq+1$
+\end_inset 
+
+.
+ Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ die Kovarianz identisch Null ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
+ umgekehrt ist die Aussage jedoch gültig.
+\end_inset 
+
+: 
+\begin_inset Formula $\corr(X_{1},X_{2})=0$
+\end_inset 
+
+.
+\layout Section
 
 Zufallsprozesse
+\layout Subsection
+
+Definition
 \layout Comment
 
 Es soll angenommen sein, daß unendlich viele stochastische Vorgänge 
@@ -2055,6 +2334,12 @@ etc
 \end_inset 
 
 , über die Zeit betrachtet, übereinstimmen müssen.
+\layout Subsection
+
+Autokorrelation
+\layout Subsection
+
+Kreuzkorrelation
 \layout Section
 
 Informationstechnische Anwendungen
