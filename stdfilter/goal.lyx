@@ -32,16 +32,16 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: goal.lyx,v 1.3 2005-01-08 16:52:40 ralf Exp $
+Version: $Id: goal.lyx,v 1.4 2005-01-09 16:48:38 ralf Exp $
 \end_inset 
 
 
 \layout Section
 
-Approximationsvorschriften
+Approximation im Frequenzbereich
 \layout Subsection
 
-Approximation im Frequenzbereich
+Approximationsziel
 \begin_inset LatexCommand \label{sec:approx_ampl}
 
 \end_inset 
@@ -49,7 +49,7 @@ Approximation im Frequenzbereich
 
 \layout Standard
 
-Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im Allgemeinen
+Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung 
 \begin_inset Formula $A=-20\log\left|\trf(\jw)\right|$
 \end_inset 
@@ -60,24 +60,37 @@ Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im Allgemeinen
 
 .
  Fast alle Standard-Tiefpässe beschränken sich dabei auf die gleichmäßige
- (absolute) Approximation
+ 
+\noun on 
+(Tschebyscheff
+\noun default 
+-) Approximation des Amplitudenganges
 \begin_inset Foot
 collapsed true
 
 \layout Standard
 
+Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
+ne Filtertypen 
+\begin_inset ERT
+status Collapsed
 
-\noun on 
-Tschebyscheff
-\noun default 
--Approximation, 
-\begin_inset Formula $L_{\infty}$
+\layout Standard
+
+\backslash 
+eg
 \end_inset 
 
--Norm.
+ sehr schön in\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Henderson:1958}
+
 \end_inset 
 
- des Amplitudenganges 
+ dargestellt sind, werden dann einfach hingenommen.
+\end_inset 
+
+ 
 \begin_inset Formula $\trf(\omega)=\left|\trf(\jw)\right|$
 \end_inset 
 
@@ -86,17 +99,18 @@ Tschebyscheff
 \begin_inset Formula $\trf(\omega)$
 \end_inset 
 
- die charakteristische Funktion
-\begin_inset Foot
-collapsed true
+ die charakteristische Funktion 
+\begin_inset ERT
+status Collapsed
 
 \layout Standard
 
-Auch Drosselung genannt.
+\backslash 
+resp
 \end_inset 
 
- 
-\begin_inset Formula $\D(\omega)=\left|\D(\jw)\right|$
+ Drosselung 
+\begin_inset Formula $\drf(\omega)=\left|\drf(\jw)\right|$
 \end_inset 
 
  herangezogen.
@@ -105,7 +119,7 @@ Auch Drosselung genannt.
 
 
 \begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\D^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
 
 \end_inset 
 
@@ -117,7 +131,7 @@ Es gibt verschiedene Gründe die Drosselung als Zielfunktion zu verwenden:
 
 Aus Sicht der technischen Realisierbarkeit sind die Einschränkungen in Bezug
  auf die reellen Koeffizienten des Nenner- und Zählerpolynoms von 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
  viel schwächer, 
@@ -159,14 +173,20 @@ eg
 Die Drosselung bringt das Filter-Problem einerseits gut zum Ausdruck (Approximat
 ion der Null-Linie im Durchlaßbereich), andererseits können bekannte mathematisc
 he Lösungen (die üblicherweise Standard-Intervalle approximieren) relativ
- problemlos verwendet werden.
+ problemlos verwendet werden\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Saal:1958}
+
+\end_inset 
+
+.
 \layout Enumerate
 
 An Reaktanz- (LC-) Vierpolen, welche allerdings vorwiegend historische Bedeutung
  haben, entspricht die Drosselung genau dem Verhältnis zwischen reflektierter
  und abgegebener Ausgangsleistung\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Saal:1958,Fritzsche:1979a}
+\begin_inset LatexCommand \cite{Fritzsche:1979a}
 
 \end_inset 
 
@@ -191,7 +211,7 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\D(\omega)=\delta\, g(\omega)}\end{equation}
+\boxed{\drf(\omega)=\delta\, g(\omega)}\end{equation}
 
 \end_inset 
 
@@ -267,7 +287,7 @@ Approximations-Kenngrößen
 \layout Standard
 
 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
 
@@ -528,11 +548,11 @@ collapsed true
 \layout Standard
 
 Gleichbedeutend mit der Forderung 
-\begin_inset Formula $\D(\omega)\Rightarrow\infty$
+\begin_inset Formula $\drf(\omega)\Rightarrow\infty$
 \end_inset 
 
  für den Sperrbereich ist 
-\begin_inset Formula $1/\D(\omega)\Rightarrow0$
+\begin_inset Formula $1/\drf(\omega)\Rightarrow0$
 \end_inset 
 
 .
@@ -576,18 +596,22 @@ Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
 
 
 \begin_inset Formula \[
-A(\omega)=-20\log\left|\trf(\jw)\right|=10\log\left[1+\D^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
+A(\omega)=-20\log\left|\trf(\jw)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
 
 \end_inset 
 
 
 \layout Standard
 
-aus den Nullstellen als auch den Ableitungen von 
+aus den Nullstellen von 
 \begin_inset Formula $g(\omega)$
 \end_inset 
 
- gebildet werden (können).
+ als auch deren Ableitung 
+\begin_inset Formula $g'(\omega)$
+\end_inset 
+
+ gebildet werden.
 \layout Standard
 
 
@@ -755,7 +779,7 @@ eg
 \end_inset 
 
  meist die Drosselung 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
 .
@@ -785,7 +809,7 @@ Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
  in anderen Frequenzbereichen approximiert.
  Abgesehen davon ist jede dieser Bestapproximationen, welche ja als Zielgröße
  
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
  verwenden, auch eine in Bezug auf 
@@ -800,7 +824,7 @@ Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
 \end_inset 
 
  zu finden, welche nur eine direkte Abhängigkeit 
-\begin_inset Formula $\trf(\D)$
+\begin_inset Formula $\trf(\drf)$
 \end_inset 
 
  und keine weitere von 
@@ -842,8 +866,8 @@ Geht man nun von einer Bestapproximation (wie in Abbildung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-A_{min} & =10\log\left[1+\D^{2}(\omega_{s})\right]\\
-A_{max} & =10\log\left[1+\D^{2}(\omega_{g})\right]\end{align*}
+A_{min} & =10\log\left[1+\drf^{2}(\omega_{s})\right]\\
+A_{max} & =10\log\left[1+\drf^{2}(\omega_{g})\right]\end{align*}
 
 \end_inset 
 
@@ -860,7 +884,7 @@ Umgekehrt kann man aus vorgegebenen Dämpfungswerten den Skalierungsfaktor
 
 
 \begin_inset Formula \[
-\delta=\frac{\sqrt{10^{A_{min}/10}-1}}{\D(\omega_{s})}=\frac{\sqrt{10^{A_{max}/10}-1}}{\D(\omega_{g})}\]
+\delta=\frac{\sqrt{10^{A_{min}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{A_{max}/10}-1}}{\drf(\omega_{g})}\]
 
 \end_inset 
 

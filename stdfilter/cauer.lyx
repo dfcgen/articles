@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cauer.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
+Version: $Id: cauer.lyx,v 1.3 2005-01-09 16:48:38 ralf Exp $
 \end_inset 
 
 
@@ -123,7 +123,7 @@ Jahrhundert etabliert war.
 \layout Standard
 
 F¸r die Drosselungsfunktion 
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\drf(\omega)$
 \end_inset 
 
  gibt es in der Literatur die verschiedensten Darstellungen\SpecialChar ~
@@ -409,7 +409,7 @@ Solotareff
 
 
 \begin_inset Formula \[
-\eD{\omega}{k}=\delta\efunc{\textup{C}}{\omega}{k}\]
+\edrf{\omega}{k}=\delta\efunc{\textup{C}}{\omega}{k}\]
 
 \end_inset 
 
@@ -465,8 +465,8 @@ aus dem Tiefpaﬂ-Toleranzschema von Abbildung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-A_{max} & =-20\log\trf(1)=10\log\left[1+\eD{\omega_{g}}{k}\right]=10\log\left(1+\delta^{2}\right)\\
-A_{min} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\eD{\omega_{s}}{k}\right]=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
+A_{max} & =-20\log\trf(1)=10\log\left[1+\edrf{\omega_{g}}{k}\right]=10\log\left(1+\delta^{2}\right)\\
+A_{min} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\edrf{\omega_{s}}{k}\right]=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
 \textrm{mit}\\
 \lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
 
@@ -626,7 +626,7 @@ Nicht aber der von
 \end_inset 
 
 , weshalb sie mit hochgestelltem 
-\begin_inset Formula $(\D)$
+\begin_inset Formula $(\drf)$
 \end_inset 
 
  gekennzeichnet werden.
@@ -636,7 +636,7 @@ Nicht aber der von
  Sie f¸hrt n‰mlich sofort zu der Schluﬂfolgerung, daﬂ diese nicht unabh‰ngig
  voneinander sind.
  Setzt man in die Beziehung n‰mlich beispielhaft eine Nullstelle 
-\begin_inset Formula $\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}$
+\begin_inset Formula $\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}$
 \end_inset 
 
  von 
@@ -648,7 +648,7 @@ Nicht aber der von
 
 
 \begin_inset Formula \[
-\frac{1}{\lambda\efunc{\textup{C}}{\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}}{k}}\Rightarrow\infty\msp.\]
+\frac{1}{\lambda\efunc{\textup{C}}{\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}}{k}}\Rightarrow\infty\msp.\]
 
 \end_inset 
 
@@ -662,11 +662,11 @@ Folglich muﬂ die linke Seite in Gleichung\SpecialChar ~
 \end_inset 
 
  an der Stelle 
-\begin_inset Formula $1/k\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}$
+\begin_inset Formula $1/k\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}$
 \end_inset 
 
  eine Polstelle 
-\begin_inset Formula $\pn[{\scriptscriptstyle (\D)}]{\omega}{\mu}$
+\begin_inset Formula $\pn[{\scriptscriptstyle (\drf)}]{\omega}{\mu}$
 \end_inset 
 
  besitzen.
@@ -676,7 +676,7 @@ Folglich muﬂ die linke Seite in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}\,\pn[{\scriptscriptstyle (\D)}]{\omega}{\mu}=\frac{1}{k}}\msp.\label{eq:filter_cauer_poles_per_zeroes}\end{equation}
+\boxed{\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}\,\pn[{\scriptscriptstyle (\drf)}]{\omega}{\mu}=\frac{1}{k}}\msp.\label{eq:filter_cauer_poles_per_zeroes}\end{equation}
 
 \end_inset 
 
