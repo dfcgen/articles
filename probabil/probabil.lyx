@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.6 2004-12-05 18:26:48 ralf Exp $
+Version: $Id: probabil.lyx,v 1.7 2004-12-24 17:13:40 ralf Exp $
 \end_inset 
 
 
@@ -127,6 +127,20 @@ end{htmlonly}
 \layout Title
 
 Zufallsgrößen
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
 \layout Standard
 
 
@@ -250,7 +264,7 @@ Die Varianz
 
 Streuung
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -385,7 +399,7 @@ Wobei streng gesehen ein ganz konkreter Wert
 \end_inset 
 
  mit der Wahrscheinlichkeit 
-\begin_inset Formula $\pr(X=x)=0$
+\begin_inset Formula $\pr(X=x)\rightarrow0$
 \end_inset 
 
  angenommen wird.
@@ -510,16 +524,58 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 \begin_inset Formula $X$
 \end_inset 
 
- angegeben, die folgendermaßen definiert ist:
+ angegeben.
 \layout Standard
 
 
 \begin_inset Formula \begin{align}
-F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=\pr(-\infty\leq X\leq x)=\pr(X\leq x)\msp.\label{eq:prob_distribution}\end{align}
+F(x) & =\int\limits _{-\infty}^{x}p(u)\,\tdc u=\pr(-\infty\leq X\leq x)=\pr(X\leq x)\label{eq:prob_distribution}\end{align}
 
 \end_inset 
 
 
+\layout Standard
+
+Man kann sich die Verteilungsfunktion nach dieser Formel auch als infinitesimale
+ Addition aller Einzelwahrscheinlichkeiten 
+\begin_inset Formula $p(x)$
+\end_inset 
+
+ von 
+\begin_inset Formula $-\infty$
+\end_inset 
+
+ bis 
+\begin_inset Formula $x$
+\end_inset 
+
+ vorstellen, also in 
+\begin_inset Quotes eld
+\end_inset 
+
+Summe
+\begin_inset Quotes erd
+\end_inset 
+
+ 
+\begin_inset Formula $\pr(X\leq x)$
+\end_inset 
+
+.
+ 
+\begin_inset Formula $F(x)$
+\end_inset 
+
+ ist deshalb auch immer eine monoton steigende Funktion mit den Grenzwerten
+ 
+\begin_inset Formula $\lim_{x\rightarrow-\infty}=0$
+\end_inset 
+
+ und 
+\begin_inset Formula $\lim_{x\rightarrow\infty}=1$
+\end_inset 
+
+.
 \layout Standard
 
 Nach dem Hauptsatz der Differential- und Intgeralrechnung gilt für die Wahrschei
@@ -582,7 +638,7 @@ Mit Hilfe von Gleichung\SpecialChar ~
 
 \end_inset 
 
- kann man diese Formel als sogennanntes 
+ kann man diese Formel als 
 \noun on 
 Stieltjes
 \noun default 
@@ -728,7 +784,9 @@ muß sie folgender Gleichung für die Dichtefunktion genügen:
 
 
 \begin_inset Formula \begin{equation}
-p(x)=\frac{1}{b-a}\msp.\label{eq:prob_equal_distribution}\end{equation}
+p(x)=\left\{ \begin{array}{ll}
+\mbig{\frac{1}{b-a}} & \; a\leq x\leq b\\
+0 & \textrm{\; sonst.}\end{array}\right.\label{eq:prob_equal_distribution}\end{equation}
 
 \end_inset 
 
@@ -793,7 +851,7 @@ Ein Vektor
 \end_inset 
 
  genannt, wenn jede der Einzelgrößen 
-\begin_inset Formula $X_{i}$
+\begin_inset Formula $X_{k}$
 \end_inset 
 
  eine Zufallsgröße (über der gleichen Ereignisalgebra
@@ -841,7 +899,7 @@ resp
 
 
 \begin_inset Formula \[
-F(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})\]
+F_{X}(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})\]
 
 \end_inset 
 
@@ -859,101 +917,10 @@ liefert zu jedem Wert
 .
 \layout Standard
 
-Betrachten wir (der Einfachheit halber) den Fall 
-\begin_inset Formula $n=2$
-\end_inset 
-
-, dann lassen sich ähnlich zum eindimensionalen Fall folgende Eigenschaften
- von 
-\begin_inset Formula $F(x_{1},x_{2})$
-\end_inset 
-
- feststellen:
-\layout Itemize
-
-Für alle 
-\begin_inset Formula $x_{1},x_{2}$
-\end_inset 
-
- gilt: 
-\begin_inset Formula $0\leq F(x_{1},x_{2})\leq1$
-\end_inset 
-
-.
-\layout Itemize
-
-Es existiert der Grenzwert 
-\begin_inset Formula $\lim_{x_{1}\rightarrow-\infty}F(x_{1},x_{2})=\lim_{x_{2}\rightarrow-\infty}F(x_{1},x_{2})=0$
-\end_inset 
-
-.
-\layout Itemize
-
-Für 
-\begin_inset Formula $x_{1}\rightarrow\infty$
-\end_inset 
-
- entartet 
-\begin_inset Formula $F(x_{1},x_{2})$
-\end_inset 
-
- zu einer eindimensionalen Randverteilung
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Ursache ist, daß die Variable 
-\begin_inset Formula $x_{1}$
-\end_inset 
-
- beim Grenzübergang verschwindet und damit (im kontinuierlichen Fall nach
- Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
-
-\end_inset 
-
-) der Integrand des äußeren Integrals in 
-\begin_inset Formula $\lim_{x_{1}\rightarrow\infty}F(x_{1},x_{2})=\int_{-\infty}^{x_{2}}\left[\lim_{x_{1}\rightarrow\infty}\int_{-\infty}^{x_{1}}p(u_{1},u_{2})\,\tdc u_{1}\right]\,\tdc u_{2}$
-\end_inset 
-
- nur noch eine Funktion von 
-\begin_inset Formula $u_{2}$
-\end_inset 
-
- ist.
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Randverteilung}
-
-\end_inset 
-
-, die nur noch von 
-\begin_inset Formula $x_{2}$
-\end_inset 
-
- abhängt und die Wahrscheinlichkeit 
-\begin_inset Formula $\pr(X_{2}<x_{2})$
-\end_inset 
-
- ausdrückt.
- Gleiches gilt natürlich im umgekehrten Fall für 
-\begin_inset Formula $x_{2}$
-\end_inset 
-
-, also 
-\begin_inset Formula $\lim_{x_{2}\rightarrow\infty}F(x_{1},x_{2})=\pr(X_{1}<x_{1})$
-\end_inset 
-
-.
-\layout Standard
-
 Der Zusammenhang zwischen Dichte- und Verteilungsfunktion hat auch für den
- Fall einer mehrdimensionalen Zufallsgröße Bestand, nur daß die Dichtefunktion
- 
-\begin_inset Formula $p(x_{1},x_{2},\ldots,x_{n})$
+ Fall einer mehrdimensionalen Zufallsgröße Bestand, nur daß die Wahrscheinlichke
+itsdichte 
+\begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
 \end_inset 
 
  ebenfalls mehrdimensional ist.
@@ -967,44 +934,179 @@ Der Zusammenhang zwischen Dichte- und Verteilungsfunktion hat auch für den
 \end_inset 
 
  liegt.
+ Integration dieser infinitesimalen Wahrscheinlichkeiten von 
+\begin_inset Formula $-\infty$
+\end_inset 
+
+ bis 
+\begin_inset Formula $\mvec{x}$
+\end_inset 
+
+ ergibt dann wieder die Verteilungsfunktion von 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-F(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\ldots\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_multi}\end{equation}
+F_{X}(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_multi}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Umgekehrt lässt sich durch partielle Differentiation nach allen 
+Umgekehrt läßt sich durch partielle Differentiation nach allen 
 \begin_inset Formula $x_{i}$
 \end_inset 
 
- daraus wieder die Dichtefunktion ermitteln.
+ daraus die Dichtefunktion ermitteln.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\label{eq:prob_density_multi}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Ähnlich zum eindimensionalen Fall lassen sich deshalb die folgenden Eigenschafte
+n von 
+\begin_inset Formula $F_{X}(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ feststellen:
+\layout Itemize
+
+Für alle 
+\begin_inset Formula $x_{k}$
+\end_inset 
+
+ gilt: 
+\begin_inset Formula $0\leq F_{X}(x_{1},x_{2},\ldots,x_{n})\leq1$
+\end_inset 
+
+.
+\layout Itemize
+
+Es existiert der Grenzwert 
+\begin_inset Formula $\lim_{x_{1}\rightarrow-\infty}F_{X}(x_{1},x_{2},\ldots,x_{n})=\lim_{x_{2}\rightarrow-\infty}F_{X}(x_{1},x_{2},\ldots,x_{n})=\ldots=\lim_{x_{n}\rightarrow-\infty}F_{X}(x_{1},x_{2},\ldots,x_{n})=0$
+\end_inset 
+
+.
+\layout Itemize
+
+Für 
+\begin_inset Formula $x_{1},x_{2},\ldots,x_{k-1},x_{k+1},\ldots,x_{n}\rightarrow\infty$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ alle, außer 
+\begin_inset Formula $x_{k}$
+\end_inset 
+
+) entartet 
+\begin_inset Formula $F_{X}(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ zu einer eindimensionalen Randverteilung
+\begin_inset LatexCommand \index{Randverteilung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $F_{k}(x_{k})$
+\end_inset 
+
+, die nur noch von 
+\begin_inset Formula $x_{k}$
+\end_inset 
+
+ abhängt und die Wahrscheinlichkeit 
+\begin_inset Formula $\pr(X_{k}<x_{k})$
+\end_inset 
+
+ ausdrückt.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+F_{k}(x_{k}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{x_{k}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{k+1}\,\tdc u_{k}\,\tdc u_{k-1}\cdots\tdc u_{2}\,\tdc u_{1}\\
+ & =\int\limits _{-\infty}^{x_{k}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{k+1}\,\tdc u_{k-1}\cdots\tdc u_{2}\,\tdc u_{1}\,\tdc u_{k}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Partielle Differentiation der Randverteilung 
+\begin_inset Formula $F_{k}(x_{k})$
+\end_inset 
+
+ nach 
+\begin_inset Formula $x_{k}$
+\end_inset 
+
+ führt zur (Rand-) Wahrscheinlichkeitsdichte
+\begin_inset LatexCommand \index{Randdichte}
+
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \[
-p(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\]
+p_{k}(x_{k})=\pdiff{F_{k}(x_{k})}{x_{k}}=\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{k+1}\,\tdc x_{k-1}\cdots\tdc x_{2}\,\tdc x_{1}\]
 
 \end_inset 
 
 
+\layout Standard
+
+Für den zweidimensionalen Fall (
+\begin_inset Formula $n=2$
+\end_inset 
+
+) lassen sich die Gleichungen folgendermaßen konkretisieren:
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+F_{1}(x_{1}) & =\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2})\,\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_dual}\\
+p_{1}(x_{1}) & =\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{2}\msp.\label{eq:prob_density_dual}\end{align}
+
+\end_inset 
+
+
+\end_deeper 
 \layout Subsection
 
 Unabhängigkeit
 \layout Standard
 
-Als unabhängig werden Zufallsgrößen bezeichnet, deren Verteilungsfunktion
- der folgenden Gleichung genügen:
+Als (vollständig) unabhängig werden Zufallsgrößen bezeichnet, wenn deren
+ Verteilungsfunktion vollständig faktorisierbar ist.
 \layout Standard
 
 
 \begin_inset Formula \begin{align*}
 \pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n}) & =\pr(X_{1}<x_{1})\pr(X_{2}<x_{2})\cdots\pr(X_{n}<x_{n})\\
-F(x_{1},x_{2},\ldots,x_{n}) & =F(x_{1})F(x_{2})\cdots F(x_{n})\msp.\end{align*}
+F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})\end{align*}
 
 \end_inset 
 
@@ -1170,7 +1272,7 @@ Bool
 \begin_inset Formula $\pr(\bar{A})=1-\pr(A)$
 \end_inset 
 
-) werden hier vorausgesetzt.
+) werden vorausgesetzt.
 \end_inset 
 
 
@@ -1228,7 +1330,7 @@ resp
 
 
 \begin_inset Formula \[
-\mean(X_{k})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{k}p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1},\qquad0\leq k\leq n\]
+\mean(X_{k})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{k}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1},\qquad0\leq k\leq n\]
 
 \end_inset 
 
@@ -1289,7 +1391,7 @@ Die Varianz(en) einer
 
 \layout Standard
 
-Auch hier muß man hinzufügen, daß es sich um die Varianz der Randverteilungen
+Auch hier muß man hinzufügen, daß es sich um die Varianz einer Randverteilung
  handelt.
 \layout Subsubsection
 
@@ -1427,12 +1529,12 @@ cf
 
 \layout Standard
 
-Für stetige Zufallsgößen kann man die Kovarianz wiefolgt konkretisieren:
+Für stetige Zufallsgößen kann die Kovarianz wiefolgt konkretisiert werden:
 \layout Standard
 
 
-\begin_inset Formula \[
-\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\]
+\begin_inset Formula \begin{equation}
+\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\label{eq:prob_cov_continuous}\end{equation}
 
 \end_inset 
 
@@ -1456,24 +1558,147 @@ Dabei geht man davon aus, daß der Vektor
 \begin_inset Formula $X_{2}$
 \end_inset 
 
- stochastisch unabhängig, dann ist die Verteilungsfunktion 
-\begin_inset Formula $F$
-\end_inset 
-
- von 
-\begin_inset Formula $\mvec{X}$
-\end_inset 
-
- durch einfache Multiplikation zu bestimmen.
+ stochastisch unabhängig, dann ist die Wahrscheinlichkeitsdichte faktorisierbar
+ in
 \layout Standard
 
 
 \begin_inset Formula \[
-F(x_{1},x_{2})=\pr(X_{1}\leq x_{1}\cap X_{2}\leq x_{2})=F_{1}(x_{1})\cdot F_{2}(x_{2})\]
+p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})\]
 
 \end_inset 
 
 
+\layout Standard
+
+und deshalb auch das Doppelintegral von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_cov_continuous}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\cov(X_{1},X_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})\cdot p_{2}(x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\,\tdc x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\,\tdc x_{2}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen der allgemeingültigen Beziehung
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]\, p(x)\,\tdc x & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x-\int\limits _{-\infty}^{\infty}\mean(X)\, p(x)\,\tdc x\\
+ & =\mean(X)-\mean(X)\int\limits _{-\infty}^{\infty}\, p(x)\,\tdc x=0\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+verschwinden aber beide Faktoren, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Kovarianz (und der Korrelationskoeffizient) unabhängiger Zufallsgrößen
+ ist grundsätzlich Null.
+ Aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_cov_shift}
+
+\end_inset 
+
+ folgt unter dieser Bedingung ferner:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\mean(X_{1}X_{2})=\mean(X_{1})\,\mean(X_{2})\msp.\label{eq:prob_cov_zero_mean}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+Varianz-Kovarianz-Matrix
+\layout Standard
+
+Für einen mehrdimensionalen Zufallsvektor 
+\begin_inset Formula $\mvec{X}=(X_{1},X_{2},\ldots,X_{n})$
+\end_inset 
+
+ kann man eine sogenannte Varianz-Kovarianz-Matrix 
+\begin_inset Formula $\mvec{C}$
+\end_inset 
+
+angeben, deren Elemente 
+\begin_inset Formula $c_{i,k}$
+\end_inset 
+
+ die Kovarianz
+\layout Standard
+
+
+\begin_inset Formula \[
+c_{i,k}=\cov(X_{i},X_{k})=\mean\left\{ \left[X_{i}-\mean(X_{i})\right]\cdot\left[X_{k}-\mean(X_{k})\right]\right\} \]
+
+\end_inset 
+
+
+\layout Standard
+
+repräsentieren.
+\layout Standard
+
+
+\begin_inset Formula \[
+\mvec{C}=\left(\begin{array}{cccc}
+\var(X_{1}) & \cov(X_{2},X_{1}) & \cdots & \cov(X_{n},X_{1})\\
+\cov(X_{1},X_{2}) & \var(X_{2}) & \cdots & \cov(X_{n},X_{2})\\
+\vdots & \vdots & \ddots & \vdots\\
+\cov(X_{1},X_{n}) & \cov(X_{2},X_{n}) & \cdots & \var(X_{n})\end{array}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Matrix 
+\begin_inset Formula $\mvec{C}$
+\end_inset 
+
+ ist
+\layout Itemize
+
+quadratisch,
+\layout Itemize
+
+symmetrisch (wegen 
+\begin_inset Formula $\cov(X_{i},X_{k})=\cov(X_{k},X_{i})$
+\end_inset 
+
+),
+\layout Itemize
+
+und hat die Hauptdiagonalwerte 
+\begin_inset Formula $\cov(X_{k},X_{k})=\var(X_{k})$
+\end_inset 
+
+.
 \layout Subsubsection
 
 Korrelationskoeffizient
@@ -1522,17 +1747,7 @@ Linear abhängige Zufallsgrößen (
 \layout Enumerate
 
 Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- die Kovarianz identisch Null ist
+ identisch Null ist
 \begin_inset Foot
 collapsed true
 
@@ -1550,115 +1765,10 @@ Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
 \layout Section
 
 Funktionen von Zufallsgrößen
-\layout Standard
-
-Allgemein kann das Problem von Funktionen mehrdimensionaler Zufallsgrößen
- folgendermaßen dargestellt werden:
-\layout Quotation
-
-Gesucht ist die Verteilungsfunktion 
-\begin_inset Formula $G(y_{1},y_{2},\ldots,y_{n})$
-\end_inset 
-
- der Zufallsgröße 
-\begin_inset Formula $\mvec{Y}$
-\end_inset 
-
-, die sich aus der Transformation der Zufallsgröße 
-\begin_inset Formula $\mvec{X}$
-\end_inset 
-
- mit der Verteilungsfunktion 
-\begin_inset Formula $F(x_{1},x_{2},\ldots,x_{n})$
-\end_inset 
-
- und der Wahrscheinlichkeitsdichte 
-\begin_inset Formula $p(x_{1},x_{2},\ldots,x_{n})$
-\end_inset 
-
- durch relle Funktionen 
-\begin_inset Formula $f_{1},f_{2},\ldots,f_{n}$
-\end_inset 
-
- dergestalt
-\layout Quotation
-
-
-\begin_inset Formula \begin{eqnarray*}
-Y_{1} & = & f_{1}(X_{1},X_{2},\ldots,X_{n})\\
-Y_{2} & = & f_{2}(X_{1},X_{2},\ldots,X_{n})\\
-\vdots & = & \vdots\\
-Y_{n} & = & f_{n}(X_{1},X_{2},\ldots,X_{n})\end{eqnarray*}
-
-\end_inset 
-
-
-\layout Quotation
-
-ergibt\SpecialChar ~
-
-\begin_inset LatexCommand \cite[\S~23]{Gnedenko:1958}
-
-\end_inset 
-
-.
-\layout Standard
-
-Theoretisch ist die Lösung durch Anwendung von Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
-
-\end_inset 
-
- zu erlangen,
-\layout Standard
-
-
-\begin_inset Formula \[
-G(y_{1},y_{2},\ldots,y_{n})=\int\limits _{-\infty}^{y_{1}}\int\limits _{-\infty}^{y_{2}}\cdots\int\limits _{-\infty}^{y_{n}}p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\msp,\]
-
-\end_inset 
-
-
-\layout Standard
-
-praktisch haben vor allem die Spezialfälle der folgenden Abschnitte Bedeutung.
-\layout Standard
-
-In ähnlicher Art und Weise kann man die Erwartungswerte der resultierenden
- Größen 
-\begin_inset Formula $Y_{i}$
-\end_inset 
-
- bestimmen
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\mean(Y_{1}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{1}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\\
-\mean(Y_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{1}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\\
-\vdots & =\vdots\\
-\mean(Y_{n}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{n}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-was etwas leichter lesbar so aussieht:
-\layout Standard
-
-
-\begin_inset Formula \[
-\mvec{\mean(Y)}=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\mvec{f}(x_{1},x_{2},\ldots,x_{n})p(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}\msp.\]
-
-\end_inset 
-
-
 \layout Subsection
 
 
-\begin_inset LatexCommand \label{sec:prob_transform}
+\begin_inset LatexCommand \label{sec:prob_transform_single}
 
 \end_inset 
 
@@ -1782,7 +1892,7 @@ Die Wahrscheinlichkeitsdichte für
 \end_inset 
 
  soll 
-\begin_inset Formula $p_{x}(x)$
+\begin_inset Formula $p_{X}(x)$
 \end_inset 
 
 , die für 
@@ -1790,7 +1900,7 @@ Die Wahrscheinlichkeitsdichte für
 \end_inset 
 
  entsprechend 
-\begin_inset Formula $p_{y}(y)$
+\begin_inset Formula $p_{Y}(y)$
 \end_inset 
 
  sein.
@@ -1817,7 +1927,9 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 \begin_inset Formula $Y$
 \end_inset 
 
- nicht mehr möglich.
+ unmöglich.
+ In solchen Fällen muß man die Mehrdeutigkeit in die Wahrscheinlichkeitsbetracht
+ungen mit einbeziehen.
 \end_inset 
 
 .
@@ -1839,7 +1951,7 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 
  angenommen wird.
  Die Dichtefunktion 
-\begin_inset Formula $p_{x}(x)$
+\begin_inset Formula $p_{X}(x)$
 \end_inset 
 
  gibt an, mit welcher Wahrscheinlichkeit 
@@ -1869,6 +1981,50 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 \layout Standard
 
 
+\begin_inset Formula \begin{align}
+\left|\tdc\pr_{X}(x)\right| & =\left|\tdc\pr_{Y}(y)\right|\nonumber \\
+p_{X}(x)\,\left|\tdc x\right| & =p_{Y}(y)\,\left|\tdc y\right|\label{eq:prob_transform_single_differential}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Durch die Streckung (Stauchung) des Intervalls 
+\begin_inset Formula $\tdc x$
+\end_inset 
+
+ über 
+\begin_inset Formula $f(x)$
+\end_inset 
+
+ auf 
+\begin_inset Formula $\tdc y$
+\end_inset 
+
+ muß auch die Wahrscheinlichkeitsdichte im entsprechenden Streckungsverhältnis
+ 
+\begin_inset Formula $\left|\tdc x/\tdc y\right|$
+\end_inset 
+
+ gegenüber 
+\begin_inset Formula $p_{X}(x)$
+\end_inset 
+
+ ab- 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ zunehmen.
+\layout Standard
+
+
 \begin_inset Float figure
 wide false
 collapsed false
@@ -1895,43 +2051,9 @@ Transformationsfunktion
 
 \layout Standard
 
-Durch die Streckung (Stauchung) des Intervalls 
-\begin_inset Formula $\tdc x$
-\end_inset 
-
- über 
-\begin_inset Formula $f(x)$
-\end_inset 
-
- auf 
-\begin_inset Formula $\tdc y$
-\end_inset 
-
- muß auch die Wahrscheinlichkeitsdichte im entsprechenden Streckungsverhältnis
- 
-\begin_inset Formula $\left|\tdc x/\tdc y\right|$
-\end_inset 
-
- gegenüber 
-\begin_inset Formula $p_{x}(x)$
-\end_inset 
-
- ab- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- zunehmen.
-\layout Standard
-
 
 \begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\left[f^{-1}(y)\right]\cdot\left|f'(y)\right|\end{equation}
+p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\left[h(y)\right]\cdot\left|h'(y)\right|\label{eq:prob_transform_single}\end{equation}
 
 \end_inset 
 
@@ -1939,7 +2061,7 @@ p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\
 \layout Standard
 
 
-\begin_inset Formula $f^{-1}(y)$
+\begin_inset Formula $h(y)$
 \end_inset 
 
  ist hierbei die Umkehrfunktion von 
@@ -1947,7 +2069,7 @@ p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\
 \end_inset 
 
  und 
-\begin_inset Formula $x=f'(y)$
+\begin_inset Formula $x=h'(y)$
 \end_inset 
 
  deren Ableitung nach 
@@ -1957,15 +2079,41 @@ p_{y}(y)=\frac{p_{x}(x)}{\left|f'(x)\right|}=p_{x}(x)\,\left|f'(y)\right|=p_{x}\
 .
 \layout Standard
 
-Der Zusammenhang zwischen den Verteilungsfunktionen 
-\begin_inset Formula $F_{x}(x)$
+Mit 
+\begin_inset Formula $\left|f'(x)\right|=\left|\tdc y/\tdc x\right|$
+\end_inset 
+
+, also
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{Y}(y)\,\left|\tdc y\right|=p_{X}(x)\,\left|\tdc x\right|\]
+
+\end_inset 
+
+
+\layout Standard
+
+ist der Zusammenhang zwischen den Verteilungsfunktionen 
+\begin_inset Formula $F_{X}(x)$
 \end_inset 
 
  und 
-\begin_inset Formula $F_{y}(y)$
+\begin_inset Formula $F_{Y}(y)$
 \end_inset 
 
- ist nun relativ einfach aus Definitionsgleichung\SpecialChar ~
+ nun relativ einfach durch Integration beider Seiten 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Anwendung von Definitionsgleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_distribution}
 
@@ -1976,8 +2124,8 @@ Der Zusammenhang zwischen den Verteilungsfunktionen
 
 
 \begin_inset Formula \begin{align*}
-F_{y}(y) & =\int\limits _{u=-\infty}^{u=y}p_{y}(u)\,\tdc u=\int\limits _{x=f^{-1}(-\infty)}^{x=f^{-1}(y)}p_{y}(u)\, f'(x)\,\tdc x=\int\limits _{x=f^{-1}(-\infty)}^{x=f^{-1}(y)}p_{x}(x)\,\tdc x\\
-F_{y}(y) & =F_{x}\left[f^{-1}(y)\right]-F_{x}\left[f^{-1}(-\infty)\right]\end{align*}
+F_{Y}(y) & =\int\limits _{-\infty}^{y}p_{y}(u)\,\tdc u=\int\limits _{h(-\infty)}^{h(y)}p_{x}(u)\,\tdc u\\
+F_{Y}(y) & =F_{X}\left[h(y)\right]-F_{X}\left[h(-\infty)\right]\end{align*}
 
 \end_inset 
 
@@ -1985,7 +2133,7 @@ F_{y}(y) & =F_{x}\left[f^{-1}(y)\right]-F_{x}\left[f^{-1}(-\infty)\right]\end{al
 \layout Standard
 
 Da an der unteren Grenze immer 
-\begin_inset Formula $F_{x}(a)=0$
+\begin_inset Formula $F_{X}(a)=0$
 \end_inset 
 
  gilt
@@ -1995,7 +2143,7 @@ collapsed true
 \layout Standard
 
 Existiert 
-\begin_inset Formula $f^{-1}(-\infty)$
+\begin_inset Formula $h(-\infty)$
 \end_inset 
 
  nicht 
@@ -2023,8 +2171,8 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-F_{y}(y)=F_{x}\left[f^{-1}(y)\right]\msp.\end{equation}
+\begin_inset Formula \[
+F_{Y}(y)=F_{X}\left[h(y)\right]\msp.\]
 
 \end_inset 
 
@@ -2066,7 +2214,7 @@ Die Eingangsgröße
 \end_inset 
 
  gleichverteilt mit 
-\begin_inset Formula $p_{x}(x)=1/\pi$
+\begin_inset Formula $p_{X}(x)=1/\pi$
 \end_inset 
 
  sein.
@@ -2083,15 +2231,15 @@ Die Eingangsgröße
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\msp.\end{equation}
+\begin_inset Formula \[
+p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\msp.\]
 
 \end_inset 
 
 
 \layout Standard
 
-Diese Gleichung kann man auch als Verteilungsdichte des Sinus auffassen.
+Diese Gleichung kann man auch als Wahrscheinlichkeitsdichte des Sinus auffassen.
 \layout Subsection*
 
 Lineare Übertragungsfunktion
@@ -2116,7 +2264,7 @@ Die Eingangsgröße
 
 
 \begin_inset Formula \begin{equation}
-p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\msp.\end{equation}
+p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{p_{X}(y/A)}{\left|A\right|}\msp.\end{equation}
 
 \end_inset 
 
@@ -2124,14 +2272,426 @@ p_{y}(y)=\frac{p_{x}(x)}{f'(x)}=\frac{p_{x}(y/A)}{\left|A\right|}\msp.\end{equat
 \layout Subsection
 
 
-\begin_inset LatexCommand \label{sec:prob_sum_independent}
+\begin_inset LatexCommand \label{sec:prob_transform_multiple}
 
 \end_inset 
 
-Summe unabhängiger Zufallsgrößen
+Funktionen mehrdimensionaler Zufallsgrößen
+\layout Standard
+
+Ausgehend von der eindimensionalen Transformation einer Zufallsgöße (im
+ vorigen Abschnitt) läßt sich das Problem von Funktionen mehrdimensionaler
+ Zufallsgrößen wiefolgt formulieren:
+\layout Quotation
+
+Gesucht ist die Wahrscheinlichkeitsdichte 
+\begin_inset Formula $p_{Y}(y_{1},y_{2},\ldots,y_{n})$
+\end_inset 
+
+ des Zufallsvektors 
+\begin_inset Formula $\mvec{Y}$
+\end_inset 
+
+, die sich aus der Transformation des Zufallsvektors 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+ mit der Wahrscheinlichkeitsdichte 
+\begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ durch relle Funktionen 
+\begin_inset Formula $f_{1},f_{2},\ldots,f_{n}$
+\end_inset 
+
+ dergestalt
+\layout Quotation
+
+
+\begin_inset Formula \begin{align*}
+Y_{1} & =f_{1}(X_{1},X_{2},\ldots,X_{n})\\
+Y_{2} & =f_{2}(X_{1},X_{2},\ldots,X_{n})\\
+\vdots & =\vdots\\
+Y_{n} & =f_{n}(X_{1},X_{2},\ldots,X_{n})\end{align*}
+
+\end_inset 
+
+
+\layout Quotation
+
+ergibt.
+\layout Standard
+
+Setzen wir (der Kürze halber) sowohl bei Variablen als auch Funktionen Vektorsch
+reibweisen der Art
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\mvec{Y} & =\mvec{f}(\mvec{X})\\
+\mvec{X} & =\mvec{h}(\mvec{Y})\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+ein, dann wird schon auf Symbolebene die Ähnlichkeit zum eindimensionalen
+ Fall erkennbar.
+ Aus diesem Grund wird hier der Ansatz der formalen Erweiterung von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_single_differential}
+
+\end_inset 
+
+ auf 
+\begin_inset Formula $n$
+\end_inset 
+
+ Dimensionen verfolgt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auch Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_single}
+
+\end_inset 
+
+ kann als Ausgangspunkt dienen --- nur ist man dann sofort mit der Interpretatio
+n von 
+\begin_inset Formula $\left|h'(y)\right|\rightarrow\left|\mvec{h}'(\mvec{y})\right|$
+\end_inset 
+
+ konfrontiert.
+\end_inset 
+
+, wobei wir (zuerst) jegliche Betragszeichen ignorieren.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{X}(\mvec{x})\,\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\msp.\label{eq:prob_transform_density_differential}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Dabei kann man sich weiterhin von der anschaulichen Darstellung in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:prob_function_transform}
+
+\end_inset 
+
+ leiten lassen, muß die Transformation von eindimensionalen, differentiellen
+ Größen (
+\begin_inset Formula $\tdc x\overset{f(x)}{\rightarrow}\tdc y$
+\end_inset 
+
+) nun aber auf Gebiete der Dimension 
+\begin_inset Formula $n$
+\end_inset 
+
+ ausdehnen (
+\begin_inset Formula $\tdc\mvec{x}\overset{\mvec{f}(\mvec{x})}{\rightarrow}\tdc\mvec{y}$
+\end_inset 
+
+).
+\layout Standard
+
+Den Zusammenhang zwischen den Inhaltsmomenten
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Momente niedriger Ordnung sind 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ Flächenmomente (
+\begin_inset Formula $dF=\tdc x\,\tdc y$
+\end_inset 
+
+) oder Volumenmomente (
+\begin_inset Formula $dV=\tdc x\,\tdc y\,\tdc z$
+\end_inset 
+
+).
+\end_inset 
+
+ 
+\begin_inset Formula $\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}$
+\end_inset 
+
+ und 
+\begin_inset Formula $\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}$
+\end_inset 
+
+ gibt uns die aus der Integralrechnung bekannte
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Substitutionssatz für Mehrfach-Integrale: 
+\begin_inset Formula $\int_{h(B)}f(\mvec{x})\,\tdc\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\cdot\left|\mvec{J}_{h}\right|\,\tdc\mvec{z}$
+\end_inset 
+
+.
+\end_inset 
+
+ Funktional- 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\noun on 
+Jacobi
+\noun default 
+-Determinante 
+\begin_inset Formula $\left|\mvec{J}\right|$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=\left|\mvec{J}_{h}\right|\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_jacobian_det}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die ihr zugrunde liegende 
+\noun on 
+Jacobi
+\noun default 
+-Matrix hat eine 
+\begin_inset Formula $n\times n$
+\end_inset 
+
+ Struktur, in der jedes Element die partielle Ableitung der Funktion 
+\begin_inset Formula $h_{k}(y_{1},y_{2},\ldots,y_{n})$
+\end_inset 
+
+ nach einer Variablen 
+\begin_inset Formula $y_{k}$
+\end_inset 
+
+ enthält.
+ Für den Funktionsvektor 
+\begin_inset Formula $\mvec{h}$
+\end_inset 
+
+ hat sie das folgende Aussehen:
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\mvec{J}_{h}\right|=\left|\begin{array}{cccc}
+\pdiff{h_{1}(\mvec{y})}{y_{1}} & \pdiff{h_{1}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{1}(\mvec{y})}{y_{n}}\\
+\pdiff{h_{2}(\mvec{y})}{y_{1}} & \pdiff{h_{2}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{2}(\mvec{y})}{y_{n}}\\
+\vdots & \vdots & \cdots & \vdots\\
+\pdiff{h_{n}(\mvec{y})}{y_{1}} & \pdiff{h_{n}(\mvec{y})}{y_{2}} & \cdots & \pdiff{h_{n}(\mvec{y})}{y_{n}}\end{array}\right|\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+wobei wir die Betragszeichen sowohl als Kennzeichnung für eine Determinante
+ als auch den echten Betrag des Ergebnisses werten wollen.
+ Vergleicht man nun Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_jacobian_det}
+
+\end_inset 
+
+, dann wird der Zusammenhang zwischen den Wahrscheinlichkeitsdichten von
+ 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+ und 
+\begin_inset Formula $\mvec{Y}$
+\end_inset 
+
+ sofort offensichtlich.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{Y}(\mvec{y})=\left|\mvec{J}_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die ebenfalls interessante Verteilungsfunktion von 
+\begin_inset Formula $\mvec{Y}$
+\end_inset 
+
+ kann man 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ aus Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+
+\end_inset 
+
+ durch Einsetzen von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+
+\end_inset 
+
+ gewinnen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
+ Addition aller Wahrscheinlichkeiten 
+\begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
+\end_inset 
+
+ über das gesamte Gebiet 
+\begin_inset Formula $B$
+\end_inset 
+
+, für welches 
+\begin_inset Formula $f_{k}(x_{1},x_{2},\ldots,x_{n})<y_{k}$
+\end_inset 
+
+ gilt, vorstellen.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~23]{Gnedenko:1958}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+F_{Y}(\mvec{y}) & =\int\limits _{-\infty}^{y_{1}}\int\limits _{-\infty}^{y_{2}}\cdots\int\limits _{-\infty}^{y_{n}}p_{Y}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}\nonumber \\
+ & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\label{eq:prob_distribution_func_generic}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Integrationsgrenzen ergeben sich dabei aus der Bedingung 
+\begin_inset Formula $f_{k}(x_{1},x_{2},\ldots,x_{n})<y_{k}$
+\end_inset 
+
+ für das Integrationsgebiet 
+\begin_inset Formula $B$
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Definition der Verteilungsfunktion: 
+\begin_inset Formula $\pr(Y_{k}<y_{k})$
+\end_inset 
+
+).
+\layout Standard
+
+Auf der Grundlage von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+
+\end_inset 
+
+ lassen sich nun auch die Erwartungswerte 
+\begin_inset Formula $\mvec{\mean(Y)}$
+\end_inset 
+
+ berechnen.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\mean(Y_{k}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}y_{k}\cdot p_{Y}(y_{1},y_{2},\ldots,y_{n})\,\tdc y_{n}\cdots\tdc y_{2}\,\tdc y_{1}\\
+ & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{k}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Für den zweidimensionalen Spezialfall 
+\begin_inset Formula $Y=f(X_{1},X_{2})$
+\end_inset 
+
+ bestimmt sich der Erwartungswert wiefolgt:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\mean(Y)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}\msp.\label{eq:prob_mean_func_dual}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:prob_sum}
+
+\end_inset 
+
+Summe von Zufallsgrößen
 \layout Subsubsection
 
-Verteilungsdichte
+Wahrscheinlichkeitsdichte
 \layout Standard
 
 
@@ -2144,100 +2704,320 @@ Verteilungsdichte
 
 \end_inset 
 
-Vorraussetzung soll die Definition der Dichtefunktion für die Summe 
-\begin_inset Formula $X$
+Um die Wahrscheinlichkeitsdichte einer Summe von zwei Zufallsgrößen 
+\begin_inset Formula $Y=X_{1}+X_{2}$
 \end_inset 
 
- sowie für die unkorrelierten Summanden 
-\begin_inset Formula $X_{1}$
+ zu bestimmen, interpretieren wir diese Summe als Funktion 
+\begin_inset Formula $f(X_{1},X_{2})$
 \end_inset 
 
- und 
-\begin_inset Formula $X_{2}$
+ im Sinne des vorigen Abschnitt.
+ Da wir nur 
+\emph on 
+eine
+\emph default 
+ Ergebnisgröße, nämlich 
+\begin_inset Formula $Y$
 \end_inset 
 
- sein.
+ haben, müssen wir die Darstellung 
+\begin_inset Formula $\mvec{Y}=\mvec{f}(\mvec{X})$
+\end_inset 
+
+ 
+\begin_inset Quotes eld
+\end_inset 
+
+künstlich
+\begin_inset Quotes erd
+\end_inset 
+
+ erzeugen.
+ Dazu benennen wird 
+\begin_inset Formula $Y$
+\end_inset 
+
+ in 
+\begin_inset Formula $Y_{1}=f_{1}(X_{1},X_{2})=X_{1}+X_{2}$
+\end_inset 
+
+ um und definieren eine zweite Funktion 
+\begin_inset Formula $Y_{2}=f_{2}(X_{1},X_{2})=X_{1}-X_{2}$
+\end_inset 
+
+.
+ Bei der Auswahl von 
+\begin_inset Formula $f_{2}$
+\end_inset 
+
+ soll nur Bedingung sein, daß diese Funktion differenzierbar, umkehrbar
+ und nicht linear abhängig von 
+\begin_inset Formula $f_{1}$
+\end_inset 
+
+ ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Hilfreich ist natürlich die Wahl einer möglichst einfachen Funktion.
+\end_inset 
+
+.
+\layout Standard
+
+Zuerst werden die Umkehrfunktionen 
+\begin_inset Formula $\mvec{h}(\mvec{Y})$
+\end_inset 
+
+ ermittelt
 \layout Standard
 
 
-\begin_inset Formula \begin{xalignat*}{3}
-p(x) & =\pr\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =\pr\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+\begin_inset Formula \begin{align*}
+X_{1} & =h_{1}(Y_{1},Y_{2})=\frac{Y_{1}+Y_{2}}{2}\\
+X_{2} & =h_{2}(Y_{1},Y_{2})=\frac{Y_{1}-Y_{2}}{2}\end{align*}
 
 \end_inset 
 
 
 \layout Standard
 
-Für einen willkürlich gewählten Wert 
-\begin_inset Formula $u$
-\end_inset 
-
-, den die Zufallsgröße 
-\begin_inset Formula $X_{1}$
-\end_inset 
-
- annimmt, gilt mit 
-\begin_inset Formula $x_{1}=u$
-\end_inset 
-
- und 
-\begin_inset Formula $\tdc x_{1}=\tdc u$
-\end_inset 
-
-
+und mit deren Hilfe die Funktionaldeterminante gewonnen.
 \layout Standard
 
 
 \begin_inset Formula \[
-p(u)=\pr\left(X_{1}=u\pm\frac{\tdc u}{2}\right)\]
+\left|\mvec{J}_{h}\right|=\left|\begin{array}{cc}
+\pdiff{h_{1}(\mvec{y})}{y_{1}} & \pdiff{h_{1}(\mvec{y})}{y_{2}}\\
+\pdiff{h_{2}(\mvec{y})}{y_{1}} & \pdiff{h_{2}(\mvec{y})}{y_{2}}\end{array}\right|=\left|\begin{array}{cc}
+1/2 & 1/2\\
+1/2 & -1/2\end{array}\right|=-\frac{1}{2}\]
 
 \end_inset 
 
 
 \layout Standard
 
-Für diesen Fall muß aber 
+Da in diesem Fall nur lineare Funktionen beteiligt sind, ist die Determinante
+ 
+\begin_inset Formula $\left|\mvec{J}_{h}\right|$
+\end_inset 
+
+ eine Konstante.
+ Wir reduzieren sie (konform zu Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_transform_multiple}
+
+\end_inset 
+
+) auf ihren Absolutwert um dann Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_density_multi}
+
+\end_inset 
+
+ anzuwenden.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{Y}(y_{1},y_{2})=\left|\mvec{J}_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da die Hilfsgröße 
+\begin_inset Formula $Y_{2}$
+\end_inset 
+
+ nicht von Interesse ist, müssen wir sie als Zufallsgröße 
+\begin_inset Quotes eld
+\end_inset 
+
+ausblenden
+\begin_inset Quotes erd
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ aus der verbundenen Dichtefunktion 
+\begin_inset Formula $p_{Y}(y_{1},y_{2})$
+\end_inset 
+
+ die (eindimensionale) Randdichte von 
+\begin_inset Formula $Y_{1}$
+\end_inset 
+
+ berechnen 
+\begin_inset LatexCommand \ref{eq:prob_density_dual}
+
+\end_inset 
+
+.
+ bei diesem Schritt können wir auch gleich wieder 
+\begin_inset Formula $Y_{1}$
+\end_inset 
+
+ in 
+\begin_inset Formula $Y$
+\end_inset 
+
+ umbenennen, denn auf diese Größe kam es uns ja an.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\,\tdc y_{2}=-\frac{1}{2}\int\limits _{-\infty}^{\infty}p_{X}\left(\frac{y+y_{2}}{2},\frac{y-y_{2}}{2}\right)\,\tdc y_{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die abschließende Substitution 
+\begin_inset Formula $z=(y+y_{2})/2$
+\end_inset 
+
+ , 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $y_{2}=2z-y$
+\end_inset 
+
+ und 
+\begin_inset Formula $\tdc y_{2}=2\tdc z$
+\end_inset 
+
+ führt zum Ergebnis.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{X}\left(z,y-z\right)\,\tdc z\label{eq:prob_continuous_add_dep}\end{equation}
+
+\end_inset 
+
+
+\layout Comment
+
+Dabei gehen wir von der gemeinsamen Dichtefunktion 
+\begin_inset Formula $p_{X}(x_{1},x_{2})$
+\end_inset 
+
+ des Vektors 
+\begin_inset Formula $X=(X_{1},X_{2})$
+\end_inset 
+
+ aus und rekapitulieren zuerst die anschauliche Bedeutung der Wahrscheinlichkeit
+sdichte.
+\layout Comment
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+
+\end_inset 
+
+
+\layout Comment
+
+Wählt man nun willkürlich einen Wert 
+\begin_inset Formula $x_{1}$
+\end_inset 
+
+, dann muß für diesen Fall 
 \begin_inset Formula $X_{2}$
 \end_inset 
 
  den Wert 
-\begin_inset Formula $x_{2}=x-u$
+\begin_inset Formula $x_{2}=y-x_{1}$
 \end_inset 
 
- annehmen, damit die Summe (also 
-\begin_inset Formula $X$
+ annehmen (damit 
+\begin_inset Formula $Y$
 \end_inset 
 
-) den Wert 
-\begin_inset Formula $x$
+ den Wert 
+\begin_inset Formula $y$
 \end_inset 
 
- annimmt.
+ annimmt).
  Da es nun unendlich viele disjunkte Werte 
-\begin_inset Formula $u$
+\begin_inset Formula $x_{1}$
 \end_inset 
 
  gibt, die man hier ansetzen kann, müssen für alle diese Werte die differentiell
 en Wahrscheinlichkeiten summiert (integriert) werden.
- Als Dichtefunktion für die Summe ergibt sich damit
+\layout Standard
+
+Sind 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ sogar stochastisch unabhängig, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ es gilt 
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\end_inset 
+
+, so vereinfacht sich Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_add_dep}
+
+\end_inset 
+
+ zu
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p(x)=\int\limits _{-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\label{eq:prob_continuous_convolution}\end{equation}
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\,\tdc z\msp.\label{eq:prob_continuous_convolution}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Nach dieser Gleichung ist die Dichte der Summe zweier unabhängiger Zufallsgrößen
- also genau die Faltung der einzelnen Dichtefunktionen.
+Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
+er Zufallsgrößen also genau die Faltung der einzelnen Dichtefunktionen.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-p(x)=p_{1}(x)*p_{2}(x)\end{equation}
+p_{Y}(y)=(p_{1}*p_{2})\,(y)\end{equation}
 
 \end_inset 
 
@@ -2253,12 +3033,17 @@ Für die Summe von
 
 
 \begin_inset Formula \[
-p(x)=p_{1}(x)*p_{2}(x)*p_{3}(x)*\cdots*p_{n-1}(x)*p_{n}(x)\msp.\]
+p_{Y}(y)=(p_{1}*p_{2}*p_{3}*\cdots*p_{n-1}*p_{n})\,(y)\msp.\]
 
 \end_inset 
 
 
 \layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:prob_sum_mean}
+
+\end_inset 
 
 Erwartungswert
 \layout Standard
@@ -2268,8 +3053,8 @@ Erwartungswert
 
 \end_inset 
 
-Ausgangspunkt zur Bestimmung des Erwartungswertes von 
-\begin_inset Formula $X$
+Ausgangspunkt zur Bestimmung des Erwartungswertes der Zufallsgröße 
+\begin_inset Formula $Y=X_{1}+X_{2}$
 \end_inset 
 
  ist dessen Definitionsgleichung\SpecialChar ~
@@ -2279,43 +3064,95 @@ Ausgangspunkt zur Bestimmung des Erwartungswertes von
 \end_inset 
 
 .
- Durch Vertauschung der Integrationsreihenfolge, Substitution und unter
- Berücksichtigung der Gleichungen\SpecialChar ~
+\layout Standard
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_unity}
 
-\end_inset 
-
- und\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_continuous_convolution}
+\begin_inset Formula \[
+\mean(Y)=\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}y\, p_{Y}(y)\,\tdc y\]
 
 \end_inset 
 
- ergibt sich
+
+\layout Standard
+
+Einsetzen der Wahrscheinlichkeitsdichte von 
+\begin_inset Formula $Y$
+\end_inset 
+
+ entsprechend Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_add_dep}
+
+\end_inset 
+
+ ergibt:
 \layout Standard
 
 
 \begin_inset Formula \begin{align*}
-\mean(X) & =\int\limits _{x=-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\,\tdc x\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x-u)\,\tdc x\,\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)\, p_{2}(x)\,\tdc x\,\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}up_{2}(x)\,\tdc x\right]\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\cdot\left[\mean(X_{2})+u\right]\,\tdc u\\
- & =\mean(X_{2})\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\tdc u+\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\mean(X_{2})+\mean(X_{1})\end{align*}
+\mean(X_{1}+X_{2}) & =\int\limits _{y=-\infty}^{\infty}y\int\limits _{x_{1}=-\infty}^{\infty}p_{X}(x_{1},y-x_{1})\,\tdc x_{1}\,\tdc y\\
+ & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}(x_{1}+x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}x_{1}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}x_{2}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\end{align*}
 
 \end_inset 
 
 
 \layout Standard
 
-Der Erwartungswert der Summe zweier Zufallsgrößen ist also unabhängig von
- der Verteilung immer gleich der Summe der einzelnen Erwartungswerte.
+Die inneren Integrale in beiden Summanden stellen nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_density_dual}
+
+\end_inset 
+
+ aber genau die Randdichten
+\begin_inset LatexCommand \index{Randdichte}
+
+\end_inset 
+
+ 
+\begin_inset Formula $p_{1}(x_{1})$
+\end_inset 
+
+ und 
+\begin_inset Formula $p_{2}(x_{2})$
+\end_inset 
+
+ der jeweils anderen Zufallsgröße dar.
+\layout Standard
+
+
+\begin_inset Formula \[
+\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Demzufolge ist der Erwartungswert der Summe zweier Zufallsgrößen unabhängig
+ von der (verbundenen) Wahrscheinlichkeitsdichte
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Gleichgültig ob beide Zufallsgößen abhängig oder unabhängig sind.
+\end_inset 
+
+ einfach die Summe der einzelnen Erwartungswerte\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S~27]{Gnedenko:1958}
+
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{2})\label{eq:prob_sum_mean}\end{equation}
+\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{1})\label{eq:prob_sum_mean}\end{equation}
 
 \end_inset 
 
@@ -2330,57 +3167,98 @@ Varianz
 
 \end_inset 
 
-Die Varianz 
-\begin_inset Formula $\var(X)$
-\end_inset 
-
- bestimmt sich ausgehend von der Definition in Gleichung\SpecialChar ~
+Die Varianz der Summe zweier (möglicherweise abhängiger) Zufallsgrößen kann
+ nun ausgehend von Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
 
 \end_inset 
 
- und bei zusätzlicher Berücksichtigung von Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_sum_mean}
-
-\end_inset 
-
- ähnlich wie der Erwartungswert.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\var(X)=\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\label{eq:prob_sum_var}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Einen kleinen Teilschritt überspringen wir, da er genauso verläuft wie beim
- Erwartungswert, nur daß diesmal mit einem quadratischen 
-\begin_inset Formula $x$
-\end_inset 
-
- gerechnet werden muß.
+ bestimmt werden.
 \layout Standard
 
 
 \begin_inset Formula \begin{align}
-\var(X) & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)^{2}p_{2}(x)\,\tdc x\,\tdc u-\mean^{2}(X)\nonumber \\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x)\,\tdc x-2u\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}u^{2}p_{2}(x)\,\tdc x\right]\tdc u-\mean^{2}(X)\nonumber \\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})-2u\mean(X_{2})+u^{2}\right]\,\tdc u-\mean^{2}(X)\nonumber \\
- & =\var(X_{2})+\mean^{2}(X_{2})-2\mean(X_{1})\mean(X_{2})+\var(X_{1})+\mean^{2}(X_{1})-\left[\mean(X_{2})+\mean(X_{1})\right]^{2}\nonumber \\
-\var(X) & =\var(X_{1})+\var(X_{2})\end{align}
+\var(Y) & =\mean(Y^{2})-\mean^{2}(Y)\nonumber \\
+ & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\nonumber \\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\label{eq:prob_sum_var_ext}\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\nonumber \\
+ & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\msp.\nonumber \end{align}
 
 \end_inset 
 
 
 \layout Standard
 
-Auch die Varianz der Summe zweier (unabhängiger) Zufallsgrößen ist immer
- gleich der Summe der einzelnen Varianzen.
+Mit einem kleinen Rückgriff auf Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+
+\end_inset 
+
+ kann man die letzte Formel auch folgendermaßen schreiben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_var}
+
+\end_inset 
+
+) zu 
+\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
+\end_inset 
+
+.
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\label{eq:prob_sum_var}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Sind die Zufallsgrößen 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ unabhängig, dann gilt bekanntlich 
+\begin_inset Formula $\cov(X_{1},X_{2})=0$
+\end_inset 
+
+ und deshalb für die Varianz
+\layout Standard
+
+
+\begin_inset Formula \[
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})\msp.\]
+
+\end_inset 
+
+
 \layout Subsubsection
 
 Effektivwert
@@ -2391,24 +3269,68 @@ Effektivwert
 
 \end_inset 
 
-Ausgehend von Gleichung\SpecialChar ~
+Ausgehend von der Definition des Effektivwertes nach Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_continuous_rms}
 
 \end_inset 
 
- gilt für den Effektivwert von 
-\begin_inset Formula $X$
+ kann man hier Zwischenformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_sum_var_ext}
+
+\end_inset 
+
+ des letzten Abschnitts nutzbringend einsetzen.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\mean(Y^{2}) & =\var(Y)+\mean^{2}(Y)\\
+ & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})\\
+\tilde{Y}^{2} & =\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+2\mean(X_{1}X_{2})\end{align*}
+
 \end_inset 
 
 
 \layout Standard
 
+Sind beide Zufallsgrößen sowohl unabhängig
+\begin_inset Foot
+collapsed true
 
-\begin_inset Formula \begin{align*}
-\mean(X^{2}) & =\var(X)+\mean^{2}(X)=\var(X_{1})+\var(X_{2})+\mean(X_{1})+\mean(X_{2})\\
-\mean(X^{2}) & =\mean(X_{1}^{2})+\mean(X_{2}^{2})\\
-\tilde{X}^{2} & =\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}\end{align*}
+\layout Standard
+
+Verschwindende Kovarianz, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_cov_zero_mean}
+
+\end_inset 
+
+ hat Gültigkeit: 
+\begin_inset Formula $\mean(X_{1}X_{2})=\mean(X_{1})\mean(X_{2})$
+\end_inset 
+
+.
+\end_inset 
+
+ als auch (zumindest eine) mittelwertfrei, dann berechnet sich der Effektivwert
+ der Summengröße wiefolgt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\tilde{Y}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}}\msp.\]
 
 \end_inset 
 
@@ -2419,26 +3341,12 @@ Iterative Fortsetzung ergibt für den Effektivwert der Summe
 \begin_inset Formula $n$
 \end_inset 
 
- unabhängiger Zufallsgrößen
-\begin_inset Foot
-collapsed false
-
-\layout Standard
-
-Angewandt auf unabhängige Rauschquellen
-\begin_inset LatexCommand \index{Rauschen}
-
-\end_inset 
-
- ist interessant, daß nicht einfach die Effektivwerte zu addieren sind.
-\end_inset 
-
-
+ unabhängiger, mittelwertfreier Zufallsgrößen:
 \layout Standard
 
 
 \begin_inset Formula \[
-\tilde{X}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+\tilde{X}_{3}^{2}+\ldots+\tilde{X}_{n-1}^{2}+\tilde{X}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{X}_{i}^{2}}\msp.\]
+\tilde{Y}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+\tilde{X}_{3}^{2}+\ldots+\tilde{X}_{n-1}^{2}+\tilde{X}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{X}_{i}^{2}}\msp.\]
 
 \end_inset 
 
@@ -2617,97 +3525,10 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 .
 \layout Subsection
 
-Summe abhängiger Zufallsgrößen
+Produkt von Zufallsgrößen
 \layout Subsubsection
 
-Varianz
-\layout Standard
-
-
-\begin_inset LatexCommand \index{Varianz}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Zufallsgrößen!Summe von}
-
-\end_inset 
-
-Anders als bei den unabhängigen Zufallsgrößen ist die Varianz der Summe
- zweier (allgemein abhängiger) Zufallsgrößen nicht einfach die bloße Additionen
- der einzelnen Varianzen.
- Sie ergibt sich statt dessen aus (und unter Zuhilfenahme von) Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
-
-\end_inset 
-
- zu
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\var(X_{1}+X_{2}) & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\\
- & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\\
- & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\\
- & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\msp.\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-Mit einem kleinen Rückgriff auf Abschnitt\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
-
-\end_inset 
-
- kann man die letzte Formel auch folgendermaßen schreiben
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Für unkorrelierte Zufallsgrößen entartet die Summenvarianz (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:prob_sum_var}
-
-\end_inset 
-
-) zu 
-\begin_inset Formula $\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})$
-\end_inset 
-
-.
-\end_inset 
-
-:
-\layout Standard
-
-
-\begin_inset Formula \[
-\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\msp.\]
-
-\end_inset 
-
-
-\layout Subsection
-
-Produkt unabhängiger Zufallsgrößen
-\layout Subsubsection
-
-Verteilungsdichte
+Wahrscheinlichkeitsdichte
 \layout Standard
 
 
@@ -2720,17 +3541,310 @@ Verteilungsdichte
 
 \end_inset 
 
+Um die Wahrscheinlichkeitsdichte eines Produkts von zwei Zufallsgrößen 
+\begin_inset Formula $Y=X_{1}X_{2}$
+\end_inset 
+
+ zu bestimmen, interpretieren wir dieses Produkt als Funktion 
+\begin_inset Formula $f(X_{1},X_{2})$
+\end_inset 
+
+.
+ Da wir auch hier nur 
+\emph on 
+eine
+\emph default 
+ Ergebnisgröße, nämlich 
+\begin_inset Formula $Y$
+\end_inset 
+
+, haben, müssen wir die Darstellung 
+\begin_inset Formula $\mvec{Y}=\mvec{f}(\mvec{X})$
+\end_inset 
+
+ wieder 
+\begin_inset Quotes eld
+\end_inset 
+
+künstlich
+\begin_inset Quotes erd
+\end_inset 
+
+ erzeugen.
+ Dazu benennen wird 
+\begin_inset Formula $Y$
+\end_inset 
+
+ in 
+\begin_inset Formula $Y_{1}=f_{1}(X_{1},X_{2})=X_{1}X_{2}$
+\end_inset 
+
+ um und definieren eine zweite Funktion 
+\begin_inset Formula $Y_{2}=f_{2}(X_{1},X_{2})=X_{1}/X_{2}$
+\end_inset 
+
+.
+\layout Standard
+
+Auch diesmal ermitteln wir zuerst die Umkehrfunktionen 
+\begin_inset Formula $\mvec{h}(\mvec{Y})$
+\end_inset 
+
+, beschränken uns aber auf die positiven Werte von 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ sowie die Radikanden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Den Verlust der halben (differentiellen) Wahrscheinlichkeit gleichen wir
+ später wieder aus.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+X_{1} & =h_{1}(Y_{1},Y_{2})=\sqrt{Y_{1}Y_{2}}\\
+X_{2} & =h_{2}(Y_{1},Y_{2})=\sqrt{Y_{1}/Y_{2}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Den Absolutwert der zugehörigen Funktionaldeterminante
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvstretch
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\mvec{J}_{h}\right|=\left|\begin{array}{cc}
+\mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
+\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\frac{1}{4}\left|\begin{array}{cc}
+\mbig{\sqrt{\frac{y_{2}}{y_{1}}}} & \mbig{\sqrt{\frac{y_{1}}{y_{2}}}}\\
+\mbig{\frac{1}{\sqrt{y_{1}y_{2}}}} & \mbig{-\sqrt{\frac{y_{1}}{y_{2}^{3}}}}\end{array}\right|=-\frac{1}{4}\left(\frac{1}{y_{2}}+y_{1}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+tabvnormal
+\end_inset 
+
+
+\layout Standard
+
+wenden wir wieder auf Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_transform_density_multi}
+
+\end_inset 
+
+ an, berücksichten aber, daß die differentielle Wahrscheinlichkeit doppelt
+ so groß ausfällt.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{Y}(y_{1},y_{2})=2\left|\mvec{J}_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da die ZUfallsgröße 
+\begin_inset Formula $Y_{2}$
+\end_inset 
+
+ auch hier nicht von Interesse ist, müssen wir sie wieder 
+\begin_inset Quotes eld
+\end_inset 
+
+ausblenden
+\begin_inset Quotes erd
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ aus der verbundenen Dichtefunktion 
+\begin_inset Formula $p_{Y}(y_{1},y_{2})$
+\end_inset 
+
+ die (eindimensionale) Randdichte von 
+\begin_inset Formula $Y_{1}$
+\end_inset 
+
+ berechnen.
+ Dabei benennen wir auch gleich wieder 
+\begin_inset Formula $Y_{1}$
+\end_inset 
+
+ in 
+\begin_inset Formula $Y$
+\end_inset 
+
+ um.
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\,\tdc y_{2}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\,\tdc y_{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die abschließende Substitution 
+\begin_inset Formula $z=\sqrt{\smash[b]{y\, y_{2}}}$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $\sqrt{\smash[b]{y/y_{2}}}=y/z$
+\end_inset 
+
+ und 
+\begin_inset Formula $2\,\tdc z=\tdc y_{2}\sqrt{\smash[b]{y/y_{2}}}=\tdc y_{2}\, y/z$
+\end_inset 
+
+ ergibt:
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+p_{Y}(y) & = & \int\limits _{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\,\tdc z\\
+ & = & \int\limits _{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\,\tdc z\\
+ & = & \int\limits _{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\,\tdc z+\int\limits _{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\,\tdc z\msp.\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Das zweite Integral ist aber Null, was sich durch Anwendung partieller Integrati
+on (
+\begin_inset Formula $\int uv'=uv-\int vu'$
+\end_inset 
+
+) mit 
+\begin_inset Formula $u=z$
+\end_inset 
+
+ und 
+\begin_inset Formula $v'=p_{X}(z,y/z)$
+\end_inset 
+
+ zeigen läßt.
+ Dabei ist zu berücksichtigen, daß mit den Integrationsgrenzen 
+\begin_inset Formula $\pm\infty$
+\end_inset 
+
+ die Funktion 
+\begin_inset Formula $v=\int_{-\infty}^{\infty}p_{X}(z,y/z)\,\tdc z$
+\end_inset 
+
+ nur noch eine Funktion von 
+\begin_inset Formula $y$
+\end_inset 
+
+ ist, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ bezüglich der Integration nach 
+\begin_inset Formula $\tdc z$
+\end_inset 
+
+ eine Konstante darstellt.
+\layout Standard
+
+
+\begin_inset Formula \[
+\int z\, p_{X}\left(z,y/z\right)\,\tdc z=zv-v\int\,\tdc z=zv-vz=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für die Wahrscheinlichkeitsdichte des Produktes zweier (abhängiger) Zufallsgröße
+n gilt also:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\,\tdc z\msp.\label{eq:prob_continuous_prd}\end{equation}
+
+\end_inset 
+
+
+\layout Comment
+
 Ähnlich wie in Abschnitt\SpecialChar ~
 
-\begin_inset LatexCommand \ref{sec:prob_sum_independent}
+\begin_inset LatexCommand \ref{sec:prob_sum}
 
 \end_inset 
 
  wird wieder von der Definition der Dichtefunktion für 
-\begin_inset Formula $X$
+\begin_inset Formula $Y$
 \end_inset 
 
- sowie für die unkorrelierten Faktoren 
+ sowie für die Faktoren 
 \begin_inset Formula $X_{1}$
 \end_inset 
 
@@ -2739,100 +3853,94 @@ Verteilungsdichte
 \end_inset 
 
  ausgegangen.
-\layout Standard
+\layout Comment
 
 
-\begin_inset Formula \begin{xalignat*}{3}
-p(x) & =\pr\left(X=x\pm\frac{\tdc x}{2}\right) & p_{1}(x_{1}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\right) & p_{2}(x_{2}) & =\pr\left(X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+\begin_inset Formula \begin{xalignat*}{2}
+p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
 \end_inset 
 
 
-\layout Standard
+\layout Comment
 
 Für einen willkürlich gewählten Wert 
-\begin_inset Formula $u$
+\begin_inset Formula $x_{1}$
 \end_inset 
 
 , den 
 \begin_inset Formula $X_{1}$
 \end_inset 
 
- annimt, gilt 
-\begin_inset Formula $p_{1}(u)=\pr\left(X_{1}=u\pm\tdc u/2\right)$
-\end_inset 
-
-.
- Für diesen Fall muß aber 
+ annimt, muß 
 \begin_inset Formula $X_{2}$
 \end_inset 
 
  den Wert 
-\begin_inset Formula $x_{2}=x/u$
+\begin_inset Formula $x_{2}=y/x_{1}$
 \end_inset 
 
 , 
-\begin_inset Formula $\tdc x_{2}=\tdc x/u$
+\begin_inset Formula $\tdc x_{2}=\tdc y/x_{1}$
 \end_inset 
 
- annehmen, damit das Produkt (also 
-\begin_inset Formula $X$
+ annehmen, damit das Produkt gleich 
+\begin_inset Formula $y$
 \end_inset 
 
-) gleich 
-\begin_inset Formula $x$
-\end_inset 
-
- wird.
-\layout Standard
-
-
-\begin_inset Formula \[
-p_{2}\left(\frac{x}{u}\right)=\pr\left(X_{2}=\frac{x}{u}\pm\frac{\tdc x}{2u}\right)=\pr\left(uX_{2}=x\pm\frac{\tdc x}{2}\right)\]
-
-\end_inset 
-
-
-\layout Standard
-
-Aus Abschnitt\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:prob_transform}
-
-\end_inset 
-
- ist außerdem bekannt, daß bei einer linearen Transformation von 
-\begin_inset Formula $X_{2}$
-\end_inset 
-
- über 
-\begin_inset Formula $u$
-\end_inset 
-
- sich die Dichtefunktion folgendermaßen ändert.
-\layout Standard
-
-
-\begin_inset Formula \[
-p_{2}(x)=\frac{1}{u}\cdot p_{2}\left(\frac{x}{u}\right)\]
-
-\end_inset 
-
-
-\layout Standard
-
-Da es unendlich viele disjunkte Werte 
-\begin_inset Formula $u$
+ ist.
+ Da es unendlich viele disjunkte Werte 
+\begin_inset Formula $x_{1}$
 \end_inset 
 
  gibt, müssen wieder die differentiellen Wahrscheinlichkeiten für alle diese
  Werte summiert (integriert) werden.
- Als Dichtefunktion für das Produkt ergibt sich damit
+ Als Dichtefunktion für das Produkt ergibt sich damit:
+\layout Comment
+
+
+\begin_inset Formula \[
+p_{X}(x)\,\tdc x=p_{Y}(y)\,\tdc y\]
+
+\end_inset 
+
+
+\layout Standard
+
+Sind 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ stochastisch unabhängig, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ es gilt 
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\end_inset 
+
+, so vereinfacht sich Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+
+\end_inset 
+
+ zu
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-p(x)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(u)p_{2}(x/u)}{u}\,\tdc u\label{eq:prob_continuous_prd}\end{equation}
+\begin_inset Formula \[
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\,\tdc z\msp.\]
 
 \end_inset 
 
@@ -2847,45 +3955,63 @@ Erwartungswert
 
 \end_inset 
 
-Einsetzen von Gleichung\SpecialChar ~
+Den Erwartungswert von 
+\begin_inset Formula $Y$
+\end_inset 
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+ kann man nach der Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_mean_func_dual}
 
 \end_inset 
 
- in 
-\begin_inset LatexCommand \ref{eq:prob_continuous_mean}
-
+ für die Funktion einer zweidimensionalen Zufallsgröße bestimmen.
+ Dazu setzt man als Funktion 
+\begin_inset Formula $f(X_{1},X_{2})=X_{1}\cdot X_{2}$
 \end_inset 
 
-, gefolgt von Vertauschung der Integrationsreihenfolge in Verbindung mit
- der Substitution 
-\begin_inset Formula $w=x/u$
-\end_inset 
-
- liefert den Zusammenhang zwischen den Erwartungswerten.
+ und erhält für den allgemeinen Fall abhängiger Zufallsgrößen:
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-\mean(X) & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\\
- & =\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\,\tdc u\,\tdc x\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}\frac{x\, p_{2}(x/u)}{u}\,\tdc x\,\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\int\limits _{w=-\infty}^{\infty}w\, p_{2}(w)\,\tdc w\,\tdc u\\
- & =\mean(X_{2})\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\mean(X_{1})\mean(X_{2})\end{align*}
+\begin_inset Formula \[
+\mean(X_{1}X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}\]
 
 \end_inset 
 
 
 \layout Standard
 
-Auch in diesem Fall können also die Erwartungswerte einfach multipliziert
- werden.
+Sind 
+\begin_inset Formula $X_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $X_{2}$
+\end_inset 
+
+ stochastisch unabhängig, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ es gibt die Faktorisierung 
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\cdot p_{2}(x_{2})$
+\end_inset 
+
+, kann man weiter vereinfachen.
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\mean(X_{1}\cdot X_{2})=\mean(X_{1})\,\mean(X_{2})\label{eq:prob_prd_mean}\end{equation}
+\begin_inset Formula \begin{eqnarray}
+\mean(X_{1}X_{2}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{2}\,\tdc x_{1}\nonumber \\
+ & = & \int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\nonumber \\
+ & = & \mean(X_{1})\mean(X_{2})\label{eq:prob_prd_mean}\end{eqnarray}
 
 \end_inset 
 
@@ -3079,7 +4205,7 @@ einer
 \end_inset 
 
 , über die Zeit betrachtet, übereinstimmen müssen 
-\begin_inset LatexCommand \cite{Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979}
+\begin_inset LatexCommand \cite{Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958}
 
 \end_inset 
 
@@ -3095,15 +4221,15 @@ einer
 \end_inset 
 
 
-\layout Subsection
+\layout Comment
 
 Autokorrelation
-\layout Subsection
+\layout Comment
 
 Kreuzkorrelation
 \layout Section
 
-Informationstechnische Anwendungen
+Anwendungen
 \layout Subsection
 
 Quantisierung
@@ -3299,7 +4425,7 @@ ie
 
 \end_inset 
 
- mit der Verteilungsdichte 
+ mit der Wahrscheinlichkeitsdichte 
 \begin_inset Formula $p(n)=\Delta^{-1}$
 \end_inset 
 
@@ -3640,8 +4766,8 @@ eg
 \begin_inset Formula $\mu_{i}$
 \end_inset 
 
- der Erwartungswert des jeweiligen Impulses sind, dann gilt für die Verteilungsd
-ichten
+ der Erwartungswert des jeweiligen Impulses sind, dann gilt für die Wahrscheinli
+chkeitsdichten
 \layout Standard
 
 
@@ -3682,7 +4808,7 @@ cf
 
 
 \begin_inset Formula \[
-\pr(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
+\pr(T_{i}<t)=F_{i}(t)=\int\limits _{-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
 
 \end_inset 
 
@@ -3720,8 +4846,8 @@ Mittelwertfreie Normalverteilung mit
 
 
 \begin_inset Formula \begin{eqnarray}
-F_{i}(t) & = & \int\limits _{z=-\infty}^{\frac{t-\mu_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
-\cnorm(x) & = & \int\limits _{u=-\infty}^{x}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{u^{2}}{2}}\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
+F_{i}(t) & = & \int\limits _{-\infty}^{\frac{t-\mu_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
+\cnorm(x) & = & \int\limits _{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{u^{2}}{2}}\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
 
 \end_inset 
 
@@ -3973,7 +5099,7 @@ SNR Signal-Rausch-Abstand
 \begin_inset Formula $\sigma^{2}$
 \end_inset 
 
- Varianz einer Zufallsgröße
+ Varianz der Normalverteilung
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -4002,6 +5128,18 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $F_{X}(\mvec{x})$
+\end_inset 
+
+ Verteilungsfunktion des Zufallsvektors 
+\begin_inset Formula $\mvec{X}$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\pr$
 \end_inset 
 
@@ -4015,6 +5153,18 @@ SNR Signal-Rausch-Abstand
 
  Wahrscheinlichkeitsdichte der Zufallsgröße 
 \begin_inset Formula $X$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $p_{X}(\mvec{x})$
+\end_inset 
+
+ Wahrscheinlichkeitsdichte des Zufallsvektors 
+\begin_inset Formula $\mvec{X}$
 \end_inset 
 
 
