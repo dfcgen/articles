@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.3 2004-10-24 12:59:25 ralf Exp $
+Version: $Id: probabil.lyx,v 1.4 2004-10-26 16:07:43 ralf Exp $
 \end_inset 
 
 
@@ -198,30 +198,25 @@ Der
 \end_inset 
 
 Erwartungswert 
-\begin_inset Formula $\bar{x}$
+\begin_inset Formula $\mean(X)$
 \end_inset 
 
- (lineare Mittelwert
-\begin_inset LatexCommand \index{Mittelwert}
-
-\end_inset 
-
-) ergibt sich aus der Wichtung aller Werte 
+ ergibt sich aus der Wichtung aller Werte 
 \begin_inset Formula $x_{i}$
 \end_inset 
 
  mit der Wahrscheinlichkeit ihres Auftretens
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
-Oftmals auch geschrieben als 
-\begin_inset Formula $\bar{x}=\textrm{E}X$
+Oftmals auch geschrieben als typischer Operator 
+\begin_inset Formula $\mean X$
 \end_inset 
 
  oder 
-\begin_inset Formula $\textrm{E}\left[X\right]$
+\begin_inset Formula $\mean\left[X\right]$
 \end_inset 
 
 .
@@ -232,44 +227,49 @@ Oftmals auch geschrieben als
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}\end{equation}
+\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Die 
+Die Varianz
 \begin_inset LatexCommand \index{Varianz}
 
 \end_inset 
 
-Varianz 
-\begin_inset Formula $\sigma^{2}$
+ 
+\begin_inset Formula $\var(X)$
 \end_inset 
 
  ist der Erwartungswert der quadratischen Abweichung vom Erwartungswert.
- Sie ist dadurch ein gutes Maß für die Streuung
+ Sie ist dadurch ein gutes Maß für die 
 \begin_inset LatexCommand \index{Streuung}
 
 \end_inset 
 
-
+Streuung
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
-Häufig auch geschrieben als 
-\begin_inset Formula $\sigma^{2}=\var X$
+Oftmals auch anzutreffen als 
+\begin_inset Formula $\sigma^{2}$
+\end_inset 
+
+, 
+\begin_inset Formula $\textrm{D}X$
 \end_inset 
 
  oder 
 \begin_inset Formula $\textrm{D}[X]$
 \end_inset 
 
-, außerdem als Größe 
-\begin_inset Formula $\sigma=\sqrt{\smash[b]{\var X}}$
+.
+ Außerdem als Größe 
+\begin_inset Formula $\sigma=\sqrt{\smash[b]{\var(X)}}$
 \end_inset 
 
  Standardabweichung
@@ -299,7 +299,7 @@ resp
 
 
 \begin_inset Formula \begin{equation}
-\sigma^{2}=\sum_{i=1}^{N}p_{i}\left(x_{i}-\bar{x}\right)^{2}\label{eq:prob_discrete_var}\end{equation}
+\var(X)=\sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}\end{equation}
 
 \end_inset 
 
@@ -322,7 +322,7 @@ ie
 \end_inset 
 
  Zufallsgrößen für die 
-\begin_inset Formula $\bar{x}=0$
+\begin_inset Formula $\mean(X)=0$
 \end_inset 
 
  gilt, ergibt sich:
@@ -330,7 +330,7 @@ ie
 
 
 \begin_inset Formula \[
-\sigma^{2}=\sum_{i=1}^{N}p_{i}\,\bar{x}^{2}\msp.\]
+\var(X)=\sum_{i=1}^{N}p_{i}\, x_{i}^{2}\msp.\]
 
 \end_inset 
 
@@ -575,7 +575,7 @@ Der Erwartungswert
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\label{eq:prob_continuous_mean}\end{equation}
+\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\label{eq:prob_continuous_mean}\end{equation}
 
 \end_inset 
 
@@ -598,10 +598,10 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\sigma^{2} & =\int\limits _{-\infty}^{\infty}\left(x-\bar{x}\right)^{2}p(x)\,\tdc x\label{eq:prob_continuous_var}\\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\bar{x}\, p(x)+\bar{x}^{2}p(x)\,\tdc x\nonumber \\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\bar{x}\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\bar{x}^{2}\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\nonumber \\
-\sigma^{2} & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}=\tilde{x}^{2}-\bar{x}^{2}\label{eq:prob_continuous_var_rms}\end{align}
+\var(X) & =\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\,\tdc x\label{eq:prob_continuous_var}\\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\,\tdc x\nonumber \\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\mean(X)\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\mean^{2}(X)\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\nonumber \\
+\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)=\mean(X^{2})-\mean^{2}(X)\label{eq:prob_continuous_var_rms}\end{align}
 
 \end_inset 
 
@@ -610,11 +610,20 @@ In ähnlicher Art und Weise (und unter Berücksichtigung von Formel\SpecialChar ~
 
 Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
  des Erwartungswertes der Zufallsgröße.
- Für Zufallsgrößen mit verschwindendem Mittelwert (
-\begin_inset Formula $\bar{x}=0$
+ Andersherum gilt:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\mean(X^{2})=\var(X)+\mean^{2}(X)\msp.\label{eq:prob_continuous_rms}\end{equation}
+
 \end_inset 
 
-) ist demzufolge die Varianz gleich dem Quadrat des Effektivwertes
+
+\layout Standard
+
+Für Zufallsgrößen mit verschwindendem Mittelwert ist demzufolge die Varianz
+ gleich dem Quadrat des Effektivwertes
 \begin_inset LatexCommand \index{Effektivwert}
 
 \end_inset 
@@ -626,8 +635,12 @@ collapsed true
 \layout Standard
 
 Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
- Mittelwert des Quadrats dieser Größe definiert: 
-\begin_inset Formula $\tilde{x}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\,\tdc x}\msp$
+ Erwartungswert des Quadrats der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset 
+
+ definiert: 
+\begin_inset Formula $\tilde{X}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\,\tdc x}=\sqrt{\mean(X^{2})}\msp$
 \end_inset 
 
 .
@@ -637,8 +650,8 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\tilde{x}^{2}=\sigma^{2}+\bar{x}^{2}\label{eq:prob_continuous_rms}\end{equation}
+\begin_inset Formula \[
+\var(X)=\mean(X^{2})\]
 
 \end_inset 
 
@@ -704,7 +717,7 @@ Der Erwartungswert nach Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\label{eq:prob_equal_mean}\end{equation}
+\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\label{eq:prob_equal_mean}\end{equation}
 
 \end_inset 
 
@@ -722,9 +735,9 @@ Die Varianz ermittelt sich nach Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\sigma^{2} & =\int\limits _{a}^{b}\frac{\left(x-\bar{x}\right)^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\cdot\left.\left(x-\bar{x}\right)^{3}\right|_{a}^{b}\nonumber \\
- & =\frac{1}{3(b-a)}\cdot\left[\left(b-\bar{x}\right)^{3}-\left(a-\bar{x}\right)^{3}\right]=\frac{1}{3(b-a)}\cdot\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
-\sigma^{2} & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}\end{align}
+\var(X) & =\int\limits _{a}^{b}\frac{\left[x-\mean(X)\right]^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\cdot\left.\left[x-\mean(X)\right]^{3}\right|_{a}^{b}\nonumber \\
+ & =\frac{1}{3(b-a)}\cdot\left\{ \left[b-\mean(X)\right]^{3}-\left[a-\mean(X)\right]^{3}\right\} =\frac{1}{3(b-a)}\cdot\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
+\var(X) & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}\end{align}
 
 \end_inset 
 
@@ -784,7 +797,13 @@ Transformation von Rauschverteilungen (Weiß
 Rosa);
 \layout Itemize
 
-oder die Bestimmung der Verteilungsdichte (Verteilung) determinierter Funktionen.
+oder die Bestimmung der Amplitudenverteilung analytischer Funktionen\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibrefchap{2.5}]{Schruefer:1990}
+
+\end_inset 
+
+.
 \layout Standard
 
 Als Modell soll die Transformation der Eingangsgröße 
@@ -1366,12 +1385,12 @@ Ausgangspunkt zur Bestimmung des Erwartungswertes von
 
 
 \begin_inset Formula \begin{align*}
-\bar{x} & =\int\limits _{x=-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\,\tdc x\\
+\mean(X) & =\int\limits _{x=-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}p_{1}(u)\, p_{2}(x-u)\,\tdc u\,\tdc x\\
  & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x-u)\,\tdc x\,\tdc u\\
  & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)\, p_{2}(x)\,\tdc x\,\tdc u\\
  & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}up_{2}(x)\,\tdc x\right]\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\cdot\left(\bar{x}_{2}+u\right)\,\tdc u\\
- & =\bar{x}_{2}\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\tdc u+\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\bar{x}_{2}+\bar{x}_{1}\end{align*}
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\cdot\left[\mean(X_{2})+u\right]\,\tdc u\\
+ & =\mean(X_{2})\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\tdc u+\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\mean(X_{2})+\mean(X_{1})\end{align*}
 
 \end_inset 
 
@@ -1384,7 +1403,7 @@ Der Erwartungswert der Summe zweier Zufallsgrößen ist also unabhängig von
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\bar{x}_{1}+\bar{x}_{2}\label{eq:prob_sum_mean}\end{equation}
+\mean(X)=\mean(X_{1})+\mean(X_{2})\label{eq:prob_sum_mean}\end{equation}
 
 \end_inset 
 
@@ -1400,7 +1419,7 @@ Varianz
 \end_inset 
 
 Die Varianz 
-\begin_inset Formula $\sigma^{2}$
+\begin_inset Formula $\var(X)$
 \end_inset 
 
  bestimmt sich ausgehend von der Definition in Gleichung\SpecialChar ~
@@ -1420,14 +1439,14 @@ Die Varianz
 
 
 \begin_inset Formula \begin{equation}
-\sigma^{2}=\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}\label{eq:prob_sum_var}\end{equation}
+\var(X)=\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\label{eq:prob_sum_var}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Den folgenden Teilschritt überspringen wir, da er genauso verläuft wie beim
+Einen kleinen Teilschritt überspringen wir, da er genauso verläuft wie beim
  Erwartungswert, nur daß diesmal mit einem quadratischen 
 \begin_inset Formula $x$
 \end_inset 
@@ -1436,11 +1455,12 @@ Den folgenden Teilschritt überspringen wir, da er genauso verläuft wie beim
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-\sigma^{2} & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)^{2}p_{2}(x)\,\tdc x\,\tdc u-\bar{x}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x)\,\tdc x-2u\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}u^{2}p_{2}(x)\,\tdc x\right]\tdc u-\bar{x}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}-2u\bar{x}_{2}+u^{2}\right)\,\tdc u-\bar{x}^{2}\\
- & =\sigma_{2}^{2}+\bar{x}_{2}^{2}-2\bar{x}_{1}\bar{x}_{2}+\sigma_{1}^{2}+\bar{x}_{1}^{2}-\left(\bar{x}_{2}+\bar{x}_{1}\right)^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}\end{align*}
+\begin_inset Formula \begin{align}
+\var(X) & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}(x+u)^{2}p_{2}(x)\,\tdc x\,\tdc u-\mean^{2}(X)\nonumber \\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\:\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x)\,\tdc x-2u\int\limits _{x=-\infty}^{\infty}x\, p_{2}(x)\,\tdc x+\int\limits _{x=-\infty}^{\infty}u^{2}p_{2}(x)\,\tdc x\right]\tdc u-\mean^{2}(X)\nonumber \\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})-2u\mean(X_{2})+u^{2}\right]\,\tdc u-\mean^{2}(X)\nonumber \\
+ & =\var(X_{2})+\mean^{2}(X_{2})-2\mean(X_{1})\mean(X_{2})+\var(X_{1})+\mean^{2}(X_{1})-\left[\mean(X_{2})+\mean(X_{1})\right]^{2}\nonumber \\
+\var(X) & =\var(X_{1})+\var(X_{2})\end{align}
 
 \end_inset 
 
@@ -1449,15 +1469,6 @@ Den folgenden Teilschritt überspringen wir, da er genauso verläuft wie beim
 
 Auch die Varianz der Summe zweier Zufallsgrößen ist also unabhängig von
  deren Verteilung immer gleich der Summe der einzelnen Varianzen.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\sigma^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}\end{equation}
-
-\end_inset 
-
-
 \layout Subsubsection
 
 Effektivwert
@@ -1482,8 +1493,10 @@ Ausgehend von Gleichung\SpecialChar ~
 \layout Standard
 
 
-\begin_inset Formula \[
-\tilde{x}^{2}=\sigma^{2}+\bar{x}^{2}=\sigma_{1}^{2}+\sigma_{2}^{2}+\bar{x}_{1}+\bar{x}_{2}=\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}\msp.\]
+\begin_inset Formula \begin{align*}
+\mean(X^{2}) & =\var(X)+\mean^{2}(X)=\var(X_{1})+\var(X_{2})+\mean(X_{1})+\mean(X_{2})\\
+\mean(X^{2}) & =\mean(X_{1}^{2})+\mean(X_{2}^{2})\\
+\tilde{X}^{2} & =\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}\end{align*}
 
 \end_inset 
 
@@ -1500,11 +1513,7 @@ collapsed false
 
 \layout Standard
 
-Angewandt auf 
-\begin_inset Formula $n$
-\end_inset 
-
- unabhängige Rauschquellen
+Angewandt auf unabhängige Rauschquellen
 \begin_inset LatexCommand \index{Rauschen}
 
 \end_inset 
@@ -1517,7 +1526,7 @@ Angewandt auf
 
 
 \begin_inset Formula \[
-\tilde{x}=\sqrt{\tilde{x}_{1}^{2}+\tilde{x}_{2}^{2}+\tilde{x}_{3}^{2}+\ldots+\tilde{x}_{n-1}^{2}+\tilde{x}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{x}_{i}^{2}}\msp.\]
+\tilde{X}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+\tilde{X}_{3}^{2}+\ldots+\tilde{X}_{n-1}^{2}+\tilde{X}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{X}_{i}^{2}}\msp.\]
 
 \end_inset 
 
@@ -1570,6 +1579,14 @@ resp
 
 \end_inset 
 
+ mit 
+\begin_inset Formula $\mean(X)=\mu$
+\end_inset 
+
+ und 
+\begin_inset Formula $\var(X)=\sigma^{2}$
+\end_inset 
+
 .
 \end_inset 
 
@@ -1578,7 +1595,7 @@ resp
 
 
 \begin_inset Formula \begin{equation}
-p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{x-\bar{x}_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\end{equation}
+p_{i}(x)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\end{equation}
 
 \end_inset 
 
@@ -1611,7 +1628,7 @@ Fourier
 
 
 \begin_inset Formula \[
-\FT\left\{ p_{i}(x)\right\} =e^{-\bar{x}_{i}}\cdot e^{-2\left(\pi\sigma_{i}f\right)^{2}}\]
+\FT\left\{ p_{i}(x)\right\} =e^{-\mu_{i}}\cdot e^{-2\left(\pi\sigma_{i}f\right)^{2}}\]
 
 \end_inset 
 
@@ -1623,7 +1640,7 @@ und dann einfach multipliziert (Faltungssatz).
 
 
 \begin_inset Formula \[
-\FT\left\{ p(x)\right\} =e^{-\left(\bar{x}_{1}+\bar{x}_{2}\right)}\cdot e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
+\FT\left\{ p(x)\right\} =e^{-(\mu_{1}+\mu_{2})}\cdot e^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
 
 \end_inset 
 
@@ -1639,7 +1656,7 @@ Die Rücktransformation von
 
 
 \begin_inset Formula \[
-p(x)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{1}{2}\left(\frac{x-\bar{x}}{\sigma}\right)^{2}},\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\bar{x}=\bar{x}_{1}+\bar{x}_{2}\]
+p(x)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}},\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\mu=\mu_{1}+\mu_{2}\]
 
 \end_inset 
 
@@ -1648,7 +1665,7 @@ p(x)=\frac{1}{\sqrt{2\pi}\sigma}\cdot e^{-\frac{1}{2}\left(\frac{x-\bar{x}}{\sig
 
 Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
  
-\begin_inset Formula $\bar{x}_{i}$
+\begin_inset Formula $\mu_{i}$
 \end_inset 
 
  und den Varianzen 
@@ -1657,7 +1674,7 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 
  ist wieder normalverteilt
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1678,7 +1695,7 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 \end_inset 
 
  mit dem Erwartungswert 
-\begin_inset Formula $\bar{x}_{1}+\bar{x}_{2}$
+\begin_inset Formula $\mu_{1}+\mu_{2}$
 \end_inset 
 
  und der Varianz 
@@ -1816,7 +1833,7 @@ Da es unendlich viele disjunkte Werte
 
 
 \begin_inset Formula \begin{equation}
-p(x)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(u)p_{2}(x/u)}{u}\tdc u\label{eq:prob_continuous_prd}\end{equation}
+p(x)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(u)p_{2}(x/u)}{u}\,\tdc u\label{eq:prob_continuous_prd}\end{equation}
 
 \end_inset 
 
@@ -1852,11 +1869,11 @@ Einsetzen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\bar{x} & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\\
- & =\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x\\
- & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}\frac{x\, p_{2}(x/u)}{u}\tdc x\tdc u\\
- & =\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\int\limits _{w=-\infty}^{\infty}w\, p_{2}(w)\tdc w\tdc u\\
- & =\bar{x}_{2}\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\bar{x}_{1}\bar{x}_{2}\end{align*}
+\mean(X) & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x\\
+ & =\int\limits _{x=-\infty}^{\infty}x\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\,\tdc u\,\tdc x\\
+ & =\int\limits _{u=-\infty}^{\infty}p_{1}(u)\int\limits _{x=-\infty}^{\infty}\frac{x\, p_{2}(x/u)}{u}\,\tdc x\,\tdc u\\
+ & =\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\int\limits _{w=-\infty}^{\infty}w\, p_{2}(w)\,\tdc w\,\tdc u\\
+ & =\mean(X_{2})\int\limits _{u=-\infty}^{\infty}u\, p_{1}(u)\,\tdc u=\mean(X_{1})\mean(X_{2})\end{align*}
 
 \end_inset 
 
@@ -1869,7 +1886,7 @@ Auch in diesem Fall können also die Erwartungswerte einfach multipliziert
 
 
 \begin_inset Formula \begin{equation}
-\bar{x}=\bar{x}_{1}\bar{x}_{2}\label{eq:prob_prd_mean}\end{equation}
+\mean(X)=\mean(X_{1})\,\mean(X_{2})\label{eq:prob_prd_mean}\end{equation}
 
 \end_inset 
 
@@ -1912,25 +1929,34 @@ Einsetzen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\sigma^{2} & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\bar{x}^{2}\\
- & =\int\limits _{x=-\infty}^{\infty}x^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x-\bar{x}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x/u)\tdc x\tdc u-\bar{x}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\bar{x}^{2}\\
- & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\int\limits _{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\bar{x}_{1}\bar{x}_{2}\\
- & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\tdc u-\bar{x}_{1}\bar{x}_{2}\\
-\sigma^{2} & =\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\left(\sigma_{1}^{2}+\bar{x}_{1}^{2}\right)-\bar{x}_{1}\bar{x}_{2}=\sigma_{1}^{2}\sigma_{2}^{2}+\bar{x}_{1}^{2}\sigma_{2}^{2}+\bar{x}_{2}^{2}\sigma_{1}^{2}\end{align*}
+\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\\
+ & =\int\limits _{x=-\infty}^{\infty}x^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(x/u)}{u}\tdc u\tdc x-\mean^{2}(X)\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}x^{2}p_{2}(x/u)\tdc x\tdc u-\mean^{2}(X)\\
+ & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(X)\\
+ & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\int\limits _{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean(X_{1})\mean(X_{2})\\
+ & =\int\limits _{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean(X_{1})\mean(X_{2})\\
+ & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\cdot\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean(X_{1})\mean(X_{2})\end{align*}
 
 \end_inset 
 
 
 \layout Standard
 
-Bemerkenswert ist hierbei daß, abgesehen von mittelwertfreien Zufallsgrößen
+Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
 \begin_inset LatexCommand \index{Zufallsgrößen!mittelwertfreie}
 
 \end_inset 
 
 , nicht einfach die Varianzen zu multiplizieren sind.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\var(X)=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})\label{eq:prob_prd_var}\end{equation}
+
+\end_inset 
+
+
 \layout Subsubsection
 
 Effektivwert
@@ -1947,20 +1973,24 @@ Ausgehend von Gleichung\SpecialChar ~
 
 \end_inset 
 
- kann mit Hilfe der Varianz 
-\begin_inset Formula $\sigma^{2}$
+ kann der Effektivwert sofort angegeben werden, wenn man die Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+
 \end_inset 
 
- der Effektivwert von 
-\begin_inset Formula $X$
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_prd_var}
+
 \end_inset 
 
- bestimmt werden.
+ einsetzt.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\tilde{x}=\sqrt{\sigma^{2}+\bar{x}^{2}}=\sqrt{\left(\sigma_{2}^{2}+\bar{x}_{2}^{2}\right)\left(\sigma_{1}^{2}+\bar{x}_{1}^{2}\right)}=\tilde{x}_{1}\tilde{x}_{2}\end{equation}
+\mean(X^{2})=\var(X)+\mean^{2}(X)=\mean(X_{1}^{2})\mean(X_{2}^{2})\end{equation}
 
 \end_inset 
 
@@ -1976,7 +2006,7 @@ Für den Effektivwert des Produkts
 
 
 \begin_inset Formula \begin{equation}
-\tilde{x}=\tilde{x}_{1}\cdot\tilde{x}_{2}\cdot\tilde{x}_{3}\cdot\cdots\cdot\tilde{x}_{n-1}\cdot\tilde{x}_{n}\msp.\end{equation}
+\tilde{X}=\tilde{X}_{1}\cdot\tilde{X}_{2}\cdot\tilde{X}_{3}\cdot\cdots\cdot\tilde{X}_{n-1}\cdot\tilde{X}_{n}\msp.\end{equation}
 
 \end_inset 
 
@@ -2282,9 +2312,9 @@ mel\SpecialChar ~
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-\tilde{n}^{2} & = & \sigma^{2}=\frac{(b-a)^{2}}{12}=\frac{\Delta^{2}}{12}\nonumber \\
-\tilde{n} & = & \frac{\Delta}{\sqrt{12}}\approx\frac{\Delta}{3,46}\end{eqnarray}
+\begin_inset Formula \begin{align}
+\tilde{n}^{2} & =\var(n)=\frac{(b-a)^{2}}{12}=\frac{\Delta^{2}}{12}\nonumber \\
+\tilde{n} & =\frac{\Delta}{\sqrt{12}}\approx\frac{\Delta}{3,46}\end{align}
 
 \end_inset 
 
@@ -2557,20 +2587,20 @@ eg
 \end_inset 
 
  sind, wobei 
-\begin_inset Formula $\sigma$
+\begin_inset Formula $\sigma_{i}$
 \end_inset 
 
  die Streuung und 
-\begin_inset Formula $\bar{T}$
+\begin_inset Formula $\mu_{i}$
 \end_inset 
 
- der Mittelwert des jeweiligen Impulses sind, dann gilt für die Verteilungsdicht
-en
+ der Erwartungswert des jeweiligen Impulses sind, dann gilt für die Verteilungsd
+ichten
 \layout Standard
 
 
 \begin_inset Formula \[
-p_{i}(t)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\bar{T}_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\msp.\]
+p_{i}(t)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\msp.\]
 
 \end_inset 
 
@@ -2606,7 +2636,7 @@ cf
 
 
 \begin_inset Formula \[
-P(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{u-\bar{T}_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
+P(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
 
 \end_inset 
 
@@ -2614,7 +2644,7 @@ P(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\
 \layout Standard
 
 Substitutiert man 
-\begin_inset Formula $z=(u-\bar{T}_{i})/\sigma_{i}$
+\begin_inset Formula $z=\left(u-\mu_{i}\right)/\sigma_{i}$
 \end_inset 
 
  mit 
@@ -2626,16 +2656,25 @@ Substitutiert man
 \begin_inset Formula $\cnorm(z)$
 \end_inset 
 
- gearbeitet werden (mittelwertfreie Normalverteilung mit 
+ gearbeitet werden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Mittelwertfreie Normalverteilung mit 
 \begin_inset Formula $\sigma=1$
 \end_inset 
 
-).
+.
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{eqnarray}
-F_{i}(t) & = & \int\limits _{z=-\infty}^{\frac{t-\bar{T}_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\bar{T}_{i}}{\sigma_{i}}\right)\nonumber \\
+F_{i}(t) & = & \int\limits _{z=-\infty}^{\frac{t-\mu_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
 \cnorm(x) & = & \int\limits _{u=-\infty}^{x}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{u^{2}}{2}}\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
 
 \end_inset 
@@ -2656,7 +2695,7 @@ Die Wahrscheinlichkeit, daß der Impuls mit der Länge
 
 
 \begin_inset Formula \[
-P(T_{1}<T)=\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma_{1}}\right)\]
+P(T_{1}<T)=\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right)\]
 
 \end_inset 
 
@@ -2672,7 +2711,7 @@ Entsprechend gilt für die Wahrscheinlichkeit den Impuls mit der Breite
 
 
 \begin_inset Formula \[
-P(T_{2}>T)=1-P(T_{2}<T)=1-\cnorm\left(\frac{T-\bar{T}_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\bar{T}_{2}-T}{\sigma_{2}}\right)\]
+P(T_{2}>T)=1-P(T_{2}<T)=1-\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\mu_{2}-T}{\sigma_{2}}\right)\]
 
 \end_inset 
 
@@ -2689,8 +2728,8 @@ Gesucht wird nun der optimale Abtastzeitpunkt
 
 \begin_inset Formula \begin{align*}
 P(T_{1}<T) & =P(T_{2}>T)\\
-\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma_{1}}\right) & =\cnorm\left(\frac{\bar{T}_{2}-T}{\sigma_{2}}\right)\\
-\frac{T-\bar{T}_{1}}{\sigma_{1}} & =\frac{\bar{T}_{2}-T}{\sigma_{2}}\end{align*}
+\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right) & =\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)\\
+\frac{T-\mu_{1}}{\sigma_{1}} & =\frac{\mu_{2}-T}{\sigma_{2}}\end{align*}
 
 \end_inset 
 
@@ -2714,7 +2753,7 @@ Bei gleicher Streuung
 
 
 \begin_inset Formula \[
-T=\frac{\bar{T}_{1}+\bar{T}_{2}}{2}\]
+T=\frac{\mu_{1}+\mu_{2}}{2}\]
 
 \end_inset 
 
@@ -2723,11 +2762,24 @@ T=\frac{\bar{T}_{1}+\bar{T}_{2}}{2}\]
 
 Die Wahrscheinlichkeit, einen der Impulse dabei falsch zu erkennen, liegt
  bei
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Bei Berücksichtigung der Beziehung 
+\begin_inset Formula $\cnorm(-x)=1-\cnorm(x)$
+\end_inset 
+
+.
+\end_inset 
+
+
 \layout Standard
 
 
 \begin_inset Formula \[
-P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\bar{T}_{2}-\bar{T}_{1}}{2\sigma}\right)\msp.\]
+P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{T-\mu_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\mu_{2}-\mu_{1}}{2\sigma}\right)\msp.\]
 
 \end_inset 
 
@@ -2735,7 +2787,7 @@ P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma}\right)=1-\cno
 \layout Standard
 
 Geht man dagegen vom gleichen relativen Fehler 
-\begin_inset Formula $E$
+\begin_inset Formula $\varepsilon$
 \end_inset 
 
  für beide Pulsbreiten aus, so ergibt sich mit
@@ -2743,7 +2795,7 @@ Geht man dagegen vom gleichen relativen Fehler
 
 
 \begin_inset Formula \[
-\frac{\bar{T}_{1}}{\sigma_{1}}=\frac{\bar{T}_{2}}{\sigma_{2}}=\frac{1}{E}\]
+\frac{\mu_{1}}{\sigma_{1}}=\frac{\mu_{2}}{\sigma_{2}}=\frac{1}{\varepsilon}\]
 
 \end_inset 
 
@@ -2755,9 +2807,9 @@ der optimale Wert zu
 
 
 \begin_inset Formula \begin{align*}
-\frac{T-\bar{T}_{1}}{\bar{T}_{1}E} & =\frac{\bar{T}_{2}-T}{\bar{T}_{2}E}\\
-\frac{T}{\bar{T}_{1}}-1 & =1-\frac{T}{\bar{T}_{2}}\\
-T & =2\frac{\bar{T}_{1}\bar{T}_{2}}{\bar{T}_{1}+\bar{T}_{2}}\msp.\end{align*}
+\frac{T-\mu_{1}}{\varepsilon\,\mu_{1}} & =\frac{\mu_{2}-T}{\varepsilon\,\mu_{2}}\\
+\frac{T}{\mu_{1}}-1 & =1-\frac{T}{\mu_{2}}\\
+T & =2\frac{\mu_{1}\,\mu_{2}}{\mu_{1}+\mu_{2}}\msp.\end{align*}
 
 \end_inset 
 
@@ -2772,23 +2824,7 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 
 
 \begin_inset Formula \[
-P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{1}{E}\cdot\frac{\bar{T}_{2}-\bar{T}_{1}}{\bar{T}_{2}+\bar{T}_{1}}\right)\msp.\]
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset LatexCommand \printindex{}
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset LatexCommand \BibTeX[plain]{adsp}
+P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{1}{\varepsilon}\cdot\frac{\mu_{2}-\mu_{1}}{\mu_{2}+\mu_{1}}\right)\msp.\]
 
 \end_inset 
 
@@ -2808,7 +2844,7 @@ Notation
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\tilde{x}$
+\begin_inset Formula $\tilde{X}$
 \end_inset 
 
  Effektivwert der Zufallsgröße 
@@ -2820,7 +2856,7 @@ Notation
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\bar{x}$
+\begin_inset Formula $\mean(X)$
 \end_inset 
 
  Erwartungswert der Zufallsgröße 
@@ -2832,10 +2868,10 @@ Notation
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\textrm{E}{[X]}$
+\begin_inset Formula $\mean(X^{2})$
 \end_inset 
 
- Erwartungswert der Zufallsgröße 
+ Quadratischer Effektivwert der Zufallsgröße 
 \begin_inset Formula $X$
 \end_inset 
 
@@ -2864,7 +2900,7 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\var\{ X\}$
+\begin_inset Formula $\var(X)$
 \end_inset 
 
  Varianz der Zufallsgröße 
@@ -2872,6 +2908,14 @@ SNR Signal-Rausch-Abstand
 \end_inset 
 
 
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\mu$
+\end_inset 
+
+ Erwartungswert der Normalverteilung
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -2901,6 +2945,22 @@ SNR Signal-Rausch-Abstand
 
  Wahrscheinlichkeitsdichte der Zufallsgröße 
 \begin_inset Formula $X$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \printindex{}
+
 \end_inset 
 
 
