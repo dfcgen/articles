@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby2.lyx,v 1.1 2005-01-05 18:41:00 ralf Exp $
+Version: $Id: cheby2.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -75,6 +75,11 @@ Der
 
 \end_inset 
 
+
+\begin_inset LatexCommand \index{Filter!Tschebyscheff@\noun{Tschebyscheff}-Invers-}
+
+\end_inset 
+
  vom Typ\SpecialChar ~
 II
 \begin_inset Foot
@@ -113,21 +118,11 @@ Konstanten
 \begin_inset Quotes erd
 \end_inset 
 
- Unendlich für alle Frequenzen größer als 
+ Unendlich für alle Frequenzen größer als die Sperrfrequenz 
 \begin_inset Formula $\omega_{s}$
 \end_inset 
 
- (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Abschnitt\SpecialChar ~
+ (siehe auch Abschnitt\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:filter_goal_best_approx}
 
@@ -175,12 +170,12 @@ Hier durch geometrische Spiegelung von Durchlaß- und Sperrbereich um die
 \end_inset 
 
 .
- Aus diesen logischen Überlegungen heraus kann man eine Drosselung für den
- 
+ Aus diesen logischen Überlegungen heraus kann man die Drosselungsfunktion
+ für den inversen 
 \noun on 
 Tschebyscheff
 \noun default 
--Tiefpaß vom zweiten Typ ableiten.
+-Tiefpaß ableiten.
 \layout Standard
 
 
@@ -196,7 +191,13 @@ Wie
 \begin_inset Formula $\D(\omega)$
 \end_inset 
 
- sich in einem typischen Dämpfungsverlauf darstellt zeigt Abbildung\SpecialChar ~
+ sich auf der Grundlage von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:approx_discrimination}
+
+\end_inset 
+
+ in einem typischen Dämpfungsverlauf darstellt zeigt Abbildung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{fig:filter_cheby2_amplitude}
 
@@ -232,7 +233,17 @@ Die minimale Dämpfung im Sperrbereich (inklusive
 \begin_inset Formula $\T_{n}(x)$
 \end_inset 
 
- bestimmt (siehe auch Anhang\SpecialChar ~
+ bestimmt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Anhang\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:cheby}
 
@@ -348,15 +359,15 @@ Aufgrund der für
 \begin_inset Formula \[
 \lim_{\omega\rightarrow\infty}\D(\omega)=\lim_{\omega\rightarrow\infty}\delta\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(0\right)}=\left\{ \begin{array}{ll}
 \infty, & \quad n\textrm{ ungerade}\\
-\pm\delta\,\T_{n}(\omega_{s}), & \quad n\textrm{ gerade}\end{array}\right.,\]
+\pm\delta\,\T_{n}(\omega_{s}), & \quad n\textrm{ gerade}\end{array}\right.\]
 
 \end_inset 
 
 
 \layout Standard
 
-also einer endlichen Dämpfung bei gerader Ordnung des Filters, werden praktisch
- meist Filter mit ungeradem Grad bevorzugt.
+und insbesondere der endlichen Dämpfung bei gerader Ordnung des Filters,
+ werden praktisch meist Tiefpässe mit ungeradem Grad bevorzugt.
 \layout Subsection
 
 Nullstellen
@@ -366,22 +377,26 @@ Im Gegensatz zum ersten Typ des
 \noun on 
 Tschebyscheff
 \noun default 
--Tiefpaß besitzt die 
+-Tiefpaß besitzt 
 \begin_inset Formula $\trf(\lps)$
 \end_inset 
 
- Nullstellen, die wegen der Dämpfungsextrema im Sperrbereich sogar auf der
- 
+ hier Nullstellen, die wegen der Dämpfungsextrema im Sperrbereich sogar
+ auf der 
 \begin_inset Formula $\jw$
 \end_inset 
 
 -Achse liegen müssen.
- Um diese zu betsimmen bilden wir zuerst wieder das Quadrat der Übertragungsfunk
-tion im 
+ Um sie zu bestimmen bilden wir (wie üblich) zuerst das Betragsquadrat der
+ Übertragungsfunktion 
+\begin_inset Formula $\trf(\jw)$
+\end_inset 
+
+, gehen dann in den 
 \noun on 
 Laplace
 \noun default 
--Bereich
+-Bildbereich über
 \layout Standard
 
 
@@ -456,28 +471,31 @@ liegen und deshalb bezüglich
 Polstellen
 \layout Standard
 
-Zur Ermittlung der Pole in der komplexen Ebene kann man entweder formal
- die Polstellenbedingung für Gleichung\SpecialChar ~
+Zur Ermittlung der Pole von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ kann man entweder formal die Polstellenbedingung für Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:filter_cheby2_trf_laplace}
 
 \end_inset 
 
  formulieren oder (was dasselbe ist) den höheren Zusammenhang zwischen Drosselun
-g und Übertragungsfunktion (Formel\SpecialChar ~
+g und Übertragungsfunktion nach Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:approx_discrimination}
 
 \end_inset 
 
-) berücksichtigen.
- Bei Wahl der zweiten Alternative läßt sich sofort erkennen, daß Pole dort
- auftreten, wo für die Drosselung 
+ berücksichtigen.
+ Wählt man letzteren Ansatz, dann ist sofort erkannbar, daß alle Pole durch
+ die Beziehung 
 \begin_inset Formula $\D(\lps/\ji)=\pm\ji$
 \end_inset 
 
- gilt.
- Nehmen wir also die charakteristische Funktion dieses Filtertyps nach Gleichung\SpecialChar ~
+ charakterisiert sind.
+ Nehmen wir also die Drosselungsfunktion dieses Filtertyps nach Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:filter_cheby2_chfunc}
 
@@ -502,7 +520,7 @@ Wegen der Ähnlichkeit mit Gleichung\SpecialChar ~
 \end_inset 
 
  des Typ\SpecialChar ~
-I Filters substituieren wir 
+I Tiefpaß substituieren wir 
 \begin_inset Formula $\lps'=-\omega_{s}/\lps$
 \end_inset 
 
@@ -510,7 +528,7 @@ I Filters substituieren wir
 \begin_inset Formula $1/\delta'=\delta\T_{n}(\omega_{s})$
 \end_inset 
 
- und erhalten
+ und erhalten:
 \layout Standard
 
 
@@ -541,46 +559,63 @@ Nun steht einer Wiederverwendung der in Abschnitt\SpecialChar ~
 \layout Standard
 
 nichts mehr im Wege.
- Wir ersetzen nur noch die Zwischenvariablen (mit Strich, 
-\begin_inset ERT
-status Collapsed
+ Wir ersetzen nur noch die Zwischenvariablen (mit Strich) und erhalten für
+ die Pole
+\begin_inset Foot
+collapsed true
 
 \layout Standard
 
-\backslash 
-eg
-\end_inset 
-
- 
+Wobei das Minuszeichen in 
 \begin_inset Formula $\pn{\lps}{}=-\omega_{s}/\pn{\lps'}{}$
 \end_inset 
 
-) und erhalten für die Pole:
+ entfällt, wenn man genau die andere Menge der Pole (beim 
+\noun on 
+Tschebyscheff
+\noun default 
+-Tiefpaß Typ\SpecialChar ~
+I) von 
+\begin_inset Formula $\trf(\lps)\trf(-\lps)$
+\end_inset 
+
+ dem stabilen System 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ zuordnet.
+\end_inset 
+
+:
 \layout Standard
 
 
 \begin_inset Formula \[
-\boxed{\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\mbig{\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}+\ji\omega_{H}\mbig{\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}}}\msp,\qquad\nu=1,2,\ldots,n\]
+\boxed{\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)}}\msp,\qquad\nu=1,2,\ldots,n\]
 
 \end_inset 
 
 
 \layout Standard
 
-sowie die Halbachsen der elliptischen Verteilung:
+sowie die Halbachsen (mit 
+\begin_inset Formula $\omega_{H}^{2}-\alpha_{H}^{2}=1$
+\end_inset 
+
+) der elliptischen Verteilung:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\alpha_{H}=\sinh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} \qquad\textrm{und}\qquad\omega_{H}=\cosh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} }\msp.\end{equation}
+\boxed{\alpha_{H}=\sinh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} \qquad\qquad\omega_{H}=\cosh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} }\msp.\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Es bleibt festzustellen, daß die Lage der Pole qualitativ genauso wie für
- den ersten Typ des 
+Man verifiziert an Hand der Formeln, daß die Lage der Polstellen qualitativ
+ dieselbe wie beim ersten Typ des 
 \noun on 
 Tschebyscheff
 \noun default 
@@ -591,11 +626,6 @@ Tschebyscheff
 \end_inset 
 
 ) ist.
- Außerdem gilt auch hier für die Halbachsen 
-\begin_inset Formula $\omega_{H}^{2}-\alpha_{H}^{2}=1$
-\end_inset 
-
-.
 \layout Standard
 
 

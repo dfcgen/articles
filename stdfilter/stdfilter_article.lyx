@@ -59,7 +59,7 @@ Normally this file is provided for HTML conversion only.
 externallables commands below).
 \layout Standard
 
-Version: $Id: stdfilter_article.lyx,v 1.1 2004-09-28 13:53:01 ralf Exp $
+Version: $Id: stdfilter_article.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -192,7 +192,34 @@ preview false
 \layout Standard
 
 
+\begin_inset Include \include{cheby1.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{cheby2.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
 \begin_inset Include \include{cauer.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{bessel.lyx}
 preview false
 
 \end_inset 
@@ -214,6 +241,14 @@ preview false
 
 
 \begin_inset LatexCommand \BibTeX[geralpha]{adsp,computers,crypto,math}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \printindex{}
 
 \end_inset 
 

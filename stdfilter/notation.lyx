@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: notation.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+Version: $Id: notation.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -49,11 +49,14 @@ Version: $Id: notation.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
 \end_inset 
 
 
-\begin_inset ERT
-status Collapsed
-
 \layout Standard
 
+
+\begin_inset ERT
+status Open
+
+\layout Standard
+%% 
 \backslash 
 begin{multicols}{2}
 \end_inset 
@@ -79,6 +82,106 @@ begin{multicols}{2}
 \end_inset 
 
  Betrag von 
+\begin_inset Formula $z$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\mathbb{Z}$
+\end_inset 
+
+ Ganze Zahlen
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\deg{\left[h(x)\right]}$
+\end_inset 
+
+ Grad des Polynoms 
+\begin_inset Formula $h(x)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\dim(V)$
+\end_inset 
+
+ Dimension des Vektorraums 
+\begin_inset Formula $V$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\D$
+\end_inset 
+
+ Drosselung (chrakteristische Funktion)
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\eam{u}{k}$
+\end_inset 
+
+ Elliptische Amplitudenfunktion
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\edn{u}{k}$
+\end_inset 
+
+ Elliptische Delta-Amplitude
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\esn{u}{k}$
+\end_inset 
+
+ Elliptischer Sinus
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\ecn{u}{k}$
+\end_inset 
+
+ Elliptischer Kosinus
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\gd$
+\end_inset 
+
+ 
+\noun on 
+Gudermann
+\noun default 
+-Funktion 
+\begin_inset Formula $\arctan(\sinh)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\imop\left\{ z\right\} $
+\end_inset 
+
+ Imaginärteil von 
 \begin_inset Formula $z$
 \end_inset 
 
@@ -115,54 +218,14 @@ begin{multicols}{2}
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\deg{\left[h(x)\right]}$
-\end_inset 
-
- Grad des Polynoms 
-\begin_inset Formula $h(x)$
-\end_inset 
-
-
-\layout List
-\labelwidthstring 00.00.0000
-
-
-\begin_inset Formula $\dim(V)$
-\end_inset 
-
- Dimension des Vektorraums 
-\begin_inset Formula $V$
-\end_inset 
-
-
-\layout List
-\labelwidthstring 00.00.0000
-
-
-\begin_inset Formula $\gd$
+\begin_inset Formula $\lps$
 \end_inset 
 
  
 \noun on 
-Gudermann
+Laplace
 \noun default 
--Funktion 
-\begin_inset Formula $\arctan(\sinh)$
-\end_inset 
-
-
-\layout List
-\labelwidthstring 00.00.0000
-
-
-\begin_inset Formula $\im\left\{ z\right\} $
-\end_inset 
-
- Imaginärteil von 
-\begin_inset Formula $z$
-\end_inset 
-
-
+-Variable
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -175,15 +238,57 @@ Gudermann
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\pn{u}{k}$
+\begin_inset Formula $\zn{\lps}{}$
 \end_inset 
 
- 
-\begin_inset Formula $k$
+ Nullstelle von 
+\begin_inset Formula $\trf(\lps)$
 \end_inset 
 
--te Polstelle 
-\begin_inset Formula $u$
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula ${\zn[{\scriptscriptstyle (\D)}]{\omega}{}}$
+\end_inset 
+
+ Nullstelle von 
+\begin_inset Formula $\D(\omega)$
+\end_inset 
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Brackets in math-mode [] cannot be processed inside lyxlist environment.
+ Therefore set it into extra braces.
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\pn{\lps}{}$
+\end_inset 
+
+ Pol von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula ${\pn[{\scriptscriptstyle (\D)}]{\omega}{}}$
+\end_inset 
+
+ Pol von 
+\begin_inset Formula $\D(\omega)$
 \end_inset 
 
 
@@ -207,7 +312,7 @@ Gudermann
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\re\left\{ z\right\} $
+\begin_inset Formula $\reop\left\{ z\right\} $
 \end_inset 
 
  Realteil von 
@@ -215,18 +320,6 @@ Gudermann
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
-
-
-\begin_inset Formula $\lps$
-\end_inset 
-
- 
-\noun on 
-Laplace
-\noun default 
--Variable
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -259,26 +352,58 @@ Laplace
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\mathbb{Z}$
+\begin_inset Formula $\mathbf{v}^{T}$
 \end_inset 
 
- Ganze Zahlen
+ Transponierter Vektor
 \layout List
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\zn{u}{k}$
+\begin_inset Formula $\ePi{\varphi}{k}{n}$
 \end_inset 
 
- 
-\begin_inset Formula $k$
+ Unvollständiges elliptisches Integral dritter Art (
+\noun on 
+Legendre
+\noun default 
+'sche Normalform)
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\eF{\varphi}{k}$
 \end_inset 
 
--te Nullstelle 
-\begin_inset Formula $u$
+ Unvollständiges elliptisches Integral erster Art (
+\noun on 
+Legendre
+\noun default 
+'sche Normalform)
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\exF{x}{k}$
 \end_inset 
 
+ Unvollständiges elliptisches Integral erster Art (
+\noun on 
+Jacobi-
+\noun default 
+Form)
+\layout List
+\labelwidthstring 00.00.0000
 
+
+\begin_inset Formula $\eE{\varphi}{k}$
+\end_inset 
+
+ Unvollständiges elliptisches Integral zweiter Art (
+\noun on 
+Legendre
+\noun default 
+'sche Normalform)
 \layout List
 \labelwidthstring 00.00.0000
 
@@ -299,18 +424,18 @@ Laplace
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\mathbf{v}^{T}$
+\begin_inset Formula $\eK{k}$
 \end_inset 
 
- Transponierter Vektor
+ Vollständiges elliptisches Integral erster Art 
 \layout Standard
 
 
 \begin_inset ERT
-status Collapsed
+status Open
 
 \layout Standard
-
+%% 
 \backslash 
 end{multicols}
 \end_inset 

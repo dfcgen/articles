@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby1.lyx,v 1.1 2005-01-04 22:03:20 ralf Exp $
+Version: $Id: cheby1.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -48,16 +48,39 @@ Version: $Id: cheby1.lyx,v 1.1 2005-01-04 22:03:20 ralf Exp $
 Tschebyscheff
 \noun default 
 -Tiefpaﬂ Typ I
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Tschebyscheff-Tiefpaﬂ@\noun{Tschebyscheff}-Tiefpaﬂ|(}
+
+\end_inset 
+
+
 \layout Subsection
 
 Amplitudencharakteristik
 \layout Standard
 
+
+\begin_inset LatexCommand \index{Filter!Elliptisches}
+
+\end_inset 
+
 Der erste Typ des
 \noun on 
  Tschebyscheff
 \noun default 
--Tiefpaﬂ' ist durch direkte Anwendung der 
+-Tiefpaﬂ
+\begin_inset LatexCommand \index{Tiefpaﬂ!Tschebyscheff@\noun{Tschebyscheff}-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Filter!Tschebyscheff@\noun{Tschebyscheff}-}
+
+\end_inset 
+
+ ist durch direkte Anwendung der 
 \noun on 
 Tschebscheff
 \noun default 
@@ -155,13 +178,25 @@ Tschebscheff
 \begin_inset Formula $\T_{n}(x)$
 \end_inset 
 
- sich auf den normierten Amplitudengang auswirken, kann entweder Tabelle\SpecialChar ~
+ sich auf den normierten Amplitudengang nach
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\T_{n}^{2}(\omega)}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+auswirken, kann (auch mit R¸ckblick auf Tabelle\SpecialChar ~
 
 \begin_inset LatexCommand \ref{tab:approx_ampl_interval}
 
 \end_inset 
 
- (zumindest an Eckwerten) oder etwas anschaulicher Abbildung\SpecialChar ~
+) anschaulich Abbildung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{fig:filter_cheby1_amplitude}
 
@@ -202,7 +237,11 @@ I
 
 \layout Standard
 
-Die normierte Grenzfrequenz ist bei diesem Tiefpaﬂ immer 
+Die Grenzfrequenz 
+\begin_inset Formula $\omega_{g}$
+\end_inset 
+
+ ist bei diesem Tiefpaﬂ-Typ immer (normiert) 
 \begin_inset Formula $1$
 \end_inset 
 
@@ -215,7 +254,11 @@ Die normierte Grenzfrequenz ist bei diesem Tiefpaﬂ immer
 
  sieht.
  Der Amplitudengang hat im Durchlaﬂbereich eine Welligkeit, welche durch
- die Tschebyscheff-Funktion verursacht wird (
+ die 
+\noun on 
+Tschebyscheff
+\noun default 
+-Funktion verursacht wird (
 \begin_inset ERT
 status Collapsed
 
@@ -227,7 +270,7 @@ cf
 
  Abbildung\SpecialChar ~
 
-\begin_inset LatexCommand \ref{fig:chebyt_plot}
+\begin_inset LatexCommand \vref{fig:chebyt_plot}
 
 \end_inset 
 
@@ -244,20 +287,14 @@ cf
 \begin_inset Formula $\cos\left[(k-1/2)\pi/n\right]$
 \end_inset 
 
- (f¸r Details siehe Anhang\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:cheby}
-
-\end_inset 
-
-).
+.
  Kombiniert man beide Ausdr¸cke, dann erh‰lt man die Extremstellen des Amplitude
 ngangs.
 \layout Standard
 
 
 \begin_inset Formula \[
-\omega_{k}=\cos\left[k\frac{\pi}{2n}\right],\qquad k=0,1,2,\ldots,n-1\]
+\omega_{k}=\cos\left(k\frac{\pi}{2n}\right),\qquad k=0,1,2,\ldots,n-1\]
 
 \end_inset 
 
@@ -298,16 +335,16 @@ An diesen Stellen ist
 
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec:filter_cheby1_poles}
+
+\end_inset 
+
 Polstellen
 \layout Standard
 
-Um die Verteilung der Polstellen des 
-\noun on 
-Tschebyscheff
-\noun default 
--Tiefpaﬂ' vom Typ\SpecialChar ~
-I zu bestimmen, gehen wir von der komplexen ‹bertragungsfunktio
-n 
+Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
+ ‹bertragungsfunktion 
 \begin_inset Formula $\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)$
 \end_inset 
 
@@ -347,9 +384,9 @@ An den Polstellen muﬂ der Nenner verschwinden, was heiﬂt:
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-1+\delta^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\\
-\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\delta}\msp.\end{align*}
+\begin_inset Formula \begin{align}
+1+\delta^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
+\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\delta}\msp.\label{eq:filter_cheby1_pole_cond}\end{align}
 
 \end_inset 
 
@@ -374,7 +411,7 @@ Wegen
 
 
 \begin_inset Formula \[
-\cos(nu+\ji nv)=\pm\ji/\delta\msp.\]
+\cos(nu+\ji nv)=\pm\ji\frac{1}{\delta}\msp.\]
 
 \end_inset 
 
@@ -489,9 +526,9 @@ Einsetzen von
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray*}
-\reop\left\{ \pn{\lps}{k}\right\}  & = & \sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
-\imop\left\{ \pn{\lps}{k}\right\}  & = & \cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{eqnarray*}
+\begin_inset Formula \begin{align*}
+\reop\left\{ \pn{\lps}{k}\right\}  & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
+\imop\left\{ \pn{\lps}{k}\right\}  & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
 
 \end_inset 
 
@@ -506,7 +543,7 @@ collapsed true
 \layout Standard
 
 Die Parameterdarstellung der Ellipse lautet: 
-\begin_inset Formula $x=a\cos\varphi,\msp y=b\cos\varphi$
+\begin_inset Formula $x=a\cos\varphi,\msp y=b\sin\varphi$
 \end_inset 
 
 , wobei 
@@ -524,8 +561,8 @@ Die Parameterdarstellung der Ellipse lautet:
 \layout Standard
 
 
-\begin_inset Formula \[
-\alpha_{H}=\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\qquad\textrm{und}\qquad\omega_{H}=\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\]
+\begin_inset Formula \begin{equation}
+\boxed{\alpha_{H}=\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\qquad\qquad\omega_{H}=\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)}\end{equation}
 
 \end_inset 
 
@@ -540,7 +577,7 @@ liegen (siehe auch Abbildung\SpecialChar ~
 
 ).
 \begin_inset Note
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -549,7 +586,15 @@ Abbildung berechnet f¸r
 delta=1/4
 \end_inset 
 
+ Wegen der f¸r Hyperbelfunktionen immer geltenden ƒquivalenz 
+\begin_inset Formula $\cosh^{2}v-\sinh^{2}v=1$
+\end_inset 
 
+ besteht zwischen den Halbachsen die Abh‰ngigkeitsbeziehung 
+\begin_inset Formula $\omega_{H}^{2}-\alpha_{H}^{2}=1$
+\end_inset 
+
+.
 \layout Standard
 
 
@@ -631,7 +676,7 @@ Wobei praktischerweise mit
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}\qquad\nu=1,2,\ldots,n\end{equation}
+\boxed{\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset 
 
@@ -665,9 +710,17 @@ eg
 
  in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftab{2.5}]{Fritzsche:1979}
+\begin_inset LatexCommand \cite[\bibreftab{2.5}]{Fritzsche:1979a}
 
 \end_inset 
 
 , behelfen.
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Tschebyscheff-Tiefpaﬂ@\noun{Tschebyscheff}-Tiefpaﬂ|)}
+
+\end_inset 
+
+
 \the_end

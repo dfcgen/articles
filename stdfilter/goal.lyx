@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: goal.lyx,v 1.2 2004-10-09 20:07:27 ralf Exp $
+Version: $Id: goal.lyx,v 1.3 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -51,11 +51,11 @@ Approximation im Frequenzbereich
 
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im Allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung 
-\begin_inset Formula $A=-20\log\left|\TRF(\jw)\right|$
+\begin_inset Formula $A=-20\log\left|\trf(\jw)\right|$
 \end_inset 
 
  sowie der Phasengang 
-\begin_inset Formula $B=-\ang\{\TRF(\jw)\}$
+\begin_inset Formula $B=-\ang\{\trf(\jw)\}$
 \end_inset 
 
 .
@@ -78,12 +78,12 @@ Tschebyscheff
 \end_inset 
 
  des Amplitudenganges 
-\begin_inset Formula $\TRF(\omega)=\left|\TRF(\jw)\right|$
+\begin_inset Formula $\trf(\omega)=\left|\trf(\jw)\right|$
 \end_inset 
 
 .
  Dazu wird üblicherweise statt der Amplitudencharakteristik 
-\begin_inset Formula $\TRF(\omega)$
+\begin_inset Formula $\trf(\omega)$
 \end_inset 
 
  die charakteristische Funktion
@@ -96,7 +96,7 @@ Auch Drosselung genannt.
 \end_inset 
 
  
-\begin_inset Formula $\D(\omega)$
+\begin_inset Formula $\D(\omega)=\left|\D(\jw)\right|$
 \end_inset 
 
  herangezogen.
@@ -105,7 +105,7 @@ Auch Drosselung genannt.
 
 
 \begin_inset Formula \begin{equation}
-\TRF(\omega)=\frac{1}{\sqrt{1+\D^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\D^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
 
 \end_inset 
 
@@ -147,7 +147,7 @@ eg
 \end_inset 
 
  der Nenner der Übertragungsfunktion 
-\begin_inset Formula $\TRF(\lps)$
+\begin_inset Formula $\trf(\lps)$
 \end_inset 
 
  immer ein Hurwitzpolynom sein.
@@ -166,7 +166,7 @@ An Reaktanz- (LC-) Vierpolen, welche allerdings vorwiegend historische Bedeutung
  haben, entspricht die Drosselung genau dem Verhältnis zwischen reflektierter
  und abgegebener Ausgangsleistung\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Saal:1958,Fritzsche:1979}
+\begin_inset LatexCommand \cite{Saal:1958,Fritzsche:1979a}
 
 \end_inset 
 
@@ -175,7 +175,7 @@ An Reaktanz- (LC-) Vierpolen, welche allerdings vorwiegend historische Bedeutung
 
 Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
  Approximation (bezeichnet mit 
-\begin_inset Formula $y(x)$
+\begin_inset Formula $g(x)$
 \end_inset 
 
 ) macht es sich außerdem günstig, die Drosselung als Produkt von 
@@ -190,8 +190,8 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
 \layout Standard
 
 
-\begin_inset Formula \[
-\D(\omega)=\delta\cdot g(\omega)\msp.\]
+\begin_inset Formula \begin{equation}
+\boxed{\D(\omega)=\delta\, g(\omega)}\end{equation}
 
 \end_inset 
 
@@ -279,7 +279,7 @@ Approximations-Kenngrößen
 \layout Standard
 
 
-\begin_inset Formula $\TRF(\omega)$
+\begin_inset Formula $\trf(\omega)$
 \end_inset 
 
 
@@ -490,7 +490,7 @@ Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
 
  angenommen
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -523,7 +523,7 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 
  definiert
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -568,7 +568,41 @@ Tiefpaß-Toleranzfeld
 \end_inset 
 
 
+\layout Standard
+
+Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
+ sein, daß die Extremstellen der Dämpfung sich auf der Grundlage von
+\layout Standard
+
+
+\begin_inset Formula \[
+A(\omega)=-20\log\left|\trf(\jw)\right|=10\log\left[1+\D^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+aus den Nullstellen als auch den Ableitungen von 
+\begin_inset Formula $g(\omega)$
+\end_inset 
+
+ gebildet werden (können).
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\tdc A(\omega)}{\tdc\omega}=\frac{10}{\ln10}\cdot\frac{2\delta^{2}g(\omega)\, g'(\omega)}{1+\delta^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
+
+\end_inset 
+
+
 \layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:filter_goal_best_approx}
+
+\end_inset 
 
 Bestapproximationen
 \layout Standard
@@ -755,7 +789,7 @@ Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
 \end_inset 
 
  verwenden, auch eine in Bezug auf 
-\begin_inset Formula $\TRF(\omega)$
+\begin_inset Formula $\trf(\omega)$
 \end_inset 
 
 .
@@ -766,7 +800,7 @@ Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
 \end_inset 
 
  zu finden, welche nur eine direkte Abhängigkeit 
-\begin_inset Formula $\TRF(\D)$
+\begin_inset Formula $\trf(\D)$
 \end_inset 
 
  und keine weitere von 

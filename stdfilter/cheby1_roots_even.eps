@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: cheby1_roots_even.eps
 %%Creator: fig2dev Version 3.2 Patchlevel 3d
-%%CreationDate: Tue Jan  4 18:54:28 2005
+%%CreationDate: Thu Jan  6 14:44:05 2005
 %%For: ralf@dfcgen (Ralf Hoppe)
 %%BoundingBox: 0 0 225 226
 %%Magnification: 1.0000
@@ -291,6 +291,10 @@ $F2psDict /mtrx matrix put
 end
 save
 newpath 0 226 moveto 0 0 lineto 225 0 lineto 225 226 lineto closepath clip newpath
+% Fill background color
+0 0 moveto 225 0 lineto 225 226 lineto 0 226 lineto
+closepath 1.00 1.00 1.00 setrgbcolor fill
+
 -3.2 226.3 translate
 1 -1 scale
 
@@ -710,19 +714,6 @@ n 2466 1474 m 2390 1455 l 2420 1527 l 2466 1474 l  cp gs 0.00 setgray ef gr  col
 n 2570 1791 m 2617 1855 l 2640 1779 l 2570 1791 l  cp gs 0.00 setgray ef gr  col0 s
 % Arc
 gs  clippath
-865 1856 m 796 1842 l 776 1934 l 826 1873 l 845 1949 l cp
-796 2365 m 865 2351 l 845 2258 l 826 2335 l 776 2273 l cp
-eoclip
-n 1806.6 2104.0 1007.6 166.2 -166.2 arc
-gs col0 s gr
- gr
-
-% arrowhead
-n 845 1949 m 826 1873 l 776 1934 l 845 1949 l  cp gs 0.00 setgray ef gr  col0 s
-% arrowhead
-n 776 2273 m 826 2335 l 845 2258 l 776 2273 l  cp gs 0.00 setgray ef gr  col0 s
-% Arc
-gs  clippath
 1052 2793 m 1104 2746 l 1040 2677 l 1062 2753 l 988 2724 l cp
 856 2318 m 789 2340 l 819 2429 l 831 2352 l 886 2408 l cp
 eoclip
@@ -734,17 +725,30 @@ gs col0 s gr
 n 988 2724 m 1062 2753 l 1040 2677 l 988 2724 l  cp gs 0.00 setgray ef gr  col0 s
 % arrowhead
 n 886 2408 m 831 2352 l 819 2429 l 886 2408 l  cp gs 0.00 setgray ef gr  col0 s
-/Symbol ff 150.00 scf sf
-764 2677 m
-gs 1 -1 sc (p) dup sw pop 2 div neg 0 rm  col0 sh gr
-/Times-Roman ff 150.00 scf sf
-839 2752 m
-gs 1 -1 sc (/n) dup sw pop 2 div neg 0 rm  col0 sh gr
+% Arc
+gs  clippath
+866 1863 m 801 1836 l 765 1923 l 825 1872 l 830 1950 l cp
+801 2371 m 866 2344 l 830 2257 l 825 2336 l 765 2284 l cp
+eoclip
+n 1303.7 2104.0 532.8 153.2 -153.2 arc
+gs col0 s gr
+ gr
+
+% arrowhead
+n 830 1950 m 825 1872 l 765 1923 l 830 1950 l  cp gs 0.00 setgray ef gr  col0 s
+% arrowhead
+n 765 2284 m 825 2336 l 830 2257 l 765 2284 l  cp gs 0.00 setgray ef gr  col0 s
 /Symbol ff 150.00 scf sf
 2629 1567 m
 gs 1 -1 sc (p) dup sw pop 2 div neg 0 rm  col0 sh gr
 /Times-Roman ff 150.00 scf sf
 2704 1642 m
+gs 1 -1 sc (/n) dup sw pop 2 div neg 0 rm  col0 sh gr
+/Symbol ff 150.00 scf sf
+760 2649 m
+gs 1 -1 sc (p) dup sw pop 2 div neg 0 rm  col0 sh gr
+/Times-Roman ff 150.00 scf sf
+835 2724 m
 gs 1 -1 sc (/n) dup sw pop 2 div neg 0 rm  col0 sh gr
 % Polyline
 15.000 slw
@@ -825,6 +829,16 @@ gs 1 -1 sc (w) col0 sh gr
 /Times-Roman ff 180.00 scf sf
 1725 150 m
 gs 1 -1 sc (j) dup sw pop neg 0 rm  col0 sh gr
+% Polyline
+0.000 slw
+n 493 1922 m 735 1922 l 735 2263 l 493 2263 l
+ cp gs col7 1.00 shd ef gr 
+/Symbol ff 150.00 scf sf
+573 2103 m
+gs 1 -1 sc (p) dup sw pop 2 div neg 0 rm  col0 sh gr
+/Times-Roman ff 150.00 scf sf
+648 2178 m
+gs 1 -1 sc (/n) dup sw pop 2 div neg 0 rm  col0 sh gr
 % Polyline
 1 slc
 30.000 slw

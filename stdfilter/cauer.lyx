@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cauer.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
+Version: $Id: cauer.lyx,v 1.2 2005-01-08 16:52:40 ralf Exp $
 \end_inset 
 
 
@@ -48,18 +48,39 @@ Version: $Id: cauer.lyx,v 1.1 2004-09-27 19:27:08 ralf Exp $
 Cauer
 \noun default 
 -Tiefpaß
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Cauer-Tiefpaß@\noun{Cauer}-Tiefpaß|(}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Filter!Elliptisches}
+
+\end_inset 
+
+
 \layout Subsection
 
-
-\lang english
 Amplitudencharakteristik
 \layout Standard
 
 
 \noun on 
-W.\SpecialChar ~
-Cauer
+W.
+ Cauer
 \noun default 
+
+\begin_inset LatexCommand \index{Tiefpaß!Cauer@\noun{Cauer}-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Filter!Cauer@\noun{Cauer}-}
+
+\end_inset 
+
  hat unter anderem das Problem der Bestapproximation des idealen Tiefpaß-Amplitu
 dengangs 
 \begin_inset ERT
@@ -80,14 +101,8 @@ resp
 .
  Dabei ist er in wissenschaftlicher Art und Weise von der elektrotechnischen
  Problemstellung zur mathematischen Lösung gelangt.
- Wir wollen hier (der Kürze halber) auf die Erkenntnisse aus Anhang\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:elliptic}
-
-\end_inset 
-
-, insbesondere die zu den elliptischen Haupttransformationen höherer Ordnung
- zurückgreifen
+ Wir wollen hier (der Kürze halber) auf die Erkenntnisse zu den elliptischen
+ Haupt-Transformationen höherer Ordnung zurückgreifen
 \begin_inset Foot
 collapsed true
 
@@ -98,7 +113,13 @@ theorie, welche schon im 19.\SpecialChar ~
 Jahrhundert etabliert war.
 \end_inset 
 
-.
+, welche im Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:elltr}
+
+\end_inset 
+
+ dargestellt sind.
 \layout Standard
 
 Für die Drosselungsfunktion 
@@ -107,7 +128,7 @@ Für die Drosselungsfunktion
 
  gibt es in der Literatur die verschiedensten Darstellungen\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979}
+\begin_inset LatexCommand \cite{Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979a}
 
 \end_inset 
 
@@ -125,7 +146,7 @@ Für die Drosselungsfunktion
 
 \end_inset 
 
- der ersten elliptischen Haupttransformation nach 
+ der ersten elliptischen Haupt-Transformation nach 
 \noun on 
 C.\SpecialChar ~
 G.\SpecialChar ~
@@ -149,26 +170,35 @@ collapsed true
 \noun on 
 Solotareff
 \noun default 
-'s Problemstellung (sowie dessen Lösungsformel\SpecialChar ~
+'s Problemstellung sowie dessen Lösungsformel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_solution}
 
 \end_inset 
 
-) hat den Nachteil, daß der Durchlaßbereich nicht (wie üblich) am typischen
- Normierungswert 
-\begin_inset Formula $\omega=1$
+ haben den kleinen Nachteil, daß der Durchlaßbereich nicht wie üblich am
+ typischen Normierungswert 
+\begin_inset Formula $\omega_{g}=1$
 \end_inset 
 
 , sondern bei 
-\begin_inset Formula $\omega=\sqrt{k}$
+\begin_inset Formula $\omega_{g}=\sqrt{k}$
 \end_inset 
 
- enden würde, wenn man sie direkt als Ausgangspunkt für die Drosselung 
-\begin_inset Formula $\D(\omega)$
+ enden würde.
+ Etwas eleganter würden dafür die Reziprozitätsbeziehungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+
 \end_inset 
 
- nimmt.
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_cauer_poles_per_zeroes}
+
+\end_inset 
+
+ aussehen.
 \end_inset 
 
 .
@@ -188,14 +218,14 @@ Wir gehen also von den genannten Gleichungen\SpecialChar ~
 
  aus und definieren eine Funktion
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
 Zu Ehren von 
 \noun on 
-W.\SpecialChar ~
-Cauer
+W.
+ Cauer
 \noun default 
  mit dem Symbol 
 \begin_inset Formula $\textup{C}$
@@ -208,10 +238,10 @@ Cauer
 \layout Standard
 
 
-\begin_inset Formula \[
+\begin_inset Formula \begin{equation}
 \boxed{\efunc{\textup{C}}{x}{k}=\left\{ \begin{array}{ll}
 \mbig{\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
-\mbig{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.}\]
+\mbig{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.}\label{eq:filter_cauer_rational}\end{equation}
 
 \end_inset 
 
@@ -236,7 +266,7 @@ Der Parameter
 
  wird das (elliptische) Modul genannt, welches auch häufig als Modulwinkel
  
-\begin_inset Formula $\Theta=\sin(k)$
+\begin_inset Formula $\Theta=\sin k$
 \end_inset 
 
  anzutreffen ist.
@@ -250,7 +280,13 @@ Der Parameter
 
 \end_inset 
 
- berechneter Vorfaktor.
+ (Seite\SpecialChar ~
+
+\begin_inset LatexCommand \pageref{eq:elltr1_odd_M}
+
+\end_inset 
+
+) berechneter Vorfaktor.
  Die zur Berechnung der Koeffizienten benötigte Größe 
 \begin_inset Formula $K$
 \end_inset 
@@ -270,7 +306,7 @@ Der Parameter
 \begin_inset Formula $\jsn$
 \end_inset 
 
- wird der elliptische Sinus abgekürzt (
+ wird der elliptische Sinus (
 \begin_inset ERT
 status Collapsed
 
@@ -280,14 +316,20 @@ status Collapsed
 cf
 \end_inset 
 
- Abschnitt\SpecialChar ~
+ Anhang\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:elliptic_func}
 
 \end_inset 
 
-).
- Der Verlauf dieser Funktion ist in den Abbildungen 
+) abgekürzt.
+\layout Standard
+
+Der Verlauf von 
+\begin_inset Formula $\efunc{\textup{C}}{x}{k}$
+\end_inset 
+
+ ist in den Abbildungen 
 \begin_inset LatexCommand \ref{fig:elltr1_odd_function}
 
 \end_inset 
@@ -298,32 +340,19 @@ cf
 
 \end_inset 
 
- des Anhangs\SpecialChar ~
+ von Anhang\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:elltr}
 
 \end_inset 
 
- zu den elliptischen Transformationen (speziell 
-\begin_inset LatexCommand \ref{sec:elltr1_odd_n}
-
+, welcher sich schwerpunktmäßig mit den Eigenschaften genau dieser elliptischen
+ Transformationsfunktion(en) auseinandersetzt, dargestellt.
+ 
+\begin_inset Formula $\efunc{\textup{C}}{x}{k}$
 \end_inset 
 
- und\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:elltr1_even_n}
-
-\end_inset 
-
-), welcher sich schwerpunktmäßig mit den Eigenschaften solcher Funktionen
- auseinandersetzt, dargestellt.
-\layout Standard
-
-Die Funktion 
-\begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
-\end_inset 
-
- ist aber vor allem deshalb von besonderem Interesse, da sie der Approximationsv
+ ist hier vor allem deshalb von besonderem Interesse, da sie der Approximationsv
 orschrift eines 
 \noun on 
 Cauer
@@ -338,7 +367,15 @@ status Collapsed
 resp
 \end_inset 
 
- Amplitudenverlaufs im gesamten Frequenzbereich am Besten entspricht (
+ Amplitudenverlaufs im normierten Frequenzbereich 
+\begin_inset Formula $0\leq\omega\leq1$
+\end_inset 
+
+ und 
+\begin_inset Formula $\omega_{s}\leq\omega\leq\infty$
+\end_inset 
+
+ genau entspricht (
 \begin_inset ERT
 status Collapsed
 
@@ -348,18 +385,22 @@ status Collapsed
 cf
 \end_inset 
 
- Anhang\SpecialChar ~
+ 
+\noun on 
+Solotareff
+\noun default 
+'s drittes Problem in Anhang\SpecialChar ~
+
+\noun on 
 
 \begin_inset LatexCommand \ref{sec:zolotarev}
 
 \end_inset 
 
-, 
-\noun on 
-Solotareff
+
 \noun default 
-'s drittes Problem).
- Wir setzen aus vorgenannten Gründen 
+).
+ Wir setzen aus vorgenannten Gründen die skalierte Funktion 
 \begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
 \end_inset 
 
@@ -368,7 +409,7 @@ Solotareff
 
 
 \begin_inset Formula \[
-\eD{\omega}{k}=\efunc{\textup{C}}{\omega}{k}\]
+\eD{\omega}{k}=\delta\efunc{\textup{C}}{\omega}{k}\]
 
 \end_inset 
 
@@ -379,10 +420,8 @@ und erhalten für die Amplitudencharakteristik
 \layout Standard
 
 
-\lang english
-
 \begin_inset Formula \begin{equation}
-\TRF(\omega)=\frac{1}{\sqrt{1+\delta^{2}\msp\efunc[2]{\textup{C}}{\omega}{k}}}\msp.\label{eq:filter_cauer_amplitude}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\msp\efunc[2]{\textup{C}}{\omega}{k}}}\msp.\label{eq:filter_cauer_amplitude}\end{equation}
 
 \end_inset 
 
@@ -399,8 +438,6 @@ Mit den ebenfalls aus Anhang\SpecialChar ~
 \layout Standard
 
 
-\lang english
-
 \begin_inset Formula \begin{xalignat*}{2}
 \efunc{\textup{C}}{1}{k} & =\pm1 & \efunc{\textup{C}}{\frac{1}{k}}{k} & =\frac{1}{\lambda}\end{xalignat*}
 
@@ -409,8 +446,6 @@ Mit den ebenfalls aus Anhang\SpecialChar ~
 
 \layout Standard
 
-
-\lang english
 lassen sich die Dämpfungswerte 
 \begin_inset Formula $A_{max}$
 \end_inset 
@@ -419,15 +454,19 @@ lassen sich die Dämpfungswerte
 \begin_inset Formula $A_{min}$
 \end_inset 
 
-aus dem Tiefpaß-Toleranzschema angeben.
+aus dem Tiefpaß-Toleranzschema von Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:lp_tol_scheme}
+
+\end_inset 
+
+ angeben.
 \layout Standard
 
 
-\lang english
-
 \begin_inset Formula \begin{align*}
-A_{max} & =-20\log\TRF(1)=10\log\left(1+\delta^{2}\right)\\
-A_{min} & =-20\log\TRF(1/k)=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
+A_{max} & =-20\log\trf(1)=10\log\left[1+\eD{\omega_{g}}{k}\right]=10\log\left(1+\delta^{2}\right)\\
+A_{min} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\eD{\omega_{s}}{k}\right]=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
 \textrm{mit}\\
 \lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
 
@@ -436,23 +475,15 @@ A_{min} & =-20\log\TRF(1/k)=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\
 
 \layout Standard
 
-
-\lang english
 Variation des Parameters 
 \begin_inset Formula $k$
 \end_inset 
 
- zeigt, 
-\lang german
-daß er die Steilheit im Übergangsbereich 
-\begin_inset Formula $1<\omega<\omega_{k}$
+ zeigt, daß er die Steilheit im Übergangsbereich 
+\begin_inset Formula $1<\omega<\omega_{s}$
 \end_inset 
 
-, aber auch die Welligkeit 
-\begin_inset Formula $A_{max}$
-\end_inset 
-
- im Durchlaßbereich 
+, aber auch die Welligkeit im Durchlaßbereich 
 \begin_inset ERT
 status Collapsed
 
@@ -462,20 +493,10 @@ status Collapsed
 resp
 \end_inset 
 
- Mindestdämpfung 
-\begin_inset Formula $A_{min}$
-\end_inset 
+ Mindestdämpfung im Sperrbereich wesentlich beeinflußt.
+ In Abbildung\SpecialChar ~
 
- im Sperrbereich wesentlich beeinflußt.
- In den Abbildungen\SpecialChar ~
-
-\begin_inset LatexCommand \ref{fig:cauer_attenuation_even}
-
-\end_inset 
-
- und\SpecialChar ~
-
-\begin_inset LatexCommand \ref{fig:cauer_attenuation_odd}
+\begin_inset LatexCommand \ref{fig:cauer_attenuation}
 
 \end_inset 
 
@@ -491,8 +512,6 @@ Cauer
 \layout Standard
 
 
-\lang english
-
 \begin_inset Float figure
 wide false
 collapsed false
@@ -502,43 +521,19 @@ collapsed false
 
 \begin_inset Graphics
 	filename cauer_even.eps
+	subcaption
+	subcaptionText "Grad gerade ($n=6$)"
 
 \end_inset 
 
 
-\layout Caption
-
-
-\begin_inset LatexCommand \label{fig:cauer_attenuation_even}
-
-\end_inset 
-
-Dämpfungsverlauf des
-\noun on 
- Cauer
-\noun default 
--Tiefpaß' für gerade Ordnung 
-\begin_inset Formula $n$
-\end_inset 
-
-
-\end_inset 
-
-
-\layout Standard
-
-
-\lang english
-
-\begin_inset Float figure
-wide false
-collapsed false
-
-\layout Standard
-
+\newline 
 
 \begin_inset Graphics
 	filename cauer_odd.eps
+	keepAspectRatio
+	subcaption
+	subcaptionText "Grad ungerade ($n=7$)"
 
 \end_inset 
 
@@ -546,7 +541,7 @@ collapsed false
 \layout Caption
 
 
-\begin_inset LatexCommand \label{fig:cauer_attenuation_odd}
+\begin_inset LatexCommand \label{fig:cauer_attenuation}
 
 \end_inset 
 
@@ -554,10 +549,142 @@ Dämpfungsverlauf des
 \noun on 
  Cauer
 \noun default 
--Tiefpaß' für ungerade Ordnung 
-\begin_inset Formula $n$
+-Tiefpaß
 \end_inset 
 
+
+\layout Standard
+
+Bemerkenswert ist in diesem Zusammenhang eine Eigenschaft von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_cauer_rational}
+
+\end_inset 
+
+, welche ebenfalls der Transfomationstheorie (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:elltr_reciprocal}
+
+\end_inset 
+
+ dort) der elliptischen Funktionen von 
+\noun on 
+Jacobi
+\noun default 
+ entspringt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+In der Lieratur findet man meist die Form 
+\begin_inset Formula $\zn{\omega}{\nu}\cdot\pn{\omega}{\mu}=1$
+\end_inset 
+
+, welche aber andere Approximationsintervalle voraussetzt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\efunc{\textup{C}}{\frac{1}{k\omega}}{k}=\frac{1}{\lambda\efunc{\textup{C}}{\omega}{k}}\label{eq:filter_cauer_reciprocal}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+Null- und Polstellen
+\layout Standard
+
+Zunächst sei auf eine Konsequenz von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+
+\end_inset 
+
+ im Hinblick auf die Pol- und Nullstellen der Drosselung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Nicht aber der von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+, weshalb sie mit hochgestelltem 
+\begin_inset Formula $(\D)$
+\end_inset 
+
+ gekennzeichnet werden.
+\end_inset 
+
+ eingegangen.
+ Sie führt nämlich sofort zu der Schlußfolgerung, daß diese nicht unabhängig
+ voneinander sind.
+ Setzt man in die Beziehung nämlich beispielhaft eine Nullstelle 
+\begin_inset Formula $\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}$
+\end_inset 
+
+ von 
+\begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
+\end_inset 
+
+ ein, dann gilt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{1}{\lambda\efunc{\textup{C}}{\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}}{k}}\Rightarrow\infty\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Folglich muß die linke Seite in Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $1/k\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}$
+\end_inset 
+
+ eine Polstelle 
+\begin_inset Formula $\pn[{\scriptscriptstyle (\D)}]{\omega}{\mu}$
+\end_inset 
+
+ besitzen.
+ Der Zusammenhang zwischen den Null- und Polstellen der Dämpfung ist demzufolge
+ durch folgende Beziehung charakterisiert.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\zn[{\scriptscriptstyle (\D)}]{\omega}{\nu}\,\pn[{\scriptscriptstyle (\D)}]{\omega}{\mu}=\frac{1}{k}}\msp.\label{eq:filter_cauer_poles_per_zeroes}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Cauer-Tiefpaß@\noun{Cauer}-Tiefpaß|)}
 
 \end_inset 
 
