@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.8 2005-01-02 15:24:26 ralf Exp $
+Version: $Id: probabil.lyx,v 1.9 2005-01-02 16:38:48 ralf Exp $
 \end_inset 
 
 
@@ -170,7 +170,7 @@ Prinzipiell vorausgesetzt werden die Grundkenntnisse der höheren Mathematik,
 \noun on 
 Fourier
 \noun default 
--Transformation sowie etwas Kombinatorik.
+-Transformation sowie etwas Systemtheorie.
  Um jedoch die praktische Anwendbarkeit nicht aus den Augen zu verlieren,
  bleiben Beweise und manchmal auch Notationen auf einer Ebene, die nicht
  unbedingt von mathematischer Exaktheit geprägt ist.
@@ -831,7 +831,7 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \end_inset 
 
  definiert: 
-\begin_inset Formula $\tilde{X}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\,\tdc x}=\sqrt{\mean(X^{2})}\msp$
+\begin_inset Formula $\tilde{X}=\sqrt{\mean(X^{2})}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\,\tdc x}\msp$
 \end_inset 
 
 .
@@ -1991,12 +1991,12 @@ Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
 \begin_inset Formula $\var(X)=\mean(X^{2})=\tilde{X}^{2}$
 \end_inset 
 
- und deshalb auch der Korrelationskoeffizient auf
+ und deshalb der Korrelationskoeffizient auf
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\corr(X_{1},X_{2})\overset{\mean X_{i}=0}{=}\frac{\mean(X_{1}X_{2})}{\tilde{X}_{1}\tilde{X}_{2}}}\msp.\label{eq:prob_corr_mean_zero}\end{equation}
+\boxed{\corr(X_{1},X_{2})\overset{\mean X_{i}=0}{=}\frac{\mean(X_{1}X_{2})}{\sqrt{\mean(X_{1}^{2})\mean(X_{2}^{2})}}}\msp.\label{eq:prob_corr_mean_zero}\end{equation}
 
 \end_inset 
 
@@ -3351,7 +3351,7 @@ ie
 Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
 er Zufallsgrößen also genau die Faltung
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -4611,7 +4611,7 @@ collapsed true
 
 \layout Standard
 
-Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte identisch sind.
+Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
 \end_inset 
 
 , Varianz 
@@ -4741,7 +4741,7 @@ resp
 
  eng verwandte) Größe
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -4752,12 +4752,7 @@ Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
 
 \end_inset 
 
-) sowie der Kovarianz
-\begin_inset LatexCommand \index{Kovarianz}
-
-\end_inset 
-
- mittelwertfreier Zufallsgrößen (Abschnitt\SpecialChar ~
+) sowie der Kovarianz mittelwertfreier Zufallsgrößen (Abschnitt\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
 
@@ -5012,7 +5007,7 @@ Ist
 \end_inset 
 
  aber ein determiniertes Energiesignal
-\begin_inset LatexCommand \index{Energiesignal}
+\begin_inset LatexCommand \index{Energiesignale}
 
 \end_inset 
 
@@ -5043,7 +5038,7 @@ Ansonsten würde wegen der Division durch
 
 
 \begin_inset Formula \begin{equation}
-\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)\,\tdc t\label{eq:prob_acf_energy_signals}\end{equation}
+\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)\,\tdc t=\label{eq:prob_acf_energy_signals}\end{equation}
 
 \end_inset 
 
@@ -5139,7 +5134,7 @@ Aus Eigenschaft\SpecialChar ~
 \begin_inset Formula \begin{align*}
 \acf_{xx}(\tau)=\acf_{xx}(-\tau) & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x[t]x[-(\tau-t)]\,\tdc t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x[t]x[-(\tau-t)]\,\tdc t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\conjgt{x})(\tau)\end{align*}
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\end{align*}
 
 \end_inset 
 
@@ -5148,7 +5143,7 @@ Aus Eigenschaft\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}}\label{eq:prob_acf_conv}\end{equation}
+\boxed{\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\conjgt{x})(\tau)}\label{eq:prob_acf_conv}\end{equation}
 
 \end_inset 
 
@@ -5193,19 +5188,6 @@ zwei
 
 \layout Standard
 
-Genau wie die Autokorrelationsfunktion ist auch die Kreuzkorrelationsfunktion
- auf eine Faltung zurückzuführen.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\ccf_{xy}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*\conjgt{y}(t)\right|_{t=\tau}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
 Verschwindet die Kreuzkorrelationsfunktion für jedes 
 \begin_inset Formula $\tau$
 \end_inset 
@@ -5226,18 +5208,24 @@ Verschwindet die Kreuzkorrelationsfunktion für jedes
 , für daß die Kreuzkorrelationsfunktion maximal wird.
 \layout Standard
 
-Für Energiesignale existiert wieder eine abgewandelte Form von Gleichung\SpecialChar ~
+Für Energiesignale existiert wieder eine abgewandelte Form (ohne Limes)
+ von Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:prob_ccf_def}
 
 \end_inset 
 
-, in welcher der Limes entfällt.
+, die auch als Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ dargestellt werden kann.
 \layout Standard
 
 
 \begin_inset Formula \[
-\ccf_{xy}(\tau)=\int\limits _{-\infty}^{\infty}x(t)y(t+\tau)\,\tdc t\]
+\ccf_{xy}(\tau)=\int\limits _{-\infty}^{\infty}x(t)y(t+\tau)\,\tdc t=(x*\conjgt{y})(\tau)\]
 
 \end_inset 
 
@@ -5362,12 +5350,16 @@ muß für die Exsitenz von
 \end_inset 
 
  normalerweise nicht gewährleisten kann.
- Trotzdem kann man für diesen Fall (mitunter durch Einsatz von 
+ Trotzdem kann man für diesen Fall (mitunter durch Einsatz der 
 \noun on 
 Dirac
 \noun default 
-'scher Deltafunktionen) eine Größe entwickeln, die spektrale Leistungsdichte
- 
+-Funktion
+\begin_inset LatexCommand \index{Dirac-Funktion@\noun{Dirac}-Funktion}
+
+\end_inset 
+
+) eine Größe entwickeln, die spektrale Leistungsdichte 
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset 
 
@@ -5551,7 +5543,7 @@ Chintchin
 
 ) ganz einfach ergibt, wenn man den Faltungssatz
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -5690,7 +5682,7 @@ Die mittlere Leistung
 
 
 \begin_inset Formula \[
-P=\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+P=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
 
 \end_inset 
 
@@ -5706,7 +5698,7 @@ Für diesen Nachweis geht man am Besten von der bekannten Beziehung
 
 
 \begin_inset Formula \[
-P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\e^{\jw\tau}\,\tdc\omega=\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\e^{\jw\tau}\,\tdc\omega=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
 
 \end_inset 
 
@@ -5744,7 +5736,7 @@ collapsed true
 
 
 \begin_inset Formula \[
-\frac{\tdc P}{\tdc\omega}=\spd_{xx}(\omega)\]
+\frac{\tdc P}{\tdc\omega}=\frac{\spd_{xx}(\omega)}{2\pi}=\spd_{xx}(f)\]
 
 \end_inset 
 
@@ -6033,11 +6025,6 @@ LTI-Systeme
 
 
 \begin_inset LatexCommand \index{LTI-Systeme}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Zufallsprozeß}
 
 \end_inset 
 
@@ -6479,7 +6466,12 @@ ie
 \begin_inset Formula $y(t_{0})$
 \end_inset 
 
- durch die (für LTI-Systeme typische) Faltung von 
+ durch die (für LTI-Systeme typische) Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ von 
 \begin_inset Formula $x(t)$
 \end_inset 
 
@@ -6530,8 +6522,12 @@ eg
 
 \end_inset 
 
- der Deltafunktion
-\begin_inset LatexCommand \index{Deltafunktion}
+ der 
+\noun on 
+Dirac
+\noun default 
+-Funktion
+\begin_inset LatexCommand \index{Dirac-Funktion@\noun{Dirac}-Funktion}
 
 \end_inset 
 
@@ -6600,11 +6596,16 @@ ffizient
 \end_inset 
 
  in der zeitlichen Form für Energiesignale
+\begin_inset LatexCommand \index{Energiesignale}
+
+\end_inset 
+
+
 \layout Standard
 
 
-\begin_inset Formula \[
-\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int\limits _{-\infty}^{\infty}x_{1}(t)x_{2}(t)\,\tdc t}{\sqrt{\int\limits _{-\infty}^{\infty}x_{1}^{2}(t)\,\tdc t\;\int\limits _{-\infty}^{\infty}x_{2}^{2}(t)\,\tdc t}}\]
+\begin_inset Formula \begin{equation}
+\boxed{\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int\limits _{-\infty}^{\infty}x_{1}(t)x_{2}(t)\,\tdc t}{\sqrt{\int\limits _{-\infty}^{\infty}x_{1}^{2}(t)\,\tdc t\;\int\limits _{-\infty}^{\infty}x_{2}^{2}(t)\,\tdc t}}}\end{equation}
 
 \end_inset 
 
@@ -6637,8 +6638,12 @@ Wie wir aus Abschnitt\SpecialChar ~
 
 \end_inset 
 
- wissen, ist der Korrelationskoeffizient dann am größten, wenn beide Funktionen
- linear abhängig sind, also 
+ wissen, ist der Korrelationskoeffizient
+\begin_inset LatexCommand \index{Korrelationskoeffizient}
+
+\end_inset 
+
+ dann am größten, wenn beide Funktionen linear abhängig sind, also 
 \begin_inset Formula $g(t)=k\, x(t_{0}-t)$
 \end_inset 
 
@@ -7510,6 +7515,18 @@ Notation
 \end_inset 
 
  Dekadischer Logarithmus
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\delta(t)$
+\end_inset 
+
+ 
+\noun on 
+Dirac
+\noun default 
+-Funktion
 \layout List
 \labelwidthstring 00.00.0000
 
