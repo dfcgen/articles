@@ -1,13 +1,12 @@
 // -*- scilab -*-
-// $Id: butterworth_amplitude.sci,v 1.1 2005-01-04 18:24:10 ralf Exp $
+// $Id: butterworth_amplitude.sci,v 1.2 2005-01-04 18:27:49 ralf Exp $
 //
-// Scilab plot of Chebyshev, type 1 lowpass (passband ripple) amplitude response
+// Scilab plot of Butterwoth filter amplitude response
 //
-filename="cheby1_amplitude.fig";
+filename="butterworth_amplitude.fig";
 
 segs=500;
-n = 5;
-d = 1.0/4;                                // delta
+d = 1.0;                                // delta
 
 x_min = 0;
 x_max = 4;
@@ -16,12 +15,16 @@ y_max = 1.2;
 
 bound_rect=[x_min, y_min, x_max, y_max];
 grid=[1, 4, 1, 6];
-f = 0:x_max/segs:x_max;
 
-//Chebyshev; ripple in the passband
-sample=0:0.05:10;
-y=cheb1mag(n, 1.0, delta, f);
-plot(f, y,'frequencies','magnitude');
+deff('[y]=butterworth(x, delta, n)','y = 1.0 ./ abs(1 + %i * delta * x^n)');
+
+f = 0:x_max/segs:x_max;
+x = [f; f; f; f]';
+y = [ butterworth(f, d, 1);
+      butterworth(f, d, 2);
+      butterworth(f, d, 3);
+      butterworth(f, d, 4);
+    ]';
 
 driver('Fig');                  // do the plot directly into the .fig-file
 xinit(filename);
