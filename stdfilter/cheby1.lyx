@@ -1,0 +1,673 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass amsart
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single 
+\papersize a4paper
+\paperpackage a4
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 2
+\tocdepth 2
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: cheby1.lyx,v 1.1 2005-01-04 22:03:20 ralf Exp $
+\end_inset 
+
+
+\layout Section
+
+
+\noun on 
+
+\begin_inset LatexCommand \label{sec:filter_cheby1}
+
+\end_inset 
+
+Tschebyscheff
+\noun default 
+-Tiefpaß Typ I
+\layout Subsection
+
+Amplitudencharakteristik
+\layout Standard
+
+Der erste Typ des
+\noun on 
+ Tschebyscheff
+\noun default 
+-Tiefpaß' ist durch direkte Anwendung der 
+\noun on 
+Tschebscheff
+\noun default 
+-Funktionen erster Art (siehe Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:cheby}
+
+\end_inset 
+
+) für die Drosselung gekennzeichnet.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\D(\omega)=\delta\,\T_{n}(\omega)}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Man kann sich auch leicht an Hand der folgenden Definition für 
+\begin_inset Formula $\T_{n}(\omega)$
+\end_inset 
+
+ davon überzeugen, daß die Funktion im Intervall 
+\begin_inset Formula $\left|\omega\right|<1$
+\end_inset 
+
+ eine Bestapproximation der Nullinie (im Sinne von Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:filter_goal_best_approx}
+
+\end_inset 
+
+) darstellt, für 
+\begin_inset Formula $\left|\omega\right|>1$
+\end_inset 
+
+ aber gegen 
+\begin_inset Formula $\pm\infty$
+\end_inset 
+
+ strebt.
+\layout Standard
+
+
+\begin_inset Formula \[
+\T_{n}(\omega)=\left\{ \begin{array}{ll}
+\cos(n\arccos\omega), & \qquad\left|\omega\right|\leq1\\
+\cosh(n\arcosh\omega), & \qquad\left|\omega\right|>1\end{array}\right.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Daß es sich hier wirklich um Polynome in 
+\begin_inset Formula $\omega$
+\end_inset 
+
+ handelt, zeigt die äquivalente Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+
+\end_inset 
+
+ für 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ im Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:chebyt_poly_def}
+
+\end_inset 
+
+.
+ Dort sind auch 
+\noun on 
+Tschebscheff
+\noun default 
+-Polynome bis zum Grad 
+\begin_inset Formula $n=5$
+\end_inset 
+
+ sowie ihr Funktionsverlauf (in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:chebyt_plot}
+
+\end_inset 
+
+) gegeben.
+ Wie spezielle Werte des Funktionsverlaufs von 
+\begin_inset Formula $\T_{n}(x)$
+\end_inset 
+
+ sich auf den normierten Amplitudengang auswirken, kann entweder Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \ref{tab:approx_ampl_interval}
+
+\end_inset 
+
+ (zumindest an Eckwerten) oder etwas anschaulicher Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:filter_cheby1_amplitude}
+
+\end_inset 
+
+ entnommen werden.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename cheby1_amplitude.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:filter_cheby1_amplitude}
+
+\end_inset 
+
+Amplitudengang des
+\noun on 
+ Tschebyscheff
+\noun default 
+-Tiefpaß Typ\SpecialChar ~
+I
+\end_inset 
+
+
+\layout Standard
+
+Die normierte Grenzfrequenz ist bei diesem Tiefpaß immer 
+\begin_inset Formula $1$
+\end_inset 
+
+, zumindest soweit man sie als Eckfrequenz entsprechend Tiefpaß-Toleranzfeld
+ in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:lp_tol_scheme}
+
+\end_inset 
+
+ sieht.
+ Der Amplitudengang hat im Durchlaßbereich eine Welligkeit, welche durch
+ die Tschebyscheff-Funktion verursacht wird (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:chebyt_plot}
+
+\end_inset 
+
+).
+ Sie nimmt an den Extremstellen 
+\begin_inset Formula $\cos(k\pi/n)$
+\end_inset 
+
+ alternierend die Werte 
+\begin_inset Formula $\pm1$
+\end_inset 
+
+ an --- dazwischen liegen (notwendigerweise) die Nullstellen bei 
+\begin_inset Formula $\cos\left[(k-1/2)\pi/n\right]$
+\end_inset 
+
+ (für Details siehe Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:cheby}
+
+\end_inset 
+
+).
+ Kombiniert man beide Ausdrücke, dann erhält man die Extremstellen des Amplitude
+ngangs.
+\layout Standard
+
+
+\begin_inset Formula \[
+\omega_{k}=\cos\left[k\frac{\pi}{2n}\right],\qquad k=0,1,2,\ldots,n-1\]
+
+\end_inset 
+
+
+\layout Standard
+
+An diesen Stellen ist 
+\begin_inset Formula $\trf(\omega)$
+\end_inset 
+
+ nach Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \ref{tab:approx_ampl_interval}
+
+\end_inset 
+
+ entweder 
+\begin_inset Formula $1$
+\end_inset 
+
+ oder 
+\begin_inset Formula $(1+\delta^{2})^{-1/2}$
+\end_inset 
+
+ und die Welligkeit 
+\begin_inset Formula $\varepsilon$
+\end_inset 
+
+ deshalb:
+\layout Standard
+
+
+\begin_inset Formula \[
+\varepsilon=1-\frac{1}{\sqrt{1+\delta^{2}}}\msp.\]
+
+\end_inset 
+
+
+\layout Subsection
+
+Polstellen
+\layout Standard
+
+Um die Verteilung der Polstellen des 
+\noun on 
+Tschebyscheff
+\noun default 
+-Tiefpaß' vom Typ\SpecialChar ~
+I zu bestimmen, gehen wir von der komplexen Übertragungsfunktio
+n 
+\begin_inset Formula $\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)$
+\end_inset 
+
+ aus
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\omega)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und verallgemeinern dann im Sinne der 
+\noun on 
+Laplace
+\noun default 
+-Transformation 
+\begin_inset Formula $\jw\Rightarrow\lps$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\lps/\ji)}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+An den Polstellen muß der Nenner verschwinden, was heißt:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+1+\delta^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\\
+\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\delta}\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Wegen 
+\begin_inset Formula $\lps=\alpha+\jw$
+\end_inset 
+
+ müssen wir davon ausgehen, daß 
+\begin_inset Formula $\arccos(\lps/\ji)$
+\end_inset 
+
+ eine komplexe Größe ist.
+ Um nicht den Überblick zu verlieren substituieren wir 
+\begin_inset Formula $z=u+\ji v=\reop\left\{ z\right\} +\ji\imop\left\{ z\right\} =\arccos(\lps/\ji)$
+\end_inset 
+
+ und notieren als komplexe Gleichung: 
+\layout Standard
+
+
+\begin_inset Formula \[
+\cos(nu+\ji nv)=\pm\ji/\delta\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Nimmt man das Additionstheorem 
+\begin_inset Formula $\cos(\varphi+\vartheta)=\cos\varphi\,\cos\vartheta-\sin\varphi\,\sin\vartheta$
+\end_inset 
+
+ hinzu, dann sind die Gleichungen
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\cos(nu+\ji nv)=\cos(nu)\cos(\ji nv)-\sin(nu)\sin(\ji nv) & =\pm\ji\frac{1}{\delta}\\
+\cos(nu)\cosh(nv)-\ji\sin(nu)\sinh(nv) & =\pm\ji\frac{1}{\delta}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+äquivalent und wir können die Nullstellenbedingung in Real- und Imaginärteil
+ separieren.
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\cos(nu)\cosh(nv) & =0 & -\sin(nu)\sinh(nv) & =\pm\frac{1}{\delta}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Der Realteil wird Null, wenn 
+\begin_inset Formula $\cos(nu)=0$
+\end_inset 
+
+ gilt, was für Argumente 
+\begin_inset Formula $n\pn{u}{k}=k\pi-\pi/2$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $\pn{u}{k}=\pi(2k-1)/2n$
+\end_inset 
+
+ der Fall ist.
+ Einsetzen in die imaginäre Bedingung führt zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+-\sin\left(k\pi-\frac{\pi}{2}\right)\:\sinh(nv) & =\pm\frac{1}{\delta}\\
+\pm\sinh(nv) & =\pm\frac{1}{\delta}\\
+v & =\frac{1}{n}\arsinh\frac{1}{\delta}=\textrm{konstant.}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit diesen Ergebnissen kehren wir zur Substitution 
+\begin_inset Formula $\cos\pn{z}{k}=\pn{\lps}{k}/\ji$
+\end_inset 
+
+ zurück und wenden (wieder) das komplexe Additionstheorem 
+\begin_inset Formula $\cos(u+\ji v)=\cos u\,\cosh v-\ji\sin u\,\sinh v$
+\end_inset 
+
+ an.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pn{\lps}{k} & =\ji\cos\pn{z}{k}=\ji\cos(\pn{u}{k}+\ji v)\\
+ & =\ji\cos\pn{u}{k}\,\cosh v+\sin\pn{u}{k}\,\sinh v\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Einsetzen von 
+\begin_inset Formula $u$
+\end_inset 
+
+ und 
+\begin_inset Formula $v$
+\end_inset 
+
+ ergibt für die 
+\begin_inset Formula $2n$
+\end_inset 
+
+ Polstellen der Funktion 
+\begin_inset Formula $\trf(\lps)\trf(-\lps)$
+\end_inset 
+
+, getrennt für Real- und Imaginärteil:
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\reop\left\{ \pn{\lps}{k}\right\}  & = & \sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
+\imop\left\{ \pn{\lps}{k}\right\}  & = & \cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Interpretiert man beide Anteile geometrisch, dann ist zu bemerken, daß alle
+ Pole auf einer Ellipse
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Parameterdarstellung der Ellipse lautet: 
+\begin_inset Formula $x=a\cos\varphi,\msp y=b\cos\varphi$
+\end_inset 
+
+, wobei 
+\begin_inset Formula $a$
+\end_inset 
+
+ und 
+\begin_inset Formula $b$
+\end_inset 
+
+ die Halbachsen sind.
+\end_inset 
+
+ mit den Halbachsen
+\layout Standard
+
+
+\begin_inset Formula \[
+\alpha_{H}=\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\qquad\textrm{und}\qquad\omega_{H}=\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+liegen (siehe auch Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:cheby1_roots}
+
+\end_inset 
+
+).
+\begin_inset Note
+collapsed true
+
+\layout Standard
+
+Abbildung berechnet für 
+\backslash 
+delta=1/4
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Graphics
+	filename cheby1_roots_odd.eps
+	width 45col%
+	keepAspectRatio
+	subcaption
+	subcaptionText "$n$ ungerade ($n=5$)"
+
+\end_inset 
+
+
+\hfill 
+
+\begin_inset Graphics
+	filename cheby1_roots_even.eps
+	width 45col%
+	keepAspectRatio
+	subcaption
+	subcaptionText "$n$ gerade ($n=6$)"
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:cheby1_roots}
+
+\end_inset 
+
+P/N-Verteilung des 
+\noun on 
+Tschebyscheff
+\noun default 
+-Tiefpaß Typ\SpecialChar ~
+I
+\end_inset 
+
+
+\layout Standard
+
+Abschließend wählen wir die Hälfte der 
+\begin_inset Formula $2n$
+\end_inset 
+
+ Pole, nämlich (aus Stabilitätsgründen) die mit negativem Realteil aus,
+ und ordnen sie 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ zu
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei praktischerweise mit 
+\begin_inset Formula $\nu=k-n$
+\end_inset 
+
+ umindiziert, das Argument der trigonometrischen Funktionen also um 
+\begin_inset Formula $\pi$
+\end_inset 
+
+ verschoben wird.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}\qquad\nu=1,2,\ldots,n\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Geschlossene Darstellungen für die Polfrequenzen und -güten (abgeleitet
+ aus den allgemeinen Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_pole_frequency}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:filter_pole_quality}
+
+\end_inset 
+
+) würden bei diesem Filtertyp schon erhebliche Komplexität annehmen.
+ Deshalb sollte man sich zu deren Bestimmung entweder mit einer Softwareimplemen
+tierung oder mit entsprechenden Tabellen, wie 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibreftab{2.5}]{Fritzsche:1979}
+
+\end_inset 
+
+, behelfen.
+\the_end
