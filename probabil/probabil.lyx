@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.2 2004-10-23 20:35:56 ralf Exp $
+Version: $Id: probabil.lyx,v 1.3 2004-10-24 12:59:25 ralf Exp $
 \end_inset 
 
 
@@ -265,7 +265,7 @@ Häufig auch geschrieben als
 \end_inset 
 
  oder 
-\begin_inset Formula $\textrm{D}X$
+\begin_inset Formula $\textrm{D}[X]$
 \end_inset 
 
 , außerdem als Größe 
@@ -277,7 +277,17 @@ Häufig auch geschrieben als
 
 \end_inset 
 
- genannt.
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Streuung genannt.
 \end_inset 
 
  der Zufallsgröße 
@@ -2446,6 +2456,330 @@ Pulsbreitendiskriminierung
 \layout Standard
 
 
+\begin_inset LatexCommand \index{Pulsbreitendiskriminierung}
+
+\end_inset 
+
+Oft besteht die Forderung zwischen zwei Impulsen verschiedener Breite 
+\begin_inset Formula $T_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $T_{2}$
+\end_inset 
+
+ zu unterscheiden.
+ Die einfachste Möglichkeit besteht darin, auf den Impulsanfang zu triggern
+ und zu einem günstig gewählten Zeitpunkt 
+\begin_inset Formula $T$
+\end_inset 
+
+ das Signal erneut abzutasten (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:prob_pulse_discrimination}
+
+\end_inset 
+
+).
+ Wird kein gültiger Pegel mehr erkannt, gilt der Impuls als beendet, was
+ mit einer bestimmten Wahrscheinlichkeit darauf hindeutet, daß der Impuls
+ mit der Breite 
+\begin_inset Formula $T_{1}$
+\end_inset 
+
+ empfangen wurde.
+ Die Wahrscheinlichkeit, daß es sich um den Impuls der Breite 
+\begin_inset Formula $T_{2}$
+\end_inset 
+
+ handelt ist dann das komplementäre Ereignis.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename discrimi.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:prob_pulse_discrimination}
+
+\end_inset 
+
+Pulsbreitendiskriminierung
+\end_inset 
+
+
+\layout Standard
+
+Geht man davon aus, daß die Impulsbreiten
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Aufgrund von schwankenden Systemparamtern 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ des Übertragungskanals.
+\end_inset 
+
+ normalverteilt
+\begin_inset LatexCommand \index{Normalverteilung}
+
+\end_inset 
+
+ sind, wobei 
+\begin_inset Formula $\sigma$
+\end_inset 
+
+ die Streuung und 
+\begin_inset Formula $\bar{T}$
+\end_inset 
+
+ der Mittelwert des jeweiligen Impulses sind, dann gilt für die Verteilungsdicht
+en
+\layout Standard
+
+
+\begin_inset Formula \[
+p_{i}(t)=\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{t-\bar{T}_{i}}{\sigma_{i}}\right)^{2}},\qquad i=1,2\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die zugehörige Verteilungsfunktion (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Definitionsgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_distribution}
+
+\end_inset 
+
+), also die Wahrscheinlichkeit, daß der jeweilige Impuls (also 
+\begin_inset Formula $T_{i}$
+\end_inset 
+
+) kürzer als der Wert 
+\begin_inset Formula $t$
+\end_inset 
+
+ ist, ist dann
+\layout Standard
+
+
+\begin_inset Formula \[
+P(T_{i}<t)=F_{i}(t)=\int\limits _{u=-\infty}^{t}\frac{1}{\sqrt{2\pi}\sigma_{i}}\cdot e^{-\frac{1}{2}\left(\frac{u-\bar{T}_{i}}{\sigma_{i}}\right)^{2}}\tdc u\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Substitutiert man 
+\begin_inset Formula $z=(u-\bar{T}_{i})/\sigma_{i}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\tdc u=\sigma_{i}\,\tdc z$
+\end_inset 
+
+, dann kann mit der (auch tabelliert vorliegenden) Standard-Normalverteilung
+ 
+\begin_inset Formula $\cnorm(z)$
+\end_inset 
+
+ gearbeitet werden (mittelwertfreie Normalverteilung mit 
+\begin_inset Formula $\sigma=1$
+\end_inset 
+
+).
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray}
+F_{i}(t) & = & \int\limits _{z=-\infty}^{\frac{t-\bar{T}_{i}}{\sigma_{i}}}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{z_{i}^{2}}{2}}\tdc z=\cnorm\left(\frac{t-\bar{T}_{i}}{\sigma_{i}}\right)\nonumber \\
+\cnorm(x) & = & \int\limits _{u=-\infty}^{x}\frac{1}{\sqrt{2\pi}}\cdot e^{-\frac{u^{2}}{2}}\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Wahrscheinlichkeit, daß der Impuls mit der Länge 
+\begin_inset Formula $T_{1}$
+\end_inset 
+
+ kürzer als 
+\begin_inset Formula $T$
+\end_inset 
+
+ ist, entspricht genau der Wahrscheinlichkeit diesen Impuls erkannt zu haben.
+\layout Standard
+
+
+\begin_inset Formula \[
+P(T_{1}<T)=\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma_{1}}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Entsprechend gilt für die Wahrscheinlichkeit den Impuls mit der Breite 
+\begin_inset Formula $T_{2}$
+\end_inset 
+
+ erkannt zu haben.
+\layout Standard
+
+
+\begin_inset Formula \[
+P(T_{2}>T)=1-P(T_{2}<T)=1-\cnorm\left(\frac{T-\bar{T}_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\bar{T}_{2}-T}{\sigma_{2}}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Gesucht wird nun der optimale Abtastzeitpunkt 
+\begin_inset Formula $T$
+\end_inset 
+
+, bei dem beide Wahrscheinlichkeiten gleich werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+P(T_{1}<T) & =P(T_{2}>T)\\
+\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma_{1}}\right) & =\cnorm\left(\frac{\bar{T}_{2}-T}{\sigma_{2}}\right)\\
+\frac{T-\bar{T}_{1}}{\sigma_{1}} & =\frac{\bar{T}_{2}-T}{\sigma_{2}}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Bei gleicher Streuung 
+\begin_inset Formula $\sigma=\sigma_{1}=\sigma_{2}$
+\end_inset 
+
+ für die Pulsbreiten 
+\begin_inset Formula $T_{i}$
+\end_inset 
+
+ ist der optimale Abtastzeitpunkt 
+\begin_inset Formula $T$
+\end_inset 
+
+ das arithmetische Mittel.
+\layout Standard
+
+
+\begin_inset Formula \[
+T=\frac{\bar{T}_{1}+\bar{T}_{2}}{2}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Wahrscheinlichkeit, einen der Impulse dabei falsch zu erkennen, liegt
+ bei
+\layout Standard
+
+
+\begin_inset Formula \[
+P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{T-\bar{T}_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\bar{T}_{2}-\bar{T}_{1}}{2\sigma}\right)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Geht man dagegen vom gleichen relativen Fehler 
+\begin_inset Formula $E$
+\end_inset 
+
+ für beide Pulsbreiten aus, so ergibt sich mit
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\bar{T}_{1}}{\sigma_{1}}=\frac{\bar{T}_{2}}{\sigma_{2}}=\frac{1}{E}\]
+
+\end_inset 
+
+
+\layout Standard
+
+der optimale Wert zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\frac{T-\bar{T}_{1}}{\bar{T}_{1}E} & =\frac{\bar{T}_{2}-T}{\bar{T}_{2}E}\\
+\frac{T}{\bar{T}_{1}}-1 & =1-\frac{T}{\bar{T}_{2}}\\
+T & =2\frac{\bar{T}_{1}\bar{T}_{2}}{\bar{T}_{1}+\bar{T}_{2}}\msp.\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
+ geometrischem und einfachem arithmetischen Mittelwert der beiden Pulsbreiten.
+ Bei dieser Wahl ist die Wahrscheinlichkeit einen der Impulse falsch zu
+ erkennen
+\layout Standard
+
+
+\begin_inset Formula \[
+P(T_{1}>T)=1-P(T_{1}<T)=1-\cnorm\left(\frac{1}{E}\cdot\frac{\bar{T}_{2}-\bar{T}_{1}}{\bar{T}_{2}+\bar{T}_{1}}\right)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+
 \begin_inset LatexCommand \printindex{}
 
 \end_inset 
@@ -2498,7 +2832,7 @@ Notation
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\textrm{E}X$
+\begin_inset Formula $\textrm{E}{[X]}$
 \end_inset 
 
  Erwartungswert der Zufallsgröße 
@@ -2510,6 +2844,14 @@ Notation
 \labelwidthstring 00.00.0000
 
 SNR Signal-Rausch-Abstand
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\cnorm(x)$
+\end_inset 
+
+ Standard-Normalverteilung
 \layout List
 \labelwidthstring 00.00.0000
 
