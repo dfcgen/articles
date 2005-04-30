@@ -7,7 +7,7 @@
 \graphics default
 \paperfontsize default
 \spacing single 
-\papersize a4paper
+\papersize Default
 \paperpackage a4
 \use_geometry 0
 \use_amsmath 1
@@ -21,7 +21,7 @@
 \quotes_language english
 \quotes_times 2
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 
 \layout Standard
@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic.lyx,v 1.2 2004-10-09 20:09:16 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.3 2005-04-30 19:04:16 ralf Exp $
 \end_inset 
 
 
@@ -162,7 +162,7 @@ Alle im weiteren dargelegten Beweise stützen sich fast ausschließlich auf
  die bekannten Grundregeln der höheren Mathematik und sollten deshalb für
  Ingenieure technischer Fachrichtungen nachvollziehbar sein
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -242,12 +242,12 @@ Diese Integrale haben ihren Namen wegen der Rolle, die sie bei der Berechnung
 .
  Alle diese Parameterintegrale lassen sich auf drei Grundformen reduzieren\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{17.4.41~ff.}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[17.4.41~ff.]{Abramowitz:1972}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{3}, \S 3]{Tricomi:1948}
+\begin_inset LatexCommand \cite[II, \S 3]{Tricomi:1948}
 
 \end_inset 
 
@@ -272,9 +272,9 @@ Legendre
 
 
 \begin_inset Formula \begin{align*}
-\eF{\varphi}{k} & =\int\limits _{0}^{\varphi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
-\eE{\varphi}{k} & =\int\limits _{0}^{\varphi}\sqrt{1-k^{2}\sin^{2}\phi}\msp d\phi\\
-\ePi{\varphi}{k}{n} & =\int\limits _{0}^{\varphi}\frac{d\phi}{(1+n\sin^{2}\phi)\sqrt{1-k^{2}\sin^{2}\phi}}\end{align*}
+\eF{\varphi}{k} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+\eE{\varphi}{k} & =\int\limits _{0}^{\varphi}\sqrt{1-k^{2}\sin^{2}\phi}\tic\phi\\
+\ePi{\varphi}{k}{n} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{(1+n\sin^{2}\phi)\sqrt{1-k^{2}\sin^{2}\phi}}\end{align*}
 
 \end_inset 
 
@@ -365,7 +365,7 @@ Legendre
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\eF{\varphi}{k}=\int\limits _{0}^{\varphi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\msp,\label{eq:ellf_def}\end{equation}
+\boxed{\eF{\varphi}{k}=\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\msp,\label{eq:ellf_def}\end{equation}
 
 \end_inset 
 
@@ -415,7 +415,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-\eF{\varphi}{k}=\int\limits _{0}^{x}\frac{dt}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}},\qquad\qquad x=\sin\varphi\label{eq:ellf_def_x}\end{equation}
+\eF{\varphi}{k}=\int\limits _{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}},\qquad\qquad x=\sin\varphi\label{eq:ellf_def_x}\end{equation}
 
 \end_inset 
 
@@ -423,7 +423,7 @@ Jacobi
 \layout Proof
 
 Einsetzen der Substitution sowie der Ableitung 
-\begin_inset Formula $dt/d\phi=\cos\phi$
+\begin_inset Formula $\tdc t/\tdc\phi=\cos\phi$
 \end_inset 
 
  in Definitionsgleichung\SpecialChar ~
@@ -437,8 +437,8 @@ Einsetzen der Substitution sowie der Ableitung
 
 
 \begin_inset Formula \begin{align*}
-\eF{\varphi}{k} & =\int\limits _{\phi=0}^{\phi=\varphi}\frac{dt}{\cos\phi\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\int\limits _{0}^{\sin\varphi}\frac{dt}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\msp.\end{align*}
+\eF{\varphi}{k} & =\int\limits _{\phi=0}^{\varphi}\frac{\tdc t}{\cos\phi\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\int\limits _{0}^{\sin\varphi}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\msp.\end{align*}
 
 \end_inset 
 
@@ -455,7 +455,7 @@ Um im weiteren die Eindeutigkeit zu gewährleisten und außerdem eine einfache
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\exF{x}{k}=\int\limits _{0}^{x}\frac{dt}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}}\msp.\label{eq:ellf_def_jacobi}\end{equation}
+\boxed{\exF{x}{k}=\int\limits _{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}}\msp.\label{eq:ellf_def_jacobi}\end{equation}
 
 \end_inset 
 
@@ -503,7 +503,7 @@ Jacobi
 
 
 \begin_inset Formula \[
-\exF{x}{k}=\frac{1}{2}\int\limits _{0}^{\sqrt{x}}\frac{d\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
+\exF{x}{k}=\frac{1}{2}\int\limits _{0}^{\sqrt{x}}\frac{\tdc\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
 
 \end_inset 
 
@@ -519,7 +519,7 @@ Riemann
 
 
 \begin_inset Formula \[
-\int\frac{d\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
+\int\frac{\tdc\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
 
 \end_inset 
 
@@ -545,14 +545,14 @@ Gauß
 \noun default 
  intensiv verwendete Form des elliptischen Integrales erster Art ist
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
 Weitere Integrale dieser Art, die alle Vorzeichenkombinationen der Summanden
  abdecken, sind in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{17.4.41~ff.}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[17.4.41~ff.]{Abramowitz:1972}
 
 \end_inset 
 
@@ -564,7 +564,7 @@ Weitere Integrale dieser Art, die alle Vorzeichenkombinationen der Summanden
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{0}^{w}\frac{dt}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}}=\frac{1}{a}\eF{\varphi}{k},\qquad\qquad w=b\tan\varphi\label{eq:ellf_ab}\end{equation}
+\int\limits _{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}}=\frac{1}{a}\eF{\varphi}{k},\qquad\qquad w=b\tan\varphi\label{eq:ellf_ab}\end{equation}
 
 \end_inset 
 
@@ -607,7 +607,7 @@ Um dieses Integral auf
 
  zurückzuführen, wird zuerst eine passende Substitution nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{17.4.41~ff.}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[17.4.41~ff.]{Abramowitz:1972}
 
 \end_inset 
 
@@ -628,7 +628,7 @@ und dann mit Hilfe von
 \end_inset 
 
  die Ableitung 
-\begin_inset Formula $dt/d\phi$
+\begin_inset Formula $\tdc t/\tdc\phi$
 \end_inset 
 
  gebildet.
@@ -636,7 +636,7 @@ und dann mit Hilfe von
 
 
 \begin_inset Formula \[
-\frac{dt}{d\phi}=b(1+\tan^{2}\phi)=\frac{b}{\cos^{2}\phi}\]
+\tdiff{t}{\phi}=b(1+\tan^{2}\phi)=\frac{b}{\cos^{2}\phi}\]
 
 \end_inset 
 
@@ -648,8 +648,8 @@ Einsetzen in das Ausgangsintegral ergibt
 
 
 \begin_inset Formula \begin{align}
-\int\limits _{0}^{w}\frac{dt}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}} & =\int\limits _{0}^{\varphi}\frac{d\phi}{\sqrt{a^{2}\cos^{2}\phi+b^{2}\sin^{2}\phi}}\nonumber \\
- & =\frac{1}{a}\int\limits _{0}^{\varphi}\frac{d\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\msp.\label{eq:ellf_ab_sin}\end{align}
+\int\limits _{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{a^{2}\cos^{2}\phi+b^{2}\sin^{2}\phi}}\nonumber \\
+ & =\frac{1}{a}\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\msp.\label{eq:ellf_ab_sin}\end{align}
 
 \end_inset 
 
@@ -735,7 +735,7 @@ Diese Schreibweise ist in der elektrischen Filtertheorie recht verbreitet\Specia
 
 
 \begin_inset Formula \[
-\eF{\varphi}{\Theta}=\int\limits _{0}^{\varphi}\frac{d\phi}{\sqrt{1-\sin^{2}\Theta\sin^{2}\phi}}\]
+\eF{\varphi}{\Theta}=\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-\sin^{2}\Theta\sin^{2}\phi}}\]
 
 \end_inset 
 
@@ -806,7 +806,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\eF{\frac{\pi}{2}}{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\eK{k}\label{eq:ellf_val_pi2}\end{equation}
+\eF{\frac{\pi}{2}}{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\eK{k}\label{eq:ellf_val_pi2}\end{equation}
 
 \end_inset 
 
@@ -826,9 +826,9 @@ Der Funktionswert bei
 
 
 \begin_inset Formula \begin{align*}
-\eF{\pi}{k} & =\int\limits _{0}^{\pi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\int\limits _{0}^{\frac{\pi}{2}}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int\limits _{\frac{\pi}{2}}^{\pi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\eK{k}-\int\limits _{0}^{\frac{\pi}{2}}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
+\eF{\pi}{k} & =\int\limits _{0}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int\limits _{\frac{\pi}{2}}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\eK{k}-\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
  & =2\eK{k}\end{align*}
 
 \end_inset 
@@ -849,8 +849,8 @@ Für spezielle Module
 
 
 \begin_inset Formula \begin{align}
-\eF{\varphi}{0} & =\int\limits _{0}^{\varphi}d\phi=\varphi\label{eq:ellint_F_mod_zero}\\
-\eF{\varphi}{1} & =\int\limits _{0}^{\varphi}\frac{d\phi}{\cos\phi}=\int\limits _{0}^{\varphi}\sec\phi\msp d\phi=\ln\left|\tan\left(\frac{\varphi}{2}+\frac{\pi}{4}\right)\right|\label{eq:ellint_F_mod_unity}\end{align}
+\eF{\varphi}{0} & =\int\limits _{0}^{\varphi}\tic\phi=\varphi\label{eq:ellint_F_mod_zero}\\
+\eF{\varphi}{1} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\cos\phi}=\int\limits _{0}^{\varphi}\sec\phi\tic\phi=\ln\left|\tan\left(\frac{\varphi}{2}+\frac{\pi}{4}\right)\right|\label{eq:ellint_F_mod_unity}\end{align}
 
 \end_inset 
 
@@ -934,7 +934,7 @@ Mit der Substitution
 
 
 \begin_inset Formula \[
-\eF{-\varphi}{k}=\int\limits _{\phi=0}^{-\varphi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\int\limits _{\psi=0}^{\varphi}\frac{-d\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}=-\eF{\varphi}{k}\]
+\eF{-\varphi}{k}=\int\limits _{\phi=0}^{-\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\int\limits _{\psi=0}^{\varphi}\frac{-\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}=-\eF{\varphi}{k}\]
 
 \end_inset 
 
@@ -1051,9 +1051,9 @@ Sie ergibt sich, wenn man mit
 
  beginnt und dann iterativ fortsetzt.
 \begin_inset Formula \begin{align}
-\eF{\varphi+\pi}{k} & =\int\limits _{0}^{\varphi+\pi}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\nonumber \\
- & =\int\limits _{-\pi}^{\varphi}\frac{d\psi}{\sqrt{1-k^{2}\sin^{2}(\psi+\pi)}}\nonumber \\
- & =\int\limits _{0}^{\varphi}\frac{d\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}-\int\limits _{0}^{-\pi}\frac{d\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}\nonumber \\
+\eF{\varphi+\pi}{k} & =\int\limits _{0}^{\varphi+\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\nonumber \\
+ & =\int\limits _{-\pi}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}(\psi+\pi)}}\nonumber \\
+ & =\int\limits _{0}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}-\int\limits _{0}^{-\pi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}\nonumber \\
  & =\eF{\varphi}{k}+\eF{\pi}{k}\nonumber \\
  & =\eF{\varphi}{k}+2\eK{k}\label{eq:ellf_arg_reduction}\end{align}
 
@@ -1249,7 +1249,7 @@ Einsetzen des imaginären Arguments im Sinne von
 
 
 \begin_inset Formula \[
-\eF{\ji\xi}{k}=\int\limits _{\phi=0}^{\ji\xi}\frac{d\phi}{\sqrt{1-(1-{k'}^{2})\sin^{2}\phi}}.\]
+\eF{\ji\xi}{k}=\int\limits _{\phi=0}^{\ji\xi}\frac{\tdc\phi}{\sqrt{1-(1-{k'}^{2})\sin^{2}\phi}}.\]
 
 \end_inset 
 
@@ -1273,11 +1273,11 @@ Mit der (im Intervall
 \layout Proof
 
 und deren Ableitung 
-\begin_inset Formula $d\phi/d\theta=\ji/\cos\theta$
+\begin_inset Formula $\tdc\phi/\tdc\theta=\ji/\cos\theta$
 \end_inset 
 
  kann man das Differential 
-\begin_inset Formula $d\phi/\sqrt{1-k^{2}\sin^{2}\phi}$
+\begin_inset Formula $\tdc\phi/\sqrt{1-k^{2}\sin^{2}\phi}$
 \end_inset 
 
  relativ einfach mit Hilfe des komplementären Moduls 
@@ -1313,9 +1313,9 @@ Jacobi
 
 
 \begin_inset Formula \begin{align}
-\eF{\varphi}{k} & =\int\limits _{\sin\phi=0}^{\sin\phi=\sin\varphi}\frac{\ji\msp d\theta}{\cos\theta\sqrt{1+(1-{k'}^{2})\tan^{2}\theta}}\nonumber \\
- & =\ji\int\limits _{\tan\theta=0}^{\ji\tan\theta=\sin\ji\xi}\frac{d\theta}{\sqrt{\cos^{2}\theta+(1-{k'}^{2})\sin^{2}\theta}}\nonumber \\
- & =\ji\int\limits _{0}^{\arctan(\sinh\xi)}\frac{d\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:ellf_imag_full}\end{align}
+\eF{\varphi}{k} & =\int\limits _{\sin\phi=0}^{\sin\phi=\sin\varphi}\frac{\ji\tic\theta}{\cos\theta\sqrt{1+(1-{k'}^{2})\tan^{2}\theta}}\nonumber \\
+ & =\ji\int\limits _{\tan\theta=0}^{\ji\tan\theta=\sin\ji\xi}\frac{\tdc\theta}{\sqrt{\cos^{2}\theta+(1-{k'}^{2})\sin^{2}\theta}}\nonumber \\
+ & =\ji\int\limits _{0}^{\arctan(\sinh\xi)}\frac{\tdc\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:ellf_imag_full}\end{align}
 
 \end_inset 
 
@@ -1389,9 +1389,9 @@ Das vollständige elliptische Integral erster Art wird meist in den folgenden
 
 
 \begin_inset Formula \begin{xalignat}{2}
-\eK{k} & =\int\limits _{0}^{1}\frac{dt}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}, & 0 & \leq\left|k\right|\leq1\label{eq:ellk_def}\\
-\eK{m} & =\int\limits _{0}^{1}\frac{dt}{\sqrt{(1-t^{2})(1-mt^{2})}}, & 0 & \leq m\leq1\\
-\eK{\phi} & =\int\limits _{0}^{1}\frac{dt}{\sqrt{(1-t^{2})(1-t^{2}\sin^{2}\phi)}}, & -\frac{\pi}{2} & \leq\phi\leq\frac{\pi}{2}\msp.\end{xalignat}
+\eK{k} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}, & 0 & \leq\left|k\right|\leq1\label{eq:ellk_def}\\
+\eK{m} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-mt^{2})}}, & 0 & \leq m\leq1\\
+\eK{\phi} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-t^{2}\sin^{2}\phi)}}, & -\frac{\pi}{2} & \leq\phi\leq\frac{\pi}{2}\msp.\end{xalignat}
 
 \end_inset 
 
@@ -1423,7 +1423,7 @@ Legendre
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\eK{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{d\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
+\boxed{\eK{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
 
 \end_inset 
 
@@ -1456,8 +1456,8 @@ Spezielle Werte
 
 
 \begin_inset Formula \begin{align}
-\eK{0} & =\int\limits _{0}^{\frac{\pi}{2}}d\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
-\eK{1} & =\int\limits _{0}^{\frac{\pi}{2}}\frac{d\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
+\eK{0} & =\int\limits _{0}^{\frac{\pi}{2}}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
+\eK{1} & =\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
 
 \end_inset 
 
@@ -1560,7 +1560,7 @@ Gauß
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{x=0}^{\infty}\frac{dx}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}\msp.\label{eq:ellk_ab}\end{equation}
+\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}\msp.\label{eq:ellk_ab}\end{equation}
 
 \end_inset 
 
@@ -1578,7 +1578,7 @@ Wie schon in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\int\limits _{x=0}^{\infty}\frac{dx}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int\limits _{0}^{\pi/2}\frac{d\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
+\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
  & =\frac{1}{a}\F\left[\epar{\frac{\pi}{2}}{\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp}\right]\nonumber \\
  & =\frac{1}{a}\jK\left[\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp\right]\msp.\label{eq:ellk_ab_k}\end{align}
 
@@ -1598,7 +1598,7 @@ Mit dem Modul entsprechend Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\int\limits _{0}^{\infty}\frac{dx}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\frac{dx}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{a}\eK{k}\msp.\]
+\int\limits _{0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{a}\eK{k}\msp.\]
 
 \end_inset 
 
@@ -1617,7 +1617,7 @@ t=\frac{1}{\sqrt{1+\left(\frac{x}{a}\right)^{2}}} & \quad\rightarrow\quad & x^{2
 
 
 \begin_inset Formula \[
-\frac{dt}{dx}=-\frac{1}{2}\left[1+\left(\frac{x}{a}\right)^{2}\right]^{-\frac{3}{2}}2\frac{x}{a}\frac{1}{a}=-\frac{t^{3}}{a}\sqrt{t^{-2}-1}=-\frac{t^{2}}{a}\sqrt{1-t^{2}}\]
+\tdiff{t}{x}=-\frac{1}{2}\left[1+\left(\frac{x}{a}\right)^{2}\right]^{-\frac{3}{2}}2\frac{x}{a}\cdot\frac{1}{a}=-\frac{t^{3}}{a}\sqrt{t^{-2}-1}=-\frac{t^{2}}{a}\sqrt{1-t^{2}}\]
 
 \end_inset 
 
@@ -1635,10 +1635,10 @@ Einsetzen und Umformen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\int\limits _{x=0}^{\infty}\frac{dx}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =-\int\limits _{t=1}^{0}\frac{a\msp dt}{t^{2}\sqrt{(1-t^{2})[a^{2}(t^{-2}-1)+a^{2}][a^{2}(t^{-2}-1)+b^{2}]}}\\
- & =a\int\limits _{t=0}^{1}\frac{dt}{\sqrt{(1-t^{2})a^{2}(a^{2}+b^{2}t^{2}-a^{2}t^{2})}}\\
- & =\int\limits _{t=0}^{1}\frac{dt}{\sqrt{(1-t^{2})[a^{2}-(a^{2}-b^{2})t^{2}]}}\\
- & =\frac{1}{a}\int\limits _{t=0}^{1}\frac{dt}{\sqrt{(1-t^{2})\left(1-\frac{a^{2}-b^{2}}{a^{2}}t^{2}\right)}}\\
+\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =-\int\limits _{t=1}^{0}\frac{a\tic t}{t^{2}\sqrt{(1-t^{2})[a^{2}(t^{-2}-1)+a^{2}][a^{2}(t^{-2}-1)+b^{2}]}}\\
+ & =a\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})a^{2}(a^{2}+b^{2}t^{2}-a^{2}t^{2})}}\\
+ & =\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})[a^{2}-(a^{2}-b^{2})t^{2}]}}\\
+ & =\frac{1}{a}\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})\left(1-\frac{a^{2}-b^{2}}{a^{2}}t^{2}\right)}}\\
  & =\frac{1}{a}\eK{\sqrt{1-\left(\frac{b}{a}\right)^{2}}}\end{align*}
 
 \end_inset 
@@ -1868,7 +1868,7 @@ Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-u=\exF{x}{k}=\int\limits _{0}^{\esn{u}{k}}\frac{dt}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\end{equation}
+u=\exF{x}{k}=\int\limits _{0}^{\esn{u}{k}}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\end{equation}
 
 \end_inset 
 
@@ -2203,12 +2203,12 @@ Weierstraß
 
  zu bezeichnen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S$20 \cdot 1$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S$20 \sdot 1$]{Whittaker:1927}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{I}, \S 2]{Tricomi:1948}
+\begin_inset LatexCommand \cite[I, \S 2]{Tricomi:1948}
 
 \end_inset 
 
@@ -2306,7 +2306,7 @@ Nun kann mit Hilfe der Kettenregel weiter abgeleitet werden.
 
 
 \begin_inset Formula \begin{align}
-\esn[\prime]{u}{k} & =\frac{d}{du}\sin\eam{u}{k}\nonumber \\
+\esn[\prime]{u}{k} & =\tdiff{}{u}\sin\eam{u}{k}\nonumber \\
  & =\cos\eam{u}{k}\cdot\eam[\prime]{u}{k}\nonumber \\
  & =\ecn{u}{k}\sqrt{1-k^{2}\sin^{2}u}\nonumber \\
  & =\ecn{u}{k}\edn{u}{k}\label{eq:ellsn_derivation}\end{align}
@@ -2338,7 +2338,7 @@ Die erste Ableitung für
 
 
 \begin_inset Formula \begin{align*}
-0 & =\frac{d}{du}\esn[2]{u}{k}+\frac{d}{du}\ecn[2]{u}{k}\\
+0 & =\tdiff{}{u}\esn[2]{u}{k}+\tdiff{}{u}\ecn[2]{u}{k}\\
 0 & =\esn{u}{k}\esn[\prime]{u}{k}+\ecn{u}{k}\ecn[\prime]{u}{k}\\
 0 & =\esn{u}{k}\ecn{u}{k}\edn{u}{k}+\ecn{u}{k}\ecn[\prime]{u}{k}\\
 \ecn[\prime]{u}{k} & =-\esn{u}{k}\edn{u}{k}\end{align*}
@@ -2361,7 +2361,7 @@ Für
 
 .
 \begin_inset Formula \begin{align*}
-0 & =\frac{d}{du}\edn[2]{u}{k}+k^{2}\frac{d}{du}\esn[2]{u}{k}\\
+0 & =\tdiff{}{u}\edn[2]{u}{k}+k^{2}\tdiff{}{u}\esn[2]{u}{k}\\
 0 & =\edn{u}{k}\edn[\prime]{u}{k}+k^{2}\esn{u}{k}\esn[\prime]{u}{k}\\
 0 & =\edn{u}{k}\edn[\prime]{u}{k}+k^{2}\esn{u}{k}\ecn{u}{k}\edn{u}{k}\\
 \edn[\prime]{u}{k} & =-k^{2}\esn{u}{k}\ecn{u}{k}\end{align*}
@@ -2420,7 +2420,7 @@ Für den elliptischen Sinus sei hier noch exemplarisch die zweite Ableitung
 
 
 \begin_inset Formula \begin{align*}
-\esn[\prime\prime]{u}{k} & =\frac{d}{du}\ecn{u}{k}\edn{u}{k}\\
+\esn[\prime\prime]{u}{k} & =\tdiff{}{u}\ecn{u}{k}\edn{u}{k}\\
  & =\edn{u}{k}\ecn[\prime]{u}{k}+\ecn{u}{k}\edn[\prime]{u}{k}\\
  & =-\edn{u}{k}\esn{u}{k}\edn{u}{k}-k^{2}\ecn{u}{k}\esn{u}{k}\ecn{u}{k}\\
  & =-\esn{u}{k}\left[\edn[2]{u}{k}+k^{2}\ecn[2]{u}{k}\right]\end{align*}
@@ -2508,7 +2508,7 @@ collapsed true
 
 In\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{II}]{Cayley:1876}
+\begin_inset LatexCommand \cite[II]{Cayley:1876}
 
 \end_inset 
 
@@ -2533,7 +2533,7 @@ Euler
 
 ) bewiesen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S$22 \cdot 2$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S$22 \sdot 2$]{Whittaker:1927}
 
 \end_inset 
 
@@ -2581,7 +2581,7 @@ rie (Formel\SpecialChar ~
 
 
 \begin_inset Formula \[
-\frac{M\msp d\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\]
+\frac{M\tic\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\]
 
 \end_inset 
 
@@ -2590,7 +2590,7 @@ rie (Formel\SpecialChar ~
 
 
 \begin_inset Formula \[
-\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\frac{dy}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}\]
+\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\frac{\tdc y}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}\]
 
 \end_inset 
 
@@ -2609,7 +2609,7 @@ für die hier eine Lösung gefunden werden soll.
 
 
 \begin_inset Formula \begin{equation}
-du=\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\frac{dy}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}\label{eq:elladd_deqn}\end{equation}
+\tdc u=\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\frac{\tdc y}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}\label{eq:elladd_deqn}\end{equation}
 
 \end_inset 
 
@@ -2625,8 +2625,8 @@ Die separierten Ableitungen nach
 
 
 \begin_inset Formula \begin{xalignat}{2}
-\frac{dx}{du} & =\sqrt{(1-x^{2})(1-k^{2}x^{2})} & \frac{dy}{du} & =\sqrt{(1-y^{2})(1-k^{2}y^{2})}\nonumber \\
-u & =\int\limits _{0}^{x}\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\exF{x}{k} & v & =u-A=\int\limits _{0}^{y}\frac{dy}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}=\exF{y}{k}\label{eq:elladd_uv}\end{xalignat}
+\tdiff{x}{u} & =\sqrt{(1-x^{2})(1-k^{2}x^{2})} & \tdiff{y}{u} & =\sqrt{(1-y^{2})(1-k^{2}y^{2})}\nonumber \\
+u & =\int\limits _{0}^{x}\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\exF{x}{k} & v & =u-A=\int\limits _{0}^{y}\frac{\tdc y}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}=\exF{y}{k}\label{eq:elladd_uv}\end{xalignat}
 
 \end_inset 
 
@@ -2679,9 +2679,9 @@ Nach diesen einfachen Vorbetrachtungen differenziert man nun das Quadrat
 
 
 \begin_inset Formula \begin{align*}
-\frac{d}{du}\left(\frac{dx}{du}\right)^{2} & =\frac{d}{du}\left[(1-x^{2})(1-k^{2}x^{2})\right]\\
-2\frac{dx}{du}\frac{d^{2}x}{du^{2}} & =-2x\frac{dx}{du}(1-k^{2}x^{2})-2xk^{2}\frac{dx}{du}(1-x^{2})\\
-\frac{d^{2}x}{du^{2}} & =x(2k^{2}x^{2}-k^{2}-1)\msp.\end{align*}
+\tdiff{}{u}\frac{d}{du}\left(\tdiff{x}{u}\right)^{2} & =\tdiff{}{u}\left[(1-x^{2})(1-k^{2}x^{2})\right]\\
+2\tdiff{x}{u}\frac{\tdc^{2}x}{\tdc u^{2}} & =-2x\tdiff{x}{u}(1-k^{2}x^{2})-2xk^{2}\tdiff{x}{u}(1-x^{2})\\
+\frac{\tdc^{2}x}{\tdc u^{2}} & =x(2k^{2}x^{2}-k^{2}-1)\msp.\end{align*}
 
 \end_inset 
 
@@ -2693,7 +2693,7 @@ Auf dem gleichen Weg gelangt man zu
 
 
 \begin_inset Formula \[
-\frac{d^{2}y}{du^{2}}=y(2k^{2}y^{2}-k^{2}-1)\msp.\]
+\frac{\tdc^{2}y}{\tdc u^{2}}=y(2k^{2}y^{2}-k^{2}-1)\msp.\]
 
 \end_inset 
 
@@ -2713,9 +2713,9 @@ Stellt man die zuletzt gewonnenen Formeln nach
 
 
 \begin_inset Formula \begin{align}
-2k^{2}x^{2}xy-y\frac{d^{2}x}{du^{2}} & =2k^{2}y^{2}xy-x\frac{d^{2}y}{du^{2}}\nonumber \\
-y\frac{d^{2}x}{du^{2}}-x\frac{d^{2}y}{du^{2}} & =2k^{2}xy(x^{2}-y^{2})\nonumber \\
-\frac{d}{du}\left(y\frac{dx}{du}-x\frac{dy}{du}\right) & =2k^{2}xy(x^{2}-y^{2})\msp.\label{eq:elladd_proof_num}\end{align}
+2k^{2}x^{2}xy-y\frac{\tdc^{2}x}{\tdc u^{2}} & =2k^{2}y^{2}xy-x\frac{\tdc^{2}y}{\tdc u^{2}}\nonumber \\
+y\frac{\tdc^{2}x}{\tdc du^{2}}-x\frac{\tdc^{2}y}{\tdc u^{2}} & =2k^{2}xy(x^{2}-y^{2})\nonumber \\
+\tdiff{}{u}\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right) & =2k^{2}xy(x^{2}-y^{2})\msp.\label{eq:elladd_proof_num}\end{align}
 
 \end_inset 
 
@@ -2727,7 +2727,7 @@ Jetzt soll unabhängig davon der Ausdruck
 
 
 \begin_inset Formula \[
-y^{2}\left(\frac{dx}{du}\right)^{2}-x^{2}\left(\frac{dy}{du}\right)^{2}\]
+y^{2}\left(\tdiff{x}{u}\right)^{2}-x^{2}\left(\tdiff{y}{u}\right)^{2}\]
 
 \end_inset 
 
@@ -2747,7 +2747,7 @@ ichung.
 
 
 \begin_inset Formula \begin{align}
-y^{2}\left(\frac{dx}{du}\right)^{2}-x^{2}\left(\frac{dy}{du}\right)^{2} & =y^{2}(1-x^{2})(1-k^{2}x^{2})-x^{2}(1-y^{2})(1-k^{2}y^{2})\nonumber \\
+y^{2}\left(\tdiff{x}{u}\right)^{2}-x^{2}\left(\tdiff{y}{u}\right)^{2} & =y^{2}(1-x^{2})(1-k^{2}x^{2})-x^{2}(1-y^{2})(1-k^{2}y^{2})\nonumber \\
  & =y^{2}+k^{2}y^{2}x^{4}-x^{2}-k^{2}x^{2}y^{4}\nonumber \\
  & =(y^{2}-x^{2})(1-k^{2}x^{2}y^{2})\label{eq:elladd_proof_den}\end{align}
 
@@ -2768,9 +2768,9 @@ Nun dividiert man Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\frac{\frac{d}{du}\left(y\frac{dx}{du}-x\frac{dy}{du}\right)}{y^{2}\left(\frac{dx}{du}\right)^{2}-x^{2}\left(\frac{dy}{du}\right)^{2}} & =\frac{2k^{2}xy(x^{2}-y^{2})}{(y^{2}-x^{2})(1-k^{2}x^{2}y^{2})}\\
-\frac{\frac{d}{du}\left(y\frac{dx}{du}-x\frac{dy}{du}\right)}{y\frac{dx}{du}-x\frac{dy}{du}} & =\frac{2k^{2}xy(x^{2}-y^{2})(y\frac{dx}{du}+x\frac{dy}{du})}{(y^{2}-x^{2})(1-k^{2}x^{2}y^{2})}\\
-\frac{\frac{d}{du}\left(y\frac{dx}{du}-x\frac{dy}{du}\right)}{y\frac{dx}{du}-x\frac{dy}{du}} & =\frac{2k^{2}xy(y\frac{dx}{du}+x\frac{dy}{du})}{(k^{2}x^{2}y^{2}-1)}\end{align*}
+\frac{\tdiff{}{u}\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right)}{y^{2}\left(\tdiff{x}{u}\right)^{2}-x^{2}\left(\tdiff{y}{u}\right)^{2}} & =\frac{2k^{2}xy(x^{2}-y^{2})}{(y^{2}-x^{2})(1-k^{2}x^{2}y^{2})}\\
+\frac{\tdiff{}{u}\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right)}{y\tdiff{x}{u}-x\tdiff{y}{u}} & =\frac{2k^{2}xy(x^{2}-y^{2})(y\tdiff{x}{u}+x\tdiff{y}{u})}{(y^{2}-x^{2})(1-k^{2}x^{2}y^{2})}\\
+\frac{\tdiff{}{u}\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right)}{y\tdiff{x}{u}-x\tdiff{y}{u}} & =\frac{2k^{2}xy(y\tdiff{x}{u}+x\tdiff{y}{u})}{(k^{2}x^{2}y^{2}-1)}\end{align*}
 
 \end_inset 
 
@@ -2779,7 +2779,7 @@ Nun dividiert man Gleichung\SpecialChar ~
 
 Es ist zu erkennen, daß auf beiden Seiten Zähler und Nenner dem logarithmischen
  Differentiationssatz 
-\begin_inset Formula $\left[\ln f(u)\right]'=\frac{f'(u)}{f(u)}$
+\begin_inset Formula $\left[\ln f(u)\right]'=f'(u)/f(u)$
 \end_inset 
 
  entsprechen
@@ -2789,7 +2789,7 @@ collapsed true
 \layout Standard
 
 Für die rechte Seite gilt bei Anwendung der Produktregel 
-\begin_inset Formula $\frac{d}{du}(k^{2}x^{2}y^{2}-1)=k^{2}\left(2x\frac{dx}{du}y^{2}+2y\frac{dy}{du}x^{2}\right)=2k^{2}xy\left(y\frac{dx}{du}+x\frac{dy}{du}\right)$
+\begin_inset Formula $\tdiff{}{u}(k^{2}x^{2}y^{2}-1)=k^{2}\left(2x\tdiff{x}{u}y^{2}+2y\tdiff{y}{u}x^{2}\right)=2k^{2}xy\left(y\tdiff{x}{u}+x\tdiff{y}{u}\right)$
 \end_inset 
 
 
@@ -2800,7 +2800,7 @@ Für die rechte Seite gilt bei Anwendung der Produktregel
 
 
 \begin_inset Formula \[
-\frac{d}{du}\ln\left(y\frac{dx}{du}-x\frac{dy}{du}\right)=\frac{d}{du}\ln\left(k^{2}x^{2}y^{2}-1\right)\]
+\tdiff{}{u}\ln\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right)=\tdiff{}{u}\ln\left(k^{2}x^{2}y^{2}-1\right)\]
 
 \end_inset 
 
@@ -2822,9 +2822,9 @@ Integration nach
 
 
 \begin_inset Formula \begin{align}
-\ln\left(y\frac{dx}{du}-x\frac{dy}{du}\right) & =\ln\left(k^{2}x^{2}y^{2}-1\right)+B\nonumber \\
-y\frac{dx}{du}-x\frac{dy}{du} & =C\left(k^{2}x^{2}y^{2}-1\right)\nonumber \\
-y\frac{dx}{du}-x\frac{dy}{du} & =C\left(k^{2}x^{2}y^{2}-1\right)\nonumber \\
+\ln\left(y\tdiff{x}{u}-x\tdiff{y}{u}\right) & =\ln\left(k^{2}x^{2}y^{2}-1\right)+B\nonumber \\
+y\tdiff{x}{u}-x\tdiff{y}{u} & =C\left(k^{2}x^{2}y^{2}-1\right)\nonumber \\
+y\tdiff{x}{u}-x\tdiff{y}{u} & =C\left(k^{2}x^{2}y^{2}-1\right)\nonumber \\
 \frac{y\sqrt{(1-x^{2})(1-k^{2}x^{2})}-x\sqrt{(1-y^{2})(1-k^{2}y^{2})}}{k^{2}x^{2}y^{2}-1} & =C.\end{align}
 
 \end_inset 
@@ -3138,7 +3138,7 @@ welche sich durch Einsetzen der Definitionsgleichungen\SpecialChar ~
 
 Weitere bekannte Relationen für doppelte Argumente sind nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{16.18.5}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[16.18.5]{Abramowitz:1972}
 
 \end_inset 
 
@@ -3174,7 +3174,7 @@ Die Gleichungen für halbe Argumente sind aus dem Gleichungssystem für doppelte
 
  ersetzt und entsprechend umstellt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{III}, \S 3]{Tricomi:1948}
+\begin_inset LatexCommand \cite[III, \S 3]{Tricomi:1948}
 
 \end_inset 
 
@@ -3390,12 +3390,12 @@ eg
 
  in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[bibrefchap{XX}]{Whittaker:1927}
+\begin_inset LatexCommand \cite[XX]{Whittaker:1927}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{I}]{Tricomi:1948}
+\begin_inset LatexCommand \cite[I]{Tricomi:1948}
 
 \end_inset 
 
@@ -3407,11 +3407,11 @@ eg
 
  nachlesen.
  Insbesondere sind dort auch verallgemeinerte Aussagen zur Anzahl und Lage
- der Pol- und Nullstellen sowie der Residuen (
+ der Pol- und Nullstellen sowie den Residuen (Satz von 
 \noun on 
 Liouville
 \noun default 
-'s Theorem) enthalten.
+) enthalten.
 \end_inset 
 
 .
@@ -3633,13 +3633,13 @@ Zur Veranschaulichung dieser Erkenntnisse sind in den Abbildungen\SpecialChar ~
 
  die von Real- und Imaginärteil aufgespannten Flächen grafisch dargestellt
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
 Sehr schöne Darstellungen (inklusive der des elliptischen Kosinus') sind
  auch in 
-\begin_inset LatexCommand \cite[\bibrefchap{VI}, \bibreffig{49ff.}]{Jahnke:1952}
+\begin_inset LatexCommand \cite[VI, Abb.~49ff.]{Jahnke:1952}
 
 \end_inset 
 
@@ -4449,7 +4449,7 @@ In diesem Abschnitt sollen noch einige Formeln für den Übergang auf andere
 
 , eine vollständige Tabellierung für alle elliptischen Funktionen ist in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{16.8}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[16.8]{Abramowitz:1972}
 
 \end_inset 
 
@@ -5231,7 +5231,7 @@ collapsed false
 
 Perioden der elliptischen Basisfunktionen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\protect\bibrefsec{16.2}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[16.2]{Abramowitz:1972}
 
 \end_inset 
 
@@ -5541,7 +5541,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\frac{M\msp dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}}=\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}}\msp.\label{eq:elltr_deqn_yx}\end{equation}
+\boxed{\frac{M\tic y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}}=\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}}\msp.\label{eq:elltr_deqn_yx}\end{equation}
 
 \end_inset 
 
@@ -5659,7 +5659,7 @@ Solange man bei dieser differentiellen Darstellung bleibt, sind die Formeln\Spec
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\frac{M\msp d\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}}\msp,\label{eq:elltr_deqn}\end{equation}
+\boxed{\frac{M\tic\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}}\msp,\label{eq:elltr_deqn}\end{equation}
 
 \end_inset 
 
@@ -5790,7 +5790,7 @@ Für
 
 
 \begin_inset Formula \begin{align}
-\frac{M\msp dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}\nonumber \\
+\frac{M\tic y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}\nonumber \\
 y' & =\frac{1}{M}\sqrt{\frac{(1-y^{2})(1-\lambda^{2}y^{2})}{(1-x^{2})(1-k^{2}x^{2})}}\label{eq:elltr_deqn_y}\\
 M^{2}y'^{2}(1-x^{2})(1-k^{2}x^{2})-(1-y^{2})(1-\lambda^{2}y^{2}) & =0\msp.\nonumber \end{align}
 
@@ -5818,9 +5818,9 @@ Das Finden der Integralkurve
 
 
 \begin_inset Formula \begin{align*}
-\frac{M\msp dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}},\qquad y=\efunc{f}{x}{k}\\
-\frac{L\msp dz}{\sqrt{(1-z^{2})(1-\gamma^{2}z^{2})}} & =\frac{dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}},\qquad z=\efunc{g}{y}{\lambda}\\
-\frac{ML\msp dz}{\sqrt{(1-z^{2})(1-\gamma^{2}z^{2})}} & =\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}},\qquad z=\efunc{g}{\efunc{f}{x}{k}}{\lambda}\end{align*}
+\frac{M\tic y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}},\qquad y=\efunc{f}{x}{k}\\
+\frac{L\tic z}{\sqrt{(1-z^{2})(1-\gamma^{2}z^{2})}} & =\frac{\tdc y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}},\qquad z=\efunc{g}{y}{\lambda}\\
+\frac{ML\tic z}{\sqrt{(1-z^{2})(1-\gamma^{2}z^{2})}} & =\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}},\qquad z=\efunc{g}{\efunc{f}{x}{k}}{\lambda}\end{align*}
 
 \end_inset 
 
@@ -5904,8 +5904,8 @@ Rücktransformation
 
 
 \begin_inset Formula \begin{align*}
-\frac{M\msp dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}\\
-\frac{dx_{1}}{\sqrt{(1-x_{1}^{2})(1-k_{1}^{2}x_{1}^{2})}} & =\frac{M^{-1}\msp dy_{1}}{\sqrt{(1-y_{1}^{2})(1-\lambda_{1}^{2}y_{1}^{2})}}\end{align*}
+\frac{M\tic y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}\\
+\frac{\tdc x_{1}}{\sqrt{(1-x_{1}^{2})(1-k_{1}^{2}x_{1}^{2})}} & =\frac{M^{-1}\tic y_{1}}{\sqrt{(1-y_{1}^{2})(1-\lambda_{1}^{2}y_{1}^{2})}}\end{align*}
 
 \end_inset 
 
@@ -6115,7 +6115,7 @@ resp
 
 \begin_inset Formula \begin{align*}
 \sqrt{(1-y^{2})(1-\lambda^{2}y^{2})} & =\frac{\sqrt{(U^{2}-V^{2})(U^{2}-\lambda^{2}V^{2})}}{V^{2}}\\
-y' & =\frac{dy}{dx}=\frac{U'V-UV'}{V^{2}}\end{align*}
+y' & =\tdiff{y}{x}=\frac{U'V-UV'}{V^{2}}\end{align*}
 
 \end_inset 
 
@@ -6135,7 +6135,7 @@ Dividiert man die Ableitung
 
 
 \begin_inset Formula \begin{align}
-\frac{dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{U'V-UV'}{\sqrt{(U^{2}-V^{2})(U^{2}-\lambda^{2}V^{2})}}\msp dx\label{eq:elltr_general_rfunc_base}\end{align}
+\frac{\tdc y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{U'V-UV'}{\sqrt{(U^{2}-V^{2})(U^{2}-\lambda^{2}V^{2})}}\tic x\label{eq:elltr_general_rfunc_base}\end{align}
 
 \end_inset 
 
@@ -6250,9 +6250,9 @@ und vergleicht einfach den Grad von links- und rechtsseitigem Polynom (mit
 
 \begin_inset Formula \begin{align}
 2(n+n'-1)+4 & =4\max(n,n')\nonumber \\
-n+n'+1 & =\left\{ \begin{array}{ll}
-2n & \qquad n\geq n'\\
-2n' & \qquad n'>n\end{array}\right.\label{eq:elltr_general_rfunc_ord}\\
+n+n'+1 & =\begin{cases}
+2n & n\geq n'\\
+2n' & n'>n\end{cases}\label{eq:elltr_general_rfunc_ord}\\
 \left|n-n'\right| & =1\nonumber \end{align}
 
 \end_inset 
@@ -6500,8 +6500,8 @@ Kehrt man mit diesen Formeln zurück zur Ausgangsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\frac{dy}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{C\cdot T(x)\msp dx}{\sqrt{(d_{4}x^{4}+d_{3}x^{3}+d_{2}x^{2}+d_{1}x+d_{0})T^{2}(x)}}\\
- & =\frac{C\msp dx}{\sqrt{d_{4}x^{4}+d_{3}x^{3}+d_{2}x^{2}+d_{1}x+d_{0}}}\end{align*}
+\frac{\tdc y}{\sqrt{(1-y^{2})(1-\lambda^{2}y^{2})}} & =\frac{C\cdot T(x)\tic x}{\sqrt{(d_{4}x^{4}+d_{3}x^{3}+d_{2}x^{2}+d_{1}x+d_{0})T^{2}(x)}}\\
+ & =\frac{C\tic x}{\sqrt{d_{4}x^{4}+d_{3}x^{3}+d_{2}x^{2}+d_{1}x+d_{0}}}\end{align*}
 
 \end_inset 
 
@@ -6542,19 +6542,14 @@ Legendre
  entspricht.
 \end_inset 
 
- (
-\begin_inset ERT
-status Collapsed
+ (siehe\SpecialChar ~
 
-\layout Standard
+\begin_inset LatexCommand \cite[II, \S 3]{Tricomi:1948}
 
-\backslash 
-cf
 \end_inset 
 
-\SpecialChar ~
-
-\begin_inset LatexCommand \cite[\bibrefchap{II}, \S 3]{Tricomi:1948}
+, 
+\begin_inset LatexCommand \cite[\S$20 \sdot 54$, \S$20 \sdot 6$]{Whittaker:1927}
 
 \end_inset 
 
@@ -6639,7 +6634,7 @@ Offen bleibt natürlich noch die Bestimmung des Multiplikators
 
 
 \begin_inset Formula \[
-\frac{M\msp d\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}=du\]
+\frac{M\tic\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}}=\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}=\tdc u\]
 
 \end_inset 
 
@@ -6672,7 +6667,7 @@ Integriert man nun beide Seiten und nimmt die Definitionsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-u & =\int\limits _{0}^{\varphi}\frac{d\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}=\eF{\varphi}{k}\label{eq:elltr_general_x}\\
+u & =\int\limits _{0}^{\varphi}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}=\eF{\varphi}{k}\label{eq:elltr_general_x}\\
 \varphi & =\eam{u}{k}\nonumber \\
 x & =\sin\varphi=\esn{u}{k}\msp.\nonumber \end{align}
 
@@ -6708,7 +6703,7 @@ Für
 
 
 \begin_inset Formula \begin{align}
-u & =M\int\limits _{0}^{\theta}\frac{d\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}-C=M\eF{\theta}{\lambda}-C\label{eq:elltr_general_y}\\
+u & =M\int\limits _{0}^{\theta}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}-C=M\eF{\theta}{\lambda}-C\label{eq:elltr_general_y}\\
 \theta & =\eam{\frac{u-C}{M}}{\lambda}\nonumber \\
 y & =\sin\theta=\esn{\frac{u+C}{M}}{\lambda}\msp,\nonumber \end{align}
 
@@ -6833,7 +6828,7 @@ collapsed false
 \end_inset 
 
 Elliptischer Sinus 
-\begin_inset Formula $\jsn\left[\epar{\re(u)+\ji\im(u)}{k}\right]$
+\begin_inset Formula $\jsn\left[\epar{\reop(u)+\ji\imop(u)}{k}\right]$
 \end_inset 
 
  mit Höhenlinien
@@ -7026,10 +7021,9 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \[
-\begin{array}{rclcrcl}
-2\omega & = & 4K & \qquad & 2\omega' & = & \ji2K'\\
-2\Omega & = & 4M\Lambda & \qquad & 2\Omega' & = & \ji2M\Lambda'\end{array}\msp.\]
+\begin_inset Formula \begin{alignat*}{2}
+2\omega & =4K & \qquad2\omega' & =\ji2K'\\
+2\Omega & =4M\Lambda & \qquad2\Omega' & =\ji2M\Lambda'\msp.\end{alignat*}
 
 \end_inset 
 
@@ -7320,7 +7314,7 @@ Der Spezialfall
 \end_inset 
 
  wird dabei als die 1.\SpecialChar ~
-elliptische Haupt-Transformation (
+elliptische Haupttransformation (
 \begin_inset Formula $n$
 \end_inset 
 
@@ -7333,7 +7327,7 @@ elliptische Haupt-Transformation (
 \end_inset 
 
  als 2.\SpecialChar ~
-elliptische Haupt-Transformation (
+elliptische Haupttransformation (
 \begin_inset Formula $n$
 \end_inset 
 
@@ -7385,16 +7379,17 @@ resp
 Reziproke Argumente
 \layout Standard
 
-Zuerst sei auf folgende bemerkenswerte Eigenschaft von 
+Im Zusammenhang mit reziproken Argumenten sei auf folgende bemerkenswerte
+ Eigenschaft von 
 \begin_inset Formula $\efunc{f}{x}{k}$
 \end_inset 
 
- hingewiesen.
+ hingewiesen:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\efunc{f}{\frac{1}{kx}}{k}=\frac{1}{\lambda\efunc{f}{x}{k}}\label{eq:elltr_reciprocal}\end{equation}
+\efunc{f}{\frac{1}{kx}}{k}=\frac{1}{\lambda\efunc{f}{x}{k}}\msp.\label{eq:elltr_reciprocal}\end{equation}
 
 \end_inset 
 
@@ -7402,7 +7397,7 @@ Zuerst sei auf folgende bemerkenswerte Eigenschaft von
 \layout Proof
 
 Ersetzt man im Ausdruck 
-\begin_inset Formula $dx/\sqrt{\smash[b]{(1-x^{2})(1-k^{2}x^{2})}}$
+\begin_inset Formula $\tdc x/\sqrt{\smash[b]{(1-x^{2})(1-k^{2}x^{2})}}$
 \end_inset 
 
  der Gleichung\SpecialChar ~
@@ -7424,7 +7419,7 @@ Ersetzt man im Ausdruck
 
 
 \begin_inset Formula \[
-x=\frac{1}{kx_{1}},\qquad dx=-\frac{dx_{1}}{kx_{1}^{2}},\]
+x=\frac{1}{kx_{1}},\qquad\tdc x=-\frac{\tdc x_{1}}{kx_{1}^{2}},\]
 
 \end_inset 
 
@@ -7433,26 +7428,26 @@ dann ändert sich nur das Vorzeichen der rechten Seite.
 
 
 \begin_inset Formula \begin{align*}
-\frac{dx}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}} & =-\frac{k\msp dx_{1}}{k^{2}x_{1}^{2}\sqrt{(1-k^{-2}x_{1}^{-2})(1-k^{2}k^{-2}x_{1}^{-2})}}\\
- & =-\frac{k\msp dx_{1}}{\sqrt{(k^{2}x_{1}^{2}-1)(k^{2}x_{1}^{2}-k^{2})}}\\
- & =-\frac{dx_{1}}{\sqrt{(1-x_{1}^{2})(1-k^{2}x_{1}^{2})}}\end{align*}
+\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}} & =-\frac{k\tic x_{1}}{k^{2}x_{1}^{2}\sqrt{(1-k^{-2}x_{1}^{-2})(1-k^{2}k^{-2}x_{1}^{-2})}}\\
+ & =-\frac{k\tic x_{1}}{\sqrt{(k^{2}x_{1}^{2}-1)(k^{2}x_{1}^{2}-k^{2})}}\\
+ & =-\frac{\tdc x_{1}}{\sqrt{(1-x_{1}^{2})(1-k^{2}x_{1}^{2})}}\end{align*}
 
 \end_inset 
 
 
 \layout Proof
 
-Ersetzt man nach der gleichen Methode nun auch 
+Substituiert man nach der gleichen Methode nun auch 
 \begin_inset Formula $y$
 \end_inset 
 
  durch 
-\begin_inset Formula $1/\lambda y$
+\begin_inset Formula $1/\lambda y_{1}$
 \end_inset 
 
-, dann tritt auf der linken Seite ebenfalls eine Vorzeichen\SpecialChar \-
-umkehr auf und
- die Differentialgleichung\SpecialChar ~
+, dann tritt auf der linken Seite ebenfalls (nur) eine Vorzeichen\SpecialChar \-
+umkehr
+ auf und die Differentialgleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:elltr_deqn_yx}
 
@@ -7460,7 +7455,7 @@ umkehr auf und
 
  ändert sich überhaupt nicht
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -7472,11 +7467,45 @@ Diese Methode kann sehr günstig zur Bestimmung von
 \end_inset 
 
 .
- Folglich muß die Transformationsfunktion 
+ Folglich sind 
+\begin_inset Formula $x_{1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $y_{1}$
+\end_inset 
+
+ ebenfalls durch 
+\begin_inset Formula $y_{1}=\efunc{f}{x_{1}}{k}$
+\end_inset 
+
+ verbunden und es gilt:
+\layout Proof
+
+
+\begin_inset Formula \[
+y=\efunc{f}{\frac{1}{kx_{1}}}{k}=\frac{1}{\lambda y_{1}}=\frac{1}{\lambda\efunc{f}{x_{1}}{k}}\msp,\]
+
+\end_inset 
+
+
+\layout Proof
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Transformationsfunktion 
 \begin_inset Formula $f$
 \end_inset 
 
- die Eigenschaft laut Gleichung\SpecialChar ~
+ muß die Eigenschaft laut Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:elltr_reciprocal}
 
@@ -7517,7 +7546,7 @@ Weitere Eigenschaften der Lösungsfunktion ergeben sich aus den Betrachtungen
 \begin_inset Formula $u$
 \end_inset 
 
- insbesondere für die elliptischen Haupt-Transformationen (
+ insbesondere für die elliptischen Haupttransformationen (
 \begin_inset Formula $\gamma=n$
 \end_inset 
 
@@ -7676,7 +7705,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $\re(u)$
+\begin_inset Formula $\reop(u)$
 \end_inset 
 
 
@@ -7690,7 +7719,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $\im(u)$
+\begin_inset Formula $\imop(u)$
 \end_inset 
 
 
@@ -7744,7 +7773,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $0\leq\re(u)\leq K$
+\begin_inset Formula $0\leq\reop(u)\leq K$
 \end_inset 
 
 
@@ -7822,7 +7851,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $0\leq\im(u)\leq K'$
+\begin_inset Formula $0\leq\imop(u)\leq K'$
 \end_inset 
 
 
@@ -7836,7 +7865,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $\jnd\left[\epar{\im(u)}{k'}\right]$
+\begin_inset Formula $\jnd\left[\epar{\imop(u)}{k'}\right]$
 \end_inset 
 
 
@@ -7851,8 +7880,8 @@ Weg
 \size small 
 
 \begin_inset Formula $\begin{array}{rl}
-\incircle{a} & \ji\jsc\left[\epar{\im(u)/M}{\lambda'}\right]\\
-\incircle{b} & \jnd\left[\epar{\im(u)/M}{\lambda'}\right]\end{array}$
+\incircle{a} & \ji\jsc\left[\epar{\imop(u)/M}{\lambda'}\right]\\
+\incircle{b} & \jnd\left[\epar{\imop(u)/M}{\lambda'}\right]\end{array}$
 \end_inset 
 
 
@@ -7878,7 +7907,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $K\leq\re(u)\leq2K$
+\begin_inset Formula $K\leq\reop(u)\leq2K$
 \end_inset 
 
 
@@ -7906,7 +7935,7 @@ Weg
 
 \size small 
 
-\begin_inset Formula $k^{-1}\jns\left[\epar{\re(u)}{k}\right]$
+\begin_inset Formula $k^{-1}\jns\left[\epar{\reop(u)}{k}\right]$
 \end_inset 
 
 
@@ -7922,7 +7951,7 @@ Weg
 
 \begin_inset Formula $\begin{array}{rl}
 \incircle{a} & \esn{u/M}{\lambda}\\
-\incircle{b} & \lambda^{-1}\jns\left[\epar{\re(u)/M}{\lambda}\right]\end{array}$
+\incircle{b} & \lambda^{-1}\jns\left[\epar{\reop(u)/M}{\lambda}\right]\end{array}$
 \end_inset 
 
 
@@ -8021,10 +8050,10 @@ incircle{b}
 
 \begin_inset Formula \begin{align}
 y & =\efunc{f}{0}{k}=0\nonumber \\
-y & =\efunc{f}{1}{k}=\left\{ \begin{array}{cll}
-0 & \left|\gamma\right|=0,2,4,\ldots & \qquad\incircle{a}\\
-+1 & \left|\gamma\right|=1,5,9,\ldots & \qquad\incircle{b}\\
--1 & \left|\gamma\right|=3,7,11,\ldots & \qquad\incircle{b}\end{array}\right..\label{eq:elltr_general_special_c0}\end{align}
+y & =\efunc{f}{1}{k}=\begin{cases}
+0, & \left|\gamma\right|=0,2,4,\ldots\qquad\incircle{a}\\
++1, & \left|\gamma\right|=1,5,9,\ldots\qquad\incircle{b}\\
+-1, & \left|\gamma\right|=3,7,11,\ldots\qquad\incircle{b}\end{cases}\msp.\label{eq:elltr_general_special_c0}\end{align}
 
 \end_inset 
 
@@ -8160,7 +8189,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $\re(u)$
+\begin_inset Formula $\reop(u)$
 \end_inset 
 
 
@@ -8174,7 +8203,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $\im(u)$
+\begin_inset Formula $\imop(u)$
 \end_inset 
 
 
@@ -8218,7 +8247,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $0\leq\re(u)\leq K$
+\begin_inset Formula $0\leq\reop(u)\leq K$
 \end_inset 
 
 
@@ -8286,7 +8315,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $0\leq\im(u)\leq K'$
+\begin_inset Formula $0\leq\imop(u)\leq K'$
 \end_inset 
 
 
@@ -8300,7 +8329,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $\ejnd{\im(u)}{k'}$
+\begin_inset Formula $\ejnd{\imop(u)}{k'}$
 \end_inset 
 
 
@@ -8315,8 +8344,8 @@ Funktionswerte
 \size small 
 
 \begin_inset Formula $\begin{array}{rl}
-\incircle{a} & \ejnd{\im(u)/M}{\lambda'}\\
-\incircle{b} & \ji\esc{\im(u)/M}{\lambda'}\end{array}$
+\incircle{a} & \ejnd{\imop(u)/M}{\lambda'}\\
+\incircle{b} & \ji\esc{\imop(u)/M}{\lambda'}\end{array}$
 \end_inset 
 
 
@@ -8332,7 +8361,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $K\leq\re(u)\leq2K$
+\begin_inset Formula $K\leq\reop(u)\leq2K$
 \end_inset 
 
 
@@ -8360,7 +8389,7 @@ Funktionswerte
 
 \size small 
 
-\begin_inset Formula $k^{-1}\ens{\re(u)}{k}$
+\begin_inset Formula $k^{-1}\ens{\reop(u)}{k}$
 \end_inset 
 
 
@@ -8376,7 +8405,7 @@ Funktionswerte
 
 \begin_inset Formula $\begin{array}{rl}
 \incircle{a} & \ecd{u/M}{\lambda}\\
-\incircle{b} & \lambda^{-1}\edc{\re(u)/M}{\lambda}\end{array}$
+\incircle{b} & \lambda^{-1}\edc{\reop(u)/M}{\lambda}\end{array}$
 \end_inset 
 
 
@@ -8399,10 +8428,10 @@ Als spezielle Funktionswerte ergeben sich hier:
 
 \begin_inset Formula \begin{align}
 y & =\efunc{f}{0}{k}=1\nonumber \\
-y & =\efunc{f}{1}{k}=\left\{ \begin{array}{cll}
-0 & \left|\gamma\right|=1,3,5,\ldots & \qquad\incircle{b}\\
-+1 & \left|\gamma\right|=0,4,8,\ldots & \qquad\incircle{a}\\
--1 & \left|\gamma\right|=2,6,10,\ldots & \qquad\incircle{a}\end{array}\right.\msp.\label{eq:elltr_general_special_cml}\end{align}
+y & =\efunc{f}{1}{k}=\begin{cases}
+0, & \left|\gamma\right|=1,3,5,\ldots\qquad\incircle{b}\\
++1, & \left|\gamma\right|=0,4,8,\ldots\qquad\incircle{a}\\
+-1, & \left|\gamma\right|=2,6,10,\ldots\qquad\incircle{a}\end{cases}\msp.\label{eq:elltr_general_special_cml}\end{align}
 
 \end_inset 
 
@@ -8429,9 +8458,9 @@ Mit den soeben gewonnen Erkenntnissen kann man die rationale Lösung nach
 
 
 \begin_inset Formula \begin{equation}
-y=\left\{ \begin{array}{ll}
-\mbig{x\frac{u(x^{2})}{v(x^{2})}}, & C=0,\gamma\text{{ ungerade}}\\
-\mbig{\frac{u(x^{2})}{v(x^{2})}}, & C=M\Lambda,\gamma\text{{ gerade}}\end{array}\right.\label{eq:elltr_general_rational_sqx}\end{equation}
+y=\begin{cases}
+x\frac{u(x^{2})}{v(x^{2})}, & C=0\;(\gamma\textrm{ ungerade})\\
+\frac{u(x^{2})}{v(x^{2})}, & C=M\Lambda\;(\gamma\textrm{ gerade})\end{cases}\label{eq:elltr_general_rational_sqx}\end{equation}
 
 \end_inset 
 
@@ -8714,7 +8743,7 @@ Transformationen erster Ordnung
 Eine tabellarische Übersicht der Transformationen erster Ordnung sowie der
  geeigneten Substitutionen ist unter anderem in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{lV}, \S 2]{Tricomi:1948}
+\begin_inset LatexCommand \cite[lV, \S 2]{Tricomi:1948}
 
 \end_inset 
 
@@ -8730,7 +8759,7 @@ Imaginäre Transformation
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Transfomation!imaginäre}
+\begin_inset LatexCommand \index{Transformation!imaginäre}
 
 \end_inset 
 
@@ -8797,7 +8826,7 @@ chung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}=\ji\frac{d\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:elltr_imag_deqn}\end{equation}
+\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}=\ji\frac{\tdc\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:elltr_imag_deqn}\end{equation}
 
 \end_inset 
 
@@ -8957,7 +8986,7 @@ Ausgehend vom Argument des Integrals
 
 
 \begin_inset Formula \[
-\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\]
+\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\]
 
 \end_inset 
 
@@ -8974,7 +9003,7 @@ nimmt man die Substitution
 
  verkörpert, vor.
  Mit der Ableitung 
-\begin_inset Formula $d\theta/d\varphi=k\cos\varphi/\cos\theta$
+\begin_inset Formula $\tdc\theta/\tdc\varphi=k\cos\varphi/\cos\theta$
 \end_inset 
 
  erhält man wieder die typische Differentialgleichung
@@ -8982,9 +9011,9 @@ nimmt man die Substitution
 
 
 \begin_inset Formula \begin{align}
-\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}} & =\frac{1}{k}\frac{\cos\theta\msp d\theta}{\cos\varphi\sqrt{1-\sin^{2}\theta}}\nonumber \\
+\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}} & =\frac{1}{k}\frac{\cos\theta\tic\theta}{\cos\varphi\sqrt{1-\sin^{2}\theta}}\nonumber \\
  & =\frac{1}{k}\frac{d\theta}{\cos\varphi}\nonumber \\
- & =\frac{1}{k}\frac{d\theta}{\sqrt{1-k^{-2}\sin^{2}\theta}}\label{eq:elltr_real_deqn}\end{align}
+ & =\frac{1}{k}\frac{\tdc\theta}{\sqrt{1-k^{-2}\sin^{2}\theta}}\label{eq:elltr_real_deqn}\end{align}
 
 \end_inset 
 
@@ -9141,12 +9170,12 @@ Landen
  ist wahrscheinlich der bekannteste Vertreter aller quadratischen Transformation
 en\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{17.5}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[17.5]{Abramowitz:1972}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S$22 \cdot 42$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S$22 \sdot 42$]{Whittaker:1927}
 
 \end_inset 
 
@@ -9161,7 +9190,7 @@ en\SpecialChar ~
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{IV}, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
 
 \end_inset 
 
@@ -9246,7 +9275,7 @@ cf
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{IV}, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
 
 \end_inset 
 
@@ -9263,7 +9292,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\esn{\frac{u}{M}}{\lambda}=\frac{(1+k')\msp\esn{u}{k}\cdot\ecn{u}{k}}{\edn{u}{k}}}\label{eq:elltr_landen_sn}\end{equation}
+\boxed{\esn{\frac{u}{M}}{\lambda}=\frac{(1+k')\,\esn{u}{k}\,\ecn{u}{k}}{\edn{u}{k}}}\label{eq:elltr_landen_sn}\end{equation}
 
 \end_inset 
 
@@ -9443,7 +9472,7 @@ l'Hospital
 \begin_inset Formula \begin{align*}
 A & =\lim_{u\rightarrow0}\frac{\esn{u/M}{\lambda}}{\esn{u}{k}}\\
  & =\lim_{u\rightarrow0}\frac{\esn[\prime]{u/M}{\lambda}}{\esn[\prime]{u}{k}}\\
- & =\frac{1}{M}\lim_{u\rightarrow0}\frac{\ecn{u/M}{\lambda}\cdot\edn{u/M}{\lambda}}{\ecn{u}{k}\cdot\edn{u}{k}}\\
+ & =\frac{1}{M}\lim_{u\rightarrow0}\frac{\ecn{u/M}{\lambda}\,\edn{u/M}{\lambda}}{\ecn{u}{k}\,\edn{u}{k}}\\
  & =\frac{1}{M}\end{align*}
 
 \end_inset 
@@ -9511,7 +9540,7 @@ Eine weitere interessante Darstellung der Transformationsbeziehung ist möglich,
 
 
 \begin_inset Formula \[
-\esn{\frac{u}{M}}{\lambda}=(1+k')\esn{u}{k}\cdot\esn{u+K}{k}\]
+\esn{\frac{u}{M}}{\lambda}=(1+k')\esn{u}{k}\,\esn{u+K}{k}\]
 
 \end_inset 
 
@@ -9534,7 +9563,7 @@ Landen
 
 
 \begin_inset Formula \[
-\esn{\frac{u}{M}-\Lambda}{\lambda}\cdot\esn{\frac{u}{M}+\Lambda}{\lambda}=-\left[(1+k')\esn{u+\frac{K}{2}}{k}\cdot\esn{u-\frac{K}{2}}{k}\right]^{2}\]
+\esn{\frac{u}{M}-\Lambda}{\lambda}\,\esn{\frac{u}{M}+\Lambda}{\lambda}=-\left[(1+k')\esn{u+\frac{K}{2}}{k}\,\esn{u-\frac{K}{2}}{k}\right]^{2}\]
 
 \end_inset 
 
@@ -10004,7 +10033,7 @@ Landen
 
 \begin_inset Formula \begin{align*}
 \ecn[2]{\frac{u}{M}}{\lambda} & =1-\esn[2]{\frac{u}{M}}{\lambda}\\
- & =\frac{\edn[2]{u}{k}-(1+k')^{2}\esn[2]{u}{k}\cdot\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
+ & =\frac{\edn[2]{u}{k}-(1+k')^{2}\esn[2]{u}{k}\,\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
  & =\frac{1-(1+k')(1-k')\esn[2]{u}{k}-(1+k')^{2}\esn[2]{u}{k}+(1+k')^{2}\esn[4]{u}{k}}{\edn[2]{u}{k}}\\
  & =\frac{1-2(1+k')\esn[2]{u}{k}+(1+k')^{2}\esn[4]{u}{k}}{\edn[2]{u}{k}}\\
  & =\frac{\left[1-(1+k')\esn{u}{k}\right]^{2}}{\edn[2]{u}{k}}\end{align*}
@@ -10052,8 +10081,8 @@ Die Beziehung für
 
 \begin_inset Formula \begin{align*}
 \edn[2]{\frac{u}{M}}{\lambda} & =1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}\\
- & =1-\lambda^{2}(1+k')^{2}\frac{\esn[2]{u}{k}\cdot\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
- & =\frac{\edn[2]{u}{k}-(1-k')^{2}\esn[2]{u}{k}\cdot\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
+ & =1-\lambda^{2}(1+k')^{2}\frac{\esn[2]{u}{k}\,\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
+ & =\frac{\edn[2]{u}{k}-(1-k')^{2}\esn[2]{u}{k}\,\ecn[2]{u}{k}}{\edn[2]{u}{k}}\\
  & =\frac{1-k^{2}\esn[2]{u}{k}-(1-k')^{2}\esn[2]{u}{k}\left[1-\esn[2]{u}{k}\right]}{\edn[2]{u}{k}}\end{align*}
 
 \end_inset 
@@ -10141,7 +10170,7 @@ Landen
 
 
 \begin_inset Formula \begin{equation}
-\sin\theta=\frac{(1+k')\sin\varphi\cos\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\label{eq:elltr_landen_sin}\end{equation}
+\boxed{\sin\theta=\frac{(1+k')\sin\varphi\,\cos\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}}\label{eq:elltr_landen_sin}\end{equation}
 
 \end_inset 
 
@@ -10150,7 +10179,7 @@ Landen
 
 gekennzeichnet.
  Mit der Beziehung für doppelte Winkel 
-\begin_inset Formula $\sin2\varphi=\frac{1}{2}\sin\varphi\cos\varphi$
+\begin_inset Formula $\sin2\varphi=\frac{1}{2}\sin\varphi\,\cos\varphi$
 \end_inset 
 
  ist äquivalent dazu
@@ -10223,7 +10252,7 @@ Insbesondere für numerische Berechnungen hat der trigonometrische Tangens
 
 
 \begin_inset Formula \begin{equation}
-\tan\theta=\frac{\sin\theta}{\cos\theta}=\frac{(1+k')\sin\varphi\cos\varphi}{\cos^{2}\varphi-k'\sin^{2}\varphi}=\frac{(1+k')\tan\varphi}{1-k'\tan^{2}\varphi}\label{eq:elltr_landen_tg}\end{equation}
+\tan\theta=\frac{\sin\theta}{\cos\theta}=\frac{(1+k')\sin\varphi\,\cos\varphi}{\cos^{2}\varphi-k'\sin^{2}\varphi}=\frac{(1+k')\tan\varphi}{1-k'\tan^{2}\varphi}\label{eq:elltr_landen_tg}\end{equation}
 
 \end_inset 
 
@@ -10236,7 +10265,7 @@ Eine weitere oft verwendete Darstellungsvariante auf der Grundlage des Tangens
 
 
 \begin_inset Formula \begin{equation}
-\tan(\theta-\varphi)=k'\tan\varphi.\label{eq:elltr_landen_tgdiff}\end{equation}
+\boxed{\tan(\theta-\varphi)=k'\tan\varphi}\msp.\label{eq:elltr_landen_tgdiff}\end{equation}
 
 \end_inset 
 
@@ -10318,7 +10347,7 @@ Sie kann aus Gleichung\SpecialChar ~
 
 \begin_inset Formula \begin{align*}
 \frac{\sin(\theta-\varphi)}{\cos(\theta-\varphi)} & =k'\frac{\sin\varphi}{\cos\varphi}\\
-\sin(\theta-\varphi)\cos\varphi & =k'\cos(\theta-\varphi)\sin\varphi\\
+\sin(\theta-\varphi)\,\cos\varphi & =k'\cos(\theta-\varphi)\,\sin\varphi\\
 \sin\theta-\sin(2\varphi-\theta) & =k'\sin\theta+k'\sin(2\varphi-\theta)\\
 (1+k')\sin(2\varphi-\theta) & =(1-k')\sin\theta\\
 \sin(2\varphi-\theta) & =\frac{1-k'}{1+k'}\sin\theta\end{align*}
@@ -10832,7 +10861,7 @@ g
 
 \end_inset 
 
-Erste elliptische Haupt-Transformation, 
+Erste elliptische Haupttransformation, 
 \shape italic 
 n
 \shape default 
@@ -10843,13 +10872,13 @@ Periodenbeziehungen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupt-Transformation!erste elliptische!$n$ ungerade}
+\begin_inset LatexCommand \index{Haupttransformation!erste elliptische!$n$ ungerade}
 
 \end_inset 
 
 Charakteristisch für die 1.\SpecialChar ~
-elliptische Haupt-Transformation ist, daß die
- reelle Periode 
+elliptische Haupttransformation ist, daß die reelle
+ Periode 
 \begin_inset Formula $2\Omega=4M\Lambda$
 \end_inset 
 
@@ -11141,7 +11170,7 @@ Nach Tabelle\SpecialChar ~
 \end_inset 
 
  gilt auf diesem Teilstück 
-\begin_inset Formula $y=\ejnd{\im(u)/M}{\lambda'}$
+\begin_inset Formula $y=\ejnd{\imop(u)/M}{\lambda'}$
 \end_inset 
 
 .
@@ -11236,7 +11265,7 @@ collapsed false
 \align center 
 
 \begin_inset Graphics
-	filename /home/ralf/prj/work/adspbook/ellt1gt_odd.eps
+	filename ellt1gt_odd.eps
 	display color
 
 \end_inset 
@@ -11249,7 +11278,7 @@ collapsed false
 
 \end_inset 
 
-Erste elliptische Haupt-Transformation für 
+Erste elliptische Haupttransformation für 
 \begin_inset Formula $n=7$
 \end_inset 
 
@@ -11489,9 +11518,8 @@ cf
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-y & =\frac{x}{M}\cdot\frac{\left(1-\frac{x^{2}}{a_{2}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{4}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{6}^{2}}\right)\cdots}{(1-k^{2}a_{2}^{2}x^{2})\cdot(1-k^{2}a_{4}^{2}x^{2})\cdot(1-k^{2}a_{6}^{2}x^{2})\cdots}\nonumber \\
-y & =\frac{x}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}\label{eq:elltr1_odd_poly}\end{align}
+\begin_inset Formula \begin{equation}
+y=\frac{x}{M}\cdot\frac{\left(1-\frac{x^{2}}{a_{2}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{4}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{6}^{2}}\right)\cdots}{(1-k^{2}a_{2}^{2}x^{2})\cdot(1-k^{2}a_{4}^{2}x^{2})\cdot(1-k^{2}a_{6}^{2}x^{2})\cdots}=\frac{x}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}\label{eq:elltr1_odd_poly}\end{equation}
 
 \end_inset 
 
@@ -11817,12 +11845,12 @@ Die lokalen Extremwerte, deutlich sichtbar auch in Abbildung\SpecialChar ~
 
 
 \begin_inset Formula \begin{alignat*}{2}
-x_{E} & =\esn{u_{E}}{k} &  & =\left\{ \begin{array}{ll}
-\mbig{\pm\esn{\nu\frac{K}{n}}{k}}, & \qquad\nu=1,3,5,\ldots n-2\\
-\mbig{\pm\frac{1}{k}\ens{\nu\frac{K}{n}}{k}}\end{array}\right.\\
-y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\left\{ \begin{array}{l}
+x_{E} & =\esn{u_{E}}{k} &  & =\begin{cases}
+\pm\esn{\nu\frac{K}{n}}{k}\\
+\pm\frac{1}{k}\ens{\nu\frac{K}{n}}{k}\end{cases},\qquad\nu=1,3,5,\ldots n-2\\
+y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\begin{cases}
 \pm1\\
-\mbig{\pm\frac{1}{\lambda}}\end{array}\right.\msp.\end{alignat*}
+\pm\frac{1}{\lambda}\end{cases}\msp.\end{alignat*}
 
 \end_inset 
 
@@ -11852,7 +11880,7 @@ Die Bestimmung der Extremwerte kann (wie üblich) mit Hilfe der ersten Ableitung
 \end_inset 
 
  sofort zur Bestimmung der Nullstellen von 
-\begin_inset Formula $dy/dx$
+\begin_inset Formula $\tdc y/\tdc x$
 \end_inset 
 
  übergehen.
@@ -11860,7 +11888,7 @@ Die Bestimmung der Extremwerte kann (wie üblich) mit Hilfe der ersten Ableitung
 
 
 \begin_inset Formula \[
-\frac{dy}{dx}=\frac{1}{M}\cdot\frac{\ecn{\frac{u}{M}}{\lambda}\edn{\frac{u}{M}}{\lambda}}{\ecn{u}{k}\edn{u}{k}}=0\msp.\]
+\tdiff{y}{x}=\frac{1}{M}\cdot\frac{\ecn{\frac{u}{M}}{\lambda}\,\edn{\frac{u}{M}}{\lambda}}{\ecn{u}{k}\,\edn{u}{k}}=0\msp.\]
 
 \end_inset 
 
@@ -11910,12 +11938,12 @@ Berücksichtigt man die Ausprägungen des elliptischen Sinus' für spezielle
 
 
 \begin_inset Formula \begin{alignat*}{2}
-x_{E} & =\esn{u_{E}}{k} &  & =\left\{ \begin{array}{ll}
-\mbig{\pm\esn{\nu\frac{K}{n}}{k}}, & \nu=1,3,5,\ldots n-2\quad(\zeta\text{{ gerade}})\\
-\mbig{\pm\frac{1}{k}\ens{\mu\frac{K}{n}}{k}} & \mu=1,3,5,\ldots n-2\quad(\zeta\text{{ ungerade}})\end{array}\right.\\
-y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\left\{ \begin{array}{ll}
-\pm1, & \zeta\text{{ gerade}}\\
-\mbig{\pm\frac{1}{\lambda}}, & \zeta\text{{ ungerade}}\end{array}\right.\msp.\end{alignat*}
+x_{E} & =\esn{u_{E}}{k} &  & =\begin{cases}
+\pm\esn{\nu\frac{K}{n}}{k}, & \nu=1,3,5,\ldots n-2\quad(\zeta\textrm{ gerade})\\
+\pm\frac{1}{k}\ens{\mu\frac{K}{n}}{k}, & \mu=1,3,5,\ldots n-2\quad(\zeta\textrm{ ungerade})\end{cases}\\
+y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\begin{cases}
+\pm1, & \nu=1,3,5,\ldots n-2\quad(\zeta\textrm{ gerade})\\
+\pm\frac{1}{\lambda}, & \mu=1,3,5,\ldots n-2\quad(\zeta\textrm{ ungerade})\end{cases}\msp.\end{alignat*}
 
 \end_inset 
 
@@ -12201,7 +12229,7 @@ und damit die Transformationsbeziehung für
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u}{M}}{\lambda}=\ecn{u}{k}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\cdot\esn[2]{u}{k}}\label{eq:elltr1_odd_cn}\end{equation}
+\ecn{\frac{u}{M}}{\lambda}=\ecn{u}{k}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\label{eq:elltr1_odd_cn}\end{equation}
 
 \end_inset 
 
@@ -12684,7 +12712,7 @@ Mit
 
 \end_inset 
 
-Erste elliptische Haupt-Transformation, 
+Erste elliptische Haupttransformation, 
 \shape italic 
 n
 \shape default 
@@ -12695,7 +12723,7 @@ Funktionsverlauf
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupt-Transformation!erste elliptische!$n$ gerade}
+\begin_inset LatexCommand \index{Haupttransformation!erste elliptische!$n$ gerade}
 
 \end_inset 
 
@@ -12863,7 +12891,7 @@ collapsed false
 
 \end_inset 
 
-Erste elliptische Haupt-Transformation für 
+Erste elliptische Haupttransformation für 
 \begin_inset Formula $n=6$
 \end_inset 
 
@@ -12891,7 +12919,7 @@ Aus den wichtigsten Eigenschaften der Differentialgleichung\SpecialChar ~
  erarbeitet wurden, kann man wiederum auf die Form der (diesmal geraden)
  rationalen Transformationsfunktion schließen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftab{XXII}]{Achieser:1970}
+\begin_inset LatexCommand \cite[Tab.~XXII]{Achieser:1970}
 
 \end_inset 
 
@@ -12932,7 +12960,7 @@ Diese Relation ist, wenn man die Koeffizientenformel kennt, auch sofort
 \begin_inset Formula $\esn{K-\nu\frac{K}{n}}{k}=\jcd\left[\epar{(n-\nu)\frac{K}{n}}{k}\right]$
 \end_inset 
 
-abzuleiten.
+ abzuleiten.
 \end_inset 
 
 
@@ -13027,12 +13055,12 @@ Gleiches gilt auch für die Extremwerte
 
 
 \begin_inset Formula \begin{alignat*}{1}
-x_{E} & =\left\{ \begin{array}{l}
-\mbig{\pm\esn{\nu\frac{K}{n}}{k}}\\
-\mbig{\pm\frac{1}{k}\ens{\nu\frac{K}{n}}{k}}\end{array}\right.,\qquad\nu=0,2,4,\ldots,n-2\\
-y_{E} & =\left\{ \begin{array}{l}
+x_{E} & =\begin{cases}
+\pm\esn{\nu\frac{K}{n}}{k}\\
+\pm\frac{1}{k}\ens{\nu\frac{K}{n}}{k}\end{cases},\qquad\nu=0,2,4,\ldots,n-2\\
+y_{E} & =\begin{cases}
 \pm1\\
-\mbig{\pm\frac{1}{\lambda}}\end{array}\right.\msp,\end{alignat*}
+\pm\frac{1}{\lambda}\end{cases}\msp,\end{alignat*}
 
 \end_inset 
 
@@ -13086,7 +13114,7 @@ Die Transformationsbeziehung für den elliptischen Sinus ist wieder direkt
 
 \begin_inset Formula \begin{eqnarray}
 y & = & \prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\\
-\esn{\frac{u}{M}+\Lambda}{\lambda} & = & \prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\label{eq:elltr1_even_sn}\end{eqnarray}
+\esn{\frac{u}{M}+\Lambda}{\lambda} & = & \prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\label{eq:elltr1_even_sn}\end{eqnarray}
 
 \end_inset 
 
@@ -13110,8 +13138,8 @@ Eine weitere interessante Darstellung der Transformationsbeziehung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\esn{\frac{u}{M}+\Lambda}{\lambda} & =\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1}{\esn[2]{\nu\frac{K}{n}}{k}}\cdot\frac{\esn[2]{\nu\frac{K}{n}}{k}-\esn[2]{u}{k}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\\
- & =(-1)^{\frac{n}{2}}\cdot\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{\esn{u+\nu\frac{K}{n}}{k}\cdot\esn{u-\nu\frac{K}{n}}{k}}{\esn[2]{\nu\frac{K}{n}}{k}}\\
+\esn{\frac{u}{M}+\Lambda}{\lambda} & =\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1}{\esn[2]{\nu\frac{K}{n}}{k}}\cdot\frac{\esn[2]{\nu\frac{K}{n}}{k}-\esn[2]{u}{k}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\\
+ & =(-1)^{\frac{n}{2}}\cdot\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{\esn{u+\nu\frac{K}{n}}{k}\,\esn{u-\nu\frac{K}{n}}{k}}{\esn[2]{\nu\frac{K}{n}}{k}}\\
  & =(-1)^{\frac{n}{2}}\sqrt{\frac{k^{n}}{\lambda}}\cdot\prod\limits _{\nu=-(n-1),-(n-3),\ldots}^{n-1}\esn{u+\nu\frac{K}{n}}{k}\end{align*}
 
 \end_inset 
@@ -13151,7 +13179,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u}{M}+\Lambda}{\lambda}=-\frac{\lambda'}{M}\,\esn{u}{k}\ecn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\msp.\label{eq:elltr1_even_cn}\end{equation}
+\ecn{\frac{u}{M}+\Lambda}{\lambda}=-\frac{\lambda'}{M}\,\esn{u}{k}\ecn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\msp.\label{eq:elltr1_even_cn}\end{equation}
 
 \end_inset 
 
@@ -13469,7 +13497,7 @@ Mit diesem Ausdruck für
 
 \begin_inset Formula \begin{align*}
 \edn[2]{\frac{u}{M}+\Lambda}{\lambda} & ={\lambda'}^{2}\left(1-k^{2}x^{2}\right)\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}\left[1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x^{2}\right]^{2}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\left[1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}\right]^{2}}\\
-\edn{\frac{u}{M}+\Lambda}{\lambda} & =\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\end{align*}
+\edn{\frac{u}{M}+\Lambda}{\lambda} & =\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\,\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\end{align*}
 
 \end_inset 
 
@@ -13761,9 +13789,9 @@ Durch Hinzunahme von Multiplikationsformel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\cdot\prod_{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\frac{\esn{(m-\nu)\frac{K}{n}}{k}\esn{(m+\nu)\frac{K}{n}}{k}}{\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn{(m-\nu)\frac{K}{n}}{k}\esn{(m+\nu)\frac{K}{n}}{k}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn{(m-\nu)\frac{K}{n}}{k}\esn{(m+\nu)\frac{K}{n}}{k}}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\msp.\end{align*}
+\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\cdot\prod_{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\frac{\esn{(m-\nu)\frac{K}{n}}{k}\,\esn{(m+\nu)\frac{K}{n}}{k}}{\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn{(m-\nu)\frac{K}{n}}{k}\,\esn{(m+\nu)\frac{K}{n}}{k}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn{(m-\nu)\frac{K}{n}}{k}\,\esn{(m+\nu)\frac{K}{n}}{k}}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\msp.\end{align*}
 
 \end_inset 
 
@@ -13844,8 +13872,8 @@ rmel\SpecialChar ~
 
 
 \begin_inset Formula \begin{multline*}
-\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\cdot\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]\\
-=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\cdot\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\ecn{m\frac{K}{n}}{k}\edn{m\frac{K}{n}}{k}}\end{multline*}
+\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]\\
+=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\,\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\,\ecn{m\frac{K}{n}}{k}\,\edn{m\frac{K}{n}}{k}}\end{multline*}
 
 \end_inset 
 
@@ -13924,7 +13952,7 @@ k'=\frac{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}
 
 \layout Subsection
 
-Zweite elliptische Haupt-Transformation, 
+Zweite elliptische Haupttransformation, 
 \shape italic 
 n
 \shape default 
@@ -13935,7 +13963,7 @@ Periodenbeziehungen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupt-Transformation!zweite elliptische!$n$ ungerade}
+\begin_inset LatexCommand \index{Haupttransformation!zweite elliptische!$n$ ungerade}
 
 \end_inset 
 
@@ -14203,7 +14231,7 @@ incircle{2}
 
 -mal durchlaufen wird, existieren keine reellen Nullstellen oder Pole.
  Statt dessen alterniert 
-\begin_inset Formula $y=\ejnd{\im(u)/M}{\lambda'}$
+\begin_inset Formula $y=\ejnd{\imop(u)/M}{\lambda'}$
 \end_inset 
 
  auf diesem Teilstück, das durch 
@@ -14269,7 +14297,7 @@ collapsed false
 
 \end_inset 
 
-Zweite elliptische Haupt-Transformation (
+Zweite elliptische Haupttransformation (
 \begin_inset Formula $n=7$
 \end_inset 
 
@@ -14286,7 +14314,7 @@ Die Form der rationalen Lösungsfunktion
 \begin_inset Formula $y=\efunc{f}{x}{k}$
 \end_inset 
 
- für die zweite elliptische Haupt-Transformation bei ungeradem Grad 
+ für die zweite elliptische Haupttransformation bei ungeradem Grad 
 \begin_inset Formula $n$
 \end_inset 
 
@@ -14479,7 +14507,7 @@ Sie entspricht genau Transformationsbeziehung\SpecialChar ~
 
 \end_inset 
 
- für die erste elliptische Haupt-Transformation bei ungeradem Grad 
+ für die erste elliptische Haupttransformation bei ungeradem Grad 
 \begin_inset Formula $n$
 \end_inset 
 
@@ -14520,7 +14548,7 @@ resp
 \end_inset 
 
 nach 
-\begin_inset LatexCommand \cite[\bibrefsec{16.8}]{Abramowitz:1972}
+\begin_inset LatexCommand \cite[16.8]{Abramowitz:1972}
 
 \end_inset 
 
@@ -14697,9 +14725,9 @@ Die lokalen Extremwerte, welche auch in Abbildung\SpecialChar ~
 
 \begin_inset Formula \begin{alignat*}{2}
 x_{E} & =\esn{u_{E}}{k} &  & =\pm\ejnd{\nu\frac{K'}{n}}{k'},\qquad\left|\nu\right|=0,1,2,3,\ldots n-1\\
-y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\left\{ \begin{array}{l}
+y_{E} & =\esn{\frac{u_{E}}{M}}{\Lambda} &  & =\begin{cases}
 1\\
-\mbig{\frac{1}{\lambda}}\end{array}\right.\msp.\end{alignat*}
+\frac{1}{\lambda}\end{cases}\msp.\end{alignat*}
 
 \end_inset 
 
@@ -14726,9 +14754,9 @@ Einsetzen der Koeffizientenformel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-y & =\frac{\esn{u}{k}}{M}\prod_{\mu=2,4,6,\ldots}^{n-1}\frac{1+\ecs[2]{\mu\frac{K'}{n}}{k'}\esn[2]{u}{k}}{1+k^{2}\esc[2]{\mu\frac{K'}{n}}{k'}\esn[2]{u}{k}}\\
- & =\frac{\esn{u}{k}}{M}\prod_{\nu=1,3,5,\ldots}^{n-2}\frac{1+k^{2}\esc[2]{\nu\frac{K'}{n}}{k'}\esn[2]{u}{k}}{1+\ecs[2]{\nu\frac{K'}{n}}{k'}\esn[2]{u}{k}}\\
- & =\frac{\esn{u}{k}}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-1}1+\ecs[2]{\mu\frac{K'}{n}}{k'}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-2}1+\ecs[2]{\nu\frac{K'}{n}}{k'}\esn[2]{u}{k}}\msp.\end{align*}
+y & =\frac{\esn{u}{k}}{M}\prod_{\mu=2,4,6,\ldots}^{n-1}\frac{1+\ecs[2]{\mu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}{1+k^{2}\esc[2]{\mu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}\\
+ & =\frac{\esn{u}{k}}{M}\prod_{\nu=1,3,5,\ldots}^{n-2}\frac{1+k^{2}\esc[2]{\nu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}{1+\ecs[2]{\nu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}\\
+ & =\frac{\esn{u}{k}}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-1}1+\ecs[2]{\mu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-2}1+\ecs[2]{\nu\frac{K'}{n}}{k'}\,\esn[2]{u}{k}}\msp.\end{align*}
 
 \end_inset 
 
@@ -14737,7 +14765,7 @@ y & =\frac{\esn{u}{k}}{M}\prod_{\mu=2,4,6,\ldots}^{n-1}\frac{1+\ecs[2]{\mu\frac{
 
 Interessierte können die Formeln für den elliptischen Kosinus' und die Delta-Amp
 litude 
-\begin_inset LatexCommand \cite[\bibreftab{XXIII}]{Achieser:1970}
+\begin_inset LatexCommand \cite[Tab.~XXIII]{Achieser:1970}
 
 \end_inset 
 
@@ -14919,8 +14947,8 @@ Ausgehend von der Transformationsfunktion nach Gleichung\SpecialChar ~
 \begin_inset Formula $M$
 \end_inset 
 
- ein und stützt sich (genauso wie bei der ersten elliptischen Haupt-Transformati
-on, 
+ ein und stützt sich (genauso wie bei der ersten elliptischen Haupttransformatio
+n, 
 \begin_inset ERT
 status Collapsed
 
@@ -14954,7 +14982,7 @@ cf
 
 \layout Subsection
 
-Zweite elliptische Haupt-Transformation, 
+Zweite elliptische Haupttransformation, 
 \shape italic 
 n
 \shape default 
@@ -14962,7 +14990,7 @@ n
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Haupt-Transformation!zweite elliptische!$n$ gerade}
+\begin_inset LatexCommand \index{Haupttransformation!zweite elliptische!$n$ gerade}
 
 \end_inset 
 
@@ -15045,7 +15073,7 @@ collapsed false
 
 \end_inset 
 
-Zweite elliptische Haupt-Transformation für 
+Zweite elliptische Haupttransformation für 
 \begin_inset Formula $n=6$
 \end_inset 
 
@@ -15239,12 +15267,12 @@ Landen
  (AGM) stellt eine effiziente Möglichkeit zur numerischen Berechnung des
  elliptischen Integrals erster Art dar\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{XIII}]{Cayley:1876}
+\begin_inset LatexCommand \cite[XIII]{Cayley:1876}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{IV}, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
 
 \end_inset 
 
@@ -15294,7 +15322,7 @@ g
 
 
 \begin_inset Formula \begin{equation}
-\frac{1}{1+k}\cdot\frac{d\theta}{\sqrt{1-\lambda^{2}\sin^{2}}\theta}=\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\msp.\label{eq:agm_deqn}\end{equation}
+\frac{1}{1+k}\cdot\frac{\tdc\theta}{\sqrt{1-\lambda^{2}\sin^{2}}\theta}=\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\msp.\label{eq:agm_deqn}\end{equation}
 
 \end_inset 
 
@@ -15349,8 +15377,8 @@ Gauß
 
 
 \begin_inset Formula \begin{align*}
-a_{1}\frac{dt_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{d\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}},\qquad t_{1}=b_{1}\tan\varphi,\quad k'=\frac{b_{1}}{a_{1}}\\
-a_{0}\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\frac{d\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}},\qquad t_{0}=b_{0}\tan\theta,\quad\lambda'=\frac{b_{0}}{a_{0}}\end{align*}
+a_{1}\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}},\qquad t_{1}=b_{1}\tan\varphi,\quad k'=\frac{b_{1}}{a_{1}}\\
+a_{0}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\frac{\tdc\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}},\qquad t_{0}=b_{0}\tan\theta,\quad\lambda'=\frac{b_{0}}{a_{0}}\end{align*}
 
 \end_inset 
 
@@ -15372,7 +15400,7 @@ Gauß
 
 
 \begin_inset Formula \begin{equation}
-\frac{dt_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}}=\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\msp.\label{eq:agm_deqn_ab}\end{equation}
+\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}}=\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\msp.\label{eq:agm_deqn_ab}\end{equation}
 
 \end_inset 
 
@@ -15474,7 +15502,7 @@ Legendre
 
 
 \begin_inset Formula \begin{align*}
-a_{1}\frac{dt_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{a_{0}}{1+k}\cdot\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\end{align*}
+a_{1}\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{a_{0}}{1+k}\cdot\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\end{align*}
 
 \end_inset 
 
@@ -15512,9 +15540,9 @@ Multiplikator
 
 
 \begin_inset Formula \begin{align*}
-\frac{dt_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{a_{0}}{a_{1}}\frac{1}{(1+k)}\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\\
- & =\frac{a_{0}}{a_{1}}\frac{1+\lambda'}{2}\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\\
- & =\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\end{align*}
+\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{a_{0}}{a_{1}}\frac{1}{(1+k)}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\\
+ & =\frac{a_{0}}{a_{1}}\frac{1+\lambda'}{2}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\\
+ & =\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}}\end{align*}
 
 \end_inset 
 
@@ -15561,7 +15589,7 @@ Zurück zum eigentlichen Algorithmus läßt sich nun die folgende Rekursion
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\msp a_{i+1}=\frac{a_{i}+b_{i}}{2}\msp,\qquad b_{i+1}=\sqrt{a_{i}b_{i}}\msp}\label{eq:agm_recursion}\end{equation}
+\boxed{a_{i+1}=\frac{a_{i}+b_{i}}{2}\msp,\qquad b_{i+1}=\sqrt{a_{i}b_{i}}}\label{eq:agm_recursion}\end{equation}
 
 \end_inset 
 
@@ -15626,7 +15654,7 @@ Um diesen Grenzwert zu finden, bildet man zuerst das unbestimmte elliptische
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{-\infty}^{\infty}\frac{dt_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\label{eq:agm_integral}\end{equation}
+\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\label{eq:agm_integral}\end{equation}
 
 \end_inset 
 
@@ -15644,7 +15672,7 @@ und kombiniert es mit Relation\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{-\infty}^{\infty}\frac{dt_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\int\limits _{-\infty}^{\infty}\frac{dt_{i+1}}{\sqrt{(t_{i+1}^{2}+a_{i+1}^{2})(t_{i+1}^{2}+b_{i+1}^{2})}}.\label{eq:agm_descend_i}\end{equation}
+\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i+1}}{\sqrt{(t_{i+1}^{2}+a_{i+1}^{2})(t_{i+1}^{2}+b_{i+1}^{2})}}.\label{eq:agm_descend_i}\end{equation}
 
 \end_inset 
 
@@ -15703,10 +15731,10 @@ Beziehungsweise interpretiert die Gleichung rückwärts bis hin zu
 
 
 \begin_inset Formula \begin{align*}
-\int\limits _{-\infty}^{\infty}\frac{dt_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\int\limits _{-\infty}^{\infty}\frac{dt_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\ldots\\
- & =\lim_{i\rightarrow\infty}\int\limits _{-\infty}^{\infty}\frac{dt_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\\
- & =\int\limits _{-\infty}^{\infty}\frac{dt}{\sqrt{[t^{2}+\AGM^{2}(a_{0},b_{0})][t^{2}+\AGM^{2}(a_{0},b_{0})]}}\\
- & =\int\limits _{-\infty}^{\infty}\frac{dt}{t^{2}+\AGM^{2}(a_{0},b_{0})}\\
+\int\limits _{-\infty}^{\infty}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\ldots\\
+ & =\lim_{i\rightarrow\infty}\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\\
+ & =\int\limits _{-\infty}^{\infty}\frac{\tdc t}{\sqrt{[t^{2}+\AGM^{2}(a_{0},b_{0})][t^{2}+\AGM^{2}(a_{0},b_{0})]}}\\
+ & =\int\limits _{-\infty}^{\infty}\frac{\tdc t}{t^{2}+\AGM^{2}(a_{0},b_{0})}\\
  & =\left.\frac{1}{\AGM(a_{0},b_{0})}\arctan\frac{x}{\AGM(a_{0},b_{0})}\right|_{-\infty}^{\infty}=\frac{\pi}{\AGM(a_{0},b_{0})}.\end{align*}
 
 \end_inset 
@@ -15729,7 +15757,7 @@ Bedenkt man weiterhin, daß der Integrand in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\AGM(a_{0},b_{0})=\frac{\pi}{\mbig{\int\limits _{-\infty}^{\infty}\frac{dt}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}}}\label{eq:agm_integrsolution}\end{equation}
+\boxed{\AGM(a_{0},b_{0})=\frac{\pi}{\mbig{\int\limits _{-\infty}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}}}\label{eq:agm_integrsolution}\end{equation}
 
 \end_inset 
 
@@ -15786,7 +15814,7 @@ Das Vollständige Elliptische Integral
 
 
 \begin_inset Formula \begin{equation}
-\AGM(a_{0},b_{0})=\frac{\pi}{2}\frac{1}{\int\limits _{0}^{\infty}\frac{dt}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}=\frac{\pi}{2}\frac{a_{0}}{\eK{\sqrt{1-\frac{b_{0}^{2}}{a_{0}^{2}}}}}\label{eq:agm_solution}\end{equation}
+\AGM(a_{0},b_{0})=\frac{\pi}{2}\frac{1}{\int\limits _{0}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}=\frac{\pi}{2}\frac{a_{0}}{\eK{\sqrt{1-\frac{b_{0}^{2}}{a_{0}^{2}}}}}\label{eq:agm_solution}\end{equation}
 
 \end_inset 
 
@@ -15997,7 +16025,7 @@ Für die Darstellung von
 
 
 \begin_inset Formula \[
-\eK{\varphi}=\int\limits _{0}^{\frac{\pi}{2}}\frac{d\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
+\eK{\varphi}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
 
 \end_inset 
 
