@@ -21,7 +21,7 @@
 \quotes_language english
 \quotes_times 2
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle default
 
 \layout Standard
@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: zolotarev.lyx,v 1.1 2004-09-27 19:33:20 ralf Exp $
+Version: $Id: zolotarev.lyx,v 1.2 2005-04-30 19:04:49 ralf Exp $
 \end_inset 
 
 
@@ -105,7 +105,7 @@ Kurze Darstellungen sind auch in\SpecialChar ~
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefchap{II}]{Achieser:1967}
+\begin_inset LatexCommand \cite[II]{Achieser:1967}
 
 \end_inset 
 
@@ -254,7 +254,7 @@ Solotareff
 
 
 \begin_inset Formula \[
-f(x)\cdot f\left(\frac{1}{x}\right)=1\]
+f(x)\, f\left(\frac{1}{x}\right)=1\]
 
 \end_inset 
 
@@ -340,9 +340,9 @@ und erhält
 
 
 \begin_inset Formula \[
-\efunc{f}{x}{k}=\left\{ \begin{array}{ll}
-\mbig{\sqrt{\frac{\lambda}{k}}\cdot\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
-\mbig{\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.\]
+\efunc{f}{x}{k}=\begin{cases}
+\sqrt{\frac{\lambda}{k}}\,\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ ungerade})\\
+\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})\end{cases}\]
 
 \end_inset 
 
@@ -376,9 +376,9 @@ resp
 
 
 \begin_inset Formula \[
-x=\sqrt{k}\msp\esn{u}{k},\qquad\efunc{f}{x}{k}=\sqrt{\lambda}\msp\cdot\left\{ \begin{array}{ll}
-\esn{u/M}{\lambda} & \qquad(n\textrm{ ungerade})\\
-\ecd{u/M}{\lambda} & \qquad(n\textrm{ gerade})\end{array}\right.\msp.\]
+x=\sqrt{k}\,\esn{u}{k},\qquad\efunc{f}{x}{k}=\sqrt{\lambda}\,\begin{cases}
+\esn{u/M}{\lambda} & (n\textrm{ ungerade})\\
+\ecd{u/M}{\lambda} & (n\textrm{ gerade})\end{cases}\msp.\]
 
 \end_inset 
 
@@ -448,9 +448,9 @@ Passt man auch die Berechnungsformeln\SpecialChar ~
 
 
 \begin_inset Formula \[
-\varepsilon=\left\{ \begin{array}{ll}
-\sqrt{k}\prod\limits _{\nu=1,3,5,\ldots}^{n-2}k\msp\esn[2]{\nu\frac{K}{n}}{k} & \qquad(n\textrm{ ungerade})\\
-\prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\msp\esn[2]{\nu\frac{K}{n}}{k} & \qquad(n\textrm{ gerade})\end{array}\right.\]
+\varepsilon=\begin{cases}
+\sqrt{k}\prod\limits _{\nu=1,3,5,\ldots}^{n-2}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ ungerade})\\
+\prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ gerade})\end{cases}\]
 
 \end_inset 
 
@@ -495,9 +495,9 @@ dann ergeben sich noch die folgenden Vereinfachungen:
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\efunc{f}{x}{k}=\left\{ \begin{array}{ll}
-\mbig{(-1)^{\frac{n-1}{2}}x\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ ungerade})\\
-\mbig{(-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}}} & \qquad(n\textrm{ gerade})\end{array}\right.}\label{eq:zolotar_solution}\end{equation}
+\boxed{\efunc{f}{x}{k}=\begin{cases}
+(-1)^{\frac{n-1}{2}}x\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ ungerade})\\
+(-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})\end{cases}}\label{eq:zolotar_solution}\end{equation}
 
 \end_inset 
 
@@ -523,7 +523,7 @@ Solotareff
 
 
 \begin_inset Formula \[
-b_{\upsilon}=\sqrt{k}\msp a_{\nu}\]
+b_{\upsilon}=\sqrt{k}\, a_{\nu}\]
 
 \end_inset 
 
@@ -568,8 +568,8 @@ n und Pole nach den Formeln\SpecialChar ~
 
 
 \begin_inset Formula \begin{xalignat*}{1}
-\zn{x}{\nu} & =\sqrt{k}\msp\esn{\nu\frac{K}{n}}{k}\\
-\pn{x}{\nu} & =\frac{1}{\sqrt{k}\msp\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}\end{xalignat*}
+\zn{x}{\nu} & =\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}\\
+\pn{x}{\nu} & =\frac{1}{\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}\end{xalignat*}
 
 \end_inset 
 
@@ -633,7 +633,7 @@ Tschebyscheff
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftheorem{23}]{Meinardus:1964}
+\begin_inset LatexCommand \cite[Satz~23]{Meinardus:1964}
 
 \end_inset 
 
@@ -661,9 +661,9 @@ Die Funktion
 
 
 \begin_inset Formula \[
-\varepsilon(x)=\left\{ \begin{array}{ll}
+\varepsilon(x)=\begin{cases}
 \efunc{f}{x}{k}, & \left|x\right|\leq\sqrt{k}\\
-\mbig{\frac{1}{\efunc{f}{x}{k}}}, & \left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}}\end{array}\right.\]
+\frac{1}{\efunc{f}{x}{k}}, & \left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}}\end{cases}\]
 
 \end_inset 
 
@@ -713,7 +713,7 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[\bibreftheorem{23}]{Meinardus:1964}
+\begin_inset LatexCommand \cite[Satz~23]{Meinardus:1964}
 
 \end_inset 
 
@@ -736,9 +736,9 @@ cf
 
 
 \begin_inset Formula \[
-m=\left\{ \begin{array}{ll}
-n-1 & \qquad(n\textrm{ ungerade})\\
-n & \qquad(n\textrm{ gerade})\end{array}\right.\msp.\]
+m=\begin{cases}
+n-1 & (n\textrm{ ungerade})\\
+n & (n\textrm{ gerade})\end{cases}\msp.\]
 
 \end_inset 
 
@@ -802,7 +802,7 @@ Tschebyscheff
 
 
 \begin_inset Formula \[
-\efunc{f}{x}{k}=\sqrt{\lambda}\msp\esn{\frac{u}{M}}{\lambda}\]
+\efunc{f}{x}{k}=\sqrt{\lambda}\,\esn{\frac{u}{M}}{\lambda}\]
 
 \end_inset 
 
