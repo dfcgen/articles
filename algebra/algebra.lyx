@@ -81,7 +81,7 @@ Galois
 
  mit folgenden Eigenschaften definiert ist\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{2.1}]{Peterson:1972}
+\begin_inset LatexCommand \cite[2.1]{Peterson:1972}
 
 \end_inset 
 
@@ -284,12 +284,12 @@ ie
 
  alle Eigenschaften einer Gruppe erfüllt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{1}]{Bosch:1996}
+\begin_inset LatexCommand \cite[1.]{Bosch:1996}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefsec{2.4}]{Peterson:1972}
+\begin_inset LatexCommand \cite[2.4]{Peterson:1972}
 
 \end_inset 
 
@@ -313,7 +313,7 @@ Lagrange
 \noun default 
  beschrieben
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -390,7 +390,7 @@ resp
 
  geschrieben wird
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -581,7 +581,7 @@ Eine Menge
 
  erklärt sind\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{2.2}]{Peterson:1972}
+\begin_inset LatexCommand \cite[2.2]{Peterson:1972}
 
 \end_inset 
 
@@ -822,7 +822,7 @@ Jede dieser Operationen muß wieder zu einem Element dieses Körpers führen
 
  und für die das Distributivgesetz gilt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{2.3}]{Peterson:1972}
+\begin_inset LatexCommand \cite[2.3]{Peterson:1972}
 
 \end_inset 
 
@@ -1037,7 +1037,7 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[\bibrefsec{2.5}]{Peterson:1972}
+\begin_inset LatexCommand \cite[2.5]{Peterson:1972}
 
 \end_inset 
 
@@ -1559,7 +1559,7 @@ eg
 
 
 \begin_inset Formula \[
-\res{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},\]
+\rcls{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},\]
 
 \end_inset 
 
@@ -1577,7 +1577,7 @@ ie
 \end_inset 
 
  die Restklasse 
-\begin_inset Formula $\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  ist die Menge aller Elemente 
@@ -1606,8 +1606,8 @@ ie
 
 
 \begin_inset Formula \begin{xalignat*}{2}
-\res{0}{4} & =\{\ldots,-12,-8,-4,0,4,8,\ldots\} & \res{2}{4} & =\{\ldots,-10,-6,-2,2,6,10,\ldots\}\\
-\res{1}{4} & =\{\ldots,-11,-7,-3,1,5,9,\ldots\} & \res{3}{4} & =\{\ldots,-9,-5,-1,3,7,11,\ldots\}\end{xalignat*}
+\rcls{0}{4} & =\{\ldots,-12,-8,-4,0,4,8,\ldots\} & \rcls{2}{4} & =\{\ldots,-10,-6,-2,2,6,10,\ldots\}\\
+\rcls{1}{4} & =\{\ldots,-11,-7,-3,1,5,9,\ldots\} & \rcls{3}{4} & =\{\ldots,-9,-5,-1,3,7,11,\ldots\}\end{xalignat*}
 
 \end_inset 
 
@@ -1619,7 +1619,7 @@ ie
 
 
 \begin_inset Formula \[
-R_{m}=\{\res{r_{0}}{m},\res{r_{1}}{m},\ldots,\res{r_{n-1}}{m}\}\]
+R_{m}=\{\rcls{r_{0}}{m},\rcls{r_{1}}{m},\ldots,\rcls{r_{n-1}}{m}\}\]
 
 \end_inset 
 
@@ -1671,7 +1671,7 @@ Auch eine Einschränkung auf
 
 
 \begin_inset Formula \[
-\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\res{0}{m},\res{1}{m},\ldots,\res{m-1}{m}\}\msp.\]
+\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\rcls{0}{m},\rcls{1}{m},\ldots,\rcls{m-1}{m}\}\msp.\]
 
 \end_inset 
 
@@ -1712,7 +1712,7 @@ Um von einem Restklassenring
 
  notwendig\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{5}]{Welschenbach:2001}
+\begin_inset LatexCommand \cite[5.]{Welschenbach:2001}
 
 \end_inset 
 
@@ -1779,9 +1779,9 @@ Die Operation führt immer wieder auf ein Element in
 
 ; 
 \begin_inset Formula \begin{eqnarray*}
-\res{r}{m} & = & \res{r_{1}}{m}+\res{r_{2}}{m}=(a_{1}-mq_{1}+a_{2}-mq_{2})\bmod m\\
+\rcls{r}{m} & = & \rcls{r_{1}}{m}+\rcls{r_{2}}{m}=(a_{1}-mq_{1}+a_{2}-mq_{2})\bmod m\\
  & = & (a_{1}+a_{2})\bmod m-\left[m(q_{1}+q_{2})\right]\bmod m=(r_{1}+r_{2})\bmod m\\
- & = & \res{r_{1}+r_{2}}{m}\end{eqnarray*}
+ & = & \rcls{r_{1}+r_{2}}{m}\end{eqnarray*}
 
 \end_inset 
 
@@ -1794,7 +1794,7 @@ Abel
 \noun default 
 'sch); 
 \begin_inset Formula \[
-\res{r_{1}}{m}+(\res{r_{2}}{m}+\res{r_{3}}{m})=(\res{r_{1}}{m}+\res{r_{2}}{m})+\res{r_{3}}{m}=\res{r_{3}}{m}+\res{r_{2}}{m}+\res{r_{1}}{m}\]
+\rcls{r_{1}}{m}+(\rcls{r_{2}}{m}+\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}+\rcls{r_{2}}{m})+\rcls{r_{3}}{m}=\rcls{r_{3}}{m}+\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\]
 
 \end_inset 
 
@@ -1807,12 +1807,12 @@ das neutrale Element
 \end_inset 
 
  
-\begin_inset Formula $e_{(+)}=\res{0}{m}=mq_{0}$
+\begin_inset Formula $e_{(+)}=\rcls{0}{m}=mq_{0}$
 \end_inset 
 
  existiert;
 \begin_inset Formula \[
-\res{r}{m}+\res{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\res{r}{m}\]
+\rcls{r}{m}+\rcls{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\rcls{r}{m}\]
 
 \end_inset 
 
@@ -1825,12 +1825,12 @@ jedes Element besitzt ein inverses Element
 \end_inset 
 
  
-\begin_inset Formula $-\res{r}{m}=(m-a)\bmod m$
+\begin_inset Formula $-\rcls{r}{m}=(m-a)\bmod m$
 \end_inset 
 
  mit 
 \begin_inset Formula \[
-\res{r}{m}+(-\res{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\res{0}{m}.\]
+\rcls{r}{m}+(-\rcls{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\rcls{0}{m}.\]
 
 \end_inset 
 
@@ -1858,9 +1858,9 @@ ebenfalls abgeschlossen
 
  sein; 
 \begin_inset Formula \begin{align*}
-\res{r}{m} & =\res{r_{1}}{m}\cdot\res{r_{2}}{m}=(r_{1}-mq_{1})\cdot(r_{2}-mq_{2})\bmod m\\
+\rcls{r}{m} & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}=(r_{1}-mq_{1})\cdot(r_{2}-mq_{2})\bmod m\\
  & =\left[r_{1}r_{2}+m(mq_{1}q_{2}-r_{1}q_{2}-r_{2}q_{1})\right]\bmod m=(r_{1}\cdot r_{2})\bmod m\\
- & =\res{r_{1}\cdot r_{2}}{m}\end{align*}
+ & =\rcls{r_{1}\cdot r_{2}}{m}\end{align*}
 
 \end_inset 
 
@@ -1873,12 +1873,12 @@ und das Assoziativgesetz
 \end_inset 
 
  für 
-\begin_inset Formula $\res{r_{i}}{m}\in R_{m}$
+\begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
 \end_inset 
 
  erfüllen;
 \begin_inset Formula \[
-\res{r_{1}}{m}\cdot(\res{r_{2}}{m}\cdot\res{r_{3}}{m})=(\res{r_{1}}{m}\cdot\res{r_{2}}{m})\cdot\res{r_{3}}{m}\]
+\rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}\cdot\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m})\cdot\rcls{r_{3}}{m}\]
 
 \end_inset 
 
@@ -1887,7 +1887,7 @@ und das Assoziativgesetz
 \layout Enumerate
 
 Außerdem muß für alle 
-\begin_inset Formula $\res{r_{i}}{m}\in R_{m}$
+\begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
 \end_inset 
 
  das Distributivgesetz
@@ -1899,9 +1899,9 @@ Außerdem muß für alle
 \newline 
 
 \begin_inset Formula \begin{alignat*}{1}
-\res{r_{1}}{m}\cdot(\res{r_{2}}{m}+\res{r_{3}}{m}) & =(r_{1}-mq_{1})\cdot\left[r_{2}+r_{3}-m(q_{2}+q_{3})\right]\bmod m\\
+\rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}+\rcls{r_{3}}{m}) & =(r_{1}-mq_{1})\cdot\left[r_{2}+r_{3}-m(q_{2}+q_{3})\right]\bmod m\\
  & =(r_{1}r_{2}+r_{1}r_{3})\bmod m\\
- & =\res{r_{1}}{m}\cdot\res{r_{2}}{m}+\res{r_{1}}{m}\cdot\res{r_{3}}{m}\end{alignat*}
+ & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\cdot\rcls{r_{3}}{m}\end{alignat*}
 
 \end_inset 
 
@@ -1922,7 +1922,7 @@ Da
 \end_inset 
 
  mit 
-\begin_inset Formula $\res{r}{m}\cdot e_{(\cdot)}=\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}\cdot e_{(\cdot)}=\rcls{r}{m}$
 \end_inset 
 
  besitzt, handelt es sich sogar um einen
@@ -1936,7 +1936,7 @@ Ring mit Eins
 \emph default 
 .
 \begin_inset Formula \[
-\res{r}{m}\cdot\res{1}{m}=(r\cdot1)\bmod m=r\bmod m=\res{r}{m}\]
+\rcls{r}{m}\cdot\rcls{1}{m}=(r\cdot1)\bmod m=r\bmod m=\rcls{r}{m}\]
 
 \end_inset 
 
@@ -2106,7 +2106,7 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[\bibrefsec{6.6}]{Peterson:1972}
+\begin_inset LatexCommand \cite[6.6]{Peterson:1972}
 
 \end_inset 
 
@@ -2115,7 +2115,7 @@ cf
 
 In einem Restklassenkörper muß man dementsprechend für das inverse Element
  
-\begin_inset Formula $\res{r}{m}\cdot{\res{r}{m}}^{-1}=\res{1}{m}$
+\begin_inset Formula $\rcls{r}{m}\cdot{\rcls{r}{m}}^{-1}=\rcls{1}{m}$
 \end_inset 
 
  fordern, 
@@ -2201,7 +2201,7 @@ Die Existenz eines inversen Elements
 
  gilt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftheorem{6.4}]{Peterson:1972}
+\begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
 
 \end_inset 
 
@@ -2284,7 +2284,7 @@ Also in Bezug auf den Ring
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftheorem{6.4}]{Peterson:1972}
+\begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
 
 \end_inset 
 
@@ -2313,20 +2313,20 @@ Ist nämlich
 \end_inset 
 
  ist, gilt für die Restklassenmultiplikation 
-\begin_inset Formula $\res{r}{m}\cdot\res{s}{m}=\res{m}{m}=0$
+\begin_inset Formula $\rcls{r}{m}\cdot\rcls{s}{m}=\rcls{m}{m}=0$
 \end_inset 
 
 .
  Soll aber 
-\begin_inset Formula $\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  eine inverse Restklasse 
-\begin_inset Formula $\res{r}{m}^{-1}$
+\begin_inset Formula $\rcls{r}{m}^{-1}$
 \end_inset 
 
  besitzen, dann kann man beide Seiten des Produktes mit 
-\begin_inset Formula ${\res{r}{m}}^{-1}$
+\begin_inset Formula ${\rcls{r}{m}}^{-1}$
 \end_inset 
 
  multiplizieren.
@@ -2334,7 +2334,7 @@ Ist nämlich
 
 
 \begin_inset Formula \[
-\underbrace{{\res{r}{m}}^{-1}\res{r}{m}}_{e_{(\cdot)}=1}\cdot\res{s}{m}=\res{s}{m}={\res{r}{m}}^{-1}\res{m}{m}=0\]
+\underbrace{{\rcls{r}{m}}^{-1}\rcls{r}{m}}_{e_{(\cdot)}=1}\cdot\rcls{s}{m}=\rcls{s}{m}={\rcls{r}{m}}^{-1}\rcls{m}{m}=0\]
 
 \end_inset 
 
@@ -2342,7 +2342,7 @@ Ist nämlich
 \layout Standard
 
 
-\begin_inset Formula $\res{s}{m}$
+\begin_inset Formula $\rcls{s}{m}$
 \end_inset 
 
  ist aber nach Voraussetzung nicht 
@@ -2350,7 +2350,7 @@ Ist nämlich
 \end_inset 
 
 , demzufolge kann ein Inverses zu 
-\begin_inset Formula $\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  für den Fall dieser Zerlegung nicht existieren.
@@ -2361,7 +2361,7 @@ Im Gegenzug bleibt noch nachzuweisen, daß, wenn
 \end_inset 
 
  ein Primelement ist, für jede Restklasse 
-\begin_inset Formula $\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  aus 
@@ -2369,16 +2369,16 @@ Im Gegenzug bleibt noch nachzuweisen, daß, wenn
 \end_inset 
 
  ein inverses Element 
-\begin_inset Formula ${\res{r}{m}}^{-1}$
+\begin_inset Formula ${\rcls{r}{m}}^{-1}$
 \end_inset 
 
  auch wirklich existiert.
  Zu diesem Zweck betrachten wir alle 
-\begin_inset Formula $\res{r}{m}\in R_{m}$
+\begin_inset Formula $\rcls{r}{m}\in R_{m}$
 \end_inset 
 
 , ausgenommen die Restklasse 
-\begin_inset Formula $\res{1}{m}$
+\begin_inset Formula $\rcls{1}{m}$
 \end_inset 
 
 , welche bei der Inversion bekanntlich auf sich selbst abgebildet wird.
@@ -2460,7 +2460,7 @@ zout.
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{2.4}]{Bosch:1996}
+\begin_inset LatexCommand \cite[2.4]{Bosch:1996}
 
 \end_inset 
 
@@ -2470,7 +2470,7 @@ zout.
 
 \begin_inset Formula \begin{align*}
 \gcd(r,m)=1 & \equiv ar+bm=ar\pmod m\\
-\res{1}{m} & =\res{a}{m}\cdot\res{r}{m}\msp.\end{align*}
+\rcls{1}{m} & =\rcls{a}{m}\cdot\rcls{r}{m}\msp.\end{align*}
 
 \end_inset 
 
@@ -2478,7 +2478,7 @@ zout.
 \layout Standard
 
 Das inverse Element von 
-\begin_inset Formula $\res{r}{m}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  ist demzufolge
@@ -2519,7 +2519,7 @@ Berlekamp
 
 
 \begin_inset Formula \[
-\res{a}{m}={\res{r}{m}}^{-1}\msp.\]
+\rcls{a}{m}={\rcls{r}{m}}^{-1}\msp.\]
 
 \end_inset 
 
@@ -2546,7 +2546,7 @@ Von praktischer Bedeutung ist insbesondere der Körper
 \end_inset 
 
  werden mit 
-\begin_inset Formula $\{\res{0}{2},\res{1}{2}\}$
+\begin_inset Formula $\{\rcls{0}{2},\rcls{1}{2}\}$
 \end_inset 
 
  oder kürzer mit 
@@ -2694,7 +2694,7 @@ Galois
  ist wegen ihrer Eigenschaften bezüglich der Potenzierung von Gruppenelementen
  sehr interessant
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -2745,7 +2745,7 @@ An dieser Stelle sei darauf hingewiesen, daß fast alle der folgenden Aussagen
 
  die Folge wiederholen
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -3035,7 +3035,7 @@ cf
 
  deshalb auch folgendermaßen ausdrücken\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{1.2}, \bibreftheorem{3}]{Bosch:1996}
+\begin_inset LatexCommand \cite[1.2, Satz~3]{Bosch:1996}
 
 \end_inset 
 
@@ -3299,7 +3299,7 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 
  handeln\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibreftheorem{6.18}]{Peterson:1972}
+\begin_inset LatexCommand \cite[Satz~6.18]{Peterson:1972}
 
 \end_inset 
 
@@ -3324,7 +3324,7 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 
 
 \begin_inset Formula \[
-\left.\frac{d\varphi(x)}{dx}\right|_{x=\alpha}=\left.(q-1)x^{q-2}\right|_{x=\alpha}=(q-1)\alpha^{-1}\alpha^{q-1}=(q-1)\alpha^{-1}\neq0\]
+\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.(q-1)x^{q-2}\right|_{x=\alpha}=(q-1)\alpha^{-1}\alpha^{q-1}=(q-1)\alpha^{-1}\neq0\]
 
 \end_inset 
 
@@ -3544,7 +3544,7 @@ bezeichnet man als zyklische Gruppe.
 
  sein
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -3600,7 +3600,7 @@ resp
 
  genau Eins
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -3749,7 +3749,7 @@ Ein Erweiterungskörper
 
  enthält\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{6.5}]{Peterson:1972}
+\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
 \end_inset 
 
@@ -3960,12 +3960,12 @@ enring
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefchap{6}]{Peterson:1972}
+\begin_inset LatexCommand \cite[6.]{Peterson:1972}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibrefsec{2.5.4}]{Menezes:1992}
+\begin_inset LatexCommand \cite[2.5.4]{Menezes:1992}
 
 \end_inset 
 
@@ -4135,7 +4135,7 @@ Der Übergang zu einem Körper wird möglich, wenn
 
  reduzierbar ist
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -4152,13 +4152,13 @@ eg
 
  in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{4.5}]{Menezes:1992}
+\begin_inset LatexCommand \cite[4.5]{Menezes:1992}
 
 \end_inset 
 
 , Tabellen irreduzibler Polynome in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefapp{C}]{Peterson:1972}
+\begin_inset LatexCommand \cite[Anhang~C]{Peterson:1972}
 
 \end_inset 
 
@@ -4216,7 +4216,7 @@ Häufig handelt es sich bei dem (hier mit
 
  Elementen (Polynomen)\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{3.8}]{Bosch:1996}
+\begin_inset LatexCommand \cite[3.8]{Bosch:1996}
 
 \end_inset 
 
@@ -4393,7 +4393,7 @@ Die Restklassendivision
 \end_inset 
 
  erfolgt wie gewohnt mit 
-\begin_inset Formula $\res{r(x)}{m(x)}$
+\begin_inset Formula $\rcls{r(x)}{m(x)}$
 \end_inset 
 
 , wird meistens jedoch weggelassen.
@@ -4436,7 +4436,7 @@ resp
 \end_inset 
 
  dessen Restklasse 
-\begin_inset Formula $\res{0}{m(x)}$
+\begin_inset Formula $\rcls{0}{m(x)}$
 \end_inset 
 
 , das Einselement das Einheitspolynom
@@ -4699,7 +4699,7 @@ Aus Punkt\SpecialChar ~
 
 , so erhält man die bekannten Beziehungen
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -4900,7 +4900,7 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[\bibrefsec{4.5}]{Bosch:1996}
+\begin_inset LatexCommand \cite[4.5]{Bosch:1996}
 
 \end_inset 
 
@@ -5037,7 +5037,7 @@ Aus diesem Grund läßt sich für jedes der irreduziblen Polynome
 
  die folgende Linearfaktordarstellung angeben
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -5088,7 +5088,7 @@ kleinsten
 
  erfüllt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibrefsec{6.5}]{Peterson:1972}
+\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
 \end_inset 
 
@@ -5323,6 +5323,11 @@ r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2
 
 \layout Section
 
+
+\begin_inset LatexCommand \label{sec:abstract}
+
+\end_inset 
+
 Zusammenfassung
 \layout Standard
 
@@ -5361,19 +5366,9 @@ Zusammenfassung
 
 \end_inset 
 
-Tabelle\SpecialChar ~
-
-\begin_inset LatexCommand \ref{tab:algebraic_structures}
-
-\end_inset 
-
- gibt einen Überblick zu den verschiedenen algebraischen Grundstrukturen
- und ihren Existenzbedingungen.
-\layout Standard
-
 
 \begin_inset Note
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -5388,7 +5383,7 @@ Vertikale Zellen (siehe folgende Tabelle) sind bei der HTML-Umwandlung nicht
 
 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -5397,6 +5392,16 @@ begin{latexonly}
 \end_inset 
 
 
+\layout Standard
+
+Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \ref{tab:algebraic_structures}
+
+\end_inset 
+
+ gibt einen Überblick zu den verschiedenen algebraischen Grundstrukturen
+ und ihren Existenzbedingungen.
 \layout Standard
 
 
@@ -6369,7 +6374,7 @@ Körper
 
 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -6382,7 +6387,7 @@ end{latexonly}
 
 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -6393,20 +6398,16 @@ begin{htmlonly}
 
 \layout Standard
 
+Nachfolgende Tabelle gibt einen Überblick zu den verschiedenen algebraischen
+ Grundstrukturen und ihren Existenzbedingungen.
+\layout Standard
+
 
 \begin_inset Float table
 placement H
 wide false
 collapsed false
 
-\layout Caption
-
-
-\begin_inset LatexCommand \label{tab:algebraic_structures}
-
-\end_inset 
-
-Eigenschaften algebraischer Strukturen
 \layout Standard
 \align center 
 
@@ -7363,7 +7364,7 @@ Körper
 
 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -7638,7 +7639,7 @@ begin{multicols}{2}
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\res{r}{n}$
+\begin_inset Formula $\rcls{r}{n}$
 \end_inset 
 
  Restklasse zum Modul 
