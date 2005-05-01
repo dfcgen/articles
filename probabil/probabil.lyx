@@ -8,7 +8,7 @@
 
 \usepackage{html}
 \end_preamble
-\options intlimits,reqno
+\options reqno
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -41,7 +41,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: probabil.lyx,v 1.9 2005-01-02 16:38:48 ralf Exp $
+Version: $Id: probabil.lyx,v 1.10 2005-05-01 07:48:34 ralf Exp $
 \end_inset 
 
 
@@ -62,10 +62,6 @@ originalTeX %% Needed because "> in htmlmeta produces french guillemets in germa
 \newline 
     
 \backslash 
-htmlmeta{<META HTTP-EQUIV="content-language" CONTENT="de">}
-\newline 
-    
-\backslash 
 htmlmeta{<META NAME="robots" CONTENT="index, follow">}
 \newline 
     
@@ -74,15 +70,11 @@ htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="description" LANG ="de" CONTENT="Zufallsgr&ouml;ssen">}
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="Zufallsgroessen">}
 \newline 
     
 \backslash 
 htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Wahrscheinlichkeit, Zufall, Quantisierung, Rauschen">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="classification" LANG ="de" CONTENT="Mathematik, Wahrscheinlichkeitstheorie">}
 \newline 
     
 \backslash 
@@ -415,7 +407,7 @@ collapsed true
 
 \layout Standard
 
-Dieser Schritt stellt eine Verallgemeinerung dar --- deshalb sind alle folgenden
+Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
  Aussagen auch wieder auf diskrete Zufallsgrößen anwendbar.
 \end_inset 
 
@@ -545,7 +537,7 @@ Die (jetzt) kontinuierliche Größe
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\pr(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\,\tdc x}\label{eq:prob_continuous}\end{equation}
+\boxed{\pr(a\leq X\leq b)=\int\limits _{a}^{b}p(x)\tic x}\label{eq:prob_continuous}\end{equation}
 
 \end_inset 
 
@@ -565,7 +557,7 @@ Wie bei den diskreten Zufallsgrößen muß die Wahrscheinlichkeit, daß
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{-\infty}^{\infty}p(x)\,\tdc x=1\label{eq:prob_continuous_unity}\end{equation}
+\int\limits _{-\infty}^{\infty}p(x)\tic x=1\label{eq:prob_continuous_unity}\end{equation}
 
 \end_inset 
 
@@ -592,7 +584,7 @@ Wegen der Notwendigkeit in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\pr(-\infty\leq X\leq x)=\pr(X\leq x)=\boxed{F(x)=\int\limits _{-\infty}^{x}p(u)\,\tdc u}\label{eq:prob_distribution}\end{equation}
+\pr(-\infty\leq X\leq x)=\pr(X\leq x)=\boxed{F(x)=\int\limits _{-\infty}^{x}p(u)\tic u}\label{eq:prob_distribution}\end{equation}
 
 \end_inset 
 
@@ -674,8 +666,8 @@ Die Existenz des uneigentlichen Integrals in Definitionsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\pr(a\leq x\leq b) & =\int\limits _{a}^{b}p(x)\,\tdc x\nonumber \\
- & =\lim_{c\rightarrow-\infty}\left[\int\limits _{c}^{b}p(x)\,\tdc x-\int\limits _{c}^{a}p(x)\,\tdc x\right]\nonumber \\
+\pr(a\leq x\leq b) & =\int\limits _{a}^{b}p(x)\tic x\nonumber \\
+ & =\lim_{c\rightarrow-\infty}\left[\int\limits _{c}^{b}p(x)\tic x-\int\limits _{c}^{a}p(x)\tic x\right]\nonumber \\
 \pr(a\leq x\leq b) & =F(b)-F(a)\end{align}
 
 \end_inset 
@@ -688,7 +680,7 @@ Der Erwartungswert
 
 \end_inset 
 
- ergibt sich wie bei den diskreten Zufallsgrößen --- jetzt wird aber jeder
+ ergibt sich wie bei den diskreten Zufallsgrößen -- jetzt wird aber jeder
  Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert
 \begin_inset Foot
 collapsed true
@@ -712,7 +704,7 @@ Stieltjes
 \end_inset 
 
 : 
-\begin_inset Formula $\mean(X)=\int_{-\infty}^{\infty}x\,\tdc F(x)$
+\begin_inset Formula $\mean(X)=\int_{-\infty}^{\infty}x\tic F(x)$
 \end_inset 
 
 .
@@ -723,7 +715,7 @@ Stieltjes
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x}\label{eq:prob_continuous_mean}\end{equation}
+\boxed{\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\tic x}\label{eq:prob_continuous_mean}\end{equation}
 
 \end_inset 
 
@@ -737,7 +729,7 @@ collapsed true
 \layout Standard
 
 Erwartungswert, Varianz und alle weiteren Integrale der Form 
-\begin_inset Formula $\int x^{i}p(x)\,\tdc x$
+\begin_inset Formula $\int x^{i}p(x)\tic x$
 \end_inset 
 
  nennt man (mit 
@@ -767,7 +759,7 @@ Erwartungswert, Varianz und alle weiteren Integrale der Form
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\var(X)=\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\,\tdc x}\label{eq:prob_continuous_var}\end{equation}
+\boxed{\var(X)=\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\tic x}\label{eq:prob_continuous_var}\end{equation}
 
 \end_inset 
 
@@ -779,9 +771,9 @@ und im weiteren
 
 
 \begin_inset Formula \begin{align*}
-\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\,\tdc x\\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-2\mean(X)\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x+\mean^{2}(X)\int\limits _{-\infty}^{\infty}p(x)\,\tdc x\\
- & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\,\tdc x-\mean^{2}(X)\msp.\end{align*}
+\var(X) & =\int\limits _{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\tic x\\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\tic x-2\mean(X)\int\limits _{-\infty}^{\infty}x\, p(x)\tic x+\mean^{2}(X)\int\limits _{-\infty}^{\infty}p(x)\tic x\\
+ & =\int\limits _{-\infty}^{\infty}x^{2}p(x)\tic x-\mean^{2}(X)\msp.\end{align*}
 
 \end_inset 
 
@@ -831,7 +823,7 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \end_inset 
 
  definiert: 
-\begin_inset Formula $\tilde{X}=\sqrt{\mean(X^{2})}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\,\tdc x}\msp$
+\begin_inset Formula $\tilde{X}=\sqrt{\mean(X^{2})}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\tic x}\msp$
 \end_inset 
 
 .
@@ -878,7 +870,7 @@ Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
 
 
 \begin_inset Formula \[
-\int\limits _{-\infty}^{\infty}p(x)\,\tdc x=\int\limits _{a}^{b}p(x)\,\tdc x=1\]
+\int\limits _{-\infty}^{\infty}p(x)\tic x=\int\limits _{a}^{b}p(x)\tic x=1\]
 
 \end_inset 
 
@@ -910,7 +902,7 @@ Der Erwartungswert nach Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\label{eq:prob_equal_mean}\end{equation}
+\mean(X)=\int\limits _{-\infty}^{\infty}x\, p(x)\tic x=\int\limits _{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\msp.\label{eq:prob_equal_mean}\end{equation}
 
 \end_inset 
 
@@ -1065,7 +1057,7 @@ itsdichte
 
 
 \begin_inset Formula \begin{equation}
-\boxed{F_{X}(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}}\label{eq:prob_distribution_multi}\end{equation}
+\boxed{F_{X}(x_{1},x_{2},\ldots,x_{n})=\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{x_{2}}\cdots\int\limits _{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}}\label{eq:prob_distribution_multi}\end{equation}
 
 \end_inset 
 
@@ -1163,8 +1155,8 @@ ie
 
 
 \begin_inset Formula \begin{align*}
-F_{i}(x_{i}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{i+1}\,\tdc u_{i}\,\tdc u_{i-1}\cdots\tdc u_{2}\,\tdc u_{1}\\
- & =\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{i+1}\,\tdc u_{i-1}\cdots\tdc u_{2}\,\tdc u_{1}\,\tdc u_{i}\end{align*}
+F_{i}(x_{i}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{i+1}\tic u_{i}\tic u_{i-1}\cdots\tdc u_{2}\tic u_{1}\\
+ & =\int\limits _{-\infty}^{x_{i}}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{i+1}\tic u_{i-1}\cdots\tdc u_{2}\tic u_{1}\tic u_{i}\end{align*}
 
 \end_inset 
 
@@ -1189,7 +1181,7 @@ Partielle Differentiation der Randverteilung
 
 
 \begin_inset Formula \[
-p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{i+1}\,\tdc x_{i-1}\cdots\tdc x_{2}\,\tdc x_{1}\]
+p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{i+1}\tic x_{i-1}\cdots\tdc x_{2}\tic x_{1}\]
 
 \end_inset 
 
@@ -1205,8 +1197,8 @@ Für den zweidimensionalen Fall (
 
 
 \begin_inset Formula \begin{align}
-F_{1}(x_{1}) & =\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2})\,\tdc u_{2}\,\tdc u_{1}\label{eq:prob_distribution_dual}\\
-p_{1}(x_{1}) & =\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{2}\msp.\label{eq:prob_density_dual}\end{align}
+F_{1}(x_{1}) & =\int\limits _{-\infty}^{x_{1}}\int\limits _{-\infty}^{\infty}p_{X}(u_{1},u_{2})\tic u_{2}\tic u_{1}\label{eq:prob_distribution_dual}\\
+p_{1}(x_{1}) & =\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\msp.\label{eq:prob_density_dual}\end{align}
 
 \end_inset 
 
@@ -1321,7 +1313,7 @@ hkeit genau so wie in Gleichung\SpecialChar ~
 
 \end_inset 
 
- definiert ist --- sie bestimmt die Wahrscheinlichkeit des Eintretens von
+ definiert ist -- sie bestimmt die Wahrscheinlichkeit des Eintretens von
  Ereignis 
 \begin_inset Formula $A$
 \end_inset 
@@ -1448,7 +1440,7 @@ resp
 
 
 \begin_inset Formula \[
-\boxed{\mean(X_{i})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{i}p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\ldots\tdc x_{2}\,\tdc x_{1}}\qquad1\leq i\leq n\]
+\boxed{\mean(X_{i})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}x_{i}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\ldots\tdc x_{2}\tic x_{1}}\qquad1\leq i\leq n\]
 
 \end_inset 
 
@@ -1696,7 +1688,7 @@ Für kontinuierliche Zufallsgößen kann die Kovarianz wiefolgt konkretisiert
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}}\label{eq:prob_cov_continuous}\end{equation}
+\boxed{\cov(X_{1},X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}}\label{eq:prob_cov_continuous}\end{equation}
 
 \end_inset 
 
@@ -1744,9 +1736,9 @@ und deshalb auch das Doppelintegral von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\cov(X_{1},X_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
- & =\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\,\tdc x_{2}\\
- & =\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\,\tdc x_{2}\end{align*}
+\cov(X_{1},X_{2}) & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})p_{2}(x_{2})\tic x_{1}\tic x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\tic x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\cdot\int\limits _{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\tic x_{2}\end{align*}
 
 \end_inset 
 
@@ -1758,8 +1750,8 @@ Wegen der allgemeingültigen Beziehung
 
 
 \begin_inset Formula \begin{align*}
-\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]\, p(x)\,\tdc x & =\int\limits _{-\infty}^{\infty}x\, p(x)\,\tdc x-\int\limits _{-\infty}^{\infty}\mean(X)\, p(x)\,\tdc x\\
- & =\mean(X)-\mean(X)\int\limits _{-\infty}^{\infty}\, p(x)\,\tdc x=0\end{align*}
+\int\limits _{-\infty}^{\infty}\left[x-\mean(X)\right]\, p(x)\tic x & =\int\limits _{-\infty}^{\infty}x\, p(x)\tic x-\int\limits _{-\infty}^{\infty}\mean(X)\, p(x)\tic x\\
+ & =\mean(X)-\mean(X)\int\limits _{-\infty}^{\infty}\, p(x)\tic x=0\end{align*}
 
 \end_inset 
 
@@ -2387,7 +2379,7 @@ resp
 
 
 \begin_inset Formula \begin{align*}
-F_{Y}(y) & =\int\limits _{-\infty}^{y}p_{y}(u)\,\tdc u=\int\limits _{h(-\infty)}^{h(y)}p_{x}(u)\,\tdc u\\
+F_{Y}(y) & =\int\limits _{-\infty}^{y}p_{y}(u)\tic u=\int\limits _{h(-\infty)}^{h(y)}p_{x}(u)\tic u\\
 F_{Y}(y) & =F_{X}\left[h(y)\right]-F_{X}\left[h(-\infty)\right]\end{align*}
 
 \end_inset 
@@ -2619,8 +2611,8 @@ Auch Gleichung\SpecialChar ~
 
 \end_inset 
 
- kann als Ausgangspunkt dienen --- nur ist man dann sofort mit der Interpretatio
-n von 
+ kann als Ausgangspunkt dienen -- nur ist man dann sofort mit der Interpretation
+ von 
 \begin_inset Formula $\left|h'(y)\right|\rightarrow\left|\mvec{h}'(\mvec{y})\right|$
 \end_inset 
 
@@ -2632,7 +2624,7 @@ n von
 
 
 \begin_inset Formula \begin{equation}
-p_{X}(\mvec{x})\,\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_density_differential}\end{equation}
+p_{X}(\mvec{x})\tic x_{1}\tic x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\tic y_{1}\tic y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_density_differential}\end{equation}
 
 \end_inset 
 
@@ -2703,7 +2695,7 @@ collapsed true
 \layout Standard
 
 Substitutionssatz für Mehrfach-Integrale: 
-\begin_inset Formula $\int_{h(B)}f(\mvec{x})\,\tdc\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec{J}_{h}\right|\,\tdc\mvec{z}$
+\begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec{J}_{h}\right|\tic\mvec{z}$
 \end_inset 
 
 .
@@ -2906,8 +2898,8 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 
 
 \begin_inset Formula \begin{align}
-F_{Y}(\mvec{y}) & =\int\limits _{-\infty}^{y_{1}}\int\limits _{-\infty}^{y_{2}}\cdots\int\limits _{-\infty}^{y_{n}}p_{Y}(u_{1},u_{2},\ldots,u_{n})\,\tdc u_{n}\cdots\tdc u_{2}\,\tdc u_{1}\nonumber \\
- & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\label{eq:prob_distribution_func_generic}\end{align}
+F_{Y}(\mvec{y}) & =\int\limits _{-\infty}^{y_{1}}\int\limits _{-\infty}^{y_{2}}\cdots\int\limits _{-\infty}^{y_{n}}p_{Y}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}\nonumber \\
+ & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\label{eq:prob_distribution_func_generic}\end{align}
 
 \end_inset 
 
@@ -2954,8 +2946,8 @@ Auf der Grundlage von Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{eqnarray*}
-\mean(Y_{i}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}y_{i}p_{Y}(y_{1},y_{2},\ldots,y_{n})\,\tdc y_{n}\cdots\tdc y_{2}\,\tdc y_{1}\\
- & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\,\tdc x_{n}\cdots\tdc x_{2}\,\tdc x_{1}\end{eqnarray*}
+\mean(Y_{i}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}y_{i}p_{Y}(y_{1},y_{2},\ldots,y_{n})\tic y_{n}\cdots\tdc y_{2}\tic y_{1}\\
+ & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}\cdots\int\limits _{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\end{eqnarray*}
 
 \end_inset 
 
@@ -2971,7 +2963,7 @@ Für den zweidimensionalen Spezialfall
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\mean(Y)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}}\label{eq:prob_mean_func_dual}\end{equation}
+\boxed{\mean(Y)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}}\label{eq:prob_mean_func_dual}\end{equation}
 
 \end_inset 
 
@@ -3217,7 +3209,7 @@ ie
 
 
 \begin_inset Formula \[
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\,\tdc y_{2}=-\frac{1}{2}\int\limits _{-\infty}^{\infty}p_{X}\left(\frac{y+y_{2}}{2},\frac{y-y_{2}}{2}\right)\,\tdc y_{2}\]
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=-\frac{1}{2}\int\limits _{-\infty}^{\infty}p_{X}\left(\frac{y+y_{2}}{2},\frac{y-y_{2}}{2}\right)\tic y_{2}\]
 
 \end_inset 
 
@@ -3251,7 +3243,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{X}\left(z,y-z\right)\,\tdc z}\label{eq:prob_continuous_add_dep}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{X}\left(z,y-z\right)\tic z}\label{eq:prob_continuous_add_dep}\end{equation}
 
 \end_inset 
 
@@ -3341,7 +3333,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\,\tdc z}\label{eq:prob_continuous_convolution}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z}\label{eq:prob_continuous_convolution}\end{equation}
 
 \end_inset 
 
@@ -3356,7 +3348,7 @@ collapsed false
 \layout Standard
 
 Faltung zweier Funktionen: 
-\begin_inset Formula $(f_{1}*f_{2})(t)=\int_{-\infty}^{\infty}f_{1}(u)f_{2}(t-u)\,\tdc u$
+\begin_inset Formula $(f_{1}*f_{2})(t)=\int_{-\infty}^{\infty}f_{1}(u)f_{2}(t-u)\tic u$
 \end_inset 
 
 .
@@ -3423,7 +3415,7 @@ Ausgangspunkt zur Bestimmung des Erwartungswertes der Zufallsgröße
 
 
 \begin_inset Formula \[
-\mean(Y)=\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}y\, p_{Y}(y)\,\tdc y\]
+\mean(Y)=\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}y\, p_{Y}(y)\tic y\]
 
 \end_inset 
 
@@ -3445,10 +3437,10 @@ Einsetzen der Wahrscheinlichkeitsdichte von
 
 
 \begin_inset Formula \begin{align*}
-\mean(X_{1}+X_{2}) & =\int\limits _{y=-\infty}^{\infty}y\int\limits _{x_{1}=-\infty}^{\infty}p_{X}(x_{1},y-x_{1})\,\tdc x_{1}\,\tdc y\\
- & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}(x_{1}+x_{2})\, p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
- & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\\
- & =\int\limits _{-\infty}^{\infty}x_{1}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}x_{2}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\,\tdc x_{1}\,\tdc x_{2}\msp.\end{align*}
+\mean(X_{1}+X_{2}) & =\int\limits _{y=-\infty}^{\infty}y\int\limits _{x_{1}=-\infty}^{\infty}p_{X}(x_{1},y-x_{1})\tic x_{1}\tic y\\
+ & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}(x_{1}+x_{2})\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{2}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
+ & =\int\limits _{-\infty}^{\infty}x_{1}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int\limits _{-\infty}^{\infty}x_{2}\int\limits _{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\msp.\end{align*}
 
 \end_inset 
 
@@ -3479,7 +3471,7 @@ Die inneren Integrale in beiden Summanden stellen nach Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}+\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\]
+\mean(X_{1}+X_{2})=\int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}+\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}\]
 
 \end_inset 
 
@@ -4107,7 +4099,7 @@ ie
 
 
 \begin_inset Formula \[
-p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\,\tdc y_{2}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\,\tdc y_{2}\]
+p_{Y}(y)=\int\limits _{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}\]
 
 \end_inset 
 
@@ -4141,9 +4133,9 @@ ie
 
 
 \begin_inset Formula \begin{eqnarray*}
-p_{Y}(y) & = & \int\limits _{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\,\tdc z\\
- & = & \int\limits _{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\,\tdc z\\
- & = & \int\limits _{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\,\tdc z+\int\limits _{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\,\tdc z\msp.\end{eqnarray*}
+p_{Y}(y) & = & \int\limits _{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\tic z\\
+ & = & \int\limits _{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\tic z\\
+ & = & \int\limits _{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int\limits _{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\tic z\msp.\end{eqnarray*}
 
 \end_inset 
 
@@ -4169,7 +4161,7 @@ on (
 \end_inset 
 
  die Funktion 
-\begin_inset Formula $v=\int_{-\infty}^{\infty}p_{X}(z,y/z)\,\tdc z$
+\begin_inset Formula $v=\int_{-\infty}^{\infty}p_{X}(z,y/z)\tic z$
 \end_inset 
 
  nur noch eine Funktion von 
@@ -4195,7 +4187,7 @@ ie
 
 
 \begin_inset Formula \[
-\int z\, p_{X}\left(z,y/z\right)\,\tdc z=zv-v\int\,\tdc z=zv-vz=0\]
+\int z\, p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0\]
 
 \end_inset 
 
@@ -4208,7 +4200,7 @@ n gilt also:
 
 
 \begin_inset Formula \begin{equation}
-\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\,\tdc z}\msp.\label{eq:prob_continuous_prd}\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\tic z}\msp.\label{eq:prob_continuous_prd}\end{equation}
 
 \end_inset 
 
@@ -4321,7 +4313,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\,\tdc z}\msp.\end{equation}
+\boxed{p_{Y}(y)=\int\limits _{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\tic z}\msp.\end{equation}
 
 \end_inset 
 
@@ -4356,7 +4348,7 @@ Den Erwartungswert von
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\mean(X_{1}X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\,\tdc x_{2}\,\tdc x_{1}}\msp.\label{eq:prob_prd_continuous_mean}\end{equation}
+\boxed{\mean(X_{1}X_{2})=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}}\msp.\label{eq:prob_prd_continuous_mean}\end{equation}
 
 \end_inset 
 
@@ -4394,8 +4386,8 @@ ie
 
 
 \begin_inset Formula \begin{eqnarray*}
-\mean(X_{1}X_{2}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\,\tdc x_{2}\,\tdc x_{1}\\
- & = & \int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\,\tdc x_{1}\cdot\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\,\tdc x_{2}\end{eqnarray*}
+\mean(X_{1}X_{2}) & = & \int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\tic x_{2}\tic x_{1}\\
+ & = & \int\limits _{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}\cdot\int\limits _{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}\end{eqnarray*}
 
 \end_inset 
 
@@ -4462,7 +4454,7 @@ Einsetzen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\var(Y) & =\int\limits _{-\infty}^{\infty}y^{2}p(y)\,\tdc y-\mean^{2}(Y)\\
+\var(Y) & =\int\limits _{-\infty}^{\infty}y^{2}p(y)\tic y-\mean^{2}(Y)\\
  & =\int\limits _{x=-\infty}^{\infty}y^{2}\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
  & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
  & =\int\limits _{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int\limits _{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
@@ -4703,7 +4695,7 @@ ktors
 \begin_inset Formula $(X_{1},X_{2})$
 \end_inset 
 
- --- nämlich der Abhängigkeit (
+ -- nämlich der Abhängigkeit (
 \begin_inset ERT
 status Collapsed
 
@@ -4741,7 +4733,7 @@ resp
 
  eng verwandte) Größe
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -4830,7 +4822,7 @@ Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
 \begin_inset Formula $t_{0}$
 \end_inset 
 
- keine Bedeutung hat --- und definieren die sogenannte Autokorrelationsunktion
+ keine Bedeutung hat -- und definieren die sogenannte Autokorrelationsunktion
 \begin_inset LatexCommand \index{Autokorrelationsunktion}
 
 \end_inset 
@@ -4880,7 +4872,7 @@ cf
 
 
 \begin_inset Formula \[
-\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)p_{X}\left[x(t)x(t+\tau)\right]\,\tdc x(t)\,\tdc x(t+\tau)\msp.\]
+\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)p_{X}\left[x(t)x(t+\tau)\right]\tic x(t)\tic x(t+\tau)\msp.\]
 
 \end_inset 
 
@@ -4901,7 +4893,7 @@ Für ergodische Prozesse nimmt man nun zusätzlich noch an, daß der Erwartungswert
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\acf_{xx}(\tau)=\mean\left[x(t)x(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\,\tdc t=\overline{x(t)x(t+\tau)}}\label{eq:prob_acf_def}\end{equation}
+\boxed{\acf_{xx}(\tau)=\mean\left[x(t)x(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\tic t=\overline{x(t)x(t+\tau)}}\label{eq:prob_acf_def}\end{equation}
 
 \end_inset 
 
@@ -4941,8 +4933,8 @@ ie
 
 
 \begin_inset Formula \begin{eqnarray*}
-\acf_{xx}(-\tau) & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t-\tau)\,\tdc t\\
- & \overset{u:=t-\tau}{=} & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(u+\tau)x(u)\,\tdc u=\acf_{xx}(\tau)\end{eqnarray*}
+\acf_{xx}(-\tau) & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x(t-\tau)\tic t\\
+ & \overset{u:=t-\tau}{=} & \lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(u+\tau)x(u)\tic u=\acf_{xx}(\tau)\end{eqnarray*}
 
 \end_inset 
 
@@ -4984,7 +4976,7 @@ resp
 
 
 \begin_inset Formula \begin{equation}
-\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\,\tdc t=\mean\left[X^{2}(t)\right]=\tilde{X}^{2}=P\label{eq:prob_acf_zero}\end{equation}
+\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\tic t=\mean\left[X^{2}(t)\right]=\tilde{X}^{2}=P\label{eq:prob_acf_zero}\end{equation}
 
 \end_inset 
 
@@ -5012,7 +5004,7 @@ Ist
 \end_inset 
 
  (charakterisiert durch 
-\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t<\infty$
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic t<\infty$
 \end_inset 
 
 ), dann wird üblicherweise die Definition der AKF (sowie aller daraus abgeleitet
@@ -5038,7 +5030,7 @@ Ansonsten würde wegen der Division durch
 
 
 \begin_inset Formula \begin{equation}
-\acf_{xx}(\tau)=\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)\,\tdc t=\label{eq:prob_acf_energy_signals}\end{equation}
+\boxed{\acf_{xx}^{(E)}(\tau)=\int\limits _{-\infty}^{\infty}x(t)x(t+\tau)\tic t}\label{eq:prob_acf_energy_signals}\end{equation}
 
 \end_inset 
 
@@ -5064,7 +5056,7 @@ Für
 
 
 \begin_inset Formula \[
-\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\,\tdc t\cdot\int\limits _{T}x(t)\,\tdc t=\left[\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\,\tdc t\right]^{2}=\overline{x(t)}^{2}\]
+\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\tic t\cdot\int\limits _{T}x(t)\tic t=\left[\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\tic t\right]^{2}=\overline{x(t)}^{2}\]
 
 \end_inset 
 
@@ -5093,7 +5085,7 @@ Wegen Punkt\SpecialChar ~
 
  gilt immer die Relation
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -5101,8 +5093,13 @@ Hintergrund ist die
 \noun on 
 Cauchy-Schwarz
 \noun default 
-'sche Ungleichung in der Form 
-\begin_inset Formula $\left|\int f\cdot g\,\tdc x\right|^{2}\leq\int\left|f\right|^{2}\,\tdc x\cdot\int\left|g\right|^{2}\,\tdc x$
+'sche Ungleichung
+\begin_inset LatexCommand \index{Cauchy-Schwarz@\noun{Cauchy-Schwarz}'sche Ungleichung}
+
+\end_inset 
+
+ in der Form 
+\begin_inset Formula $\left|\int f\cdot g\tic x\right|^{2}\leq\int\left|f\right|^{2}\tic x\cdot\int\left|g\right|^{2}\tic x$
 \end_inset 
 
 .
@@ -5132,8 +5129,8 @@ Aus Eigenschaft\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\acf_{xx}(\tau)=\acf_{xx}(-\tau) & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x[t]x[-(\tau-t)]\,\tdc t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x[t]x[-(\tau-t)]\,\tdc t\\
+\acf_{xx}(\tau)=\acf_{xx}(-\tau) & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)x[-(\tau-t)]\tic t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)x[-(\tau-t)]\tic t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\end{align*}
 
 \end_inset 
@@ -5144,6 +5141,28 @@ Aus Eigenschaft\SpecialChar ~
 
 \begin_inset Formula \begin{equation}
 \boxed{\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\conjgt{x})(\tau)}\label{eq:prob_acf_conv}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Für (determinierte) Energiesignale entfällt der Limes, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Energie-AKF ist ganz einfach die Faltung
+\layout Standard
+
+
+\begin_inset Formula \[
+\acf_{xx}^{(E)}(\tau)=(x*\conjgt{x})(\tau)\msp.\]
 
 \end_inset 
 
@@ -5173,7 +5192,7 @@ zwei
 \end_inset 
 
  
-\begin_inset Formula $\ccf_{xy}(\tau)$
+\begin_inset Formula $\acf_{xy}(\tau)$
 \end_inset 
 
  genannt wird.
@@ -5181,7 +5200,7 @@ zwei
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\ccf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\, y(t+\tau)\,\tdc t}\label{eq:prob_ccf_def}\end{equation}
+\boxed{\acf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x(t)\, y(t+\tau)\tic t}\label{eq:prob_ccf_def}\end{equation}
 
 \end_inset 
 
@@ -5225,7 +5244,7 @@ Für Energiesignale existiert wieder eine abgewandelte Form (ohne Limes)
 
 
 \begin_inset Formula \[
-\ccf_{xy}(\tau)=\int\limits _{-\infty}^{\infty}x(t)y(t+\tau)\,\tdc t=(x*\conjgt{y})(\tau)\]
+\acf_{xy}^{(E)}(\tau)=\int\limits _{-\infty}^{\infty}x(t)y(t+\tau)\tic t=(x*\conjgt{y})(\tau)\]
 
 \end_inset 
 
@@ -5299,7 +5318,7 @@ resp
 
 
 \begin_inset Formula \[
-P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\,\tdc t\]
+P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{T}x^{2}(t)\tic t\]
 
 \end_inset 
 
@@ -5334,7 +5353,7 @@ Fourier
 
 
 \begin_inset Formula \[
-X(\omega)=\int\limits _{-\infty}^{\infty}x(t)\,\e^{-\jw t}\,\tdc t\]
+X(\omega)=\int\limits _{-\infty}^{\infty}x(t)\,\e^{-\jw t}\tic t\]
 
 \end_inset 
 
@@ -5346,7 +5365,7 @@ muß für die Exsitenz von
 \end_inset 
 
  aber konvergieren, was man bei Zufallsprozessen wegen 
-\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc x(t)\Rightarrow\infty$
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic x(t)\Rightarrow\infty$
 \end_inset 
 
  normalerweise nicht gewährleisten kann.
@@ -5377,7 +5396,7 @@ Fourier
 
 
 \begin_inset Formula \[
-\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\acf_{xx}(\tau)\,\e^{-\jw\tau}\,\tdc\tau\]
+\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\acf_{xx}(\tau)\,\e^{-\jw\tau}\tic\tau\]
 
 \end_inset 
 
@@ -5399,8 +5418,8 @@ und ersetzen mit Hilfe von Formel\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\left[\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\,\tdc t\right]\,\e^{-\jw\tau}\,\tdc\tau\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}\int\limits _{-T/2}^{T/2}x(t)x(t+\tau)\,\e^{-\jw\tau}\,\tdc t\,\tdc\tau\end{align*}
+\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\int\limits _{-T/2}^{T/2}\left[\frac{1}{T}\int\limits _{T}x(t)x(t+\tau)\tic t\right]\,\e^{-\jw\tau}\tic\tau\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}\int\limits _{-T/2}^{T/2}x(t)x(t+\tau)\,\e^{-\jw\tau}\tic t\tic\tau\end{align*}
 
 \end_inset 
 
@@ -5437,10 +5456,10 @@ Wobei die Integrationsgrenzen
 
 
 \begin_inset Formula \begin{align*}
-\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(t+\tau)\,\e^{-\jw\tau}\,\tdc\tau\,\tdc t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw(u-t)}\,\tdc u\,\tdc t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\jw(-t)}\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\,\tdc u\,\tdc t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\ji(-\omega)t}\tdc t\cdot\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\,\tdc u\\
+\ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(t+\tau)\,\e^{-\jw\tau}\tic\tau\tic t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw(u-t)}\tic u\tic t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\jw(-t)}\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\tic u\tic t\\
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int\limits _{-T/2}^{T/2}x(t)\,\e^{-\ji(-\omega)t}\tdc t\cdot\int\limits _{-T/2}^{T/2}x(u)\,\e^{-\jw u}\tic u\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\jw)X(\jw)\end{align*}
 
 \end_inset 
@@ -5471,12 +5490,12 @@ resp
 \end_inset 
 
  
-\begin_inset Formula $\lim_{T\rightarrow\infty}T^{-1}\int x^{2}(t)\,\tdc t$
+\begin_inset Formula $\lim_{T\rightarrow\infty}T^{-1}\int x^{2}(t)\tic t$
 \end_inset 
 
  endlich
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -5485,7 +5504,7 @@ Man kann sich auch vorstellen, daß
 \end_inset 
 
  nur das Doppelintegral 
-\begin_inset Formula $\int\int x(t)x(t+\tau)\,\e^{-\jw\tau}\,\tdc t\,\tdc\tau$
+\begin_inset Formula $\int\int x(t)x(t+\tau)\,\e^{-\jw\tau}\tic t\tic\tau$
 \end_inset 
 
  über 
@@ -5543,7 +5562,7 @@ Chintchin
 
 ) ganz einfach ergibt, wenn man den Faltungssatz
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -5682,7 +5701,7 @@ Die mittlere Leistung
 
 
 \begin_inset Formula \[
-P=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+P=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega\]
 
 \end_inset 
 
@@ -5698,7 +5717,7 @@ Für diesen Nachweis geht man am Besten von der bekannten Beziehung
 
 
 \begin_inset Formula \[
-P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\e^{\jw\tau}\,\tdc\omega=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\tdc\omega\]
+P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\,\e^{\jw\tau}\tic\omega=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega\]
 
 \end_inset 
 
@@ -5770,7 +5789,7 @@ Deshalb auch
 \emph on 
 weißes
 \emph default 
- Rauschen --- wie weißes Licht, also Licht in dem alle Frequenzen gleichermaßen
+ Rauschen -- wie weißes Licht, also Licht in dem alle Frequenzen gleichermaßen
  enthalten sind.
 \end_inset 
 
@@ -5832,7 +5851,7 @@ Bei Anwendung der modifizierten Formel
 
 
 \begin_inset Formula \[
-\sed_{xx}(\omega)=\left|X(\jw)\right|^{2}=\ft\left\{ \acf_{xx}(\tau)\right\} \msp.\]
+\spd_{xx}^{(E)}(\omega)=\left|X(\jw)\right|^{2}=\ft\left\{ \acf_{xx}^{(E)}(\tau)\right\} \msp.\]
 
 \end_inset 
 
@@ -5852,7 +5871,7 @@ Parseval
 
 
 \begin_inset Formula \[
-E=\int\limits _{-\infty}^{\infty}\left|X(\jw)\right|^{2}\tdc\omega=\int\limits _{-\infty}^{\infty}\sed_{xx}(\omega)\,\tdc\omega\msp,\]
+E=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\left|X(\jw)\right|^{2}\tdc\omega=\frac{1}{2\pi}\int\limits _{-\infty}^{\infty}\spd_{xx}^{(E)}(\omega)\tic\omega\msp,\]
 
 \end_inset 
 
@@ -5864,7 +5883,7 @@ dann bestätigt uns das Differential
 
 
 \begin_inset Formula \[
-\frac{\tdc E}{\tdc\omega}=\sed_{xx}(\omega)\]
+\frac{\tdc E}{\tdc\omega}=\spd_{xx}^{(E)}(\omega)\]
 
 \end_inset 
 
@@ -5980,7 +5999,7 @@ cf
 
 
 \begin_inset Formula \[
-\spd_{xy}(\jw)=\ft\left\{ \ccf_{xy}(\tau)\right\} \]
+\spd_{xy}(\jw)=\ft\left\{ \acf_{xy}(\tau)\right\} \]
 
 \end_inset 
 
@@ -5988,7 +6007,7 @@ cf
 \layout Standard
 
 Für Energiesignale (
-\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t\,<\infty$
+\begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic t\,<\infty$
 \end_inset 
 
 ) ist die Kreuzenergiedichte
@@ -6002,7 +6021,7 @@ Für Energiesignale (
 
 
 \begin_inset Formula \[
-\sed_{xy}(\jw)=X(\jw)\,\conjgt{Y}(\jw)\;\rft\;\ccf_{xy}(\tau)\]
+\spd_{xy}^{(E)}(\jw)=X(\jw)\,\conjgt{Y}(\jw)\;\rft\;\acf_{xy}^{(E)}(\tau)\]
 
 \end_inset 
 
@@ -6232,7 +6251,7 @@ und so für die (zeitinvarianten) Autokorrelationsfunktionen:
 
 Bedenkt man noch, daß die Übertragungsfunktion eines LTI-Systems gleichzeitig
  die Fourier-Transformierte der Impulsantwort 
-\begin_inset Formula $g(t)$
+\begin_inset Formula $\irf(t)$
 \end_inset 
 
  ist,
@@ -6240,7 +6259,7 @@ Bedenkt man noch, daß die Übertragungsfunktion eines LTI-Systems gleichzeitig
 
 
 \begin_inset Formula \[
-\trf(\jw)\rft\; g(t)\qquad\qquad\conjgt{\trf}(\jw)\rft\;\conjgt{g}(t)=g(-t)\]
+\trf(\jw)\rft\;\irf(t)\qquad\qquad\conjgt{\trf}(\jw)\rft\;\conjgt{\irf}(t)=\irf(-t)\]
 
 \end_inset 
 
@@ -6271,7 +6290,54 @@ Fourier
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\acf_{yy}(\tau)=(g*\conjgt{g}*\acf_{xx})(\tau)}\label{eq:prob_lti_time_conv}\end{equation}
+\boxed{\acf_{yy}(\tau)=(\irf*\conjgt{\irf}*\acf_{xx})(\tau)}\label{eq:prob_lti_time_conv}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Faßt man der Übersichtlichkeit halber noch 
+\begin_inset Formula $(\irf*\conjgt{\irf})(\tau)$
+\end_inset 
+
+ als Energie-AKF 
+\begin_inset Formula $\acf_{\trf}^{(E)}(\tau)$
+\end_inset 
+
+ eines stabilen LTI-Systems nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:prob_acf_energy_signals}
+
+\end_inset 
+
+ zusammen,
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{\trf}^{(E)}(\tau)=(\irf*\conjgt{\irf})(\tau)\,\lft\,\spd_{\trf}^{(E)}(\omega)=\left|\trf(\jw)\right|^{2}}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+so erhält man die 
+\noun on 
+Wiener-Lee
+\noun default 
+-Beziehung
+\begin_inset LatexCommand \index{Wiener-Lee-Beziehung@\noun{Wiener-Lee}-Beziehung}
+
+\end_inset 
+
+ in ihrer geläufigen Form.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\acf_{yy}(\tau)=(\acf_{\trf}^{(E)}*\acf_{xx})(\tau)}\label{eq:prob_wiener_lee}\end{equation}
 
 \end_inset 
 
@@ -6316,7 +6382,7 @@ eg
 
 
 \begin_inset Formula \[
-\sed_{yy}(\omega)=\left|\trf(\jw)\right|^{2}\sed_{xx}(\omega)\]
+\spd_{yy}^{(E)}(\omega)=\left|\trf(\jw)\right|^{2}\spd_{xx}^{(E)}(\omega)\]
 
 \end_inset 
 
@@ -6476,7 +6542,7 @@ ie
 \end_inset 
 
  mit der Impulsantwort 
-\begin_inset Formula $g(t)\,\lft\,\trf_{opt}(\jw)$
+\begin_inset Formula $\irf(t)\,\lft\,\trf_{opt}(\jw)$
 \end_inset 
 
  aus.
@@ -6484,7 +6550,7 @@ ie
 
 
 \begin_inset Formula \[
-y^{2}(t_{0})=\left[\left.(g*x)\right|_{t=t_{0}}\right]^{2}=\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}\]
+y^{2}(t_{0})=\left[\left.(\irf*x)\right|_{t=t_{0}}\right]^{2}=\left[\int\limits _{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}\]
 
 \end_inset 
 
@@ -6507,6 +6573,8 @@ eg
 
 \end_inset 
 
+\SpecialChar ~
+ff.
  
 \begin_inset Formula $\acf_{yy}(\tau)$
 \end_inset 
@@ -6540,7 +6608,7 @@ Dirac
 
 
 \begin_inset Formula \[
-\acf_{yy}(\tau)=(g*\conjgt{g}*\acf_{xx})(\tau)=\spd_{0}\left.g(\tau)*g(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t\]
+\acf_{yy}(\tau)=(\irf*\conjgt{\irf}*\acf_{xx})(\tau)=\spd_{0}\left.\irf(\tau)*\irf(-\tau)\right|_{\tau=0}=\spd_{0}\int\limits _{-\infty}^{\infty}{\irf}^{2}(t)\tic t\]
 
 \end_inset 
 
@@ -6552,7 +6620,7 @@ Bringen wir nun beide Zwischenergebnisse zusammen
 
 
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int\limits _{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\]
 
 \end_inset 
 
@@ -6560,7 +6628,7 @@ Bringen wir nun beide Zwischenergebnisse zusammen
 \layout Standard
 
 und erweitern den Bruch noch um 
-\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t)\,\tdc t$
+\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t)\tic t$
 \end_inset 
 
 , welches mit der Substitution 
@@ -6568,7 +6636,7 @@ und erweitern den Bruch noch um
 \end_inset 
 
  in 
-\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t$
+\begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t$
 \end_inset 
 
  übergeht.
@@ -6576,7 +6644,7 @@ und erweitern den Bruch noch um
 
 
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}g(t)x(t_{0}-t)\,\tdc t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t}\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int\limits _{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int\limits _{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\cdot\frac{E}{\int\limits _{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}\]
 
 \end_inset 
 
@@ -6605,7 +6673,7 @@ ffizient
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int\limits _{-\infty}^{\infty}x_{1}(t)x_{2}(t)\,\tdc t}{\sqrt{\int\limits _{-\infty}^{\infty}x_{1}^{2}(t)\,\tdc t\;\int\limits _{-\infty}^{\infty}x_{2}^{2}(t)\,\tdc t}}}\end{equation}
+\boxed{\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int\limits _{-\infty}^{\infty}x_{1}(t)x_{2}(t)\tic t}{\sqrt{\int\limits _{-\infty}^{\infty}x_{1}^{2}(t)\tic t\;\int\limits _{-\infty}^{\infty}x_{2}^{2}(t)\tic t}}}\end{equation}
 
 \end_inset 
 
@@ -6613,7 +6681,7 @@ ffizient
 \layout Standard
 
 zwischen 
-\begin_inset Formula $g(t)$
+\begin_inset Formula $\irf(t)$
 \end_inset 
 
  und 
@@ -6625,7 +6693,7 @@ zwischen
 
 
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int\limits _{-\infty}^{\infty}g(u)x(t_{0}-u)\,\tdc u\right]^{2}}{\int_{-\infty}^{\infty}g^{2}(t)\,\tdc t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\,\tdc t}=\frac{E}{\spd_{0}}\corr^{2}\left[g(t),x(t_{0}-t)\right]\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int\limits _{-\infty}^{\infty}\irf(u)x(t_{0}-u)\tic u\right]^{2}}{\int\limits _{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\cdot\frac{E}{\int\limits _{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}=\frac{E}{\spd_{0}}\corr^{2}\left[\irf(t),x(t_{0}-t)\right]\]
 
 \end_inset 
 
@@ -6644,7 +6712,7 @@ Wie wir aus Abschnitt\SpecialChar ~
 \end_inset 
 
  dann am größten, wenn beide Funktionen linear abhängig sind, also 
-\begin_inset Formula $g(t)=k\, x(t_{0}-t)$
+\begin_inset Formula $\irf(t)=k\, x(t_{0}-t)$
 \end_inset 
 
  gilt.
@@ -6697,7 +6765,7 @@ Das Nutzsignal
 
 
 \begin_inset Formula \begin{align*}
-y(t) & =x(t)*g(t)=k\, x(t)*x(t_{0}-t)\\
+y(t) & =x(t)*\irf(t)=k\, x(t)*x(t_{0}-t)\\
 Y(\jw) & =\trf(\jw)\, X(\jw)=k\, X(\jw)\conjgt{X}\e^{-\jw t_{0}}=k\,\left|X(\jw)\right|^{2}\e^{-\jw t_{0}}\msp.\end{align*}
 
 \end_inset 
@@ -6902,7 +6970,7 @@ ie
 \begin_inset Formula $\Lambda+\Delta$
 \end_inset 
 
- --- und zwar mit gleicher Wahrscheinlichkeit --- quantisiert.
+ -- und zwar mit gleicher Wahrscheinlichkeit -- quantisiert.
  Dadurch ist der Fehler
 \begin_inset LatexCommand \index{Quantisierung!Fehler}
 
@@ -7511,6 +7579,18 @@ Notation
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\acf_{xx}^{(E)}$
+\end_inset 
+
+ Autokorrelationsfunktion des Energiesignals 
+\begin_inset Formula $x(t)$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\log$
 \end_inset 
 
@@ -7591,6 +7671,14 @@ Euler
 \labelwidthstring 00.00.0000
 
 
+\begin_inset Formula $\irf(t)$
+\end_inset 
+
+ Impulsantwort
+\layout List
+\labelwidthstring 00.00.0000
+
+
 \begin_inset Formula $\conjgt{x}(t)$
 \end_inset 
 
@@ -7639,7 +7727,7 @@ Euler
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\ccf_{xy}$
+\begin_inset Formula $\acf_{xy}$
 \end_inset 
 
  Kreuzkorrelationsfunktion der Zufallsprozesse 
@@ -7691,7 +7779,7 @@ SNR Signal-Rausch-Abstand
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\sed_{xx}$
+\begin_inset Formula $\spd_{xx}^{(E)}$
 \end_inset 
 
  Spektrale Energiedichte des Signals 
