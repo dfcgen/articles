@@ -3,16 +3,15 @@
 \textclass article
 \begin_preamble
 \input{text-inc}
+\input{pdf-inc}
 \input{math-inc}
 
-%% \usepackage{chapterbib}
+\usepackage{html}
+\usepackage{multicol}
 
 \DeclareMathOperator{\crc}{CRC}
 
-\newcommand{\tabx} [1] {\ding{#1}}
-%% \newcommand{\res} [2] {\overline{#1}} % residue class
-%% \newcommand{\res} [2] {{\left\{ {#1} \right\} }_{#2}} % residue class
-\newcommand{\res} [2] {{\left[ {#1} \right] }_{#2}} % residue class
+%% \usepackage{chapterbib}
 \end_preamble
 \language german
 \inputencoding latin1
@@ -36,7 +35,85 @@
 \quotes_times 2
 \papercolumns 1
 \papersides 1
-\paperpagestyle default
+\paperpagestyle fancy
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+%% Document Info
+\layout Standard
+%% Needs some macro definitions from include files in ~/.TeX
+\layout Standard
+%% 
+\layout Standard
+%% $Id: crc.lyx,v 1.2 2005-05-01 07:46:05 ralf Exp $
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Open
+
+\layout Standard
+
+\backslash 
+begin{htmlonly}
+\newline 
+    
+\backslash 
+originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="robots" CONTENT="index, follow">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="CRC">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="CRC Algebra">}
+\newline 
+    
+\backslash 
+germanTeX
+\newline 
+
+\newline 
+    
+\backslash 
+renewenvironment{algorithm}[1][htbp] 
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
+\backslash 
+end{rawhtml} }
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <br> <hr> <br> <br> 
+\backslash 
+end{rawhtml} }
+\newline 
+
+\newline 
+
+\backslash 
+end{htmlonly}
+\end_inset 
+
 
 \layout Title
 
@@ -74,17 +151,7 @@ Oft besteht die Forderung den Verlust (oder auch die Manipulation) von Daten
  Einer der häufigsten Anwendungsfälle ist die Datenübertragung, bei welcher
  die Informationen meist blockweise strukturiert sind.
  Ein bevorzugtes Verfahren für diese Aufgabe ist das sogenannte CRC (Cyclic
- Redundancy Check), welches 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-eg
-\end_inset 
-
- als 
+ Redundancy Check), welches häufig als 
 \emph on 
 Frame Check Sequence
 \emph default 
@@ -1138,6 +1205,14 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest
  über einen Tabellenzugriff sehr schnell zu ermitteln.
 \layout Standard
 
+
+\begin_inset LatexCommand \printindex{}
+
+\end_inset 
+
+
+\layout Standard
+\pagebreak_bottom 
 
 \begin_inset LatexCommand \BibTeX[gerplain]{adsp,computers,crypto,math}
 
