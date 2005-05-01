@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: optimal.eps
 %%Creator: fig2dev Version 3.2 Patchlevel 3d
-%%CreationDate: Sun Jan  2 16:23:10 2005
+%%CreationDate: Wed Jan  5 10:37:56 2005
 %%For: ralf@dfcgen (Ralf Hoppe)
 %%BoundingBox: 0 0 308 141
 %%Magnification: 1.0000
@@ -268,6 +268,10 @@ $F2psDict /mtrx matrix put
 end
 save
 newpath 0 141 moveto 0 0 lineto 308 0 lineto 308 141 lineto closepath clip newpath
+% Fill background color
+0 0 moveto 308 0 lineto 308 141 lineto 0 141 lineto
+closepath 1.00 1.00 1.00 setrgbcolor fill
+
 -8.3 144.7 translate
 1 -1 scale
 
@@ -302,6 +306,44 @@ newpath 0 141 moveto 0 0 lineto 308 0 lineto 308 141 lineto closepath clip newpa
   bind def
 /shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
   4 -2 roll mul srgb} bind def
+/reencdict 12 dict def /ReEncode { reencdict begin
+/newcodesandnames exch def /newfontname exch def /basefontname exch def
+/basefontdict basefontname findfont def /newfont basefontdict maxlength dict def
+basefontdict { exch dup /FID ne { dup /Encoding eq
+{ exch dup length array copy newfont 3 1 roll put }
+{ exch newfont 3 1 roll put } ifelse } { pop pop } ifelse } forall
+newfont /FontName newfontname put newcodesandnames aload pop
+128 1 255 { newfont /Encoding get exch /.notdef put } for
+newcodesandnames length 2 idiv { newfont /Encoding get 3 1 roll put } repeat
+newfontname newfont definefont pop end } def
+/isovec [
+8#055 /minus 8#200 /grave 8#201 /acute 8#202 /circumflex 8#203 /tilde
+8#204 /macron 8#205 /breve 8#206 /dotaccent 8#207 /dieresis
+8#210 /ring 8#211 /cedilla 8#212 /hungarumlaut 8#213 /ogonek 8#214 /caron
+8#220 /dotlessi 8#230 /oe 8#231 /OE
+8#240 /space 8#241 /exclamdown 8#242 /cent 8#243 /sterling
+8#244 /currency 8#245 /yen 8#246 /brokenbar 8#247 /section 8#250 /dieresis
+8#251 /copyright 8#252 /ordfeminine 8#253 /guillemotleft 8#254 /logicalnot
+8#255 /hyphen 8#256 /registered 8#257 /macron 8#260 /degree 8#261 /plusminus
+8#262 /twosuperior 8#263 /threesuperior 8#264 /acute 8#265 /mu 8#266 /paragraph
+8#267 /periodcentered 8#270 /cedilla 8#271 /onesuperior 8#272 /ordmasculine
+8#273 /guillemotright 8#274 /onequarter 8#275 /onehalf
+8#276 /threequarters 8#277 /questiondown 8#300 /Agrave 8#301 /Aacute
+8#302 /Acircumflex 8#303 /Atilde 8#304 /Adieresis 8#305 /Aring
+8#306 /AE 8#307 /Ccedilla 8#310 /Egrave 8#311 /Eacute
+8#312 /Ecircumflex 8#313 /Edieresis 8#314 /Igrave 8#315 /Iacute
+8#316 /Icircumflex 8#317 /Idieresis 8#320 /Eth 8#321 /Ntilde 8#322 /Ograve
+8#323 /Oacute 8#324 /Ocircumflex 8#325 /Otilde 8#326 /Odieresis 8#327 /multiply
+8#330 /Oslash 8#331 /Ugrave 8#332 /Uacute 8#333 /Ucircumflex
+8#334 /Udieresis 8#335 /Yacute 8#336 /Thorn 8#337 /germandbls 8#340 /agrave
+8#341 /aacute 8#342 /acircumflex 8#343 /atilde 8#344 /adieresis 8#345 /aring
+8#346 /ae 8#347 /ccedilla 8#350 /egrave 8#351 /eacute
+8#352 /ecircumflex 8#353 /edieresis 8#354 /igrave 8#355 /iacute
+8#356 /icircumflex 8#357 /idieresis 8#360 /eth 8#361 /ntilde 8#362 /ograve
+8#363 /oacute 8#364 /ocircumflex 8#365 /otilde 8#366 /odieresis 8#367 /divide
+8#370 /oslash 8#371 /ugrave 8#372 /uacute 8#373 /ucircumflex
+8#374 /udieresis 8#375 /yacute 8#376 /thorn 8#377 /ydieresis] def
+/Times-Roman /Times-Roman-iso isovec ReEncode
  /DrawEllipse {
 	/endangle exch def
 	/startangle exch def
@@ -324,16 +366,10 @@ $F2psBegin
 %
 % Fig objects follow
 %
-/Times-Bold ff 210.00 scf sf
-2325 1275 m
-gs 1 -1 sc (T) dup sw pop neg 0 rm  col0 sh gr
-/Times-Roman ff 150.00 scf sf
-2325 1350 m
-gs 1 -1 sc (opt) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 3975 1350 m
 gs 1 -1 sc (0) col0 sh gr
-/Times-Roman ff 180.00 scf sf
+/Times-Roman-iso ff 180.00 scf sf
 3975 1275 m
 gs 1 -1 sc (t) dup sw pop neg 0 rm  col0 sh gr
 7.500 slw
@@ -417,39 +453,45 @@ n 3900 1275 m 3898 1276 l 3894 1277 l 3888 1280 l 3879 1285 l 3868 1291 l
 % arrowhead
 0 slj
 n 3659 1586 m 3677 1709 l 3718 1592 l 3659 1586 l  cp gs col7 1.00 shd ef gr  col0 s
-/Times-Roman ff 165.00 scf sf
+/Times-Roman-iso ff 165.00 scf sf
 1125 450 m
 gs 1 -1 sc (n  \(t\)) dup sw pop 2 div neg 0 rm  col0 sh gr
-/Times-Roman ff 165.00 scf sf
+/Times-Roman-iso ff 165.00 scf sf
 1050 1950 m
 gs 1 -1 sc (Kanal) dup sw pop 2 div neg 0 rm  col0 sh gr
-/Times-Roman ff 180.00 scf sf
+/Times-Roman-iso ff 180.00 scf sf
 150 1500 m
 gs 1 -1 sc (x\(t\)) col0 sh gr
-/Times-Roman ff 180.00 scf sf
+/Times-Roman-iso ff 180.00 scf sf
 3000 1500 m
 gs 1 -1 sc (y\(t\)) col0 sh gr
-/Times-Roman ff 165.00 scf sf
+/Times-Roman-iso ff 165.00 scf sf
 4275 1800 m
 gs 1 -1 sc (y\(t  \) + n  \(t  \)) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 4465 1860 m
 gs 1 -1 sc (0) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 1060 485 m
 gs 1 -1 sc (x) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 5005 1850 m
 gs 1 -1 sc (0) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 4870 1840 m
 gs 1 -1 sc (y) col0 sh gr
-/Times-Roman ff 165.00 scf sf
+/Times-Roman-iso ff 165.00 scf sf
 3000 1080 m
 gs 1 -1 sc (n  \(t\)) col0 sh gr
-/Times-Roman ff 120.00 scf sf
+/Times-Roman-iso ff 120.00 scf sf
 3095 1120 m
 gs 1 -1 sc (y) col0 sh gr
+/Times-Roman-iso ff 165.00 scf sf
+2400 1200 m
+gs 1 -1 sc (Optimal-) dup sw pop 2 div neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 165.00 scf sf
+2400 1425 m
+gs 1 -1 sc (filter) dup sw pop 2 div neg 0 rm  col0 sh gr
 % Ellipse
 n 3900 1575 75 75 0 360 DrawEllipse gs col-1 s gr
 
