@@ -7,6 +7,7 @@
 \input{electr-inc.tex}
 
 \usepackage{html}
+%% \usepackage{showidx}
 \end_preamble
 \options reqno
 \language german
@@ -41,7 +42,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.1 2005-01-16 17:39:26 ralf Exp $
+Version: $Id: analysis.lyx,v 1.2 2005-05-01 07:42:03 ralf Exp $
 \end_inset 
 
 
@@ -62,10 +63,6 @@ originalTeX %% Needed because "> in htmlmeta produces french guillemets in germa
 \newline 
     
 \backslash 
-htmlmeta{<META HTTP-EQUIV="content-language" CONTENT="de">}
-\newline 
-    
-\backslash 
 htmlmeta{<META NAME="robots" CONTENT="index, follow">}
 \newline 
     
@@ -74,15 +71,11 @@ htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="description" LANG ="de" CONTENT="Analysis f&uuml;r Systemtheorie">}
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="Grundlagen der Funktionentheorie">}
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Systemtherie, SIgnalverarbeitung, Analysis">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="classification" LANG ="de" CONTENT="Mathematik, Analysis">}
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie">}
 \newline 
     
 \backslash 
@@ -126,7 +119,7 @@ end{htmlonly}
 
 \layout Title
 
-Funktionentheorie --- Grundlagen
+Funktionentheorie -- Grundlagen
 \layout Author
 
 Copyright 
@@ -156,15 +149,7 @@ status Collapsed
 resp
 \end_inset 
 
- als 
-\begin_inset Quotes eld
-\end_inset 
-
-schmales
-\begin_inset Quotes erd
-\end_inset 
-
- praktisches Nachschlagewerk dienen.
+ als praktisches Nachschlagewerk dienen.
  Empfehlenswert für einen tieferen Einstieg halte ich vor allem\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Whittaker:1927}
@@ -182,23 +167,28 @@ schmales
 
 \layout Section
 
-Eigenschaften analytischer Funktionen
+Analytische Funktionen
+\begin_inset LatexCommand \index{Funktionentheorie|(}
+
+\end_inset 
+
+
 \layout Subsection
 
 Holomorphie
 \layout Standard
 
-
-\begin_inset LatexCommand \index{Funktionen!Analytische}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Funktionen!Holomorphe}
+Analytische
+\begin_inset LatexCommand \index{Analytische Funktion!Holomorphie}
 
 \end_inset 
 
-Analytische (im Sinne der Analysis) 
+
+\begin_inset LatexCommand \index{Holomorphie}
+
+\end_inset 
+
+ 
 \begin_inset ERT
 status Collapsed
 
@@ -217,8 +207,8 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \[
-\boxed{\frac{\tdc f(z)}{\tdc z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}}\]
+\begin_inset Formula \begin{equation}
+\boxed{\tdiff{f(z)}{z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}}\label{eq:analysis_derivative_def}\end{equation}
 
 \end_inset 
 
@@ -245,6 +235,26 @@ One-Valued
 \emph default 
 ) spielt auf Funktionen an, bei denen er davon abhängt, aus welcher Richtung
  man sich nähert.
+ Er kann sogar dann existieren, wenn der Funktionswert selbst nicht existiert
+ (wie 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ bei der Funktion 
+\begin_inset Formula $\sin z/z$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $z=0$
+\end_inset 
+
+).
 \end_inset 
 
  ist, die also an der Stelle 
@@ -260,7 +270,7 @@ One-Valued
 \begin_inset Formula $z$
 \end_inset 
 
- einen solchen Grenzwert hat --- man kann sich auch auf ein bestimmtes Gebiet
+ einen solchen Grenzwert hat -- man kann sich auch auf ein bestimmtes Gebiet
  beschränken, auf welchem die Funktion als analytisch bezeichnet wird.
  Nicht analytisch sind 
 \begin_inset ERT
@@ -304,7 +314,13 @@ Einwertigkeit
 \begin_inset Quotes erd
 \end_inset 
 
- des Differentialquotienten einer holomorphen Funktion 
+ des Differentialquotienten\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_def}
+
+\end_inset 
+
+ einer holomorphen Funktion 
 \begin_inset Formula $f(z)=u(z)+\ji v(z)$
 \end_inset 
 
@@ -328,13 +344,33 @@ Einwertigkeit
 \begin_inset Formula $x$
 \end_inset 
 
-, also vertikal).
+, also vertikal)
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Was der allgemeinen Forderung entspringt, daß der Differentialquotient unabhängi
+g von 
+\begin_inset Formula $\ang h$
+\end_inset 
+
+ ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 1$]{Whittaker:1927}
+
+\end_inset 
+
+.
+\end_inset 
+
+.
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray*}
-\frac{\pdc f(z)}{\pdc x} & = & \frac{\pdc f(z)}{\pdc\ji y}\\
-\frac{\pdc u}{\pdc x}+\ji\frac{\pdc v}{\pdc x} & = & -\ji\frac{\pdc u}{\pdc y}+\frac{\pdc v}{\pdc y}\end{eqnarray*}
+\begin_inset Formula \begin{eqnarray}
+\pdiff{f(z)}{x} & = & \pdiff{f(z)}{\ji y}\label{eq:analysis_integrability_cond_cplx}\\
+\pdiff{u}{x}+\ji\pdiff{v}{x} & = & -\ji\pdiff{u}{y}+\pdiff{v}{y}\nonumber \end{eqnarray}
 
 \end_inset 
 
@@ -347,7 +383,7 @@ Cauchy-Riemann
 \noun default 
 'sche Differentialgleichung
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -363,7 +399,12 @@ Sie ist eine notwendige Bedingung für die Differenzierbarkeit von
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Cauchy-Riemann'sche@\noun{Cauchy-Riemann}'sche!Differentialgleichung}
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Riemannsche Differentialgleichung@\noun{Riemann}'sche Differentialgl.}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Differenzierbarkeit}
 
 \end_inset 
 
@@ -372,7 +413,7 @@ Sie ist eine notwendige Bedingung für die Differenzierbarkeit von
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\frac{\pdc u}{\pdc x}=\frac{\pdc v}{\pdc y}\msp,\qquad\frac{\pdc u}{\pdc y}=-\frac{\pdc v}{\pdc x}}\label{eq:analysis_integrability_cond}\end{equation}
+\boxed{\pdiff{u}{x}=\pdiff{v}{y}\msp,\qquad\pdiff{u}{y}=-\pdiff{v}{x}}\label{eq:analysis_integrability_cond}\end{equation}
 
 \end_inset 
 
@@ -389,7 +430,7 @@ und wegen der Unabhängigkeit des Grenzwertes von jedweder Annäherungsrichtung
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f'(z)=\frac{\tdc f(z)}{\tdc z}=\frac{\pdc u}{\pdc x}+\ji\frac{\pdc v}{\pdc x}=\frac{\pdc v}{\pdc y}-\ji\frac{\pdc u}{\pdc y}}\end{equation}
+\boxed{f'(z)=\tdiff{f(z)}{z}=\pdiff{u}{x}+\ji\pdiff{v}{x}=\pdiff{v}{y}-\ji\pdiff{u}{y}}\end{equation}
 
 \end_inset 
 
@@ -402,10 +443,32 @@ n
 \end_inset 
 
  mit 
-\begin_inset Formula $f(z)=\tdc F(z)/\tdc z$
+\begin_inset Formula $f(z)=\tdc F/\tdc z$
 \end_inset 
 
- gegeben.
+ (sowie 
+\begin_inset Formula $\tdc z=\tdc x+\ji\tdc y$
+\end_inset 
+
+) gegeben
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Oder in Parameterdarstellung
+\begin_inset LatexCommand \index{Parameterdarstellung}
+
+\end_inset 
+
+: 
+\begin_inset Formula $\tdc z=(\tdc x/\tdc t+\ji\,\tdc y/\tdc t)\,\tdc t$
+\end_inset 
+
+.
+\end_inset 
+
+.
  Die Wegunabhängigkeit der Integration auf einer Kurve 
 \begin_inset Formula $C$
 \end_inset 
@@ -423,14 +486,14 @@ n
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{(C)}f(z)\,\tdc z=F(z_{2})-F(z_{1})}\msp,\end{equation}
+\boxed{\int_{C}f(z)\tic z=F(z_{2})-F(z_{1})}\msp,\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-ist also nur von den beiden Grenzwerten, nicht aber vom Weg abhängig.
+ist also nur von den beiden Grenzen, nicht aber vom Weg abhängig.
  Ist die Kurve 
 \begin_inset Formula $C$
 \end_inset 
@@ -449,7 +512,7 @@ ie
 \begin_inset Formula $z_{2}$
 \end_inset 
 
- nähert sich 
+ nähert sich wieder 
 \begin_inset Formula $z_{1}$
 \end_inset 
 
@@ -460,19 +523,57 @@ Cauchy
 .
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec_analysis_cauchy_theorem}
+
+\end_inset 
+
 Satz von 
 \noun on 
 Cauchy
 \layout Standard
 
-Der Integralsatz von 
-\noun on 
-Cauchy
+Der Integralsatz
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Auch bezeichnet als Hauptsatz der Funktionentheorie
+\begin_inset LatexCommand \index{Funktionentheorie!Hauptsatz der}
+
+\end_inset 
+
+.
+\end_inset 
+
+
 \begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Satz von}
 
 \end_inset 
 
 
+\noun on 
+
+\begin_inset LatexCommand \index{Satz von Cauchy@Satz von \noun{Cauchy}|see{\noun{Cauchy}}}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Analytische Funktion!Kurvenintegral}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Kurvenintegral}
+
+\end_inset 
+
+
+\noun default 
+ von 
+\noun on 
+Cauchy
 \noun default 
  lautet:
 \layout Quote
@@ -511,7 +612,7 @@ cf
 
  Anmerkungen und Beweis in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S$5 \cdot 2$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S$5 \sdot 2$]{Whittaker:1927}
 
 \end_inset 
 
@@ -527,7 +628,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{(C)}f(z)\,\tdc z=0}\msp.\label{eq:analysis_cauchy_integral}\end{equation}
+\boxed{\oint_{C}f(z)\tic z=0}\msp.\label{eq:analysis_cauchy_integral}\end{equation}
 
 \end_inset 
 
@@ -556,14 +657,237 @@ Diese als Wegunabhängigkeit
 \end_inset 
 
  gebunden.
+ Ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ jedoch nicht an allen Punkten im Innern der Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ holomorph
+\begin_inset Foot
+collapsed true
+
 \layout Standard
+
+Oftmals (aber nicht immer) stellen die Singularitäten von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ auch genau die Stellen dar, an denen 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ nicht analytisch ist.
+ Ist dies ausnahmsweise nicht der Fall, dann spricht man von einer 
+\emph on 
+hebbaren
+\emph default 
+ Singularität
+\begin_inset LatexCommand \index{Singularitäten!hebbare}
+
+\end_inset 
+
+.
+\end_inset 
+
+, dann kann das geschlossene Kurvenintegral einen Wert ungleich Null besitzen
+ (siehe dazu auch Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:analysis_laurent}
+
+\end_inset 
+
+).
+\layout Standard
+
+In diesem Zusammenhang stellt sich die Frage, wie sich der Einschluß mehrerer
+ singulärer Punkte
+\begin_inset LatexCommand \index{Singularitäten}
+
+\end_inset 
+
+ auf den Wert des Integrals auswirkt.
+ Dazu soll im Beispiel nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_curve_step1}
+
+\end_inset 
+
+ um zwei solcher Punkte auf einem geschlossenen Weg 
+\begin_inset Formula $C$
+\end_inset 
+
+ integriert werden.
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename curve_step1.fig
+	subcaption
+	subcaptionText "Ausgangssituation\label{fig:analysis_curve_step1}"
+
+\end_inset 
+
+
+\hfill 
+
+\begin_inset Graphics
+	filename curve_step2.eps
+	subcaption
+	subcaptionText "Zwischenschritt\label{fig:analysis_curve_step2}"
+
+\end_inset 
+
+
+\hfill 
+
+\begin_inset Graphics
+	filename curve_step3.eps
+	subcaption
+	subcaptionText "Ergebnis\label{fig:analysis_curve_step3}"
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:analysis_curve}
+
+\end_inset 
+
+Summen von Kurvenintegralen
+\end_inset 
+
+
+\layout Standard
+
+Ist die Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ auf 
+\begin_inset Formula $C$
+\end_inset 
+
+ holomorph, das Integral also wegunabhängig, dann kann man den Weg entsprechend
+ Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_curve_step2}
+
+\end_inset 
+
+ verändern.
+ Eine solche Wahl des Integrationsweges 
+\begin_inset Formula $C$
+\end_inset 
+
+ führt dazu, daß sich die Kurvenintegrale über 
+\begin_inset Formula $C_{3}$
+\end_inset 
+
+ und 
+\begin_inset Formula $C_{4}$
+\end_inset 
+
+ aufheben, also
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{C}f(z)\tic z=\int_{C_{1}}f(z)\tic z+\int_{C_{2}}f(z)\tic z+\underbrace{\int_{C_{3}}f(z)\tic z+\int_{C_{4}}f(z)\tic z}_{0}\]
+
+\end_inset 
+
+
+\layout Standard
+
+gilt.
+ Dieser Umstand ist graphisch in Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_curve_step3}
+
+\end_inset 
+
+ dargestellt und kann folgendermaßen zusammengefaßt werden:
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{C}f(z)\tic z=\oint_{C_{1}}f(z)\tic z+\oint_{C_{2}}f(z)\tic z\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Umschließt ein Kurvenintegral auf seinem Weg 
+\begin_inset Formula $n$
+\end_inset 
+
+ Singularitäten
+\begin_inset LatexCommand \index{Singularitäten}
+
+\end_inset 
+
+, dann kann dessen Wert durch separate Integration um alle 
+\begin_inset Formula $n$
+\end_inset 
+
+ singulären Punkte bestimmt werden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein einfach zusammenhängendes Gebiet 
+\begin_inset Formula $G$
+\end_inset 
+
+ nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_curve}
+
+\end_inset 
+
+ vorausgesetzt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\oint_{C}f(z)\tic z=\sum_{n}\left\{ \oint_{C_{n}}f(z)\tic z\right\} }\label{eq:analysis_cauchy_singularities}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+Berechnung von Funktionswerten durch Integration
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Analytische Funktion!Funktionswert}
+
+\end_inset 
 
 Als ein Resultat des Satzes von 
 \noun on 
 Cauchy
 \noun default 
  kann man jeden Wert 
-\begin_inset Formula $f(z_{0})$
+\begin_inset Formula $f(z)$
 \end_inset 
 
 , wobei die Funktion 
@@ -626,7 +950,7 @@ Cauchy
 
 
 \begin_inset Formula \[
-\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z=\int_{(C_{1})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{2})}\frac{f(z)}{z-z_{0}}\,\tdc z\]
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{1}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}}\frac{f(z)}{z-z_{0}}\tic z\]
 
 \end_inset 
 
@@ -674,7 +998,7 @@ hspace{3cm}
 
 \end_inset 
 
-Kurvenintegral
+Integrationskurven zur Funktionswert-Berechnung
 \end_inset 
 
 
@@ -714,7 +1038,7 @@ resp
 \begin_inset Formula $C_{2}^{\prime}$
 \end_inset 
 
- sowie dem inneren Halbkreis (inklusive der waagerechten Teilstücken) 
+ sowie dem inneren Halbkreis (inklusive der waagerechten Teilstücke) 
 \begin_inset Formula $C_{1}^{\prime\prime}$
 \end_inset 
 
@@ -748,7 +1072,7 @@ Cauchy
 
 
 \begin_inset Formula \[
-\oint_{(C_{\nu})}\frac{f(z)}{z-z_{0}}\,\tdc z=\int_{(C_{\nu}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=0,\qquad\textrm{mit  }\nu=1,2\]
+\oint_{C_{\nu}}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=0,\qquad\textrm{mit }\nu=1,2\]
 
 \end_inset 
 
@@ -760,7 +1084,7 @@ und deshalb
 
 
 \begin_inset Formula \[
-\int_{(C_{\nu}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=-\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z\msp.\]
+\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z=-\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z\msp.\]
 
 \end_inset 
 
@@ -771,8 +1095,8 @@ Mit der Substitution
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-z-z_{0}=r\,\e^{\ji\theta},\qquad\qquad\frac{\tdc z}{\tdc\theta}=\ji r\,\e^{\ji\theta}\label{eq:analysis_cauchy_substitution}\end{equation}
+\begin_inset Formula \begin{xalignat}{2}
+z-z_{0} & =r\e^{\ji\theta} & \tdiff{z}{\theta} & =\ji r\e^{\ji\theta}\label{eq:analysis_cauchy_substitution}\end{xalignat}
 
 \end_inset 
 
@@ -784,7 +1108,7 @@ kann man für jeden der Integralausdrücke auf den inneren Kurven
 
 
 \begin_inset Formula \[
-\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z=\ji\int_{(C_{\nu}^{\prime\prime})}\frac{f(z)}{r\,\e^{\ji\theta}}r\,\e^{\ji\theta}\,\tdc\theta=\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0}+r\,\e^{\ji\theta})\,\tdc\theta\]
+\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{r\,\e^{\ji\theta}}r\,\e^{\ji\theta}\tic\theta=\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\,\e^{\ji\theta})\tic\theta\]
 
 \end_inset 
 
@@ -819,7 +1143,7 @@ ie
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow0}\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0}+r\,\e^{\ji\theta})\,\tdc\theta=-\ji\int_{(C_{\nu}^{\prime\prime})}f(z_{0})\,\tdc\theta=-\ji f(z_{0})\left.\theta\right|_{(C_{\nu}^{\prime\prime})}\]
+\lim_{r\rightarrow0}\;\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\,\e^{\ji\theta})\tic\theta=-\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0})\tic\theta=-\ji f(z_{0})\left.\theta\,\right|_{C_{\nu}^{\prime\prime}}\]
 
 \end_inset 
 
@@ -848,8 +1172,8 @@ glattgezogenen
 
 
 \begin_inset Formula \begin{align*}
-\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z & =\int_{(C_{1}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z+\int_{(C_{2}^{\prime})}\frac{f(z)}{z-z_{0}}\,\tdc z\\
- & =-\ji f(z_{0})\left[\left.\theta\right|_{(C_{1}^{\prime\prime})}+\left.\theta\right|_{(C_{2}^{\prime\prime})}\right]\\
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\int_{C_{1}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z\\
+ & =-\ji f(z_{0})\,\left(\left.\theta\,\right|_{C_{1}^{\prime\prime}}+\left.\theta\,\right|_{C_{2}^{\prime\prime}}\right)\\
  & =-\ji f(z_{0})(-2\pi-0)=\ji2\pi f(z_{0})\msp.\end{align*}
 
 \end_inset 
@@ -862,8 +1186,8 @@ Ein ausschließlich rechnerischer Beweis ist folgendermaßen zu erbringen:
 
 
 \begin_inset Formula \begin{align*}
-\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z & =\oint_{(C)}\frac{f(z)-f(z_{0})+f(z_{0})}{z-z_{0}}\,\tdc z\\
- & =\oint_{(C)}\frac{f(z)-f(z_{0})}{z-z_{0}}\,\tdc z+f(z_{0})\oint_{(C)}\frac{\tdc z}{z-z_{0}}\end{align*}
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\oint_{C}\frac{f(z)-f(z_{0})+f(z_{0})}{z-z_{0}}\tic z\\
+ & =\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}\end{align*}
 
 \end_inset 
 
@@ -874,7 +1198,27 @@ Der erste Summand stellt für
 \begin_inset Formula $z\rightarrow z_{0}$
 \end_inset 
 
- eine behebbare Singularität dar, 
+ eine hebbare Singularität
+\begin_inset LatexCommand \index{Singularitäten!hebbare}
+
+\end_inset 
+
+ dar (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ 
+\begin_inset LatexCommand \ref{sec:analysis_residue_theorem}
+
+\end_inset 
+
+), 
 \begin_inset ERT
 status Collapsed
 
@@ -901,7 +1245,7 @@ existiert.
 \begin_inset Formula $z\rightarrow z_{0}$
 \end_inset 
 
-und wegen des Satzes von 
+ und wegen des Satzes von 
 \noun on 
 Cauchy
 \noun default 
@@ -910,7 +1254,7 @@ Cauchy
 
 
 \begin_inset Formula \[
-\oint_{(C)}\frac{f(z)-f(z_{0})}{z-z_{0}}\,\tdc z=0\msp.\]
+\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z=0\msp.\]
 
 \end_inset 
 
@@ -927,7 +1271,7 @@ Der zweite Summand ist mit der Substitution nach
 
 
 \begin_inset Formula \begin{equation}
-f(z_{0})\oint_{(C)}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{(C)}\tdc\theta=\ji f(z_{0})\int_{0}^{2\pi}\tdc\theta=\ji2\pi f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{C}\tic\theta=\ji f(z_{0})\int_{0}^{2\pi}\tic\theta=\ji2\pi f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
 
 \end_inset 
 
@@ -938,29 +1282,555 @@ und somit
 \layout Standard
 
 
-\begin_inset Formula \[
-\oint_{(C)}\frac{f(z)}{z-z_{0}}\,\tdc z=\ji2\pi f(z_{0})\msp.\]
+\begin_inset Formula \begin{equation}
+\boxed{\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=\ji2\pi f(z_{0})}\msp.\label{eq:analysis_cauchy_formula_implicit}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Benennt man noch die Variablen zu 
+Benennt man noch die Variablen um (
 \begin_inset Formula $z_{0}:=z$
 \end_inset 
 
  und 
-\begin_inset Formula $z:=\psi$
+\begin_inset Formula $z:=\xi$
 \end_inset 
 
- um, dann erhält man die 
+), dann erhält man die 
 \noun on 
 Cauchy
 \noun default 
 'sche Integralformel
-\begin_inset LatexCommand \index{Cauchy'sche Integralformel@\noun{Cauchy}'sche Integralformel}
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Integralformel von}
 
+\end_inset 
+
+
+\noun on 
+
+\begin_inset LatexCommand \index{Integralformel von Cauchy@Integralformel von \noun{Cauchy}|see{\noun{Cauchy}}}
+
+\end_inset 
+
+
+\noun default 
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi}\label{eq:analysis_cauchy_formula}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+Berechnung von Ableitungen durch Integration
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Analytische Funktion!Ableitung}
+
+\end_inset 
+
+Auch die (erste) Ableitung einer analytischen Funktion kann durch ein Kurveninte
+gral in der komplexen Ebene ausgedrückt werden\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 22$]{Whittaker:1927}
+
+\end_inset 
+
+.
+ Um dies nachzuweisen, soll zuerst 
+\noun on 
+Cauchy
+\noun default 
+'s Integralformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula}
+
+\end_inset 
+
+ in die Definition der ersten Ableitung einer Funktion 
+\begin_inset Formula $f$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ (nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_def}
+
+\end_inset 
+
+) eingesetzt werden.
+\layout Standard
+
+
+\begin_inset Formula \[
+f^{\prime}(z)=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}=\frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\left[\oint_{C}\frac{f(\xi)}{\xi-z-h}\tic\xi-\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+Nun werden die Argumente beider Integrale auf einen gemeinsamen Nenner gebracht,
+ dann im Zähler ausmultipliziert und zuletzt der Limes aufgelöst
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein in mathematischer Strenge geführter Beweis, der auch die Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ eingehend berücksichtigt, ist in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S $5 \sdot 22$]{Whittaker:1927}
+
+\end_inset 
+
+ zu finden.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+f^{\prime}(z) & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\oint_{C}\frac{f(\xi)}{\xi-z-h}-\frac{f(\xi)}{\xi-z}\tic\xi\\
+ & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\oint_{C}\frac{f(\xi)(\xi-z)-f(\xi)(\xi-z-h)}{(\xi-z-h)(\xi-z)}\tic\xi\\
+ & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\oint_{C}\frac{f(\xi)}{(\xi-z-h)(\xi-z)}\tic\xi\\
+ & = & \frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)(\xi-z)}\tic\xi\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Der so gewonnene Ausdruck
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f^{\prime}(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{2}}\tic\xi}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+ermöglicht die Berechnung der Ableitung von 
+\begin_inset Formula $f$
+\end_inset 
+
+ an jeder Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ durch ein Kurvenintegral.
+ Voraussetzung dafür ist nur, daß der Punkt 
+\begin_inset Formula $z$
+\end_inset 
+
+ in der komplexen Ebene von einer Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ eingeschlossen ist, auf deren Rand und im Innern 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ analytisch sein muß.
+\layout Standard
+
+Durch erneute Anwendung der obigen Formeln kann man zur zweiten Ableitung
+ 
+\begin_inset Formula $f^{\prime\prime}(z)$
+\end_inset 
+
+ gelangen, welche nach\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S $5 \sdot 22$]{Whittaker:1927}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+f^{\prime\prime}(z)=\frac{2}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{3}}\tic\xi\]
+
+\end_inset 
+
+
+\layout Standard
+
+lautet.
+ Für weitere Ableitungen ergibt sich in der Fortsetzung die allgemeine 
+\noun on 
+Cauchy
+\noun default 
+'sche Integralformel
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Allg. Integralformel von}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f^{(n)}(z)=\frac{n!}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{n+1}}\tic\xi}\msp,\label{eq:analysis_derivative_integral}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+was durch vollständige Induktion zu beweisen ist
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die allgemeine 
+\noun on 
+Cauchy
+\noun default 
+'sche Integralformel bestätigt für 
+\begin_inset Formula $n=0$
+\end_inset 
+
+ auch Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula}
+
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+Für den speziellen Fall, daß 
+\begin_inset Formula $C$
+\end_inset 
+
+ ein Kreis mit Radius 
+\begin_inset Formula $r$
+\end_inset 
+
+ um 
+\begin_inset Formula $z$
+\end_inset 
+
+ ist, kann man die Formel konkretisieren.
+ Dazu ist die Substitution 
+\begin_inset Formula $\xi-z=r\e^{\ji\theta}$
+\end_inset 
+
+ und daraus abgeleitet 
+\begin_inset Formula $\tdc\xi/\tdc\theta=\ji r\e^{\ji\theta}$
+\end_inset 
+
+ hilfreich.
+\layout Standard
+
+
+\begin_inset Formula \[
+f^{(n)}(z)=\frac{n!}{2\pi\ji}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n+1}\e^{\ji(n+1)\theta}}\ji r\e^{\ji\theta}\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f^{(n)}(z)=\frac{n!}{2\pi}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta}\label{eq:analysis_derivative_integral_circle}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:analysis_laurent}
+
+\end_inset 
+
+
+\noun on 
+Laurent
+\noun default 
+-Reihen
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe}
+
+\end_inset 
+
+
+\layout Standard
+
+Bei der 
+\noun on 
+Laurent
+\noun default 
+-Reihenentwicklung geht man davon aus, daß sich eine Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ in der komplexen Ebene um einen Punkt 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ in der Form
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}}\label{eq:analysis_laurent_series}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+entwickeln läßt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 6, 6 \sdot 1$]{Whittaker:1927}
+
+\end_inset 
+
+.
+ Integriert man 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ auf einer Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ um den Punkt 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+, wobei
+\layout Itemize
+
+
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ innerhalb 
+\begin_inset Formula $C$
+\end_inset 
+
+ analytisch sein muß
+\layout Itemize
+
+und 
+\begin_inset Formula $C$
+\end_inset 
+
+ ein Kreis mit möglichst kleinem Radius sein soll,
+\layout Standard
+
+dann ergibt sich mit der Darstellung
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Besitzt 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ von Hause aus eine solche Form, dann sind (wie noch zu sehen sein wird)
+ Kurvenintegrale der Art 
+\begin_inset Formula $\oint_{C}f(z)\tic z$
+\end_inset 
+
+ manchmal sehr leicht zu lösen.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+f(z)=\cdots+a_{-2}(z-z_{0})^{-2}+a_{-1}(z-z_{0})^{-1}+\underbrace{a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots}_{\Phi(z)}\label{eq:analysis_laurent_series_expanded}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+für das Integral
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{C}f(z)\tic z=\sum_{n=-\infty}^{-2}\left\{ \oint_{C}a_{n}(z-z_{0})^{n}\tic z\right\} +\oint_{C}a_{-1}(z-z_{0})^{-1}\tic z+\oint_{C}\Phi(z)\tic z\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die Funktion 
+\begin_inset Formula $\Phi(z)=\sum_{n\geq0}a_{n}(z-z_{0})^{n}$
+\end_inset 
+
+, der sogenannte Regulärteil
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Funktion 
+\begin_inset Formula $\Phi(z)$
+\end_inset 
+
+ entspricht der 
+\noun on 
+Taylor
+\noun default 
+-Reihenentwicklung einer reellen Funktion.
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Regulärteil}
+
+\end_inset 
+
+, ist analytisch, weshalb dieses Integral verschwindet (
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:analysis_z_z0_holomorph}
+
+\end_inset 
+
+).
+ Gleiches gilt für das Integral über den Hauptteil
+\begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Hauptteil}
+
+\end_inset 
+
+ (ohne 
+\begin_inset Formula $a_{-1}$
+\end_inset 
+
+) der 
+\noun on 
+Laurent
+\noun default 
+-Reihe
+\layout Standard
+
+
+\begin_inset Formula \[
+\sum_{n=2}^{\infty}\oint_{C}\frac{a_{-n}}{(z-z_{0})^{n}}\tic z=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+was sich ausgehend von Substitutionsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_substitution}
+
+\end_inset 
+
+ nachweisen läßt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\oint_{C}\frac{1}{(z-z_{0})^{n}}\tic z & =\oint_{C}\frac{\ji r\e^{\ji\theta}}{r^{n}\e^{\ji n\theta}}\tic\theta\\
+ & =\ji r^{-(n-1)}\oint_{C}\e^{-\ji(n-1)\theta}\tic\theta\\
+ & =-\frac{1}{(n-1)r^{(n-1)}}\left.\e^{-\ji(n-1)\theta}\right|_{0}^{2\pi}=0\quad\textrm{für}\msp n\neq1\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Es bleibt also nur das Kurvenintegral mit dem sogenannten Residuum
+\begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Residuum}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Residuum}
+
+\end_inset 
+
+ 
+\begin_inset Formula $a_{-1}$
+\end_inset 
+
+ übrig, welches nach 
+\noun on 
+Cauchy
+\noun default 
+'s Integralformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula_implicit}
+
+\end_inset 
+
+ den Wert 
+\begin_inset Formula $\ji2\pi a_{-1}$
+\end_inset 
+
+ hat
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ in der Integralformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula_implicit}
+
+\end_inset 
+
+ von 
+\noun on 
+Cauchy
+\noun default 
+ wird hier durch 
+\begin_inset Formula $f(z):=a_{-1}$
+\end_inset 
+
+ realisiert.
 \end_inset 
 
 .
@@ -968,28 +1838,1248 @@ Cauchy
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z)=\frac{1}{2\pi\ji}\oint_{(C)}\frac{f(\psi)}{\psi-z}\,\tdc\psi}\end{equation}
+\boxed{\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=\ji2\pi a_{-1}}\label{eq:laurent_residue_integral}\end{equation}
 
 \end_inset 
 
 
-\layout Subsection
+\layout Standard
 
-Ableitungen analytischer Funktionen
+Wie bestimmen sich nun aber die anderen Koeffizienten 
+\begin_inset Formula $a_{n}$
+\end_inset 
+
+? Hier ist ein kleiner Trick hilfreich, der darin besteht, je nach gesuchtem
+ Koeffizienten 
+\begin_inset Formula $a_{n}$
+\end_inset 
+
+ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_laurent_series_expanded}
+
+\end_inset 
+
+ durch 
+\begin_inset Formula $(z-z_{0})^{n+1}$
+\end_inset 
+
+ zu dividieren.
 \layout Standard
 
 
-\begin_inset LatexCommand \cite[\S $5 \cdot 22$]{Whittaker:1927}
+\begin_inset Formula \[
+\frac{f(z)}{(z-z_{0})^{n+1}}=\cdots+a_{n-1}(z-z_{0})^{-2}+a_{n}(z-z_{0})^{-1}+a_{n+1}+a_{n+2}(z-z_{0})+a_{n+3}(z-z_{0})^{2}+\cdots\]
+
+\end_inset 
+
+
+\layout Standard
+
+Integration über die neu gebildete Funktion 
+\begin_inset Formula $(z-z_{0})^{-(n-1)}f(z)$
+\end_inset 
+
+ hat dieselbe Konsequenz wie vordem -- es bleibt nur der Ausdruck mit dem
+ Exponenten 
+\begin_inset Formula $-1$
+\end_inset 
+
+ übrig, 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ sowohl der Haupt- als auch Regulärteil verschwinden wieder.
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=\ji2\pi a_{n}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Nun ist man in der Lage, aus der Kombination der bisherigen Formeln eine
+ gemeinsame Berechnungsvorschrift für alle Koeffizienten 
+\begin_inset Formula $a_{n}$
+\end_inset 
+
+ anzugeben.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{a_{n}=\frac{1}{\ji2\pi}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Zu bemerken bleibt noch, daß diese Formel für 
+\begin_inset Formula $n>0$
+\end_inset 
+
+ (abgesehen von einem konstanten Faktor) genau der Ableitung einer analytischen
+ Funktion nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_integral}
+
+\end_inset 
+
+ entspricht
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Der Fakt ist insofern nicht verwunderlich, als das genau an dieser Stelle
+ auch die Verwandtschaft zur 
+\noun on 
+Taylor
+\noun default 
+-Reihe liegt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+a_{n}=\frac{f^{(n)}(z_{0})}{n!}\]
 
 \end_inset 
 
 
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec:analysis_residue_theorem}
+
+\end_inset 
+
 Residuensatz
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Residuensatz}
+
+\end_inset 
+
+
+\layout Standard
+
+Der Residuensatz ist eine logische Fortführung 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Anwendung der Erkenntnisse des vorigen Abschnittes, in welchem der Begriff
+ des Residuums erstmalig auftauchte
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Zur Erinnerung: das Residuum
+\begin_inset LatexCommand \index{Residuum}
+
+\end_inset 
+
+ bezeichnet den Koeffizienten 
+\begin_inset Formula $a_{-1}$
+\end_inset 
+
+ der 
+\noun on 
+Laurent
+\noun default 
+-Reihenentwicklung einer komplexwertigen Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ um den Punkt 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Er ermöglicht die einfache Berechnung von (geschlossenen) Kurvenintegralen,
+ wenn innerhalb des Integrationsweges ein oder mehrere Singularitäten von
+ 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ liegen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Insbesondere  Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:laurent_residue_integral}
+
+\end_inset 
+
+ zeigt in diesem Zusammenhang, daß die Kenntnis des Residuums 
+\begin_inset Formula $\res{z_{0}}{f}{z}:=a_{-1}$
+\end_inset 
+
+ sehr hilfreich bei der Berechnung von 
+\begin_inset Formula $\oint_{C}f(z)\tic z$
+\end_inset 
+
+ ist.
+\end_inset 
+
+.
+ Denkt man an Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec_analysis_cauchy_theorem}
+
+\end_inset 
+
+ zurück (im Speziellen an Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_singularities}
+
+\end_inset 
+
+) und berücksichtigt außerdem Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:laurent_residue_integral}
+
+\end_inset 
+
+, so kann man den Residuensatz formulieren.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\oint_{C}f(z)\tic z=\ji2\pi\sum_{n}\left\{ \res{z_{n}}{f}{z}\right\} }\label{eq:analysis_residue_theorem}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Wie berechnet man jedoch das Residuum an einem (isolierten) singulären Punkt
+ ohne Kenntnis der 
+\noun on 
+Laurent
+\noun default 
+-Reihenentwicklung von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+? Zur Beantwortung dieser Frage betrachten wir (die) drei Typen von Singularität
+en 
+\begin_inset Formula $z_{n}$
+\end_inset 
+
+, welche sich durch die Art des Hauptteils
+\begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Hauptteil}
+
+\end_inset 
+
+ 
+\begin_inset Formula $h(z)$
+\end_inset 
+
+ der 
+\noun on 
+Laurent
+\noun default 
+-Reihe von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ unterscheiden:
+\layout Enumerate
+
+Hebbare Singularitäten
+\begin_inset LatexCommand \index{Singularitäten!hebbare}
+
+\end_inset 
+
+ sind solche, für die 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ in der Umgebung von 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ beschränkt (und in 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ holomorph) ist.
+ Der 
+\noun on 
+Riemann
+\noun default 
+'sche Hebbarkeitsatz
+\begin_inset LatexCommand \index{Hebbarkeitsatz}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Riemann'scher Hebbarkeitssatz@\noun{Riemann}'scher Hebbarkeitssatz}
+
+\end_inset 
+
+ formuliert die Bedingung folgendermaßen:
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\lim_{z\rightarrow z_{0}}(z-z_{0})f(z)=0\msp.\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Existiert für 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ aufgrund der Holomorphieeigenschaft in 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ die Ableitung 
+\begin_inset Formula $f'(z_{0})$
+\end_inset 
+
+ und 
+\begin_inset Formula $f(z_{0})$
+\end_inset 
+
+ ist beschränkt (
+\begin_inset Formula $\lim_{z\rightarrow z_{0}}\left|f(z)\right|=M<\infty$
+\end_inset 
+
+), so verschwindet wegen des Satzes von 
+\noun on 
+Cauchy
+\noun default 
+ der Hauptteil 
+\begin_inset Formula $h(z)$
+\end_inset 
+
+ gänzlich und es gilt 
+\begin_inset Formula $\res{z_{0}}{f}{z}=0$
+\end_inset 
+
+.
+ Ein typischer Vertreter dieser Klasse von Singularitäten ist die Stelle
+ 
+\begin_inset Formula $z_{0}=0$
+\end_inset 
+
+ der Spaltfunktion
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die 
+\noun on 
+Taylor
+\noun default 
+-Reihenentwicklung der Spaltfunktion stimmt genau mit der 
+\noun on 
+Laurent
+\noun default 
+-Reihe (die deshalb nur einen Regulärteil besitzt) überein: 
+\begin_inset Formula $\frac{\sin z}{z}=1-\frac{z^{2}}{3!}+\frac{z^{4}}{5!}-\frac{z^{6}}{7!}+\cdots$
+\end_inset 
+
+
+\end_inset 
+
+ 
+\begin_inset Formula $f(z)=\sin z/z$
+\end_inset 
+
+.
+\end_deeper 
+\layout Enumerate
+
+Singularitäten
+\begin_inset LatexCommand \index{Singularitäten!Pole}
+
+\end_inset 
+
+, bei denen man von einem Pol
+\begin_inset LatexCommand \index{Pol}
+
+\end_inset 
+
+ der Ordnung
+\begin_inset LatexCommand \index{Polordnung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $n$
+\end_inset 
+
+ spricht (ein- oder mehrfacher Pol), sind durch
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+h(z)=\sum_{k=1}^{n}\frac{a_{-k}}{(z-z_{0})^{k}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+gekennzeichnet
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Damit ist gemeint, daß 
+\begin_inset Formula $a_{-n}\neq0$
+\end_inset 
+
+ ist, alle weiteren 
+\begin_inset Formula $a_{k}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $k>n$
+\end_inset 
+
+ jedoch verschwinden.
+\end_inset 
+
+.
+ Die 
+\noun on 
+Laurent
+\noun default 
+-Reihe für 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ bekommt dadurch die Form
+\layout Standard
+
+
+\begin_inset Formula \[
+f(z)=\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-2}}{(z-z_{0})^{2}}+\frac{a_{-1}}{z-z_{0}}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+hat also einen Hauptteil mit endlicher Anzahl von Koeffizienten 
+\begin_inset Formula $a_{k}$
+\end_inset 
+
+.
+ Diese Eigenschaft ermöglicht die Berechnung des Residuums mit Hilfe der
+ folgenden Formel:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\res{z_{0}}{f}{z}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[(z-z_{0})^{n}\, f(z)\right]}\msp.\label{eq:analysis_residue_pole}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Richtigkeit kann man beginnend mit dem Einsetzen von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ nachweisen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\begin{split}\res{z_{0}}{f}{z} & =\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[\vphantom{a_{-1}(z-z_{0})^{n-1}}a_{-n}+a_{-n+1}(z-z_{0})+\cdots\right.\\
+ & \left.+a_{-1}(z-z_{0})^{n-1}+a_{0}(z-z_{0})^{n}+a_{1}(z-z_{0})^{n+1}+\cdots\right]\end{split}
+\]
+
+\end_inset 
+
+
+\layout Standard
+
+Differentiation der einzelnen Summanden, gefolgt von der Grenzwertbildung
+ bestätigt Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_residue_pole}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{multline*}
+\res{z_{0}}{f}{z}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\left[(n-1)!\, a_{-1}+\frac{n!}{1!}a_{0}(z-z_{0})+\frac{(n+1)!}{2!}a_{1}(z-z_{0})^{2}\right.\\
+\left.+\frac{(n+2)!}{3!}a_{2}(z-z_{0})^{3}+\frac{(n+3)!}{4!}a_{3}(z-z_{0})^{4}+\cdots\right]=a_{-1}\end{multline*}
+
+\end_inset 
+
+
+\layout Standard
+
+Beispiele solcher Funktionen sind 
+\begin_inset Formula $f(z)=\cosec z$
+\end_inset 
+
+ bei 
+\begin_inset Formula $z_{0}=k\pi$
+\end_inset 
+
+ (Ordnung 
+\begin_inset Formula $n=1$
+\end_inset 
+
+) sowie
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wie man schon an der Form erkennen kann, entspricht in diesem Fall die Funktion
+ ihrer 
+\noun on 
+Laurent
+\noun default 
+-Reihe.
+\end_inset 
+
+ 
+\begin_inset Formula $f(z)=(z-1)^{-2}$
+\end_inset 
+
+ für 
+\begin_inset Formula $z_{0}=1$
+\end_inset 
+
+ (Ordnung 
+\begin_inset Formula $n=2$
+\end_inset 
+
+).
+\end_deeper 
+\layout Enumerate
+
+Wesentliche Singularitäten
+\begin_inset LatexCommand \index{Singularitäten!wesentliche}
+
+\end_inset 
+
+ sind solche, die weder hebbar noch ein Pol sind.
+ Ihr Hauptteil 
+\begin_inset Formula $h(z)$
+\end_inset 
+
+ hat die Form
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+h(z)=\sum_{k=1}^{\infty}\frac{a_{-k}}{(z-z_{0})^{k}}\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ alle Koeffizienten 
+\begin_inset Formula $a_{-k}$
+\end_inset 
+
+ existieren (und zwar unendlich viele).
+ Das Residuum ist für eine solche Funktion (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ 
+\begin_inset Formula $\e^{(1-z)^{-1}}$
+\end_inset 
+
+ an 
+\begin_inset Formula $z_{0}=1$
+\end_inset 
+
+) mittels Integrationsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:laurent_residue_integral}
+
+\end_inset 
+
+ zu bestimmen.
+\end_deeper 
+\layout Standard
+
+Funktionen, die nur hebbare Singularitäten oder Pole besitzen, werden auch
+ meromorph
+\begin_inset LatexCommand \index{Analytische Funktion!Meromorphe}
+
+\end_inset 
+
+ genannt.
 \layout Subsection
 
-Laurent-Reihen
+Satz von 
+\noun on 
+Liouville
+\layout Standard
+
+
+\noun on 
+
+\begin_inset LatexCommand \index{Liouville@\noun{Liouville}, Satz von}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Satz von Liouville@Satz von \noun{Liouville}|see{\noun{Liouville}}}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\noun on 
+Liouville
+\noun default 
+'s
+\noun on 
+ 
+\noun default 
+Satz soll hier, etwas anders als 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ bei\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 63$]{Whittaker:1927}
+
+\end_inset 
+
+, in drei Schritten hergeleitet werden.
+\layout Enumerate
+
+Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
+ für den Betrag des Kurvenintegrals 
+\begin_inset Formula $\int_{z_{1}}^{z_{2}}f(z)\tic z$
+\end_inset 
+
+ angeben kann? Dazu gehen wir davon aus, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ auf dem Integrationsweg analytisch und mit 
+\begin_inset Formula $\sup|f(z)|=M<\infty$
+\end_inset 
+
+ beschränkt ist.
+ Dann gilt folgende Ungleichung
+\begin_inset Note
+collapsed true
+
+\layout Standard
+
+Name der Ungleichung?
+\end_inset 
+
+
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq\int\limits _{a}^{b}|f(z)|\,|\tic z|\leq\int\limits _{a}^{b}M\,|\tic z|=M\int\limits _{a}^{b}|\tic z|\]
+
+\end_inset 
+
+
+\layout Standard
+
+Geht man der besseren Vorstellung halber von einem Integrationsweg 
+\begin_inset Formula $C$
+\end_inset 
+
+ in Parameterdarstellung aus, also 
+\begin_inset Formula $z_{1}=C(a)$
+\end_inset 
+
+ und 
+\begin_inset Formula $z_{2}=C(b)$
+\end_inset 
+
+, dann ist
+\layout Standard
+
+
+\begin_inset Formula \[
+M\int\limits _{a}^{b}|\tic z|=M\int\limits _{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{\tdc t}\right|\tdc t=M\int\limits _{a}^{b}\sqrt{\left(\frac{\tdc x}{\tdc t}\right)^{2}+\left(\frac{\tdc y}{\tdc t}\right)^{2}}\tic t\msp,\]
+
+\end_inset 
+
+ wobei letzter Ausdruck genau die Bogenlänge 
+\begin_inset Formula $L$
+\end_inset 
+
+ der Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ darstellt.
+ Ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ wie vorausgesetzt auf dem gesamten Integrationsweg analytisch und beschränkt,
+ dann gilt für den Betragswert des Integrals\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$4 \sdot 62$]{Whittaker:1927}
+
+\end_inset 
+
+:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq M\cdot L\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Sei 
+\noun on 
+Cauchy
+\noun default 
+'s Ungleichung
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Ungleichung von}
+
+\end_inset 
+
+ für den Betrag der 
+\begin_inset Formula $n-$
+\end_inset 
+
+ten Ableitung von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ von Interesse\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 23$]{Whittaker:1927}
+
+\end_inset 
+
+.
+ Wir gehen dabei von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_integral_circle}
+
+\end_inset 
+
+, also ein kreisförmiger Integrationsweg 
+\begin_inset Formula $C$
+\end_inset 
+
+ mit Radius 
+\begin_inset Formula $r$
+\end_inset 
+
+ um 
+\begin_inset Formula $z$
+\end_inset 
+
+ aus, um deren Wert (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ obere Grenze) zu bestimmen.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|f^{(n)}(z)\right|=\frac{n!}{2\pi}\left|\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\]
+
+\end_inset 
+
+
+\layout Standard
+
+Anwendung von Ungleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integral_abs_limit}
+
+\end_inset 
+
+, wobei der gesamte Integrand die Stelle von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ einnimmt, führt (mit der Länge 
+\begin_inset Formula $L=2\pi$
+\end_inset 
+
+ und der Abkürzung 
+\begin_inset Formula $M=\sup_{\xi\epsilon C}|f(\xi)|$
+\end_inset 
+
+) zu
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\leq2\pi\,\sup\left|\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\right|=\frac{2\pi M}{r^{n}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und direkt weiter zur Ungleichung
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left|f^{(n)}(z)\right|\leq\frac{M\, n!}{r^{n}}\msp.\label{eq:analysis_derivative_abs_limit}\end{equation}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Enumerate
+
+Bleibt nur noch der Satz von 
+\noun on 
+Liouville 
+\noun default 
+selbst, welcher nach\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\S$5 \sdot 63$]{Whittaker:1927}
+
+\end_inset 
+
+ folgendermaßen lautet:
+\begin_deeper 
+\layout Quote
+
+Sei 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ analytisch und beschränkt mit 
+\begin_inset Formula $|f(z)|\leq M<\infty$
+\end_inset 
+
+ für alle 
+\begin_inset Formula $z\epsilon\mathbb{C}$
+\end_inset 
+
+ (sogar für 
+\begin_inset Formula $z\rightarrow\infty$
+\end_inset 
+
+), dann ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ eine Konstante.
+\layout Standard
+
+Der Beweis steckt in Ungleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_abs_limit}
+
+\end_inset 
+
+, denn dort heißt es für 
+\begin_inset Formula $n=1$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\tdiff{f(z)}{z}\right|\leq\frac{M}{r}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Läßt man nun 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+ gehen um die gesamte komplexe Ebene einzuschließen, so gilt (unter der
+ wesentlichen Voraussetzung, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ überall beschränkt ist):
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\tdiff{f(z)}{z}\right|=0\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ ist eine Konstante.
+\layout Standard
+
+Interessant ist im Umkehrschluß, daß alle Funktionen, die nicht konstant
+ sind, immer Singularitäten besitzen müssen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Damit sie entweder nicht beschränkt oder nicht analytisch (in der gesamten
+ komplexen Ebene) sind, also die Voraussetzungen nicht erfüllen.
+\end_inset 
+
+.
+\end_deeper 
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Funktionentheorie|)}
+
+\end_inset 
+
+
+\layout Section
+\start_of_appendix 
+
+\begin_inset LatexCommand \label{sec:analysis_z_z0_holomorph}
+
+\end_inset 
+
+Die Funktion 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+
+\layout Standard
+
+Vielfach ist die Frage von Bedeutung, ob die Funktion 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+ analytisch ist.
+ Zur Beantwortung gehen wir von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
+
+\end_inset 
+
+ aus und bilden die partiellen Ableitungen nach 
+\begin_inset Formula $x$
+\end_inset 
+
+ und 
+\begin_inset Formula $y$
+\end_inset 
+
+.
+ Zur Vereinfachung soll die Exponentialdarstellung 
+\begin_inset Formula $z-z_{0}=r\e^{\ji\theta}$
+\end_inset 
+
+ verwendet werden, wobei berücksichtigt werden muß, daß eigentlich 
+\begin_inset Formula $r:=r(x,y)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\theta:=\theta(x,y)$
+\end_inset 
+
+ gilt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{x}(z-z_{0})^{n} & =\pdiff{}{x}\, r^{n}\e^{\ji n\theta}\\
+ & =nr^{n-1}\e^{\ji n\theta}\pdiff{r}{x}+r^{n}\e^{\ji n\theta}\ji n\pdiff{\theta}{x}\\
+ & =nr^{n}\e^{\ji n\theta}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Für die Ableitung nach 
+\begin_inset Formula $y$
+\end_inset 
+
+ gibt es bis hierher keinen Unterschied, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\pdiff{}{y}(z-z_{0})^{n}=n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{y}+\ji\pdiff{\theta}{y}\right)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Setzen wir jetzt (kurz) 
+\begin_inset Formula $z_{0}=0$
+\end_inset 
+
+ und erarbeiten die Zusammenhänge zwischen den Differentialen der arithmetischen
+ und der Exponentialform für 
+\begin_inset Formula $z=x+\ji y=r\e^{\ji\theta}$
+\end_inset 
+
+.
+ Dazu soll von den bekannten Formeln
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+r & =\left|z\right|=\sqrt{z\,\conjgt{z}}=\sqrt{x^{2}+y^{2}} & \theta & =\ang z=\arctan\frac{y}{x}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+ausgegangen und dann die Ableitungen gebildet werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\pdiff{r}{x} & =\frac{x}{\sqrt{x^{2}+y^{2}}}=\frac{x}{r} & \pdiff{r}{y} & =\frac{y}{\sqrt{x^{2}+y^{2}}}=\frac{y}{r}\\
+\pdiff{\theta}{x} & =-\frac{y}{x^{2}+y^{2}}=-\frac{y}{r^{2}} & \pdiff{\theta}{y} & =\frac{x}{x^{2}+y^{2}}=\frac{x}{r^{2}}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Jetzt können die so gewonnenen Ausdrücke eingesetzt werden, was mit 
+\begin_inset Formula $z_{0}=x_{0}+\ji y_{0}$
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{x}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+führt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei 
+\begin_inset Formula $(z-z_{0})\conjgt{z-z_{0}}=r^{2}$
+\end_inset 
+
+ berücksichtigt wurde.
+\end_inset 
+
+.
+ Ähnlich wird mit der Ableitung nach 
+\begin_inset Formula $y$
+\end_inset 
+
+ verfahren, nur das gedanklich noch der Zwischenschritt der Substitution
+ nach 
+\begin_inset Formula $\ji y$
+\end_inset 
+
+ auszuführen ist.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{\ji y}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\pdiff{\theta}{y}-\ji\frac{1}{r}\pdiff{r}{y}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Schlußfolgerung: 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+ ist für posives 
+\begin_inset Formula $n$
+\end_inset 
+
+ an jeder Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ analytisch, denn es gilt Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
+
+\end_inset 
+
+ in der Form:
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\pdiff{}{z}(z-z_{0})^{n}=n(z-z_{0})^{n-1}=\pdiff{}{x}(z-z_{0})^{n}=\pdiff{}{\ji y}(z-z_{0})^{n}}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Gilt hingegen 
+\begin_inset Formula $n<0$
+\end_inset 
+
+, dann ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ nur für 
+\begin_inset Formula $z\neq z_{0}$
+\end_inset 
+
+ analytisch, denn beide Seiten der vorangegangenen Äquivalenz sind in diesem
+ Fall unbestimmt.
+\layout Standard
+
+Ein sich daraus ergebendes Resultat, welches in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:analysis_laurent}
+
+\end_inset 
+
+ bewiesen wurde, ist:
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
+0, & n\neq-1\\
+\ji2\pi, & n=-1\end{cases}}\msp.\]
+
+\end_inset 
+
+
 \layout Standard
 
 
