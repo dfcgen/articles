@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby.lyx,v 1.3 2005-05-01 07:52:03 ralf Exp $
+Version: $Id: cheby.lyx,v 1.4 2005-05-06 14:02:47 ralf Exp $
 \end_inset 
 
 
@@ -612,13 +612,13 @@ Die folgenden Werte ergeben sich direkt aus Definitionsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\T_{n}(-1) & =\left\{ \begin{array}{ll}
-+1 & \qquad n=0,2,4,\ldots\\
--1 & \qquad n=1,3,5,\ldots\end{array}\right.\\
-\T_{n}(0) & =\left\{ \begin{array}{ll}
-+1 & \qquad n=0,4,8,\ldots\\
--1 & \qquad n=2,6,10,\ldots\\
-0 & \qquad n=1,3,5,\ldots\end{array}\right.\\
+\T_{n}(-1) & =\begin{cases}
++1, & n=0,2,4,\ldots\\
+-1, & n=1,3,5,\ldots\end{cases}\\
+\T_{n}(0) & =\begin{cases}
++1, & n=0,4,8,\ldots\\
+-1, & n=2,6,10,\ldots\\
+0, & n=1,3,5,\ldots\end{cases}\\
 \T_{n}(1) & =1\end{align*}
 
 \end_inset 
@@ -661,9 +661,9 @@ Die Form des Polynoms kann deshalb folgendermaﬂen angenommen werden.
 
 
 \begin_inset Formula \begin{equation}
-\T_{n}(x)=\left\{ \begin{array}{ll}
-\sum\limits _{k=0}^{n/2}c_{k}x^{2k} & \qquad n=0,2,4,\ldots\\
-x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \qquad n=1,3,5,\ldots\end{array}\right.\label{eq:chebyt_poly}\end{equation}
+\T_{n}(x)=\begin{cases}
+\sum\limits _{k=0}^{n/2}c_{k}x^{2k}, & n=0,2,4,\ldots\\
+x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k}, & n=1,3,5,\ldots\end{cases}\label{eq:chebyt_poly}\end{equation}
 
 \end_inset 
 
@@ -783,7 +783,7 @@ Gauﬂ
 
 
 \begin_inset Formula \[
-\boxed{\frac{2}{\pi}\int\limits _{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx=\delta_{n\msp m}}\]
+\boxed{\frac{2}{\pi}\int\limits _{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\delta_{n\msp m}}\]
 
 \end_inset 
 
@@ -814,7 +814,7 @@ Ausgehend von der Parameterdarstellung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx=\frac{2}{\pi}\int_{\varphi=0}^{\pi}\cos(n\varphi)\cos(m\varphi)\,\tdc\varphi\]
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{\varphi=0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\]
 
 \end_inset 
 
@@ -830,10 +830,10 @@ Durch Erweiterung des Integrationsintervalls auf
 
 
 \begin_inset Formula \begin{align*}
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}dx & =\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\,\tdc\varphi\\
- & =\left\{ \begin{array}{ll}
-0 & \qquad n\neq m\\
-\pi & \qquad n=m\end{array}\right.\end{align*}
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x & =\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\\
+ & =\begin{cases}
+0, & n\neq m\\
+\pi, & n=m\end{cases}\end{align*}
 
 \end_inset 
 
@@ -1138,7 +1138,7 @@ Noch einfacher ist die Anwendung der Kettenregel auf die analytische Darstellung
 
 
 \begin_inset Formula \begin{align*}
-\frac{dx}{d\varphi} & =-\sin\varphi\\
+\tdiff{x}{\varphi} & =-\sin\varphi\\
  & =-\sqrt{1-\cos^{2}\varphi}\\
  & =-\sqrt{1-x^{2}}\end{align*}
 
@@ -1160,7 +1160,7 @@ Mit der (in gleicher Art und Weise gewonnenen) Ableitung von
 
 
 \begin_inset Formula \begin{align*}
-\frac{dy}{d\varphi} & =-n\sin(n\varphi)\\
+\tdiff{y}{\varphi} & =-n\sin(n\varphi)\\
  & =-n\sqrt{1-\cos^{2}(n\varphi)}\\
  & =-n\sqrt{1-y^{2}}\end{align*}
 
@@ -1178,7 +1178,7 @@ ergibt sich
 
 
 \begin_inset Formula \begin{align}
-\T'_{n}(x) & =\frac{dy}{dx}\nonumber \\
+\T'_{n}(x) & =\tdiff{y}{x}\nonumber \\
  & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\T_{n}^{2}(x)}{1-\T_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
  & =\frac{n\sqrt{1-\cos^{2}(n\arccos x)}}{\sqrt{1-x^{2}}}\nonumber \\
  & =\frac{n\sin(n\arccos x)}{\sqrt{1-x^{2}}}\nonumber \\
@@ -1217,9 +1217,9 @@ Die Extremwerte liegen offensichtlich bei
 
 
 \begin_inset Formula \begin{equation}
-\T'_{n}(x)=\left\{ \begin{array}{ll}
-2x\sum\limits _{k=0}^{n/2}kc_{k}x^{2(k-1)} & \qquad n=0,2,4,\ldots\\[12pt]
-\sum\limits _{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & \qquad n=1,3,5,\ldots\end{array}\right..\label{eq:chebyt_diff_explicit}\end{equation}
+\T'_{n}(x)=\begin{cases}
+2x\sum\limits _{k=0}^{n/2}kc_{k}x^{2(k-1)}, & n=0,2,4,\ldots\\
+\sum\limits _{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k}, & n=1,3,5,\ldots\end{cases}\label{eq:chebyt_diff_explicit}\end{equation}
 
 \end_inset 
 
@@ -1261,7 +1261,7 @@ Mit den ersten Ableitungen nach dem Parameter
 \end_inset 
 
  kann man durch Gleichsetzen mit 
-\begin_inset Formula $d\varphi$
+\begin_inset Formula $\tdc\varphi$
 \end_inset 
 
  die folgende Differentialgleichung
@@ -1300,8 +1300,8 @@ Die gleiche Differentialgleichung ergibt sich, wenn man
 
 
 \begin_inset Formula \begin{align}
-d\varphi=-\frac{dx}{\sqrt{1-x^{2}}} & =-\frac{dy}{n\sqrt{1-y^{2}}}\nonumber \\
-\frac{dy}{n\sqrt{1-y^{2}}} & =\frac{dx}{\sqrt{1-x^{2}}}\nonumber \\
+\tdc\varphi=-\frac{\tdc x}{\sqrt{1-x^{2}}} & =-\frac{\tdc y}{n\sqrt{1-y^{2}}}\nonumber \\
+\frac{\tdc y}{n\sqrt{1-y^{2}}} & =\frac{\tdc x}{\sqrt{1-x^{2}}}\nonumber \\
 (1-x^{2})\left[\T'_{n}(x)\right]^{2} & =n^{2}\left[1-\T_{n}^{2}(x)\right]\label{eq:chebyt_deqn}\end{align}
 
 \end_inset 
