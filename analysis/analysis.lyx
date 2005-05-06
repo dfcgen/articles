@@ -42,7 +42,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.2 2005-05-01 07:42:03 ralf Exp $
+Version: $Id: analysis.lyx,v 1.3 2005-05-06 10:46:57 ralf Exp $
 \end_inset 
 
 
@@ -75,7 +75,7 @@ htmlmeta{<META NAME="description" LANG ="de" CONTENT="Grundlagen der Funktionent
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie">}
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville">}
 \newline 
     
 \backslash 
@@ -137,20 +137,24 @@ Ralf Hoppe
 \layout Abstract
 
 Das vorliegende Papier richtet sich in erster Linie an Ingenieure und Studenten
- der Theoretischen Elektrotechnik, Signalverarbeitung sowie Nachrichtentechnik.
- Es soll die mathematischen Grundlagen zum Verständnis von Beweisen, Formeln
- und Schlußfolgerungen der Systemtheorie ins Gedächtnis zurückrufen 
-\begin_inset ERT
-status Collapsed
+ der Theoretischen Elektrotechnik, Signalverarbeitung sowie Nachrichtentechnik,
+ die ihr Wissen in diesem Zusammenhang auffrischen wollen.
+ Dabei sollen 
+\emph on 
+die
+\emph default 
+ mathematischen Grundlagen der Funktionentheorie (komplexe Analysis) ins
+ Gedächtnis zurückgerufen werden, welche häufig zum Verständnis von Sätzen,
+ Formeln und Beweisen der Signal-, System- und Informationstheorie nötig
+ sind.
+\layout Abstract
 
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- als praktisches Nachschlagewerk dienen.
- Empfehlenswert für einen tieferen Einstieg halte ich vor allem\SpecialChar ~
+Prinzipiell vorausgesetzt werden die Grundkenntnisse der höheren Mathematik,
+ insbesondere der Differential- und Integralrechnung.
+ Empfehlenswert für einen tieferen Einstieg halte ich unter anderem\SpecialChar ~
+\SpecialChar \ldots{}
+ sowie
+ den Klassiker\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Whittaker:1927}
 
@@ -175,22 +179,22 @@ Analytische Funktionen
 
 \layout Subsection
 
-Holomorphie
+Differentiation
 \layout Standard
 
-Analytische
-\begin_inset LatexCommand \index{Analytische Funktion!Holomorphie}
+Holomorphe
+\begin_inset LatexCommand \index{Holomorphie}
 
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Holomorphie}
+\begin_inset LatexCommand \index{Funktion!analytische!Holomorphie}
 
 \end_inset 
 
  
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -198,12 +202,28 @@ status Collapsed
 resp
 \end_inset 
 
- holomorphe
-\begin_inset LatexCommand \index{Holomorphie}
+ analytische Funktionen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+In der komplexen Analysis nennt man eine Funktion analytisch (oder regulär),
+ wenn sie durch eine Potenzreihe
+\begin_inset LatexCommand \index{Potenzreihe}
 
 \end_inset 
 
- Funktionen sind solche, deren Grenzwert
+ 
+\begin_inset Formula $f(z)=\sum_{k=0}^{\infty}c_{k}(z-z_{0})^{k}$
+\end_inset 
+
+ dargestellt werden kann.
+ Da jede holomorphe Funktion auch analytisch ist, werden beide Begriffe
+ oft äquivalent gebraucht.
+\end_inset 
+
+ sind solche, deren Grenzwert
 \layout Standard
 
 
@@ -215,13 +235,26 @@ resp
 
 \layout Standard
 
-existiert und eindeutig
-\begin_inset Foot
-collapsed true
+existiert und eindeutig ist, die also an der Stelle 
+\begin_inset Formula $z$
+\end_inset 
 
-\layout Standard
+ differenzierbar sind.
+ Man fordert hierbei nicht unbedingt, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
 
-Die 
+ für 
+\emph on 
+alle
+\emph default 
+ 
+\begin_inset Formula $z$
+\end_inset 
+
+ einen solchen Grenzwert hat -- man kann sich auch auf ein bestimmtes Gebiet
+ beschränken, auf dem die Funktion dann als analytisch bezeichnet wird.
+ Die 
 \begin_inset Quotes eld
 \end_inset 
 
@@ -255,26 +288,9 @@ eg
 \end_inset 
 
 ).
-\end_inset 
-
- ist, die also an der Stelle 
-\begin_inset Formula $z$
-\end_inset 
-
- differenzierbar sind.
- Man fordert hierbei nicht unbedingt, daß 
-\begin_inset Formula $f(z)$
-\end_inset 
-
- für alle 
-\begin_inset Formula $z$
-\end_inset 
-
- einen solchen Grenzwert hat -- man kann sich auch auf ein bestimmtes Gebiet
- beschränken, auf welchem die Funktion als analytisch bezeichnet wird.
  Nicht analytisch sind 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -320,8 +336,8 @@ Einwertigkeit
 
 \end_inset 
 
- einer holomorphen Funktion 
-\begin_inset Formula $f(z)=u(z)+\ji v(z)$
+ einer analytischen Funktion 
+\begin_inset Formula $f(z)=u(x,y)+\ji v(x,y)$
 \end_inset 
 
  mit 
@@ -409,6 +425,11 @@ Sie ist eine notwendige Bedingung für die Differenzierbarkeit von
 \end_inset 
 
 
+\begin_inset LatexCommand \index{Integrabilitätsbedingung}
+
+\end_inset 
+
+
 \layout Standard
 
 
@@ -430,27 +451,143 @@ und wegen der Unabhängigkeit des Grenzwertes von jedweder Annäherungsrichtung
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f'(z)=\tdiff{f(z)}{z}=\pdiff{u}{x}+\ji\pdiff{v}{x}=\pdiff{v}{y}-\ji\pdiff{u}{y}}\end{equation}
+\boxed{f'(z)=\tdiff{f(z)}{z}=\pdiff{u}{x}+\ji\pdiff{v}{x}=\pdiff{v}{y}-\ji\pdiff{u}{y}}\msp.\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Für eine holomorphe Funktion ist im Umkehrschluß die Existenz einer Stammfunktio
-n 
-\begin_inset Formula $F(z)$
+Differenziert man (nun noch) beide Teile der 
+\noun on 
+Cauchy-Riemann
+\noun default 
+'sche Differentialgleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond}
+
+\end_inset 
+
+ jeweils nach 
+\begin_inset Formula $u$
+\end_inset 
+
+ und 
+\begin_inset Formula $v$
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\pdc^{2}u}{\pdc x^{2}}=\frac{\pdc^{2}v}{\pdc x\,\pdc y},\qquad\frac{\pdc^{2}u}{\pdc y^{2}}=-\frac{\pdc^{2}v}{\pdc y\,\pdc x}\]
+
+\end_inset 
+
+
+\layout Standard
+
+und addiert sie dann, so erhält man (wegen der Vertauschbarkeit der Reihenfolge
+ von partiellen Ableitungen, Satz von 
+\noun on 
+Schwarz
+\noun default 
+
+\begin_inset LatexCommand \index{Schwarz@\noun{Schwarz}, Satz von}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Satz von!Schwarz@\noun{Schwarz}|see{\noun{Schwarz}}}
+
+\end_inset 
+
+):
+\layout Standard
+
+
+\begin_inset Formula \[
+\frac{\pdc^{2}u}{\pdc x^{2}}+\frac{\pdc^{2}u}{\pdc y^{2}}=\frac{\pdc^{2}v}{\pdc x\,\pdc y}-\frac{\pdc^{2}v}{\pdc y\,\pdc x}=0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Real- und Imaginärteil analytischer Funktionen sind also Potentialfunktionen
+\begin_inset LatexCommand \index{Potentialfunktionen}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Funktion!Potential-}
+
+\end_inset 
+
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ harmonische
+\begin_inset LatexCommand \index{Funktion!harmonische}
+
+\end_inset 
+
+ Funktionen), 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ sie erfüllen die 
+\noun on 
+Laplace
+\noun default 
+-Gleichung
+\begin_inset LatexCommand \index{Laplace-Gleichung@\noun{Laplace}-Gleichung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\Delta u=0$
+\end_inset 
+
+.
+\layout Subsection
+
+Integration
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:analysis_cauchy_theorem}
+
+\end_inset 
+
+Satz von 
+\noun on 
+Cauchy
+\layout Standard
+
+Für eine analytische Funktion ist die Existenz einer Stammfunktion 
+\begin_inset Formula $F(z)=U(x,y)+\ji V(x,y)$
 \end_inset 
 
  mit 
 \begin_inset Formula $f(z)=\tdc F/\tdc z$
 \end_inset 
 
- (sowie 
-\begin_inset Formula $\tdc z=\tdc x+\ji\tdc y$
-\end_inset 
-
-) gegeben
+ und
 \begin_inset Foot
 collapsed true
 
@@ -468,8 +605,31 @@ Oder in Parameterdarstellung
 .
 \end_inset 
 
-.
- Die Wegunabhängigkeit der Integration auf einer Kurve 
+ 
+\begin_inset Formula $\tdc z=\tdc x+\ji\tdc y$
+\end_inset 
+
+ dann gegeben, wenn die Integrabilitätsbedingung nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond}
+
+\end_inset 
+
+ erfüllt und diese Ableitungen außerdem stetig sind.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\int f(z)\tic z & = & \int\left[f(z)\tic x+\ji f(z)\tic y\right]\\
+ & = & \int u\tic x-v\tic y+\ji\int u\tic x+v\tic y\\
+ & = & \int\tic U+\ji\int\tic V=\int\tic F(z)=F(z)\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Die Wegunabhängigkeit der Integration auf einer Kurve 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -520,20 +680,7 @@ ie
 \noun on 
 Cauchy
 \noun default 
-.
-\layout Subsection
 
-
-\begin_inset LatexCommand \label{sec_analysis_cauchy_theorem}
-
-\end_inset 
-
-Satz von 
-\noun on 
-Cauchy
-\layout Standard
-
-Der Integralsatz
 \begin_inset Foot
 collapsed true
 
@@ -555,12 +702,12 @@ Auch bezeichnet als Hauptsatz der Funktionentheorie
 
 \noun on 
 
-\begin_inset LatexCommand \index{Satz von Cauchy@Satz von \noun{Cauchy}|see{\noun{Cauchy}}}
+\begin_inset LatexCommand \index{Satz von!Cauchy@\noun{Cauchy}|see{\noun{Cauchy}}}
 
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Analytische Funktion!Kurvenintegral}
+\begin_inset LatexCommand \index{Funktion!analytische!Kurvenintegral}
 
 \end_inset 
 
@@ -571,11 +718,7 @@ Auch bezeichnet als Hauptsatz der Funktionentheorie
 
 
 \noun default 
- von 
-\noun on 
-Cauchy
-\noun default 
- lautet:
+:
 \layout Quote
 
 Ist 
@@ -636,16 +779,16 @@ cf
 \layout Standard
 
 Diese als Wegunabhängigkeit
-\begin_inset LatexCommand \index{Wegunabhängigkeit}
+\begin_inset LatexCommand \index{Kurvenintegral!Wegunabhängigkeit}
 
 \end_inset 
 
  bezeichnete Eigenschaft ist aufgrund der Voraussetzung, daß es sich um
- eine holomorphe Funktion (innerhalb von 
+ eine analytische Funktion (innerhalb von 
 \begin_inset Formula $C$
 \end_inset 
 
-) handelt, an die Integrabilitätsbedingung
+) handelt, auch wieder an die Integrabilitätsbedingung
 \begin_inset LatexCommand \index{Integrabilitätsbedingung}
 
 \end_inset 
@@ -665,7 +808,7 @@ Diese als Wegunabhängigkeit
 \begin_inset Formula $C$
 \end_inset 
 
- holomorph
+ analytisch
 \begin_inset Foot
 collapsed true
 
@@ -779,8 +922,7 @@ Ist die Funktion
 \begin_inset Formula $C$
 \end_inset 
 
- holomorph, das Integral also wegunabhängig, dann kann man den Weg entsprechend
- Abbildung\SpecialChar ~
+ analytisch, dann kann man den Weg entsprechend Abbildung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{fig:analysis_curve_step2}
 
@@ -872,13 +1014,13 @@ Ein einfach zusammenhängendes Gebiet
 \end_inset 
 
 
-\layout Subsection
+\layout Subsubsection
 
-Berechnung von Funktionswerten durch Integration
+Berechnung von Funktionswerten
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Analytische Funktion!Funktionswert}
+\begin_inset LatexCommand \index{Funktion!analytische!Funktionswert}
 
 \end_inset 
 
@@ -895,7 +1037,7 @@ Cauchy
 \end_inset 
 
  analytisch sei, durch ein Kurvenintegral ausdrücken.
- Dazu definiert man 
+ Dazu definiert man einfach 
 \begin_inset Formula $f(z)/(z-z_{0})$
 \end_inset 
 
@@ -903,7 +1045,7 @@ Cauchy
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- nicht holomorph ist, und integriert auf einer den Punkt 
+ nicht analytisch ist, und integriert auf einer den Punkt 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -1020,7 +1162,7 @@ Danach werden
 
  separiert und als Kurven so geschlossen, daß jede für sich analytisch ist.
  Außerdem sollen sich beide Kurven aus dem originalen Stück des äußeren
- Halbkreises, benannt 
+ Halbkreises, bezeichnet mit 
 \begin_inset Formula $C_{1}^{\prime}$
 \end_inset 
 
@@ -1167,14 +1309,14 @@ glattgezogenen
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- aber zu berücksichtigen ist, ergibt sich schlußendlich
+ aber zu berücksichtigen ist, ergibt sich schlußendlich:
 \layout Standard
 
 
 \begin_inset Formula \begin{align*}
 \oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\int_{C_{1}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z\\
  & =-\ji f(z_{0})\,\left(\left.\theta\,\right|_{C_{1}^{\prime\prime}}+\left.\theta\,\right|_{C_{2}^{\prime\prime}}\right)\\
- & =-\ji f(z_{0})(-2\pi-0)=\ji2\pi f(z_{0})\msp.\end{align*}
+ & =-\ji f(z_{0})(-2\pi-0)=2\pi\ji f(z_{0})\msp.\end{align*}
 
 \end_inset 
 
@@ -1271,7 +1413,7 @@ Der zweite Summand ist mit der Substitution nach
 
 
 \begin_inset Formula \begin{equation}
-f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{C}\tic\theta=\ji f(z_{0})\int_{0}^{2\pi}\tic\theta=\ji2\pi f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{C}\tic\theta=\ji f(z_{0})\int_{0}^{2\pi}\tic\theta=2\pi\ji f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
 
 \end_inset 
 
@@ -1283,7 +1425,7 @@ und somit
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=\ji2\pi f(z_{0})}\msp.\label{eq:analysis_cauchy_formula_implicit}\end{equation}
+\boxed{\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\, f(z_{0})}\msp.\label{eq:analysis_cauchy_formula_implicit}\end{equation}
 
 \end_inset 
 
@@ -1326,13 +1468,13 @@ Cauchy
 \end_inset 
 
 
-\layout Subsection
+\layout Subsubsection
 
-Berechnung von Ableitungen durch Integration
+Berechnung von Ableitungen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Analytische Funktion!Ableitung}
+\begin_inset LatexCommand \index{Funktion!analytische!Ableitung}
 
 \end_inset 
 
@@ -1475,12 +1617,13 @@ f^{\prime\prime}(z)=\frac{2}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{3}}\tic\xi\
 \layout Standard
 
 lautet.
- Für weitere Ableitungen ergibt sich in der Fortsetzung die allgemeine 
+ Für weitere Ableitungen ergibt sich in der Fortsetzung die Verallgemeinerte
+ 
 \noun on 
 Cauchy
 \noun default 
 'sche Integralformel
-\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Allg. Integralformel von}
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Verallg. Integralformel von}
 
 \end_inset 
 
@@ -1502,7 +1645,7 @@ collapsed true
 
 \layout Standard
 
-Die allgemeine 
+Die verallgemeinerte 
 \noun on 
 Cauchy
 \noun default 
@@ -1573,7 +1716,7 @@ f^{(n)}(z)=\frac{n!}{2\pi\ji}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\thet
 \noun on 
 Laurent
 \noun default 
--Reihen
+-Reihe
 \layout Standard
 
 
@@ -1654,16 +1797,20 @@ collapsed true
 
 \layout Standard
 
-Besitzt 
-\begin_inset Formula $f(z)$
+Die Funktion 
+\begin_inset Formula $\Phi(z)$
 \end_inset 
 
- von Hause aus eine solche Form, dann sind (wie noch zu sehen sein wird)
- Kurvenintegrale der Art 
-\begin_inset Formula $\oint_{C}f(z)\tic z$
+ entspricht der 
+\noun on 
+Taylor
+\noun default 
+-Reihenentwicklung (Potenzreihe
+\begin_inset LatexCommand \index{Potenzreihe}
+
 \end_inset 
 
- manchmal sehr leicht zu lösen.
+) einer reellen Funktion.
 \end_inset 
 
 
@@ -1695,23 +1842,6 @@ Die Funktion
 \end_inset 
 
 , der sogenannte Regulärteil
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Die Funktion 
-\begin_inset Formula $\Phi(z)$
-\end_inset 
-
- entspricht der 
-\noun on 
-Taylor
-\noun default 
--Reihenentwicklung einer reellen Funktion.
-\end_inset 
-
-
 \begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Regulärteil}
 
 \end_inset 
@@ -1803,7 +1933,7 @@ Cauchy
 \end_inset 
 
  den Wert 
-\begin_inset Formula $\ji2\pi a_{-1}$
+\begin_inset Formula $2\pi\ji a_{-1}$
 \end_inset 
 
  hat
@@ -1838,7 +1968,7 @@ Cauchy
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=\ji2\pi a_{-1}}\label{eq:laurent_residue_integral}\end{equation}
+\boxed{\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=2\pi\ji\, a_{-1}}\label{eq:laurent_residue_integral}\end{equation}
 
 \end_inset 
 
@@ -1900,7 +2030,7 @@ ie
 
 
 \begin_inset Formula \[
-\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=\ji2\pi a_{n}\]
+\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=2\pi\ji\, a_{n}\]
 
 \end_inset 
 
@@ -1917,36 +2047,83 @@ Nun ist man in der Lage, aus der Kombination der bisherigen Formeln eine
 
 
 \begin_inset Formula \begin{equation}
-\boxed{a_{n}=\frac{1}{\ji2\pi}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z}\end{equation}
+\boxed{a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Zu bemerken bleibt noch, daß diese Formel für 
-\begin_inset Formula $n>0$
+Aus vorangegangener Formel ist der Zusammenhang zwischen Holomorphie
+\begin_inset LatexCommand \index{Funktion!analytische!Holomorphie}
+
 \end_inset 
 
- (abgesehen von einem konstanten Faktor) genau der Ableitung einer analytischen
- Funktion nach Gleichung\SpecialChar ~
+ und Analytizität
+\begin_inset LatexCommand \index{Analytizität}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Funktion!analytische}
+
+\end_inset 
+
+ einer komplexen Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ erklärbar.
+ Nehmen wir dazu an, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ holomorph ist -- dann
+\layout Itemize
+
+verschwinden alle Koeffizienten 
+\begin_inset Formula $a_{i}$
+\end_inset 
+
+ mit negativem Index (Satz von 
+\noun on 
+Cauchy
+\noun default 
+, Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_integral}
+
+\end_inset 
+
+);
+\layout Itemize
+
+entsprechen die mit positivem Index genau den Koeffizienten einer 
+\noun on 
+Taylor
+\noun default 
+-Reihe
+\begin_inset LatexCommand \index{Taylor-Reihe@\noun{Taylor}-Reihe}
+
+\end_inset 
+
+, wenn man Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_derivative_integral}
 
 \end_inset 
 
- entspricht
+ berücksichtigt
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
-Der Fakt ist insofern nicht verwunderlich, als das genau an dieser Stelle
- auch die Verwandtschaft zur 
-\noun on 
-Taylor
-\noun default 
--Reihe liegt.
+Für die Existenz der Reihenentwicklung ist Voraussetzung, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ unendlich oft differenzierbar ist.
 \end_inset 
 
 .
@@ -1954,11 +2131,29 @@ Taylor
 
 
 \begin_inset Formula \[
-a_{n}=\frac{f^{(n)}(z_{0})}{n!}\]
+a_{n}=\begin{cases}
+\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=\frac{f^{(n)}(z_{0})}{n!}, & n\geq0\\
+\frac{1}{2\pi\ji}\oint_{C}f(z)\,(z-z_{0})^{|n|+1}\tic z=0, & n<0\end{cases}\]
 
 \end_inset 
 
 
+\layout Standard
+
+Die 
+\noun on 
+Laurent
+\noun default 
+-Reihe entartet in diesem Sinne zu einer Potenzreihe
+\begin_inset LatexCommand \index{Potenzreihe}
+
+\end_inset 
+
+, woraus folgt, daß die Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ analytisch ist.
 \layout Subsection
 
 
@@ -1979,7 +2174,7 @@ Residuensatz
 
 Der Residuensatz ist eine logische Fortführung 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -2051,7 +2246,7 @@ Insbesondere  Gleichung\SpecialChar ~
 .
  Denkt man an Abschnitt\SpecialChar ~
 
-\begin_inset LatexCommand \ref{sec_analysis_cauchy_theorem}
+\begin_inset LatexCommand \ref{sec:analysis_cauchy_theorem}
 
 \end_inset 
 
@@ -2072,7 +2267,7 @@ Insbesondere  Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=\ji2\pi\sum_{n}\left\{ \res{z_{n}}{f}{z}\right\} }\label{eq:analysis_residue_theorem}\end{equation}
+\boxed{\oint_{C}f(z)\tic z=2\pi\ji\sum_{n}\left\{ \res{z_{n}}{f}{z}\right\} }\label{eq:analysis_residue_theorem}\end{equation}
 
 \end_inset 
 
@@ -2126,11 +2321,16 @@ Hebbare Singularitäten
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- beschränkt (und in 
+ beschränkt
+\begin_inset LatexCommand \index{Funktion!analytische!Beschränktheit}
+
+\end_inset 
+
+ (und in 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- holomorph) ist.
+ analytisch) ist.
  Der 
 \noun on 
 Riemann
@@ -2437,7 +2637,7 @@ ie
  existieren (und zwar unendlich viele).
  Das Residuum ist für eine solche Funktion (
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -2465,7 +2665,7 @@ eg
 
 Funktionen, die nur hebbare Singularitäten oder Pole besitzen, werden auch
  meromorph
-\begin_inset LatexCommand \index{Analytische Funktion!Meromorphe}
+\begin_inset LatexCommand \index{Funktion!meromorphe}
 
 \end_inset 
 
@@ -2485,7 +2685,7 @@ Liouville
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Satz von Liouville@Satz von \noun{Liouville}|see{\noun{Liouville}}}
+\begin_inset LatexCommand \index{Satz von!Liouville@\noun{Liouville}|see{\noun{Liouville}}}
 
 \end_inset 
 
@@ -2502,7 +2702,7 @@ Liouville
 \noun default 
 Satz soll hier, etwas anders als 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -2532,7 +2732,22 @@ Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
 \begin_inset Formula $\sup|f(z)|=M<\infty$
 \end_inset 
 
- beschränkt ist.
+ beschränkt ist
+\begin_inset LatexCommand \index{Funktion!analytische!Beschränktheit}
+
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ dort keine Singularitäten liegen.
  Dann gilt folgende Ungleichung
 \begin_inset Note
 collapsed true
@@ -2601,7 +2816,7 @@ M\int\limits _{a}^{b}|\tic z|=M\int\limits _{a}^{b}\left|\frac{\tdc x}{\tdc t}+\
 
 
 \begin_inset Formula \begin{equation}
-\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq M\cdot L\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
+\boxed{\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq M\cdot L}\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
 
 \end_inset 
 
@@ -2713,7 +2928,7 @@ und direkt weiter zur Ungleichung
 
 
 \begin_inset Formula \begin{equation}
-\left|f^{(n)}(z)\right|\leq\frac{M\, n!}{r^{n}}\msp.\label{eq:analysis_derivative_abs_limit}\end{equation}
+\boxed{\left|f^{(n)}(z)\right|\leq\frac{M\, n!}{r^{n}}}\msp.\label{eq:analysis_derivative_abs_limit}\end{equation}
 
 \end_inset 
 
@@ -2803,7 +3018,7 @@ Läßt man nun
 
 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -2906,7 +3121,7 @@ Für die Ableitung nach
 
  gibt es bis hierher keinen Unterschied, 
 \begin_inset ERT
-status Collapsed
+status Inlined
 
 \layout Standard
 
@@ -3075,7 +3290,7 @@ Ein sich daraus ergebendes Resultat, welches in Abschnitt\SpecialChar ~
 \begin_inset Formula \[
 \boxed{\oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
 0, & n\neq-1\\
-\ji2\pi, & n=-1\end{cases}}\msp.\]
+2\pi\ji, & n=-1\end{cases}}\msp.\]
 
 \end_inset 
 
