@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic.lyx,v 1.3 2005-04-30 19:04:16 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.4 2005-05-06 12:05:24 ralf Exp $
 \end_inset 
 
 
@@ -42,7 +42,7 @@ Einleitung
 \layout Standard
 
 Dieser Teil behandelt grundlegende Eigenschaften des vollständigen und unvollstä
-ndigen elliptischen Integrales erster Art sowie der 
+ndigen elliptischen Integrals erster Art sowie der 
 \noun on 
 Jacobi
 \noun default 
@@ -291,12 +291,7 @@ Der allen gemeinsame Parameter
 \end_inset 
 
  genannt.
- Außerdem ist ein komplementäres Modul
-\begin_inset LatexCommand \index{Modul!Komplementäres}
-
-\end_inset 
-
-
+ Außerdem ist mit
 \layout Standard
 
 
@@ -308,7 +303,12 @@ k'=\sqrt{1-k^{2}}\label{eq:elliptic_complement_module}\end{equation}
 
 \layout Standard
 
-definiert.
+ein komplementäres Modul
+\begin_inset LatexCommand \index{Modul!Komplementäres}
+
+\end_inset 
+
+ definiert.
  Als hilfreich erweisen sich in vielen Fällen auch die binomischen Darstellungen
  des Moduls.
 \layout Standard
@@ -545,7 +545,7 @@ Gauß
 \noun default 
  intensiv verwendete Form des elliptischen Integrales erster Art ist
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -1423,7 +1423,7 @@ Legendre
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\eK{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
+\boxed{\eK{k}=\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
 
 \end_inset 
 
@@ -1456,8 +1456,8 @@ Spezielle Werte
 
 
 \begin_inset Formula \begin{align}
-\eK{0} & =\int\limits _{0}^{\frac{\pi}{2}}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
-\eK{1} & =\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
+\eK{0} & =\int\limits _{0}^{\pi/2}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
+\eK{1} & =\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
 
 \end_inset 
 
@@ -2162,7 +2162,7 @@ Durch die Anwendung der trigonometrischen Funktionen auf die Amplitudenfunktion
 
  entweder die sogenannte (reelle) Halb- oder Viertelperiode
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -2188,7 +2188,7 @@ eg
 \begin_inset Formula $2\pi$
 \end_inset 
 
- betragen, ist es bei doppelt-periodischen Funktionen (insbesondere der
+ betragen, ist es bei doppelt-periodischen Funktionen (insbesondere den
  
 \noun on 
 Weierstraß
@@ -6037,7 +6037,7 @@ V(x) & =\sum_{\mu=0}^{n'}b_{\mu}x^{\mu}=b_{n'}\prod_{\mu=1}^{n'}(x-\pn{x}{\mu})\
 
 darstellen läßt
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -8894,7 +8894,7 @@ Die Bestimmung des Periodenverhältnisses
 
 
 \begin_inset Formula \begin{equation}
-\frac{K}{K'}=\frac{\eK{k}}{\eK{k'}}=\frac{\eK{\lambda'}}{\eK\lambda}=\frac{\Lambda'}{\Lambda}\label{eq:elltr_imag_periods}\end{equation}
+\boxed{\frac{K}{K'}=\frac{\eK{k}}{\eK{k'}}=\frac{\eK{\lambda'}}{\eK\lambda}=\frac{\Lambda'}{\Lambda}}\label{eq:elltr_imag_periods}\end{equation}
 
 \end_inset 
 
@@ -8963,7 +8963,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-\esn{u}{k}=\frac{1}{k}\esn{ku}{\frac{1}{k}}\label{eq:elltr_real}\end{equation}
+\boxed{\esn{u}{k}=\frac{1}{k}\esn{ku}{\frac{1}{k}}}\label{eq:elltr_real}\end{equation}
 
 \end_inset 
 
@@ -9134,7 +9134,7 @@ eg
 
 
 \begin_inset Formula \begin{equation}
-\frac{K}{K'}=2\frac{\Lambda}{\Lambda'}.\end{equation}
+\boxed{\frac{K}{K'}=2\frac{\Lambda}{\Lambda'}}\msp.\end{equation}
 
 \end_inset 
 
@@ -9540,7 +9540,7 @@ Eine weitere interessante Darstellung der Transformationsbeziehung ist möglich,
 
 
 \begin_inset Formula \[
-\esn{\frac{u}{M}}{\lambda}=(1+k')\esn{u}{k}\,\esn{u+K}{k}\]
+\boxed{\esn{\frac{u}{M}}{\lambda}=(1+k')\esn{u}{k}\,\esn{u+K}{k}}\]
 
 \end_inset 
 
@@ -9997,7 +9997,7 @@ Die Transformationsbeziehung für
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u}{M}}{\lambda}=\frac{1-(1+k')\esn[2]{u}{k}}{\edn{u}{k}}\msp.\label{eq:elltr_landen_cn}\end{equation}
+\boxed{\ecn{\frac{u}{M}}{\lambda}=\frac{1-(1+k')\esn[2]{u}{k}}{\edn{u}{k}}}\msp.\label{eq:elltr_landen_cn}\end{equation}
 
 \end_inset 
 
@@ -10071,7 +10071,7 @@ Die Beziehung für
 
 
 \begin_inset Formula \begin{equation}
-\edn{\frac{u}{M}}{\lambda}=\frac{1-(1-k')\esn[2]{u}{k}}{\edn{u}{k}}\label{eq:elltr_landen_dn}\end{equation}
+\boxed{\edn{\frac{u}{M}}{\lambda}=\frac{1-(1-k')\esn[2]{u}{k}}{\edn{u}{k}}}\label{eq:elltr_landen_dn}\end{equation}
 
 \end_inset 
 
@@ -10438,33 +10438,12 @@ Landen
 \end_inset 
 
 .
- Sie wird in vielen Literaturquellen durch folgende Gleichungen beschrieben
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Nur um die Eindeutigkeit bei der Darstellung der Zusammenhänge mit der 
-\noun on 
-Landen
-\noun default 
--Transformation zu wahren, sind alle Größen mit 
-\begin_inset Quotes eld
-\end_inset 
-
-g
-\begin_inset Quotes erd
-\end_inset 
-
- indiziert worden
-\end_inset 
-
-.
+ Sie wird in vielen Literaturquellen durch folgende Gleichungen beschrieben.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\esn{\frac{u_{g}}{M_{g}}}{\lambda_{g}}=\frac{(1+k_{g})\esn{u_{g}}{k_{g}}}{1+k_{g}\esn[2]{u_{g}}{k_{g}}}}\label{eq:elltr_gauss_sn}\end{equation}
+\boxed{\esn{\frac{u}{M}}{\lambda}=\frac{(1+k)\,\esn{u}{k}}{1+k\,\esn[2]{u}{k}}}\label{eq:elltr_gauss_sn}\end{equation}
 
 \end_inset 
 
@@ -10473,8 +10452,8 @@ g
 
 
 \begin_inset Formula \begin{align*}
-M_{g} & =\frac{1}{1+k_{g}}\\
-\lambda_{g} & =\frac{2\sqrt{k_{g}}}{1+k_{g}}\end{align*}
+M & =\frac{1}{1+k}\\
+\lambda & =\frac{2\sqrt{k}}{1+k}\end{align*}
 
 \end_inset 
 
@@ -10597,6 +10576,31 @@ k^{2}\esn[2]{2u}{k} & =\frac{4\lambda\esn[2]{u/M}{\lambda}}{\left[1+\lambda\esn[
 \layout Proof
 
 Nimmt man zuletzt noch die Ersetzungen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Um die Eindeutigkeit bei der Darstellung der Zusammenhänge mit der 
+\noun on 
+Landen
+\noun default 
+-Transformation zu wahren, sind alle Größen aus den Formeln der 
+\noun on 
+Gauß
+\noun default 
+-Transformation mit 
+\begin_inset Quotes eld
+\end_inset 
+
+g
+\begin_inset Quotes erd
+\end_inset 
+
+ indiziert worden
+\end_inset 
+
+
 \layout Proof
 
 
@@ -10675,7 +10679,7 @@ Für die Delta-Amplitude
 
 
 \begin_inset Formula \[
-k_{g}^{2}\esn[2]{u_{g}}{k_{g}}=1-\edn[2]{u_{g}}{k_{g}}\]
+k^{2}\esn[2]{u}{k}=1-\edn[2]{u}{k}\]
 
 \end_inset 
 
@@ -10686,9 +10690,17 @@ berücksichtigt wird.
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-\edn{\frac{u_{g}}{M_{g}}}{\lambda_{g}} & =\frac{1-k_{g}\esn[2]{u_{g}}{k_{g}}}{1+k_{g}\esn[2]{u_{g}}{k_{g}}}\nonumber \\
- & =\frac{k_{g}-\left[1-\edn[2]{u_{g}}{k_{g}}\right]}{k_{g}+\left[1-\edn[2]{u_{g}}{k_{g}}\right]}\label{eq:elltr_gauss_dn}\end{align}
+\begin_inset Formula \[
+\edn{\frac{u}{M}}{\lambda}=\frac{1-k\esn[2]{u}{k}}{1+k\esn[2]{u}{k}}\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\edn{\frac{u}{M}}{\lambda}=\frac{k-\left[1-\edn[2]{u}{k}\right]}{k+\left[1-\edn[2]{u}{k}\right]}}\label{eq:elltr_gauss_dn}\end{equation}
 
 \end_inset 
 
@@ -10711,7 +10723,7 @@ Die noch ausstehende Beziehung für
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u_{g}}{M_{g}}}{\lambda_{g}}=\frac{\ecn{u_{g}}{k_{g}}\cdot\edn{u_{g}}{k_{g}}}{1+k_{g}\esn[2]{u_{g}}{k_{g}}}\msp.\label{eq:elltr_gauss_cn}\end{equation}
+\boxed{\ecn{\frac{u}{M}}{\lambda}=\frac{\ecn{u}{k}\,\edn{u}{k}}{1+k\esn[2]{u}{k}}}\msp.\label{eq:elltr_gauss_cn}\end{equation}
 
 \end_inset 
 
@@ -10745,7 +10757,7 @@ Die gesuchte Beziehung für den Sinus erhält man wieder durch direkte Umsetzung
 
 
 \begin_inset Formula \[
-\sin\theta=\frac{(1+k_{g})\sin\varphi}{1+k_{g}\sin^{2}\varphi}\]
+\boxed{\sin\theta=\frac{(1+k)\sin\varphi}{1+k\sin^{2}\varphi}}\]
 
 \end_inset 
 
@@ -10775,7 +10787,7 @@ Gauß
 
 
 \begin_inset Formula \[
-\cos\theta=\frac{\cos\varphi\sqrt{1-k_{g}^{2}\sin^{2}\varphi}}{1+k_{g}\sin^{2}\varphi}\]
+\cos\theta=\frac{\cos\varphi\sqrt{1-k^{2}\sin^{2}\varphi}}{1+k\sin^{2}\varphi}\]
 
 \end_inset 
 
@@ -10791,9 +10803,9 @@ gewonnen werden, wenn man dann noch die trigonometrische Beziehung
 
 
 \begin_inset Formula \begin{align}
-\tan\theta & =\frac{\sin\theta}{\cos\theta}=\frac{(1+k_{g})\sin\varphi}{\cos\varphi\sqrt{1-k_{g}^{2}\sin^{2}\varphi}}\nonumber \\
- & =\frac{(1+k_{g})\tan\varphi}{\sqrt{1-k_{g}^{2}\frac{\tan^{2}\varphi}{1+\tan^{2}\varphi}}}\nonumber \\
- & =(1+k_{g})\tan\varphi\sqrt{\frac{1+\tan^{2}\varphi}{1+k_{g}'^{2}\tan^{2}\varphi}}\label{eq:elltr_gauss_tan}\end{align}
+\tan\theta & =\frac{\sin\theta}{\cos\theta}=\frac{(1+k)\sin\varphi}{\cos\varphi\sqrt{1-k^{2}\sin^{2}\varphi}}\nonumber \\
+ & =\frac{(1+k)\tan\varphi}{\sqrt{1-k^{2}\frac{\tan^{2}\varphi}{1+\tan^{2}\varphi}}}\nonumber \\
+ & =(1+k)\tan\varphi\sqrt{\frac{1+\tan^{2}\varphi}{1+{k'}^{2}\tan^{2}\varphi}}\label{eq:elltr_gauss_tan}\end{align}
 
 \end_inset 
 
@@ -10808,12 +10820,7 @@ Die Bestimmung des Periodenverhältnisses
 
 \end_inset 
 
- der 
-\noun on 
-Gauß
-\noun default 
--Transformation gestaltet sich ausgehend von den Periodenbeziehungen der
- 
+ gestaltet sich ausgehend von den Periodenbeziehungen der 
 \noun on 
 Landen
 \noun default 
@@ -10832,7 +10839,11 @@ g
 \begin_inset Quotes erd
 \end_inset 
 
- gekennzeichneten Größen umsetzen.
+ gekennzeichneten Größen der 
+\noun on 
+Gauß
+\noun default 
+-Transformation umsetzen.
 \layout Standard
 
 
@@ -11181,7 +11192,7 @@ Nach Tabelle\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-y=\esn{u/M}{\lambda}\label{eq:elltr1_odd_param_y}\end{equation}
+\boxed{y=\esn{u/M}{\lambda}}\label{eq:elltr1_odd_param_y}\end{equation}
 
 \end_inset 
 
@@ -11519,7 +11530,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-y=\frac{x}{M}\cdot\frac{\left(1-\frac{x^{2}}{a_{2}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{4}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{6}^{2}}\right)\cdots}{(1-k^{2}a_{2}^{2}x^{2})\cdot(1-k^{2}a_{4}^{2}x^{2})\cdot(1-k^{2}a_{6}^{2}x^{2})\cdots}=\frac{x}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}\label{eq:elltr1_odd_poly}\end{equation}
+\boxed{y=\frac{x}{M}\cdot\frac{\left(1-\frac{x^{2}}{a_{2}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{4}^{2}}\right)\cdot\left(1-\frac{x^{2}}{a_{6}^{2}}\right)\cdots}{(1-k^{2}a_{2}^{2}x^{2})\cdot(1-k^{2}a_{4}^{2}x^{2})\cdot(1-k^{2}a_{6}^{2}x^{2})\cdots}=\frac{x}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}}\label{eq:elltr1_odd_poly}\end{equation}
 
 \end_inset 
 
@@ -11655,7 +11666,7 @@ Die Koeffizienten
 
 
 \begin_inset Formula \begin{equation}
-a_{\nu}=\esn{\nu\frac{K}{n}}{k},\qquad\nu=2,4,6,\ldots,n-1\msp.\label{eq:elltr1_odd_coeffs}\end{equation}
+\boxed{a_{\nu}=\esn{\nu\frac{K}{n}}{k}}\msp,\qquad\nu=2,4,6,\ldots,n-1\msp.\label{eq:elltr1_odd_coeffs}\end{equation}
 
 \end_inset 
 
@@ -11997,7 +12008,7 @@ Die Transformationsbeziehung bei Verwendung des elliptischen Sinus' ist
 
 
 \begin_inset Formula \begin{equation}
-\esn{u/M}{\lambda}=\frac{\esn{u}{k}}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\cdot\esn[2]{u}{k}}\label{eq:elltr1_odd_sn}\end{equation}
+\boxed{\esn{u/M}{\lambda}=\frac{\esn{u}{k}}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\cdot\esn[2]{u}{k}}}\label{eq:elltr1_odd_sn}\end{equation}
 
 \end_inset 
 
@@ -12229,7 +12240,7 @@ und damit die Transformationsbeziehung für
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u}{M}}{\lambda}=\ecn{u}{k}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\label{eq:elltr1_odd_cn}\end{equation}
+\boxed{\ecn{\frac{u}{M}}{\lambda}=\ecn{u}{k}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}}\label{eq:elltr1_odd_cn}\end{equation}
 
 \end_inset 
 
@@ -12345,8 +12356,16 @@ Einsetzen und Ausmultiplizieren des Zählers liefert das Ergebnis
 
 \begin_inset Formula \begin{align}
 \edn[2]{\frac{u}{M}}{\lambda} & =\left(1-k^{2}x^{2}\right)\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}\left[1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x^{2}\right]^{2}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\left[1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}\right]^{2}}\nonumber \\
-\edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x^{2}}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x^{2}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\label{eq:elltr1_odd_dn_x}\\
-\edn{\frac{u}{M}}{\lambda} & =\edn{u}{k}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\msp.\label{eq:elltr1_odd_dn}\end{align}
+\edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x^{2}}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x^{2}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\label{eq:elltr1_odd_dn_x}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\edn{\frac{u}{M}}{\lambda}=\edn{u}{k}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}}\msp.\label{eq:elltr1_odd_dn}\end{equation}
 
 \end_inset 
 
@@ -12766,7 +12785,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-y=\esn{\frac{u}{M}+\Lambda}{\lambda}=\ecd{\frac{u}{M}}{\lambda}\label{eq:elltr1_even_param_y}\end{equation}
+\boxed{y=\esn{\frac{u}{M}+\Lambda}{\lambda}=\ecd{\frac{u}{M}}{\lambda}}\label{eq:elltr1_even_param_y}\end{equation}
 
 \end_inset 
 
@@ -13112,9 +13131,8 @@ Die Transformationsbeziehung für den elliptischen Sinus ist wieder direkt
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-y & = & \prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\\
-\esn{\frac{u}{M}+\Lambda}{\lambda} & = & \prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\label{eq:elltr1_even_sn}\end{eqnarray}
+\begin_inset Formula \begin{equation}
+\boxed{\esn{\frac{u}{M}+\Lambda}{\lambda}=\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}}\label{eq:elltr1_even_sn}\end{equation}
 
 \end_inset 
 
@@ -13179,7 +13197,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\ecn{\frac{u}{M}+\Lambda}{\lambda}=-\frac{\lambda'}{M}\,\esn{u}{k}\ecn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}\msp.\label{eq:elltr1_even_cn}\end{equation}
+\boxed{\ecn{\frac{u}{M}+\Lambda}{\lambda}=-\frac{\lambda'}{M}\,\esn{u}{k}\ecn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{\esn[2]{u}{k}}{\esn[2]{\mu K/n}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\,\esn[2]{u}{k}}}\msp.\label{eq:elltr1_even_cn}\end{equation}
 
 \end_inset 
 
@@ -13349,8 +13367,8 @@ ist man in der Lage, eine etwas kürzere Form anzugeben.
 \layout Proof
 
 
-\begin_inset Formula \begin{align*}
-\ecn{\frac{u}{M}+\Lambda}{\lambda} & =-\frac{\lambda'}{M}\, x\sqrt{1-x^{2}}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{x^{2}}{\esn[2]{\mu\frac{K}{n}}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\end{align*}
+\begin_inset Formula \[
+\ecn{\frac{u}{M}+\Lambda}{\lambda}=-\frac{\lambda'}{M}\, x\sqrt{1-x^{2}}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-\frac{x^{2}}{\esn[2]{\mu\frac{K}{n}}{k}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}}\]
 
 \end_inset 
 
@@ -13368,12 +13386,12 @@ Die entsprechende Beziehung für
 \begin_inset Formula $\jdn$
 \end_inset 
 
- lautet
+ lautet:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\edn{\frac{u}{M}+\Lambda}{\lambda}=\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\label{eq:elltr1_even_dn}\end{equation}
+\boxed{\edn{\frac{u}{M}+\Lambda}{\lambda}=\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}}\msp.\label{eq:elltr1_even_dn}\end{equation}
 
 \end_inset 
 
@@ -14422,9 +14440,20 @@ Aus diesen Gründen kann man als rationale Transformationsfunktion
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray}
-y & = & \esn{\frac{u}{M}}{\lambda}=\frac{x}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-1}1+\frac{x^{2}}{a_{\mu}^{2}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-2}1+\frac{x^{2}}{a_{\nu}^{2}}}\label{eq:elltr2_odd_poly_sep}\\
-\textrm{mit}\; a_{\eta} & = & \esc{\eta\frac{K'}{n}}{k'}\label{eq:elltr2_odd_coeffs}\end{eqnarray}
+\begin_inset Formula \begin{equation}
+\boxed{y=\esn{\frac{u}{M}}{\lambda}=\frac{x}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-1}1+\frac{x^{2}}{a_{\mu}^{2}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-2}1+\frac{x^{2}}{a_{\nu}^{2}}}}\label{eq:elltr2_odd_poly_sep}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+mit
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+a_{\eta}=\esc{\eta\frac{K'}{n}}{k'}\label{eq:elltr2_odd_coeffs}\end{equation}
 
 \end_inset 
 
@@ -15022,7 +15051,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-y=\esn{\frac{u}{M}}{\lambda}=\frac{x}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1+\frac{x^{2}}{a_{\mu}^{2}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1+\frac{x^{2}}{a_{\nu}^{2}}}\label{eq:elltr2_even_poly_sep}\end{equation}
+\boxed{y=\esn{\frac{u}{M}}{\lambda}=\frac{x}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1+\frac{x^{2}}{a_{\mu}^{2}}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1+\frac{x^{2}}{a_{\nu}^{2}}}}\label{eq:elltr2_even_poly_sep}\end{equation}
 
 \end_inset 
 
@@ -15869,7 +15898,7 @@ eg
 
 
 \begin_inset Formula \begin{equation}
-\eK{k}=\frac{\pi}{2}\cdot\frac{1}{\AGM(1,k')},\label{eq:agm_ellk_calc}\end{equation}
+\boxed{\eK{k}=\frac{\pi}{2}\cdot\frac{1}{\AGM(1,k')}}\msp,\label{eq:agm_ellk_calc}\end{equation}
 
 \end_inset 
 
@@ -16359,7 +16388,7 @@ cf
 
 \end_inset 
 
- anzupassen
+ anzupassen,
 \layout Standard
 
 
