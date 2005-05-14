@@ -10,7 +10,7 @@
 \usepackage{html}
 %% \usepackage{showidx}
 \end_preamble
-\options intlimits,reqno
+\options reqno
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -19,7 +19,7 @@
 \paperfontsize default
 \spacing onehalf 
 \papersize a4paper
-\paperpackage widemarginsa4
+\paperpackage a4wide
 \use_geometry 0
 \use_amsmath 1
 \use_natbib 0
@@ -43,7 +43,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.4 2005-05-06 13:58:48 ralf Exp $
+Version: $Id: analysis.lyx,v 1.5 2005-05-14 13:38:11 ralf Exp $
 \end_inset 
 
 
@@ -139,23 +139,24 @@ Ralf Hoppe
 
 Das vorliegende Papier richtet sich in erster Linie an Ingenieure und Studenten
  der Theoretischen Elektrotechnik, Signalverarbeitung sowie Nachrichtentechnik,
- die ihr Wissen in diesem Zusammenhang auffrischen wollen.
- Dabei sollen 
-\emph on 
-die
-\emph default 
- mathematischen Grundlagen der Funktionentheorie (komplexe Analysis) ins
- Gedächtnis zurückgerufen werden, welche häufig zum Verständnis von Sätzen,
- Formeln und Beweisen der Signal-, System- und Informationstheorie nötig
- sind.
+ die ihr Wissen in Bezug auf die Grundlagen der Funktionentheorie (komplexe
+ Analysis) auffrischen wollen.
 \layout Abstract
 
 Prinzipiell vorausgesetzt werden die Grundkenntnisse der höheren Mathematik,
  insbesondere der Differential- und Integralrechnung.
  Empfehlenswert für einen tieferen Einstieg halte ich unter anderem\SpecialChar ~
-\SpecialChar \ldots{}
- sowie
- den Klassiker\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Needham:1998}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite{Brown:1996}
+
+\end_inset 
+
+ sowie den Klassiker\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Whittaker:1927}
 
@@ -331,13 +332,13 @@ Einwertigkeit
 \begin_inset Quotes erd
 \end_inset 
 
- des Differentialquotienten\SpecialChar ~
+ des Differentialquotienten (nach Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_derivative_def}
 
 \end_inset 
 
- einer analytischen Funktion 
+) einer analytischen Funktion 
 \begin_inset Formula $f(z)=u(x,y)+\ji v(x,y)$
 \end_inset 
 
@@ -386,7 +387,7 @@ g von
 
 
 \begin_inset Formula \begin{eqnarray}
-\pdiff{f(z)}{x} & = & \pdiff{f(z)}{\ji y}\label{eq:analysis_integrability_cond_cplx}\\
+\pdiff{f(z)}{x} & = & \pdiff{f(z)}{\,(\ji y)}\label{eq:analysis_integrability_cond_cplx}\\
 \pdiff{u}{x}+\ji\pdiff{v}{x} & = & -\ji\pdiff{u}{y}+\pdiff{v}{y}\nonumber \end{eqnarray}
 
 \end_inset 
@@ -607,7 +608,7 @@ Oder in Parameterdarstellung
 \end_inset 
 
  
-\begin_inset Formula $\tdc z=\tdc x+\ji\tdc y$
+\begin_inset Formula $\tdc z=\tdc x+\ji\,\tdc y$
 \end_inset 
 
  dann gegeben, wenn die Integrabilitätsbedingung nach Gleichung\SpecialChar ~
@@ -621,7 +622,7 @@ Oder in Parameterdarstellung
 
 
 \begin_inset Formula \begin{eqnarray*}
-\int f(z)\tic z & = & \int\left[f(z)\tic x+\ji f(z)\tic y\right]\\
+\int f(z)\tic z & = & \int\left[f(z)\tic x+\ji\, f(z)\tic y\right]\\
  & = & \int u\tic x-v\tic y+\ji\int u\tic x+v\tic y\\
  & = & \int\tic U+\ji\int\tic V=\int\tic F(z)=F(z)\end{eqnarray*}
 
@@ -630,7 +631,17 @@ Oder in Parameterdarstellung
 
 \layout Standard
 
-Die Wegunabhängigkeit der Integration auf einer Kurve 
+
+\begin_inset LatexCommand \index{Integral!Kurven-}
+
+\end_inset 
+
+Die Wegunabhängigkeit
+\begin_inset LatexCommand \index{Wegunabhängigkeit}
+
+\end_inset 
+
+ der Integration auf einer Kurve 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -1286,7 +1297,7 @@ ie
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow0}\;\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\,\e^{\ji\theta})\tic\theta=-\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0})\tic\theta=-\ji f(z_{0})\left.\theta\,\right|_{C_{\nu}^{\prime\prime}}\]
+\lim_{r\rightarrow0}\;\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\,\e^{\ji\theta})\tic\theta=-\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0})\tic\theta=-\ji\, f(z_{0})\left.\theta\,\right|_{C_{\nu}^{\prime\prime}}\]
 
 \end_inset 
 
@@ -1316,8 +1327,8 @@ glattgezogenen
 
 \begin_inset Formula \begin{align*}
 \oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\int_{C_{1}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z\\
- & =-\ji f(z_{0})\,\left(\left.\theta\,\right|_{C_{1}^{\prime\prime}}+\left.\theta\,\right|_{C_{2}^{\prime\prime}}\right)\\
- & =-\ji f(z_{0})(-2\pi-0)=2\pi\ji f(z_{0})\msp.\end{align*}
+ & =-\ji\, f(z_{0})\,\left(\left.\theta\,\right|_{C_{1}^{\prime\prime}}+\left.\theta\,\right|_{C_{2}^{\prime\prime}}\right)\\
+ & =-\ji\, f(z_{0})(-2\pi-0)=2\pi\ji\, f(z_{0})\msp.\end{align*}
 
 \end_inset 
 
@@ -1414,7 +1425,7 @@ Der zweite Summand ist mit der Substitution nach
 
 
 \begin_inset Formula \begin{equation}
-f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji f(z_{0})\oint_{C}\tic\theta=\ji f(z_{0})\int_{0}^{2\pi}\tic\theta=2\pi\ji f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji\, f(z_{0})\oint_{C}\tic\theta=\ji\, f(z_{0})\int_{0}^{2\pi}\tic\theta=2\pi\ji\, f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
 
 \end_inset 
 
@@ -1692,7 +1703,7 @@ Für den speziellen Fall, daß
 
 
 \begin_inset Formula \[
-f^{(n)}(z)=\frac{n!}{2\pi\ji}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n+1}\e^{\ji(n+1)\theta}}\ji r\e^{\ji\theta}\tic\theta\]
+f^{(n)}(z)=\frac{n!}{2\pi\ji}\int_{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n+1}\e^{\ji(n+1)\theta}}\ji r\e^{\ji\theta}\tic\theta\]
 
 \end_inset 
 
@@ -1701,7 +1712,7 @@ f^{(n)}(z)=\frac{n!}{2\pi\ji}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\thet
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f^{(n)}(z)=\frac{n!}{2\pi}\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta}\label{eq:analysis_derivative_integral_circle}\end{equation}
+\boxed{f^{(n)}(z)=\frac{n!}{2\pi}\int_{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta}\label{eq:analysis_derivative_integral_circle}\end{equation}
 
 \end_inset 
 
@@ -1902,7 +1913,7 @@ was sich ausgehend von Substitutionsformel\SpecialChar ~
 \begin_inset Formula \begin{align*}
 \oint_{C}\frac{1}{(z-z_{0})^{n}}\tic z & =\oint_{C}\frac{\ji r\e^{\ji\theta}}{r^{n}\e^{\ji n\theta}}\tic\theta\\
  & =\ji r^{-(n-1)}\oint_{C}\e^{-\ji(n-1)\theta}\tic\theta\\
- & =-\frac{1}{(n-1)r^{(n-1)}}\left.\e^{-\ji(n-1)\theta}\right|_{0}^{2\pi}=0\quad\textrm{für}\msp n\neq1\end{align*}
+ & =-\frac{1}{(n-1)r^{n-1}}\left.\e^{-\ji(n-1)\theta}\right|_{0}^{2\pi}=0\quad\textrm{für}\msp n\neq1\end{align*}
 
 \end_inset 
 
@@ -2764,7 +2775,7 @@ Name der Ungleichung?
 
 
 \begin_inset Formula \[
-\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq\int\limits _{a}^{b}|f(z)|\,|\tic z|\leq\int\limits _{a}^{b}M\,|\tic z|=M\int\limits _{a}^{b}|\tic z|\]
+\left|\int_{z_{1}}^{z_{2}}f(z)\tic z\right|\leq\int_{a}^{b}|f(z)|\,|\tdc z|\leq\int_{a}^{b}M\,|\tic z|=M\int_{a}^{b}|\tdc z|\]
 
 \end_inset 
 
@@ -2788,7 +2799,7 @@ Geht man der besseren Vorstellung halber von einem Integrationsweg
 
 
 \begin_inset Formula \[
-M\int\limits _{a}^{b}|\tic z|=M\int\limits _{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{\tdc t}\right|\tdc t=M\int\limits _{a}^{b}\sqrt{\left(\frac{\tdc x}{\tdc t}\right)^{2}+\left(\frac{\tdc y}{\tdc t}\right)^{2}}\tic t\msp,\]
+M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{\tdc t}\right|\tdc t=M\int_{a}^{b}\sqrt{\left(\frac{\tdc x}{\tdc t}\right)^{2}+\left(\frac{\tdc y}{\tdc t}\right)^{2}}\tic t\msp,\]
 
 \end_inset 
 
@@ -2817,7 +2828,7 @@ M\int\limits _{a}^{b}|\tic z|=M\int\limits _{a}^{b}\left|\frac{\tdc x}{\tdc t}+\
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\left|\int\limits _{z_{1}}^{z_{2}}f(z)\tic z\right|\leq M\cdot L}\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
+\boxed{\left|\int_{z_{1}}^{z_{2}}f(z)\tic z\right|\leq M\cdot L}\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
 
 \end_inset 
 
@@ -2887,7 +2898,7 @@ resp
 
 
 \begin_inset Formula \[
-\left|f^{(n)}(z)\right|=\frac{n!}{2\pi}\left|\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\]
+\left|f^{(n)}(z)\right|=\frac{n!}{2\pi}\left|\int_{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\]
 
 \end_inset 
 
@@ -2917,7 +2928,7 @@ Anwendung von Ungleichung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\left|\int\limits _{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\leq2\pi\,\sup\left|\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\right|=\frac{2\pi M}{r^{n}}\]
+\left|\int_{0}^{2\pi}\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\tic\theta\right|\leq2\pi\,\sup\left|\frac{f\left(z+r\e^{\ji\theta}\right)}{r^{n}}\,\e^{-\ji n\theta}\right|=\frac{2\pi M}{r^{n}}\]
 
 \end_inset 
 
@@ -3047,6 +3058,466 @@ Damit sie entweder nicht beschränkt oder nicht analytisch (in der gesamten
 
 .
 \end_deeper 
+\layout Subsection
+
+Uneigentliche (reelle) Integrale
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Uneigentliche Integrale}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Integral!Uneigentliches}
+
+\end_inset 
+
+Mit Hilfe des Residuensatzes ist man unter bestimmten Bedingungen in der
+ Lage uneigentliche reelle Integrale der Art
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{-\infty}^{\infty}f(x)\tic x\]
+
+\end_inset 
+
+
+\layout Standard
+
+relativ einfach zu berechnen.
+ Ausgangspunkt der Betrachtungen dazu soll ein Hilfssatz von 
+\noun on 
+C.
+\noun default 
+\SpecialChar ~
+
+\noun on 
+Jordan
+\noun default 
+ sein:
+\layout Quote
+
+
+\begin_inset LatexCommand \index{Jordan, Hilfssatz von@\noun{Jordan}, Hilfssatz von}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Satz von!Jordan@\noun{Jordan}|see{\noun{Jordan}}}
+
+\end_inset 
+
+Ist die Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ analytisch auf dem Integrationsweg 
+\begin_inset Formula $C_{r}$
+\end_inset 
+
+ nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_real_inf_integral}
+
+\end_inset 
+
+ (obere Halbebene) mit 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+ und hat für 
+\begin_inset Formula $\alpha>0$
+\end_inset 
+
+ die Eigenschaft 
+\begin_inset Formula $\lim_{r\rightarrow\infty}f(z)=0$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ für 
+\begin_inset Formula $\alpha=0$
+\end_inset 
+
+ entsprechend 
+\begin_inset Formula $\lim_{r\rightarrow\infty}z\, f(z)=0$
+\end_inset 
+
+, dann gilt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z=0}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename real_int_inf.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:analysis_real_inf_integral}
+
+\end_inset 
+
+Integrationsweg für uneigentliche (reelle) Integrale
+\end_inset 
+
+
+\layout Standard
+
+Für den Beweis gehen wir wie in 
+\begin_inset LatexCommand \cite[\S$6 \sdot 222$]{Whittaker:1927}
+
+\end_inset 
+
+ von
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\]
+
+\end_inset 
+
+
+\layout Standard
+
+aus und bestimmen eine obere Schranke für diesen Grenzwert.
+ Wie im ersten Punkt der Herleitung von 
+\noun on 
+Liouville
+\noun default 
+'s Theorem kann man auch hier davon ausgehen, daß der Betrag des Integrals
+ kleiner als das Integral über den Betrag (des Integranden) ist.
+\layout Standard
+
+
+\begin_inset Formula \[
+\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\leq\int_{C_{r}}\left|\e^{\ji\alpha z}\right|\cdot\left|f(z)\vphantom{\e^{\ji\alpha z}}\right|\cdot\left|\tdc z\vphantom{\e^{\ji\alpha z}}\right|\]
+
+\end_inset 
+
+
+\layout Standard
+
+Mit der Parameterdarstellung 
+\begin_inset Formula $z=r\e^{\ji\theta}=r\cos\theta+\ji r\sin\theta$
+\end_inset 
+
+ des Integrationsweges 
+\begin_inset Formula $C_{r}$
+\end_inset 
+
+, dem zugehörigen Differential 
+\begin_inset Formula $\tdc z=\ji r\e^{\ji\theta}\tdc\theta$
+\end_inset 
+
+ sowie der Beziehung 
+\begin_inset Formula $\e^{\ji\alpha z}=\e^{\ji\alpha r\cos\theta}\e^{-\alpha r\sin\theta}$
+\end_inset 
+
+ ergibt sich schließlich
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\leq r\int_{\theta=0}^{\pi}\e^{-\alpha r\sin\theta}\left|f\left(r\e^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{r}}|f(z)|\,\int_{\theta=0}^{\pi}\e^{-\alpha r\sin\theta}\tic\theta\msp.\label{eq:analysis_jordan_inequ1}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Weiter kann man die Ungleichung 
+\begin_inset Formula $\sin\theta\leq2\theta/\pi$
+\end_inset 
+
+ heranziehen und ausgehend vom rechtsseitigen Integral
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Und mit Hilfe der allgemeingültigen Vereinfachung 
+\begin_inset Formula $\int_{0}^{\pi}f(\sin\theta)\tic\theta=2\int_{0}^{\pi/2}f(\sin\theta)\tic\theta$
+\end_inset 
+
+.
+\end_inset 
+
+ die Relation
+\layout Standard
+
+
+\begin_inset Formula \[
+2\int_{\theta=0}^{\frac{\pi}{2}}\e^{-\alpha r\sin\theta}\tic\theta\geq2\int_{\theta=0}^{\frac{\pi}{2}}\e^{-\frac{2}{\pi}\alpha r\theta}\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+ableiten, welche nun bei der Berechnung des (vereinachten) Integrals verwendet
+ wird.
+\layout Standard
+
+
+\begin_inset Formula \[
+2\int_{\theta=0}^{\frac{\pi}{2}}\e^{-\frac{2}{\pi}\alpha r\theta}\tic\theta=-\frac{\pi}{\alpha r}\left.\e^{-\frac{2}{\pi}\alpha r\theta}\right|_{\theta=0}^{\frac{\pi}{2}}=\frac{\pi}{\alpha r}\left(1-\e^{-\alpha r}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Einsetzen in Ungleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_jordan_inequ1}
+
+\end_inset 
+
+ ergibt für den Grenzwert
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\leq\lim_{r\rightarrow\infty}\left[r\sup_{z\in C_{r}}|f(z)|\,\frac{\pi}{\alpha r}\left(1-\e^{-\alpha r}\right)\right]=\frac{\pi}{\alpha}\,\lim_{r\rightarrow\infty}\sup_{z\in C_{r}}|f(z)|\msp,\label{eq:analysis_jordan_inequ2}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+was drei Fallunterscheidungen notwendig macht.
+ Gemeinsam ist allen, daß es um Forderungen an die Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ mit 
+\begin_inset Formula $z\in C_{r}$
+\end_inset 
+
+ geht (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ parametrisiert durch 
+\begin_inset Formula $z=r\e^{\ji\theta}$
+\end_inset 
+
+, in der oberen reellen Halbebene verlaufend), welche ein Verschwinden des
+ letzten Ausdrucks bewirken und dadurch 
+\noun on 
+Jordan
+\noun default 
+'s Lemma bestätigen.
+\layout Enumerate
+
+Im einfachsten Fall, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ für 
+\begin_inset Formula $\alpha>0$
+\end_inset 
+
+ ist sofort ersichtlich, daß 
+\begin_inset Formula $\lim_{r\rightarrow\infty}f(z)=0$
+\end_inset 
+
+ gelten muß.
+\begin_deeper 
+\layout Standard
+
+Erwähnenswert ist in diesem Fall noch, daß er die bekannte Abschätzung 
+\begin_inset Formula $\lim_{r\rightarrow\infty}|\int_{C_{r}}\e^{\ji z}\tic z\,|\leq\pi$
+\end_inset 
+
+ beinhaltet, welche sich für 
+\begin_inset Formula $\alpha=1$
+\end_inset 
+
+ ergibt, wenn 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ in Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_jordan_inequ2}
+
+\end_inset 
+
+ außerdem konstant 
+\begin_inset Formula $1$
+\end_inset 
+
+ ist.
+\end_deeper 
+\layout Enumerate
+
+Den Fall 
+\begin_inset Formula $\alpha<0$
+\end_inset 
+
+ kann man sich als eine Spiegelung des Integrationsweges 
+\begin_inset Formula $C_{r}$
+\end_inset 
+
+ an der reellen Achse vorstellen.
+ Es sind deshalb die gleichen Voraussetzungen vonnöten wie im vorangegangenen
+ Fall.
+\layout Enumerate
+
+Sollte 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ jedoch Null sein, dann ist der Nenner in Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_jordan_inequ2}
+
+\end_inset 
+
+ unbestimmt und man muß (schärfer noch) 
+\begin_inset Formula $\lim_{r\rightarrow\infty}z\, f(z)=0$
+\end_inset 
+
+ fordern
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Differentiation von Zähler und Nenner in Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_jordan_inequ2}
+
+\end_inset 
+
+ (nach 
+\noun on 
+Bernoulli-l'Hospital
+\noun default 
+) zur Grenzwertbestimmung 
+\begin_inset Formula $\lim_{\alpha\rightarrow0}\ldots$
+\end_inset 
+
+ ergibt dann Null.
+\end_inset 
+
+.
+\layout Standard
+
+Damit ist der Hilfssatz von 
+\noun on 
+Jordan
+\noun default 
+ bewiesen und wir können uns (unter den genannten Voraussetzungen) mit 
+\begin_inset Formula $\alpha=0$
+\end_inset 
+
+ dem Fall
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z=0}\]
+
+\end_inset 
+
+
+\layout Standard
+
+zuwenden, welcher letztlich erst die Berechnung uneigentlicher reeller Integrale
+ durch komplexe Integration ermöglicht.
+ Dazu integrieren wir nun auf dem geschlossenen Weg 
+\begin_inset Formula $C_{r}\rightarrow C_{x}$
+\end_inset 
+
+ nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_real_inf_integral}
+
+\end_inset 
+
+ unter Zuhilfenahme des Residuensatzes
+\layout Standard
+
+
+\begin_inset Formula \[
+\oint_{C_{r}+C_{x}}f(z)\tic z=2\pi\ji\sum_{\substack{n\\
+\imop\{ z_{n}\}>0}
+}\left\{ \res{z_{n}}{f}{z}\right\} =\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z}_{0}+\lim_{r\rightarrow\infty}\int_{C_{x}}f(z)\tic z=\int_{-\infty}^{\infty}f(x)\tic x\]
+
+\end_inset 
+
+
+\layout Standard
+
+und erhalten eine einfache Berechnungsvorschrift für das reelle Integral.
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\substack{n\\
+\imop\{ z_{n}\}>0}
+}\left\{ \res{z_{n}}{f}{z}\right\} }\]
+
+\end_inset 
+
+
+\layout Standard
+
+Zur Anwendung muß man allerdings immer die Bedingung 
+\begin_inset Formula $\lim_{r\rightarrow\infty}z\, f(z)=0$
+\end_inset 
+
+ berücksichtigen, was bei gebrochenrationalen Funktionen
+\begin_inset LatexCommand \index{Funktion!gebrochenrationale}
+
+\end_inset 
+
+ bedeutet, daß der Grad des Nennerpolynoms immer um mindestens zwei größer
+ als der des Zählerpolynoms sein muß.
 \layout Standard
 
 
