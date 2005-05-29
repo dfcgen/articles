@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: imag_int_inf.eps
 %%Creator: fig2dev Version 3.2 Patchlevel 3d
-%%CreationDate: Sat May 21 16:20:54 2005
+%%CreationDate: Fri May 27 21:26:52 2005
 %%For: ralf@dfcgen (Ralf Hoppe)
 %%BoundingBox: 0 0 232 227
 %%Magnification: 1.0000
@@ -211,6 +211,19 @@ gs col4 s gr
 % arrowhead
 7.500 slw
 n 2057 3786 m 2180 3732 l 2062 3666 l 2057 3786 l  cp gs col4 1.00 shd ef gr  col4 s
+% Arc
+30.000 slw
+gs  clippath
+2192 699 m 2187 819 l 2331 825 l 2214 760 l 2336 705 l cp
+eoclip
+ [112] 0 sd
+n 2204.0 2242.0 1482.0 -90.0 90.0 arc
+gs col17 s gr
+ gr
+ [] 0 sd
+% arrowhead
+7.500 slw
+n 2336 705 m 2214 760 l 2331 825 l 2336 705 l  cp gs col17 1.00 shd ef gr  col17 s
 % Polyline
 45.000 slw
 gs  clippath
@@ -235,12 +248,6 @@ gs 1 -1 sc (C) dup sw pop neg 0 rm  col4 sh gr
 2430 3000 m
 gs 1 -1 sc (y) col4 sh gr
 /Times-Roman-iso ff 150.00 scf sf
-2325 825 m
-gs 1 -1 sc (+r) col0 sh gr
-/Times-Roman-iso ff 150.00 scf sf
-2325 3750 m
-gs 1 -1 sc (-r) col0 sh gr
-/Times-Roman-iso ff 150.00 scf sf
 1575 1725 m
 gs 1 -1 sc (r) col0 sh gr
 /Times-Roman-iso ff 150.00 scf sf
@@ -249,6 +256,9 @@ gs 1 -1 sc (0) col0 sh gr
 /Times-Roman-iso ff 150.00 scf sf
 600 2475 m
 gs 1 -1 sc (-r) dup sw pop 2 div neg 0 rm  col0 sh gr
+/Times-Roman-iso ff 150.00 scf sf
+3675 2475 m
+gs 1 -1 sc (+r) col0 sh gr
 % Polyline
  [15 30] 30 sd
 gs  clippath

@@ -1,7 +1,7 @@
 %!PS-Adobe-2.0 EPSF-2.0
 %%Title: cauchy_step1.eps
 %%Creator: fig2dev Version 3.2 Patchlevel 3d
-%%CreationDate: Sat Apr 30 09:34:35 2005
+%%CreationDate: Sat May 21 09:06:40 2005
 %%For: ralf@dfcgen (Ralf Hoppe)
 %%BoundingBox: 0 0 106 115
 %%Magnification: 1.0000
@@ -205,6 +205,33 @@ $F2psDict /mtrx matrix put
 /col192 {0.808 0.796 0.808 srgb} bind def
 /col193 {0.808 0.796 0.808 srgb} bind def
 /col194 {0.808 0.796 0.808 srgb} bind def
+/col195 {0.808 0.812 0.808 srgb} bind def
+/col196 {0.808 0.812 0.808 srgb} bind def
+/col197 {0.808 0.812 0.808 srgb} bind def
+/col198 {0.808 0.812 0.808 srgb} bind def
+/col199 {0.808 0.812 0.808 srgb} bind def
+/col200 {0.808 0.812 0.808 srgb} bind def
+/col201 {0.808 0.812 0.808 srgb} bind def
+/col202 {0.808 0.812 0.808 srgb} bind def
+/col203 {0.808 0.812 0.808 srgb} bind def
+/col204 {0.808 0.812 0.808 srgb} bind def
+/col205 {0.808 0.812 0.808 srgb} bind def
+/col206 {0.808 0.812 0.808 srgb} bind def
+/col207 {0.808 0.812 0.808 srgb} bind def
+/col208 {0.808 0.812 0.808 srgb} bind def
+/col209 {0.808 0.812 0.808 srgb} bind def
+/col210 {0.808 0.812 0.808 srgb} bind def
+/col211 {0.808 0.812 0.808 srgb} bind def
+/col212 {0.808 0.812 0.808 srgb} bind def
+/col213 {0.808 0.812 0.808 srgb} bind def
+/col214 {0.808 0.812 0.808 srgb} bind def
+/col215 {0.808 0.812 0.808 srgb} bind def
+/col216 {0.808 0.812 0.808 srgb} bind def
+/col217 {0.808 0.812 0.808 srgb} bind def
+/col218 {0.808 0.812 0.808 srgb} bind def
+/col219 {0.000 0.000 0.000 srgb} bind def
+/col220 {1.000 1.000 1.000 srgb} bind def
+/col221 {1.000 1.000 1.000 srgb} bind def
 
 end
 save
@@ -247,19 +274,6 @@ closepath 1.00 1.00 1.00 setrgbcolor fill
   bind def
 /shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
   4 -2 roll mul srgb} bind def
- /DrawEllipse {
-	/endangle exch def
-	/startangle exch def
-	/yrad exch def
-	/xrad exch def
-	/y exch def
-	/x exch def
-	/savematrix mtrx currentmatrix def
-	x y tr xrad yrad sc 0 0 1 startangle endangle arc
-	closepath
-	savematrix setmatrix
-	} def
-
 /$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
 /$F2psEnd {$F2psEnteredState restore end} def
 
@@ -290,16 +304,6 @@ gs 1 -1 sc (C) dup sw pop 2 div neg 0 rm  col0 sh gr
 % Arc
 15.000 slw
 gs  clippath
-477 1055 m 565 1074 l 610 869 l 531 1021 l 522 850 l cp
-eoclip
-n 975.0 1050.0 450.0 180.0 0.0 arc
-gs col1 s gr
- gr
-
-% arrowhead
-n 522 850 m 531 1021 l 610 869 l 522 850 l  cp gs col7 1.00 shd ef gr  col1 s
-% Arc
-gs  clippath
 1472 1044 m 1384 1025 l 1339 1230 l 1419 1079 l 1427 1249 l cp
 eoclip
 n 975.0 1050.0 450.0 0.0 180.0 arc
@@ -308,6 +312,16 @@ gs col1 s gr
 
 % arrowhead
 n 1427 1249 m 1419 1079 l 1339 1230 l 1427 1249 l  cp gs col7 1.00 shd ef gr  col1 s
+% Arc
+gs  clippath
+477 1055 m 565 1074 l 610 869 l 531 1021 l 522 850 l cp
+eoclip
+n 975.0 1050.0 450.0 180.0 0.0 arc
+gs col1 s gr
+ gr
+
+% arrowhead
+n 522 850 m 531 1021 l 610 869 l 522 850 l  cp gs col7 1.00 shd ef gr  col1 s
 % Polyline
 7.500 slw
 gs  clippath
@@ -338,13 +352,20 @@ gs 1 -1 sc (x) col0 sh gr
 225 225 m
 gs 1 -1 sc (y) dup sw pop neg 0 rm  col0 sh gr
 % Polyline
-n 450 1050 m
- 600 1050 l gs col-1 s gr 
+1 slc
+15.000 slw
+n 937 1013 m
+ 1012 1088 l gs col-1 s gr 
 % Polyline
+n 937 1088 m
+ 1012 1013 l gs col-1 s gr 
+% Polyline
+0 slc
+7.500 slw
 n 1350 1050 m
  1500 1050 l gs col-1 s gr 
-% Ellipse
-n 975 1050 30 30 0 360 DrawEllipse gs 0.00 setgray ef gr gs col-1 s gr
-
+% Polyline
+n 450 1050 m
+ 600 1050 l gs col-1 s gr 
 $F2psEnd
 rs
