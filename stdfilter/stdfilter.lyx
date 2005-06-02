@@ -12,11 +12,12 @@
 %% \usepackage{bibcheck}
 %% \usepackage{refcheck}
 %% \usepackage{import}
+\usepackage{newclude}
 
 \usepackage{multicol}
 \usepackage{html}
 \end_preamble
-\options intlimits, reqno
+\options reqno
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -25,7 +26,7 @@
 \paperfontsize default
 \spacing onehalf 
 \papersize a4paper
-\paperpackage a4wide
+\paperpackage widemarginsa4
 \use_geometry 0
 \use_amsmath 1
 \use_natbib 0
@@ -38,8 +39,8 @@
 \quotes_language english
 \quotes_times 2
 \papercolumns 1
-\papersides 1
-\paperpagestyle default
+\papersides 2
+\paperpagestyle headings
 
 \layout Standard
 
@@ -49,7 +50,11 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: stdfilter.lyx,v 1.4 2005-01-09 16:49:09 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.5 2005-06-02 16:11:12 ralf Exp $
+\layout Standard
+
+Special packages used: newclude, multicol, html, \SpecialChar \ldots{}
+
 \end_inset 
 
 
@@ -109,6 +114,19 @@ copyright
 
 \SpecialChar ~
 Ralf Hoppe
+\layout Author
+
+
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+today
+\end_inset 
+
+
 \layout Standard
 
 
@@ -244,6 +262,18 @@ preview false
 
 
 \begin_inset Include \include{elliptic/zolotarev.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Chapter
+
+Funktionentheorie -- Analytische Funktionen
+\layout Standard
+
+
+\begin_inset Include \include{../analysis/analysis.lyx}
 preview false
 
 \end_inset 
