@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic.lyx,v 1.4 2005-05-06 12:05:24 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.5 2005-06-02 16:06:51 ralf Exp $
 \end_inset 
 
 
@@ -272,9 +272,9 @@ Legendre
 
 
 \begin_inset Formula \begin{align*}
-\eF{\varphi}{k} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
-\eE{\varphi}{k} & =\int\limits _{0}^{\varphi}\sqrt{1-k^{2}\sin^{2}\phi}\tic\phi\\
-\ePi{\varphi}{k}{n} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{(1+n\sin^{2}\phi)\sqrt{1-k^{2}\sin^{2}\phi}}\end{align*}
+\eF{\varphi}{k} & =\int_{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+\eE{\varphi}{k} & =\int_{0}^{\varphi}\sqrt{1-k^{2}\sin^{2}\phi}\tic\phi\\
+\ePi{\varphi}{k}{n} & =\int_{0}^{\varphi}\frac{\tdc\phi}{(1+n\sin^{2}\phi)\sqrt{1-k^{2}\sin^{2}\phi}}\end{align*}
 
 \end_inset 
 
@@ -365,7 +365,7 @@ Legendre
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\eF{\varphi}{k}=\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\msp,\label{eq:ellf_def}\end{equation}
+\boxed{\eF{\varphi}{k}=\int_{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\msp,\label{eq:ellf_def}\end{equation}
 
 \end_inset 
 
@@ -415,7 +415,7 @@ Jacobi
 
 
 \begin_inset Formula \begin{equation}
-\eF{\varphi}{k}=\int\limits _{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}},\qquad\qquad x=\sin\varphi\label{eq:ellf_def_x}\end{equation}
+\eF{\varphi}{k}=\int_{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}},\qquad\qquad x=\sin\varphi\label{eq:ellf_def_x}\end{equation}
 
 \end_inset 
 
@@ -437,8 +437,8 @@ Einsetzen der Substitution sowie der Ableitung
 
 
 \begin_inset Formula \begin{align*}
-\eF{\varphi}{k} & =\int\limits _{\phi=0}^{\varphi}\frac{\tdc t}{\cos\phi\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\int\limits _{0}^{\sin\varphi}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\msp.\end{align*}
+\eF{\varphi}{k} & =\int_{\phi=0}^{\varphi}\frac{\tdc t}{\cos\phi\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\int_{0}^{\sin\varphi}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\msp.\end{align*}
 
 \end_inset 
 
@@ -455,7 +455,7 @@ Um im weiteren die Eindeutigkeit zu gewährleisten und außerdem eine einfache
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\exF{x}{k}=\int\limits _{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}}\msp.\label{eq:ellf_def_jacobi}\end{equation}
+\boxed{\exF{x}{k}=\int_{0}^{x}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}}\msp.\label{eq:ellf_def_jacobi}\end{equation}
 
 \end_inset 
 
@@ -503,7 +503,7 @@ Jacobi
 
 
 \begin_inset Formula \[
-\exF{x}{k}=\frac{1}{2}\int\limits _{0}^{\sqrt{x}}\frac{\tdc\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
+\exF{x}{k}=\frac{1}{2}\int_{0}^{\sqrt{x}}\frac{\tdc\xi}{\sqrt{\xi(1-\xi)(1-k^{2}\xi)}}\]
 
 \end_inset 
 
@@ -564,7 +564,7 @@ Weitere Integrale dieser Art, die alle Vorzeichenkombinationen der Summanden
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}}=\frac{1}{a}\eF{\varphi}{k},\qquad\qquad w=b\tan\varphi\label{eq:ellf_ab}\end{equation}
+\int_{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}}=\frac{1}{a}\eF{\varphi}{k},\qquad\qquad w=b\tan\varphi\label{eq:ellf_ab}\end{equation}
 
 \end_inset 
 
@@ -648,8 +648,8 @@ Einsetzen in das Ausgangsintegral ergibt
 
 
 \begin_inset Formula \begin{align}
-\int\limits _{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{a^{2}\cos^{2}\phi+b^{2}\sin^{2}\phi}}\nonumber \\
- & =\frac{1}{a}\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\msp.\label{eq:ellf_ab_sin}\end{align}
+\int_{0}^{w}\frac{\tdc t}{\sqrt{(t^{2}+a^{2})(t^{2}+b^{2})}} & =\int_{0}^{\varphi}\frac{\tdc\phi}{\sqrt{a^{2}\cos^{2}\phi+b^{2}\sin^{2}\phi}}\nonumber \\
+ & =\frac{1}{a}\int_{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\msp.\label{eq:ellf_ab_sin}\end{align}
 
 \end_inset 
 
@@ -735,7 +735,7 @@ Diese Schreibweise ist in der elektrischen Filtertheorie recht verbreitet\Specia
 
 
 \begin_inset Formula \[
-\eF{\varphi}{\Theta}=\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-\sin^{2}\Theta\sin^{2}\phi}}\]
+\eF{\varphi}{\Theta}=\int_{0}^{\varphi}\frac{\tdc\phi}{\sqrt{1-\sin^{2}\Theta\sin^{2}\phi}}\]
 
 \end_inset 
 
@@ -806,7 +806,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\eF{\frac{\pi}{2}}{k}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\eK{k}\label{eq:ellf_val_pi2}\end{equation}
+\eF{\frac{\pi}{2}}{k}=\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\eK{k}\label{eq:ellf_val_pi2}\end{equation}
 
 \end_inset 
 
@@ -826,9 +826,9 @@ Der Funktionswert bei
 
 
 \begin_inset Formula \begin{align*}
-\eF{\pi}{k} & =\int\limits _{0}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int\limits _{\frac{\pi}{2}}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\eK{k}-\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
+\eF{\pi}{k} & =\int_{0}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int_{\frac{\pi}{2}}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\eK{k}-\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
  & =2\eK{k}\end{align*}
 
 \end_inset 
@@ -849,8 +849,8 @@ Für spezielle Module
 
 
 \begin_inset Formula \begin{align}
-\eF{\varphi}{0} & =\int\limits _{0}^{\varphi}\tic\phi=\varphi\label{eq:ellint_F_mod_zero}\\
-\eF{\varphi}{1} & =\int\limits _{0}^{\varphi}\frac{\tdc\phi}{\cos\phi}=\int\limits _{0}^{\varphi}\sec\phi\tic\phi=\ln\left|\tan\left(\frac{\varphi}{2}+\frac{\pi}{4}\right)\right|\label{eq:ellint_F_mod_unity}\end{align}
+\eF{\varphi}{0} & =\int_{0}^{\varphi}\tic\phi=\varphi\label{eq:ellint_F_mod_zero}\\
+\eF{\varphi}{1} & =\int_{0}^{\varphi}\frac{\tdc\phi}{\cos\phi}=\int_{0}^{\varphi}\sec\phi\tic\phi=\ln\left|\tan\left(\frac{\varphi}{2}+\frac{\pi}{4}\right)\right|\label{eq:ellint_F_mod_unity}\end{align}
 
 \end_inset 
 
@@ -934,7 +934,7 @@ Mit der Substitution
 
 
 \begin_inset Formula \[
-\eF{-\varphi}{k}=\int\limits _{\phi=0}^{-\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\int\limits _{\psi=0}^{\varphi}\frac{-\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}=-\eF{\varphi}{k}\]
+\eF{-\varphi}{k}=\int_{\phi=0}^{-\varphi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}=\int_{\psi=0}^{\varphi}\frac{-\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}=-\eF{\varphi}{k}\]
 
 \end_inset 
 
@@ -1051,9 +1051,9 @@ Sie ergibt sich, wenn man mit
 
  beginnt und dann iterativ fortsetzt.
 \begin_inset Formula \begin{align}
-\eF{\varphi+\pi}{k} & =\int\limits _{0}^{\varphi+\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\nonumber \\
- & =\int\limits _{-\pi}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}(\psi+\pi)}}\nonumber \\
- & =\int\limits _{0}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}-\int\limits _{0}^{-\pi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}\nonumber \\
+\eF{\varphi+\pi}{k} & =\int_{0}^{\varphi+\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\nonumber \\
+ & =\int_{-\pi}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}(\psi+\pi)}}\nonumber \\
+ & =\int_{0}^{\varphi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}-\int_{0}^{-\pi}\frac{\tdc\psi}{\sqrt{1-k^{2}\sin^{2}\psi}}\nonumber \\
  & =\eF{\varphi}{k}+\eF{\pi}{k}\nonumber \\
  & =\eF{\varphi}{k}+2\eK{k}\label{eq:ellf_arg_reduction}\end{align}
 
@@ -1249,7 +1249,7 @@ Einsetzen des imaginären Arguments im Sinne von
 
 
 \begin_inset Formula \[
-\eF{\ji\xi}{k}=\int\limits _{\phi=0}^{\ji\xi}\frac{\tdc\phi}{\sqrt{1-(1-{k'}^{2})\sin^{2}\phi}}.\]
+\eF{\ji\xi}{k}=\int_{\phi=0}^{\ji\xi}\frac{\tdc\phi}{\sqrt{1-(1-{k'}^{2})\sin^{2}\phi}}.\]
 
 \end_inset 
 
@@ -1313,9 +1313,9 @@ Jacobi
 
 
 \begin_inset Formula \begin{align}
-\eF{\varphi}{k} & =\int\limits _{\sin\phi=0}^{\sin\phi=\sin\varphi}\frac{\ji\tic\theta}{\cos\theta\sqrt{1+(1-{k'}^{2})\tan^{2}\theta}}\nonumber \\
- & =\ji\int\limits _{\tan\theta=0}^{\ji\tan\theta=\sin\ji\xi}\frac{\tdc\theta}{\sqrt{\cos^{2}\theta+(1-{k'}^{2})\sin^{2}\theta}}\nonumber \\
- & =\ji\int\limits _{0}^{\arctan(\sinh\xi)}\frac{\tdc\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:ellf_imag_full}\end{align}
+\eF{\varphi}{k} & =\int_{\sin\phi=0}^{\sin\phi=\sin\varphi}\frac{\ji\tic\theta}{\cos\theta\sqrt{1+(1-{k'}^{2})\tan^{2}\theta}}\nonumber \\
+ & =\ji\int_{\tan\theta=0}^{\ji\tan\theta=\sin\ji\xi}\frac{\tdc\theta}{\sqrt{\cos^{2}\theta+(1-{k'}^{2})\sin^{2}\theta}}\nonumber \\
+ & =\ji\int_{0}^{\arctan(\sinh\xi)}\frac{\tdc\theta}{\sqrt{1-{k'}^{2}\sin^{2}\theta}}\label{eq:ellf_imag_full}\end{align}
 
 \end_inset 
 
@@ -1389,9 +1389,9 @@ Das vollständige elliptische Integral erster Art wird meist in den folgenden
 
 
 \begin_inset Formula \begin{xalignat}{2}
-\eK{k} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}, & 0 & \leq\left|k\right|\leq1\label{eq:ellk_def}\\
-\eK{m} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-mt^{2})}}, & 0 & \leq m\leq1\\
-\eK{\phi} & =\int\limits _{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-t^{2}\sin^{2}\phi)}}, & -\frac{\pi}{2} & \leq\phi\leq\frac{\pi}{2}\msp.\end{xalignat}
+\eK{k} & =\int_{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}, & 0 & \leq\left|k\right|\leq1\label{eq:ellk_def}\\
+\eK{m} & =\int_{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-mt^{2})}}, & 0 & \leq m\leq1\\
+\eK{\phi} & =\int_{0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})(1-t^{2}\sin^{2}\phi)}}, & -\frac{\pi}{2} & \leq\phi\leq\frac{\pi}{2}\msp.\end{xalignat}
 
 \end_inset 
 
@@ -1423,7 +1423,7 @@ Legendre
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\eK{k}=\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
+\boxed{\eK{k}=\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}}\label{eq:ellk_def_sin}\end{equation}
 
 \end_inset 
 
@@ -1456,8 +1456,8 @@ Spezielle Werte
 
 
 \begin_inset Formula \begin{align}
-\eK{0} & =\int\limits _{0}^{\pi/2}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
-\eK{1} & =\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
+\eK{0} & =\int_{0}^{\frac{\pi}{2}}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
+\eK{1} & =\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
 
 \end_inset 
 
@@ -1560,7 +1560,7 @@ Gauß
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}\msp.\label{eq:ellk_ab}\end{equation}
+\int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}\msp.\label{eq:ellk_ab}\end{equation}
 
 \end_inset 
 
@@ -1578,7 +1578,7 @@ Wie schon in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int\limits _{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
+\int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
  & =\frac{1}{a}\F\left[\epar{\frac{\pi}{2}}{\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp}\right]\nonumber \\
  & =\frac{1}{a}\jK\left[\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp\right]\msp.\label{eq:ellk_ab_k}\end{align}
 
@@ -1598,7 +1598,7 @@ Mit dem Modul entsprechend Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \[
-\int\limits _{0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{2}\int\limits _{-\infty}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{a}\eK{k}\msp.\]
+\int_{0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{2}\int_{-\infty}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}}=\frac{1}{a}\eK{k}\msp.\]
 
 \end_inset 
 
@@ -1635,10 +1635,10 @@ Einsetzen und Umformen von Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align*}
-\int\limits _{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =-\int\limits _{t=1}^{0}\frac{a\tic t}{t^{2}\sqrt{(1-t^{2})[a^{2}(t^{-2}-1)+a^{2}][a^{2}(t^{-2}-1)+b^{2}]}}\\
- & =a\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})a^{2}(a^{2}+b^{2}t^{2}-a^{2}t^{2})}}\\
- & =\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})[a^{2}-(a^{2}-b^{2})t^{2}]}}\\
- & =\frac{1}{a}\int\limits _{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})\left(1-\frac{a^{2}-b^{2}}{a^{2}}t^{2}\right)}}\\
+\int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =-\int_{t=1}^{0}\frac{a\tic t}{t^{2}\sqrt{(1-t^{2})[a^{2}(t^{-2}-1)+a^{2}][a^{2}(t^{-2}-1)+b^{2}]}}\\
+ & =a\int_{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})a^{2}(a^{2}+b^{2}t^{2}-a^{2}t^{2})}}\\
+ & =\int_{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})[a^{2}-(a^{2}-b^{2})t^{2}]}}\\
+ & =\frac{1}{a}\int_{t=0}^{1}\frac{\tdc t}{\sqrt{(1-t^{2})\left(1-\frac{a^{2}-b^{2}}{a^{2}}t^{2}\right)}}\\
  & =\frac{1}{a}\eK{\sqrt{1-\left(\frac{b}{a}\right)^{2}}}\end{align*}
 
 \end_inset 
@@ -1868,7 +1868,7 @@ Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-u=\exF{x}{k}=\int\limits _{0}^{\esn{u}{k}}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\end{equation}
+u=\exF{x}{k}=\int_{0}^{\esn{u}{k}}\frac{\tdc t}{\sqrt{(1-t^{2})(1-k^{2}t^{2})}}\end{equation}
 
 \end_inset 
 
@@ -2626,7 +2626,7 @@ Die separierten Ableitungen nach
 
 \begin_inset Formula \begin{xalignat}{2}
 \tdiff{x}{u} & =\sqrt{(1-x^{2})(1-k^{2}x^{2})} & \tdiff{y}{u} & =\sqrt{(1-y^{2})(1-k^{2}y^{2})}\nonumber \\
-u & =\int\limits _{0}^{x}\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\exF{x}{k} & v & =u-A=\int\limits _{0}^{y}\frac{\tdc y}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}=\exF{y}{k}\label{eq:elladd_uv}\end{xalignat}
+u & =\int_{0}^{x}\frac{\tdc x}{\sqrt{(1-x^{2})(1-k^{2}x^{2})}}=\exF{x}{k} & v & =u-A=\int_{0}^{y}\frac{\tdc y}{\sqrt{(1-y^{2})(1-k^{2}y^{2})}}=\exF{y}{k}\label{eq:elladd_uv}\end{xalignat}
 
 \end_inset 
 
@@ -3974,7 +3974,7 @@ Jacobi
 \end_inset 
 
 ) sind insbesondere die Werte auf dem Gitter
-\begin_inset LatexCommand \index{Gitter}
+\begin_inset LatexCommand \index{Periodengitter}
 
 \end_inset 
 
@@ -6667,7 +6667,7 @@ Integriert man nun beide Seiten und nimmt die Definitionsgleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-u & =\int\limits _{0}^{\varphi}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}=\eF{\varphi}{k}\label{eq:elltr_general_x}\\
+u & =\int_{0}^{\varphi}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}=\eF{\varphi}{k}\label{eq:elltr_general_x}\\
 \varphi & =\eam{u}{k}\nonumber \\
 x & =\sin\varphi=\esn{u}{k}\msp.\nonumber \end{align}
 
@@ -6703,7 +6703,7 @@ Für
 
 
 \begin_inset Formula \begin{align}
-u & =M\int\limits _{0}^{\theta}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}-C=M\eF{\theta}{\lambda}-C\label{eq:elltr_general_y}\\
+u & =M\int_{0}^{\theta}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}-C=M\eF{\theta}{\lambda}-C\label{eq:elltr_general_y}\\
 \theta & =\eam{\frac{u-C}{M}}{\lambda}\nonumber \\
 y & =\sin\theta=\esn{\frac{u+C}{M}}{\lambda}\msp,\nonumber \end{align}
 
@@ -6921,7 +6921,7 @@ cf
 \end_inset 
 
  auf dem Gitter
-\begin_inset LatexCommand \index{Gitter}
+\begin_inset LatexCommand \index{Periodengitter}
 
 \end_inset 
 
@@ -8533,7 +8533,7 @@ Nun soll noch nachgewiesen werden, daß die Koeffizienten
 
 \begin_inset Formula \begin{align}
 \pn{x}{\mu} & =\frac{1}{k\zn{x}{\nu}}\nonumber \\
-\zn{x}{\nu}\cdot\pn{x}{\mu} & =\frac{1}{k}\label{eq:elltr_poles_per_zeroes}\end{align}
+\zn{x}{\nu}\,\pn{x}{\mu} & =\frac{1}{k}\label{eq:elltr_poles_per_zeroes}\end{align}
 
 \end_inset 
 
@@ -9464,9 +9464,7 @@ Setzt man nun den Wert
  ein, dann wird wegen der Unbestimmheit des rechtsseitigen Ausdrucks eine
  Grenzwertbestimmung nach der Regel von 
 \noun on 
-G.\SpecialChar ~
-de\SpecialChar ~
-l'Hospital
+Bernoulli-l'Hospital
 \noun default 
  notwendig.
 \begin_inset Formula \begin{align*}
@@ -11211,7 +11209,7 @@ Der zugeordnete Verlauf des Parameters
 
  illustriert (inklusive der positiven Nullstellen und Pole), wobei fett
  dargestellte Gitternetzlinien
-\begin_inset LatexCommand \index{Gitter}
+\begin_inset LatexCommand \index{Periodengitter}
 
 \end_inset 
 
@@ -11300,7 +11298,7 @@ Erste elliptische Haupttransformation für
 \layout Standard
 
 Er ist direkt aus dem Gitter
-\begin_inset LatexCommand \index{Gitter}
+\begin_inset LatexCommand \index{Periodengitter}
 
 \end_inset 
 
@@ -12008,7 +12006,7 @@ Die Transformationsbeziehung bei Verwendung des elliptischen Sinus' ist
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\esn{u/M}{\lambda}=\frac{\esn{u}{k}}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\cdot\esn[2]{u}{k}}}\label{eq:elltr1_odd_sn}\end{equation}
+\boxed{\esn{\frac{u}{M}}{\lambda}=\frac{\esn{u}{k}}{M}\prod_{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{\esn[2]{u}{k}}{\esn[2]{\nu K/n}{k}}}{1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\cdot\esn[2]{u}{k}}}\label{eq:elltr1_odd_sn}\end{equation}
 
 \end_inset 
 
@@ -15259,7 +15257,15 @@ Numerische Berechnungen
 
 \end_inset 
 
-Der AGM-Algorithmus 
+Der AGM-Algorithmus
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Arithmetisch-Geometrischer Mittelwert|(}
+
+\end_inset 
+
+
 \layout Standard
 
 Der Algorithmus des Arithmetisch-Geome\SpecialChar \-
@@ -15285,11 +15291,6 @@ Landen
 
 
 \begin_inset LatexCommand \index{AGM}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Arithmetisch-Geometrischer Mittelwert}
 
 \end_inset 
 
@@ -15683,7 +15684,7 @@ Um diesen Grenzwert zu finden, bildet man zuerst das unbestimmte elliptische
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\label{eq:agm_integral}\end{equation}
+\int_{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\label{eq:agm_integral}\end{equation}
 
 \end_inset 
 
@@ -15701,7 +15702,7 @@ und kombiniert es mit Relation\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i+1}}{\sqrt{(t_{i+1}^{2}+a_{i+1}^{2})(t_{i+1}^{2}+b_{i+1}^{2})}}.\label{eq:agm_descend_i}\end{equation}
+\int_{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\int_{-\infty}^{\infty}\frac{\tdc t_{i+1}}{\sqrt{(t_{i+1}^{2}+a_{i+1}^{2})(t_{i+1}^{2}+b_{i+1}^{2})}}.\label{eq:agm_descend_i}\end{equation}
 
 \end_inset 
 
@@ -15760,10 +15761,10 @@ Beziehungsweise interpretiert die Gleichung rückwärts bis hin zu
 
 
 \begin_inset Formula \begin{align*}
-\int\limits _{-\infty}^{\infty}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\ldots\\
- & =\lim_{i\rightarrow\infty}\int\limits _{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\\
- & =\int\limits _{-\infty}^{\infty}\frac{\tdc t}{\sqrt{[t^{2}+\AGM^{2}(a_{0},b_{0})][t^{2}+\AGM^{2}(a_{0},b_{0})]}}\\
- & =\int\limits _{-\infty}^{\infty}\frac{\tdc t}{t^{2}+\AGM^{2}(a_{0},b_{0})}\\
+\int_{-\infty}^{\infty}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\int_{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}=\ldots\\
+ & =\lim_{i\rightarrow\infty}\int_{-\infty}^{\infty}\frac{\tdc t_{i}}{\sqrt{(t_{i}^{2}+a_{i}^{2})(t_{i}^{2}+b_{i}^{2})}}\\
+ & =\int_{-\infty}^{\infty}\frac{\tdc t}{\sqrt{[t^{2}+\AGM^{2}(a_{0},b_{0})][t^{2}+\AGM^{2}(a_{0},b_{0})]}}\\
+ & =\int_{-\infty}^{\infty}\frac{\tdc t}{t^{2}+\AGM^{2}(a_{0},b_{0})}\\
  & =\left.\frac{1}{\AGM(a_{0},b_{0})}\arctan\frac{x}{\AGM(a_{0},b_{0})}\right|_{-\infty}^{\infty}=\frac{\pi}{\AGM(a_{0},b_{0})}.\end{align*}
 
 \end_inset 
@@ -15786,7 +15787,15 @@ Bedenkt man weiterhin, daß der Integrand in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\AGM(a_{0},b_{0})=\frac{\pi}{\mbig{\int\limits _{-\infty}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}}}\label{eq:agm_integrsolution}\end{equation}
+\boxed{\AGM(a_{0},b_{0})=\frac{\pi}{\mbig{\int_{-\infty}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}}}\label{eq:agm_integrsolution}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Arithmetisch-Geometrischer Mittelwert|)}
 
 \end_inset 
 
@@ -15816,12 +15825,7 @@ Das Vollständige Elliptische Integral
 
 \end_inset 
 
- mit Hilfe des AGM-Algorithmus'
-\begin_inset LatexCommand \index{Arithmetisch-Geometrischer Mittelwert}
-
-\end_inset 
-
- berechnet werden.
+ mit Hilfe des AGM-Algorithmus' berechnet werden.
  Dazu wird Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:agm_integrsolution}
@@ -15843,7 +15847,7 @@ Das Vollständige Elliptische Integral
 
 
 \begin_inset Formula \begin{equation}
-\AGM(a_{0},b_{0})=\frac{\pi}{2}\frac{1}{\int\limits _{0}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}=\frac{\pi}{2}\frac{a_{0}}{\eK{\sqrt{1-\frac{b_{0}^{2}}{a_{0}^{2}}}}}\label{eq:agm_solution}\end{equation}
+\AGM(a_{0},b_{0})=\frac{\pi}{2}\frac{1}{\mbig{\int_{0}^{\infty}\frac{\tdc t}{\sqrt{\left(t^{2}+a_{0}^{2}\right)\left(t^{2}+b_{0}^{2}\right)}}}}=\frac{\pi}{2}\frac{a_{0}}{\eK{\sqrt{1-\frac{b_{0}^{2}}{a_{0}^{2}}}}}\label{eq:agm_solution}\end{equation}
 
 \end_inset 
 
@@ -16054,7 +16058,7 @@ Für die Darstellung von
 
 
 \begin_inset Formula \[
-\eK{\varphi}=\int\limits _{0}^{\frac{\pi}{2}}\frac{\tdc\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
+\eK{\varphi}=\int_{0}^{\frac{\pi}{2}}\frac{\tdc\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
 
 \end_inset 
 
@@ -16350,12 +16354,7 @@ Wegen der Periodizität des Tangens ist man vom Argument
  mit Hilfe des AGM unumgänglich wird.
 \layout Standard
 
-Praktisch wird allerdings fast immer der AGM
-\begin_inset LatexCommand \index{Arithmetisch-Geometrischer Mittelwert}
-
-\end_inset 
-
--Algorithmus (
+Praktisch wird allerdings fast immer der AGM-Algorithmus (
 \begin_inset ERT
 status Collapsed
 
@@ -16367,7 +16366,7 @@ cf
 
  Abschnitt\SpecialChar ~
 
-\begin_inset LatexCommand \ref{sec:agm}
+\begin_inset LatexCommand \vref{sec:agm}
 
 \end_inset 
 
