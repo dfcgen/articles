@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: notation.lyx,v 1.4 2005-05-01 07:49:46 ralf Exp $
+Version: $Id: notation.lyx,v 1.5 2005-06-02 16:08:49 ralf Exp $
 \end_inset 
 
 
@@ -186,7 +186,7 @@ Gudermann
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\imop\left\{ z\right\} $
+\begin_inset Formula $\imop(z)$
 \end_inset 
 
  Imaginärteil von 
@@ -332,11 +332,27 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \labelwidthstring 00.00.0000
 
 
-\begin_inset Formula $\reop\left\{ z\right\} $
+\begin_inset Formula $\reop(z)$
 \end_inset 
 
  Realteil von 
 \begin_inset Formula $z$
+\end_inset 
+
+
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\res{z_{0}}{f(z)}$
+\end_inset 
+
+ Residuum von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ an der Stelle 
+\begin_inset Formula $z_{0}$
 \end_inset 
 
 
@@ -360,6 +376,14 @@ Brackets in math-mode [] cannot be processed inside lyxlist environment.
 \end_inset 
 
  Sinus
+\layout List
+\labelwidthstring 00.00.0000
+
+
+\begin_inset Formula $\sinc(x)$
+\end_inset 
+
+ Spaltfunktion
 \layout List
 \labelwidthstring 00.00.0000
 
