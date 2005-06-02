@@ -29,6 +29,14 @@
 \layout Section
 
 LTI-Systeme
+\layout Standard
+
+
+\begin_inset LatexCommand \index{LTI-System}
+
+\end_inset 
+
+
 \layout Subsection
 
 Systemüberblick
@@ -77,10 +85,19 @@ Systemgrößen in Original- und Bildbereich
 \layout Subsection
 
 Linearität
+\begin_inset LatexCommand \index{LTI-System!Linearität}
+
+\end_inset 
+
+
 \layout Standard
 
-Ein System ist linear, wenn das Superpositionsprinzip (oder der Überlagerungssat
-z) gilt, 
+Ein System ist linear, wenn das Superpositionsprinzip
+\begin_inset LatexCommand \index{Superposition}
+
+\end_inset 
+
+ (oder der Überlagerungssatz) gilt, 
 \begin_inset ERT
 status Collapsed
 
@@ -119,7 +136,7 @@ x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mi
 
 
 \begin_inset Formula \[
-y(t)=(x*\irf)(t)=\int\limits _{-\infty}^{\infty}x(\tau)\irf(t-\tau)\,\tdc\tau\]
+y(t)=(x*\irf)(t)=\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\]
 
 \end_inset 
 
@@ -131,7 +148,7 @@ weshalb die Summe durch
 
 
 \begin_inset Formula \[
-y(t)=\int\limits _{-\infty}^{\infty}x_{1}(\tau)\irf(t-\tau)\,\tdc\tau+\int\limits _{-\infty}^{\infty}x_{2}(\tau)\irf(t-\tau)\,\tdc\tau+\cdots=y_{1}(t)+y_{2}(t)+y_{3}(t)+\cdots\]
+y(t)=\int_{-\infty}^{\infty}x_{1}(\tau)\irf(t-\tau)\tic\tau+\int_{-\infty}^{\infty}x_{2}(\tau)\irf(t-\tau)\tic\tau+\cdots=y_{1}(t)+y_{2}(t)+y_{3}(t)+\cdots\]
 
 \end_inset 
 
@@ -140,7 +157,7 @@ y(t)=\int\limits _{-\infty}^{\infty}x_{1}(\tau)\irf(t-\tau)\,\tdc\tau+\int\limit
 
 beschrieben werden kann
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -155,16 +172,21 @@ Fourier
 \layout Subsection
 
 Stabilität
+\begin_inset LatexCommand \index{LTI-System!Stabilität}
+
+\end_inset 
+
+
 \layout Standard
 
-Eine notwendige und hinreichende Bedingung für die Stabilität
+Eine notwendige und hinreichende Bedingung für die (asymptotische) Stabilität
 \begin_inset LatexCommand \index{Stabilität}
 
 \end_inset 
 
- eines zeit-invarianten Systems ist, daß unter der Voraussetzung endlicher
- Eingangssignale für das Ausgangssignal 
-\begin_inset Formula $y(t)<\infty$
+ eines linearen, zeit-invarianten Systems ist, daß unter der Voraussetzung
+ endlicher Eingangssignale für das Ausgangssignal 
+\begin_inset Formula $|y(t)|<\infty$
 \end_inset 
 
  
@@ -175,30 +197,52 @@ und
 \begin_inset Formula $\left|Y(\jw)\right|<\infty$
 \end_inset 
 
- an jeder Stelle eingehalten wird.
- Gleichbedeutend damit ist
+ an jeder Stelle eingehalten wird\SpecialChar ~
+
+\begin_inset LatexCommand \cite[1.2.1]{Kress:1979}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[2.11]{Wunsch:1962}
+
+\end_inset 
+
+.
+ Gleichbedeutend damit ist folgende Forderung an die Impulsantwort eines
+ solchen Systems
 \layout Standard
 
 
-\begin_inset Formula \[
-\int\limits _{-\infty}^{\infty}|\irf(t)|\tdc t<\infty\msp,\]
+\begin_inset Formula \begin{equation}
+\boxed{\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty}\msp,\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-was außerdem die Existenz des 
+welche außerdem die Existenz des 
 \noun on 
 Fourier
 \noun default 
--Integrals 
-\begin_inset Formula $\trf(\jw)$
+-Integrals
+\begin_inset LatexCommand \index{Fourier-Integral@\noun{Fourier}-Integral!Existenz}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\trf(\jw)=\ft\{\irf(t)\}$
 \end_inset 
 
  sichert\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Wax:1962}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\S$4 \sdot 43$]{Whittaker:1927}
 
 \end_inset 
 
@@ -226,6 +270,11 @@ Hurwitz
  und der Grad des Zählerpolynoms höchstens so groß wie der des Nenners sein
  darf.
  So kann gewährleistet werden, daß die Partialbruchzerlegung
+\begin_inset LatexCommand \index{Partialbruchzerlegung}
+
+\end_inset 
+
+
 \layout Standard
 
 
@@ -247,16 +296,27 @@ bei der Rücktransformation in den Zeitbereich als
 \layout Standard
 
 nicht zu (unbeschränkten) Exponentialfunktionen mit positiven Exponenten
- führt.
+ führt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[2.5.4]{Stopp:1992}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[44.2]{Chen:1995}
+
+\end_inset 
+
+.
 \layout Subsection
 
 Kausalität
-\layout Standard
-
-
-\begin_inset LatexCommand \index{Kausalität}
+\begin_inset LatexCommand \index{LTI-System!Kausalität}
 
 \end_inset 
+
+
+\layout Standard
 
 Für Systeme in der realen Welt gilt grundsätzlich das Kausalitätsprinzip,
  
@@ -294,9 +354,14 @@ ie
 \noun on 
 Fourier
 \noun default 
--Transformation (dieser notwendigen, nicht hinreichenden Bedingung für realisier
-bare Systeme) in den Bildbereich führt durch Anwendung des Faltungs- und
- Ähnlichkeitssatzes sowie der Regel 
+-Transformation
+\begin_inset LatexCommand \index{Fourier-Transformation@\noun{Fourier}-Transformation}
+
+\end_inset 
+
+ (dieser notwendigen, nicht hinreichenden Bedingung für realisierbare Systeme)
+ in den Bildbereich führt durch Anwendung des Faltungs- und Ähnlichkeitssatzes
+ sowie der Regel 
 \begin_inset Formula $\usf(t)\;\lft\;\pi\delta(\omega)+1/\jw$
 \end_inset 
 
@@ -334,8 +399,8 @@ Separiert man Real- und Imaginärteil, dann muß für ein kausales System gelten:
 
 
 \begin_inset Formula \begin{align*}
-\pi\reop\left\{ Y(\jw)\right\} -\frac{1}{\omega}*\imop\left\{ Y(\jw)\right\}  & =0\\
-\pi\imop\left\{ Y(\jw)\right\} +\frac{1}{\omega}*\reop\left\{ Y(\jw)\right\}  & =0\msp.\end{align*}
+\pi\reop\left[Y(\jw)\right]-\frac{1}{\omega}*\imop\left[Y(\jw)\right] & =0\\
+\pi\imop\left[Y(\jw)\right]+\frac{1}{\omega}*\reop\left[Y(\jw)\right] & =0\msp.\end{align*}
 
 \end_inset 
 
@@ -343,28 +408,45 @@ Separiert man Real- und Imaginärteil, dann muß für ein kausales System gelten:
 \layout Standard
 
 Umstellen nach 
-\begin_inset Formula $\reop\left\{ Y(\jw)\right\} $
+\begin_inset Formula $\reop\left[Y(\jw)\right]$
 \end_inset 
 
  und 
-\begin_inset Formula $\imop\left\{ Y(\jw)\right\} $
+\begin_inset Formula $\imop\left[Y(\jw)\right]$
 \end_inset 
 
- ergibt schließlich:
+ führt schließlich zu:
 \layout Standard
 
 
 \begin_inset Formula \begin{alignat*}{4}
-\reop\left\{ Y(\jw)\right\}  & = & \frac{1}{\pi\omega}*\imop\left\{ Y(\jw)\right\}  & = & \frac{1}{\pi}\int\limits _{-\infty}^{\infty}\frac{\imop\left\{ Y(u)\right\} }{\omega-u}\,\tdc u & = & \mathcal{H}\left\{ \imop\left\{ Y(\jw)\right\} \right\} \\
-\imop\left\{ Y(\jw)\right\}  & = & -\frac{1}{\pi\omega}*\reop\left\{ Y(\jw)\right\}  & = & -\frac{1}{\pi}\int\limits _{-\infty}^{\infty}\frac{\reop\left\{ Y(u)\right\} }{\omega-u}\,\tdc u & = & -\mathcal{H}\left\{ \reop\left\{ Y(\jw)\right\} \right\} \msp.\end{alignat*}
+\reop\left[Y(\jw)\right] & = & \frac{1}{\pi\omega}*\imop\left[Y(\jw)\right] & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop\left[Y(\xi)\right]}{\omega-\xi}\tic\xi & = & \mathcal{H}\left\{ \imop\left[Y(\jw)\right]\right\} \\
+\imop\left[Y(\jw)\right] & = & -\frac{1}{\pi\omega}*\reop\left[Y(\jw)\right] & = & -\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop\left[Y(\xi)\right]}{\omega-\xi}\tic\xi & = & -\mathcal{H}\left\{ \reop\left[Y(\jw)\right]\right\} \end{alignat*}
 
 \end_inset 
 
 
 \layout Standard
 
-Real- und Imaginärteil eines kausalen LTI-Systems sind also wechselseitig
- über die 
+Real- und Imaginärteil (der 
+\noun on 
+Fourier
+\noun default 
+-Transformierten) des Ausgangssignals eines kausalen LTI-Systems sind also
+ wechselseitig, bis auf eine Konstante
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die 
+\noun on 
+Hilbert
+\noun default 
+-Transformierte einer Konstanten ist Null.
+\end_inset 
+
+, über die 
 \noun on 
 Hilbert
 \noun default 
@@ -384,7 +466,7 @@ Von
 David Hilbert
 \noun default 
  (1862-1943) begründete Integraltransformation: 
-\begin_inset Formula $\mathcal{H}\left\{ f(x)\right\} =\frac{1}{\pi}\int\limits _{-\infty}^{\infty}\frac{f(u)}{x-u}\,\tdc u$
+\begin_inset Formula $\mathcal{H}\left\{ f(x)\right\} =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
 .
@@ -394,91 +476,204 @@ David Hilbert
 \begin_inset Formula $\mathcal{H}$
 \end_inset 
 
- bestimmt
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Bis auf eine Konstante, denn die 
+ verbunden.
+ Dieser Fakt muß sicherlich auch dann gelten, wenn das System durch einen
+ 
 \noun on 
-Hilbert
+Dirac
 \noun default 
--Transformierte einer Konstanten ist Null.
-\end_inset 
-
-.
-\layout Subsection
-
-Realisierbarkeit
-\layout Standard
-
-Eine notwendige (als auch hinreichende) Bedingung für Kausalität
-\begin_inset LatexCommand \index{Kausalität}
-
-\end_inset 
-
- und Realisierbarkeit
-\begin_inset LatexCommand \index{Realisierbarkeit}
-
-\end_inset 
-
- ist das 
-\noun on 
-Paley-Wiener
-\noun default 
--Kriterium
-\begin_inset LatexCommand \index{Paley-Wiener-Bedingung@\noun{Paley-Wiener}-Bedingung}
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Formula \[
-\int\limits _{-\infty}^{\infty}\frac{\left|\log|\trf(\jw)|\right|}{1+\omega^{2}}\,\tdc\omega<\infty\msp,\]
-
-\end_inset 
-
-
-\layout Standard
-
-welches die bekannte Bedingung
-\layout Standard
-
-
-\begin_inset Formula \[
-\int\limits _{-\infty}^{\infty}|\trf(\jw)|^{2}\tdc\omega<\infty\]
-
-\end_inset 
-
-
-\layout Standard
-
-impliziert.
-\layout Standard
-
-Zu weiteren Realisierbarkeitsbedingungen sowie dem systemtheoretischen/mathemati
-schen Hintergrund des 
-\noun on 
-Paley-Wiener
-\noun default 
--Kriteriums siehe 
+-Impuls angeregt wird, 
 \begin_inset ERT
 status Collapsed
 
 \layout Standard
 
 \backslash 
-eg
+ie
+\end_inset 
+
+ wenn 
+\begin_inset Formula $Y(\jw)=\trf(\jw)$
+\end_inset 
+
+ gilt.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{\trf(\jw)=\mathcal{H}\left\{ \imop\left[\trf(\jw)\right]\right\} -\ji\,\mathcal{H}\left\{ \reop\left[\trf(\jw)\right]\right\} }\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Was die Rücktransformation in den Zeitbereich betrifft, kann von der Zusammenfas
+sung obiger Formeln in 
+\layout Standard
+
+
+\begin_inset Formula \[
+Y(\jw)=\frac{1}{\pi\omega}*\left\{ \imop\left[Y(\jw)\right]-\ji\,\reop\left[Y(\jw)\right]\right\} =-\frac{\ji}{\pi\omega}*\conjgt{Y}(\jw)\]
+
+\end_inset 
+
+
+\layout Standard
+
+ausgegangen werden.
+ Durch Anwendung des Faltungssatzes und (wieder) der Transformation für
+ den Einheitssprung erhält man für die Zeitfunktion
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+y(t) & =\ft^{-1}\left\{ \reop\left[Y(\jw)\right]+\ji\imop\left[Y(\jw)\right]\right\} \\
+ & =\ft^{-1}\left\{ \reop\left[Y(\jw)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\jw)\right]\right\} \\
+ & =\ft^{-1}\left\{ \left[\delta(\omega)-\frac{\ji}{\pi\omega}\right]*\reop\left[Y(\jw)\right]\right\} \\
+ & =\frac{1}{\pi}\usf(t)\,\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} \end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+und schlußendlich (wobei die Vorgehensweise bei der Verwendung des Imaginärteils
+ dieselbe ist)
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{y(t)=\frac{1}{\pi}\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} =\frac{\ji}{\pi}\ft^{-1}\left\{ \imop\left[Y(\jw)\right]\right\} }\msp.\label{eq:ltisys_causal_ftinv}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Hiernach ist es ausreichend nur eine Komponente, entweder Real- oder Imaginärtei
+l, zur Beschreibung des Signals 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ heranzuziehen.
+ Die jeweils andere ist faktisch redundant, was solche Transformationen
+ wie die Kosinus- oder Sinus-Transformation
+\begin_inset LatexCommand \index{Kosinus-Transformation}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Sinus-Transformation}
+
+\end_inset 
+
+ rechtfertigt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[3.2]{Wunsch:1962}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[5.1.2]{Stopp:1992}
+
+\end_inset 
+
+.
+ Diese ergeben sich (bis auf einen konstanten Faktor) sofort aus Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_ftinv}
+
+\end_inset 
+
+, wenn man die Symmetrieeigenschaften der trigonometrischen Funktionen berücksic
+htigt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align}
+y(t) & =\frac{1}{2\pi^{2}}\int_{-\infty}^{\infty}\reop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=\frac{1}{\pi^{2}}\int_{0}^{\infty}\reop\left[Y(\jw)\right]\cos(\omega t)\tic\omega\\
+ & =\frac{\ji}{2\pi^{2}}\int_{-\infty}^{\infty}\imop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=-\frac{1}{\pi^{2}}\int_{0}^{\infty}\imop\left[Y(\jw)\right]\sin(\omega t)\tic\omega\end{align}
+
+\end_inset 
+
+
+\layout Subsection
+
+Realisierbarkeit
+\begin_inset LatexCommand \index{LTI-System!Realisierbarkeit}
+
+\end_inset 
+
+
+\layout Standard
+
+Eine hinreichende Bedingung für Kausalität und Stabilität (also Realisierbarkeit
+) gibt der Satz von 
+\noun on 
+Paley-Wiener
+\noun default 
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ das 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriterium
+\begin_inset LatexCommand \index{Paley-Wiener-Kriterium@\noun{Paley-Wiener}-Kriterium}
+
 \end_inset 
 
 \SpecialChar ~
 
+\begin_inset LatexCommand \cite[\S~82]{Achieser:1967}
+
+\end_inset 
+
+, 
 \begin_inset LatexCommand \cite{Wax:1962}
 
 \end_inset 
 
 .
+\layout Standard
+
+
+\begin_inset Formula \[
+\boxed{\int_{-\infty}^{\infty}\frac{\left|\log|\trf(\jw)|\right|}{1+\omega^{2}}\tic\omega<\infty}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Es schließt die (nur) notwendige Bedingung
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{-\infty}^{\infty}|\trf(\jw)|^{2}\tic\omega<\infty\]
+
+\end_inset 
+
+
+\layout Standard
+
+ein.
+\layout Subsection
+
+Mindestphasensysteme
+\begin_inset LatexCommand \index{LTI-System!Mindestphasen-}
+
+\end_inset 
+
+
 \the_end

@@ -35,7 +35,7 @@ collapsed false
 Properties of algebraic polynomials
 \layout Standard
 
-Version: $Id: polynomials.lyx,v 1.4 2005-05-01 07:49:46 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.5 2005-06-02 16:11:58 ralf Exp $
 \end_inset 
 
 
@@ -120,16 +120,16 @@ eg
  gegeben werden, die entweder
 \layout Itemize
 
-ein Polynom (ganzrationale Funktion
-\begin_inset LatexCommand \index{Funktion!ganzrationale}
+ein Polynom (ganz-rationale Funktion
+\begin_inset LatexCommand \index{Funktion!ganz-rationale}
 
 \end_inset 
 
 ),
 \layout Itemize
 
-eine gebrochenrationale Funktion
-\begin_inset LatexCommand \index{Funktion!rationale}
+eine gebrochen-rationale Funktion
+\begin_inset LatexCommand \index{Funktion!gebrochen-rationale}
 
 \end_inset 
 
@@ -154,7 +154,7 @@ Die beiden ersten Fälle werden deshalb rational genannt, weil ein Ergebnis
 
 \end_inset 
 
-Ganzrationale Funktionen (Polynome
+Ganz-rationale Funktionen (Polynome
 \begin_inset LatexCommand \index{Polynome|(}
 
 \end_inset 
@@ -165,8 +165,8 @@ Ganzrationale Funktionen (Polynome
 Definition
 \layout Standard
 
-Polynome sind ganzrationale Funktionen
-\begin_inset LatexCommand \index{Funktion!ganzrationale}
+Polynome sind ganz-rationale Funktionen
+\begin_inset LatexCommand \index{Funktion!ganz-rationale}
 
 \end_inset 
 
@@ -223,7 +223,7 @@ tellung mit Hilfe der
 
 
 \begin_inset Formula \begin{equation}
-P(x)=K(x-\zn{x}{1})\cdot(x-\zn{x}{2})\cdots(x-\zn{x}{n})=K\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
+P(x)=a_{n}(x-\zn{x}{1})\cdot(x-\zn{x}{2})\cdots(x-\zn{x}{n})=a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
 
 \end_inset 
 
@@ -272,9 +272,9 @@ Interessant ist jedoch die Gewinnung der ersten Ableitung von
 
 \begin_inset Formula \begin{align}
 P'(x) & =P(x)\frac{P'(x)}{P(x)}=P(x)\left[\ln P(x)\right]'\nonumber \\
- & =K\, P(x)\left[\ln\prod_{i=1}^{n}(x-\zn{x}{i})\right]'\nonumber \\
- & =K\, P(x)\sum_{i=1}^{n}\left[\ln(x-\zn{x}{i})\right]'\nonumber \\
-P'(x) & =K\, P(x)\sum_{i=1}^{n}\frac{1}{x-\zn{x}{i}}\label{eq:poly_prd_deriv}\end{align}
+ & =P(x)\,\frac{\tdc}{\tdc x}\ln\left[a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\right]\nonumber \\
+ & =P(x)\sum_{i=1}^{n}\left[\frac{\tdc}{\tdc x}\ln(x-\zn{x}{i})\right]\nonumber \\
+P'(x) & =P(x)\sum_{i=1}^{n}\frac{1}{x-\zn{x}{i}}\label{eq:poly_prd_deriv}\end{align}
 
 \end_inset 
 
@@ -324,7 +324,7 @@ Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
 
 
 \begin_inset Formula \[
-P'(\zn{x}{k})=K\left[\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\ldots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{P(x)}{x-\zn{x}{i}}}_{i=k}+\ldots+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\right]\]
+P'(\zn{x}{k})=\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\ldots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{P(x)}{x-\zn{x}{i}}}_{i=k}+\ldots+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{P(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\]
 
 \end_inset 
 
@@ -374,14 +374,39 @@ Die Ableitung an der Nullstelle
 \begin_inset Formula $\zn{x}{k}$
 \end_inset 
 
- nimmt deshalb folgende einfachen Form an:
+ nimmt deshalb folgende einfache Form an:
 \layout Standard
 
 
 \begin_inset Formula \[
-P'(\zn{x}{k})=K^{2}\prod_{\substack{i=1\\
+P'(\zn{x}{k})=a_{n}\prod_{\substack{i=1\\
 i\neq k}
 }^{n}(\zn{x}{k}-\zn{x}{i})\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da bei Polynomen mit reellen Koeffizienten Nullstellen grundsätzlich konjugiert
+ komplex oder reell auftreten, ist die Ableitung auch wieder eine reelle
+ Größe.
+ Dies soll folgende Darstellung verdeutlichen, wobei davon ausgegangen wird,
+ daß reelle Nullstellen ein Spezialfall der Imaginären (mit 
+\begin_inset Formula $\imop(\zn{x}{i})=0$
+\end_inset 
+
+) sind.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+P'(\zn{x}{k}) & = & a_{n}\prod_{\substack{i=1\\
+i\neq k}
+}^{n}\left[\reop(\zn{x}{k}-\zn{x}{i})+\ji\imop(\zn{x}{k}-\zn{x}{i})\right]\\
+ & = & a_{n}\prod_{\substack{i=1\\
+i\neq k}
+}^{n}\left[\reop^{2}(\zn{x}{k}-\zn{x}{i})-\imop^{2}(\zn{x}{k}-\zn{x}{i})\right]\msp.\end{eqnarray*}
 
 \end_inset 
 
@@ -392,7 +417,7 @@ Nullstellen
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Nullstellen!eines Polynoms}
+\begin_inset LatexCommand \index{Nullstellen!von Polynomen}
 
 \end_inset 
 
@@ -406,9 +431,8 @@ Bei der Linearfaktordarstellung nach Formel\SpecialChar ~
 F.
  Gauss in seiner Dissertation\SpecialChar ~
 1799 erstmals bewiesenen Fundamentalsatz der
- Algebra: 
-\begin_inset Quotes eld
-\end_inset 
+ Algebra:
+\layout Quote
 
 Jedes algebraische Polynom 
 \begin_inset Formula $n$
@@ -418,18 +442,16 @@ Jedes algebraische Polynom
 \begin_inset Formula $n$
 \end_inset 
 
- komplexe Lösungen
-\begin_inset Quotes erd
-\end_inset 
-
-\SpecialChar ~
+ komplexe Lösungen\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Gauss:1799}
 
 \end_inset 
 
 .
- Bei Polynomen mit reellen Koeffizienten 
+\layout Standard
+
+Bei Polynomen mit reellen Koeffizienten 
 \begin_inset Formula $a_{i}$
 \end_inset 
 
@@ -456,7 +478,7 @@ stellung\SpecialChar ~
 \layout Standard
 
 Nullstellen eines Polynoms müssen nicht notwendigerweise alle verschieden
- sein, oftmals sind sogenannte 
+ sein, oftmals sind 
 \begin_inset Quotes eld
 \end_inset 
 
@@ -474,7 +496,7 @@ or der Form
 \begin_inset Formula $m$
 \end_inset 
 
- die Vielfachheit der Nullstelle angibt.
+ die Vielfachheit (Ordnung) der Nullstelle angibt.
  Die allgemeine Definition der Vielfachheit einer Nullstelle 
 \begin_inset Formula $\zn{x}{k}$
 \end_inset 
@@ -493,7 +515,7 @@ or der Form
 
 
 \begin_inset Formula \[
-P(x)=(x-\zn{x}{})^{m}Q_{0}(x)\msp,\]
+P(x)=(x-\zn{x}{})^{m}Q_{0}(x)\]
 
 \end_inset 
 
@@ -584,7 +606,7 @@ ie
 
 -te jedoch nicht.
  Diese Aussage stellt eine Verallgemeinerung des Begriffes der Vielfachheit
-\begin_inset LatexCommand \index{Nullstelle!Vielfachheit}
+\begin_inset LatexCommand \index{Nullstellen!Vielfachheit}
 
 \end_inset 
 
@@ -613,7 +635,7 @@ Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
 \end_inset 
 
  Aussagen zu deren Lage machen
-\begin_inset LatexCommand \index{Nullstelle!Lage}
+\begin_inset LatexCommand \index{Nullstellen!Lage}
 
 \end_inset 
 
@@ -798,25 +820,25 @@ Cauchy
 
 \layout Section
 
-Gebrochenrationale Funktionen
+Gebrochen-rationale Funktionen
 \layout Subsection
 
 Definition
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Funktion!rationale}
+\begin_inset LatexCommand \index{Funktion!gebrochen-rationale}
 
 \end_inset 
 
 Dieser Typ der algebraischen Funktionen ist als Quotient zweier Polynome
  erklärbar, wobei das Nennerpolynom nicht konstant sein darf
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-Sonst würde es sich um eine ganzrationale Funktion handeln.
+Sonst würde es sich um eine ganz-rationale Funktion handeln.
 \end_inset 
 
 .
@@ -831,7 +853,8 @@ R(x)=\frac{U(x)}{V(x)}=\frac{\poly{a}{x}{m}}{\poly{b}{x}{n}}=\frac{\sum\limits _
 
 \layout Standard
 
-Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus Abschnitt\SpecialChar ~
+Die verschiedenen Darstellungsformen der ganz-rationalen Funktionen aus
+ Abschnitt\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:poly}
 
@@ -895,8 +918,8 @@ Unter anderem kann man auch wieder (ausgehend von Nullstellen und Polen)
 
 
 \begin_inset Formula \begin{align*}
-U(x) & =K_{U}\prod_{i=1}^{m}(x-\zn{x}{i})\\
-V(x) & =K_{V}\prod_{l=1}^{n}(x-\pn{x}{l})\end{align*}
+U(x) & =a_{m}\prod_{i=1}^{m}(x-\zn{x}{i})\\
+V(x) & =b_{n}\prod_{l=1}^{n}(x-\pn{x}{l})\end{align*}
 
 \end_inset 
 
@@ -924,7 +947,7 @@ Einsetzen der Ableitungsformel\SpecialChar ~
 
 
 \begin_inset Formula \[
-R'(x)=R(x)\left(K_{U}\sum\limits _{i=1}^{m}\frac{1}{x-\zn{x}{i}}-K_{V}\sum\limits _{l=1}^{n}\frac{1}{x-\pn{x}{l}}\right)\msp.\]
+R'(x)=R(x)\left(a_{m}\sum\limits _{i=1}^{m}\frac{1}{x-\zn{x}{i}}-b_{n}\sum\limits _{l=1}^{n}\frac{1}{x-\pn{x}{l}}\right)\msp.\]
 
 \end_inset 
 

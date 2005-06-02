@@ -34,7 +34,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: bessel.lyx,v 1.3 2005-05-01 07:50:20 ralf Exp $
+Version: $Id: bessel.lyx,v 1.4 2005-06-02 16:11:58 ralf Exp $
 \end_inset 
 
 
@@ -149,7 +149,7 @@ wird wahrscheinlich das Konvergenzverhalten, insbesondere für Werte
 \begin_inset Formula $x>1$
 \end_inset 
 
-, unbefriedigend sein
+, unbefriedigend
 \layout Itemize
 
 und die Näherung für 
@@ -161,15 +161,24 @@ und die Näherung für
 Hurwitz
 \noun default 
 -Polynom
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Ein Polynom, dessen Wurzeln allesamt einen negativen Realteil besitzen.
+\end_inset 
+
+
 \begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
 
 \end_inset 
 
- (als Bedingung für stabile Systeme).
+ (als Bedingung für stabile Systeme) sein.
 \layout Standard
 
-Besser ist an dieser Stelle eine Kettenbruchentwicklung -- mit den vorteilhafte
-n Eigenschaften:
+Besser ist an dieser Stelle eine Kettenbruchentwicklung -- mit den vorteilhaften
+ Eigenschaften:
 \layout Itemize
 
 daß der wahre Wert mit wachsender Anzahl von Gliedern (abwechselnd von oben
@@ -460,7 +469,11 @@ angeben, wobei
 \begin_inset Formula $(2n-1)/\lps$
 \end_inset 
 
- positiv sind, handelt es sich bei 
+ positive Koeffizienten (
+\begin_inset Formula $2n-1$
+\end_inset 
+
+) haben, handelt es sich bei 
 \begin_inset Formula $\textrm{B}_{n}(\lps)$
 \end_inset 
 
