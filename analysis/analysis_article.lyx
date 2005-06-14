@@ -1,0 +1,203 @@
+#LyX 1.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 221
+\textclass article
+\begin_preamble
+\input{text-inc.tex}
+\input{math-inc.tex}
+\input{electr-inc.tex}
+\input{pdf-inc.tex}
+
+\usepackage{html}
+\end_preamble
+\options reqno
+\language german
+\inputencoding latin1
+\fontscheme times
+\graphics default
+\float_placement !hbtp
+\paperfontsize default
+\spacing onehalf 
+\papersize a4paper
+\paperpackage a4wide
+\use_geometry 0
+\use_amsmath 1
+\use_natbib 0
+\use_numerical_citations 0
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\quotes_times 2
+\papercolumns 1
+\papersides 2
+\paperpagestyle default
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: analysis_article.lyx,v 1.1 2005-06-14 18:49:37 ralf Exp $
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+begin{htmlonly}
+\newline 
+    
+\backslash 
+originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="robots" CONTENT="index, follow">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="description" LANG ="de" CONTENT="Grundlagen der Funktionentheorie">}
+\newline 
+    
+\backslash 
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville">}
+\newline 
+    
+\backslash 
+germanTeX
+\newline 
+
+\newline 
+    
+\backslash 
+renewcommand{
+\backslash 
+qedsymbol}{
+\backslash 
+Box}
+\newline 
+
+\newline 
+    
+\backslash 
+renewenvironment{algorithm}[1][htbp] 
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
+\backslash 
+end{rawhtml} }
+\newline 
+    { 
+\backslash 
+begin{rawhtml} <br> <hr> <br> <br> 
+\backslash 
+end{rawhtml} }
+\newline 
+
+\newline 
+
+\backslash 
+end{htmlonly}
+\end_inset 
+
+
+\layout Title
+
+Funktionentheorie -- Analytische Funktionen
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
+\layout Abstract
+
+Das vorliegende Papier richtet sich an Studenten und Ingenieure der Elektrotechn
+ik, Signalverarbeitung sowie Nachrichtentechnik, die ihr Wissen in Bezug
+ auf die Grundlagen der Funktionentheorie (komplexe Analysis) auffrischen
+ wollen.
+ Vorausgesetzt werden dabei Kenntnisse in höherer Mathematik, insbesondere
+ der Differential- und Integralrechnung.
+ Empfehlenswert für einen tieferen Einstieg halte ich besonders\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Brown:1996}
+
+\end_inset 
+
+ und wegen der permanenten Anschaulichkeit\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Needham:1998}
+
+\end_inset 
+
+, außerdem den Klassiker\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Whittaker:1927}
+
+\end_inset 
+
+ sowie eine kurze anwendungsbezogene Einführung in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[Anhang~II]{Cauer:1954}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset LatexCommand \tableofcontents{}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Include \include{analysis.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \BibTeX[geralpha]{adsp,math}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \printindex{}
+
+\end_inset 
+
+
+\the_end
