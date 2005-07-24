@@ -1,11 +1,11 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass article
+\textclass scrartcl
 \begin_preamble
 \input{text-inc.tex}
+\input{pdf-inc.tex}
 \input{math-inc.tex}
 \input{electr-inc.tex}
-\input{pdf-inc.tex}
 
 \usepackage{html}
 \end_preamble
@@ -13,7 +13,7 @@
 \language german
 \inputencoding latin1
 \fontscheme times
-\graphics default
+\graphics dvips
 \float_placement !hbtp
 \paperfontsize default
 \spacing onehalf 
@@ -32,7 +32,7 @@
 \quotes_times 2
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle headings
 
 \layout Standard
 
@@ -42,7 +42,91 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis_article.lyx,v 1.1 2005-06-14 18:49:37 ralf Exp $
+$Id: analysis_article.lyx,v 1.2 2005-07-24 09:01:43 ralf Exp $
+\layout Itemize
+
+Wrapper file for 
+\emph on 
+analysis.lyx
+\layout Itemize
+
+Compatible with article document classes 
+\emph on 
+latex
+\emph default 
+, 
+\emph on 
+ams
+\emph default 
+,
+\emph on 
+ koma-script
+\emph default 
+, 
+\emph on 
+svjour
+\emph default 
+ (
+\emph on 
+Springer
+\emph default 
+)
+\layout Itemize
+
+Needs the following packages: 
+\emph on 
+pifont
+\emph default 
+, 
+\emph on 
+txfonts
+\emph default 
+, 
+\emph on 
+trfsigns
+\emph default 
+, 
+\emph on 
+amsopn
+\emph default 
+, 
+\emph on 
+amsfonts
+\emph default 
+, 
+\emph on 
+algorithm
+\emph default 
+, 
+\emph on 
+algorithmic
+\emph default 
+, 
+\emph on 
+newclude
+\emph default 
+, 
+\emph on 
+html
+\emph default 
+, 
+\emph on 
+ifthen
+\emph default 
+, 
+\emph on 
+babel
+\emph default 
+, 
+\emph on 
+bibgerm
+\emph default 
+, 
+\emph on 
+varioref
+\emph default 
+, \SpecialChar \ldots{}
+
 \end_inset 
 
 
@@ -52,6 +136,55 @@ Version: $Id: analysis_article.lyx,v 1.1 2005-06-14 18:49:37 ralf Exp $
 \begin_inset ERT
 status Collapsed
 
+\layout Standard
+%% PDF Setup (see file "preferences" in 
+\backslash 
+LyX Dir)
+\newline 
+%%
+\newline 
+%% dvips -Z -G0 -Ppdf
+\newline 
+%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.3 -dSubsetFonts=true -dEmbedAllFonts=true
+\newline 
+
+\newline 
+
+\backslash 
+begin{latexonly}
+\newline 
+    
+\backslash 
+hypersetup{
+\newline 
+        pdfauthor = {
+\backslash 
+textcopyright ~ Ralf Hoppe},
+\newline 
+        pdftitle = {Funktionentheorie - Analytische Funktionen},
+\newline 
+        pdfsubject = {Funktionentheorie},
+\newline 
+        pdfkeywords = {Funktionentheorie}
+\newline 
+    }
+\newline 
+
+\backslash 
+end{latexonly}
+\layout Standard
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+%% HTML Setup
 \layout Standard
 
 \backslash 
@@ -75,7 +208,7 @@ htmlmeta{<META NAME="description" LANG ="de" CONTENT="Grundlagen der Funktionent
 \newline 
     
 \backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville">}
+htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen">}
 \newline 
     
 \backslash 
@@ -87,9 +220,9 @@ germanTeX
 \backslash 
 renewcommand{
 \backslash 
-qedsymbol}{
+vref}[1]{
 \backslash 
-Box}
+ref{#1}} %% no support for varioref in LaTeX2HTML
 \newline 
 
 \newline 
@@ -135,7 +268,7 @@ copyright
 \SpecialChar ~
 Ralf Hoppe
 \layout Abstract
-
+\pagebreak_bottom 
 Das vorliegende Papier richtet sich an Studenten und Ingenieure der Elektrotechn
 ik, Signalverarbeitung sowie Nachrichtentechnik, die ihr Wissen in Bezug
  auf die Grundlagen der Funktionentheorie (komplexe Analysis) auffrischen
@@ -160,7 +293,7 @@ ik, Signalverarbeitung sowie Nachrichtentechnik, die ihr Wissen in Bezug
 
 \end_inset 
 
- sowie eine kurze anwendungsbezogene Einführung in\SpecialChar ~
+ sowie die kurze anwendungsbezogene Einführung in\SpecialChar ~
 
 \begin_inset LatexCommand \cite[Anhang~II]{Cauer:1954}
 
