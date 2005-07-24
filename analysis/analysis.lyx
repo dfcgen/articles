@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.7 2005-07-16 17:22:42 ralf Exp $
+Version: $Id: analysis.lyx,v 1.8 2005-07-24 09:00:46 ralf Exp $
 \end_inset 
 
 
@@ -987,11 +987,13 @@ Riemann
 \begin_inset Quotes eld
 \end_inset 
 
-Fortschrittsrichtung
+Fortschritts\SpecialChar \-
+richtung
 \begin_inset Quotes erd
 \end_inset 
 
- oder -Reihenfolge vollkommen unerheblich ist.
+ oder -Reihen\SpecialChar \-
+folge vollkommen unerheblich ist.
  Exakt kann die Wegunabhängigkeit 
 \begin_inset ERT
 status Collapsed
@@ -1363,7 +1365,7 @@ collapsed true
 \layout Standard
 
 Genau in dieser Umgebung von 
-\begin_inset Formula $z$
+\begin_inset Formula $z_{0}$
 \end_inset 
 
 , 
@@ -1823,7 +1825,12 @@ Bei der Interpretation von Formel\SpecialChar ~
 \begin_inset Formula $f(z_{0})$
 \end_inset 
 
- eindeutig durch die Randwerte auf der Kurve 
+ eindeutig durch die Randwerte
+\begin_inset LatexCommand \index{Randwerte}
+
+\end_inset 
+
+ auf der Kurve 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -4451,30 +4458,7 @@ Sollte der Exponentialfaktor
 \begin_inset Formula $\lim_{r\rightarrow\infty}z\, f(z)=0$
 \end_inset 
 
- fordern
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Differentiation von Zähler und Nenner in Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_jordan_inequ2}
-
-\end_inset 
-
- (nach der Regel von 
-\noun on 
-Bernoulli-l'Hospital
-\noun default 
-) zur Grenzwertbestimmung 
-\begin_inset Formula $\lim_{\alpha\rightarrow0}\ldots$
-\end_inset 
-
- ergibt dann Null.
-\end_inset 
-
-.
+ fordern.
  
 \noun on 
 Jordan
@@ -4646,7 +4630,9 @@ status Inlined
 \backslash 
 texorpdfstring{$
 \backslash 
-alpha=0$}{Alpha gleich 0}
+alpha=0$}{
+\backslash 
+latex{Alpha gleich 0}}
 \end_inset 
 
 
@@ -4789,6 +4775,11 @@ Das Integral
 , die oberhalb der reellen Achse liegen) berechnet werden.
 \layout Paragraph
 
+
+\begin_inset LatexCommand \label{par:analysis_improper_convcond}
+
+\end_inset 
+
 Voraussetzungen für die Anwendbarkeit
 \layout Standard
 
@@ -4805,7 +4796,8 @@ Notwendige Bedingungen für die Anwendbarkeit von Formel\SpecialChar ~
 \begin_inset Formula $f(x)$
 \end_inset 
 
- ist auf dem Integrationsweg entlang der reellen Achse analytisch;
+ ist auf dem Integrationsweg entlang der reellen Achse analytisch (und beschränk
+t);
 \layout Itemize
 
 nach 
@@ -4864,7 +4856,12 @@ ie
 
 \layout Standard
 
-der letzte Punkt der notwendigen Voraussetzungen grundsätzlich erfüllt\SpecialChar ~
+der letzte Punkt der notwendigen Bedingungen (gewöhnliche Konvergenz
+\begin_inset LatexCommand \index{Konvergenz!gewöhnliche}
+
+\end_inset 
+
+) grundsätzlich erfüllt\SpecialChar ~
 
 \begin_inset LatexCommand \cite[\S$4 \sdot 43$]{Whittaker:1927}
 
@@ -4873,34 +4870,173 @@ der letzte Punkt der notwendigen Voraussetzungen grundsätzlich erfüllt\SpecialCh
 .
 \layout Standard
 
-Speziell für die Klasse der (beidseitig) exponentiell beschränkten Funktionen
-\begin_inset LatexCommand \index{Funktion!exponentiell beschränkte}
-
-\end_inset 
-
- ist die absolute Konvergenz dadurch gegeben, daß sie für 
-\begin_inset Formula $|x|\rightarrow\infty$
-\end_inset 
-
- hinreichend schnell abfallen, 
+Die Eigenschaft der absoluten Konvergenz kann für ganz bestimmte Klassen
+ von Funktionen generell nachgewiesen werden, wovon eine 
 \begin_inset ERT
 status Collapsed
 
 \layout Standard
 
 \backslash 
-ie
+eg
+\end_inset 
+
+ die mit der 
+\begin_inset Quotes eld
+\end_inset 
+
+Abkling
+\begin_inset Quotes erd
+\end_inset 
+
+-Charak\SpecialChar \-
+te\SpecialChar \-
+ristik
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{3}
+\left|z^{\sigma}f(z)\right| & \leq M<\infty & \textrm{\resp} &  & |f(x)| & \leq M|x|^{-\sigma}\qquad(\sigma>1)\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[20.2]{Gellert:1979}
+
+\end_inset 
+
+.
+ Wir betrachten also die Beschränkheit von 
+\begin_inset Formula $|x^{\sigma}f(x)|$
+\end_inset 
+
+ unter der Maßgabe, daß sich eine Zahl 
+\begin_inset Formula $\sigma(x)>1$
+\end_inset 
+
+ (wie gefordert) für jeden Wert 
+\begin_inset Formula $x>\alpha$
+\end_inset 
+
+ finden läßt.
+ Ist dem so, dann gilt im offenen Intervall 
+\begin_inset Formula $\alpha>0$
+\end_inset 
+
+ die Relation
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{\alpha}^{\infty}|f(x)|\tic x\leq\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x\]
+
+\end_inset 
+
+
+\layout Standard
+
+und mit
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x=M\lim_{r\rightarrow\infty}\left.\frac{1}{1-\sigma}x^{1-\sigma}\right|_{\alpha}^{r}=\frac{M}{1-\sigma}\lim_{r\rightarrow\infty}\left(r^{1-\sigma}-\alpha^{1-\sigma}\right)=\frac{M}{\sigma-1}\alpha^{1-\sigma}\]
+
+\end_inset 
+
+
+\layout Standard
+
+kann die absolute Konvergenz entlang des positiven Teils der reellen Achse
+ (
+\begin_inset Formula $x>0$
+\end_inset 
+
+) nachgeweisen werden
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Der Nachweis läßt sich für das Integral 
+\begin_inset Formula $\int_{-\infty}^{-0}|f(x)|\tic x$
+\end_inset 
+
+ gleichermaßen führen.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{+0}^{\infty}|f(x)|\tic x\leq\frac{M}{\sigma-1}\lim_{\alpha\rightarrow+0}\alpha^{1-\sigma}<\infty\]
+
+\end_inset 
+
+
+\layout Standard
+
+Gleichzeitig wird die Bedingung von 
+\noun on 
+Jordan
+\noun default 
+'s Lemma erfüllt, denn:
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{z\rightarrow\infty}\left|z\, f(z)\right|=\lim_{z\rightarrow\infty}\left|z^{1-\sigma}f(z)\, z^{\sigma}\right|\leq M\lim_{z\rightarrow\infty}|z|^{1-\sigma}=0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+In ähnlicher Art und Weise ist bei exponentiell abfallenden Funktionen
+\begin_inset LatexCommand \index{Funktion!exponentiell abfallende}
+
+\end_inset 
+
+ die absolute Konvergenz dadurch gegeben, daß sie (bei Existenz einer Zahl
+ 
+\begin_inset Formula $\sigma(x)>1$
+\end_inset 
+
+) für 
+\begin_inset Formula $|x|\rightarrow\infty$
 \end_inset 
 
  die Ungleichung 
-\begin_inset Formula $|\e^{\sigma|x|}f(x)|<\epsilon<\infty$
+\begin_inset Formula $|\e^{\sigma|x|}f(x)|\leq M<\infty$
 \end_inset 
 
- für 
-\begin_inset Formula $\sigma>1$
+ erfüllen
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Der Abfall der Funktionswerte erfolgt hier wegen 
+\begin_inset Formula $\e^{\sigma x}>x^{\sigma}=\e^{\sigma\ln x}$
 \end_inset 
 
- erfüllen.
+ noch schneller als bei Funktionen, die durch 
+\begin_inset Formula $|x^{\sigma}f(x)|\leq M$
+\end_inset 
+
+ beschränkt sind (wenn 
+\begin_inset Formula $x\rightarrow\infty$
+\end_inset 
+
+ strebt).
+\end_inset 
+
+.
  Denn setzt man diese Relation in Ungleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_improper_int_convabs}
@@ -4912,7 +5048,7 @@ ie
 
 
 \begin_inset Formula \[
-\int_{-\infty}^{\infty}|f(x)|\tic x\leq\int_{-\infty}^{\infty}\epsilon\,\e^{-\sigma|x|}\tic x\]
+\int_{-\infty}^{\infty}|f(x)|\tic x\leq\int_{-\infty}^{\infty}M\,\e^{-\sigma|x|}\tic x\]
 
 \end_inset 
 
@@ -4924,7 +5060,7 @@ und löst das rechtsseitige Integral auf,
 
 
 \begin_inset Formula \[
-\int_{-\infty}^{\infty}\epsilon\,\e^{-\sigma|x|}\tic x=2\epsilon\int_{0}^{\infty}\e^{-\sigma x}\tic x=-\frac{\epsilon}{\sigma}\lim_{T\rightarrow\infty}\left.\e^{-\sigma x}\right|_{0}^{T}=\frac{\epsilon}{\sigma}\left(1-\lim_{T\rightarrow\infty}\e^{-\sigma T}\right)=\frac{\epsilon}{\sigma}\]
+\int_{-\infty}^{\infty}M\,\e^{-\sigma|x|}\tic x=2M\int_{0}^{\infty}\e^{-\sigma x}\tic x=-\frac{M}{\sigma}\lim_{T\rightarrow\infty}\left.\e^{-\sigma x}\right|_{0}^{T}=\frac{M}{\sigma}\left(1-\lim_{T\rightarrow\infty}\e^{-\sigma T}\right)=\frac{M}{\sigma}\]
 
 \end_inset 
 
@@ -4941,7 +5077,7 @@ so wird die Beschränktheit
 
 
 \begin_inset Formula \[
-\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\frac{\epsilon}{\sigma}<\infty\]
+\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\frac{M}{\sigma}<\infty\]
 
 \end_inset 
 
@@ -4997,6 +5133,20 @@ Die Bedingung
 \layout Subsubsection
 
 Halb-analytische Funktionen
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Funktion!halb-analytische}
+
+\end_inset 
+
+
+\layout Paragraph
+
+Oben halb-analytische Funktionen
+\layout Standard
+
+Für eine in der oberen komplexen Halbebene
 \begin_inset Foot
 collapsed true
 
@@ -5017,29 +5167,12 @@ einer
  uneingeschränkt analytisch sind.
 \end_inset 
 
-
-\layout Standard
-
-
-\begin_inset LatexCommand \index{Schwarz@\noun{Schwarz}!Integralformel von}
-
-\end_inset 
-
-
-\layout Paragraph
-
-Oben halb-analytische Funktionen
-\layout Standard
-
-Für eine in der oberen komplexen Halbebene analytische Funktion 
+ analytische Funktion 
 \begin_inset Formula $f(z)$
 \end_inset 
 
- kann man unter der Voraussetzung 
-\begin_inset Formula $|z^{a}f(z)|<M$
-\end_inset 
-
- jeden Funktionswert im Gebiet 
+ kann man unter bestimmten Voraussetzungen jeden Funktionswert im Gebiet
+ 
 \begin_inset Formula $\imop(z)>0$
 \end_inset 
 
@@ -5300,7 +5433,19 @@ cf
 
 \end_inset 
 
-) ergibt sich daraus für den Funktionswert an der Stelle 
+) ergibt sich daraus
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{-\ji\infty}^{\ji\infty}g(z)\tic z=2\pi\ji\,\res{z_{0}}{g(z)}=2\pi\ji f(z_{0})\]
+
+\end_inset 
+
+
+\layout Standard
+
+und somit für den Funktionswert an der Stelle 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -5308,9 +5453,8 @@ cf
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-\int_{-\ji\infty}^{\ji\infty}g(z)\tic z & =2\pi\ji\,\res{z_{0}}{g(z)}=2\pi\ji f(z_{0})\\
-f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\msp.\end{align*}
+\begin_inset Formula \begin{equation}
+\boxed{f(z_{0})=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z}\qquad(\reop(z_{0})<0)\msp.\end{equation}
 
 \end_inset 
 
@@ -5419,7 +5563,7 @@ Nehmen wir jetzt (im Gegensatz zu den bisherigen Ausführungen) an, daß
 
  in der unteren Halbebene liegt
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -5461,11 +5605,7 @@ Cauchy
 \begin_inset Formula $\oint_{C}f(z)/(z-z_{0})\tic z$
 \end_inset 
 
- verschwinden und 
-\begin_inset Formula $f(z_{0})=0$
-\end_inset 
-
- gelten.
+ verschwinden.
  Diesem Umstand muß auch die äquivalente Darstellung in Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_halfplane_pos_detail}
@@ -5599,7 +5739,7 @@ Poisson
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x}\qquad(y_{0}>0)\msp.\end{equation}
+\boxed{f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x}\qquad(y_{0}>0)\msp.\label{eq:analysis_halfplane_boundary1}\end{equation}
 
 \end_inset 
 
@@ -5617,7 +5757,7 @@ Und wieder für den anderen Typ:
 
 
 \begin_inset Formula \[
-f(z_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y\]
+f(z_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y,\qquad(x_{0}>0)\]
 
 \end_inset 
 
@@ -5692,7 +5832,7 @@ können aber mit
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x}\qquad(\imop(z_{0})>0)\label{eq:analysis_halfplane_boundary_values}\end{equation}
+\boxed{f(z_{0})=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x}\qquad(\imop(z_{0})>0)\label{eq:analysis_halfplane_boundary2}\end{equation}
 
 \end_inset 
 
@@ -5725,7 +5865,7 @@ resp
 
  her.
  Interessant ist an ihr außerdem (zu erkennen), daß für den Grenzfall 
-\begin_inset Formula $y_{0}\rightarrow0$
+\begin_inset Formula $y_{0}\rightarrow+0$
 \end_inset 
 
  (reelle Achse) Real- und Imaginärteil über die 
@@ -5739,12 +5879,12 @@ Hilbert
 
  verknüpft sind
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
 Wobei die Definition 
-\begin_inset Formula $\mathcal{H}\{ f(x)\}=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\begin_inset Formula $\mathcal{H}\{ f\}=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
  für die 
@@ -5770,8 +5910,8 @@ Hilbert
 
 
 \begin_inset Formula \begin{align*}
-\lim_{y_{0}\rightarrow0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x=u(x_{0},0)=\mathcal{H}\{ v(x_{0},0)\}\\
-\lim_{y_{0}\rightarrow0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x=\ji v(x_{0},0)=-\ji\mathcal{H}\{ u(x_{0},0)\}\end{align*}
+\lim_{y_{0}\rightarrow+0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x=u(x_{0},0)=\mathcal{H}\{ v(x_{0},0)\}\\
+\lim_{y_{0}\rightarrow+0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x=\ji v(x_{0},0)=-\ji\mathcal{H}\{ u(x_{0},0)\}\end{align*}
 
 \end_inset 
 
@@ -5785,7 +5925,7 @@ collapsed false
 \layout Standard
 
 Für linksseitig-holomorphe Funktionen gilt im Fall 
-\begin_inset Formula $x_{0}\rightarrow0$
+\begin_inset Formula $x_{0}\rightarrow-0$
 \end_inset 
 
  , 
@@ -5803,8 +5943,8 @@ ie
 
 
 \begin_inset Formula \begin{align*}
-\lim_{x_{0}\rightarrow0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-\ji y_{0}}\tic y=-\ji v(0,y_{0})=\ji\mathcal{H}\{ u(0,y)\}\\
-\lim_{x_{0}\rightarrow0}f(x_{0}+\ji y_{0}) & =-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{v(0,y)}{\ji y-\ji y_{0}}\tic y=u(0,y_{0})=\mathcal{H}\{ v(0,y)\}\end{align*}
+\lim_{x_{0}\rightarrow-0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-\ji y_{0}}\tic y=-\ji v(0,y_{0})=\ji\mathcal{H}\{ u(0,y)\}\\
+\lim_{x_{0}\rightarrow-0}f(x_{0}+\ji y_{0}) & =-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{v(0,y)}{\ji y-\ji y_{0}}\tic y=u(0,y_{0})=\mathcal{H}\{ v(0,y)\}\end{align*}
 
 \end_inset 
 
@@ -5816,7 +5956,7 @@ ie
 
 Auf der Grundlage von Formel\SpecialChar ~
 
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_values}
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary2}
 
 \end_inset 
 
@@ -5832,7 +5972,12 @@ Auf der Grundlage von Formel\SpecialChar ~
 \begin_inset Formula $\imop(z_{0})>0$
 \end_inset 
 
- aus den Randwerten nur einer Komponente (
+ aus den Randwerten
+\begin_inset LatexCommand \index{Randwerte}
+
+\end_inset 
+
+ nur einer Komponente (
 \begin_inset Formula $u$
 \end_inset 
 
@@ -5842,7 +5987,7 @@ Auf der Grundlage von Formel\SpecialChar ~
 
 ) zu bestimmen
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -6434,6 +6579,36 @@ cf
 \end_inset 
 
 ).
+\layout Standard
+
+Weitere Bedingungen für die Anwendbarkeit der Berechnungsformeln bestehen
+ darin, daß 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ auf dem jeweiligen Integrationsweg analytisch (sowie beschränkt) und das
+ zugeordnete Integral konvergent
+\begin_inset LatexCommand \index{Konvergenz}
+
+\end_inset 
+
+ sein muß (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ auch Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \vref{par:analysis_improper_convcond}
+
+\end_inset 
+
+).
 \layout Subsection
 
 Anwendung von 
@@ -6451,7 +6626,9 @@ texorpdfstring{$
 \backslash 
 alpha 
 \backslash 
-neq 0$}{Alpha ungleich 0}
+neq 0$}{
+\backslash 
+latex{Alpha ungleich 0}}
 \end_inset 
 
 
@@ -7210,7 +7387,9 @@ status Inlined
 \layout Standard
 
 \backslash 
-texorpdfstring{$(z-z_{0})^n$}{(z-z0)**n}
+texorpdfstring{$(z-z_{0})^n$}{
+\backslash 
+latex{(z-z0)**n}}
 \end_inset 
 
 
@@ -7455,8 +7634,8 @@ Für den Fall
 
 \begin_inset Formula \[
 \boxed{\oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
-0, & n\neq-1\\
-2\pi\ji, & n=-1\end{cases}}\msp.\]
+0 & \qquad(n\neq-1)\\
+2\pi\ji & \qquad(n=-1)\end{cases}}\msp.\]
 
 \end_inset 
 
