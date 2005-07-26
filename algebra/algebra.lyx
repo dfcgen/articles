@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass article
+\textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -4724,7 +4724,13 @@ x^{q} & \equiv & x\pmod{m(x)}\end{eqnarray}
 \layout Subsubsection
 
 Zerfällungskörper
-\layout Comment
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
 
 Siehe 
 \noun on 
@@ -4742,6 +4748,9 @@ Siehe
 \noun on 
 C.P.\SpecialChar ~
 Schnorr 
+\end_inset 
+
+
 \layout Standard
 
 
@@ -7374,7 +7383,7 @@ end{htmlonly}
 
 
 \layout Section
-\start_of_appendix 
+
 Notation
 \layout Standard
 
@@ -7389,18 +7398,32 @@ Notation
 \end_inset 
 
 
-\begin_inset ERT
-status Collapsed
+\layout Standard
 
+
+\begin_inset ERT
+status Open
+
+\layout Standard
+%% Description environment: modify label font and indentation
 \layout Standard
 
 \backslash 
-begin{multicols}{2}
+renewcommand{
+\backslash 
+descriptionlabel}[1]{
+\backslash 
+hspace{
+\backslash 
+labelsep}
+\backslash 
+makebox[1in][l]{
+\backslash 
+textsf{#1}}}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\forall$
@@ -7411,8 +7434,7 @@ begin{multicols}{2}
 \end_inset 
 
  (Allquantor)
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\left\langle a\right\rangle $
@@ -7423,8 +7445,7 @@ begin{multicols}{2}
 \end_inset 
 
  erzeugte Untergruppe
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\left|a\right|$
@@ -7435,8 +7456,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\{ a_{1},a_{2},a_{3},\ldots\}$
@@ -7447,16 +7467,14 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{C}$
 \end_inset 
 
  Komplexe Zahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\deg{\left[h(x)\right]}$
@@ -7467,8 +7485,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\dim(V)$
@@ -7479,8 +7496,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $(G,\diamond)$
@@ -7491,8 +7507,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\left|G\right|$
@@ -7503,8 +7518,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula ${\# G}$
@@ -7515,8 +7529,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\GF(q)$
@@ -7527,8 +7540,7 @@ begin{multicols}{2}
 \end_inset 
 
  Elementen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\left|G:H\right|$
@@ -7543,14 +7555,13 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula ${[M:K]}$
 \end_inset 
 
- Grad der Körpererweiterung von 
+ Grad der Körpererweiterung 
 \begin_inset Formula $M$
 \end_inset 
 
@@ -7559,8 +7570,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{F}^{*}$
@@ -7571,8 +7581,7 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{F}_{q}$
@@ -7583,24 +7592,21 @@ begin{multicols}{2}
 \end_inset 
 
  Elementen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $K$
 \end_inset 
 
  Körper
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{N}$
 \end_inset 
 
  Natürliche Zahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\ord(G)$
@@ -7611,32 +7617,28 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $p$
 \end_inset 
 
  Primzahl
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{P}$
 \end_inset 
 
  Primzahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Q}$
 \end_inset 
 
  Rationale Zahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\rcls{r}{n}$
@@ -7647,24 +7649,21 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{R}$
 \end_inset 
 
  Reelle Zahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $R(+,\cdot)$
 \end_inset 
 
  Ring
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $R^{*}$
@@ -7675,16 +7674,14 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset 
 
  Restklassenring
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $R{[x]}$
@@ -7695,16 +7692,14 @@ begin{multicols}{2}
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Z}$
 \end_inset 
 
  Ganze Zahlen
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Z}_{m}$
@@ -7746,8 +7741,7 @@ ie
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Z}_{p}$
@@ -7762,8 +7756,7 @@ ie
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Z}_{p}^{*}$
@@ -7774,8 +7767,7 @@ ie
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbb{Z}/m\mathbb{Z}$
@@ -7786,49 +7778,32 @@ ie
 \end_inset 
 
 
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $V$
 \end_inset 
 
  Vektorraum
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbf{v}$
 \end_inset 
 
  Vektor
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\mathbf{v}^{T}$
 \end_inset 
 
  Transponierter Vektor
-\layout List
-\labelwidthstring 00.00.0000
+\layout Description
 
 
 \begin_inset Formula $\diamond$
 \end_inset 
 
  Operation
-\layout Standard
-
-
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-end{multicols}
-\end_inset 
-
-
 \the_end
