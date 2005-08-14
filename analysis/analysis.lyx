@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.8 2005-07-24 09:00:46 ralf Exp $
+Version: $Id: analysis.lyx,v 1.9 2005-08-14 15:39:02 ralf Exp $
 \end_inset 
 
 
@@ -480,7 +480,7 @@ ie
 Laplace
 \noun default 
 -Gleichungen
-\begin_inset LatexCommand \index{Laplace-Gleichung@\noun{Laplace}-Gleichung}
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Gleichung}
 
 \end_inset 
 
@@ -1094,11 +1094,11 @@ Die letzten Ausdrücke stellen nun aber genau die Differentialformen in Formel\Sp
 \layout Standard
 
 
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula \begin{xxalignat}{2}
 U(x,y) & =\int_{C}\left[u(x,y)\psi'(t)-v(x,y)\phi'(t)\right]\tic t & V(x,y) & =\int_{C}\left[u(x,y)\psi'(t)+v(x,y)\phi'(t)\right]\tic t\\
  & =\int_{t_{1}}^{t_{2}}\hat{U}'(t)\tic t &  & =\int_{t_{1}}^{t_{2}}\hat{V}'(t)\tic t\\
  & =\hat{U}(t_{2})-\hat{U}(t_{1}) &  & =\hat{V}(t_{2})-\hat{V}(t_{1})\\
- & =U(x_{2},y_{2})-U(x_{1},y_{1}) &  & =V(x_{2},y_{2})-V(x_{1},y_{1})\end{xalignat*}
+ & =U(x_{2},y_{2})-U(x_{1},y_{1}) &  & =V(x_{2},y_{2})-V(x_{1},y_{1})\end{xxalignat}
 
 \end_inset 
 
@@ -4398,7 +4398,7 @@ Aus diesem Dilemma kann man sich jedoch durch Drehung des Integrationsweges
 \begin_inset Formula $\alpha>0$
 \end_inset 
 
- zu übernehmen.
+ zu übernehmen
 \begin_inset Foot
 collapsed true
 
@@ -4430,7 +4430,7 @@ ie
  ist in seiner realen Ausprägung einzusetzen.
 \end_inset 
 
-
+.
 \layout Standard
 
 
@@ -4572,7 +4572,7 @@ cf
  wieder hergestellt, womit der Beweis auf dem gewohnten Weg fortgesetzt
  werden kann
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -4706,7 +4706,7 @@ Integrationsweg(e) für reelles
 \begin_inset Formula $\alpha$
 \end_inset 
 
- (uneigentliche reelle Integrale)
+
 \end_inset 
 
 
@@ -4956,7 +4956,7 @@ kann die absolute Konvergenz entlang des positiven Teils der reellen Achse
 \begin_inset Formula $x>0$
 \end_inset 
 
-) nachgeweisen werden
+) nachgewiesen werden
 \begin_inset Foot
 collapsed false
 
@@ -5002,12 +5002,11 @@ In ähnlicher Art und Weise ist bei exponentiell abfallenden Funktionen
 
 \end_inset 
 
- die absolute Konvergenz dadurch gegeben, daß sie (bei Existenz einer Zahl
- 
+ die absolute Konvergenz dadurch gegeben, daß sie (wenn eine Zahl 
 \begin_inset Formula $\sigma(x)>1$
 \end_inset 
 
-) für 
+ existiert) für 
 \begin_inset Formula $|x|\rightarrow\infty$
 \end_inset 
 
@@ -5191,8 +5190,8 @@ Cauchy
 \layout Standard
 
 
-\begin_inset Formula \[
-g(z)=\frac{f(z)}{z-z_{0}}\]
+\begin_inset Formula \begin{equation}
+g(z)=\frac{f(z)}{z-z_{0}}\label{eq:analysis_halfplane_singular_function}\end{equation}
 
 \end_inset 
 
@@ -5491,13 +5490,32 @@ Gehen wir jetzt nocheinmal zum Fall
 
 \end_inset 
 
- mit Blick auf Real- und Imaginärteil.
+ mit Blick auf Real- und Imaginärteil
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Weitere Varianten bezüglich der Halbebenen, in denen 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ analytisch ist, sind in Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \vref{tab:analysis_inf_integrals_poisson}
+
+\end_inset 
+
+ zusammengefaßt.
+\end_inset 
+
+.
  In einem ersten Schritt wird dazu 
 \begin_inset Formula $f(z)=u(x,y)+\ji v(x,y)$
 \end_inset 
 
  einfach eingesetzt und danach der Bruch im Integranden mit 
-\begin_inset Formula $x-\conjgt{z_{0}}$
+\begin_inset Formula $x-\conjgt{z}_{0}$
 \end_inset 
 
  multipliziert.
@@ -5506,7 +5524,7 @@ Gehen wir jetzt nocheinmal zum Fall
 
 \begin_inset Formula \begin{align}
 f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)+\ji v(x,0)}{x-z_{0}}\tic x\nonumber \\
- & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-\conjgt{z_{0}})\,\left[u(x,0)+\ji v(x,0)\right]}{|x-z_{0}|^{2}}\tic x\nonumber \\
+ & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-\conjgt{z}_{0})\,\left[u(x,0)+\ji v(x,0)\right]}{|x-z_{0}|^{2}}\tic x\nonumber \\
  & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)-y_{0}\, v(x,0)+\ji\left[(x-x_{0})\, v(x,0)+y_{0}\, u(x,0)\right]}{|x-z_{0}|^{2}}\tic x\label{eq:analysis_halfplane_pos_detail}\end{align}
 
 \end_inset 
@@ -5567,8 +5585,17 @@ collapsed true
 
 \layout Standard
 
-Betrachtet man alle Schritte bis hierher, so ist diese Annahme durchaus
- legitim.
+Der Schritt eine Funktion 
+\begin_inset Formula $g(z)$
+\end_inset 
+
+ entsprechend Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_singular_function}
+
+\end_inset 
+
+ zu definieren ist durchaus statthaft.
 \end_inset 
 
 .
@@ -5602,7 +5629,7 @@ cf
 Cauchy
 \noun default 
  das Integral 
-\begin_inset Formula $\oint_{C}f(z)/(z-z_{0})\tic z$
+\begin_inset Formula $\oint_{C}g(z)\tic z$
 \end_inset 
 
  verschwinden.
@@ -5632,8 +5659,8 @@ ie
 
 
 \begin_inset Formula \begin{eqnarray*}
-\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x & = & -\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{|x-z_{0}|^{2}}\tic x\\
-\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x & = & \int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{|x-z_{0}|^{2}}\tic x\msp.\end{eqnarray*}
+\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x & = & -y_{0}\int_{-\infty}^{\infty}\frac{v(x,0)}{|x-z_{0}|^{2}}\tic x\\
+\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x & = & y_{0}\int_{-\infty}^{\infty}\frac{u(x,0)}{|x-z_{0}|^{2}}\tic x\msp.\end{eqnarray*}
 
 \end_inset 
 
@@ -5706,29 +5733,7 @@ resp
 \begin_inset Formula $f(x)=u(x,0)+\ji v(x,0)$
 \end_inset 
 
- gesetzt wird
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Die für den Realteil gültige Beziehung 
-\begin_inset Formula $u(x_{0},y_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x$
-\end_inset 
-
- wird auch 
-\noun on 
-Poisson
-\noun default 
-'s Formel für die Halbebene
-\begin_inset LatexCommand \index{Poisson@\noun{Poisson}!Formel für die Halbebene}
-
-\end_inset 
-
- genannt.
-\end_inset 
-
-\SpecialChar ~
+ gesetzt wird\SpecialChar ~
 
 \begin_inset LatexCommand \cite[119]{Brown:1996}
 
@@ -5739,7 +5744,7 @@ Poisson
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x}\qquad(y_{0}>0)\msp.\label{eq:analysis_halfplane_boundary1}\end{equation}
+\boxed{f(z_{0})=\frac{y_{0}}{\pi}\int_{-\infty}^{\infty}\frac{f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x}\qquad(y_{0}>0)\msp.\label{eq:analysis_halfplane_boundary1}\end{equation}
 
 \end_inset 
 
@@ -5757,7 +5762,7 @@ Und wieder für den anderen Typ:
 
 
 \begin_inset Formula \[
-f(z_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y,\qquad(x_{0}>0)\]
+f(z_{0})=-\frac{x_{0}}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y,\qquad(x_{0}>0)\]
 
 \end_inset 
 
@@ -5767,7 +5772,13 @@ f(z_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}f(\ji y)}{|\ji y-z_{0}|
 
 \layout Standard
 
-Die anderen beiden sind durch Reduktion auf 
+Die anderen beiden sind aus Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_pos_detail}
+
+\end_inset 
+
+ durch Reduktion auf 
 \begin_inset Formula $u(x,0)$
 \end_inset 
 
@@ -5789,8 +5800,10 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \[
-f(z_{0})=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0}+\ji y_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0}+\ji y_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x\]
+\begin_inset Formula \begin{align}
+f(z_{0}) & =\frac{y_{0}}{\pi}\int_{-\infty}^{\infty}\frac{u(x,0)}{|x-z_{0}|^{2}}\tic x-\ji\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep1}\\
+ & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x+\ji\frac{y_{0}}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{|x-z_{0}|^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep2}\\
+ & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0}+\ji y_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0}+\ji y_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x\nonumber \end{align}
 
 \end_inset 
 
@@ -5805,7 +5818,7 @@ collapsed false
 
 was man auch für linksseitig-holomorphe Funktionen tun kann, wenn außerdem
  
-\begin_inset Formula $|\ji y-z_{0}|^{2}=(\ji y-z_{0})\conjgt{(\ji y-z_{0})}=\left[x_{0}-\ji(y-y_{0})\right]\left[x_{0}+\ji(y-y_{0})\right]=\left[\ji y+\conjgt{z_{0}}\right]\left[x_{0}-\ji(y-y_{0})\right]$
+\begin_inset Formula $|\ji y-z_{0}|^{2}=(\ji y-z_{0})\conjgt{(\ji y-z_{0})}=\left[x_{0}-\ji(y-y_{0})\right]\left[x_{0}+\ji(y-y_{0})\right]=\left[\ji y+\conjgt{z}_{0}\right]\left[x_{0}-\ji(y-y_{0})\right]$
 \end_inset 
 
  Berücksichtigung findet
@@ -5824,7 +5837,7 @@ f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-z_{0}}\tic y=-\
 \layout Standard
 
 können aber mit 
-\begin_inset Formula $|x-z_{0}|^{2}=(x-z_{0})(x-\conjgt{z_{0}})$
+\begin_inset Formula $|x-z_{0}|^{2}=(x-z_{0})(x-\conjgt{z}_{0})$
 \end_inset 
 
  in die einfache Formel
@@ -5864,11 +5877,130 @@ resp
 \end_inset 
 
  her.
- Interessant ist an ihr außerdem (zu erkennen), daß für den Grenzfall 
-\begin_inset Formula $y_{0}\rightarrow+0$
+ Formel\SpecialChar ~
+
+\noun on 
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary2}
+
 \end_inset 
 
- (reelle Achse) Real- und Imaginärteil über die 
+
+\noun default 
+ ermöglicht außerdem die einfache Ableitung von 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ an jeder Stelle 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ (mit 
+\begin_inset Formula $\imop(z_{0})>0$
+\end_inset 
+
+) aus den Randwerten
+\begin_inset LatexCommand \index{Randwerte}
+
+\end_inset 
+
+ nur einer Komponente
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Bei Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_derivative}
+
+\end_inset 
+
+ handelt es sich offensichtlich um einen Spezialfall von Ableitungsformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_derivative_first_integral}
+
+\end_inset 
+
+ für halb-analytische Funktionen (auf einem Integrationsweg entlang der
+ reellen Achse).
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\tdiff{f(z_{0})}{x_{0}}=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\pdiff{}{x_{0}}\,\left[\frac{u(x,0)}{x-z_{0}}\right]\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{(x-z_{0})^{2}}\tic x\label{eq:analysis_halfplane_derivative}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Betrachtet man die Zwischenformeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_sep1}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_sep2}
+
+\end_inset 
+
+ nocheinmal, so lassen sich noch die Beziehungen der separierten Real- 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Imaginärteile zu denselbigen Randwerten ermitteln
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die für den Realteil gültige Beziehung 
+\begin_inset Formula $u(x_{0},y_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x$
+\end_inset 
+
+ wird auch 
+\noun on 
+Poisson
+\noun default 
+'s Formel für die Halbebene
+\begin_inset LatexCommand \index{Poisson@\noun{Poisson}!Formel für die Halbebene}
+
+\end_inset 
+
+ genannt.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{alignat*}{2}
+u(x_{0},y_{0}) & =\frac{y_{0}}{\pi}\int_{-\infty}^{\infty}\frac{u(x,0)}{|x-z_{0}|^{2}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x\\
+v(x_{0},y_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x &  & =\frac{y_{0}}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{|x-z_{0}|^{2}}\tic x\end{alignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Diese haben für den Grenzfall 
+\begin_inset Formula $y_{0}\rightarrow0$
+\end_inset 
+
+ besondere Bedeutung, denn sie zeigen, daß Real- und Imaginärteil (entlang
+ der reellen Achse) über die 
 \noun on 
 Hilbert
 \noun default 
@@ -5884,21 +6016,21 @@ collapsed false
 \layout Standard
 
 Wobei die Definition 
-\begin_inset Formula $\mathcal{H}\{ f\}=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\begin_inset Formula $\mathcal{H}\{ f(x)\}=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
- für die 
+ für eine 
 \noun on 
 Hilbert
 \noun default 
--Transformation angewandt wurde\SpecialChar ~
+-Transformation verwendet wurde\SpecialChar ~
 
-\begin_inset LatexCommand \cite[4.]{Fritzsche:1985}
+\begin_inset LatexCommand \cite[9-3]{Papoulis:2002}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[9-3]{Papoulis:2002}
+\begin_inset LatexCommand \cite[4.]{Fritzsche:1985}
 
 \end_inset 
 
@@ -5909,9 +6041,9 @@ Hilbert
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-\lim_{y_{0}\rightarrow+0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x=u(x_{0},0)=\mathcal{H}\{ v(x_{0},0)\}\\
-\lim_{y_{0}\rightarrow+0}f(x_{0}+\ji y_{0}) & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x=\ji v(x_{0},0)=-\ji\mathcal{H}\{ u(x_{0},0)\}\end{align*}
+\begin_inset Formula \begin{alignat*}{2}
+\lim_{y_{0}\rightarrow0}u(x_{0},y_{0})=u(x_{0},0) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x &  & =\mathcal{H}\{ v(x_{0},0)\}\\
+\lim_{y_{0}\rightarrow0}v(x_{0},y_{0})=v(x_{0},0) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x &  & =-\mathcal{H}\{ u(x_{0},0)\}\end{alignat*}
 
 \end_inset 
 
@@ -5952,84 +6084,6 @@ ie
 \end_inset 
 
 
-\layout Standard
-
-Auf der Grundlage von Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary2}
-
-\end_inset 
-
- sind auch die Ableitungen von 
-\begin_inset Formula $f(z)$
-\end_inset 
-
- an jeder Stelle 
-\begin_inset Formula $z_{0}$
-\end_inset 
-
- mit 
-\begin_inset Formula $\imop(z_{0})>0$
-\end_inset 
-
- aus den Randwerten
-\begin_inset LatexCommand \index{Randwerte}
-
-\end_inset 
-
- nur einer Komponente (
-\begin_inset Formula $u$
-\end_inset 
-
- oder 
-\begin_inset Formula $v$
-\end_inset 
-
-) zu bestimmen
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Bei Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_derivative}
-
-\end_inset 
-
- handelt es sich offensichtlich um einen Spezialfall von Ableitungsformel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_derivative_first_integral}
-
-\end_inset 
-
- für halb-analytische Funktionen (auf einem Integrationsweg entlang der
- reellen Achse).
-\end_inset 
-
-.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\tdiff{f(z_{0})}{x_{0}}=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\pdiff{}{x_{0}}\,\left[\frac{u(x,0)}{x-z_{0}}\right]\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{(x-z_{0})^{2}}\tic x\label{eq:analysis_halfplane_derivative}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Weitere Varianten bezüglich der Halbebenen, in denen 
-\begin_inset Formula $f(z)$
-\end_inset 
-
- analytisch ist, sind in Tabelle\SpecialChar ~
-
-\begin_inset LatexCommand \vref{tab:analysis_inf_integrals_poisson}
-
-\end_inset 
-
- zusammengefaßt.
 \layout Standard
 
 
@@ -6130,7 +6184,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{yf(\xi)}{|\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{y}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{|\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6234,7 +6288,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{yf(\xi)}{|\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{y}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{|\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6338,7 +6392,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{xf(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6442,7 +6496,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{xf(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6557,8 +6611,8 @@ Zu beachten ist dabei, daß
 \begin_inset Formula $|z|\rightarrow\infty\;$
 \end_inset 
 
- je nach Verlauf des halbkreisförmigen Integrationsweges mit einer weiteren
- Bedingung, den Real- oder Imaginärteil von 
+ je nach Verlauf des halbkreisförmigen Integrationsweges noch mit einer
+ anderen Bedingung, den Real- oder Imaginärteil von 
 \begin_inset Formula $z$
 \end_inset 
 
@@ -6581,7 +6635,7 @@ cf
 ).
 \layout Standard
 
-Weitere Bedingungen für die Anwendbarkeit der Berechnungsformeln bestehen
+Weitere Voraussetzungen für die Anwendbarkeit der Berechnungsformeln bestehen
  darin, daß 
 \begin_inset Formula $f(z)$
 \end_inset 
@@ -6609,6 +6663,246 @@ cf
 \end_inset 
 
 ).
+\layout Paragraph
+
+Beziehungen zur 
+\noun on 
+Fourier
+\noun default 
+-Analyse
+\layout Standard
+
+Im Zusammenhang mit den hier betrachteten Funktionen besteht eine interessante
+ Querverbindung zur 
+\noun on 
+Fourier
+\noun default 
+-Analyse
+\begin_inset LatexCommand \index{Fourier@\noun{Fourier}!-Analyse}
+
+\end_inset 
+
+.
+ Nehmen wir als Ausgangssituation zunächst an, daß die 
+\noun on 
+Laplace
+\noun default 
+-Transformierte
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
+
+\end_inset 
+
+ einer reellen Zeitfunktion in der rechten Halbebene analytisch ist und
+ benennen sie mit 
+\begin_inset Formula $F(z)=U(x,y)+\ji V(x,y)$
+\end_inset 
+
+.
+ Aus Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \ref{tab:analysis_inf_integrals_poisson}
+
+\end_inset 
+
+ entnimmt man die zugehörigen Beziehungen
+\layout Standard
+
+
+\begin_inset Formula \[
+F(z)=U(x,y)+\ji V(x,y)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{U(0,\xi)}{z-\ji\xi}\tic\xi=-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{V(0,\xi)}{z-\ji\xi}\tic\xi\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Trennt man nun durch Erweiterung mit dem konjugiert-komplexen Nenner 
+\begin_inset Formula $\conjgt{(z-\ji\xi)}=x-\ji(y-\xi)$
+\end_inset 
+
+ in Real- und Imaginärteil, so gilt:
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+F(z) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\left[x-\ji(y-\xi)\right]U(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi=-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\left[x-\ji(y-\xi)\right]V(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi\\
+ & =\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{U(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi-\ji\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-\xi)\, U(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi\\
+ & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-\xi)\, V(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi+\ji\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{V(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+und somit für die einzelnen Kompenenten:
+\layout Standard
+
+
+\begin_inset Formula \begin{alignat*}{2}
+U(x,y) & =\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{U(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-\xi)\, V(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi\\
+V(x,y) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-\xi)\, U(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi &  & =\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{V(0,\xi)}{|z-\ji\xi|^{2}}\tic\xi\msp.\end{alignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit dem Grenzübergang 
+\begin_inset Formula $x\rightarrow0$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ dem Übergang von der 
+\noun on 
+Laplace
+\noun default 
+-Transformierten
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
+
+\end_inset 
+
+ 
+\begin_inset Formula $F(z)$
+\end_inset 
+
+ zur 
+\noun on 
+Fourier
+\noun default 
+-Transformierten
+\begin_inset LatexCommand \index{Fourier@\noun{Fourier}!-Transformation}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Funktionswerte von 
+\begin_inset Formula $F(z)$
+\end_inset 
+
+ entlang der 
+\begin_inset Formula $y$
+\end_inset 
+
+-Achse.
+\end_inset 
+
+ 
+\begin_inset Formula $F(\ji y)$
+\end_inset 
+
+, wird wieder die Abhängigkeit zwischen Real- und Imaginärteil ersichtlich.
+\layout Standard
+
+
+\begin_inset Formula \begin{alignat*}{2}
+U(0,y) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{V(0,\xi)}{y-\xi}\tic\xi &  & =\mathcal{H}\{ V(0,y)\}\\
+V(0,y) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{U(0,\xi)}{y-\xi}\tic\xi &  & =-\mathcal{H}\{ U(0,y)\}\end{alignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Da sich die obigen Integrale auch als Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ darstellen lassen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Faltung im Frequenzbereich 
+\begin_inset Formula $(F_{1}*F_{2})(\omega)=\int_{-\infty}^{\infty}F_{1}(\Omega)F_{2}(\omega-\Omega)\tic\Omega\quad\rft\quad2\pi f_{1}(t)\, f_{2}(t)$
+\end_inset 
+
+
+\end_inset 
+
+, können nun relativ leicht die zum Real- und Imaginärteil gehörigen Zeitfunktio
+n 
+\begin_inset Formula $u(t)=\ft^{(-1)}\{ U(0,y)\}$
+\end_inset 
+
+ und 
+\begin_inset Formula $v(t)=\ft^{(-1)}\{ V(0,y)\}$
+\end_inset 
+
+ ermittelt werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+U(0,y) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{V(0,\xi)}{y-\xi}\tic\xi=\frac{1}{\pi y}*V(0,y) & \rft &  &  & \ji\sign(t)\, v(t)\\
+V(0,y) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{U(0,\xi)}{y-\xi}\tic\xi=-\frac{1}{\pi y}*U(0,y) & \rft &  &  & -\ji\sign(t)\, u(t)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Geht man wie vorausgesetzt davon aus, daß 
+\begin_inset Formula $f(t)$
+\end_inset 
+
+ reell ist, so können wir uns bei der Rücktransformation in den Zeitbereich
+ auf die reelle Komponente 
+\begin_inset Formula $u(t)$
+\end_inset 
+
+ konzentrieren.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+f(t) & =\ft^{(-1)}\{ U(0,y)+\ji V(0,y)\}=\ft^{(-1)}\{ U(0,y)\}+\ji\ft^{(-1)}\{ V(0,y)\}\\
+ & =\ft^{(-1)}\{ U(0,y)\}-\ji\ft^{(-1)}\{\mathcal{H}[U(0,y)]\}=u(t)+\sign(t)\, u(t)\\
+ & =u(t)\,[1+\sign(t)]=\usf(t)\, u(t)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Letzte Zeile enthält das wesentliche Resultat, nämlich daß wegen der Multiplikat
+ion mit dem Einheitssprung 
+\begin_inset Formula $\usf(t)$
+\end_inset 
+
+ die Zeitfunktion 
+\begin_inset Formula $f(t)$
+\end_inset 
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+ verschwindet, wenn 
+\begin_inset Formula $F(z)$
+\end_inset 
+
+ in der rechten Halbebene analytisch ist
+\begin_inset LatexCommand \index{Funktion!kausale}
+
+\end_inset 
+
+.
 \layout Subsection
 
 Anwendung von 
@@ -6724,7 +7018,7 @@ Was hier als Ergebnis präsentiert wurde, hat (insbesondere was Formel\SpecialCha
 Laplace
 \noun default 
 -Transformation
-\begin_inset LatexCommand \index{Laplace-Transformation@\noun{Laplace}-Transformation}
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
 
 \end_inset 
 
@@ -6844,12 +7138,16 @@ cf
 \end_inset 
 
  negativ-imaginär ist), wird das uneigentliche Integral mit Hilfe der Singularit
-äten in der linken Halbebene berechenbar.
+äten in der linken Halbebene berechenbar 
+\begin_inset Formula $\alpha=-\ji\beta$
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{-\ji\beta z}f(z)\tic z\]
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z\]
 
 \end_inset 
 
@@ -6858,7 +7156,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{z=-\ji\infty}^{\ji\infty}\e^{-\ji\beta z}f(z)\tic z=2\pi\ji\sum_{\reop\{ z_{n}\}<0}\res{z_{n}}{\left[\e^{-\ji\beta z}f(z)\right]}}\end{equation}
+\boxed{\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop\{ z_{n}\}<0}\res{z_{n}}{\left[\e^{\beta z}f(z)\right]}\qquad(\beta>0)}\end{equation}
 
 \end_inset 
 
