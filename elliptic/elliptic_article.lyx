@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsart
+\textclass scrartams
 \begin_preamble
 \input{text-inc.tex}
 \input{pdf-inc.tex}
@@ -32,7 +32,7 @@
 \quotes_times 2
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle headings
 
 \layout Standard
 
@@ -42,7 +42,18 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic_article.lyx,v 1.7 2005-06-02 16:04:54 ralf Exp $
+Version: $Id: elliptic_article.lyx,v 1.8 2005-08-28 16:21:48 ralf Exp $
+\layout Standard
+
+Compatible with article document classes 
+\emph on 
+ams 
+\emph default 
+and 
+\emph on 
+koma-script w/ amsmath, amsthm
+\emph default 
+ (my own LyX extension)
 \end_inset 
 
 
@@ -52,6 +63,55 @@ Version: $Id: elliptic_article.lyx,v 1.7 2005-06-02 16:04:54 ralf Exp $
 \begin_inset ERT
 status Collapsed
 
+\layout Standard
+%% PDF Setup (see file "preferences" in 
+\backslash 
+LyX Dir)
+\newline 
+%%
+\newline 
+%% dvips -Z -G0 -Ppdf
+\newline 
+%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.3 -dSubsetFonts=true -dEmbedAllFonts=true
+\newline 
+
+\newline 
+
+\backslash 
+begin{latexonly}
+\newline 
+    
+\backslash 
+hypersetup{
+\newline 
+        pdfauthor = {
+\backslash 
+textcopyright ~ Ralf Hoppe},
+\newline 
+        pdftitle = {Analoge Standard-Filter},
+\newline 
+        pdfsubject = {Analoge Standard-Filter},
+\newline 
+        pdfkeywords = {Jacobi, Landen, AGM, Elliptisches Integral, Elliptische Funktionen, Modultransformation, sn, cn, dn}
+\newline 
+    }
+\newline 
+
+\backslash 
+end{latexonly}
+\layout Standard
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+%% HTML Setup
 \layout Standard
 
 \backslash 

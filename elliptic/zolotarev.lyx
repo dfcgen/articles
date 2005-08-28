@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsart
+\textclass scrartams
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -10,7 +10,7 @@
 \papersize Default
 \paperpackage a4
 \use_geometry 0
-\use_amsmath 1
+\use_amsmath 0
 \use_natbib 0
 \use_numerical_citations 0
 \paperorientation portrait
@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: zolotarev.lyx,v 1.3 2005-06-02 16:07:38 ralf Exp $
+Version: $Id: zolotarev.lyx,v 1.4 2005-08-28 16:21:48 ralf Exp $
 \end_inset 
 
 
@@ -803,7 +803,10 @@ Tschebyscheff
 \end_inset 
 
  stellt folgerichtig eine Bestapproximation dar.
-\layout Comment
+\begin_inset Note
+collapsed false
+
+\layout Standard
 
 
 \begin_inset Formula \[
@@ -812,16 +815,10 @@ Tschebyscheff
 \end_inset 
 
 
-\layout Comment
-
-
 \begin_inset Formula \[
 \edn[2]{\frac{u}{M}}{\lambda}=1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}=1-\lambda\efunc[2]{f}{x}{k}=1-\varepsilon^{2}\efunc[2]{g}{x}{k}\]
 
 \end_inset 
-
-
-\layout Comment
 
 Wir wollen hier einen Zugang nach\SpecialChar ~
 
@@ -838,28 +835,16 @@ Wir wollen hier einen Zugang nach\SpecialChar ~
 \end_inset 
 
  befaﬂt, so daﬂ der relative Fehler einer Abweichung von der Zielfunktion
-\layout Comment
-
-
 \begin_inset Formula \[
 f(x)=\frac{1}{\sqrt{1-k^{2}x}}\msp,\qquad\qquad0\leq k\leq1\]
 
 \end_inset 
 
-
-\layout Comment
-
 minimiert wird.
-\layout Comment
-
-
 \begin_inset Formula \[
 \max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\min\]
 
 \end_inset 
-
-
-\layout Comment
 
 Es ist erkennbar, daﬂ es sich bei dieser Aufgabenstellung um eine Bestapproximat
 ion der Konstante\SpecialChar ~
@@ -872,16 +857,10 @@ ion der Konstante\SpecialChar ~
 \end_inset 
 
  handelt.
-\layout Comment
-
-
 \begin_inset Formula \[
 \max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\min\]
 
 \end_inset 
-
-
-\layout Comment
 
 Die Lˆsung der Approximationsaufgabe beruht auf 
 \noun on 
@@ -939,17 +918,11 @@ Es sei daran erinnert, daﬂ Gleichung\SpecialChar ~
 \end_inset 
 
  erh‰lt.
-\layout Comment
-
-
 \begin_inset Formula \begin{align}
 x & =\esn[2]{u}{k}\label{eq:zolotar_solution}\\
 \edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\label{eq:zolotar_solution_dn}\end{align}
 
 \end_inset 
-
-
-\layout Comment
 
 Das Modul 
 \begin_inset Formula $\lambda$
@@ -987,10 +960,7 @@ resp
 
 \end_inset 
 
- erfolgen.
-\layout Comment
-
-Hintergrund ist nun der Gedanke, daﬂ die Funktionswerte von 
+ erfolgen.Hintergrund ist nun der Gedanke, daﬂ die Funktionswerte von 
 \begin_inset Formula $\edn{u/M}{\lambda}$
 \end_inset 
 
@@ -1030,16 +1000,10 @@ Hintergrund ist nun der Gedanke, daﬂ die Funktionswerte von
 \end_inset 
 
 , also entsprechend unserer Eingangsbetrachtungen
-\layout Comment
-
-
 \begin_inset Formula \begin{equation}
 \frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\msp.\label{eq:zolotar_approx_func}\end{equation}
 
 \end_inset 
-
-
-\layout Comment
 
 Der Beweis der Bestapproximation beruht auf 
 \noun on 
@@ -1065,10 +1029,7 @@ Tschebyscheff
 
 \end_inset 
 
-, welcher in kurzer Form lautet:
-\layout Comment
-
-Die Funktion 
+, welcher in kurzer Form lautet:Die Funktion 
 \begin_inset Formula $g(x)/f(x)$
 \end_inset 
 
@@ -1089,10 +1050,7 @@ Die Funktion
 \begin_inset Formula $\pm\varepsilon$
 \end_inset 
 
- annimmt.
-\layout Comment
-
-Der Abstand zwischen den Extremalstellen der Funktion 
+ annimmt.Der Abstand zwischen den Extremalstellen der Funktion 
 \begin_inset Formula $g(x)/f(x)$
 \end_inset 
 
@@ -1170,16 +1128,10 @@ cf
 
  eine charakteristische Eigenschaft der ersten elliptischen Transformation
  ist 
-\layout Comment
-
-
 \begin_inset Formula \[
 M\Lambda=\frac{K}{2m+1}\msp,\]
 
 \end_inset 
-
-
-\layout Comment
 
 befinden sich also 
 \begin_inset Formula $2m+2$
@@ -1199,28 +1151,16 @@ befinden sich also
 \end_inset 
 
  bei
-\layout Comment
-
-
 \begin_inset Formula \[
 x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\msp.\]
 
 \end_inset 
 
-
-\layout Comment
-
 Aufgrund ihrer Anzahl sowie der Fehlerfunktion
-\layout Comment
-
-
 \begin_inset Formula \[
 \varepsilon=1-\frac{2}{1+\lambda'}\edn{\frac{u_{\upsilon}}{M}}{\lambda}=\pm\frac{1-\lambda'}{1+\lambda'}\]
 
 \end_inset 
-
-
-\layout Comment
 
 ist die 
 \noun on 
@@ -1230,10 +1170,7 @@ Tschebyscheff
 \begin_inset Formula $g(x)/f(x)$
 \end_inset 
 
- stellt folgerichtig eine Bestapproximation dar.
-\layout Comment
-
-Da 
+ stellt folgerichtig eine Bestapproximation dar.Da 
 \begin_inset Formula $\edn{u/M}{\lambda}$
 \end_inset 
 
@@ -1252,12 +1189,12 @@ Da
 \end_inset 
 
  bestimmt durch
-\layout Comment
-
-
 \begin_inset Formula \begin{align*}
 g(x) & =f(x)\cdot\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}\\
  & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\msp.\end{align*}
+
+\end_inset 
+
 
 \end_inset 
 
