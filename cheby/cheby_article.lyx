@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsart
+\textclass scrartams
 \begin_preamble
 \input{text-inc.tex}
 \input{pdf-inc.tex}
@@ -20,7 +20,7 @@
 \papersize a4paper
 \paperpackage widemarginsa4
 \use_geometry 0
-\use_amsmath 1
+\use_amsmath 0
 \use_natbib 0
 \use_numerical_citations 0
 \paperorientation portrait
@@ -32,7 +32,7 @@
 \quotes_times 2
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle headings
 
 \layout Standard
 
@@ -42,7 +42,35 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby_article.lyx,v 1.4 2005-06-02 15:56:45 ralf Exp $
+Version: $Id: cheby_article.lyx,v 1.5 2005-08-28 16:18:34 ralf Exp $
+\layout Standard
+
+Compatible with article document classes 
+\emph on 
+ams
+\emph default 
+, 
+\emph on 
+svjour
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ausgenommen 
+\emph on 
+Communications in Mathematical Physics
+\emph default 
+ (cmp).
+\end_inset 
+
+ 
+\emph default 
+and 
+\emph on 
+koma-script w/ amsmath, amsthm
+\emph default 
+ (my own LyX extension)
 \end_inset 
 
 
@@ -50,7 +78,7 @@ Version: $Id: cheby_article.lyx,v 1.4 2005-06-02 15:56:45 ralf Exp $
 
 
 \begin_inset ERT
-status Open
+status Collapsed
 
 \layout Standard
 
@@ -119,7 +147,25 @@ end{htmlonly}
 
 \layout Title
 
-Tschebyscheff'sche Funktionen
+
+\noun on 
+Tschebyscheff
+\noun default 
+'sche Funktionen
+\layout Author
+
+Copyright 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+copyright
+\end_inset 
+
+\SpecialChar ~
+Ralf Hoppe
 \layout Standard
 
 
