@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.9 2005-08-14 15:39:02 ralf Exp $
+Version: $Id: analysis.lyx,v 1.10 2005-08-28 16:15:28 ralf Exp $
 \end_inset 
 
 
@@ -493,9 +493,7 @@ Laplace
 \end_inset 
 
 .
-\layout Standard
-
-Außerdem ist wegen
+ Außerdem ist wegen
 \layout Standard
 
 
@@ -693,7 +691,7 @@ Für eine analytische Funktion
 \end_inset 
 
  in Real- und Imaginärteil startet (
-\begin_inset Formula $\tdc z=\tdc x+\ji\tdc y$
+\begin_inset Formula $\tdc z=\tdc x+\ji\tic y$
 \end_inset 
 
 ).
@@ -1064,7 +1062,7 @@ resp
 \begin_inset Formula $v(x,y)$
 \end_inset 
 
- laut Formel\SpecialChar ~
+ unter Zuhilfenahme von Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_cauchy_equivalence}
 
@@ -1084,7 +1082,7 @@ resp
 
 \layout Standard
 
-Die letzten Ausdrücke stellen nun aber genau die Differentialformen in Formel\SpecialChar ~
+Die letzten Ausdrücke stellen genau die Differentialformen in Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_cauchy_antiderivative}
 
@@ -1241,7 +1239,7 @@ cf
 
 \layout Standard
 
-Sollte andererseits die Funktion 
+Sollte jedoch 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -1358,7 +1356,7 @@ Cauchy
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- einschließenden (geschlossenen) Kurve
+ einschließenden Kurve
 \begin_inset Foot
 collapsed true
 
@@ -1394,15 +1392,18 @@ ie
 \noun on 
 Cauchy
 \noun default 
- nur auf Funktionen anwenden läßt, die im Innern analytisch sind, umgehen
- wir diese Widrigkeit wie in Abbildung\SpecialChar ~
+ nur auf Funktionen anwenden läßt, die im Inneren der Kurve 
+\begin_inset Formula $C$
+\end_inset 
+
+ analytisch sind, umgehen wir diese Widrigkeit wie in Abbildung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{fig:analysis_cauchy}
 
 \end_inset 
 
  dargestellt.
- Dabei wird die Kurve 
+ Dabei wird die 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -1845,8 +1846,8 @@ Integralformel für Ableitungen
 
 \end_inset 
 
-Die (erste) Ableitung einer analytischen Funktion kann man durch ein Kurveninteg
-ral in der komplexen Ebene ausdrücken\SpecialChar ~
+Die (erste) Ableitung einer analytischen Funktion kann man auch durch ein
+ Kurvenintegral in der komplexen Ebene ausdrücken\SpecialChar ~
 
 \begin_inset LatexCommand \cite[\S$5 \sdot 22$]{Whittaker:1927}
 
@@ -2135,7 +2136,7 @@ Laurent
 \begin_inset Formula $f(z)$
 \end_inset 
 
- in der komplexen Ebene um einen Punkt 
+ um einen Punkt 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -2334,7 +2335,7 @@ Cauchy
 \end_inset 
 
  genau 
-\begin_inset Formula $2\pi\ji a_{-1}$
+\begin_inset Formula $2\pi\ji\, a_{-1}$
 \end_inset 
 
  ist
@@ -2448,7 +2449,7 @@ status Collapsed
 ie
 \end_inset 
 
- sowohl der Haupt- als auch Regulärteil verschwinden wieder.
+ sowohl Haupt- als auch Regulärteil verschwinden wieder.
 \layout Standard
 
 
@@ -2709,7 +2710,7 @@ Insbesondere  Gleichung\SpecialChar ~
 \begin_inset Formula $\oint_{C}f(z)\tic z$
 \end_inset 
 
- ist.
+ sein kann.
 \end_inset 
 
 .
@@ -3305,7 +3306,7 @@ ie
 
 \layout Standard
 
-Die Richtigkeit kann man beginnend mit dem Einsetzen von 
+Die Richtigkeit kann man durch Einsetzen von 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -3832,6 +3833,15 @@ Sei
 \begin_inset Formula $z\rightarrow\infty$
 \end_inset 
 
+, also eine 
+\emph on 
+ganze
+\emph default 
+ Funktion
+\begin_inset LatexCommand \index{Funktion!ganze}
+
+\end_inset 
+
 ), dann ist 
 \begin_inset Formula $f(z)$
 \end_inset 
@@ -4210,7 +4220,7 @@ eg
 ) ist die Ungleichung sofort einzusehen.
 \end_inset 
 
- und daraus folgende Relation ableiten,
+ und die Relation
 \layout Standard
 
 
@@ -4222,7 +4232,8 @@ eg
 
 \layout Standard
 
-welche nun bei der Berechnung des (vereinachten) Integrals verwendet wird.
+ableiten, welche nun bei der Berechnung des (vereinachten) Integrals verwendet
+ wird.
 \layout Standard
 
 
@@ -4621,7 +4632,7 @@ Anwendung von
 \noun on 
 Jordan
 \noun default 
-'s Lemma bei 
+'s Lemma im Falle 
 \begin_inset ERT
 status Inlined
 
@@ -4849,7 +4860,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\int_{-\infty}^{\infty}|f(x)|\tic x<\infty\label{eq:analysis_improper_int_convabs}\end{equation}
+\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\int_{-\infty}^{\infty}\left|f(x)\right|\tic x<\infty\label{eq:analysis_improper_int_convabs}\end{equation}
 
 \end_inset 
 
@@ -4896,7 +4907,7 @@ ristik
 
 
 \begin_inset Formula \begin{xalignat*}{3}
-\left|z^{\sigma}f(z)\right| & \leq M<\infty & \textrm{\resp} &  & |f(x)| & \leq M|x|^{-\sigma}\qquad(\sigma>1)\end{xalignat*}
+\left|z^{\sigma}f(z)\right| & \leq M<\infty & \textrm{\resp} &  & |f(x)| & \leq M\,|x|^{-\sigma}\qquad(\sigma>1)\end{xalignat*}
 
 \end_inset 
 
@@ -5589,13 +5600,13 @@ Der Schritt eine Funktion
 \begin_inset Formula $g(z)$
 \end_inset 
 
- entsprechend Formel\SpecialChar ~
+ entsprechend Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_halfplane_singular_function}
 
 \end_inset 
 
- zu definieren ist durchaus statthaft.
+ zu definieren ist in jedem Fall legitim.
 \end_inset 
 
 .
@@ -5658,9 +5669,9 @@ ie
 \layout Standard
 
 
-\begin_inset Formula \begin{eqnarray*}
-\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x & = & -y_{0}\int_{-\infty}^{\infty}\frac{v(x,0)}{|x-z_{0}|^{2}}\tic x\\
-\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x & = & y_{0}\int_{-\infty}^{\infty}\frac{u(x,0)}{|x-z_{0}|^{2}}\tic x\msp.\end{eqnarray*}
+\begin_inset Formula \begin{align*}
+\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{|x-z_{0}|^{2}}\tic x & =-y_{0}\int_{-\infty}^{\infty}\frac{v(x,0)}{|x-z_{0}|^{2}}\tic x\\
+\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{|x-z_{0}|^{2}}\tic x & =y_{0}\int_{-\infty}^{\infty}\frac{u(x,0)}{|x-z_{0}|^{2}}\tic x\msp.\end{align*}
 
 \end_inset 
 
@@ -6748,7 +6759,7 @@ V(x,y) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-\xi)\, U(0,\xi)}{|z-\ji\
 \layout Standard
 
 Mit dem Grenzübergang 
-\begin_inset Formula $x\rightarrow0$
+\begin_inset Formula $x\rightarrow+0$
 \end_inset 
 
 , 
@@ -6880,8 +6891,8 @@ f(t) & =\ft^{(-1)}\{ U(0,y)+\ji V(0,y)\}=\ft^{(-1)}\{ U(0,y)\}+\ji\ft^{(-1)}\{ V
 
 \layout Standard
 
-Letzte Zeile enthält das wesentliche Resultat, nämlich daß wegen der Multiplikat
-ion mit dem Einheitssprung 
+Letzte Zeile enthält das wesentliche Resultat: nämlich, daß wegen der Multiplika
+tion mit dem Einheitssprung 
 \begin_inset Formula $\usf(t)$
 \end_inset 
 
@@ -6893,23 +6904,28 @@ ion mit dem Einheitssprung
 \begin_inset Formula $t<0$
 \end_inset 
 
- verschwindet, wenn 
-\begin_inset Formula $F(z)$
+ verschwindet (Kausalität
+\begin_inset LatexCommand \index{Kausalität}
+
 \end_inset 
 
- in der rechten Halbebene analytisch ist
+
 \begin_inset LatexCommand \index{Funktion!kausale}
 
 \end_inset 
 
-.
+), wenn 
+\begin_inset Formula $F(z)$
+\end_inset 
+
+ in der rechten Halbebene analytisch ist.
 \layout Subsection
 
 Anwendung von 
 \noun on 
 Jordan
 \noun default 
-'s Lemma im Fall 
+'s Lemma im Falle 
 \begin_inset ERT
 status Inlined
 
@@ -7007,13 +7023,13 @@ l separieren.
 
 \layout Standard
 
-Was hier als Ergebnis präsentiert wurde, hat (insbesondere was Formel\SpecialChar ~
+Was hier als Ergebnis präsentiert wurde, hat (insbesondere Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_inf_integral}
 
 \end_inset 
 
- betrifft) besondere Bedeutung für die inverse 
+ betreffend) besondere Bedeutung für die inverse 
 \noun on 
 Laplace
 \noun default 
@@ -7092,7 +7108,7 @@ Die bis hierher gewonnenen Erkenntnisse bezüglich der Integration entlang
 \begin_inset Formula $x$
 \end_inset 
 
--Achse lassen sich auch auf Integration entlang der 
+-Achse lassen sich auch auf den Weg entlang der 
 \begin_inset Formula $y$
 \end_inset 
 
