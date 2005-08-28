@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsart
+\textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -274,12 +274,12 @@ Hurwitz
 
 \end_inset 
 
-
+ (mit Hilfe der Pole)
 \layout Standard
 
 
 \begin_inset Formula \[
-\trf(\lps)=\frac{A_{1}}{\lps-\pn{\lps}{1}}+\frac{A_{2}}{\lps-\pn{\lps}{2}}+\cdots\]
+\trf(\lps)=\frac{c_{1}}{(\lps-\pn{\lps}{1})^{m_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{m_{2}}}+\cdots\]
 
 \end_inset 
 
@@ -288,15 +288,14 @@ bei der Rücktransformation in den Zeitbereich als
 
 
 \begin_inset Formula \[
-\irf(t)=A_{1}\e^{\pn{\lps}{1}t}+A_{2}\e^{\pn{\lps}{1}t}+\cdots\]
+\irf(t)=\frac{c_{1}}{(m_{1}-1)!}t^{m_{1}-1}\e^{\pn{\lps}{1}t}+\frac{c_{2}}{(m_{2}-1)!}t^{m_{2}-1}\e^{\pn{\lps}{2}t}+\cdots\]
 
 \end_inset 
 
 
 \layout Standard
 
-nicht zu (unbeschränkten) Exponentialfunktionen mit positiven Exponenten
- führt\SpecialChar ~
+zu beschränkten Signalen führt\SpecialChar ~
 
 \begin_inset LatexCommand \cite[2.5.4]{Stopp:1992}
 
@@ -344,6 +343,27 @@ ie
 
 \begin_inset Formula \[
 \usf(-t)\, y(t)\equiv0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Extremer noch (System mit Totzeit):
+\layout Standard
+
+
+\begin_inset Formula \[
+\usf\left[-(t-t_{0})\right]\, y(t)\equiv0\msp.\]
+
+\end_inset 
+
 
 \end_inset 
 
@@ -433,20 +453,7 @@ Real- und Imaginärteil (der
 Fourier
 \noun default 
 -Transformierten) des Ausgangssignals eines kausalen LTI-Systems sind also
- wechselseitig, bis auf eine Konstante
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Die 
-\noun on 
-Hilbert
-\noun default 
--Transformierte einer Konstanten ist Null.
-\end_inset 
-
-, über die 
+ wechselseitig über die 
 \noun on 
 Hilbert
 \noun default 
@@ -457,7 +464,7 @@ Hilbert
 
 
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -465,11 +472,20 @@ Von
 \noun on 
 David Hilbert
 \noun default 
- (1862-1943) begründete Integraltransformation: 
+ begründete Integraltransformation 
 \begin_inset Formula $\mathcal{H}\left\{ f(x)\right\} =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
-.
+, welche auch als Faltung
+\begin_inset LatexCommand \index{Faltung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $f(x)*\frac{1}{\pi x}$
+\end_inset 
+
+ gesehen werden kann.
 \end_inset 
 
  
@@ -482,7 +498,7 @@ David Hilbert
 \noun on 
 Dirac
 \noun default 
--Impuls angeregt wird, 
+-Stoß angeregt wird, 
 \begin_inset ERT
 status Collapsed
 
@@ -501,7 +517,7 @@ ie
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\trf(\jw)=\mathcal{H}\left\{ \imop\left[\trf(\jw)\right]\right\} -\ji\,\mathcal{H}\left\{ \reop\left[\trf(\jw)\right]\right\} }\end{equation}
+\boxed{\trf(\jw)=\mathcal{H}\left\{ \imop\left[\trf(\jw)\right]\right\} -\ji\,\mathcal{H}\left\{ \reop\left[\trf(\jw)\right]\right\} }\label{eq:ltisys_causal_trf}\end{equation}
 
 \end_inset 
 
@@ -648,7 +664,7 @@ Paley-Wiener
 
 
 \begin_inset Formula \[
-\boxed{\int_{-\infty}^{\infty}\frac{\left|\log|\trf(\jw)|\right|}{1+\omega^{2}}\tic\omega<\infty}\]
+\boxed{\int_{-\infty}^{\infty}\frac{\left|\log|\trf(\jw)|\right|}{1+\omega^{2}}\tic\omega=\int_{-\infty}^{\infty}\frac{A(\omega)}{1+\omega^{2}}\tic\omega<\infty}\]
 
 \end_inset 
 

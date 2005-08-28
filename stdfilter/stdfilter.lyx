@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsbook
+\textclass scrbookams
 \begin_preamble
 \input{text-inc}
 \input{math-inc}
@@ -11,17 +11,14 @@
 %% \usepackage{showidx}
 %% \usepackage{bibcheck}
 %% \usepackage{refcheck}
-%% \usepackage{import}
-\usepackage{newclude}
 
-\usepackage{multicol}
 \usepackage{html}
 \end_preamble
 \options reqno
 \language german
 \inputencoding latin1
 \fontscheme times
-\graphics default
+\graphics dvips
 \float_placement hbtp
 \paperfontsize default
 \spacing onehalf 
@@ -50,11 +47,86 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: stdfilter.lyx,v 1.5 2005-06-02 16:11:12 ralf Exp $
-\layout Standard
+Version: $Id: stdfilter.lyx,v 1.6 2005-08-28 16:40:50 ralf Exp $
+\layout Itemize
 
-Special packages used: newclude, multicol, html, \SpecialChar \ldots{}
+Needs the following packages: 
+\emph on 
+pifont
+\emph default 
+, 
+\emph on 
+txfonts
+\emph default 
+, 
+\emph on 
+trfsigns
+\emph default 
+, 
+\emph on 
+amsopn
+\emph default 
+, 
+\emph on 
+amsfonts
+\emph default 
+, 
+\emph on 
+algorithm
+\emph default 
+, 
+\emph on 
+algorithmic
+\emph default 
+, 
+\emph on 
+newclude
+\emph default 
+, 
+\emph on 
+html
+\emph default 
+, 
+\emph on 
+ifthen
+\emph default 
+, 
+\emph on 
+babel
+\emph default 
+, 
+\emph on 
+bibgerm
+\emph default 
+, 
+\emph on 
+varioref
+\emph default 
+, \SpecialChar \ldots{}
 
+\layout Itemize
+
+Compatible with book-styles: 
+\emph on 
+ams
+\emph default 
+, 
+\emph on 
+svmono
+\emph default 
+ (
+\emph on 
+Springer
+\emph default 
+)
+\emph on 
+ 
+\emph default 
+and 
+\emph on 
+koma-script w/ amsmath, amsthm
+\emph default 
+ (my own LyX extension)
 \end_inset 
 
 
@@ -73,7 +145,7 @@ LyX Dir)
 \newline 
 %% dvips -Z -G0 -Ppdf
 \newline 
-%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.2 -dSubsetFonts=true -dEmbedAllFonts=true
+%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.3 -dSubsetFonts=true -dEmbedAllFonts=true
 \newline 
 
 \newline 
@@ -97,6 +169,19 @@ textcopyright ~ Ralf Hoppe},
 \end_inset 
 
 
+\layout Standard
+
+
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+frontmatter
+\end_inset 
+
+
 \layout Title
 
 Analoge Standard-Filter
@@ -114,19 +199,6 @@ copyright
 
 \SpecialChar ~
 Ralf Hoppe
-\layout Author
-
-
-\begin_inset ERT
-status Inlined
-
-\layout Standard
-
-\backslash 
-today
-\end_inset 
-
-
 \layout Standard
 
 
@@ -148,6 +220,19 @@ today
 
 \begin_inset FloatList table
 
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+mainmatter
 \end_inset 
 
 
@@ -231,11 +316,15 @@ preview false
 
 \layout Chapter
 
-Tschebyscheff-Funktionen
+
+\noun on 
+Tschebyscheff
+\noun default 
+-Funktionen
 \layout Standard
 
 
-\begin_inset Include \include{cheby/cheby.lyx}
+\begin_inset Include \include{../cheby/cheby.lyx}
 preview false
 
 \end_inset 
@@ -252,7 +341,7 @@ Elliptische Integrale und Funktionen
 \layout Standard
 
 
-\begin_inset Include \include{elliptic/elliptic.lyx}
+\begin_inset Include \include{../elliptic/elliptic.lyx}
 preview false
 
 \end_inset 
@@ -261,7 +350,7 @@ preview false
 \layout Standard
 
 
-\begin_inset Include \include{elliptic/zolotarev.lyx}
+\begin_inset Include \include{../elliptic/zolotarev.lyx}
 preview false
 
 \end_inset 

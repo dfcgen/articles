@@ -1,6 +1,6 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass amsart
+\textclass scrartams
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -35,7 +35,7 @@ collapsed false
 Properties of algebraic polynomials
 \layout Standard
 
-Version: $Id: polynomials.lyx,v 1.5 2005-06-02 16:11:58 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.6 2005-08-28 16:40:50 ralf Exp $
 \end_inset 
 
 
@@ -208,8 +208,8 @@ P(x)=K\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^
 
 \layout Standard
 
-Die letzte Form ist vor allem dann zwingend notwendig, wenn die Linearfaktordars
-tellung mit Hilfe der 
+Die letzte Form ist vor allem dann von Bedeutung, wenn die Linearfaktordarstellu
+ng mit Hilfe der 
 \begin_inset Formula $n$
 \end_inset 
 
@@ -217,13 +217,17 @@ tellung mit Hilfe der
 \begin_inset Formula $\zn{x}{i}$
 \end_inset 
 
- Anwendung finden soll.
- 
+ Anwendung finden soll (Fundamentalsatz der Algebra
+\begin_inset LatexCommand \index{Algebra!Fundamentalsatz}
+
+\end_inset 
+
+).
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-P(x)=a_{n}(x-\zn{x}{1})\cdot(x-\zn{x}{2})\cdots(x-\zn{x}{n})=a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
+P(x)=a_{n}(x-\zn{x}{1})(x-\zn{x}{2})\cdots(x-\zn{x}{n})=a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
 
 \end_inset 
 
@@ -386,31 +390,6 @@ i\neq k}
 \end_inset 
 
 
-\layout Standard
-
-Da bei Polynomen mit reellen Koeffizienten Nullstellen grundsätzlich konjugiert
- komplex oder reell auftreten, ist die Ableitung auch wieder eine reelle
- Größe.
- Dies soll folgende Darstellung verdeutlichen, wobei davon ausgegangen wird,
- daß reelle Nullstellen ein Spezialfall der Imaginären (mit 
-\begin_inset Formula $\imop(\zn{x}{i})=0$
-\end_inset 
-
-) sind.
-\layout Standard
-
-
-\begin_inset Formula \begin{eqnarray*}
-P'(\zn{x}{k}) & = & a_{n}\prod_{\substack{i=1\\
-i\neq k}
-}^{n}\left[\reop(\zn{x}{k}-\zn{x}{i})+\ji\imop(\zn{x}{k}-\zn{x}{i})\right]\\
- & = & a_{n}\prod_{\substack{i=1\\
-i\neq k}
-}^{n}\left[\reop^{2}(\zn{x}{k}-\zn{x}{i})-\imop^{2}(\zn{x}{k}-\zn{x}{i})\right]\msp.\end{eqnarray*}
-
-\end_inset 
-
-
 \layout Subsection
 
 Nullstellen
@@ -431,7 +410,12 @@ Bei der Linearfaktordarstellung nach Formel\SpecialChar ~
 F.
  Gauss in seiner Dissertation\SpecialChar ~
 1799 erstmals bewiesenen Fundamentalsatz der
- Algebra:
+ Algebra
+\begin_inset LatexCommand \index{Algebra!Fundamentalsatz}
+
+\end_inset 
+
+:
 \layout Quote
 
 Jedes algebraische Polynom 
