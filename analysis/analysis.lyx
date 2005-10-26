@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.10 2005-08-28 16:15:28 ralf Exp $
+Version: $Id: analysis.lyx,v 1.11 2005-10-26 14:41:53 ralf Exp $
 \end_inset 
 
 
@@ -866,7 +866,7 @@ Nach dem Hauptsatz der Differential- und Integralrechnung
  Integral, welche unter bestimmten Bedingungen auch im komplexen Fall Gültigkeit
  hat\SpecialChar ~
 
-\begin_inset LatexCommand \cite[42]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{42}]{Brown:1996}
 
 \end_inset 
 
@@ -923,7 +923,7 @@ Sollte
 
  sein
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -954,7 +954,7 @@ Man sagt auch, die Funktion
 
 rechnen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[42]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{42}]{Brown:1996}
 
 \end_inset 
 
@@ -1005,7 +1005,7 @@ eg
  mit Hilfe der Kettenregel für Funktionen mehrerer Veränderlicher bewiesen
  werden
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1015,7 +1015,7 @@ Cauchy
 \noun default 
  mit Mitteln der Vektoranalysis ist in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[Anhang~II, 5.]{Cauer:1954}
+\begin_inset LatexCommand \cite[\bibannex{II} \bibsec{5.}]{Cauer:1954}
 
 \end_inset 
 
@@ -1175,7 +1175,7 @@ Cauchy
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[44-46]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{44-46}]{Brown:1996}
 
 \end_inset 
 
@@ -1192,7 +1192,7 @@ Ist
 
 , analytisch
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1295,7 +1295,18 @@ Morera
 
 \end_inset 
 
- genannt.
+ genannt\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibsec{75}]{Koerner:1988}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\bibchap{II} \bibsec{3.5}]{Freitag:2000}
+
+\end_inset 
+
+.
 \end_inset 
 
  
@@ -1795,7 +1806,7 @@ Cauchy
 \noun default 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[47]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{47}]{Brown:1996}
 
 \end_inset 
 
@@ -2159,7 +2170,7 @@ entwickeln läßt\SpecialChar ~
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[55]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{55}]{Brown:1996}
 
 \end_inset 
 
@@ -2218,7 +2229,7 @@ Taylor
 
 ) einer reellen Funktion\SpecialChar ~
 
-\begin_inset LatexCommand \cite[53]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{53}]{Brown:1996}
 
 \end_inset 
 
@@ -2573,7 +2584,7 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[53]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{53}]{Brown:1996}
 
 \end_inset 
 
@@ -2683,7 +2694,13 @@ resp
 \end_inset 
 
  Anwendung der Erkenntnisse des vorigen Abschnittes, in welchem der Begriff
- des Residuums erstmalig auftauchte.
+ des Residuums erstmalig auftauchte\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibchap{III} \bibsec{6ff.}]{Freitag:2000}
+
+\end_inset 
+
+.
  Er ermöglicht die einfache Berechnung von (geschlossenen) Kurvenintegralen,
  wenn innerhalb des Integrationsweges ein oder mehrere Singularitäten von
  
@@ -2817,7 +2834,7 @@ Dieser Fakt ist nur indirekt mit der Wegunabhängigkeit erklärbar (da im
  Singularitäten liegen), exakter müßte man sich auf den sogenannten Deformations
 satz berufen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[8-VI]{Needham:1998}
+\begin_inset LatexCommand \cite[\bibchap{8} \bibsec{VI}]{Needham:1998}
 
 \end_inset 
 
@@ -2969,7 +2986,13 @@ Laurent
 \begin_inset Formula $f(z)$
 \end_inset 
 
- unterscheiden.
+ unterscheiden\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibchap{III} \bibsec{4.10}]{Freitag:2000}
+
+\end_inset 
+
+.
 \layout Subsection
 
 Hebbare Singularitäten
@@ -2997,7 +3020,13 @@ Hebbare Singularitäten sind solche, für die
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- analytisch) ist.
+ analytisch) ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibchap{III} \bibsec{4.2}]{Freitag:2000}
+
+\end_inset 
+
+.
  Der 
 \noun on 
 Riemann
@@ -3017,7 +3046,7 @@ Riemann
 
 
 \begin_inset Formula \begin{equation}
-\lim_{z\rightarrow z_{0}}(z-z_{0})f(z)=0\msp.\end{equation}
+\lim_{z\rightarrow z_{0}}(z-z_{0})\, f(z)=0\msp.\label{eq:analysis_residue_removable_singularity}\end{equation}
 
 \end_inset 
 
@@ -3255,10 +3284,10 @@ Laurent
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-f(z) & =(z-z_{0})^{-n}\phi(z)\\
- & =\frac{c_{0}}{(z-z_{0})^{n}}+\frac{c_{1}}{(z-z_{0})^{n-1}}+\cdots+\frac{c_{n-1}}{z-z_{0}}+c_{n}+c_{n+1}(z-z_{0})+c_{n+2}(z-z_{0})^{2}+\cdots\\
- & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots\msp,\end{align*}
+\begin_inset Formula \begin{align}
+f(z) & =(z-z_{0})^{-n}\phi(z)\nonumber \\
+ & =\frac{c_{0}}{(z-z_{0})^{n}}+\frac{c_{1}}{(z-z_{0})^{n-1}}+\cdots+\frac{c_{n-1}}{z-z_{0}}+c_{n}+c_{n+1}(z-z_{0})+c_{n+2}(z-z_{0})^{2}+\cdots\nonumber \\
+ & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots\msp,\label{eq:analysis_residue_pole_laurent}\end{align}
 
 \end_inset 
 
@@ -3306,7 +3335,30 @@ ie
 
 \layout Standard
 
-Die Richtigkeit kann man durch Einsetzen von 
+Die dahinter steckende Idee ist, 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ nach Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_residue_pole_laurent}
+
+\end_inset 
+
+ zuerst durch Multiplikation mit 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+ zu einer Polynomfunktion zu machen und dann den Koeffizienten 
+\begin_inset Formula $a_{-1}$
+\end_inset 
+
+ durch 
+\begin_inset Formula $n-1$
+\end_inset 
+
+ malige Ableitung zu extrahieren.
+ Die Richtigkeit kann man einfach durch Einsetzen von 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -3441,7 +3493,7 @@ Bernoulli-l'Hospital
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[9-III]{Needham:1998}
+\begin_inset LatexCommand \cite[\bibchap{9} \bibsec{III}]{Needham:1998}
 
 \end_inset 
 
@@ -3456,32 +3508,23 @@ Wesentliche Singularitäten
 
 \end_inset 
 
- sind solche, die weder hebbar noch ein Pol sind
-\begin_inset Foot
-collapsed true
+ sind solche, die weder hebbar noch ein Pol sind\SpecialChar ~
 
-\layout Standard
-
-Funktionen, die nur hebbare Singularitäten oder Pole besitzen, werden meromorph
-\begin_inset LatexCommand \index{Funktion!meromorphe}
+\begin_inset LatexCommand \cite[\bibchap{6} \bibsec{VIII}]{Needham:1998}
 
 \end_inset 
 
- genannt.
-\end_inset 
-
-\SpecialChar ~
-
-\begin_inset LatexCommand \cite[6-VIII]{Needham:1998}
+, 
+\begin_inset LatexCommand \cite[\bibchap{III} \bibsec{4.3}]{Freitag:2000}
 
 \end_inset 
 
 .
- Ihr Hauptteil 
+ Der Hauptteil 
 \begin_inset Formula $h(z)$
 \end_inset 
 
- hat die Form
+ solcher Funktionen hat die Form
 \layout Standard
 
 
@@ -3508,13 +3551,17 @@ ie
 \end_inset 
 
  existieren (und zwar unendlich viele).
- Das Residuum ist für eine solche Funktion mittels Integrationsformel\SpecialChar ~
+ Das Residuum an der Stelle 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ ist für diesen Typ von Funktion üblicherweise mittels Integrationsformel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_laurent_residue_integral}
 
 \end_inset 
 
- zu bestimmen (
+ zu bestimmen (wie 
 \begin_inset ERT
 status Collapsed
 
@@ -3524,7 +3571,7 @@ status Collapsed
 eg
 \end_inset 
 
- 
+ für 
 \begin_inset Formula $\e^{(1-z)^{-1}}$
 \end_inset 
 
@@ -3533,6 +3580,68 @@ eg
 \end_inset 
 
 ).
+\layout Standard
+
+Besitzt eine Funktion 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ keine wesentlichen Singularitäten
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Funktionen, die nur hebbare Singularitäten oder Pole besitzen, werden meromorph
+\begin_inset LatexCommand \index{Funktion!meromorphe}
+
+\end_inset 
+
+ genannt.
+\end_inset 
+
+, dann muß das Produkt 
+\begin_inset Formula $(z-z_{0})^{n}f(z)$
+\end_inset 
+
+ die Hebbarkeitsbedingung
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{z\rightarrow z_{0}}(z-z_{0})^{n}f(z)=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+für irgendeine Zahl 
+\begin_inset Formula $n\in\mathbb{N}$
+\end_inset 
+
+ erfüllen.
+ Bei hebbaren Singularitäten stellt man fest, daß es sich mit 
+\begin_inset Formula $n=1$
+\end_inset 
+
+ genau um Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_residue_removable_singularity}
+
+\end_inset 
+
+ handelt, bei Polen läßt sich diese Bedingung aus Darstellung für 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ entsprechend Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_residue_pole_laurent}
+
+\end_inset 
+
+ ableiten.
 \layout Section
 
 Satz von 
@@ -3611,7 +3720,7 @@ Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
 
  keine Singularitäten, dann gilt folgende Ungleichung\SpecialChar ~
 
-\begin_inset LatexCommand \cite[37]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{37}]{Brown:1996}
 
 \end_inset 
 
@@ -3677,7 +3786,7 @@ M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[41]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{41}]{Brown:1996}
 
 \end_inset 
 
@@ -3940,7 +4049,7 @@ In Ungleichung\SpecialChar ~
 
  nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[Anhang~II, 6.]{Cauer:1954}
+\begin_inset LatexCommand \cite[\bibannex{II} \bibsec{6.}]{Cauer:1954}
 
 \end_inset 
 
@@ -4023,7 +4132,13 @@ Liouville
 \begin_inset Formula $p(z)$
 \end_inset 
 
- ein nicht-konstantes Polynom ist.
+ ein nicht-konstantes Polynom ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibchap{II} \bibsec{3}]{Freitag:2000}
+
+\end_inset 
+
+.
 \layout Section
 
 
@@ -4213,7 +4328,7 @@ eg
 
  in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[74]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{74}]{Brown:1996}
 
 \end_inset 
 
@@ -4916,7 +5031,7 @@ ristik
 
 ist\SpecialChar ~
 
-\begin_inset LatexCommand \cite[20.2]{Gellert:1979}
+\begin_inset LatexCommand \cite[\bibsec{20.2}]{Gellert:1979}
 
 \end_inset 
 
@@ -5318,7 +5433,7 @@ Benennt man
 
  nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[119]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
 
 \end_inset 
 
@@ -5746,7 +5861,7 @@ resp
 
  gesetzt wird\SpecialChar ~
 
-\begin_inset LatexCommand \cite[119]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
 
 \end_inset 
 
@@ -6036,12 +6151,12 @@ Hilbert
 \noun default 
 -Transformation verwendet wurde\SpecialChar ~
 
-\begin_inset LatexCommand \cite[9-3]{Papoulis:2002}
+\begin_inset LatexCommand \cite[\bibchap{9} \bibsec{3}]{Papoulis:2002}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[4.]{Fritzsche:1985}
+\begin_inset LatexCommand \cite[\bibchap{4.}]{Fritzsche:1985}
 
 \end_inset 
 
@@ -7040,17 +7155,17 @@ Laplace
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[81]{Brown:1996}
+\begin_inset LatexCommand \cite[\bibsec{81}]{Brown:1996}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[2.4.4]{Stopp:1992}
+\begin_inset LatexCommand \cite[\bibsec{2.4.4}]{Stopp:1992}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[2.22]{Wunsch:1962}
+\begin_inset LatexCommand \cite[\bibsec{2.22}]{Wunsch:1962}
 
 \end_inset 
 
@@ -7120,7 +7235,7 @@ Die bis hierher gewonnenen Erkenntnisse bezüglich der Integration entlang
 
  anwenden\SpecialChar ~
 
-\begin_inset LatexCommand \cite[2.32]{Wunsch:1962}
+\begin_inset LatexCommand \cite[\bibsec{2.32}]{Wunsch:1962}
 
 \end_inset 
 
