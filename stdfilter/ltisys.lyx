@@ -306,6 +306,11 @@ zu beschränkten Signalen führt\SpecialChar ~
 
 \end_inset 
 
+, 
+\begin_inset LatexCommand \cite[76]{Koerner:1988}
+
+\end_inset 
+
 .
 \layout Subsection
 
@@ -329,7 +334,8 @@ ie
 \end_inset 
 
  es kann keine Wirkung vor der Ursache geben.
- Man fordert deshalb, daß für 
+ Man fordert deshalb von einem so charakterisierten LTI-System, daß für
+ 
 \begin_inset Formula $t<0$
 \end_inset 
 
@@ -368,6 +374,25 @@ Extremer noch (System mit Totzeit):
 \end_inset 
 
 
+\layout Subsubsection
+
+
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+texorpdfstring{$
+\backslash 
+ft$}{
+\backslash 
+latex{
+\backslash 
+noun{Fourier}}}
+\end_inset 
+
+-Bildfunktion
 \layout Standard
 
 
@@ -379,24 +404,28 @@ Fourier
 
 \end_inset 
 
- (dieser notwendigen, nicht hinreichenden Bedingung für realisierbare Systeme)
- in den Bildbereich führt durch Anwendung des Faltungs- und Ähnlichkeitssatzes
+ der vorgenannten (notwendigen, für realisierbare Systeme nicht hinreichenden)
+ Bedingung in den Bildbereich führt durch Anwendung des Faltungssatzes 
+\begin_inset Formula $f_{1}(t)f_{2}(t)\;\lft\; F_{1}(\jw)*F_{2}(\jw)/2\pi$
+\end_inset 
+
  sowie der Regel 
 \begin_inset Formula $\usf(t)\;\lft\;\pi\delta(\omega)+1/\jw$
 \end_inset 
 
  zu
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-Außerdem nicht zu vergessen die Ausblendeigenschaften der 
+Außerdem nicht zu vergessen der Ähnlichkeitssatz sowie die Ausblendeigenschaften
+ der 
 \noun on 
 Dirac
 \noun default 
 -Funktion: 
-\begin_inset Formula $(f*\delta)(x)=f(x)$
+\begin_inset Formula $(f*\delta)(t)=f(t)$
 \end_inset 
 
 .
@@ -407,27 +436,28 @@ Dirac
 
 
 \begin_inset Formula \[
-Y(\jw)*\left[\pi\delta(-\omega)+\ji\frac{1}{\omega}\right]=\pi Y(\jw)+\ji\frac{1}{\omega}*Y(\jw)=0\]
+\frac{Y(\jw)}{2\pi}*\left[\pi\delta(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\jw)+\ji\frac{1}{\pi\omega}*Y(\jw)\right]=0\msp.\]
 
 \end_inset 
 
 
 \layout Standard
 
-Separiert man Real- und Imaginärteil, dann muß für ein kausales System gelten:
+Separiert man Real- und Imaginärteil, dann muß für ein kausales Signal
 \layout Standard
 
 
 \begin_inset Formula \begin{align*}
-\pi\reop\left[Y(\jw)\right]-\frac{1}{\omega}*\imop\left[Y(\jw)\right] & =0\\
-\pi\imop\left[Y(\jw)\right]+\frac{1}{\omega}*\reop\left[Y(\jw)\right] & =0\msp.\end{align*}
+\reop\left[Y(\jw)\right]-\frac{1}{\pi\omega}*\imop\left[Y(\jw)\right] & =0\\
+\imop\left[Y(\jw)\right]+\frac{1}{\pi\omega}*\reop\left[Y(\jw)\right] & =0\end{align*}
 
 \end_inset 
 
 
 \layout Standard
 
-Umstellen nach 
+gelten.
+ Umstellen nach 
 \begin_inset Formula $\reop\left[Y(\jw)\right]$
 \end_inset 
 
@@ -435,7 +465,7 @@ Umstellen nach
 \begin_inset Formula $\imop\left[Y(\jw)\right]$
 \end_inset 
 
- führt schließlich zu:
+ ergibt folgende Zusammenhänge:
 \layout Standard
 
 
@@ -473,7 +503,7 @@ Von
 David Hilbert
 \noun default 
  begründete Integraltransformation 
-\begin_inset Formula $\mathcal{H}\left\{ f(x)\right\} =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\begin_inset Formula $\mathcal{H}(f)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
 , welche auch als Faltung
@@ -493,74 +523,62 @@ David Hilbert
 \end_inset 
 
  verbunden.
- Dieser Fakt muß sicherlich auch dann gelten, wenn das System durch einen
- 
-\noun on 
-Dirac
-\noun default 
--Stoß angeregt wird, 
-\begin_inset ERT
-status Collapsed
+ Für das Signal 
+\begin_inset Formula $Y(\jw)=\reop[Y(\jw)]+\ji\,\imop[Y(\jw)]$
+\end_inset 
+
+ kann man aus diesem Grund folgende redundanzfreien Darstellungen geben:
+\layout Standard
+
+
+\begin_inset Formula \begin{xxalignat}{2}
+Y(\jw) & =\reop\left[Y(\jw)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\jw)\right] & Y(\jw) & =\frac{1}{\pi\omega}*\imop\left[Y(\jw)\right]+\ji\imop\left[Y(\jw)\right]\\
+ & =\left[\delta(\omega)-\frac{\ji}{\pi\omega}\right]*\reop\left[Y(\jw)\right] &  & =\left[\ji\,\delta(\omega)+\frac{1}{\pi\omega}\right]*\imop\left[Y(\jw)\right]\msp.\end{xxalignat}
+
+\end_inset 
+
 
 \layout Standard
 
-\backslash 
-ie
+Durch Anwendung des Faltungssatzes und (wieder) der Transformation für den
+ Einheitssprung auf
+\layout Standard
+
+
+\begin_inset Formula \begin{xxalignat}{2}
+Y(\jw) & =\frac{1}{\pi}\left[\pi\delta(\omega)+\frac{1}{\jw}\right]*\reop\left[Y(\jw)\right] & y(t) & =\frac{\ji}{\pi}\left[\pi\delta(\omega)+\frac{1}{\jw}\right]*\imop\left[Y(\jw)\right]\end{xxalignat}
+
 \end_inset 
 
- wenn 
-\begin_inset Formula $Y(\jw)=\trf(\jw)$
+
+\layout Standard
+
+erhält man für die Zeitfunktion
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat}{2}
+y(t) & =2\usf(t)\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\}  & y(t) & =2\ji\usf(t)\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} \end{xalignat}
+
 \end_inset 
 
- gilt.
+
+\layout Standard
+
+und schlußendlich unter der Voraussetzung 
+\begin_inset Formula $y(t)=0$
+\end_inset 
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+ (Kausalität):
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\trf(\jw)=\mathcal{H}\left\{ \imop\left[\trf(\jw)\right]\right\} -\ji\,\mathcal{H}\left\{ \reop\left[\trf(\jw)\right]\right\} }\label{eq:ltisys_causal_trf}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Was die Rücktransformation in den Zeitbereich betrifft, kann von der Zusammenfas
-sung obiger Formeln in 
-\layout Standard
-
-
-\begin_inset Formula \[
-Y(\jw)=\frac{1}{\pi\omega}*\left\{ \imop\left[Y(\jw)\right]-\ji\,\reop\left[Y(\jw)\right]\right\} =-\frac{\ji}{\pi\omega}*\conjgt{Y}(\jw)\]
-
-\end_inset 
-
-
-\layout Standard
-
-ausgegangen werden.
- Durch Anwendung des Faltungssatzes und (wieder) der Transformation für
- den Einheitssprung erhält man für die Zeitfunktion
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-y(t) & =\ft^{-1}\left\{ \reop\left[Y(\jw)\right]+\ji\imop\left[Y(\jw)\right]\right\} \\
- & =\ft^{-1}\left\{ \reop\left[Y(\jw)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\jw)\right]\right\} \\
- & =\ft^{-1}\left\{ \left[\delta(\omega)-\frac{\ji}{\pi\omega}\right]*\reop\left[Y(\jw)\right]\right\} \\
- & =\frac{1}{\pi}\usf(t)\,\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} \end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-und schlußendlich (wobei die Vorgehensweise bei der Verwendung des Imaginärteils
- dieselbe ist)
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\boxed{y(t)=\frac{1}{\pi}\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} =\frac{\ji}{\pi}\ft^{-1}\left\{ \imop\left[Y(\jw)\right]\right\} }\msp.\label{eq:ltisys_causal_ftinv}\end{equation}
+\boxed{y(t)=2\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} =2\ji\ft^{-1}\left\{ \imop\left[Y(\jw)\right]\right\} }\msp.\label{eq:ltisys_causal_ftinv}\end{equation}
 
 \end_inset 
 
@@ -572,7 +590,25 @@ l, zur Beschreibung des Signals
 \begin_inset Formula $y(t)$
 \end_inset 
 
- heranzuziehen.
+ heranzuziehen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Außerdem ist sehr gut erkennbar, daß der Realteil eine gerade, der Imaginärteil
+ aber eine ungerade Funktion in 
+\begin_inset Formula $\jw$
+\end_inset 
+
+ sein muß, damit 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ reell wird.
+\end_inset 
+
+.
  Die jeweils andere ist faktisch redundant, was solche Transformationen
  wie die Kosinus- oder Sinus-Transformation
 \begin_inset LatexCommand \index{Kosinus-Transformation}
@@ -607,13 +643,351 @@ htigt.
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-y(t) & =\frac{1}{2\pi^{2}}\int_{-\infty}^{\infty}\reop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=\frac{1}{\pi^{2}}\int_{0}^{\infty}\reop\left[Y(\jw)\right]\cos(\omega t)\tic\omega\\
- & =\frac{\ji}{2\pi^{2}}\int_{-\infty}^{\infty}\imop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=-\frac{1}{\pi^{2}}\int_{0}^{\infty}\imop\left[Y(\jw)\right]\sin(\omega t)\tic\omega\end{align}
+\begin_inset Formula \begin{align*}
+y(t) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\reop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=\frac{2}{\pi}\int_{0}^{\infty}\reop\left[Y(\jw)\right]\cos(\omega t)\tic\omega\\
+ & =\frac{\ji}{\pi}\int_{-\infty}^{\infty}\imop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=-\frac{2}{\pi}\int_{0}^{\infty}\imop\left[Y(\jw)\right]\sin(\omega t)\tic\omega\end{align*}
 
 \end_inset 
 
 
+\layout Standard
+
+Alle vorgenannten Fakten müssen sicherlich auch dann gelten, wenn das System
+ durch einen 
+\noun on 
+Dirac
+\noun default 
+-Stoß angeregt wird.
+ Aus diesem Grund können alle Formeln genauso auf die 
+\begin_inset Formula $\ft$
+\end_inset 
+
+-Übertragungsfunktion eines LTI-Systems angewandt werden, wenn man 
+\begin_inset Formula $Y(\jw)=\trf(\jw)$
+\end_inset 
+
+ und 
+\begin_inset Formula $y(t)=\irf(t)$
+\end_inset 
+
+ setzt.
+ Verschwindet 
+\begin_inset Formula $\irf(t)$
+\end_inset 
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Vormultiplikation mit 
+\begin_inset Formula $\usf(t)$
+\end_inset 
+
+ ist unnötig, dann führt 
+\noun on 
+Fourier
+\noun default 
+-Transformation von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_ftinv}
+
+\end_inset 
+
+ zu:
+\layout Standard
+
+
+\begin_inset Formula \[
+\irf(t)\;\lft\;\trf(\jw)=2\reop\left[Y(\jw)\right]=2\ji\,\imop\left[Y(\jw)\right]\msp.\]
+
+\end_inset 
+
+
+\layout Subsubsection
+
+
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+texorpdfstring{$
+\backslash 
+lt$}{
+\backslash 
+latex{
+\backslash 
+noun{Laplace}}}
+\end_inset 
+
+-Bildfunktion
+\layout Standard
+
+Nehmen wir als Ausgangssituation der Betrachtungen an, daß die 
+\noun on 
+Laplace
+\noun default 
+-Transformierte
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
+
+\end_inset 
+
+ 
+\begin_inset Formula $Y(\lps)=\reop[Y(\lps)]+\ji\,\imop[Y(\lps)]$
+\end_inset 
+
+ des reellen Ausgangssignals 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ eines LTI-Systems in der rechten Halbebene vollständig analytisch ist,
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ dort keine Singularitäten (also auch keine Pole) hat.
+ Aus der Funktionentheorie ist bekannt, daß sich eine solche Funktion für
+ 
+\begin_inset Formula $\reop(\lps)\geq+0$
+\end_inset 
+
+ vollständig durch ihre Randwerte auf der imaginären Achse
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Entspricht dem Übergang von der 
+\noun on 
+Fourier
+\noun default 
+- zur 
+\noun on 
+Laplace
+\noun default 
+-Transformierten.
+ Der Übergang 
+\begin_inset Formula $\lps\rightarrow\jw$
+\end_inset 
+
+ in Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_lt_boundary}
+
+\end_inset 
+
+ erfordert jedoch eine eingehende Berücksichtigung der Singularität im Integrand
+en (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ durch Anwendung des 
+\noun on 
+Cauchy
+\noun default 
+'schen Hauptwerts
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!-Hauptwert}
+
+\end_inset 
+
+).
+\end_inset 
+
+ definert\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
+
+\end_inset 
+
+.
+ Hierbei ist die Kenntnis des Real- oder Imaginärteils vollkommen ausreicht,
+ da beide für 
+\begin_inset Formula $\reop(\lps)=0$
+\end_inset 
+
+ über die 
+\noun on 
+Hilbert
+\noun default 
+-Transformation
+\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
+
+\end_inset 
+
+ verknüpft sind.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{Y(\lps)=\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop\left[Y(\xi)\right]}{\lps-\xi}\tic\xi=\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop\left[Y(\xi)\right]}{\lps-\xi}\tic\xi}\label{eq:ltisys_causal_lt_boundary}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Zur Rücktransformation in den Zeitbereich wenden wir den Faltungssatz der
+ 
+\noun on 
+Laplace
+\noun default 
+-Transformation 
+\begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\xi)F_{2}(\lps-\xi)\tic\xi\quad\rlt\quad2\pi\ji\, f_{1}(t)\, f_{2}(t)$
+\end_inset 
+
+ an, wobei 
+\begin_inset Formula $F_{2}(\lps)=\lps^{-1}$
+\end_inset 
+
+ und 
+\begin_inset Formula $F_{1}(\lps)=\reop[Y(\lps)]$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $F_{1}(\lps)=\ji\,\imop[Y(\lps)]$
+\end_inset 
+
+ gesetzt wird.
+\layout Standard
+
+
+\begin_inset Formula \[
+y(t)=2\lt^{-1}\left(\frac{1}{\lps}\right)\cdot\lt^{-1}\left[F_{1}(\lps)\right]=2\usf(t)\lt^{-1}\left[F_{1}(\lps)\right]\]
+
+\end_inset 
+
+
+\layout Standard
+
+Letzte Formel enthält das wesentliche Resultat: wegen der Multiplikation
+ mit dem Einheitssprung 
+\begin_inset Formula $\usf(t)$
+\end_inset 
+
+ verschwindet das Signal 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+ (Kausalität
+\begin_inset LatexCommand \index{Kausalität}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Funktion!kausale}
+
+\end_inset 
+
+), wenn 
+\begin_inset Formula $Y(\lps)$
+\end_inset 
+
+ in der gesamten rechten Halbebene analytisch ist.
+ Gehorcht 
+\begin_inset Formula $\lt^{-1}\left[F_{1}(\lps)\right]$
+\end_inset 
+
+ dieser Bedingung 
+\begin_inset Quotes eld
+\end_inset 
+
+von Hause aus
+\begin_inset Quotes erd
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ verschwindet für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+, so wird wegen des Wegfalls des (jetzt unnötigen) Faktors 
+\begin_inset Formula $\usf(t)$
+\end_inset 
+
+ das kausale Signal 
+\begin_inset Formula $y(t)$
+\end_inset 
+
+ vollständig durch den Real- oder Imaginärteil beschrieben seiner 
+\noun on 
+Laplace
+\noun default 
+-Transformierten.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\boxed{y(t)=2\lt^{-1}\left\{ \reop\left[Y(\lps)\right]\right\} =2\ji\lt^{-1}\left\{ \imop\left[Y(\lps)\right]\right\} }\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Diese Aussage führt zu der entscheidenden Forderung an die Übertragungsfunktion
+ eines LTI-Systems (wenn 
+\begin_inset Formula $y(t)=\irf(t)$
+\end_inset 
+
+ und demzufolge 
+\begin_inset Formula $Y(\lps)=\trf(\lps)$
+\end_inset 
+
+ gesetzt wird), nämlich daß die 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Übertragungsfunktion 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ keine Pole in der rechten Halbebene besitzen darf.
 \layout Subsection
 
 Realisierbarkeit
