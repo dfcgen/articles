@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.12 2005-11-06 10:46:07 ralf Exp $
+Version: $Id: analysis.lyx,v 1.13 2005-11-19 10:43:58 ralf Exp $
 \end_inset 
 
 
@@ -4862,8 +4862,8 @@ Dazu soll auf dem geschlossenen Weg
 \begin_inset Formula $z_{n}$
 \end_inset 
 
- in der oberen komplexen Halbebene (mit 
-\begin_inset Formula $\imop(z_{n})>0$
+ in der oberen komplexen Halbebene (
+\begin_inset Formula $\imop z_{n}>0$
 \end_inset 
 
 ) adressiert.
@@ -4871,7 +4871,7 @@ Dazu soll auf dem geschlossenen Weg
 
 
 \begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}\end{equation}
+\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}\end{equation}
 
 \end_inset 
 
@@ -4887,7 +4887,7 @@ Jordan
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}}\msp.\label{eq:analysis_inf_integral_residue}\end{equation}
+\boxed{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}}\msp.\label{eq:analysis_inf_integral_residue}\end{equation}
 
 \end_inset 
 
@@ -5239,7 +5239,7 @@ Speziell für gebrochen-rationale Funktionen
 
 
 \begin_inset Formula \[
-\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\frac{p(z_{n})}{q'(z_{n})}\msp.\]
+\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop z_{n}>0}\frac{p(z_{n})}{q'(z_{n})}\msp.\]
 
 \end_inset 
 
@@ -5308,7 +5308,7 @@ einer
 
  kann man unter bestimmten Voraussetzungen jeden Funktionswert im Gebiet
  
-\begin_inset Formula $\imop(z)>0$
+\begin_inset Formula $\imop z>0$
 \end_inset 
 
  durch Integration entlang der reellen Achse berechnen.
@@ -5438,7 +5438,7 @@ Benennt man
 \end_inset 
 
  in der Halbebene 
-\begin_inset Formula $\imop(z_{0})>0$
+\begin_inset Formula $\imop z_{0}>0$
 \end_inset 
 
  nach\SpecialChar ~
@@ -5452,7 +5452,7 @@ Benennt man
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x}\qquad(\imop(z_{0})>0)\label{eq:analysis_halfplane_cauchy_formula}\end{equation}
+\boxed{f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x}\qquad(\imop z_{0}>0)\label{eq:analysis_halfplane_cauchy_formula}\end{equation}
 
 \end_inset 
 
@@ -5467,7 +5467,7 @@ Sollte
 \end_inset 
 
  entgegen der bisherigen Ausführungen im Gebiet 
-\begin_inset Formula $\reop(z_{0})>0$
+\begin_inset Formula $\reop z_{0}>0$
 \end_inset 
 
  analytisch sein, dann integriert man auf einem Halbkreis in der rechten
@@ -5594,7 +5594,7 @@ und somit für den Funktionswert an der Stelle
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z}\qquad(\reop(z_{0})>0)\msp.\label{eq:analysis_halfplane_right_cauchy_imint}\end{equation}
+\boxed{f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z}\qquad(\reop z_{0}>0)\msp.\label{eq:analysis_halfplane_right_cauchy_imint}\end{equation}
 
 \end_inset 
 
@@ -5617,7 +5617,7 @@ Nimmt man noch die Ersetzung
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y}\qquad(\reop(z_{0})>0)\label{eq:analysis_halfplane_right_cauchy_reint}\end{equation}
+\boxed{f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y}\qquad(\reop z_{0}>0)\label{eq:analysis_halfplane_right_cauchy_reint}\end{equation}
 
 \end_inset 
 
@@ -5645,7 +5645,7 @@ Die im Folgenden als Notiz eingefügten Anmerkungen und Formeln gelten für
 \layout Standard
 
 Gehen wir jetzt nocheinmal zum Fall 
-\begin_inset Formula $\imop(z_{0})>0$
+\begin_inset Formula $\imop z_{0}>0$
 \end_inset 
 
 , 
@@ -5943,8 +5943,9 @@ Für den Fall
 \layout Standard
 
 
-\begin_inset Formula \[
-f(z_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(\ji y-x_{0}-\ji y_{0})(\ji y+x_{0}-\ji y_{0})}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{[(y-y_{0})+\ji x_{0}][(y-y_{0})-\ji x_{0}]}\tic y\]
+\begin_inset Formula \begin{align*}
+f(z_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(\ji y-x_{0}-\ji y_{0})(\ji y+x_{0}-\ji y_{0})}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{[(y-y_{0})+\ji x_{0}][(y-y_{0})-\ji x_{0}]}\tic y\\
+ & =\frac{\ji}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{x_{0}\, f(y)}{(y-x_{0}-\ji y_{0})(y+x_{0}-\ji y_{0})}\tic y\end{align*}
 
 \end_inset 
 
@@ -6000,7 +6001,7 @@ und mit der schon erwähnten Ersetzbarkeit
 
 
 \begin_inset Formula \[
-f(z_{0})=-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\]
+f(z_{0})=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\]
 
 \end_inset 
 
@@ -6010,21 +6011,17 @@ f(z_{0})=-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-
 
 \layout Standard
 
-Durch Zerlegung von 
-\begin_inset Formula $f(z)=u(x,y)+\ji v(x,y)$
+Durch Einsetzen von 
+\begin_inset Formula $f(x+\ji y)=u(x,y)+\ji v(x,y)$
 \end_inset 
 
- in Real- und Imaginärteil lassen sich für 
-\begin_inset Formula $\imop(z_{0})>0$
-\end_inset 
-
- außerdem die Darstellungsformen
+ lassen sich die Darstellungsformen
 \layout Standard
 
 
-\begin_inset Formula \begin{xalignat}{2}
-u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x & v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep1}\\
- & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep2}\end{xalignat}
+\begin_inset Formula \begin{align}
+f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep1}\\
+ & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x+\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep2}\end{align}
 
 \end_inset 
 
@@ -6038,9 +6035,9 @@ collapsed false
 \layout Standard
 
 
-\begin_inset Formula \begin{xalignat*}{2}
-u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y & v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
- & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{xalignat*}
+\begin_inset Formula \begin{align*}
+f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
+ & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
 
 \end_inset 
 
@@ -6055,7 +6052,12 @@ gewinnen, wobei die Realteil-Beziehung auch
 Poisson
 \noun default 
 's Formel
-\begin_inset LatexCommand \index{Poisson@\noun{Poisson}!Formel für die Halbebene}
+\begin_inset LatexCommand \index{Poisson@\noun{Poisson}!-Formel (für die Halbebene)}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Poisson@\noun{Poisson}!-Integral}
 
 \end_inset 
 
@@ -6069,23 +6071,83 @@ Die klassische Darstellung des
 \noun on 
 Poisson
 \noun default 
--Integrals wird in der Literatur oft in Polarkoordinaten gegeben\SpecialChar ~
+-Integrals wird in der Literatur oft in Polarkoordinaten gegeben, wodurch
+ der Integrationsweg entlang der reellen Achse zu einem Kreis um den Koordinaten
+ursprung wird\SpecialChar ~
 
 \begin_inset LatexCommand \cite[\bibsec{116}]{Brown:1996}
 
 \end_inset 
 
-, wodurch der Integrationsweg entlang der reellen Achse zu einem Kreis um
- den Koordinatenursprung wird.
+, 
+\begin_inset LatexCommand \cite[$\textrm{n}^{\circ}$~59]{Achieser:1954}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite{Cauer:1932}
+
 \end_inset 
 
 .
- Kreuzweise Kombination dieser Formeln ermöglicht nun (bei erneuter Berücksichti
-gung von 
-\begin_inset Formula $|x-z_{0}|^{2}=(x-z_{0})\conjgt{(x-z_{0})}=[(x-x_{0})-\ji y_{0}][(x-x_{0})+\ji y_{0}]$
+ Dazu setzt man typischerweise 
+\begin_inset Formula $x=-\tan(\theta/2)=-\ji\frac{1-\e^{\ji\theta}}{1+\e^{\ji\theta}}=-\ji\frac{1-w}{1+w}$
 \end_inset 
 
-) die Berechnung des Funktionswertes 
+ und geht durch Bilineartransformation 
+\begin_inset Formula $z_{0}=-\ji\frac{1-w_{0}}{1+w_{0}}$
+\end_inset 
+
+ zu einem Polarkoordinatensystem über.
+\end_inset 
+
+.
+ Durch getrennte Betrachtung von Real- und Imaginärteil erhält man daraus
+ die Formeln
+\layout Standard
+
+
+\begin_inset Formula \begin{alignat}{2}
+u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_real}\\
+v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\msp,\label{eq:analysis_halfplane_boundary_imag}\end{alignat}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
+v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Standard
+
+welche durch Einsetzen in\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_sep1}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_sep2}
+
+\end_inset 
+
+ die Berechnung des Funktionswertes 
 \begin_inset Formula $f(z_{0})=u(x_{0},y_{0})+\ji v(x_{0},y_{0})$
 \end_inset 
 
@@ -6094,7 +6156,7 @@ gung von
 
 \end_inset 
 
- nur einer Komponente.
+ nur einer Komponente ermöglichen.
 \layout Standard
 
 
@@ -6127,17 +6189,13 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}+\ji(y-y_{0})}{|\ji y
 
 \layout Standard
 
-Formel\SpecialChar ~
+Letztere Formeln eröffnen in Verbindung mit Gleichung\SpecialChar ~
 
-\noun on 
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary2}
+\begin_inset LatexCommand \ref{eq:analysis_complex_derivative}
 
 \end_inset 
 
-
-\noun default 
- ermöglicht außerdem die einfache Ableitung von 
+ außerdem die Möglichkeit der Differentiation von 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -6145,11 +6203,11 @@ Formel\SpecialChar ~
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- (mit 
-\begin_inset Formula $\imop(z_{0})>0$
+ (
+\begin_inset Formula $\imop z_{0}>0$
 \end_inset 
 
-) aus den Randwerten
+) ausgehend von den Randwerten
 \begin_inset LatexCommand \index{Randwerte}
 
 \end_inset 
@@ -6194,7 +6252,13 @@ Besondere Bedeutung haben für den Grenzfall
 
  die Formeln\SpecialChar ~
 
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_sep2}
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_real}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_imag}
 
 \end_inset 
 
@@ -6229,34 +6293,10 @@ Konform zu
 Hilbert
 \noun default 
 -Transformationen die Definition 
-\begin_inset Formula $\mathcal{H}(f)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
  verwendet.
- Zum Integrationsweg sei noch angemerkt, daß wegen der bei 
-\begin_inset Formula $x$
-\end_inset 
-
- bestehenden Singularät im Integranden (wenn nicht hebbar) der 
-\noun on 
-Cauchy
-\noun default 
-'sche Hauptwert
-\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!-Hauptwert}
-
-\end_inset 
-
- 
-\begin_inset Formula $\mathcal{H}(f)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi=\frac{1}{\pi}\lim_{\varepsilon\rightarrow0}\left[\int_{-\infty}^{x-\varepsilon}\frac{f(\xi)}{x-\xi}\tic\xi+\int_{x+\varepsilon}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi\right]$
-\end_inset 
-
- anzuwenden ist\SpecialChar ~
-
-\begin_inset LatexCommand \cite[\bibsec{13}]{Bracewell:2003}
-
-\end_inset 
-
-.
 \end_inset 
 
 .
@@ -6265,8 +6305,8 @@ Cauchy
 
 
 \begin_inset Formula \begin{alignat*}{2}
-\lim_{y_{0}\rightarrow+0}u(x_{0},y_{0})=u(x_{0},0) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x &  & =\mathcal{H}\{ v(x_{0},0)\}\\
-\lim_{y_{0}\rightarrow+0}v(x_{0},y_{0})=v(x_{0},0) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x &  & =-\mathcal{H}\{ u(x_{0},0)\}\end{alignat*}
+\lim_{y_{0}\rightarrow+0}u(x_{0},y_{0})=u(x_{0},0) & =\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x &  & =\mathcal{H}\{ v(x_{0},0)\}\\
+\lim_{y_{0}\rightarrow+0}v(x_{0},y_{0})=v(x_{0},0) & =-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x &  & =-\mathcal{H}\{ u(x_{0},0)\}\end{alignat*}
 
 \end_inset 
 
@@ -6307,6 +6347,41 @@ ie
 \end_inset 
 
 
+\layout Standard
+
+Zum Integrationsweg sei noch angemerkt, daß wegen der bei 
+\begin_inset Formula $x$
+\end_inset 
+
+ bestehenden Singularät im Integranden (wenn nicht hebbar) der 
+\noun on 
+Cauchy
+\noun default 
+'sche Hauptwert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wenn er denn existiert.
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!-Hauptwert}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi=\frac{1}{\pi}\lim_{\varepsilon\rightarrow0}\left[\int_{-\infty}^{x-\varepsilon}\frac{f(\xi)}{x-\xi}\tic\xi+\int_{x+\varepsilon}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi\right]$
+\end_inset 
+
+ anzuwenden ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[\bibsec{13}]{Bracewell:2003}
+
+\end_inset 
+
+.
 \layout Standard
 
 
@@ -6378,7 +6453,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop z>0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6407,7 +6482,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{y}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{|\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6421,7 +6496,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop\left[f(\xi)\right]}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop f(\xi)}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6472,7 +6547,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop\left[f(\xi)\right]}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop f(\xi)}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6489,7 +6564,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop z<0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6518,7 +6593,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{y}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{|\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6532,7 +6607,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop\left[f(\xi)\right]}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop f(\xi)}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6583,7 +6658,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop\left[f(\xi)\right]}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop f(\xi)}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6600,7 +6675,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop z>0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6629,7 +6704,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x\, f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6643,7 +6718,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop\left[f(\ji\xi)\right]}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6694,7 +6769,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop\left[f(\ji\xi)\right]}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6711,7 +6786,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop z<0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6740,7 +6815,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{x}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x\, f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
 \end_inset 
 
 
@@ -6754,7 +6829,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop\left[f(\ji\xi)\right]}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6805,7 +6880,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop\left[f(\ji\xi)\right]}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6967,7 +7042,7 @@ Jordan
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\]
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\]
 
 \end_inset 
 
@@ -6979,7 +7054,7 @@ Ausgehend von dem Ergebnis
 
 
 \begin_inset Formula \begin{equation}
-\boxed{2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z}\msp,\label{eq:analysis_inf_integral}\end{equation}
+\boxed{2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z}\msp,\label{eq:analysis_inf_integral}\end{equation}
 
 \end_inset 
 
@@ -7000,8 +7075,8 @@ l separieren.
 
 
 \begin_inset Formula \begin{align}
--2\pi\sum_{\imop(z_{n})>0}\imop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\reop\left[\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\right]\\
-2\pi\sum_{\imop(z_{n})>0}\reop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\left[\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\right]\end{align}
+-2\pi\sum_{\imop z_{n}>0}\imop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\reop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\\
+2\pi\sum_{\imop z_{n}>0}\reop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\end{align}
 
 \end_inset 
 
@@ -7148,7 +7223,7 @@ cf
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z\]
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z\]
 
 \end_inset 
 
@@ -7157,7 +7232,7 @@ cf
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop\{ z_{n}\}<0}\res{z_{n}}{\left[\e^{\beta z}f(z)\right]}\qquad(\beta>0)}\end{equation}
+\boxed{\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{\left[\e^{\beta z}f(z)\right]}\qquad(\beta>0)}\end{equation}
 
 \end_inset 
 
@@ -7247,7 +7322,7 @@ resp
 
 
 \begin_inset Formula \[
-\sum_{\imop(z_{n})>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop(z_{n})<0}\left[\res{z_{n}}{f(z)}\right]\msp.\]
+\sum_{\imop z_{n}>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop z_{n}<0}\left[\res{z_{n}}{f(z)}\right]\msp.\]
 
 \end_inset 
 
@@ -7324,7 +7399,7 @@ pos.-reell
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7339,7 +7414,7 @@ pos.-reell
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop z>0}
 }f(z)=0}$
 \end_inset 
 
@@ -7364,7 +7439,7 @@ neg.-reell
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{-\ji|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\imop(z_{n})<0}\res{z_{n}}{\left[\e^{-\ji|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{-\ji|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\imop z_{n}<0}\res{z_{n}}{\left[\e^{-\ji|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7379,7 +7454,7 @@ neg.-reell
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop z<0}
 }f(z)=0}$
 \end_inset 
 
@@ -7404,7 +7479,7 @@ pos.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{-|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\reop(z_{n})>0}\res{z_{n}}{\left[\e^{-|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{-|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\reop z_{n}>0}\res{z_{n}}{\left[\e^{-|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7419,7 +7494,7 @@ pos.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop z>0}
 }f(z)=0}$
 \end_inset 
 
@@ -7444,7 +7519,7 @@ neg.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{|\alpha|z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\e^{|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{|\alpha|z}f(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{\left[\e^{|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7459,7 +7534,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop z<0}
 }f(z)=0}$
 \end_inset 
 
@@ -7488,7 +7563,7 @@ neg.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}}$
 \end_inset 
 
 
@@ -7503,7 +7578,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop z>0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7547,7 +7622,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop z<0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7591,7 +7666,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop z>0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7635,7 +7710,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop z<0}
 }z\, f(z)=0}$
 \end_inset 
 
