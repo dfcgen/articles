@@ -70,7 +70,7 @@ Galois
 \begin_inset Formula $(G,\diamond)$
 \end_inset 
 
- ist ein algebraisches System, daß aus einer nichtleeren Menge von Elementen
+ ist ein algebraisches System, daß aus einer nicht-leeren Menge von Elementen
  
 \begin_inset Formula $G$
 \end_inset 
@@ -82,6 +82,11 @@ Galois
  mit folgenden Eigenschaften definiert ist\SpecialChar ~
 
 \begin_inset LatexCommand \cite[2.1]{Peterson:1972}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[101ff.]{Koerner:1988}
 
 \end_inset 
 
@@ -201,6 +206,11 @@ Abel
 \noun default 
 'sch
 \begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Abel'sche@\noun{Abel}'sche Gruppe}
 
 \end_inset 
 
@@ -334,7 +344,7 @@ Interessant ist in diesem Zusammenhang die Erkenntnis, daß die Ordnung der
 
 
 \begin_inset Formula \[
-\left|G\right|=i\cdot\left|U\right|\]
+\left|G\right|=i\,\left|U\right|\]
 
 \end_inset 
 
@@ -721,7 +731,7 @@ Eins
  genannt.
 \layout Standard
 
-Zur Multiplikation ist zu bemerken, daß nichtnegative Potenzen
+Zur Multiplikation ist zu bemerken, daß nicht-negative Potenzen
 \begin_inset LatexCommand \index{Element!Potenzierung}
 
 \end_inset 
@@ -747,7 +757,7 @@ also durch
 
 
 \begin_inset Formula \[
-a^{n}=\underbrace{a\cdot a\cdot\ldots\cdot a}_{n\text{{-mal}}}\]
+a^{n}=\underbrace{a\cdot a\cdots a}_{n\text{{-mal}}}\]
 
 \end_inset 
 
@@ -801,6 +811,11 @@ Körper\SpecialChar ~
 
 
 \begin_inset LatexCommand \index{Körper}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Field|see{K{\"o}rper}}
 
 \end_inset 
 
@@ -997,7 +1012,7 @@ Vektorraum
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Vektorraum}
+\begin_inset LatexCommand \index{Vektor!-raum}
 
 \end_inset 
 
@@ -1007,7 +1022,7 @@ Eine Menge von Vektoren
 \end_inset 
 
  
-\begin_inset Formula $V:=\{\mathbf{v}_{1},\mathbf{v}_{2},\mathbf{v}_{3},\ldots\}$
+\begin_inset Formula $V:=\{\mvec{v}_{1},\mvec{v}_{2},\mvec{v}_{3},\ldots\}$
 \end_inset 
 
 , jeder bestehend aus einem geordneten 
@@ -1094,7 +1109,7 @@ abel
 \layout Enumerate
 
 für jeden Vektor 
-\begin_inset Formula $\mathbf{v}\in V$
+\begin_inset Formula $\mvec{v}\in V$
 \end_inset 
 
  die Multiplikation mit einem Körperelement (Skalar) 
@@ -1119,7 +1134,7 @@ Die mit
 \end_inset 
 
  und wieder zu einem Vektor 
-\begin_inset Formula $\mathbf{u}=a\mathbf{v}\in V$
+\begin_inset Formula $\mvec{u}=a\mvec{v}\in V$
 \end_inset 
 
  führt (Abgeschlossenheit
@@ -1139,7 +1154,7 @@ bezüglich zweier Skalare
 \end_inset 
 
  und der Vektoren 
-\begin_inset Formula $\mathbf{u},\mathbf{v}$
+\begin_inset Formula $\mvec{u},\mvec{v}$
 \end_inset 
 
  die folgenden Distributivgesetze
@@ -1151,8 +1166,8 @@ bezüglich zweier Skalare
 \newline 
 
 \begin_inset Formula \begin{align*}
-a(\mathbf{u}+\mathbf{v}) & =a\mathbf{u}+a\mathbf{v}\\
-\mathbf{v}(a+b) & =a\mathbf{v}+b\mathbf{v}\end{align*}
+a(\mvec{u}+\mvec{v}) & =a\mvec{u}+a\mvec{v}\\
+\mvec{v}(a+b) & =a\mvec{v}+b\mvec{v}\end{align*}
 
 \end_inset 
 
@@ -1165,7 +1180,7 @@ das Assoziativgesetz
 \end_inset 
 
  
-\begin_inset Formula $(ab)\mathbf{v}=a(b\mathbf{v})$
+\begin_inset Formula $(ab)\mvec{v}=a(b\mvec{v})$
 \end_inset 
 
  gilt;
@@ -1183,16 +1198,20 @@ und es ein multiplikativ neutrales Element
  gibt.
 \layout Standard
 
-Wenn (wie schon erwähnt) mit 
+Wenn mit 
 \begin_inset Formula $n$
 \end_inset 
 
  die Anzahl der Tupel eines Vektors 
-\begin_inset Formula $\mathbf{v}$
+\begin_inset Formula $\mvec{v}$
 \end_inset 
 
- bezeichnet wird, dann nennt man den zugehörigen Vektorraum üblicherweise
+ bezeichnet wird, dann nennt man den zugehörigen Vektorraum (über dem Körper
  
+\begin_inset Formula $K$
+\end_inset 
+
+) üblicherweise 
 \begin_inset Formula $V_{n}(K)$
 \end_inset 
 
@@ -1225,7 +1244,7 @@ eg
 \end_inset 
 
 , welches als 
-\begin_inset Formula $\mathbf{0}=(0,0,\ldots,0)^{T}$
+\begin_inset Formula $\mvec{0}=(0,0,\ldots,0)$
 \end_inset 
 
  geschrieben wird, ein Vektor mit 
@@ -1245,7 +1264,7 @@ Kann man jeden Vektor von
 \end_inset 
 
  von unabhängigen Vektoren 
-\begin_inset Formula $\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{m}\in U\subseteq V$
+\begin_inset Formula $\mvec{u}_{1},\mvec{u}_{2},\ldots,\mvec{u}_{n}\in U\subseteq V$
 \end_inset 
 
  darstellen, also als
@@ -1253,7 +1272,7 @@ Kann man jeden Vektor von
 
 
 \begin_inset Formula \[
-\mathbf{v}=\sum_{i=1}^{m}\alpha_{i}\mathbf{u}_{i}\msp,\]
+\mvec{v}=\sum_{i=1}^{n}\alpha_{i}\mvec{u}_{i}\msp,\]
 
 \end_inset 
 
@@ -1261,24 +1280,24 @@ Kann man jeden Vektor von
 \layout Standard
 
 so nennt man 
-\begin_inset Formula $\mathbf{u}_{1},\mathbf{u}_{2},\ldots,\mathbf{u}_{m}$
+\begin_inset Formula $\mvec{u}_{1},\mvec{u}_{2},\ldots,\mvec{u}_{n}$
 \end_inset 
 
  die Basis
-\begin_inset LatexCommand \index{Vektorraum!Basis}
+\begin_inset LatexCommand \index{Vektor!-raum!Basis}
 
 \end_inset 
 
 , 
-\begin_inset Formula $\alpha_{1},\alpha_{2},\ldots,\alpha_{m}$
+\begin_inset Formula $\alpha_{1},\alpha_{2},\ldots,\alpha_{n}$
 \end_inset 
 
  die Koeffizienten und 
-\begin_inset Formula $m$
+\begin_inset Formula $n$
 \end_inset 
 
  die Dimension
-\begin_inset LatexCommand \index{Vektorraum!Dimension}
+\begin_inset LatexCommand \index{Vektor!-raum!Dimension}
 
 \end_inset 
 
@@ -1291,7 +1310,7 @@ so nennt man
 
 
 \begin_inset Formula \[
-m=\dim(V)=\left|V\right|\]
+n=\dim(V)=\left|V\right|\]
 
 \end_inset 
 
@@ -1307,7 +1326,7 @@ Algebra (Verband)
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Verband}
+\begin_inset LatexCommand \index{Verband|see{Algebra}}
 
 \end_inset 
 
@@ -1368,7 +1387,7 @@ cf
 \layout Enumerate
 
 für zwei Vektoren 
-\begin_inset Formula $\mathbf{u},\mathbf{v}\in V$
+\begin_inset Formula $\mvec{u},\mvec{v}\in V$
 \end_inset 
 
  ist ein Produkt
@@ -1377,7 +1396,7 @@ für zwei Vektoren
 \end_inset 
 
  
-\begin_inset Formula $\mathbf{uv}$
+\begin_inset Formula $\mvec{u}\mvec{v}$
 \end_inset 
 
  definiert und in Bezug auf 
@@ -1402,7 +1421,7 @@ das Assoziativgesetz
 \end_inset 
 
  für Vektoren 
-\begin_inset Formula $(\mathbf{uv})\mathbf{w}=\mathbf{u}(\mathbf{vw})$
+\begin_inset Formula $(\mvec{u}\mvec{v})\mvec{w}=\mvec{u}(\mvec{v}\mvec{w})$
 \end_inset 
 
  ist erfüllt;
@@ -1414,14 +1433,14 @@ auch das Distributivgesetz
 \end_inset 
 
  läßt sich auf Vektoren anwenden: 
-\begin_inset Formula $(\mathbf{u}+\mathbf{v})\mathbf{w}=\mathbf{uw}+\mathbf{vw}$
+\begin_inset Formula $(\mvec{u}+\mvec{v})\mvec{w}=\mvec{u}\mvec{w}+\mvec{v}\mvec{w}$
 \end_inset 
 
 .
 \layout Section
 
 
-\begin_inset LatexCommand \label{app_modulo}
+\begin_inset LatexCommand \label{sec:algebra_residue_classes}
 
 \end_inset 
 
@@ -1695,6 +1714,11 @@ Restklassenringe
 
 \end_inset 
 
+
+\begin_inset LatexCommand \index{Restklassen!-ring}
+
+\end_inset 
+
 Um von einem Restklassenring 
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset 
@@ -1944,7 +1968,7 @@ Ring mit Eins
 \layout Standard
 
 Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
-\begin_inset LatexCommand \index{Restklasse!$\mathbb{Z}_m$}
+\begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_m$}
 
 \end_inset 
 
@@ -1967,19 +1991,15 @@ Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
 Restklassenkörper
 \layout Subsubsection
 
-Galois-Field 
-\begin_inset Formula $\GF(q)$
-\end_inset 
 
-, 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
-
-
+\noun on 
+Galois
+\noun default 
+-Körper
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Restklassenkörper}
+\begin_inset LatexCommand \index{Restklassen!-körper}
 
 \end_inset 
 
@@ -1989,12 +2009,12 @@ Galois-Field
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Galois-Körper}
+\begin_inset LatexCommand \index{Galois-Körper@\noun{Galois}-Körper}
 
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Körper!Galois-}
+\begin_inset LatexCommand \index{Körper!Galois-@\noun{Galois}-}
 
 \end_inset 
 
@@ -2049,16 +2069,7 @@ cf
 \begin_inset Formula $r\cdot r^{-1}=e_{(\cdot)}=1$
 \end_inset 
 
- gilt
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Das Nullelement muß man natürlich von dieser Forderung ausnehmen.
-\end_inset 
-
-.
+ gilt.
  Endliche Körper
 \begin_inset LatexCommand \index{Körper!endlicher}
 
@@ -2068,17 +2079,7 @@ Das Nullelement muß man natürlich von dieser Forderung ausnehmen.
 \noun on 
 Galois
 \noun default 
--Field
-\begin_inset LatexCommand \index{Galois-Körper}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Körper!Galois-}
-
-\end_inset 
-
- und bezeichnet sie mit 
+-Köper und bezeichnet sie mit 
 \begin_inset Formula $\GF(q)$
 \end_inset 
 
@@ -2095,26 +2096,42 @@ Galois
 
 \end_inset 
 
- des Körpers ist (
-\begin_inset ERT
-status Collapsed
+ (Anzahl der Elemente 
+\begin_inset Formula $r$
+\end_inset 
+
+) des Körpers ist
+\begin_inset Foot
+collapsed true
 
 \layout Standard
 
-\backslash 
-cf
+Unerheblich ist dabei, ob die Menge der Körperelemente 
+\begin_inset Formula $r$
 \end_inset 
 
- 
-\begin_inset LatexCommand \cite[6.6]{Peterson:1972}
+ durch eine Restklassenoperation oder irgendeine andere Methode definiert
+ wird.
+ Bei gleicher Anzahl von Elementen kann man solche Mengen nämlich immer
+ (strukturerhaltend, ein-eindeutig) aufeinander abbilden\SpecialChar ~
+
+\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
 \end_inset 
 
-).
+.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[6.2]{Peterson:1972}
+
+\end_inset 
+
+.
 \layout Standard
 
-In einem Restklassenkörper muß man dementsprechend für das inverse Element
- 
+In einem Restklassenkörper muß man für das inverse Element 
 \begin_inset Formula $\rcls{r}{m}\cdot{\rcls{r}{m}}^{-1}=\rcls{1}{m}$
 \end_inset 
 
@@ -2129,7 +2146,12 @@ ie
 \end_inset 
 
  die Frage nach der Division im Restklassenring
-\begin_inset LatexCommand \index{Restklassenring}
+\begin_inset LatexCommand \index{Restklassen!-ring}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Ring!Restklassen-}
 
 \end_inset 
 
@@ -2279,7 +2301,7 @@ Also in Bezug auf den Ring
 \begin_inset Formula $p\in\mathbb{P}$
 \end_inset 
 
- ist.
+.
 \end_inset 
 
 \SpecialChar ~
@@ -2464,7 +2486,7 @@ zout.
 
 \end_inset 
 
-, dann gilt speziell hier
+, dann gilt speziell hier:
 \layout Standard
 
 
@@ -2532,7 +2554,7 @@ Von praktischer Bedeutung ist insbesondere der Körper
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Restklasse!$\mathbb{Z}_2$}
+\begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_2$}
 
 \end_inset 
 
@@ -2667,11 +2689,12 @@ Die Division erklärt sich mit Hilfe des inversen Elements in
  selbst handelt.
 \layout Subsubsection
 
-Multiplikative Gruppe 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
+
+\begin_inset LatexCommand \label{sec:algebra_galois_multgrp}
+
 \end_inset 
 
-
+Multiplikative Gruppe
 \layout Standard
 
 
@@ -2694,12 +2717,12 @@ Galois
  ist wegen ihrer Eigenschaften bezüglich der Potenzierung von Gruppenelementen
  sehr interessant
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-An dieser Stelle sei darauf hingewiesen, daß fast alle der folgenden Aussagen
- auf endliche Körper 
+An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
+ Aussagen auf endliche Körper 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset 
 
@@ -3044,7 +3067,7 @@ cf
 
 
 \begin_inset Formula \[
-\left|\mathbb{F}_{q}^{*}\right|=q-1=i\cdot k\msp.\]
+\left|\mathbb{F}_{q}^{*}\right|=q-1=i\, k\msp.\]
 
 \end_inset 
 
@@ -3108,8 +3131,8 @@ Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
 
 
 \begin_inset Formula \begin{align*}
-r^{q-1}-1=r^{i\cdot k}-1 & =\left(r^{k}-1\right)\cdot\left[r^{(i-1)k}+r^{(i-2)k}+\ldots+r^{2k}+r^{k}+1\right]\\
- & =\left(r^{k}-1\right)\cdot\left[\left(r^{k}\right)^{i-1}+\left(r^{k}\right)^{i-2}+\ldots+\left(r^{k}\right)^{2}+\left(r^{k}\right)^{1}+\left(r^{k}\right)^{0}\right]\end{align*}
+r^{q-1}-1=r^{i\cdot k}-1 & =\left(r^{k}-1\right)\,\left[r^{(i-1)k}+r^{(i-2)k}+\cdots+r^{2k}+r^{k}+1\right]\\
+ & =\left(r^{k}-1\right)\,\left[\left(r^{k}\right)^{i-1}+\left(r^{k}\right)^{i-2}+\cdots+\left(r^{k}\right)^{2}+\left(r^{k}\right)^{1}+\left(r^{k}\right)^{0}\right]\end{align*}
 
 \end_inset 
 
@@ -3124,7 +3147,7 @@ welche außerdem zeigt, daß
 \begin_inset Formula $r^{q-1}-1$
 \end_inset 
 
- ist (gegebene Voraussetzug war, daß 
+ ist (gegebene Voraussetzung war, daß 
 \begin_inset Formula $k$
 \end_inset 
 
@@ -3135,17 +3158,8 @@ welche außerdem zeigt, daß
  teilt).
 \layout Standard
 
-Eine für die praktische Anwendung von Restklassenkörpern (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-eg
-\end_inset 
-
- in der Kodierungstheorie) sehr wichtige Schlußfolgerung aus Gleichung\SpecialChar ~
+Eine für die praktische Anwendung von Restklassenkörpern sehr wichtige Schlußfol
+gerung aus Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_divider}
 
@@ -3155,7 +3169,7 @@ eg
 \begin_inset Formula $r^{q-1}\equiv1\pmod{m}$
 \end_inset 
 
-ist die, daß wegen 
+ ist die, daß wegen 
 \begin_inset Formula $0\equiv m\pmod m$
 \end_inset 
 
@@ -3172,7 +3186,7 @@ ist die, daß wegen
 
 
 \begin_inset Formula \begin{equation}
-r^{q-1}-1=h\cdot m\msp.\label{eq:algebra_ord_mod_factor}\end{equation}
+r^{q-1}-1=h\, m\msp.\label{eq:algebra_ord_mod_factor}\end{equation}
 
 \end_inset 
 
@@ -3205,10 +3219,246 @@ r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4\right\}  & r_{4}^{k
 \end_inset 
 
 
+\layout Subsubsection
+
+Zyklische Gruppe
 \layout Standard
 
 
-\begin_inset LatexCommand \label{page:algebra_zeroes_split}
+\begin_inset LatexCommand \index{Gruppe!zyklische}
+
+\end_inset 
+
+Eine multiplikative Gruppe
+\begin_inset LatexCommand \index{Gruppe!multiplikative}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+, bei der alle Potenzen
+\begin_inset LatexCommand \index{Element!Potenzierung}
+
+\end_inset 
+
+ 
+\begin_inset Formula $g^{i}$
+\end_inset 
+
+ eines bestimmten Generatorelements
+\begin_inset LatexCommand \index{Element!Generator-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $g\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ genau alle Elemente 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ in irgendeiner Abfolge durchläuft,
+\layout Standard
+
+
+\begin_inset Formula \[
+\left\langle g\right\rangle :=\left\{ 1,g^{1},g^{2},g^{3},\ldots,g^{q-3},g^{q-2}\right\} =\mathbb{F}_{q}^{*}\qquad\qquad\left(\textrm{Bem.: }1=g^{q-1}\right)\]
+
+\end_inset 
+
+
+\layout Standard
+
+bezeichnet man als zyklische Gruppe.
+ Die Ordnung dieses sogenannten primitiven
+\begin_inset LatexCommand \index{Element!primitives}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \label{page:algebra_cyclic_primitive}
+
+\end_inset 
+
+ (Generator-) Elements muß demzufolge gleich der Ordnung der Gruppe 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ sein
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man kann mit Hilfe von 
+\noun on 
+Euler
+\noun default 
+'s Totient-Funktion nachweisen, daß es in einem 
+\noun on 
+Galois
+\noun default 
+-Körper immer mindestens ein erzeugendes (primitives) Element 
+\begin_inset Formula $g$
+\end_inset 
+
+ gibt.
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ der Index
+\begin_inset LatexCommand \index{Index}
+
+\end_inset 
+
+ von 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset 
+
+ über 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset 
+
+ genau Eins
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Man spricht auch von einer maximalen Periode und meint damit 
+\begin_inset Formula $\left|g\right|=\left|\mathbb{F}_{q}^{*}\right|$
+\end_inset 
+
+.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+k=\left|g\right|=q-1\]
+
+\end_inset 
+
+
+\layout Standard
+
+Da auch das Generatorelement 
+\begin_inset Formula $g$
+\end_inset 
+
+ Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+
+\end_inset 
+
+ erfüllt, gilt äquivalent:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+g^{q-1}=1\msp.\label{eq:algebra_generator_cond}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Ähnliches trifft auf die Darstellung von 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset 
+
+ entsprechend Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_subgroup_elem_mod}
+
+\end_inset 
+
+ zu, welche sich folgendermaßen konkretisieren läßt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\mathbb{F}_{q}^{*}=\left\{ \left.g^{\nu}\bmod\left(g^{q-1}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Wie schon früher festgestellt, beschränken sich für einen Körper
+\begin_inset LatexCommand \index{Körper!endlicher}
+
+\end_inset 
+
+ die erlaubten Module 
+\begin_inset Formula $m$
+\end_inset 
+
+ auf Primelemente, speziell wieder im Restklassenkörper 
+\begin_inset Formula $\mathbb{Z}_{m}^{*}$
+\end_inset 
+
+ also auf Primzahlen.
+ Da die Ordnung der multiplikativen Gruppe 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}=\mathbb{Z}_{p}\setminus\{0\}=\{1,2,3,\ldots,p-1\}$
+\end_inset 
+
+ genau 
+\begin_inset Formula $p-1$
+\end_inset 
+
+ ist, kann man mit Hilfe von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:algebra_generator_cond}
+
+\end_inset 
+
+ den kleinen Satz von 
+\noun on 
+Fermat
+\noun default 
+
+\begin_inset LatexCommand \index{Fermat@\noun{Fermat}!kleiner Satz}
+
+\end_inset 
+
+ formulieren.
+\layout Emphasized
+
+
+\begin_inset Formula \begin{equation}
+g^{p-1}\equiv1\pmod p,\qquad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
+
+\end_inset 
+
+
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_zeroes_split}
+
+\end_inset 
+
+Körperelemente als Nullstellen
+\layout Standard
+
+
+\begin_inset LatexCommand \index{Nullstellen}
 
 \end_inset 
 
@@ -3223,12 +3473,7 @@ In Vorbereitung des Abschnittes\SpecialChar ~
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset 
 
- zu, nämlich der Betrachtung über Nullstellen
-\begin_inset LatexCommand \index{Nullstellen}
-
-\end_inset 
-
-.
+ zu, nämlich der Betrachtung über Nullstellen.
  Dazu gehen wir von dem speziellen Polynom 
 \begin_inset Formula $\varphi(x)=x^{q-1}-1$
 \end_inset 
@@ -3237,7 +3482,7 @@ In Vorbereitung des Abschnittes\SpecialChar ~
 \begin_inset Formula $x,\varphi(x)\in\mathbb{F}_{q}^{*}$
 \end_inset 
 
-aus, welches die Nullstellen 
+ aus, welches die Nullstellen 
 \begin_inset ERT
 status Collapsed
 
@@ -3247,7 +3492,12 @@ status Collapsed
 resp
 \end_inset 
 
- Einheitswurzeln 
+ Einheitswurzeln
+\begin_inset LatexCommand \index{Einheitswurzeln}
+
+\end_inset 
+
+ 
 \begin_inset Formula $\alpha$
 \end_inset 
 
@@ -3255,8 +3505,8 @@ resp
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\alpha^{q-1}-1=0\msp.\label{eq:algebra_zeroes_poly}\end{equation}
+\begin_inset Formula \begin{xalignat}{3}
+\alpha^{q-1}-1 & =0 & \alpha^{q-1} & =1 & (\alpha\in\mathbb{F}_{q}^{*})\msp.\label{eq:algebra_zeroes_poly}\end{xalignat}
 
 \end_inset 
 
@@ -3324,7 +3574,7 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 
 
 \begin_inset Formula \[
-\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.(q-1)x^{q-2}\right|_{x=\alpha}=(q-1)\alpha^{-1}\alpha^{q-1}=(q-1)\alpha^{-1}\neq0\]
+\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.(q-1)\, x^{q-2}\right|_{x=\alpha}=(q-1)\,\alpha^{-1}\alpha^{q-1}=(q-1)\,\alpha^{-1}\neq0\]
 
 \end_inset 
 
@@ -3344,7 +3594,7 @@ Mit diesen Erkenntnissen läßt sich für
 
 
 \begin_inset Formula \begin{equation}
-\varphi(x)=x^{q-1}-1=\prod_{r\in\mathbb{F}_{q}^{*}}\left[x-r\right]\label{eq:algebra_group_factors_split}\end{equation}
+\varphi(x)=x^{q-1}-1=\prod_{r\in\mathbb{F}_{q}^{*}}(x-r)\label{eq:algebra_group_factors_split}\end{equation}
 
 \end_inset 
 
@@ -3381,12 +3631,29 @@ resp
 \begin_inset Formula $x-0$
 \end_inset 
 
- mit einbeziehen.
+ mit einbeziehen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Somit bilden die Nullstellen von 
+\begin_inset Formula $\psi(x)=x^{q}-x$
+\end_inset 
+
+ einen endlichen Körper 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset 
+
+.
+\end_inset 
+
+.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\psi(x)=x\cdot\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\label{eq:algebra_field_factors_split}\end{equation}
+\psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\label{eq:algebra_field_factors_split}\end{equation}
 
 \end_inset 
 
@@ -3442,10 +3709,15 @@ Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
 \begin_inset Formula $\mathbb{Z}_{p}^{*}$
 \end_inset 
 
- ergibt folgerichtig zum Satz von 
+ führt folgerichtig zum Satz von 
 \noun on 
 Wilson
 \noun default 
+
+\begin_inset LatexCommand \index{Wilson@\noun{Wilson}!Satz von}
+
+\end_inset 
+
 
 \begin_inset Foot
 collapsed true
@@ -3460,244 +3732,18 @@ Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
  wirklich um eine Primzahl handelt.
 \end_inset 
 
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[II]{Pollard:1998}
+
+\end_inset 
+
 .
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
 (p-1)!\equiv-1\equiv p-1\pmod{p}\label{eq:algebra_lemma_wilson}\end{equation}
-
-\end_inset 
-
-
-\layout Subsubsection
-
-Zyklische Gruppe in 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset LatexCommand \index{Gruppe!zyklische}
-
-\end_inset 
-
-Eine multiplikative Gruppe
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
-
-\end_inset 
-
- 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
-
-, bei der alle Potenzen
-\begin_inset LatexCommand \index{Element!Potenzierung}
-
-\end_inset 
-
- 
-\begin_inset Formula $g^{i}$
-\end_inset 
-
- eines bestimmten Generatorelements
-\begin_inset LatexCommand \index{Element!Generator-}
-
-\end_inset 
-
- 
-\begin_inset Formula $g\in\mathbb{F}_{q}^{*}$
-\end_inset 
-
- genau alle Elemente 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset 
-
- in irgendeiner Abfolge durchläuft,
-\layout Standard
-
-
-\begin_inset Formula \[
-\left\langle g\right\rangle :=\left\{ 1,g^{1},g^{2},g^{3},\ldots,g^{q-1}\right\} =\mathbb{F}_{q}^{*}\]
-
-\end_inset 
-
-
-\layout Standard
-
-bezeichnet man als zyklische Gruppe.
- Die Ordnung dieses sogenannten primitiven
-\begin_inset LatexCommand \index{Element!primitives}
-
-\end_inset 
-
-
-\begin_inset LatexCommand \label{page:algebra_cyclic_primitive}
-
-\end_inset 
-
- (Generator-) Elements muß demzufolge gleich der Ordnung der Gruppe 
-\begin_inset Formula $\mathbb{F}^{*}$
-\end_inset 
-
- sein
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Man kann mit Hilfe von 
-\noun on 
-Euler
-\noun default 
-'s Totient-Funktion nachweisen, daß es in einem 
-\noun on 
-Galois
-\noun default 
--Körper immer mindestens ein erzeugendes (primitives) Element 
-\begin_inset Formula $g$
-\end_inset 
-
- gibt.
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Formula \[
-k=\left|g\right|=q-1\]
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- der Index
-\begin_inset LatexCommand \index{Index}
-
-\end_inset 
-
- von 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
-
- über 
-\begin_inset Formula $\left\langle g\right\rangle $
-\end_inset 
-
- genau Eins
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Man spricht auch von einer maximalen Periode und meint damit 
-\begin_inset Formula $\left|g\right|=\left|\mathbb{F}_{q}^{*}\right|$
-\end_inset 
-
-.
-\end_inset 
-
-.
- Da auch das Generatorelement 
-\begin_inset Formula $g$
-\end_inset 
-
- Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:algebra_ord_elem_root}
-
-\end_inset 
-
- erfüllen muß, gilt äquivalent
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-g^{q-1}-1=0\msp.\label{eq:algebra_generator_cond}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Ähnliches trifft auf die Darstellung von 
-\begin_inset Formula $\left\langle g\right\rangle $
-\end_inset 
-
- entsprechend Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:algebra_subgroup_elem_mod}
-
-\end_inset 
-
- zu, welche sich folgendermaßen konkretisieren läßt:
-\layout Standard
-
-
-\begin_inset Formula \[
-\mathbb{F}_{q}^{*}=\left\{ \left.g^{\nu}\bmod\left(g^{q-1}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\]
-
-\end_inset 
-
-
-\layout Standard
-
-Wie schon früher festgestellt, beschränken sich für einen Körper
-\begin_inset LatexCommand \index{Körper!endlicher}
-
-\end_inset 
-
- die erlaubten Module 
-\begin_inset Formula $m$
-\end_inset 
-
- auf Primelemente, speziell wieder im Restklassenkörper 
-\begin_inset Formula $\mathbb{Z}_{m}^{*}$
-\end_inset 
-
- also auf Primzahlen 
-\begin_inset Formula $p\in\mathbb{Z}$
-\end_inset 
-
-.
- Da die Ordnung der multiplikativen Gruppe 
-\begin_inset Formula $\mathbb{Z}_{p}^{*}=\mathbb{Z}_{p}\setminus\{0\}=\{1,2,3,\ldots,p-1\}$
-\end_inset 
-
- genau 
-\begin_inset Formula $p-1$
-\end_inset 
-
- ist, kann man mit Hilfe von Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:algebra_generator_cond}
-
-\end_inset 
-
- den kleinen Satz von 
-\noun on 
-Fermat
-\noun default 
- formulieren.
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-g^{p-1}\equiv1\pmod p,\quad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
 
 \end_inset 
 
@@ -3798,42 +3844,13 @@ resp
 
 \end_inset 
 
-
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Zum Beispiel erweitert 
-\begin_inset Formula $\mathbb{C}$
-\end_inset 
-
- den Körper 
-\begin_inset Formula $\mathbb{R}$
-\end_inset 
-
-, wobei die Dimension von 
-\begin_inset Formula $\mathbb{C}$
-\end_inset 
-
- als 
-\begin_inset Formula $\mathbb{R}$
-\end_inset 
-
--Vektorraum genau 
-\begin_inset Formula $[\mathbb{C}:\mathbb{R}]=2$
-\end_inset 
-
- ist.
-\end_inset 
-
 .
  Jeder Vektor in 
 \begin_inset Formula $M$
 \end_inset 
 
  besteht entsprechend der Definition des Vektorraumes
-\begin_inset LatexCommand \index{Vektorraum}
+\begin_inset LatexCommand \index{Vektor!-raum}
 
 \end_inset 
 
@@ -3867,17 +3884,25 @@ cf
 
 
 \begin_inset Formula \begin{eqnarray*}
-{[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension auf eine imaginäre Komponente;}\\
+{[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension um eine imaginäre Komponente;}\\
 {[\mathbb{R}:\mathbb{Q}]} & = & \infty,\textrm{ hier sind die rationalen Zahlen noch abzählbar.}\end{eqnarray*}
 
 \end_inset 
 
 
+\layout Subsubsection
+
+Polynomringe
 \layout Standard
 
-Ausgehend von diesen (ersten) Vorbetrachtungen konstruieren wir jetzt einen
- endlichen Polynomring
+Ausgehend von den Vorbetrachtungen konstruieren wir jetzt einen endlichen
+ Polynomring
 \begin_inset LatexCommand \index{Ring!Polynom-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Polynom!-ring}
 
 \end_inset 
 
@@ -3892,7 +3917,7 @@ Ausgehend von diesen (ersten) Vorbetrachtungen konstruieren wir jetzt einen
 .
  
 \begin_inset Formula \begin{align}
-K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\}\right|n\in\mathbb{N},\; a_{i}\in K\label{eq:algebra_residue_poly}\\
+K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
 f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{align}
 
 \end_inset 
@@ -3900,7 +3925,7 @@ f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{
 
 \layout Standard
 
-Darin seinen die üblichen Polynomoperationen, wie Addition und Multiplikation
+Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
  gültig, weshalb man auch von einem Vektorraum der Polynome in der Unbestimmten
  
 \begin_inset Formula $x$
@@ -3915,15 +3940,25 @@ Darin seinen die üblichen Polynomoperationen, wie Addition und Multiplikation
 \begin_inset Formula $a_{n-1}=1$
 \end_inset 
 
-, dann wird das Polynom als normiert bezeichnet, 
+, dann wird das Polynom
+\begin_inset LatexCommand \index{Polynom!monisches}
+
+\end_inset 
+
+ als normiert (monisch) bezeichnet, sonst ist 
 \begin_inset Formula $a_{n-1}x^{n-1}$
 \end_inset 
 
- ist das sogenannte Leitmonom.
+ das sogenannte Leitmonom
+\begin_inset LatexCommand \index{Leitmonom}
+
+\end_inset 
+
+.
 \layout Standard
 
 Wird anschließend eine Restklassendivision
-\begin_inset LatexCommand \index{Restklassendivision}
+\begin_inset LatexCommand \index{Restklassen!-division}
 
 \end_inset 
 
@@ -3954,7 +3989,12 @@ Wird anschließend eine Restklassendivision
 
 , dann bildet die Menge der darin enthaltenen Restklassen wieder einen Restklass
 enring
-\begin_inset LatexCommand \index{Restklassenring}
+\begin_inset LatexCommand \index{Restklassen!-ring}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Ring!Restklassen-}
 
 \end_inset 
 
@@ -4075,7 +4115,7 @@ ie
 \end_inset 
 
  angenommen wird, dann gilt für die Multiplikation 
-\begin_inset Formula $r(x)\cdot g(x)\equiv h(x)\pmod{m(x)}$
+\begin_inset Formula $r(x)\, g(x)\equiv h(x)\pmod{m(x)}$
 \end_inset 
 
  gleichfalls 
@@ -4086,7 +4126,7 @@ ie
 \layout Enumerate
 
 Auch das Assoziativgesetz 
-\begin_inset Formula $r(x)\cdot\left[g(x)\cdot h(x)\right]=\left[r(x)\cdot g(x)\right]\cdot h(x)$
+\begin_inset Formula $r(x)\left[g(x)\, h(x)\right]=\left[r(x)\, g(x)\right]h(x)$
 \end_inset 
 
  ist in einem Restklassenring von Polynomen erfüllt.
@@ -4100,7 +4140,7 @@ Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
 \end_inset 
 
  ebenfalls gilt: 
-\begin_inset Formula $r(x)\cdot\left[g(x)+h(x)\right]=r(x)g(x)+r(x)h(x)$
+\begin_inset Formula $r(x)\left[g(x)+h(x)\right]=r(x)g(x)+r(x)h(x)$
 \end_inset 
 
 .
@@ -4176,25 +4216,8 @@ Es sei nun
 \begin_inset Formula $a$
 \end_inset 
 
- aus dem endlichen Grundkörper
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Häufig handelt es sich bei dem (hier mit 
-\begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
-
- bezeichneten) Grundkörper um 
-\begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset 
-
-.
-\end_inset 
-
- 
-\begin_inset Formula $K:=\mathbb{Z}_{p}$
+ aus dem endlichen Grundkörper 
+\begin_inset Formula $K:=\mathbb{F}_{p}$
 \end_inset 
 
  und 
@@ -4207,14 +4230,14 @@ Häufig handelt es sich bei dem (hier mit
 
 .
  Dann handelt es sich bei 
-\begin_inset Formula $\mathbb{Z}_{p}[x]/m(x)$
+\begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
 \end_inset 
 
  um einen endlichen Körper mit 
 \begin_inset Formula $q=p^{n}$
 \end_inset 
 
- Elementen (Polynomen)\SpecialChar ~
+ Elementen\SpecialChar ~
 
 \begin_inset LatexCommand \cite[3.8]{Bosch:1996}
 
@@ -4222,7 +4245,7 @@ Häufig handelt es sich bei dem (hier mit
 
 .
  Man spricht auch von einem Vektorraum
-\begin_inset LatexCommand \index{Vektorraum}
+\begin_inset LatexCommand \index{Vektor!-raum}
 
 \end_inset 
 
@@ -4235,7 +4258,7 @@ Häufig handelt es sich bei dem (hier mit
 \end_inset 
 
  über 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
 , denn auf diese Weise wird (im Sinne von Abschnitt\SpecialChar ~
@@ -4245,7 +4268,7 @@ Häufig handelt es sich bei dem (hier mit
 \end_inset 
 
 ) jedem Vektor 
-\begin_inset Formula $\mathbf{v}=(v_{1},v_{2},v_{3},\ldots,v_{n})^{T}$
+\begin_inset Formula $\mvec{v}=(v_{1},v_{2},v_{3},\ldots,v_{n})$
 \end_inset 
 
  ein Polynom 
@@ -4262,7 +4285,7 @@ Häufig handelt es sich bei dem (hier mit
 \end_inset 
 
  Tupel des Vektors 
-\begin_inset Formula $\mathbf{v}$
+\begin_inset Formula $\mvec{v}$
 \end_inset 
 
  in der Art 
@@ -4270,60 +4293,52 @@ Häufig handelt es sich bei dem (hier mit
 \end_inset 
 
 .
- Die Polynome 
+ Die Potenzen 
 \begin_inset Formula $x^{0},x^{1},x^{2},\ldots,x^{n-2},x^{n-1}$
 \end_inset 
 
- bilden demzufolge die Basis des Vektorraumes 
+ bilden die (Polynom-) Basis
+\begin_inset LatexCommand \index{Polynom!-basis}
+
+\end_inset 
+
+ des Vektorraumes 
 \begin_inset Formula $V$
 \end_inset 
 
  über 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
 .
- Entsprechend ist die Dimension des Erweiterungskörpers 
+ Entsprechend ist die Dimension
+\begin_inset LatexCommand \index{Vektor!-raum!Dimension}
+
+\end_inset 
+
+ des Erweiterungskörpers 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset 
 
  über dem Grundkörper 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
  genau 
-\begin_inset Formula $\left[\mathbb{F}_{q}:\mathbb{Z}_{p}\right]=n$
+\begin_inset Formula $[\mathbb{F}_{q}:\mathbb{Z}_{p}]=n$
 \end_inset 
 
 .
-\layout Standard
-
-Ein Erweiterungskörper schafft somit die Möglichkeit, daß auch Potenzen
- von Primelementen noch als Körperordnung zulässig sind.
- Die entsprechende Notation für einen solchen Körper 
-\begin_inset Formula $\mathbb{F}_{q}$
+ Als Notation für einen solchen Körper wird deshalb auch 
+\begin_inset Formula $\mathbb{F}_{p}^{n}$
 \end_inset 
 
- ist deshalb auch 
+ verwendet, häufiger allerdings 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset 
 
  oder 
-\begin_inset Formula $\mathbb{F}_{p}^{n}$
-\end_inset 
-
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- 
-\begin_inset Formula $\GF\left(q^{n}\right)$
+\begin_inset Formula $\GF\left(p^{n}\right)$
 \end_inset 
 
 .
@@ -4337,7 +4352,7 @@ Mit diesen Vorbemerkungen lassen sich alle Aussagen zu Restklassenkörpern,
 \end_inset 
 
  allgemein formuliert wurden, auf den Erweiterungskörper 
-\begin_inset Formula $\mathbb{F}_{q}$
+\begin_inset Formula $\mathbb{F}_{q=p^{n}}$
 \end_inset 
 
  anwenden:
@@ -4352,13 +4367,7 @@ Das Modul
 \begin_inset Formula $m$
 \end_inset 
 
- (von Abschnitt\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:algebra_field}
-
-\end_inset 
-
-) wird nun als das irreduzible Polynom 
+ (Primelement) wird nun als das irreduzible Polynom 
 \begin_inset Formula $m(x)$
 \end_inset 
 
@@ -4366,7 +4375,7 @@ Das Modul
 \layout Enumerate
 
 Die Restklassendivision
-\begin_inset LatexCommand \index{Restklassendivision}
+\begin_inset LatexCommand \index{Restklassen!-division}
 
 \end_inset 
 
@@ -4382,13 +4391,30 @@ Die Restklassendivision
 \begin_inset Formula $r(x)$
 \end_inset 
 
- führt.
+ führt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Menge der Elemente 
+\begin_inset Formula $r$
+\end_inset 
+
+ umfaßt alle Polynome mit einem Grad kleiner als 
+\begin_inset Formula $n$
+\end_inset 
+
+.
+\end_inset 
+
+.
  Die Kennzeichung der zu 
 \begin_inset Formula $r(x)$
 \end_inset 
 
  gehörenden Restklasse
-\begin_inset LatexCommand \index{Restklasse}
+\begin_inset LatexCommand \index{Restklassen}
 
 \end_inset 
 
@@ -4445,7 +4471,7 @@ resp
 \end_inset 
 
  
-\begin_inset Formula $x^{0}=1$
+\begin_inset Formula $e_{(\cdot)}=x^{0}=1$
 \end_inset 
 
 .
@@ -4471,25 +4497,11 @@ Die Anzahl der Elemente
 \end_inset 
 
  im Restklassenkörper 
-\begin_inset Formula $\mathbb{F}_{q}:=\mathbb{Z}_{p}[x]/m(x)$
+\begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
 \end_inset 
 
  ist aufgrund der Anzahl von möglichen Koeffizientenkombinationen 
 \begin_inset Formula $p^{n}$
-\end_inset 
-
-, 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-ie
-\end_inset 
-
- 
-\begin_inset Formula $\left|\mathbb{F}_{q}\right|=p^{n}$
 \end_inset 
 
 .
@@ -4497,13 +4509,59 @@ ie
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset 
 
- handelt es sich folglich um ein 
+ handelt es sich folglich um einen 
+\noun on 
+Galois
+\noun default 
+-Körper
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
+ von Primelementen noch als Körperordnung zulässig sind.
+\end_inset 
+
+ 
 \begin_inset Formula $\GF\left(p^{n}\right)$
 \end_inset 
 
-, wobei dessen multiplikative Gruppe
+.
+ Wegen 
+\begin_inset Formula $\left|\mathbb{F}_{q}\right|=q=p^{n}$
+\end_inset 
+
+ hat dessen multiplikative Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Welche das Nullelement 
+\begin_inset Formula $\mvec{r}=(0,0,\ldots,0)$
+\end_inset 
+
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ 
+\begin_inset Formula $r(x)=0$
+\end_inset 
+
+ ausschließt.
 \end_inset 
 
  
@@ -4512,15 +4570,6 @@ ie
 
  die Ordnung 
 \begin_inset Formula $p^{n}-1$
-\end_inset 
-
- hat
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Das Nullelement muß man wie gewohnt wieder ausschließen.
 \end_inset 
 
 .
@@ -4569,7 +4618,7 @@ resp
 \newline 
 
 \begin_inset Formula \[
-\left[r(x)\right]^{k}-1\equiv0\pmod m(x)\msp.\]
+\left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\msp.\]
 
 \end_inset 
 
@@ -4586,7 +4635,7 @@ Lagrange
 \begin_inset Formula $k$
 \end_inset 
 
- des Elements wieder die der multiplikativen Gruppe
+ des Elements die der multiplikativen Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
 \end_inset 
@@ -4606,7 +4655,7 @@ ie
 \end_inset 
 
  
-\begin_inset Formula $q-1=p^{n}-1=i\cdot k$
+\begin_inset Formula $q-1=p^{n}-1=i\, k$
 \end_inset 
 
  und demzufolge ist
@@ -4622,6 +4671,11 @@ ie
 
 Jedes erzeugende (primitive) Element
 \begin_inset LatexCommand \index{Element!primitives}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Element!Generator-}
 
 \end_inset 
 
@@ -4643,17 +4697,44 @@ Jedes erzeugende (primitive) Element
 
 \end_inset 
 
-, hat also die Ordnung 
+ (Index 
+\begin_inset Formula $i=1$
+\end_inset 
+
+), hat also die Ordnung 
 \begin_inset Formula $\left|\left\langle g(x)\right\rangle \right|=p^{n}-1$
 \end_inset 
 
 .
  Es ist damit geeignet, als Basiselement für die Erzeugung aller anderen
  Elemente 
-\begin_inset Formula $r(x)\in\mathbb{F}_{q}$
+\begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
 \end_inset 
 
  verwendet zu werden.
+ Nimmt man das Nullelement
+\begin_inset LatexCommand \index{Element!Null-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $0=g^{q}$
+\end_inset 
+
+ sowie das Einselement
+\begin_inset LatexCommand \index{Element!Eins-}
+
+\end_inset 
+
+ 
+\begin_inset Formula $1=g^{q-1}$
+\end_inset 
+
+ hinzu, so gilt für die Menge der Elemente 
+\begin_inset Formula $\mathbb{F}_{q}=\{0,1,g^{1},g^{2},g^{3},\ldots,g^{p^{n}-3},g^{p^{n}-2}\}$
+\end_inset 
+
+.
 \layout Enumerate
 
 Aus Punkt\SpecialChar ~
@@ -4669,7 +4750,7 @@ Aus Punkt\SpecialChar ~
 \end_inset 
 
 ) schlußfolgern, daß für jedes Element 
-\begin_inset Formula $r(x)\in\mathbb{F}_{q}$
+\begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
 \end_inset 
 
  das Modul 
@@ -4681,7 +4762,7 @@ Aus Punkt\SpecialChar ~
 \end_inset 
 
  ist, also die Zerlegung 
-\begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\cdot m(x)$
+\begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\, m(x)$
 \end_inset 
 
  hat.
@@ -4697,30 +4778,23 @@ Aus Punkt\SpecialChar ~
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset 
 
-, so erhält man die bekannten Beziehungen
-\begin_inset Foot
-collapsed true
+, so erhält man die Beziehungen:
+\newline 
 
-\layout Standard
+\begin_inset Formula \begin{eqnarray*}
+x^{q-1}-1 & = & h(x)\, m(x)\\
+x^{q-1}-1 & \equiv & 0\pmod{m(x)}\\
+x^{q}-x & \equiv & 0\pmod{m(x)}\msp,\end{eqnarray*}
 
-Welche auch die Äquivalenz 
-\begin_inset Formula $h(x)\cdot m(x)\equiv0\pmod{x^{q-1}-1}$
+\end_inset 
+
+
+\newline 
+welche auch die Kongruenz 
+\begin_inset Formula $h(x)\, m(x)\equiv0\pmod{x^{q-1}-1}$
 \end_inset 
 
  rechtfertigen.
-\end_inset 
-
-:
-\newline 
-
-\begin_inset Formula \begin{eqnarray}
-x^{q-1}-1 & = & h(x)\cdot m(x)\\
-x^{q-1}-1 & \equiv & 0\pmod{m(x)}\\
-x^{q} & \equiv & x\pmod{m(x)}\end{eqnarray}
-
-\end_inset 
-
-
 \layout Subsubsection
 
 Zerfällungskörper
@@ -4758,13 +4832,18 @@ Schnorr
 
 \end_inset 
 
+
+\begin_inset LatexCommand \index{Zerfällungskörper}
+
+\end_inset 
+
 Nach dem Hauptsatz der elementaren Zahlentheorie kann man für jede natürliche
  Zahl eine eindeutigen Primfaktorzerlegung der Form
 \layout Standard
 
 
 \begin_inset Formula \[
-p_{1}^{n_{1}}\cdot p_{2}^{n_{2}}\cdot p_{3}^{n_{3}}\cdot\ldots\cdot p_{k}^{n_{k}}\]
+m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\cdots\]
 
 \end_inset 
 
@@ -4772,58 +4851,105 @@ p_{1}^{n_{1}}\cdot p_{2}^{n_{2}}\cdot p_{3}^{n_{3}}\cdot\ldots\cdot p_{k}^{n_{k}
 \layout Standard
 
 finden.
- Gleiches trifft auch für Polynome zu, nur daß es sich statt um Primzahlen
- um irreduzible Polynome handelt
+ Gleiches trifft auch für Polynome in 
+\begin_inset Formula $\mathbb{F}_{p}[x]$
+\end_inset 
+
+ zu, nur daß es sich um irreduzible Polynome anstatt Primzahlen handelt.
+\layout Standard
+
+
+\begin_inset Formula \[
+f(x)=\left[m_{1}(x)\right]^{e_{1}}\,\left[m_{2}(x)\right]^{e_{2}}\left[m_{3}(x)\right]^{e_{3}}\cdots\]
+
+\end_inset 
+
+
+\layout Standard
+
+Jedes der irreduziblen Polynome
 \begin_inset Foot
 collapsed true
 
 \layout Standard
 
-Von denen einige sogar primitiv sein können.
+Die Indizierung mit 
+\begin_inset Formula $i$
 \end_inset 
 
-.
- Jedes dieser Polynome hat eine vom Grad abhängige Anzahl von Nullstellen
+ wird im weiteren wieder weggelassen, da wir uns auf die Betrachtung einer
+ Funktion 
+\begin_inset Formula $m(x):=m_{i}(x)$
+\end_inset 
+
+ beschränken.
+ Man sollte sich aber immer bewußt sein, daß die Variablen 
+\begin_inset Formula $n$
+\end_inset 
+
+, 
+\begin_inset Formula $q$
+\end_inset 
+
+ sowie die abgeleiteten Größen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Funktionen 
+\begin_inset Formula $\psi(x)$
+\end_inset 
+
+ abhängig von 
+\begin_inset Formula $m(x)$
+\end_inset 
+
+ variieren.
+\end_inset 
+
  
+\begin_inset Formula $m_{i}(x)$
+\end_inset 
+
+ hat eine vom jeweiligen Grad 
+\begin_inset Formula $n$
+\end_inset 
+
+ abhängige Anzahl von Nullstellen 
 \begin_inset Formula $\alpha$
 \end_inset 
 
 , die entweder im Grundkörper 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
- und/oder in einem Erweiterungskörper 
-\begin_inset Formula $\mathbb{F}_{q}$
+ oder (sämtlich) in einem zugehörigen Erweiterungskörper 
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset 
 
- liegen
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Die Betrachtung der Nullstellen ist typisch für die polynomiale Repräsentation
- (im Gegensatz zur Normalbasisdarstellung
-\begin_inset LatexCommand \index{Normalbasis}
-
+ liegen.
+ Nullstellen im Grundkörper, von denen 
+\begin_inset Formula $f(x)$
 \end_inset 
 
-) des Erweiterungskörpers.
+ maximal 
+\begin_inset Formula $p=|\mathbb{F}_{p}|$
 \end_inset 
 
-.
-\layout Standard
-
-Speziell das Polynom 
-\begin_inset Formula $\psi(x)=x^{q}-x$
+ besitzen kann, lassen sich immer als einfache Faktoren der Art 
+\begin_inset Formula $m(x)=x-\alpha$
 \end_inset 
 
  mit 
-\begin_inset Formula $q=p^{n}$
+\begin_inset Formula $\alpha\in\mathbb{F}_{p}$
 \end_inset 
 
-, dessen Linearfaktordarstellung wir schon im Zusammenhang mit der multiplikativ
-en Gruppe von endlichen Körpern betrachtet haben (
+ darstellen (
 \begin_inset ERT
 status Collapsed
 
@@ -4833,72 +4959,53 @@ status Collapsed
 cf
 \end_inset 
 
- Seite\SpecialChar ~
+ Beispiel-Faktorisierung von 
+\begin_inset Formula $x^{3}-1$
+\end_inset 
 
-\begin_inset LatexCommand \pageref{page:algebra_zeroes_split}
+ in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_extfield_example}
 
 \end_inset 
 
-), ist in dieser Hinsicht von Bedeutung.
- Es hat (da vom Grad 
-\begin_inset Formula $q=p^{n}$
+).
+ Liegen dagegen alle 
+\begin_inset Formula $n$
 \end_inset 
 
-) genau 
-\begin_inset Formula $p^{n}$
+ Wurzeln von 
+\begin_inset Formula $m(x)$
 \end_inset 
 
- Nullstellen 
-\begin_inset Formula $\alpha$
-\end_inset 
-
-, von denen maximal 
-\begin_inset Formula $p=\left|\mathbb{Z}_{p}\right|$
-\end_inset 
-
- im Grundkörper liegen können.
- Alle anderen Nullstellen müssen deshalb aus dem Erweiterungskörper 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
-
- stammen.
- In Verbindung mit der, auf dieser Grundlage möglichen Linearfaktorzerlegung
- von 
-\begin_inset Formula $\psi(x)$
-\end_inset 
-
-, nennt man den Erweiterungskörper 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
-
- auch den kleinsten Körper über den 
-\begin_inset Formula $\psi(x)\in\mathbb{Z}_{p}[x]$
-\end_inset 
-
- nach Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:algebra_group_factors_split}
-
-\end_inset 
-
- vollständig in Linearfaktoren zerfällt
+ in einem Erweiterungskörper, dann muß es sich um ein irreduzibles Polynom
+ (höheren Grades) handeln
 \begin_inset Foot
 collapsed true
 
 \layout Standard
 
-Man sagt auch 
-\begin_inset Formula $\mathbb{F}_{q}$
+Und umgekehrt, denn 
+\begin_inset Formula $m(x)$
 \end_inset 
 
- sei ein Zerfällungskörper von 
-\begin_inset Formula $x^{q}-x$
+ ist ja im Grundkörper nicht weiter faktorisierbar.
 \end_inset 
 
 .
+ Ein solcher Körper besteht aus 
+\begin_inset Formula $p^{n}$
 \end_inset 
 
-, 
+ Elementen, welche die 
+\begin_inset Formula $q=p^{n}$
+\end_inset 
+
+ Nullstellen der zugeordneten Funktion 
+\begin_inset Formula $\psi(x)=x^{q}-x$
+\end_inset 
+
+ darstellen (
 \begin_inset ERT
 status Collapsed
 
@@ -4908,76 +5015,111 @@ status Collapsed
 cf
 \end_inset 
 
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \vref{sec:algebra_zeroes_split}
+
+\end_inset 
+
+).
  
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
+\end_inset 
+
+ nennt man deshalb auch den kleinsten Körper über den 
+\begin_inset Formula $\psi(x)\in\mathbb{F}_{p}[x]$
+\end_inset 
+
+ vollständig in Linearfaktoren zerfällt\SpecialChar ~
+
 \begin_inset LatexCommand \cite[4.5]{Bosch:1996}
 
 \end_inset 
 
+ 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ kürzer: 
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
+\end_inset 
+
+ sei der Zerfällungskörper von 
+\begin_inset Formula $x^{q}-x$
+\end_inset 
+
 .
 \layout Standard
 
 
 \begin_inset Formula \[
-\psi(x)=x^{q}-x=x\cdot\varphi(x)=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha)\msp.\]
+\psi(x)=x^{q}-x=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha)\]
 
 \end_inset 
 
 
 \layout Standard
 
-Wie eingangs erwähnt kann man 
-\begin_inset Formula $\varphi(x)=x^{q-1}-1$
+Ein weiteres Charakteristikum des Zerfällungskörpers 
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset 
 
- nun in irreduzible Polynome 
-\begin_inset Formula $f(x)$
-\end_inset 
-
- zerlegen,
-\layout Standard
-
-
-\begin_inset Formula \[
-\varphi(x)=\prod f(x),\qquad f(x)=\sum_{\nu=0}^{d}a_{\nu}x^{\nu}\]
+ sind die konjugierten
+\begin_inset LatexCommand \index{Nullstellen!konjugierte}
 
 \end_inset 
 
+ Nullstellen, 
+\begin_inset ERT
+status Collapsed
 
 \layout Standard
 
-wobei jedem dieser Polynome abhängig von dessen Grad genau 
-\begin_inset Formula $d$
+\backslash 
+ie
 \end_inset 
 
- Nullstellen 
-\begin_inset Formula $\alpha$
-\end_inset 
-
- zuzuordnen sind.
-\layout Standard
-
-Interessant ist nun, daß wenn man die Nullstelle 
+ bei Kenntnis einer Nullstelle 
 \begin_inset Formula $\alpha\neq0$
 \end_inset 
 
- eines irreduziblen Polynoms 
-\begin_inset Formula $f(\alpha)=0$
+ des irreduziblen Polynoms 
+\begin_inset Formula $m(\alpha)=0$
 \end_inset 
 
- kennt, die restlichen 
-\begin_inset Formula $d-1$
+ sind die restlichen 
+\begin_inset Formula $n-1$
 \end_inset 
 
- Nullstellen derselben Funktion 
-\begin_inset Formula $f(x)$
+ Nullstellen genau die Potenzen 
+\begin_inset Formula $\alpha^{p},\alpha^{p^{2}},\ldots,\alpha^{p^{n-2}},\alpha^{p^{n-1}}$
 \end_inset 
 
- genau die Potenzen 
-\begin_inset Formula $\alpha^{p},\alpha^{p^{2}},\ldots,\alpha^{p^{d-2}},\alpha^{p^{d}}=\alpha$
+.
+ Das irreduzible Polynom 
+\begin_inset Formula $m(x)$
 \end_inset 
 
- sind.
- Der (induktive) Beweis dieses Satzes geht von der Hilfsformel
+ zerfällt also bei Kenntnis nur 
+\emph on 
+einer
+\emph default 
+ Nullstelle 
+\begin_inset Formula $\alpha$
+\end_inset 
+
+ vollständig in seine 
+\begin_inset Formula $n$
+\end_inset 
+
+ Linearfaktoren.
+ Der induktive Beweis dieses Satzes geht von der Hilfsformel
 \layout Standard
 
 
@@ -4989,8 +5131,11 @@ Interessant ist nun, daß wenn man die Nullstelle
 
 \layout Standard
 
-aus, welche berücksichtigt, daß mit 
-\begin_inset Formula $b,c\in\mathbb{Z}_{p}$
+aus, welche berücksichtigt:
+\layout Itemize
+
+daß mit 
+\begin_inset Formula $b,c\in\mathbb{F}_{p}$
 \end_inset 
 
  der Binomialkoeffizient 
@@ -4998,7 +5143,11 @@ aus, welche berücksichtigt, daß mit
 \end_inset 
 
  für 
-\begin_inset Formula $k\neq0,p$
+\begin_inset Formula $k\neq0$
+\end_inset 
+
+, 
+\begin_inset Formula $p!$
 \end_inset 
 
  immer durch 
@@ -5009,18 +5158,34 @@ aus, welche berücksichtigt, daß mit
 \begin_inset Formula $\binom{p}{k}\bmod p=0$
 \end_inset 
 
- gilt.
- Außerdem stützt er sich auf die Tatsache, daß im Grundkörper 
-\begin_inset Formula $\mathbb{Z}_{p}$
+ gilt
+\layout Itemize
+
+und im Grundkörper 
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
- jedes Element die Relation 
+ jedes Element 
+\begin_inset Formula $a$
+\end_inset 
+
+ die Relation 
 \begin_inset Formula $a^{p}=a$
 \end_inset 
 
- erfüllt (siehe Gleichung\SpecialChar ~
+ erfüllt (
+\begin_inset ERT
+status Collapsed
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_cyclic}
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_galois_multgrp}
 
 \end_inset 
 
@@ -5029,7 +5194,7 @@ aus, welche berücksichtigt, daß mit
 
 
 \begin_inset Formula \[
-f\left(\alpha^{p}\right)=\sum_{\nu=0}^{d}a_{\nu}\alpha^{\nu p}=\sum_{\nu=0}^{d}a_{\nu}^{p}\alpha^{\nu p}=\sum_{\nu=0}^{d}\left(a_{\nu}\alpha^{\nu}\right)^{p}=\left(\sum_{\nu=0}^{d}a_{\nu}\alpha^{\nu}\right)^{p}=\left[f(\alpha)\right]^{p}=0\]
+m\left(\alpha^{p}\right)=\sum_{i=0}^{n}a_{i}\alpha^{ip}=\sum_{i=0}^{n}a_{i}^{p}\alpha^{ip}=\sum_{i=0}^{n}\left(a_{i}\alpha^{i}\right)^{p}=\left(\sum_{i=0}^{n}a_{i}\alpha^{i}\right)^{p}=\left[m(\alpha)\right]^{p}=0\]
 
 \end_inset 
 
@@ -5037,10 +5202,6 @@ f\left(\alpha^{p}\right)=\sum_{\nu=0}^{d}a_{\nu}\alpha^{\nu p}=\sum_{\nu=0}^{d}a
 \layout Standard
 
 Aus diesem Grund läßt sich für jedes der irreduziblen Polynome 
-\begin_inset Formula $f(x)$
-\end_inset 
-
- und insbesondere auch 
 \begin_inset Formula $m(x)$
 \end_inset 
 
@@ -5051,7 +5212,7 @@ collapsed true
 \layout Standard
 
 Das irreduzible Polynom 
-\begin_inset Formula $f(x)$
+\begin_inset Formula $m(x)$
 \end_inset 
 
  wird auch Minimalpolynom
@@ -5074,13 +5235,13 @@ Das irreduzible Polynom
 \end_inset 
 
  über 
-\begin_inset Formula $\mathbb{Z}_{p}$
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset 
 
  genannt.
  Bei einer Minimalfunktion handelt es sich allgemein um ein normiertes Polynom
  
-\begin_inset Formula $f(x)\in\mathbb{Z}_{p}[x]$
+\begin_inset Formula $m(x)\in\mathbb{F}_{p}[x]$
 \end_inset 
 
  
@@ -5092,7 +5253,7 @@ kleinsten
 \end_inset 
 
  die Gleichung 
-\begin_inset Formula $f(\alpha)=0$
+\begin_inset Formula $m(\alpha)=0$
 \end_inset 
 
  erfüllt\SpecialChar ~
@@ -5104,26 +5265,67 @@ kleinsten
 .
 \end_inset 
 
-.
+:
 \layout Standard
 
 
 \begin_inset Formula \[
-f(x)=\prod_{\nu=0}^{d-1}\left(x-\alpha^{p^{\nu}}\right)\]
+m(x)=\prod_{\nu=0}^{n-1}\left(x-\alpha^{p^{\nu}}\right)\msp.\]
 
-\end_inset 
-
-
-\layout Subsubsection
-
-Erweiterungskörper 
-\begin_inset Formula $\mathbb{Z}_{2^{n}}$
 \end_inset 
 
 
 \layout Standard
 
-Für eine Erweiterung des Primzahlenkörpers 
+Die Nullstellen 
+\begin_inset Formula $\alpha^{p^{\nu}}$
+\end_inset 
+
+ kann man (wegen ihrer linearen Unabhängigkeit) verwenden, um statt einer
+ Polynombasis
+\begin_inset LatexCommand \index{Vektor!-raum!Basis}
+
+\end_inset 
+
+ eine sogenannte Normalbasis
+\begin_inset LatexCommand \index{Normalbasis}
+
+\end_inset 
+
+ des Vektorraumes (der Dimension 
+\begin_inset Formula $n$
+\end_inset 
+
+) über 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset 
+
+ zu definieren.
+\layout Subsubsection
+
+
+\begin_inset LatexCommand \label{sec:algebra_extfield_example}
+
+\end_inset 
+
+Erweiterungskörper 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+texorpdfstring{$
+\backslash 
+mathbb{Z}_2^n$}{
+\backslash 
+latex{Z(2**n)}}
+\end_inset 
+
+
+\layout Standard
+
+Für eine Erweiterung des Primkörpers 
 \begin_inset Formula $\mathbb{Z}_{2}$
 \end_inset 
 
@@ -5141,7 +5343,7 @@ Für eine Erweiterung des Primzahlenkörpers
 
  notwendig.
  Der dadurch entstehende Körper 
-\begin_inset Formula $\mathbb{Z}_{2^{n}}$
+\begin_inset Formula $\mathbb{Z}_{2}^{n}$
 \end_inset 
 
  soll am Beispiel des Polynoms 
@@ -5241,7 +5443,7 @@ Außerdem sind alle Elemente (abgesehen von
 \end_inset 
 
 ) wirklich Nullstellen des Polynoms 
-\begin_inset Formula $x^{q-1}-1=x^{3}-1=m(x)\cdot(x-1)$
+\begin_inset Formula $x^{q-1}-1=x^{3}-1=(x-1)\, m(x)$
 \end_inset 
 
 .
@@ -5263,8 +5465,8 @@ Außerdem sind alle Elemente (abgesehen von
 
 \begin_inset Formula \begin{align*}
 \left[r_{1}(x)\right]^{3}-1 & =0\\
-\left[r_{2}(x)\right]^{3}-1 & =x^{3}-1=(x-1)\cdot\left(x^{2}+x+1\right)\equiv0\pmod{x^{2}+x+1}\\
-\left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\cdot\left(x^{2}+x+1\right)\equiv0\pmod{x^{2}+x+1}\end{align*}
+\left[r_{2}(x)\right]^{3}-1 & =x^{3}-1=(x-1)\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\\
+\left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\end{align*}
 
 \end_inset 
 
@@ -5277,7 +5479,7 @@ Außerdem sind alle Elemente (abgesehen von
 
 \end_inset 
 
-) auch genau das neutrale Element 
+) genau das neutrale Element 
 \begin_inset Formula $e_{(\cdot)}$
 \end_inset 
 
@@ -7473,7 +7675,7 @@ textsf{#1}}}
 \begin_inset Formula $\mathbb{C}$
 \end_inset 
 
- Komplexe Zahlen
+ Körper der komplexen Zahlen
 \layout Description
 
 
@@ -7535,7 +7737,11 @@ textsf{#1}}}
 \begin_inset Formula $\GF(q)$
 \end_inset 
 
- Galois-Field mit 
+ 
+\noun on 
+Galois
+\noun default 
+-Field mit 
 \begin_inset Formula $q$
 \end_inset 
 
@@ -7573,11 +7779,11 @@ textsf{#1}}}
 \layout Description
 
 
-\begin_inset Formula $\mathbb{F}^{*}$
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset 
 
- Multiplikative Gruppe des Körpers 
-\begin_inset Formula $\mathbb{F}$
+ Multiplikative Gruppe des endlichen Körpers 
+\begin_inset Formula $\mathbb{F}_{q}$
 \end_inset 
 
 
@@ -7605,7 +7811,7 @@ textsf{#1}}}
 \begin_inset Formula $\mathbb{N}$
 \end_inset 
 
- Natürliche Zahlen
+ Menge der natürlichen Zahlen
 \layout Description
 
 
@@ -7623,29 +7829,39 @@ textsf{#1}}}
 \begin_inset Formula $p$
 \end_inset 
 
- Primzahl
+ Primzahl (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Primelement)
 \layout Description
 
 
 \begin_inset Formula $\mathbb{P}$
 \end_inset 
 
- Primzahlen
+ Menge der Primzahlen
 \layout Description
 
 
 \begin_inset Formula $\mathbb{Q}$
 \end_inset 
 
- Rationale Zahlen
+ Körper der rationalen Zahlen
 \layout Description
 
 
-\begin_inset Formula $\rcls{r}{n}$
+\begin_inset Formula $\rcls{r}{m}$
 \end_inset 
 
  Restklasse zum Modul 
-\begin_inset Formula $n$
+\begin_inset Formula $m$
 \end_inset 
 
 
@@ -7655,7 +7871,7 @@ textsf{#1}}}
 \begin_inset Formula $\mathbb{R}$
 \end_inset 
 
- Reelle Zahlen
+ Körper der reellen Zahlen
 \layout Description
 
 
@@ -7688,7 +7904,7 @@ textsf{#1}}}
 \end_inset 
 
  Polynomring in der Variablen 
-\begin_inset Formula $X$
+\begin_inset Formula $x$
 \end_inset 
 
 
@@ -7698,7 +7914,7 @@ textsf{#1}}}
 \begin_inset Formula $\mathbb{Z}$
 \end_inset 
 
- Ganze Zahlen
+ Ring der ganzen Zahlen
 \layout Description
 
 
@@ -7781,6 +7997,17 @@ ie
 \layout Description
 
 
+\begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
+\end_inset 
+
+ Polynom-Restklassenring auf dem Grundkörper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset 
+
+
+\layout Description
+
+
 \begin_inset Formula $V$
 \end_inset 
 
@@ -7788,14 +8015,14 @@ ie
 \layout Description
 
 
-\begin_inset Formula $\mathbf{v}$
+\begin_inset Formula $\mvec{v}$
 \end_inset 
 
  Vektor
 \layout Description
 
 
-\begin_inset Formula $\mathbf{v}^{T}$
+\begin_inset Formula $\mvec{v}^{T}$
 \end_inset 
 
  Transponierter Vektor

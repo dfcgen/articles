@@ -1,27 +1,23 @@
 #LyX 1.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 221
-\textclass article
+\textclass scrartcl
 \begin_preamble
-\input{text-inc}
-\input{pdf-inc}
-\input{math-inc}
-
-\usepackage{html}
-\usepackage{multicol}
+\input{text-inc.tex}
+\input{pdf-inc.tex}
+\input{math-inc.tex}
 
 \DeclareMathOperator{\crc}{CRC}
-
-%% \usepackage{chapterbib}
 \end_preamble
+\options reqno
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \float_placement htbp
 \paperfontsize default
-\spacing single 
+\spacing onehalf 
 \papersize a4paper
-\paperpackage a4wide
+\paperpackage widemarginsa4
 \use_geometry 0
 \use_amsmath 1
 \use_natbib 0
@@ -35,7 +31,19 @@
 \quotes_times 2
 \papercolumns 1
 \papersides 1
-\paperpagestyle fancy
+\paperpagestyle headings
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+$Id: crc.lyx,v 1.3 2005-12-21 16:03:28 ralf Exp $
+\end_inset 
+
 
 \layout Standard
 
@@ -44,22 +52,7 @@
 status Collapsed
 
 \layout Standard
-%% Document Info
-\layout Standard
-%% Needs some macro definitions from include files in ~/.TeX
-\layout Standard
-%% 
-\layout Standard
-%% $Id: crc.lyx,v 1.2 2005-05-01 07:46:05 ralf Exp $
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset ERT
-status Open
-
+%% HTML-Setup
 \layout Standard
 
 \backslash 
@@ -88,6 +81,16 @@ htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="CRC Algebra">}
     
 \backslash 
 germanTeX
+\newline 
+
+\newline 
+    
+\backslash 
+renewcommand{
+\backslash 
+qedsymbol}{
+\backslash 
+Box}
 \newline 
 
 \newline 
@@ -159,7 +162,7 @@ Frame Check Sequence
 \emph on 
 Error Detection Code
 \emph default 
- (FCS) angewendet wird.
+ (EDC) angewendet wird.
 \layout Standard
 
 Das CRC-Verfahren ist eine relativ leistungsfähige (als auch einfach zu
@@ -174,7 +177,7 @@ CRC
 \emph default 
  herstellen\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Born:Toolbox:1989}
+\begin_inset LatexCommand \cite{Sweeney:1992,Peterson:1972,Born:Toolbox:1989}
 
 \end_inset 
 
@@ -216,15 +219,27 @@ collapsed true
 
 \layout Standard
 
-In der Sprachweise der Mathematiker auch Galois-Feld 
-\begin_inset Formula $GF(2)$
+In der Sprachweise der Mathematiker auch 
+\noun on 
+Galois
+\noun default 
+-Feld genannt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
 \end_inset 
 
- genannt: 
-\begin_inset Formula $P(x)\in GF(2)$
+ insbesondere Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_residue_classes}
+
 \end_inset 
 
-.
+ zur Theorie).
 \end_inset 
 
 .
@@ -244,15 +259,10 @@ In der Sprachweise der Mathematiker auch Galois-Feld
 \begin_inset Formula $1$
 \end_inset 
 
- an.
-\layout Standard
+ an
+\begin_inset Foot
+collapsed true
 
-Ein solches Polynom heißt irreduzibel über 
-\begin_inset Formula $\mathbb{F}_{2^{n}}$
-\end_inset 
-
-, wenn es sich nicht als Produkt von Polynomen kleineren Grades darstellen
- läßt.
 \layout Standard
 
 Bei Berechnungen muß im Körper 
@@ -261,26 +271,18 @@ Bei Berechnungen muß im Körper
 
  muß in diesem Zusamenhang immer berücksichtigt werden, daß statt der üblichen
  Addition eine modulo-2 Addition (entspricht Exklusiv-Oder) ausgeführt wird.
-\layout Section
-
-Erzeugung zyklischer Kodes
-\layout Standard
-
-Zyklische Kodes gehören zu den linearen Block-Kodes.
- Sie haben die bemerkenswerte Eigenschaft, daß man ausgehend von einem bekannten
- Kodewort alle anderen durch zyklische Verschiebung und Addition bestimmen
- kann\SpecialChar ~
-
-\begin_inset LatexCommand \cite{Sweeney:1992}
-
 \end_inset 
 
 .
- Bezeichnet man mit 
-\begin_inset Formula $n$
+ Ein solches Polynom heißt irreduzibel über 
+\begin_inset Formula $\mathbb{F}_{2^{n}}$
 \end_inset 
 
- die Länge (in Bit) eines Kodewortes, 
+, wenn es sich nicht als Produkt von Polynomen kleineren Grades darstellen
+ läßt.
+\layout Section
+
+Erzeugung zyklischer Kodes
 \layout Standard
 
 Der zu sichernde Datenblock mit einer Länge von 
@@ -318,16 +320,7 @@ Bit nach links verschoben.
 \begin_inset Formula $\GF(2)$
 \end_inset 
 
- dividiert
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Auch binäre Polynomarithmetik genannt.
-\end_inset 
-
-.
+ dividiert.
 \layout Standard
 
 
@@ -351,7 +344,7 @@ R(x)=\crc\{ M(x)\}=x^{k}M(x)\bmod{G(x)}\]
 
 \layout Standard
 
-dessen Gard 
+dessen Grad 
 \begin_inset Formula $k-1$
 \end_inset 
 
@@ -402,13 +395,32 @@ C(x)=x^{k}M(x)+R(x)\label{eq:crc_code_word}\end{equation}
 
 \layout Standard
 
+Zyklische Kodes gehören zu den linearen Block-Kodes.
+ Sie haben die bemerkenswerte Eigenschaft, daß man ausgehend von einem bekannten
+ Kodewort alle anderen durch zyklische Verschiebung und Addition bestimmen
+ kann\SpecialChar ~
 
+\begin_inset LatexCommand \cite{Sweeney:1992}
+
+\end_inset 
+
+.
+ 
 \begin_inset Formula $G(x)$
 \end_inset 
 
- definiert also alle Kodeworte des zugeordneten Alphabets eindeutig und
- wird deshalb auch das erzeugende Polynom bzw.
- Generatorpolynom genannt.
+ definiert alle Kodeworte des zugeordneten Alphabets eindeutig und wird
+ deshalb auch das erzeugende Polynom 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ auch Generatorpolynom genannt.
 \layout Section
 
 Verifikation
@@ -440,7 +452,7 @@ Das Prinzip der Fehlererkennung besteht nun darin, daß sich jedes gültige
 
 \end_inset 
 
- erbracht, wenn man die spezielle Modulo-2 Addition 
+ erbracht, wenn man die spezielle modulo-2 Addition 
 \begin_inset Formula $H+H=0$
 \end_inset 
 
@@ -607,14 +619,41 @@ Da ja bekanntlich kein System ideal ist, muß man auch hier einräumen, daß
 
 \layout Standard
 
-An dieser Stelle seinen noch die wichtigsten fehlererkennenden Eigenschaften
- der (verkürzten) zyklischen Kodes aufgezählt:
+Praktisch wählt man bei der Verifikation üblicherweise das gleiche Verfahren
+ wie auf der Senderseite, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ man muß noch die Vormultiplikation mit 
+\begin_inset Formula $x^{k}$
+\end_inset 
+
+ berücksichtigen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=\left[E(x)\, x^{k}\right]\bmod{G(x)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die wichtigsten fehlererkennenden Eigenschaften der (verkürzten) zyklischen
+ Kodes sind:
 \layout Enumerate
 
 Es werden grundstzlich alle Einfachfehler (1 Bit verändert) erkannt.
 \layout Enumerate
 
-Es werden alle Fehler erkannt bei denen Anfang und Ende des Störmusters
+Es werden alle Fehler erkannt, bei denen Anfang und Ende des Störmusters
  nicht weiter als 
 \begin_inset Formula $k$
 \end_inset 
@@ -716,27 +755,27 @@ Bose-Chaudhuri-Hocquenghem
 Fire
 \noun default 
 -Kodes ist nicht nur eine Fehlererkennung sondern sogar eine Korrektur von
- bestimmten Fehlern möglich.
+ Fehlern bis zu einer definierten Anzahl von Bits möglich.
 \layout Subsubsection
 
 Erkennung von Einfachfehlern
 \layout Standard
 
 Wir wollen nun den Nachweis erbringen, daß zyklische Kodes jeden Einfachfehler
- erkönnen können.
+ erkennen können.
  Das Fehlerpolynom kann bei dieser Art von Störung (eines einzelnen Bits)
  als 
 \begin_inset Formula $E(x)=x^{r}$
 \end_inset 
 
  modelliert werden.
- Es gilt also, die allgemeine Erkennbarkeitsbedingung entsprechend Gleichung\SpecialChar ~
+ Es gilt also, die allgemeine Erkennbarkeitsbedingung nach Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:crc_err}
 
 \end_inset 
 
- auf diesen Spezielfall dieses Fehlerpolynoms 
+ auf diesen Spezialfall des Fehlerpolynoms 
 \begin_inset Formula $E(x)$
 \end_inset 
 
@@ -744,8 +783,8 @@ Wir wollen nun den Nachweis erbringen, daß zyklische Kodes jeden Einfachfehler
 \layout Standard
 
 
-\begin_inset Formula \[
-E(x)\bmod{G(x)}=x^{r}\bmod{G(x)}\]
+\begin_inset Formula \begin{equation}
+E(x)\bmod{G(x)}=x^{r}\bmod{G(x)}\label{eq:crc_err_single}\end{equation}
 
 \end_inset 
 
@@ -765,34 +804,214 @@ Für
 \end_inset 
 
  gilt.
+ Im anderen Fall (
+\begin_inset Formula $r\geq k$
+\end_inset 
+
+) ist 
+\begin_inset Formula $E(x)\bmod{G(x)}\neq0$
+\end_inset 
+
+ dadurch gegeben, daß es sich bei 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ um ein irreduzibles Polynom und insgesamt um einen sogenannten Restklassenkörpe
+r handelt (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Anhang\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:algebra_extfield}
+
+\end_inset 
+
+).
 \layout Subsubsection
 
 Erkennung von Burstfehlern
-\layout Comment
+\layout Standard
 
 Wir wollen nun untersuchen, welche Burstfehler unter Benutzung eines zyklischen
  Kodes erkennbar sind.
- Das Fehlerpolynom soll dabei die Form u E(x) = xõ elxl besitzen, wobei
- man e0=1 setzen kann .
- l=0 Die Frage, die damit verbunden ist, lautet : Welche Polynome E(x) sind
- ohne Rest durch G(x) teilbar : E(x) mod G(x) = 0 ? Gleichbedeutend ist
- die Fragestellung nach einem Polynom F(x), welches multipliziert mit G(x)
- genau das Fehlerpolynom E(x) ergibt - und genau mit diesem Problem wollen
- wir uns nachfolgend auseinander setzen.
- Als erstes werden wir F(x) in allgemeiner Form mit G(x) multiplizieren
- .
- v F(x) = õ fjxj j=0 v k v k F(x)G(x) = õ (fjxj) õ (gixi) = õ õ fjgix(i+j)
- j=0 i=0 j=0 i=0 Um die Koeffizienten fr F(x) zu ermitteln, mssen wir dieses
- Ergebnis E(x) gleichsetzen, denn es soll ja genau das Fehlerpolynom (ohne
- Rest) entstehen.
- v k u õ õ fjgix(i+j) = xõ elxl j=0 i=0 l=0 Daraus ergibt sich ein Gleichungssys
-tem, da diese Gleichung fr alle Potenzen i+j = l = 0..+u erfllt sein mu.
- Potenz Bedingung f0g0 = 0 0 f0 = 0 f1g0 + f0g1 = 0 1 f1 = 0 f2g0 + f1g1
- + f0g2 = 0 2 f2 = 0 f3g0 + f2g1 + f1g2 + f0g3 = 0 3 f3 = 0 : : : : : :
- : : : : : : 
-\layout Comment
+ Das Fehlerpolynom soll dabei die Form 
+\begin_inset Formula $E(x)=x^{l}\,[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1]$
+\end_inset 
 
-f3g0 + f2g1 + f1g2 + f0g3 = 0 3 f3 = 0
+ besitzen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $l$
+\end_inset 
+
+ soll so gewählt sein, daß 
+\begin_inset Formula $e_{0}=1$
+\end_inset 
+
+ gilt.
+ Die Fragestellung lautet also: Welche Polynome 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ sind im Sinne von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_err}
+
+\end_inset 
+
+ ohne Rest durch 
+\begin_inset Formula $G(x)$
+\end_inset 
+
+ teilbar? Zur Beantwortung gehen wir von
+\layout Standard
+
+
+\begin_inset Formula \[
+E(x)\bmod{G(x)}=\left\{ x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]\right\} \bmod{G(x)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+aus und bedenken, daß 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ ein Kodewort des Alphabets sein müßte, um einen solchen Fehler nicht zu
+ erkennen.
+\layout Standard
+
+
+\begin_inset Formula \[
+E(x)=x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]=F(x)G(x)\]
+
+\end_inset 
+
+
+\layout Standard
+
+Eine derartige Darstellung ist aber ausgeschlossen, solange 
+\begin_inset Formula $r<k$
+\end_inset 
+
+ gilt.
+\layout Subsection
+
+Fehlerkorrigierende Eigenschaften
+\layout Standard
+
+Geht man davon aus, daß es sich bei 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ um einen Einfachfehler handelt, so ist mit 
+\begin_inset Formula $E(x)=x^{r}$
+\end_inset 
+
+ entsprechend Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:crc_err_single}
+
+\end_inset 
+
+ das folgende CRC (auf der Empfangsseite) zu gewinnen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\crc\{ C(x)+E(x)\}=\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=x^{r+k}\bmod{G(x)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Je nachdem an welcher Stelle 
+\begin_inset Formula $C(x)$
+\end_inset 
+
+ nun gestört wird, ergeben sich (wegen 
+\begin_inset Formula $0\leq r<n$
+\end_inset 
+
+) genau 
+\begin_inset Formula $n$
+\end_inset 
+
+ mögliche Fehlerpolynome.
+ Für alle diese 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ kann man das sogenannte Syndrom 
+\begin_inset Formula $\crc\left[E_{r}(x)\right]=x^{r+k}\bmod{G(x)}$
+\end_inset 
+
+ vorab berechnen.
+ Ein Vergleich dieser Werte mit dem aktuellen 
+\begin_inset Formula $\crc\{ C(x)+E(x)\}=\crc\{ E(x)\}$
+\end_inset 
+
+ führt zum Bitfehler, also zur Position 
+\begin_inset Formula $r$
+\end_inset 
+
+ des gestörten Bits in 
+\begin_inset Formula $E(x)=x^{r}$
+\end_inset 
+
+.
+ Sollte keine Übereinstimmung mit einem der vorberechneten Werte zu finden
+ sein, dann muß ein Mehrfachfehler vorliegen.
+ Solche Fehlermuster für 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ können ganz genauso wie Einzelfehler korrigiert werden
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Wobei der Maximalzahl korrigierbarer Fehler sowohl theoretische als auch
+ praktische Grenzen gesetzt sind.
+\end_inset 
+
+, nur wird statt der Position 
+\begin_inset Formula $r$
+\end_inset 
+
+ nun das gesamte Fehlerpolynom 
+\begin_inset Formula $E(x)$
+\end_inset 
+
+ von Interesse sein.
+ Die Korrektur erfolgt in diesem Fall durch modulo-2 Addition von 
+\begin_inset Formula $E_{r}(x)$
+\end_inset 
+
+ zu 
+\begin_inset Formula $C(x)$
+\end_inset 
+
+, falls dessen CRC in der Syndrom-Tabelle zu finden war.
 \layout Section
 
 Realisierung
@@ -826,7 +1045,7 @@ entierungen sehr effizient, können aber auch softwaretechnisch emuliert
 
  berechnet, dargestellt
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -846,7 +1065,7 @@ wide false
 collapsed false
 
 \layout Standard
-
+\align center 
 
 \begin_inset Graphics
 	filename lfsr.eps
@@ -926,7 +1145,7 @@ wide false
 collapsed false
 
 \layout Standard
-
+\align center 
 
 \begin_inset Graphics
 	filename lfsrmul.eps
@@ -965,7 +1184,7 @@ An dieser Stelle soll noch geklärt werden, welchen Einfluß ein bestimmter
 
  berechneten CRC-Wert hat
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1019,13 +1238,13 @@ dann ist sofort erkennbar, daß der ohne Anfangsrest entstehende Rest
 \begin_inset Formula $R(x)=\crc\left\{ M(x)\right\} $
 \end_inset 
 
-durch Modulo-2-Addition mit 
+ durch Modulo-2-Addition mit 
 \begin_inset Formula $\crc\left\{ x^{m}R_{0}(x)\right\} $
 \end_inset 
 
  modifiziert wird
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1098,9 +1317,7 @@ unter der Nebenbedingung
 \end_inset 
 
  erfüllt ist.
-\layout Standard
-
-Nimmt man zur Nachricht 
+ Nimmt man zur Nachricht 
 \begin_inset Formula $M(x)$
 \end_inset 
 
@@ -1124,14 +1341,14 @@ dann gilt für den zugehörigen CRC-Rest
 \begin_inset Formula $R'(x)=\crc\{ M'(x)\}$
 \end_inset 
 
-
+:
 \layout Standard
 
 
 \begin_inset Formula \begin{align}
 R'(x) & =x^{k}M'(x)\bmod{G(x)}\nonumber \\
  & =[x^{8}x^{k}M(x)+x^{k}B(x)]\bmod{G(x)}\nonumber \\
- & =[x^{8}R(x)+x^{k}B(x)]\bmod{G(x)}.\label{eq:crc_table_general}\end{align}
+ & =[x^{8}R(x)+x^{k}B(x)]\bmod{G(x)}\msp.\label{eq:crc_table_general}\end{align}
 
 \end_inset 
 
@@ -1184,13 +1401,13 @@ und Gleichung\SpecialChar ~
 \begin_inset Formula \begin{align*}
 R'(x) & =[x^{k}R_{1}(x)+x^{k}B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
  & =x^{k}[R_{1}(x)+B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
- & =\crc\{ R_{1}(x)+B(x)\}+x^{8}R_{0}(x).\end{align*}
+ & =\crc\{ R_{1}(x)+B(x)\}+x^{8}R_{0}(x)\msp.\end{align*}
 
 \end_inset 
 
 
 \layout Standard
-
+\pagebreak_bottom 
 Für die durch 
 \begin_inset Formula $8$
 \end_inset 
@@ -1204,15 +1421,16 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest
 
  über einen Tabellenzugriff sehr schnell zu ermitteln.
 \layout Standard
+\start_of_appendix 
 
-
-\begin_inset LatexCommand \printindex{}
+\begin_inset Include \input{../algebra/algebra.lyx}
+preview false
 
 \end_inset 
 
 
 \layout Standard
-\pagebreak_bottom 
+
 
 \begin_inset LatexCommand \BibTeX[gerplain]{adsp,computers,crypto,math}
 
@@ -1220,10 +1438,9 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest
 
 
 \layout Standard
-\start_of_appendix 
 
-\begin_inset Include \input{../algebra/algebra.lyx}
-preview false
+
+\begin_inset LatexCommand \printindex{}
 
 \end_inset 
 
