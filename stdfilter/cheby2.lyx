@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby2.lyx,v 1.5 2005-08-28 16:40:50 ralf Exp $
+Version: $Id: cheby2.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
 \end_inset 
 
 
@@ -176,11 +176,11 @@ Hier durch geometrische Spiegelung von Durchlaß- und Sperrbereich um die
 Tschebyscheff
 \noun default 
 -Tiefpaß ableiten.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\drf(\omega)=\delta\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}}\msp.\label{eq:filter_cheby2_chfunc}\end{equation}
+\drf(\omega)=\delta\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\msp.\label{eq:filter_cheby2_chfunc}\end{equation}
 
 \end_inset 
 
@@ -383,13 +383,13 @@ Tschebyscheff
 
  hier Nullstellen, die wegen der Dämpfungsextrema im Sperrbereich sogar
  auf der 
-\begin_inset Formula $\jw$
+\begin_inset Formula $\ji\omega$
 \end_inset 
 
 -Achse liegen müssen.
  Um sie zu bestimmen bilden wir (wie üblich) zuerst das Betragsquadrat der
  Übertragungsfunktion 
-\begin_inset Formula $\trf(\jw)$
+\begin_inset Formula $\trf(\ji\omega)$
 \end_inset 
 
 , gehen dann in den 
@@ -457,11 +457,11 @@ liegen und deshalb bezüglich
 \end_inset 
 
  bei
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}\qquad\nu=1,2,\ldots,n-1,n\msp.\end{equation}
+\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\qquad\nu=1,2,\ldots,n-1,n\msp.\end{equation}
 
 \end_inset 
 
@@ -587,11 +587,11 @@ I) von
 \end_inset 
 
 :
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
-\boxed{\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)}}\msp,\qquad\nu=1,2,\ldots,n\]
+\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)}\msp,\qquad\nu=1,2,\ldots,n\]
 
 \end_inset 
 
@@ -606,8 +606,8 @@ sowie die Halbachsen (mit
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\boxed{\alpha_{H}=\sinh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} \qquad\qquad\omega_{H}=\cosh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} }\msp.\end{equation}
+\begin_inset Formula \begin{xalignat}{2}
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} \msp.\end{xalignat}
 
 \end_inset 
 

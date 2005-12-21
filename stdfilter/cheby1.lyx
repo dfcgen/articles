@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby1.lyx,v 1.5 2005-08-28 16:40:50 ralf Exp $
+Version: $Id: cheby1.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
 \end_inset 
 
 
@@ -91,11 +91,11 @@ Tschebscheff
 \end_inset 
 
 ) für die Drosselung gekennzeichnet.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\drf(\omega)=\delta\,\T_{n}(\omega)}\end{equation}
+\drf(\omega)=\delta\,\T_{n}(\omega)\end{equation}
 
 \end_inset 
 
@@ -113,6 +113,26 @@ Man kann sich auch leicht an Hand der folgenden Definition für
  eine Bestapproximation der Nullinie (im Sinne von Abschnitt\SpecialChar ~
 
 \begin_inset LatexCommand \ref{sec:filter_goal_best_approx}
+
+\end_inset 
+
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ auch 
+\begin_inset LatexCommand \cite[45]{Koerner:1988}
+
+\end_inset 
+
+ oder 
+\begin_inset LatexCommand \cite[\S~4]{Meinardus:1964}
 
 \end_inset 
 
@@ -345,7 +365,7 @@ Polstellen
 
 Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
  Übertragungsfunktion 
-\begin_inset Formula $\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)$
+\begin_inset Formula $\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)$
 \end_inset 
 
  aus
@@ -353,7 +373,7 @@ Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
 
 
 \begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\omega)}\]
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\omega)}\]
 
 \end_inset 
 
@@ -365,7 +385,7 @@ und verallgemeinern dann im Sinne der
 Laplace
 \noun default 
 -Transformation 
-\begin_inset Formula $\jw\Rightarrow\lps$
+\begin_inset Formula $\ji\omega\Rightarrow\lps$
 \end_inset 
 
 .
@@ -394,7 +414,7 @@ An den Polstellen muß der Nenner verschwinden, was heißt:
 \layout Standard
 
 Wegen 
-\begin_inset Formula $\lps=\alpha+\jw$
+\begin_inset Formula $\lps=\alpha+\ji\omega$
 \end_inset 
 
  müssen wir davon ausgehen, daß 
@@ -523,12 +543,12 @@ Einsetzen von
 \end_inset 
 
 , getrennt für Real- und Imaginärteil:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{align*}
-\reop\left\{ \pn{\lps}{k}\right\}  & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
-\imop\left\{ \pn{\lps}{k}\right\}  & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
+\reop\left(\pn{\lps}{k}\right) & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
+\imop\left(\pn{\lps}{k}\right) & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
 
 \end_inset 
 
@@ -561,8 +581,8 @@ Die Parameterdarstellung der Ellipse lautet:
 \layout Standard
 
 
-\begin_inset Formula \begin{equation}
-\boxed{\alpha_{H}=\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\qquad\qquad\omega_{H}=\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)}\end{equation}
+\begin_inset Formula \begin{xalignat}{2}
+\alpha_{H} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right) & \omega_{H} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\end{xalignat}
 
 \end_inset 
 
@@ -672,11 +692,11 @@ Wobei praktischerweise mit
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)}\msp,\qquad\nu=1,2,\ldots,n\end{equation}
+\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset 
 

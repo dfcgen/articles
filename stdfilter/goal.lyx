@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: goal.lyx,v 1.6 2005-08-28 16:40:50 ralf Exp $
+Version: $Id: goal.lyx,v 1.7 2005-12-21 16:05:12 ralf Exp $
 \end_inset 
 
 
@@ -51,11 +51,11 @@ Approximationsziel
 
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung 
-\begin_inset Formula $A=-20\log\left|\trf(\jw)\right|$
+\begin_inset Formula $A=-20\log\left|\trf(\ji\omega)\right|$
 \end_inset 
 
  sowie der Phasengang 
-\begin_inset Formula $B=-\ang\{\trf(\jw)\}$
+\begin_inset Formula $B=-\ang\{\trf(\ji\omega)\}$
 \end_inset 
 
 .
@@ -91,7 +91,7 @@ eg
 \end_inset 
 
  
-\begin_inset Formula $\trf(\omega)=\left|\trf(\jw)\right|$
+\begin_inset Formula $\trf(\omega)=\left|\trf(\ji\omega)\right|$
 \end_inset 
 
 .
@@ -110,7 +110,7 @@ resp
 \end_inset 
 
  Drosselung 
-\begin_inset Formula $\drf(\omega)=\left|\drf(\jw)\right|$
+\begin_inset Formula $\drf(\omega)=\left|\drf(\ji\omega)\right|$
 \end_inset 
 
  herangezogen.
@@ -207,11 +207,11 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
 \end_inset 
 
  zu definieren.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\drf(\omega)=\delta\, g(\omega)}\end{equation}
+\drf(\omega)=\delta\, g(\omega)\end{equation}
 
 \end_inset 
 
@@ -596,7 +596,7 @@ Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
 
 
 \begin_inset Formula \[
-A(\omega)=-20\log\left|\trf(\jw)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
+A(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
 
 \end_inset 
 
@@ -611,7 +611,7 @@ aus den Nullstellen von
 \begin_inset Formula $g'(\omega)$
 \end_inset 
 
- gebildet werden.
+ zusammensetzen.
 \layout Standard
 
 
@@ -642,7 +642,13 @@ Jahrhundert mit dem nach ihm benannten
 \emph on 
 Alternantensatz
 \emph default 
- die grundlegende Bedingung für eine Bestapproximation gefunden.
+ die grundlegende Bedingung für eine Bestapproximation gefunden\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Chebyshev:1899,Meinardus:1964,Koerner:1988}
+
+\end_inset 
+
+.
  In kurzer Form ist der Inhalt folgender:
 \layout Quote
 
@@ -755,7 +761,7 @@ In der Filtertheorie ist die (gesuchte) Funktion
 
  geringster Abweichung
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 

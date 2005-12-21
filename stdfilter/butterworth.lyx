@@ -34,7 +34,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: butterworth.lyx,v 1.5 2005-08-28 16:40:50 ralf Exp $
+Version: $Id: butterworth.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
 \end_inset 
 
 
@@ -77,11 +77,11 @@ Butterworth
 \end_inset 
 
 -ter Ordnung zeichnet sich durch die Amplitudencharakteristik
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\omega^{2n}}}}\label{eq:filter_butter_amplitude}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}\end{equation}
 
 \end_inset 
 
@@ -99,7 +99,7 @@ aus, besitzt also nach Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\drf(\omega)=\delta\omega^{n}}\msp.\label{eq:filter_butter_chfunc}\end{equation}
+\drf(\omega)=\delta\omega^{n}\msp.\label{eq:filter_butter_chfunc}\end{equation}
 
 \end_inset 
 
@@ -303,11 +303,11 @@ etc
 
  zuläßt.
  Dazu gehen wir von der komplexen Übertragungsfunktion 
-\begin_inset Formula $\trf(\jw)$
+\begin_inset Formula $\trf(\ji\omega)$
 \end_inset 
 
 , in Verbindung mit der generellen Eigenschaft 
-\begin_inset Formula $\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)$
+\begin_inset Formula $\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)$
 \end_inset 
 
 , aus.
@@ -315,7 +315,7 @@ etc
 
 
 \begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\jw)\trf(-\jw)=\frac{1}{1+\delta^{2}\omega^{2n}}\]
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\delta^{2}\omega^{2n}}\]
 
 \end_inset 
 
@@ -353,7 +353,7 @@ Laplace
 \end_inset 
 
  mit 
-\begin_inset Formula $\jw\Rightarrow\lps$
+\begin_inset Formula $\ji\omega\Rightarrow\lps$
 \end_inset 
 
  führt zu
@@ -443,7 +443,7 @@ collapsed false
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
@@ -501,11 +501,11 @@ Sind insbesondere Real- und Imaginärteile (also eine Darstellung in kartesischen
 Euler
 \noun default 
 'sche Formel anzuwenden.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]}\msp,\qquad\nu=1,2,\ldots,n\end{equation}
+\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset 
 
@@ -667,7 +667,7 @@ resp
 
 
 \begin_inset Formula \[
-(\lps-\pn{\lps}{\nu})(\lps-\pn[*]{\lps}{\nu})=\lps^{2}-2\reop\left\{ \pn{\lps}{\nu}\right\} \lps+\reop^{2}\left\{ \pn{\lps}{\nu}\right\} +\imop^{2}\left\{ \pn{\lps}{\nu}\right\} \]
+(\lps-\pn{\lps}{\nu})(\lps-\pn[*]{\lps}{\nu})=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
 
 \end_inset 
 
@@ -697,7 +697,7 @@ Laplace
 wodurch Polfrequenz und -güte letztlich definiert werden.
  Koeffizientenvergleich beider Darstellungen, also
 \begin_inset Formula \[
-\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\reop\left\{ \pn{\lps}{\nu}\right\} \lps+\reop^{2}\left\{ \pn{\lps}{\nu}\right\} +\imop^{2}\left\{ \pn{\lps}{\nu}\right\} \]
+\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
 
 \end_inset 
 
@@ -713,11 +713,11 @@ führt sofort zur Definition der Polfrequenz
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\omega_{0}=\sqrt{\reop^{2}\left\{ \pn{\lps}{\nu}\right\} +\imop^{2}\left\{ \pn{\lps}{\nu}\right\} }=\left|\pn{\lps}{\nu}\right|}\label{eq:filter_pole_frequency}\end{equation}
+\omega_{0}=\sqrt{\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)}=\left|\pn{\lps}{\nu}\right|\label{eq:filter_pole_frequency}\end{equation}
 
 \end_inset 
 
@@ -733,18 +733,18 @@ Die Polgüte
 
 
 \begin_inset Formula \begin{align*}
-\frac{\omega_{0}}{Q} & =-2\reop\left\{ \pn{\lps}{\nu}\right\} \\
-Q & =-\frac{\omega_{0}}{2\reop\left\{ \pn{\lps}{\nu}\right\} }=-\frac{\left|\pn{\lps}{\nu}\right|}{2\reop\left\{ \pn{\lps}{\nu}\right\} }\\
- & =-\frac{1}{2}\sqrt{1+\left[\frac{\imop\left\{ \pn{\lps}{\nu}\right\} }{\reop\left\{ \pn{\lps}{\nu}\right\} }\right]^{2}}=-\frac{1}{2}\sqrt{1+\tan^{2}\ang\left\{ \pn{\lps}{\nu}\right\} }\end{align*}
+\frac{\omega_{0}}{Q} & =-2\reop\left(\pn{\lps}{\nu}\right)\\
+Q & =-\frac{\omega_{0}}{2\reop\left(\pn{\lps}{\nu}\right)}=-\frac{\left|\pn{\lps}{\nu}\right|}{2\reop\left(\pn{\lps}{\nu}\right)}\\
+ & =-\frac{1}{2}\sqrt{1+\left[\frac{\imop\left(\pn{\lps}{\nu}\right)}{\reop\left(\pn{\lps}{\nu}\right)}\right]^{2}}=-\frac{1}{2}\sqrt{1+\tan^{2}\ang\pn{\lps}{\nu}}\end{align*}
 
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{Q_{\nu}=-\frac{1}{2}\cdot\frac{1}{\cos\ang\left\{ \pn{\lps}{\nu}\right\} }=-\frac{1}{2}\sec\ang\left\{ \pn{\lps}{\nu}\right\} }\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_pole_quality}\end{equation}
+Q_{\nu}=-\frac{1}{2}\cdot\frac{1}{\cos\ang\pn{\lps}{\nu}}=-\frac{1}{2}\sec\ang\pn{\lps}{\nu}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_pole_quality}\end{equation}
 
 \end_inset 
 
@@ -788,7 +788,7 @@ In der letzten Formel ist erkennbar, daß die einzelnen Polgüten
 \end_inset 
 
  immer größer werden, wobei Pole in der Nähe der 
-\begin_inset Formula $\jw$
+\begin_inset Formula $\ji\omega$
 \end_inset 
 
 -Achse die höchsten Güten aufweisen

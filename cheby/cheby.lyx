@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby.lyx,v 1.6 2005-08-28 16:17:50 ralf Exp $
+Version: $Id: cheby.lyx,v 1.7 2005-12-21 16:02:32 ralf Exp $
 \end_inset 
 
 
@@ -55,7 +55,7 @@ L.
  im Zusammenhang mit Approximationsproblemen unter\SpecialChar \-
 sucht\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Chebyshev:1899,Achieser:1967,Meinardus:1964}
+\begin_inset LatexCommand \cite{Chebyshev:1899,Achieser:1967,Meinardus:1964,Koerner:1988}
 
 \end_inset 
 
@@ -147,11 +147,11 @@ Tschebyscheff
 \end_inset 
 
  ist definiert als
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\T_{n}(x)=\cos(n\arccos x)}\msp.\label{eq:chebyt_cos_def}\end{equation}
+\T_{n}(x)=\cos(n\arccos x)\msp.\label{eq:chebyt_cos_def}\end{equation}
 
 \end_inset 
 
@@ -322,11 +322,11 @@ Tschebyscheff
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\T_{n}(x)=2x\T_{n-1}(x)-\T_{n-2}(x)}\label{eq:chebyt_recursiv_def}\end{equation}
+\T_{n}(x)=2x\T_{n-1}(x)-\T_{n-2}(x)\label{eq:chebyt_recursiv_def}\end{equation}
 
 \end_inset 
 
@@ -480,11 +480,11 @@ Tschebyscheff
 \end_inset 
 
  ist
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\T_{n}(x)=\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2}}\msp.\label{eq:chebyt_irrat_def}\end{equation}
+\T_{n}(x)=\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2}\msp.\label{eq:chebyt_irrat_def}\end{equation}
 
 \end_inset 
 
@@ -755,7 +755,7 @@ Tschebyscheff
 \noun default 
 'schen Funktionen ein sogenanntes Orthonormalsystem
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -767,7 +767,7 @@ Gauß
 -Approximation), denn sie ermöglichen die einfache Berechnung der Koeffizienten
  für die Näherungsfunktion\SpecialChar ~
 
-\begin_inset LatexCommand \cite{Oelschlaegel:1974}
+\begin_inset LatexCommand \cite{Koerner:1988,Oelschlaegel:1974}
 
 \end_inset 
 
@@ -779,11 +779,11 @@ Gauß
 \end_inset 
 
  durch die Beziehung 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
-\boxed{\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\delta_{n\msp m}}\]
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\delta_{n\msp m}\]
 
 \end_inset 
 
@@ -1291,7 +1291,12 @@ Die gleiche Differentialgleichung ergibt sich, wenn man
 
  entwickeln\SpecialChar ~
 
-\begin_inset LatexCommand \cite[§4]{Meinardus:1964}
+\begin_inset LatexCommand \cite[45]{Koerner:1988}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\S~4]{Meinardus:1964}
 
 \end_inset 
 
@@ -1361,7 +1366,7 @@ bestimmt werden können.
 
 \end_inset 
 
- etwas ausführlicher wird.
+ etwas ausführlicher geschrieben wird.
 \layout Standard
 
 
@@ -1603,11 +1608,11 @@ Tschebyscheff
 \layout Standard
 
 Die Tschebyscheff-Funktion zweiter Art ist definiert durch
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
-\boxed{\U_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}}\msp.\]
+\U_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\msp.\]
 
 \end_inset 
 

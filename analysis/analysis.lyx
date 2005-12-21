@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.13 2005-11-19 10:43:58 ralf Exp $
+Version: $Id: analysis.lyx,v 1.14 2005-12-21 16:02:07 ralf Exp $
 \end_inset 
 
 
@@ -79,12 +79,12 @@ resp
 
  analytische Funktionen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-In der komplexen Analysis nennt man eine Funktion analytisch (oder regulär),
- wenn sie durch eine Potenzreihe
+In der komplexen Analysis nennt man eine Funktion analytisch, wenn sie durch
+ eine Potenzreihe
 \begin_inset LatexCommand \index{Potenzreihe}
 
 \end_inset 
@@ -99,11 +99,11 @@ In der komplexen Analysis nennt man eine Funktion analytisch (oder regulär),
 \end_inset 
 
  sind solche, deren Grenzwert
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\tdiff{f(z)}{z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}}\label{eq:analysis_derivative_def}\end{equation}
+\tdiff{f(z)}{z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}\msp,\qquad z\in\mathbb{C}\label{eq:analysis_derivative_def}\end{equation}
 
 \end_inset 
 
@@ -180,7 +180,7 @@ status Collapsed
 eg
 \end_inset 
 
- bei der Funktion 
+ 
 \begin_inset Formula $\sin z/z$
 \end_inset 
 
@@ -323,11 +323,11 @@ Sie sind eine notwendige Bedingung für die Differenzierbarkeit von
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
-\begin_inset Formula \begin{equation}
-\boxed{\pdiff{u(x,y)}{x}=\pdiff{v(x,y)}{y}\msp,\qquad\pdiff{u(x,y)}{y}=-\pdiff{v(x,y)}{x}}\label{eq:analysis_integrability_cond}\end{equation}
+\begin_inset Formula \begin{xalignat}{2}
+\pdiff{u(x,y)}{x} & =\pdiff{v(x,y)}{y} & \pdiff{u(x,y)}{y} & =-\pdiff{v(x,y)}{x}\label{eq:analysis_integrability_cond}\end{xalignat}
 
 \end_inset 
 
@@ -362,11 +362,11 @@ resp
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f'(z)=\tdiff{f(z)}{z}=\pdiff{f(z)}{x}=-\ji\pdiff{f(z)}{y}}\msp.\label{eq:analysis_complex_derivative}\end{equation}
+f'(z)=\tdiff{f(z)}{z}=\pdiff{f(z)}{x}=-\ji\pdiff{f(z)}{y}\msp.\label{eq:analysis_complex_derivative}\end{equation}
 
 \end_inset 
 
@@ -628,6 +628,273 @@ regulär
 \end_inset 
 
 .
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:analysis_z_z0_holomorph}
+
+\end_inset 
+
+Die Funktion 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+texorpdfstring{$(z-z_{0})^n$}{
+\backslash 
+latex{(z-z0)**n}}
+\end_inset 
+
+
+\layout Standard
+
+Besondere Bedeutung für viele Beweise der komplexen Analysis hat die Funktion
+ 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+.
+ Hier soll einmal mit Hilfe der 
+\noun on 
+Cauchy
+\noun default 
+-
+\noun on 
+Riemann
+\noun default 
+'schen Differentialgleichungen deren Holomorphiegebiet bestimmt werden
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Meist wird dieser ausführliche Weg aus Aufwandsgründen gemieden, obwohl
+ er eine gute Übung darstellt.
+\end_inset 
+
+.
+ Wir gehen dazu von Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
+
+\end_inset 
+
+ aus und bilden die partiellen Ableitungen nach 
+\begin_inset Formula $x$
+\end_inset 
+
+ und 
+\begin_inset Formula $y$
+\end_inset 
+
+.
+ Zur Vereinfachung soll die Exponentialdarstellung 
+\begin_inset Formula $z-z_{0}=r\e^{\ji\theta}$
+\end_inset 
+
+ verwendet werden, wobei berücksichtigt werden muß, daß eigentlich 
+\begin_inset Formula $r:=r(x,y)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\theta:=\theta(x,y)$
+\end_inset 
+
+ gilt.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{x}(z-z_{0})^{n} & =\pdiff{}{x}\, r^{n}\e^{\ji n\theta}\\
+ & =nr^{n-1}\e^{\ji n\theta}\pdiff{r}{x}+r^{n}\e^{\ji n\theta}\ji n\pdiff{\theta}{x}\\
+ & =nr^{n}\e^{\ji n\theta}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Für die Ableitung nach 
+\begin_inset Formula $y$
+\end_inset 
+
+ gibt es bis hierher keinen Unterschied, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\pdiff{}{y}(z-z_{0})^{n}=n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{y}+\ji\pdiff{\theta}{y}\right)\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Setzen wir jetzt (kurz) 
+\begin_inset Formula $z_{0}=0$
+\end_inset 
+
+ und erarbeiten die Zusammenhänge zwischen den Differentialen der arithmetischen
+ und der Exponentialform für 
+\begin_inset Formula $z=x+\ji y=r\e^{\ji\theta}$
+\end_inset 
+
+.
+ Dazu soll von den bekannten Formeln
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+r & =\left|z\right|=\sqrt{z\,\conjgt{z}}=\sqrt{x^{2}+y^{2}} & \theta & =\ang z=\arctan\frac{y}{x}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+ausgegangen und dann die Ableitungen gebildet werden.
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\pdiff{r}{x} & =\frac{x}{\sqrt{x^{2}+y^{2}}}=\frac{x}{r} & \pdiff{r}{y} & =\frac{y}{\sqrt{x^{2}+y^{2}}}=\frac{y}{r}\\
+\pdiff{\theta}{x} & =-\frac{y}{x^{2}+y^{2}}=-\frac{y}{r^{2}} & \pdiff{\theta}{y} & =\frac{x}{x^{2}+y^{2}}=\frac{x}{r^{2}}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Jetzt können die so gewonnenen Ausdrücke eingesetzt werden, was mit 
+\begin_inset Formula $z_{0}=x_{0}+\ji y_{0}$
+\end_inset 
+
+ zu
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{x}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+führt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei 
+\begin_inset Formula $(z-z_{0})\conjgt{(z-z_{0})}=r^{2}$
+\end_inset 
+
+ berücksichtigt wurde.
+\end_inset 
+
+.
+ Ähnlich wird mit der Ableitung nach 
+\begin_inset Formula $y$
+\end_inset 
+
+ verfahren, nur das gedanklich noch der Zwischenschritt der Substitution
+ nach 
+\begin_inset Formula $\ji y$
+\end_inset 
+
+ auszuführen ist.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\pdiff{}{(\ji y)}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\pdiff{\theta}{y}-\ji\frac{1}{r}\pdiff{r}{y}\right)\\
+ & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Schlußfolgerung: 
+\begin_inset Formula $(z-z_{0})^{n}$
+\end_inset 
+
+ ist für posives 
+\begin_inset Formula $n$
+\end_inset 
+
+ an jeder Stelle 
+\begin_inset Formula $z$
+\end_inset 
+
+ analytisch, denn es gilt Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
+
+\end_inset 
+
+ in der Form:
+\layout Emphasized
+
+
+\begin_inset Formula \[
+\pdiff{}{z}(z-z_{0})^{n}=n(z-z_{0})^{n-1}=\pdiff{}{x}(z-z_{0})^{n}=\pdiff{}{(\ji y)}(z-z_{0})^{n}\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Für den Fall 
+\begin_inset Formula $n<0$
+\end_inset 
+
+ ist 
+\begin_inset Formula $f(z)$
+\end_inset 
+
+ jedoch nur für 
+\begin_inset Formula $z\neq z_{0}$
+\end_inset 
+
+ analytisch, denn beide Seiten der vorangegangenen Äquivalenz sind sonst
+ unbestimmt.
+ Ein sich daraus ergebendes Resultat, welches in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:analysis_laurent}
+
+\end_inset 
+
+ bewiesen wird, ist:
+\layout Emphasized
+
+
+\begin_inset Formula \[
+\oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
+0 & \qquad(n\neq-1)\\
+2\pi\ji & \qquad(n=-1)\end{cases}\msp.\]
+
+\end_inset 
+
+
 \layout Section
 
 Integration
@@ -695,7 +962,7 @@ Für eine analytische Funktion
 \end_inset 
 
 ).
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{align}
@@ -745,7 +1012,7 @@ u(x,y) & =\pdiff{U(x,y)}{x}=\pdiff{V(x,y)}{y} & v(x,y) & =-\pdiff{U(x,y)}{y}=\pd
 
 \layout Standard
 
-Mit diesen einfachen Resultaten kann man die Integranden von Formel\SpecialChar ~
+Mit diesen einfachen Resultaten kann man die Integranden in Formel\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_cauchy_antiderivative}
 
@@ -834,19 +1101,6 @@ resp
 Schwarz
 \noun default 
 ) und für harmonische Funktionen erst recht erfüllt.
- Deshalb kann an der Existenz der Stammfunktionen 
-\begin_inset Formula $U(x,y)$
-\end_inset 
-
- und 
-\begin_inset Formula $V(x,y)$
-\end_inset 
-
- und damit auch 
-\begin_inset Formula $F(z)=U(x,y)+\ji V(x,y)$
-\end_inset 
-
- nicht gezweifelt werden.
 \layout Subsubsection
 
 Bestimmtes Integral
@@ -866,7 +1120,7 @@ Nach dem Hauptsatz der Differential- und Integralrechnung
  Integral, welche unter bestimmten Bedingungen auch im komplexen Fall Gültigkeit
  hat\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{42}]{Brown:1996}
+\begin_inset LatexCommand \cite[42.]{Brown:1996}
 
 \end_inset 
 
@@ -917,7 +1171,7 @@ Sollte
 \begin_inset Formula $f(z)$
 \end_inset 
 
- aber analytisch auf 
+ aber analytisch auf der Kurve 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -941,11 +1195,11 @@ Man sagt auch, die Funktion
 \end_inset 
 
  und man kann in gewohnter Art und Weise
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{C}f(z)\tic z=\int_{z_{1}}^{z_{2}}f(z)\tic z=F(z_{2})-F(z_{1})}\end{equation}
+\int_{C}f(z)\tic z=\int_{z_{1}}^{z_{2}}f(z)\tic z=F(z_{2})-F(z_{1})\end{equation}
 
 \end_inset 
 
@@ -954,7 +1208,7 @@ Man sagt auch, die Funktion
 
 rechnen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{42}]{Brown:1996}
+\begin_inset LatexCommand \cite[42.]{Brown:1996}
 
 \end_inset 
 
@@ -1015,7 +1269,7 @@ Cauchy
 \noun default 
  mit Mitteln der Vektoranalysis ist in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibannex{II} \bibsec{5.}]{Cauer:1954}
+\begin_inset LatexCommand \cite[II-5.]{Cauer:1954}
 
 \end_inset 
 
@@ -1062,7 +1316,7 @@ resp
 \begin_inset Formula $v(x,y)$
 \end_inset 
 
- unter Zuhilfenahme von Formel\SpecialChar ~
+ unter Zuhilfenahme von Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_cauchy_equivalence}
 
@@ -1175,7 +1429,7 @@ Cauchy
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibsec{44-46}]{Brown:1996}
+\begin_inset LatexCommand \cite[44.-46.]{Brown:1996}
 
 \end_inset 
 
@@ -1183,7 +1437,7 @@ Cauchy
 \layout Quote
 
 Ist 
-\begin_inset Formula $f(z)$
+\begin_inset Formula $f$
 \end_inset 
 
  eine Funktion von 
@@ -1228,22 +1482,22 @@ cf
 \end_inset 
 
 , dann gilt:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=0}\msp.\label{eq:analysis_cauchy_integral}\end{equation}
+\oint_{C}f(z)\tic z=0\msp.\label{eq:analysis_cauchy_integral}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Sollte jedoch 
+Sollte 
 \begin_inset Formula $f(z)$
 \end_inset 
 
- im Innern von 
+ im Inneren von 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -1257,8 +1511,8 @@ Sollte jedoch
 ).
 \layout Standard
 
-Damit sind uns nunmehr drei absolut gleichwertige Kriterien für den Nachweis,
- daß es sich bei 
+Damit sind uns nunmehr drei gleichwertige Kriterien für den Nachweis, daß
+ es sich bei 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -1279,9 +1533,13 @@ Laplace
 -Gleichung für den Real- und Imaginärteil und
 \layout Enumerate
 
-die Wegunabhängigkeit des Kurvenintegrals
+der Satz von 
+\noun on 
+Cauchy
+\noun default 
+ (Wegunabhängigkeit des Kurvenintegrals
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -1297,33 +1555,19 @@ Morera
 
  genannt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{75}]{Koerner:1988}
+\begin_inset LatexCommand \cite[75.]{Koerner:1988}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibchap{II}, \bibsec{3.5}]{Freitag:2000}
+\begin_inset LatexCommand \cite[II-3.5]{Freitag:2000}
 
 \end_inset 
 
 .
 \end_inset 
 
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- der Satz von 
-\noun on 
-Cauchy
-\noun default 
-.
+).
 \layout Subsection
 
 
@@ -1367,38 +1611,7 @@ Cauchy
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- einschließenden Kurve
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Genau in dieser Umgebung von 
-\begin_inset Formula $z_{0}$
-\end_inset 
-
-, 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-ie
-\end_inset 
-
- auf und innerhalb der Kurve 
-\begin_inset Formula $C$
-\end_inset 
-
-, muß 
-\begin_inset Formula $f(z)$
-\end_inset 
-
- analytisch sein.
-\end_inset 
-
-.
+ einschließenden Kurve.
  Da sich der Integralsatz von 
 \noun on 
 Cauchy
@@ -1414,7 +1627,7 @@ Cauchy
 \end_inset 
 
  dargestellt.
- Dabei wird die 
+ Dabei wird die Kurve 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -1767,11 +1980,11 @@ f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji\, f(z_{0})\oint_{C}\tic\theta=\ji\, 
 \layout Standard
 
 und somit
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\, f(z_{0})}\msp.\label{eq:analysis_cauchy_formula_implicit}\end{equation}
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\, f(z_{0})\msp.\label{eq:analysis_cauchy_formula_implicit}\end{equation}
 
 \end_inset 
 
@@ -1806,30 +2019,24 @@ Cauchy
 \noun default 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{47}]{Brown:1996}
+\begin_inset LatexCommand \cite[47.]{Brown:1996}
 
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi}\label{eq:analysis_cauchy_formula}\end{equation}
+f(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\label{eq:analysis_cauchy_formula}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Bei der Interpretation von Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula_implicit}
-
-\end_inset 
-
- fällt sofort die bemerkenswerte Eigenschaft einer analytischen Funktion
- (innerhalb von 
+Bei der Interpretation fällt sofort die bemerkenswerte Eigenschaft einer
+ analytischen Funktion (innerhalb von 
 \begin_inset Formula $C$
 \end_inset 
 
@@ -1883,8 +2090,7 @@ Cauchy
 \begin_inset Formula $z$
 \end_inset 
 
- (nach Formel\SpecialChar ~
-
+ (
 \begin_inset LatexCommand \ref{eq:analysis_derivative_def}
 
 \end_inset 
@@ -1937,11 +2143,11 @@ f^{\prime}(z) & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\oint_{C}\fr
 \layout Standard
 
 Der so gewonnene Ausdruck
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f^{\prime}(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{2}}\tic\xi}\label{eq:analysis_derivative_first_integral}\end{equation}
+f^{\prime}(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{2}}\tic\xi\label{eq:analysis_derivative_first_integral}\end{equation}
 
 \end_inset 
 
@@ -1962,7 +2168,7 @@ ermöglicht die Berechnung der Ableitung von
 \end_inset 
 
  in der komplexen Ebene von einem Integrationsweg eingeschlossen wird, auf
- deren Rand und in dessen Innern 
+ deren Rand und in dessen Inneren 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -1974,13 +2180,13 @@ Durch erneute Anwendung der obigen Formeln kann man zur zweiten Ableitung
 \begin_inset Formula $f^{\prime\prime}(z)$
 \end_inset 
 
- gelangen, welche nach\SpecialChar ~
+ gelangen\SpecialChar ~
 
 \begin_inset LatexCommand \cite[\S$5 \sdot 22$]{Whittaker:1927}
 
 \end_inset 
 
-
+.
 \layout Standard
 
 
@@ -1992,8 +2198,7 @@ f^{\prime\prime}(z)=\frac{2}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{3}}\tic\xi\
 
 \layout Standard
 
-lautet.
- Für weitere Ableitungen ergibt sich in der Fortsetzung die Verallgemeinerte
+Für weitere Ableitungen ergibt sich in der Fortsetzung die Verallgemeinerte
  
 \noun on 
 Cauchy
@@ -2004,45 +2209,22 @@ Cauchy
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f^{(n)}(z)=\frac{n!}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{n+1}}\tic\xi}\msp,\label{eq:analysis_derivative_integral}\end{equation}
+f^{(n)}(z)=\frac{n!}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{n+1}}\tic\xi\msp,\label{eq:analysis_derivative_integral}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-welche durch vollständige Induktion beweisbar ist
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Die verallgemeinerte 
-\noun on 
-Cauchy
-\noun default 
-'sche Integralformel bestätigt für 
-\begin_inset Formula $n=0$
-\end_inset 
-
- auch Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula}
-
-\end_inset 
-
-.
-\end_inset 
-
-.
- Sie führt zu der wesentlichen Schlußfolgerung, daß jede analytische Funktion
+welche durch vollständige Induktion beweisbar ist.
+ Sie führt zu der wesentlichen Schlußfolgerung, daß eine analytische Funktion
  beliebig oft differenziert werden kann
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -2072,7 +2254,7 @@ Für den speziellen Fall, daß
 \begin_inset Formula $z$
 \end_inset 
 
- ist, kann man Formel\SpecialChar ~
+ ist, kann man Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_derivative_integral}
 
@@ -2102,7 +2284,7 @@ f(z) & =\frac{1}{2\pi}\int_{0}^{2\pi}f\left(z+r\e^{\ji\theta}\right)\tic\theta\l
 
 \layout Standard
 
-In der letzten Formel (
+In letzter Formel (
 \begin_inset LatexCommand \ref{eq:analysis_derivative_integral_mean}
 
 \end_inset 
@@ -2143,20 +2325,21 @@ Bei der
 \noun on 
 Laurent
 \noun default 
--Reihenentwicklung wird davon ausgegangen, daß sich die Funktion 
+-Reihenentwicklung wird davon ausgegangen, daß sich die komplexwertige Funktion
+ 
 \begin_inset Formula $f(z)$
 \end_inset 
 
  um einen Punkt 
-\begin_inset Formula $z_{0}$
+\begin_inset Formula $z_{0}\in\mathbb{C}$
 \end_inset 
 
- in der Form
-\layout Standard
+ in eine unendliche Reihe der Form
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}}\label{eq:analysis_laurent_series}\end{equation}
+f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}\label{eq:analysis_laurent_series}\end{equation}
 
 \end_inset 
 
@@ -2170,7 +2353,7 @@ entwickeln läßt\SpecialChar ~
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibsec{55}]{Brown:1996}
+\begin_inset LatexCommand \cite[55.]{Brown:1996}
 
 \end_inset 
 
@@ -2183,7 +2366,7 @@ entwickeln läßt\SpecialChar ~
 \begin_inset Formula $C$
 \end_inset 
 
- um den Punkt 
+ um 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -2229,7 +2412,7 @@ Taylor
 
 ) einer reellen Funktion\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{53}]{Brown:1996}
+\begin_inset LatexCommand \cite[53.]{Brown:1996}
 
 \end_inset 
 
@@ -2269,23 +2452,7 @@ Die Funktion
 
 \end_inset 
 
-, ist analytisch, weshalb dieses Integral verschwindet (
-\begin_inset ERT
-status Inlined
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Anhang\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:analysis_z_z0_holomorph}
-
-\end_inset 
-
-).
+, ist analytisch, weshalb dieses Integral verschwindet.
  Gleiches gilt für das Integral über den Hauptteil
 \begin_inset LatexCommand \index{Laurent-Reihe@\noun{Laurent}-Reihe!Hauptteil}
 
@@ -2304,7 +2471,7 @@ Laurent
 
 
 \begin_inset Formula \[
-\sum_{n=2}^{\infty}\oint_{C}\frac{a_{-n}}{(z-z_{0})^{n}}\tic z=0\]
+\sum_{n=2}^{\infty}\oint_{C}\frac{a_{-n}}{(z-z_{0})^{n}}\tic z=0\msp,\]
 
 \end_inset 
 
@@ -2404,11 +2571,11 @@ Cauchy
 \end_inset 
 
  ab.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=2\pi\ji\,\res{z_{0}}{f(z)}}\label{eq:analysis_laurent_residue_integral}\end{equation}
+\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=2\pi\ji\, a_{-1}=2\pi\ji\,\res{z_{0}}{f(z)}\label{eq:analysis_laurent_residue_integral}\end{equation}
 
 \end_inset 
 
@@ -2472,7 +2639,7 @@ ie
 
 \layout Standard
 
-Durch Kombination der Formeln kann man für die Koeffizienten 
+Durch Kombination der Beziehungen kann man für die Koeffizienten 
 \begin_inset Formula $a_{n}$
 \end_inset 
 
@@ -2481,11 +2648,11 @@ Durch Kombination der Formeln kann man für die Koeffizienten
 \end_inset 
 
 ) jetzt eine gemeinsame Berechnungsvorschrift angeben.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z}\label{eq:analysis_laurent_coeffs}\end{equation}
+a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z\label{eq:analysis_laurent_coeffs}\end{equation}
 
 \end_inset 
 
@@ -2584,11 +2751,11 @@ cf
 \end_inset 
 
  
-\begin_inset LatexCommand \cite[\bibsec{53}]{Brown:1996}
+\begin_inset LatexCommand \cite[53.]{Brown:1996}
 
 \end_inset 
 
-), wenn man Formel\SpecialChar ~
+), wenn man Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_derivative_integral}
 
@@ -2608,7 +2775,7 @@ Für die Existenz der Reihenentwicklung ist Voraussetzung, daß
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
@@ -2696,7 +2863,7 @@ resp
  Anwendung der Erkenntnisse des vorigen Abschnittes, in welchem der Begriff
  des Residuums erstmalig auftauchte\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{III}, \bibsec{6ff.}]{Freitag:2000}
+\begin_inset LatexCommand \cite[III-6ff.]{Freitag:2000}
 
 \end_inset 
 
@@ -2834,7 +3001,7 @@ Dieser Fakt ist nur indirekt mit der Wegunabhängigkeit erklärbar (da im
  Singularitäten liegen), exakter müßte man sich auf den sogenannten Deformations
 satz berufen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{8}, \bibsec{VI}]{Needham:1998}
+\begin_inset LatexCommand \cite[8-VI]{Needham:1998}
 
 \end_inset 
 
@@ -2918,11 +3085,11 @@ Ein einfach zusammenhängendes Gebiet
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=\sum_{n}\left[\oint_{C_{n}}f(z)\tic z\right]}\label{eq:analysis_cauchy_singularities}\end{equation}
+\oint_{C}f(z)\tic z=\sum_{n}\left[\oint_{C_{n}}f(z)\tic z\right]\label{eq:analysis_cauchy_singularities}\end{equation}
 
 \end_inset 
 
@@ -2944,11 +3111,11 @@ Laurent
 \end_inset 
 
  den Residuensatz formulieren.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\oint_{C}f(z)\tic z=2\pi\ji\sum_{n}\left[\res{z_{n}}{f(z)}\right]}\label{eq:analysis_residue_theorem}\end{equation}
+\oint_{C}f(z)\tic z=2\pi\ji\sum_{n}\left[\res{z_{n}}{f(z)}\right]\label{eq:analysis_residue_theorem}\end{equation}
 
 \end_inset 
 
@@ -2988,7 +3155,7 @@ Laurent
 
  unterscheiden\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{III}, \bibsec{4.10}]{Freitag:2000}
+\begin_inset LatexCommand \cite[III-4.10]{Freitag:2000}
 
 \end_inset 
 
@@ -3022,7 +3189,7 @@ Hebbare Singularitäten sind solche, für die
 
  analytisch) ist\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{III}, \bibsec{4.2}]{Freitag:2000}
+\begin_inset LatexCommand \cite[III-4.2]{Freitag:2000}
 
 \end_inset 
 
@@ -3070,7 +3237,7 @@ Existiert für
 \end_inset 
 
  ist beschränkt (
-\begin_inset Formula $\lim_{z\rightarrow z_{0}}\left|f(z)\right|=M<\infty$
+\begin_inset Formula $\lim_{z\rightarrow z_{0}}\left|f(z)\right|<\infty$
 \end_inset 
 
 ), so verschwindet wegen des Satzes von 
@@ -3324,18 +3491,18 @@ ie
 \end_inset 
 
  auf der Grundlage der folgenden Formel:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[(z-z_{0})^{n}\, f(z)\right]}\msp.\label{eq:analysis_residue_pole}\end{equation}
+\res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[(z-z_{0})^{n}\, f(z)\right]\msp.\label{eq:analysis_residue_pole}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Die dahinter steckende Idee ist, 
+Die dahinter steckende Idee besteht darin, 
 \begin_inset Formula $f(z)$
 \end_inset 
 
@@ -3345,7 +3512,7 @@ Die dahinter steckende Idee ist,
 
 \end_inset 
 
- zuerst durch Multiplikation mit 
+ durch Multiplikation mit 
 \begin_inset Formula $(z-z_{0})^{n}$
 \end_inset 
 
@@ -3357,7 +3524,7 @@ Die dahinter steckende Idee ist,
 \begin_inset Formula $n-1$
 \end_inset 
 
- malige Ableitung zu extrahieren.
+ -malige Ableitung zu extrahieren.
  Die Richtigkeit kann man einfach durch Einsetzen von 
 \begin_inset Formula $f(z)$
 \end_inset 
@@ -3377,7 +3544,7 @@ Die dahinter steckende Idee ist,
 \layout Standard
 
 Differentiation der einzelnen Summanden, gefolgt von der Grenzwertbildung
- bestätigt Formel\SpecialChar ~
+ bestätigt Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_residue_pole}
 
@@ -3442,11 +3609,11 @@ Speziell für einfache Pole (
 \end_inset 
 
 ) gilt:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\res{z_{0}}{f(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, f(z)\right]}\msp,\label{eq:analysis_residue_pole_simple}\end{equation}
+\res{z_{0}}{f(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, f(z)\right]\msp,\label{eq:analysis_residue_pole_simple}\end{equation}
 
 \end_inset 
 
@@ -3459,11 +3626,11 @@ was bei gebrochen-rationalen Funktionen
 \end_inset 
 
  zu
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\res{z_{0}}{\frac{u(z)}{v(z)}}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{u(z)}{v(z)}\right]=u(z_{0})\lim_{z\rightarrow z_{0}}\frac{z-z_{0}}{v(z)}=\frac{u(z_{0})}{v'(z_{0})}}\label{eq:analysis_residue_pole_rational}\end{equation}
+\res{z_{0}}{\frac{u(z)}{v(z)}}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{u(z)}{v(z)}\right]=u(z_{0})\lim_{z\rightarrow z_{0}}\frac{z-z_{0}}{v(z)}=\frac{u(z_{0})}{v'(z_{0})}\label{eq:analysis_residue_pole_rational}\end{equation}
 
 \end_inset 
 
@@ -3493,7 +3660,7 @@ Bernoulli-l'Hospital
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{9}, \bibsec{III}]{Needham:1998}
+\begin_inset LatexCommand \cite[9-III]{Needham:1998}
 
 \end_inset 
 
@@ -3510,12 +3677,12 @@ Wesentliche Singularitäten
 
  sind solche, die weder hebbar noch ein Pol sind\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{6}, \bibsec{VIII}]{Needham:1998}
+\begin_inset LatexCommand \cite[6-VIII]{Needham:1998}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibchap{III}, \bibsec{4.3}]{Freitag:2000}
+\begin_inset LatexCommand \cite[III-4.3]{Freitag:2000}
 
 \end_inset 
 
@@ -3720,7 +3887,7 @@ Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
 
  keine Singularitäten, dann gilt folgende Ungleichung\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{37}]{Brown:1996}
+\begin_inset LatexCommand \cite[37]{Brown:1996}
 
 \end_inset 
 
@@ -3786,16 +3953,16 @@ M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibsec{41}]{Brown:1996}
+\begin_inset LatexCommand \cite[41.]{Brown:1996}
 
 \end_inset 
 
 :
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\left|\int_{C}f(z)\tic z\right|\leq L\cdot M=L\,\sup_{z\in C}|f(z)|}\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
+\left|\int_{C}f(z)\tic z\right|\leq L\cdot M=L\,\sup_{z\in C}|f(z)|\msp.\label{eq:analysis_integral_abs_limit}\end{equation}
 
 \end_inset 
 
@@ -3831,7 +3998,7 @@ ten Ableitung von
 \end_inset 
 
 .
- Wir gehen dabei von Formel\SpecialChar ~
+ Wir gehen dabei von Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_derivative_integral_circle}
 
@@ -3845,7 +4012,7 @@ ten Ableitung von
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- aus, um deren Wert (
+, aus um deren Wert (
 \begin_inset ERT
 status Collapsed
 
@@ -3894,17 +4061,17 @@ Anwendung von Ungleichung\SpecialChar ~
 
 \layout Standard
 
-und damit direkt weiter zur Ungleichung
+und damit direkt weiter zur Relation
 \begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Satz von}
 
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\left|f^{(n)}(z_{0})\right|\leq\frac{M\, n!}{r^{n}}}\msp.\label{eq:analysis_derivative_abs_limit}\end{equation}
+\left|f^{(n)}(z_{0})\right|\leq\frac{M\, n!}{r^{n}}\msp.\label{eq:analysis_derivative_abs_limit}\end{equation}
 
 \end_inset 
 
@@ -3989,7 +4156,7 @@ Läßt man nun
 \begin_inset Formula $f(z)$
 \end_inset 
 
- überall beschränkt ist):
+ überall beschränkt sei):
 \layout Standard
 
 
@@ -4018,10 +4185,10 @@ ie
  ist konstant.
 \layout Standard
 
-Interessant ist im Umkehrschluß, daß jede analytische Funktion (die nicht
- konstant ist) Singularitäten besitzen muß.
- Denn dadurch wäre sie entweder nicht beschränkt oder nicht analytisch,
- würde also die Voraussetzungen nicht erfüllen.
+Interessant ist im Umkehrschluß, daß jede nicht-konstante analytische Funktion
+ Singularitäten besitzen muß.
+ Ansonsten wäre sie entweder nicht beschränkt oder nicht analytisch, würde
+ also die Voraussetzungen nicht erfüllen.
 \end_deeper 
 \layout Standard
 
@@ -4049,17 +4216,17 @@ In Ungleichung\SpecialChar ~
 
  nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibannex{II}, \bibsec{6.}]{Cauer:1954}
+\begin_inset LatexCommand \cite[II-6.]{Cauer:1954}
 
 \end_inset 
 
 :
 \begin_deeper 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
-\boxed{\left|f(z_{0})\right|\leq\sup_{|z-z_{0}|=r}|f(z)|}\msp,\]
+\left|f(z_{0})\right|\leq\sup_{|z-z_{0}|=r}|f(z)|\msp,\]
 
 \end_inset 
 
@@ -4134,7 +4301,7 @@ Liouville
 
  ein nicht-konstantes Polynom ist\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibchap{II}, \bibsec{3}]{Freitag:2000}
+\begin_inset LatexCommand \cite[II-3.]{Freitag:2000}
 
 \end_inset 
 
@@ -4155,7 +4322,7 @@ Lemma von Jordan
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Lemma von!Jordan@\noun{Jordan}|see{\noun{Jordan}}}
+\begin_inset LatexCommand \index{Satz von!Jordan@\noun{Jordan}|see{\noun{Jordan}}}
 
 \end_inset 
 
@@ -4178,12 +4345,12 @@ Ist die Funktion
 \end_inset 
 
  analytisch auf dem Integrationsweg 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{\infty}$
 \end_inset 
 
  nach Abbildung\SpecialChar ~
 
-\begin_inset LatexCommand \ref{fig:analysis_real_inf_integral}
+\begin_inset LatexCommand \vref{fig:analysis_real_inf_integral}
 
 \end_inset 
 
@@ -4199,17 +4366,7 @@ Ist die Funktion
 \begin_inset Formula $\lim_{r\rightarrow\infty}f(z)=0$
 \end_inset 
 
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- für 
+ oder für 
 \begin_inset Formula $\alpha=0$
 \end_inset 
 
@@ -4218,11 +4375,11 @@ resp
 \end_inset 
 
 , dann gilt:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z=0}\qquad\qquad(\alpha\in\mathbb{R})\msp.\label{eq:analysis_jordan_lemma}\end{equation}
+\lim_{r\rightarrow\infty}\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z=0\qquad(\alpha\in\mathbb{R})\msp.\label{eq:analysis_jordan_lemma}\end{equation}
 
 \end_inset 
 
@@ -4239,7 +4396,7 @@ Für den Beweis gehen wir wie in
 
 
 \begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\label{eq:analysis_jordan_lemma_abs}\end{equation}
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z\right|\label{eq:analysis_jordan_lemma_abs}\end{equation}
 
 \end_inset 
 
@@ -4257,7 +4414,7 @@ Liouville
 
 
 \begin_inset Formula \[
-\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\leq\int_{C_{r}}\left|\e^{\ji\alpha z}\right|\cdot\left|f(z)\vphantom{\e^{\ji\alpha z}}\right|\cdot\left|\tdc z\vphantom{\e^{\ji\alpha z}}\right|\]
+\left|\,\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z\right|\leq\int_{C_{\infty}}\left|\e^{\ji\alpha z}\right|\cdot\left|f(z)\vphantom{\e^{\ji\alpha z}}\right|\cdot\left|\tdc z\vphantom{\e^{\ji\alpha z}}\right|\]
 
 \end_inset 
 
@@ -4269,7 +4426,7 @@ Mit der Parameterdarstellung
 \end_inset 
 
  des Integrationsweges 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{\infty}$
 \end_inset 
 
 , dem zugehörigen Differential 
@@ -4285,7 +4442,7 @@ Mit der Parameterdarstellung
 
 
 \begin_inset Formula \begin{equation}
-\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\e^{-\alpha r\sin\theta}\left|f\left(r\e^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{r}}|f(z)|\,\int_{0}^{\pi}\e^{-\alpha r\sin\theta}\tic\theta\msp.\label{eq:analysis_jordan_inequ1}\end{equation}
+\left|\,\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\e^{-\alpha r\sin\theta}\left|f\left(r\e^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\e^{-\alpha r\sin\theta}\tic\theta\msp.\label{eq:analysis_jordan_inequ1}\end{equation}
 
 \end_inset 
 
@@ -4328,7 +4485,7 @@ eg
 
  in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{74}]{Brown:1996}
+\begin_inset LatexCommand \cite[74.]{Brown:1996}
 
 \end_inset 
 
@@ -4372,7 +4529,7 @@ Einsetzen in Ungleichung\SpecialChar ~
 
 \begin_inset Formula \begin{align}
 \lim_{r\rightarrow\infty}r\int_{0}^{\pi}\e^{-\alpha r\sin\theta}\tic\theta & \leq\frac{\pi}{\alpha}\qquad\qquad(\alpha\geq0)\label{eq:analysis_jordan_inequ3}\\
-\lim_{r\rightarrow\infty}\left|\,\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z\right| & \leq\frac{\pi}{\alpha}\,\lim_{r\rightarrow\infty}\sup_{z\in C_{r}}|f(z)|\msp,\label{eq:analysis_jordan_inequ2}\end{align}
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z\right| & \leq\frac{\pi}{\alpha}\,\lim_{r\rightarrow\infty}\sup_{z\in C_{\infty}}|f(z)|\msp,\label{eq:analysis_jordan_inequ2}\end{align}
 
 \end_inset 
 
@@ -4385,7 +4542,7 @@ was mehrere Fallunterscheidungen notwendig macht.
 \end_inset 
 
  mit 
-\begin_inset Formula $z\in C_{r}$
+\begin_inset Formula $z\in C_{\infty}$
 \end_inset 
 
  geht (
@@ -4435,7 +4592,7 @@ ie
 \end_inset 
 
  die bekannte Abschätzung 
-\begin_inset Formula $\lim_{r\rightarrow\infty}|\int_{C_{r}}\e^{\ji z}\tic z\,|\leq\pi$
+\begin_inset Formula $\lim_{r\rightarrow\infty}|\int_{C_{\infty}}\e^{\ji z}\tic z\,|\leq\pi$
 \end_inset 
 
  beinhaltet, welche sich für 
@@ -4449,11 +4606,11 @@ ie
  ergibt.
 \layout Enumerate
 
-Der Fall 
+Werte 
 \begin_inset Formula $\alpha<0$
 \end_inset 
 
- führt zu folgenden Veränderungen an den bisherigen Formeln:
+ führen zu folgenden Veränderungen an den bisherigen Formeln:
 \begin_deeper 
 \layout Enumerate
 
@@ -4470,7 +4627,7 @@ Bildet man den Grenzwert
 \begin_inset Formula $\lim_{r\rightarrow\infty}$
 \end_inset 
 
- für Formel\SpecialChar ~
+ für Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_jordan_integral_sine}
 
@@ -4597,11 +4754,11 @@ Jordan
 
  nimmt unter genannten Voraussetzungen die spezielle Form
 \begin_deeper 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z=0}\label{eq:analysis_jordan_lemma_vanish}\end{equation}
+\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z=0\label{eq:analysis_jordan_lemma_vanish}\end{equation}
 
 \end_inset 
 
@@ -4632,7 +4789,7 @@ Läßt man (abweichend von der Voraussetzung) ein negativ-imaginäres
 
 
 \begin_inset Formula \[
-\left|\,\int_{C_{r}}\e^{\beta z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\e^{\beta r\cos\theta}\left|f\left(r\e^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{r}}|f(z)|\,\int_{0}^{\pi}\e^{\beta r\cos\theta}\tic\theta\]
+\left|\,\int_{C_{\infty}}\e^{\beta z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\e^{\beta r\cos\theta}\left|f\left(r\e^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\e^{\beta r\cos\theta}\tic\theta\]
 
 \end_inset 
 
@@ -4670,7 +4827,7 @@ resp
 
 .
  Durch den neuen Integrationsweg 
-\begin_inset Formula $C_{r}'$
+\begin_inset Formula $C_{\infty}'$
 \end_inset 
 
  im Unendlichen (
@@ -4707,7 +4864,7 @@ Sollte jedoch
 \end_inset 
 
  gelten, dann kann dies (wie im reellen Fall) durch Drehung von 
-\begin_inset Formula $C_{r}'$
+\begin_inset Formula $C_{\infty}'$
 \end_inset 
 
  in die rechte Halbebene kompensiert werden.
@@ -4718,8 +4875,8 @@ Sollte jedoch
 
 
 \begin_inset Formula \begin{eqnarray*}
-r\sup_{z\in C_{r}}|f(z)|\,\int_{0}^{\pi}\e^{\beta r\cos\theta}\tic\theta & \Rightarrow & r\sup_{z\in C_{r}'}|f(z)|\,\int_{\pi/2}^{3\pi/2}\e^{\beta r\cos\theta}\tic\theta\\
- & = & r\sup_{z\in C_{r}'}|f(z)|\,\int_{0}^{\pi}\e^{-\beta r\sin\varphi}\tic\varphi\end{eqnarray*}
+r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\e^{\beta r\cos\theta}\tic\theta & \Rightarrow & r\sup_{z\in C_{\infty}'}|f(z)|\,\int_{\pi/2}^{3\pi/2}\e^{\beta r\cos\theta}\tic\theta\\
+ & = & r\sup_{z\in C_{\infty}'}|f(z)|\,\int_{0}^{\pi}\e^{-\beta r\sin\varphi}\tic\varphi\end{eqnarray*}
 
 \end_inset 
 
@@ -4790,7 +4947,7 @@ Jordan
  ermöglicht (unter den angezeigten Voraussetzungen) die Berechnung von uneigentl
 ichen Integralen durch komplexe Integration.
  Um das Prinzip zu verdeutlichen befassen wir uns zuerst mit dem (einfachen)
- Spezialfall nach Formel\SpecialChar ~
+ Spezialfall nach Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_jordan_lemma_vanish}
 
@@ -4844,7 +5001,7 @@ Integrationsweg(e) für reelles
 \layout Standard
 
 Dazu soll auf dem geschlossenen Weg 
-\begin_inset Formula $C=C_{r}\rightarrow C_{x}$
+\begin_inset Formula $C=C_{\infty}\rightarrow C_{x}$
 \end_inset 
 
  nach Abbildung\SpecialChar ~
@@ -4863,7 +5020,7 @@ Dazu soll auf dem geschlossenen Weg
 \end_inset 
 
  in der oberen komplexen Halbebene (
-\begin_inset Formula $\imop z_{n}>0$
+\begin_inset Formula $\imop(z_{n})>0$
 \end_inset 
 
 ) adressiert.
@@ -4871,7 +5028,7 @@ Dazu soll auf dem geschlossenen Weg
 
 
 \begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}\end{equation}
+\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}\end{equation}
 
 \end_inset 
 
@@ -4883,11 +5040,11 @@ Mit
 Jordan
 \noun default 
 's Lemma erhält man als Berechnungsvorschrift:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}}\msp.\label{eq:analysis_inf_integral_residue}\end{equation}
+\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}\msp.\label{eq:analysis_inf_integral_residue}\end{equation}
 
 \end_inset 
 
@@ -5036,7 +5193,7 @@ ristik
 
 ist\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{20.2}]{Gellert:1979}
+\begin_inset LatexCommand \cite[20.2]{Gellert:1979}
 
 \end_inset 
 
@@ -5222,7 +5379,7 @@ Speziell für gebrochen-rationale Funktionen
 
 \end_inset 
 
- ist es durch Hinzunahme von Formel\SpecialChar ~
+ ist es durch Hinzunahme von Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_residue_pole_rational}
 
@@ -5235,11 +5392,11 @@ Speziell für gebrochen-rationale Funktionen
 \end_inset 
 
 ):
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \[
-\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop z_{n}>0}\frac{p(z_{n})}{q'(z_{n})}\msp.\]
+\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\frac{p(z_{n})}{q'(z_{n})}\msp.\]
 
 \end_inset 
 
@@ -5308,7 +5465,7 @@ einer
 
  kann man unter bestimmten Voraussetzungen jeden Funktionswert im Gebiet
  
-\begin_inset Formula $\imop z>0$
+\begin_inset Formula $\imop(z)>0$
 \end_inset 
 
  durch Integration entlang der reellen Achse berechnen.
@@ -5388,7 +5545,7 @@ Einsetzen in den Ausgangspunkt des allgemeinen Falls (
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}g(z)\tic z=2\pi\ji f(z_{0})=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}g(z)\tic z}_{0}+\int_{-\infty}^{\infty}\frac{f(z)}{z-z_{0}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x\msp.\]
+\lim_{r\rightarrow\infty}\oint_{C}g(z)\tic z=2\pi\ji f(z_{0})=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}g(z)\tic z}_{0}+\int_{-\infty}^{\infty}\frac{f(z)}{z-z_{0}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x\msp.\]
 
 \end_inset 
 
@@ -5438,21 +5595,21 @@ Benennt man
 \end_inset 
 
  in der Halbebene 
-\begin_inset Formula $\imop z_{0}>0$
+\begin_inset Formula $\imop(z_{0})>0$
 \end_inset 
 
  nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
+\begin_inset LatexCommand \cite[119.]{Brown:1996}
 
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x}\qquad(\imop z_{0}>0)\label{eq:analysis_halfplane_cauchy_formula}\end{equation}
+f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x\qquad\imop(z_{0})>0\label{eq:analysis_halfplane_cauchy_formula}\end{equation}
 
 \end_inset 
 
@@ -5467,7 +5624,7 @@ Sollte
 \end_inset 
 
  entgegen der bisherigen Ausführungen im Gebiet 
-\begin_inset Formula $\reop z_{0}>0$
+\begin_inset Formula $\reop(z_{0})>0$
 \end_inset 
 
  analytisch sein, dann integriert man auf einem Halbkreis in der rechten
@@ -5483,7 +5640,7 @@ Sollte
 \end_inset 
 
  liegt (wieder) innerhalb der Kurve 
-\begin_inset Formula $C=C_{y}\rightarrow C_{r}$
+\begin_inset Formula $C=C_{y}\rightarrow C_{\infty}$
 \end_inset 
 
  und hat, nimmt man 
@@ -5504,11 +5661,11 @@ Cauchy
 
  zu Hilfe
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-Denn Formel\SpecialChar ~
+Denn Beziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_halfplane_cauchy_formula}
 
@@ -5525,7 +5682,7 @@ Cauchy
 \end_inset 
 
  für den im Unendlichen verlaufenden Integrationsweg 
-\begin_inset Formula $C=C_{x}\rightarrow C_{r}$
+\begin_inset Formula $C=C_{x}\rightarrow C_{\infty}$
 \end_inset 
 
  nach Abbildung\SpecialChar ~
@@ -5578,7 +5735,7 @@ cf
 
 
 \begin_inset Formula \[
-\frac{1}{2\pi\ji}\left[\int_{C_{r}}g(z)\tic z-\int_{C_{y}}g(z)\tic z\right]=-\int_{-\ji\infty}^{\ji\infty}g(z)\tic z=2\pi\ji\,\res{z_{0}}{g(z)}=2\pi\ji f(z_{0})\]
+\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\int_{C_{y}}\frac{f(z)}{z-z_{0}}\tic z=-\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\,\res{z_{0}}{\frac{f(z)}{z-z_{0}}}=2\pi\ji f(z_{0})\]
 
 \end_inset 
 
@@ -5590,11 +5747,11 @@ und somit für den Funktionswert an der Stelle
 \end_inset 
 
 :
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z}\qquad(\reop z_{0}>0)\msp.\label{eq:analysis_halfplane_right_cauchy_imint}\end{equation}
+f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\qquad\reop(z_{0})>0\msp.\label{eq:analysis_halfplane_right_cauchy_imint}\end{equation}
 
 \end_inset 
 
@@ -5613,11 +5770,11 @@ Nimmt man noch die Ersetzung
 \end_inset 
 
 ).
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y}\qquad(\reop z_{0}>0)\label{eq:analysis_halfplane_right_cauchy_reint}\end{equation}
+f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y\msp,\qquad\reop(z_{0})>0\label{eq:analysis_halfplane_right_cauchy_reint}\end{equation}
 
 \end_inset 
 
@@ -5645,7 +5802,7 @@ Die im Folgenden als Notiz eingefügten Anmerkungen und Formeln gelten für
 \layout Standard
 
 Gehen wir jetzt nocheinmal zum Fall 
-\begin_inset Formula $\imop z_{0}>0$
+\begin_inset Formula $\imop(z_{0})>0$
 \end_inset 
 
 , 
@@ -5658,9 +5815,9 @@ status Collapsed
 ie
 \end_inset 
 
- zur oberen Halbebene
+ in die obere Halbebene
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -5688,8 +5845,8 @@ Weitere Varianten bezüglich der Halbebenen, in denen
 \end_inset 
 
 .
- Nehmen wir jetzt (im Gegensatz zu den bisherigen Ausführungen) an, der
- Punkt 
+ Nehmen wir (im Gegensatz zu den bisherigen Ausführungen) an, der Punkt
+ 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -5703,17 +5860,7 @@ Weitere Varianten bezüglich der Halbebenen, in denen
 \begin_inset Formula $C$
 \end_inset 
 
- (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-cf
-\end_inset 
-
- Abbildung\SpecialChar ~
+ (siehe Abbildung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{fig:analysis_real_inf_integral}
 
@@ -5741,7 +5888,7 @@ Cauchy
 \layout Standard
 
 verschwinden.
- Bringt man diese Äquivalenz im Zusammenhang mit dem Punkt 
+ Bringt man diese Gleichung in Zusammenhang mit dem Punkt 
 \begin_inset Formula $z_{0}$
 \end_inset 
 
@@ -5783,9 +5930,9 @@ f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{1})\, f(\ji y)
 
 \layout Standard
 
-so läßt sich aus der rechten Spalte
+so läßt sich aus der rechtsseitigen Beziehung 
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -5797,17 +5944,7 @@ Welche die Austauschbarkeit von
 \begin_inset Formula $x$
 \end_inset 
 
- 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-resp
-\end_inset 
-
- 
+ sowie 
 \begin_inset Formula $y_{0}$
 \end_inset 
 
@@ -5818,7 +5955,7 @@ resp
  im Zähler des Integranden anzeigt.
 \end_inset 
 
- die Gleichung
+ die Äquivalenz
 \layout Standard
 
 
@@ -5961,16 +6098,16 @@ was zu folgenden Berechnungsformeln für
 
  führt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
+\begin_inset LatexCommand \cite[119.]{Brown:1996}
 
 \end_inset 
 
 :
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x}\qquad(y_{0}>0)\msp.\label{eq:analysis_halfplane_boundary1}\end{equation}
+f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x\msp,\qquad y_{0}>0\msp.\label{eq:analysis_halfplane_boundary1}\end{equation}
 
 \end_inset 
 
@@ -6015,8 +6152,8 @@ Durch Einsetzen von
 \begin_inset Formula $f(x+\ji y)=u(x,y)+\ji v(x,y)$
 \end_inset 
 
- lassen sich die Darstellungsformen
-\layout Standard
+ lassen sich außerdem die Darstellungsformen
+\layout Emphasized
 
 
 \begin_inset Formula \begin{align}
@@ -6051,7 +6188,7 @@ gewinnen, wobei die Realteil-Beziehung auch
 \noun on 
 Poisson
 \noun default 
-'s Formel
+'s Integralformel
 \begin_inset LatexCommand \index{Poisson@\noun{Poisson}!-Formel (für die Halbebene)}
 
 \end_inset 
@@ -6075,7 +6212,7 @@ Poisson
  der Integrationsweg entlang der reellen Achse zu einem Kreis um den Koordinaten
 ursprung wird\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{116}]{Brown:1996}
+\begin_inset LatexCommand \cite[116.]{Brown:1996}
 
 \end_inset 
 
@@ -6104,7 +6241,7 @@ ursprung wird\SpecialChar ~
 .
  Durch getrennte Betrachtung von Real- und Imaginärteil erhält man daraus
  die Formeln
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{alignat}{2}
@@ -6157,13 +6294,13 @@ welche durch Einsetzen in\SpecialChar ~
 \end_inset 
 
  nur einer Komponente ermöglichen.
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{xalignat}{2}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}-\ji(x-x_{0})}{|x-z_{0}|^{2}}u(x,0)\tic x & f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})+\ji y_{0}}{|x-z_{0}|^{2}}v(x,0)\tic x\nonumber \\
  & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\conjgt{(x-z_{0})}}{|x-z_{0}|^{2}}u(x,0)\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\conjgt{(x-z_{0})}}{|x-z_{0}|^{2}}v(x,0)\tic x\nonumber \\
- & \boxed{=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x} &  & \boxed{=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x}\label{eq:analysis_halfplane_boundary2}\end{xalignat}
+ & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x\label{eq:analysis_halfplane_boundary2}\end{xalignat}
 
 \end_inset 
 
@@ -6189,7 +6326,7 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}+\ji(y-y_{0})}{|\ji y
 
 \layout Standard
 
-Letztere Formeln eröffnen in Verbindung mit Gleichung\SpecialChar ~
+Letztere Beziehungen eröffnen in Verbindung mit Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:analysis_complex_derivative}
 
@@ -6203,11 +6340,11 @@ Letztere Formeln eröffnen in Verbindung mit Gleichung\SpecialChar ~
 \begin_inset Formula $z_{0}$
 \end_inset 
 
- (
-\begin_inset Formula $\imop z_{0}>0$
+ mit 
+\begin_inset Formula $\imop(z_{0})>0$
 \end_inset 
 
-) ausgehend von den Randwerten
+ ausgehend von den Randwerten
 \begin_inset LatexCommand \index{Randwerte}
 
 \end_inset 
@@ -6235,7 +6372,7 @@ Bei Gleichung\SpecialChar ~
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
@@ -6244,144 +6381,6 @@ Bei Gleichung\SpecialChar ~
 \end_inset 
 
 
-\layout Standard
-
-Besondere Bedeutung haben für den Grenzfall 
-\begin_inset Formula $y_{0}\rightarrow+0$
-\end_inset 
-
- die Formeln\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_real}
-
-\end_inset 
-
- und\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary_imag}
-
-\end_inset 
-
-, denn sie zeigen, daß Real- und Imaginärteil (entlang der reellen Achse)
- über die 
-\noun on 
-Hilbert
-\noun default 
--Transformation
-\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
-
-\end_inset 
-
- verknüpft sind
-\begin_inset Foot
-collapsed false
-
-\layout Standard
-
-Konform zu 
-\begin_inset LatexCommand \cite[\bibchap{9}]{Papoulis:2002}
-
-\end_inset 
-
-, 
-\begin_inset LatexCommand \cite[\bibchap{4.}]{Fritzsche:1985}
-
-\end_inset 
-
- wurde für die 
-\noun on 
-Hilbert
-\noun default 
--Transformationen die Definition 
-\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
-\end_inset 
-
- verwendet.
-\end_inset 
-
-.
- 
-\layout Standard
-
-
-\begin_inset Formula \begin{alignat*}{2}
-\lim_{y_{0}\rightarrow+0}u(x_{0},y_{0})=u(x_{0},0) & =\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(x,0)}{x-x_{0}}\tic x &  & =\mathcal{H}\{ v(x_{0},0)\}\\
-\lim_{y_{0}\rightarrow+0}v(x_{0},y_{0})=v(x_{0},0) & =-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(x,0)}{x-x_{0}}\tic x &  & =-\mathcal{H}\{ u(x_{0},0)\}\end{alignat*}
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
-Für rechtsseitig-holomorphe Funktionen gilt im Fall 
-\begin_inset Formula $x_{0}\rightarrow+0$
-\end_inset 
-
- , 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-ie
-\end_inset 
-
- auf der imaginären Achse, gleichermaßen:
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\lim_{x_{0}\rightarrow+0}u(x_{0},y_{0}) & =u(0,y_{0})=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y=\mathcal{H}\{ v(0,y)\}\\
-\lim_{x_{0}\rightarrow+0}v(x_{0},y_{0}) & =v(0,y_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y=-\mathcal{H}\{ u(0,y)\}\end{align*}
-
-\end_inset 
-
-
-\end_inset 
-
-
-\layout Standard
-
-Zum Integrationsweg sei noch angemerkt, daß wegen der bei 
-\begin_inset Formula $x$
-\end_inset 
-
- bestehenden Singularät im Integranden (wenn nicht hebbar) der 
-\noun on 
-Cauchy
-\noun default 
-'sche Hauptwert
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Wenn er denn existiert.
-\end_inset 
-
-
-\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!-Hauptwert}
-
-\end_inset 
-
- 
-\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi=\frac{1}{\pi}\lim_{\varepsilon\rightarrow0}\left[\int_{-\infty}^{x-\varepsilon}\frac{f(\xi)}{x-\xi}\tic\xi+\int_{x+\varepsilon}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi\right]$
-\end_inset 
-
- anzuwenden ist\SpecialChar ~
-
-\begin_inset LatexCommand \cite[\bibsec{13}]{Bracewell:2003}
-
-\end_inset 
-
-.
 \layout Standard
 
 
@@ -6453,7 +6452,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z>0}
+\imop(z)>0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6496,7 +6495,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop f(\xi)}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop[f(\xi)]}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6547,7 +6546,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop f(\xi)}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[f(\xi)]}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6564,7 +6563,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z<0}
+\imop(z)<0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6607,7 +6606,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop f(\xi)}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop[f(\xi)]}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6658,7 +6657,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop f(\xi)}{\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[f(\xi)]}{\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6675,7 +6674,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z>0}
+\reop(z)>0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6718,7 +6717,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6769,7 +6768,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6786,7 +6785,7 @@ Bedingung
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z<0}
+\reop(z)<0}
 }\! f(z)=0}$
 \end_inset 
 
@@ -6829,7 +6828,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6880,7 +6879,7 @@ Bedingung
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop f(\ji\xi)}{\ji\xi-z}\tic\xi}$
+\begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
 \end_inset 
 
 
@@ -6897,12 +6896,502 @@ Bedingung
 
 \layout Paragraph
 
+Grenzfälle
+\layout Enumerate
+
+Sollte 
+\noun on 
+Jordan
+\noun default 
+'s Lemma wegen 
+\begin_inset Formula $\lim_{r\rightarrow\infty}f(z)\neq0$
+\end_inset 
+
+ einmal nicht anwendbar sein, dann muß das Integral 
+\begin_inset Formula $\int_{C_{\infty}}f(z)/(z-z_{0})\tic z$
+\end_inset 
+
+ für 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+ berücksichtigt werden.
+ Nehmen wir beispielhaft den Fall der rechtsseitig halb-analytischen Funktionen,
+ dann hilft die Substitution 
+\begin_inset Formula $z-z_{0}=r\e^{\ji\theta}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\tdc z=\ji r\e^{\ji\theta}\tic\theta$
+\end_inset 
+
+ weiter.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+2\pi\ji\, f(z_{0}) & =\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\\
+f(z_{0}) & =\frac{1}{2\pi}\lim_{r\rightarrow\infty}\int_{-\pi/2}^{\pi/2}f(z_{0}+r\e^{\ji\theta})\tic\theta-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\end{align*}
+
+\end_inset 
+
+ Für den Spezialfall 
+\begin_inset Formula $f(z)=1$
+\end_inset 
+
+ kann man durch formales Einsetzen
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\frac{1}{2\pi\ji}\,\overbrace{\ji\,\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\tic\theta}^{\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z}-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}} & =1\\
+\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}} & =\frac{1}{2\pi}\left.\theta\right|_{-\pi/2}^{\pi/2}-1\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+das uneigentliche Integral
+\layout Emphasized
+
+
+\begin_inset Formula \begin{equation}
+\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}}=-\ji\pi\msp,\qquad x_{0}>0\label{eq:analysis_halfplane_right_z_z0}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+ermitteln und dadurch auch 
+\begin_inset Formula $\int_{C_{\infty}}(z-z_{0})^{-1}\tic z=\ji\pi$
+\end_inset 
+
+ für 
+\begin_inset Formula $\reop(z_{0})>0$
+\end_inset 
+
+ verifizieren.
+\end_deeper 
+\layout Enumerate
+
+Alle Ausführungen zu analytischen Funktionen in der rechten Halbebene haben
+ sich bisher auf Funktionswerte mit 
+\begin_inset Formula $\reop(z_{0})>0$
+\end_inset 
+
+ beschränkt.
+ Interessant 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ für den Zusammenhang zwischen der 
+\noun on 
+Fourier
+\noun default 
+- und 
+\noun on 
+Laplace
+\noun default 
+-Transformation
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
+
+\end_inset 
+
+ sind aber auch die Funktionswerte auf der imaginären Achse 
+\begin_inset Formula $\reop(z_{0})\rightarrow0$
+\end_inset 
+
+.
+ Dazu soll die Funktion 
+\begin_inset Formula $f(z)/(z-z_{0})$
+\end_inset 
+
+ auf dem Integrationsweg entsprechend Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{fig:analysis_halfplane_int_singularity}
+
+\end_inset 
+
+ betrachtet werden.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Float figure
+wide false
+collapsed false
+
+\layout Standard
+\align center 
+
+\begin_inset Graphics
+	filename imag_int_vp.eps
+
+\end_inset 
+
+
+\layout Caption
+
+
+\begin_inset LatexCommand \label{fig:analysis_halfplane_int_singularity}
+
+\end_inset 
+
+Integrationsweg mit Singularität auf imaginärer Achse 
+\end_inset 
+
+
+\layout Standard
+
+Wegen der Holomorphieeigenschaft in der rechten Halbebene muß nach dem Satz
+ von 
+\noun on 
+Cauchy
+\noun default 
+ folgendes gelten:
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{C_{\infty}}-\lim_{\varepsilon\rightarrow\infty}\left[\int_{-\ji\infty}^{\ji(y_{0}-\varepsilon)}+\int_{\ji(y_{0}+\varepsilon)}^{\ji\infty}+\int_{C_{\varepsilon}}\right]=0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Das Integral auf dem Weg 
+\begin_inset Formula $C_{\infty}$
+\end_inset 
+
+ verschwindet nach 
+\noun on 
+Jordan
+\noun default 
+'s Lemma für 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+, wenn 
+\begin_inset Formula $\lim_{r\rightarrow\infty}f(z)=0$
+\end_inset 
+
+ angenommen werden kann.
+ Die beiden Teilintegrale auf dem geraden Integrationsweg entlang der imaginären
+ Achse stellen für 
+\begin_inset Formula $\varepsilon\rightarrow0$
+\end_inset 
+
+ genau einen 
+\noun on 
+Cauchy
+\noun default 
+'schen Hauptwert dar, was ihre Zusammenfassung ermöglicht.
+\layout Emphasized
+
+
+\begin_inset Formula \begin{equation}
+\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z\label{eq:analysis_halfplane_right_x0}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit der Substitution 
+\begin_inset Formula $z-z_{0}=\varepsilon\,\e^{\ji\theta}$
+\end_inset 
+
+, welche die gewünschte Integrationskurve verkörpert, nimmt das Integral
+ auf dem Weg 
+\begin_inset Formula $C_{\varepsilon}$
+\end_inset 
+
+ die Darstellung
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f\left(z_{0}+\varepsilon\,\e^{-\ji\theta}\right)\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+an.
+ Bildet man den Grenzwert 
+\begin_inset Formula $\varepsilon\rightarrow0$
+\end_inset 
+
+, so geht es (Stetigkeit von 
+\begin_inset Formula $f$
+\end_inset 
+
+ bei 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ vorausgesetzt) in
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\, f(z_{0})\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\tic\theta=\ji\pi\, f(z_{0})\label{eq:analysis_halfplane_indented_path}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+über, was sich auch als Spezialfall von 
+\noun on 
+Cauchy
+\noun default 
+'s Integralformel 
+\begin_inset LatexCommand \ref{eq:analysis_cauchy_formula_implicit}
+
+\end_inset 
+
+ deuten läßt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_indented_path}
+
+\end_inset 
+
+ impliziert für den Fall eines einfachen Poles 
+\begin_inset Formula $z_{0}$
+\end_inset 
+
+ auf der imaginären Achse: 
+\begin_inset Formula $\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}f(z)\tic z=\ji\pi\res{z_{0}}{f(z)}$
+\end_inset 
+
+ und entspricht damit dem Ergebnis in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[75.]{Brown:1996}
+
+\end_inset 
+
+ für eingerückte Pfade (unter gleichen Bedingungen auf der reellen Achse).
+\end_inset 
+
+.
+ Einsetzen in unser Zwischenergebnis\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_right_x0}
+
+\end_inset 
+
+ ergibt
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Sollte 
+\noun on 
+Jordan
+\noun default 
+'s Lemma nicht anwendbar sein, so gilt: 
+\begin_inset Formula $\ji\pi\, f(z_{0})=\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\msp$
+\end_inset 
+
+.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \[
+\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\ji\pi\, f(z_{0})\]
+
+\end_inset 
+
+
+\layout Standard
+
+und deshalb
+\layout Emphasized
+
+
+\begin_inset Formula \begin{equation}
+f(\ji y_{0})=\frac{\ji}{\pi}\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-\ji y_{0}}\tic z=\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y\label{eq:analysis_halfplane_indented_result}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+für Punkte auf der imaginären Achse
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Für die Funktion 
+\begin_inset Formula $f(z)=1$
+\end_inset 
+
+ deckt sich das Ergebnis ausgezeichnet mit Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_right_z_z0}
+
+\end_inset 
+
+.
+ In diesem Fall erhält man speziell für Werte 
+\begin_inset Formula $z_{0}=\ji y_{0}$
+\end_inset 
+
+ auf der imaginären Achse: 
+\begin_inset Formula $\vp\int_{-\infty}^{\infty}(y-y_{0})^{-1}\tic y=-\ji\pi$
+\end_inset 
+
+.
+\end_inset 
+
+.
+ Im Vergleich mit den für 
+\begin_inset Formula $\reop(z_{0})>0$
+\end_inset 
+
+ gültigen Beziehungen (insbesondere dem Äquivalent zu 
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary1}
+
+\end_inset 
+
+ in Tabelle\SpecialChar ~
+
+\begin_inset LatexCommand \vpageref{tab:analysis_inf_integrals_poisson}
+
+\end_inset 
+
+) läßt sich feststellen, daß der Grenzübergang
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{x_{0}\rightarrow0}f(z_{0})=\frac{\ji}{\pi}\lim_{x_{0}\rightarrow0}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y\msp,\qquad\reop(z_{0})\geq0\]
+
+\end_inset 
+
+
+\layout Standard
+
+genau mit dem Ergebnis für 
+\begin_inset Formula $\reop(z_{0})=0$
+\end_inset 
+
+ übereinstimmt.
+\end_deeper 
+\layout Enumerate
+
+Auf der Grundlage von Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_indented_result}
+
+\end_inset 
+
+ kann man zeigen, daß Real- und Imaginärteil einer rechts halb-analytischen
+ Funktion (entlang der imaginären Achse) über die 
+\noun on 
+Hilbert
+\noun default 
+-Transformation
+\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
+
+\end_inset 
+
+ verknüpft sind
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Wie in\SpecialChar ~
+
+\begin_inset LatexCommand \cite[9]{Papoulis:2002}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \cite[4.]{Fritzsche:1985}
+
+\end_inset 
+
+ wird die 
+\noun on 
+Hilbert
+\noun default 
+-Transformationen durch 
+\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\end_inset 
+
+ definiert.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[13]{Bracewell:2003}
+
+\end_inset 
+
+.
+ Die Behauptung ist unmittelbar zu verifizieren, wenn man 
+\begin_inset Formula $f(\ji y_{0})$
+\end_inset 
+
+ in Real- und Imaginärteil separiert
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+u(0,y_{0})+\ji v(0,y_{0})=-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y+\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y\]
+
+\end_inset 
+
+
+\layout Standard
+
+und beide Seiten der Gleichung betrachtet.
+\layout Emphasized
+
+
+\begin_inset Formula \begin{alignat*}{2}
+u(0,y_{0}) & =-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y &  & =\mathcal{H}\{ v(x_{0},0)\}\\
+v(0,y_{0}) & =\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y &  & =-\mathcal{H}\{ u(x_{0},0)\}\end{alignat*}
+
+\end_inset 
+
+
+\end_deeper 
+\layout Paragraph
+
 Voraussetzungen für die Anwendbarkeit
 \layout Standard
 
 Eine wesentliche Voraussetzung für das Verschwinden des Integrals auf dem
  Integrationsweg 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{\infty}$
 \end_inset 
 
  nach Abbildung\SpecialChar ~
@@ -7024,7 +7513,7 @@ Jordan
 \end_inset 
 
  auf der geschlossenen Kurve 
-\begin_inset Formula $C=C_{r}\rightarrow C_{x}$
+\begin_inset Formula $C=C_{\infty}\rightarrow C_{x}$
 \end_inset 
 
  nach Abbildung\SpecialChar ~
@@ -7042,7 +7531,7 @@ Jordan
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\]
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\]
 
 \end_inset 
 
@@ -7050,11 +7539,11 @@ Jordan
 \layout Standard
 
 Ausgehend von dem Ergebnis
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z}\msp,\label{eq:analysis_inf_integral}\end{equation}
+2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\msp,\label{eq:analysis_inf_integral}\end{equation}
 
 \end_inset 
 
@@ -7075,8 +7564,8 @@ l separieren.
 
 
 \begin_inset Formula \begin{align}
--2\pi\sum_{\imop z_{n}>0}\imop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\reop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\\
-2\pi\sum_{\imop z_{n}>0}\reop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\end{align}
+-2\pi\sum_{\imop(z_{n})>0}\imop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\reop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\\
+2\pi\sum_{\imop(z_{n})>0}\reop\left\{ \res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z\end{align}
 
 \end_inset 
 
@@ -7100,17 +7589,17 @@ Laplace
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{81}]{Brown:1996}
+\begin_inset LatexCommand \cite[81.]{Brown:1996}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibsec{2.4.4}]{Stopp:1992}
+\begin_inset LatexCommand \cite[2.4.4]{Stopp:1992}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\bibsec{2.22}]{Wunsch:1962}
+\begin_inset LatexCommand \cite[2.22]{Wunsch:1962}
 
 \end_inset 
 
@@ -7180,7 +7669,7 @@ Die bis hierher gewonnenen Erkenntnisse bezüglich der Integration entlang
 
  anwenden\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\bibsec{2.32}]{Wunsch:1962}
+\begin_inset LatexCommand \cite[2.32]{Wunsch:1962}
 
 \end_inset 
 
@@ -7190,7 +7679,7 @@ Die bis hierher gewonnenen Erkenntnisse bezüglich der Integration entlang
 Jordan
 \noun default 
  auch in diesem Fall das Integral auf dem Weg 
-\begin_inset Formula $C_{r}$
+\begin_inset Formula $C_{\infty}$
 \end_inset 
 
  verschwindet (
@@ -7214,25 +7703,21 @@ cf
 \end_inset 
 
  negativ-imaginär ist), wird das uneigentliche Integral mit Hilfe der Singularit
-äten in der linken Halbebene berechenbar 
-\begin_inset Formula $\alpha=-\ji\beta$
-\end_inset 
-
-.
+äten in der linken Halbebene berechenbar.
 \layout Standard
 
 
 \begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{r}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z\]
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\e^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z\]
 
 \end_inset 
 
 
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{\left[\e^{\beta z}f(z)\right]}\qquad(\beta>0)}\end{equation}
+\int_{z=-\ji\infty}^{\ji\infty}\e^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\e^{\beta z}f(z)\right]}\qquad(\beta>0)\end{equation}
 
 \end_inset 
 
@@ -7322,7 +7807,7 @@ resp
 
 
 \begin_inset Formula \[
-\sum_{\imop z_{n}>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop z_{n}<0}\left[\res{z_{n}}{f(z)}\right]\msp.\]
+\sum_{\imop(z_{n})>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop(z_{n})<0}\left[\res{z_{n}}{f(z)}\right]\msp.\]
 
 \end_inset 
 
@@ -7399,7 +7884,7 @@ pos.-reell
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{\ji\alpha z}f(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\e^{\ji\alpha z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7414,7 +7899,7 @@ pos.-reell
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z>0}
+\imop(z)>0}
 }f(z)=0}$
 \end_inset 
 
@@ -7439,7 +7924,7 @@ neg.-reell
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{-\ji|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\imop z_{n}<0}\res{z_{n}}{\left[\e^{-\ji|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\e^{-\ji|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\imop(z_{n})<0}\res{z_{n}}{\left[\e^{-\ji|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7454,7 +7939,7 @@ neg.-reell
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z<0}
+\imop(z)<0}
 }f(z)=0}$
 \end_inset 
 
@@ -7479,7 +7964,7 @@ pos.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{-|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\reop z_{n}>0}\res{z_{n}}{\left[\e^{-|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{-|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\reop(z_{n})>0}\res{z_{n}}{\left[\e^{-|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7494,7 +7979,7 @@ pos.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z>0}
+\reop(z)>0}
 }f(z)=0}$
 \end_inset 
 
@@ -7519,7 +8004,7 @@ neg.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{|\alpha|z}f(z)\tic z=2\pi\ji\sum_{\reop z_{n}<0}\res{z_{n}}{\left[\e^{|\alpha|z}f(z)\right]}}$
+\begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\e^{|\alpha|z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\e^{|\alpha|z}f(z)\right]}}$
 \end_inset 
 
 
@@ -7534,7 +8019,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z<0}
+\reop(z)<0}
 }f(z)=0}$
 \end_inset 
 
@@ -7563,7 +8048,7 @@ neg.-imag.
 
 \size footnotesize 
 
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}}$
 \end_inset 
 
 
@@ -7578,7 +8063,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z>0}
+\imop(z)>0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7622,7 +8107,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop z<0}
+\imop(z)<0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7666,7 +8151,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z>0}
+\reop(z)>0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7710,7 +8195,7 @@ neg.-imag.
 \size footnotesize 
 
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop z<0}
+\reop(z)<0}
 }z\, f(z)=0}$
 \end_inset 
 
@@ -7743,273 +8228,6 @@ neg.-imag.
 
 
 \begin_inset LatexCommand \index{Funktionentheorie|)}
-
-\end_inset 
-
-
-\layout Section
-\start_of_appendix 
-
-\begin_inset LatexCommand \label{sec:analysis_z_z0_holomorph}
-
-\end_inset 
-
-Die Funktion 
-\begin_inset ERT
-status Inlined
-
-\layout Standard
-
-\backslash 
-texorpdfstring{$(z-z_{0})^n$}{
-\backslash 
-latex{(z-z0)**n}}
-\end_inset 
-
-
-\layout Standard
-
-Besondere Bedeutung für viele Beweise der komplexen Analysis hat die Funktion
- 
-\begin_inset Formula $(z-z_{0})^{n}$
-\end_inset 
-
-.
- Hier soll einmal mit Hilfe der 
-\noun on 
-Cauchy
-\noun default 
--
-\noun on 
-Riemann
-\noun default 
-'schen Differentialgleichungen deren Holomorphiegebiet bestimmt werden
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Meist wird dieser ausführliche Weg aus Aufwandsgründen gemieden (obwohl
- er eine gute Übung darstellt).
-\end_inset 
-
-.
- Wir gehen dazu von Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
-
-\end_inset 
-
- aus und bilden die partiellen Ableitungen nach 
-\begin_inset Formula $x$
-\end_inset 
-
- und 
-\begin_inset Formula $y$
-\end_inset 
-
-.
- Zur Vereinfachung soll die Exponentialdarstellung 
-\begin_inset Formula $z-z_{0}=r\e^{\ji\theta}$
-\end_inset 
-
- verwendet werden, wobei berücksichtigt werden muß, daß eigentlich 
-\begin_inset Formula $r:=r(x,y)$
-\end_inset 
-
- und 
-\begin_inset Formula $\theta:=\theta(x,y)$
-\end_inset 
-
- gilt.
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\pdiff{}{x}(z-z_{0})^{n} & =\pdiff{}{x}\, r^{n}\e^{\ji n\theta}\\
- & =nr^{n-1}\e^{\ji n\theta}\pdiff{r}{x}+r^{n}\e^{\ji n\theta}\ji n\pdiff{\theta}{x}\\
- & =nr^{n}\e^{\ji n\theta}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
- & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-Für die Ableitung nach 
-\begin_inset Formula $y$
-\end_inset 
-
- gibt es bis hierher keinen Unterschied, 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-ie
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Formula \[
-\pdiff{}{y}(z-z_{0})^{n}=n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{y}+\ji\pdiff{\theta}{y}\right)\msp.\]
-
-\end_inset 
-
-
-\layout Standard
-
-Setzen wir jetzt (kurz) 
-\begin_inset Formula $z_{0}=0$
-\end_inset 
-
- und erarbeiten die Zusammenhänge zwischen den Differentialen der arithmetischen
- und der Exponentialform für 
-\begin_inset Formula $z=x+\ji y=r\e^{\ji\theta}$
-\end_inset 
-
-.
- Dazu soll von den bekannten Formeln
-\layout Standard
-
-
-\begin_inset Formula \begin{xalignat*}{2}
-r & =\left|z\right|=\sqrt{z\,\conjgt{z}}=\sqrt{x^{2}+y^{2}} & \theta & =\ang z=\arctan\frac{y}{x}\end{xalignat*}
-
-\end_inset 
-
-
-\layout Standard
-
-ausgegangen und dann die Ableitungen gebildet werden.
-\layout Standard
-
-
-\begin_inset Formula \begin{xalignat*}{2}
-\pdiff{r}{x} & =\frac{x}{\sqrt{x^{2}+y^{2}}}=\frac{x}{r} & \pdiff{r}{y} & =\frac{y}{\sqrt{x^{2}+y^{2}}}=\frac{y}{r}\\
-\pdiff{\theta}{x} & =-\frac{y}{x^{2}+y^{2}}=-\frac{y}{r^{2}} & \pdiff{\theta}{y} & =\frac{x}{x^{2}+y^{2}}=\frac{x}{r^{2}}\end{xalignat*}
-
-\end_inset 
-
-
-\layout Standard
-
-Jetzt können die so gewonnenen Ausdrücke eingesetzt werden, was mit 
-\begin_inset Formula $z_{0}=x_{0}+\ji y_{0}$
-\end_inset 
-
- zu
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\pdiff{}{x}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
- & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
- & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-führt
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Wobei 
-\begin_inset Formula $(z-z_{0})\conjgt{(z-z_{0})}=r^{2}$
-\end_inset 
-
- berücksichtigt wurde.
-\end_inset 
-
-.
- Ähnlich wird mit der Ableitung nach 
-\begin_inset Formula $y$
-\end_inset 
-
- verfahren, nur das gedanklich noch der Zwischenschritt der Substitution
- nach 
-\begin_inset Formula $\ji y$
-\end_inset 
-
- auszuführen ist.
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-\pdiff{}{(\ji y)}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\pdiff{\theta}{y}-\ji\frac{1}{r}\pdiff{r}{y}\right)\\
- & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
- & =\frac{n}{r^{2}}(z-z_{0})^{n}\conjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
-
-\end_inset 
-
-
-\layout Standard
-
-Schlußfolgerung: 
-\begin_inset Formula $(z-z_{0})^{n}$
-\end_inset 
-
- ist für posives 
-\begin_inset Formula $n$
-\end_inset 
-
- an jeder Stelle 
-\begin_inset Formula $z$
-\end_inset 
-
- analytisch, denn es gilt Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_integrability_cond_cplx}
-
-\end_inset 
-
- in der Form:
-\layout Standard
-
-
-\begin_inset Formula \[
-\boxed{\pdiff{}{z}(z-z_{0})^{n}=n(z-z_{0})^{n-1}=\pdiff{}{x}(z-z_{0})^{n}=\pdiff{}{(\ji y)}(z-z_{0})^{n}}\msp.\]
-
-\end_inset 
-
-
-\layout Standard
-
-Für den Fall 
-\begin_inset Formula $n<0$
-\end_inset 
-
- ist 
-\begin_inset Formula $f(z)$
-\end_inset 
-
- jedoch nur für 
-\begin_inset Formula $z\neq z_{0}$
-\end_inset 
-
- analytisch, denn beide Seiten der vorangegangenen Äquivalenz sind sonst
- unbestimmt.
- Ein sich daraus ergebendes Resultat, welches in Abschnitt\SpecialChar ~
-
-\begin_inset LatexCommand \ref{sec:analysis_laurent}
-
-\end_inset 
-
- bewiesen wurde, ist:
-\layout Standard
-
-
-\begin_inset Formula \[
-\boxed{\oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
-0 & \qquad(n\neq-1)\\
-2\pi\ji & \qquad(n=-1)\end{cases}}\msp.\]
 
 \end_inset 
 

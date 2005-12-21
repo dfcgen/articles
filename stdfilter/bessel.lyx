@@ -34,7 +34,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: bessel.lyx,v 1.5 2005-08-28 16:40:50 ralf Exp $
+Version: $Id: bessel.lyx,v 1.6 2005-12-21 16:05:11 ralf Exp $
 \end_inset 
 
 
@@ -94,7 +94,7 @@ resp
 
 
 \begin_inset Formula \[
-\delta(t-t_{0})\;\lpt\;\trf(\lps)=\e^{-\lps\, t_{0}}\;\Rightarrow\;\e^{-\jw\, t_{0}}\]
+\delta(t-t_{0})\;\lpt\;\trf(\lps)=\e^{-\lps\, t_{0}}\;\Rightarrow\;\e^{-\ji\omega\, t_{0}}\]
 
 \end_inset 
 
@@ -400,11 +400,11 @@ Bessel
 \end_inset 
 
 .
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\textrm{B}_{n}(x)=(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x),\qquad\textrm{B}_{0}(x)=1,\:\textrm{B}_{-1}(x)=\frac{1}{x}}\end{equation}
+\textrm{B}_{n}(x)=(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x),\qquad\textrm{B}_{0}(x)=1,\:\textrm{B}_{-1}(x)=\frac{1}{x}\end{equation}
 
 \end_inset 
 
@@ -435,11 +435,11 @@ Mit der so gewonnen Näherung für
 \end_inset 
 
  kann man als Übertragungsfunktion des verzerrungsarmen LTI-Systems:
-\layout Standard
+\layout Emphasized
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\trf(\lps)=\frac{b_{0}}{\textrm{B}_{n}(\lps)}=\frac{b_{0}}{\poly{b}{\lps}{n}}}\label{eq:filter_bessel_laplace}\end{equation}
+\trf(\lps)=\frac{b_{0}}{\textrm{B}_{n}(\lps)}=\frac{b_{0}}{\poly{b}{\lps}{n}}\label{eq:filter_bessel_laplace}\end{equation}
 
 \end_inset 
 
