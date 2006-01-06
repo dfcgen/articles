@@ -33,7 +33,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: analysis.lyx,v 1.14 2005-12-21 16:02:07 ralf Exp $
+Version: $Id: analysis.lyx,v 1.15 2006-01-06 19:21:39 ralf Exp $
 \end_inset 
 
 
@@ -7239,35 +7239,7 @@ f(\ji y_{0})=\frac{\ji}{\pi}\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-\ji y_
 
 \layout Standard
 
-für Punkte auf der imaginären Achse
-\begin_inset Foot
-collapsed false
-
-\layout Standard
-
-Für die Funktion 
-\begin_inset Formula $f(z)=1$
-\end_inset 
-
- deckt sich das Ergebnis ausgezeichnet mit Formel\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:analysis_halfplane_right_z_z0}
-
-\end_inset 
-
-.
- In diesem Fall erhält man speziell für Werte 
-\begin_inset Formula $z_{0}=\ji y_{0}$
-\end_inset 
-
- auf der imaginären Achse: 
-\begin_inset Formula $\vp\int_{-\infty}^{\infty}(y-y_{0})^{-1}\tic y=-\ji\pi$
-\end_inset 
-
-.
-\end_inset 
-
-.
+für Punkte auf der imaginären Achse.
  Im Vergleich mit den für 
 \begin_inset Formula $\reop(z_{0})>0$
 \end_inset 
@@ -7288,7 +7260,7 @@ Für die Funktion
 
 
 \begin_inset Formula \[
-\lim_{x_{0}\rightarrow0}f(z_{0})=\frac{\ji}{\pi}\lim_{x_{0}\rightarrow0}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y\msp,\qquad\reop(z_{0})\geq0\]
+\lim_{x_{0}\rightarrow0}f(z_{0})=\frac{\ji}{\pi}\lim_{x_{0}\rightarrow0}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y,\qquad\reop(z_{0})\geq0\]
 
 \end_inset 
 
@@ -7315,13 +7287,8 @@ Auf der Grundlage von Formel\SpecialChar ~
 Hilbert
 \noun default 
 -Transformation
-\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
-
-\end_inset 
-
- verknüpft sind
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
@@ -7348,7 +7315,12 @@ Hilbert
  definiert.
 \end_inset 
 
-\SpecialChar ~
+
+\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
+
+\end_inset 
+
+ verknüpft sind\SpecialChar ~
 
 \begin_inset LatexCommand \cite[13]{Bracewell:2003}
 
