@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: zolotarev.lyx,v 1.5 2005-12-21 16:08:27 ralf Exp $
+Version: $Id: zolotarev.lyx,v 1.6 2006-01-21 19:40:33 ralf Exp $
 \end_inset 
 
 
@@ -94,7 +94,7 @@ Tschebyscheff
  auseinandergesetzt, von denen insbesondere das dritte Problem hier von
  Interesse sei
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -110,7 +110,7 @@ Kurze Darstellungen sind auch in\SpecialChar ~
 \end_inset 
 
  und 
-\begin_inset LatexCommand \cite[\S 50]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,50]{Achieser:1970}
 
 \end_inset 
 
@@ -203,13 +203,13 @@ cf
 \end_inset 
 
 )
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
 \left.\begin{array}{l}
 \max\limits _{\left|x\right|\leq\sqrt{k}}f(x)\\
-\max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}\end{array}\right\} \Rightarrow\min\label{eq:zolotar_goal}\end{equation}
+\max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}\end{array}\right\} \Rightarrow\textrm{Min.}\label{eq:zolotar_goal}\end{equation}
 
 \end_inset 
 
@@ -332,8 +332,8 @@ Zolotareff
 \layout Standard
 
 
-\begin_inset Formula \[
-x\Rightarrow\frac{x}{\sqrt{k}},\qquad y\Rightarrow\frac{f(x)}{\sqrt{\lambda}}\]
+\begin_inset Formula \begin{xalignat*}{2}
+x & \Rightarrow\frac{x}{\sqrt{k}} & y & \Rightarrow\frac{f(x)}{\sqrt{\lambda}}\end{xalignat*}
 
 \end_inset 
 
@@ -341,7 +341,7 @@ x\Rightarrow\frac{x}{\sqrt{k}},\qquad y\Rightarrow\frac{f(x)}{\sqrt{\lambda}}\]
 \layout Standard
 
 und erhält
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -377,13 +377,13 @@ resp
 \end_inset 
 
  der ersten elliptischen Haupttransformation:
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \[
-x=\sqrt{k}\,\esn{u}{k},\qquad\efunc{f}{x}{k}=\sqrt{\lambda}\,\begin{cases}
-\esn{u/M}{\lambda} & (n\textrm{ ungerade})\\
-\ecd{u/M}{\lambda} & (n\textrm{ gerade})\end{cases}\msp.\]
+\begin_inset Formula \begin{xalignat*}{2}
+x & =\sqrt{k}\,\esn{u}{k} & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\begin{cases}
+\esn{u/M}{\lambda} & \quad(n\textrm{ ungerade})\\
+\ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})\end{cases}\msp.\end{xalignat*}
 
 \end_inset 
 
@@ -496,7 +496,7 @@ Berücksichtigt man für den Fall eines ungeraden
 \layout Standard
 
 dann ergeben sich noch die folgenden Vereinfachungen:
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -569,7 +569,7 @@ n und Pole nach den Formeln\SpecialChar ~
 \end_inset 
 
  gerade).
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{xalignat*}{1}
@@ -598,7 +598,7 @@ Die Berechnungsformeln\SpecialChar ~
 \end_inset 
 
  bleiben unverändert bei:
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \[
@@ -650,7 +650,7 @@ Tschebyscheff
 
  in kurzer Form lautet\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S~6]{Meinardus:1964}
+\begin_inset LatexCommand \cite[\S\,6]{Meinardus:1964}
 
 \end_inset 
 
@@ -822,7 +822,7 @@ collapsed false
 
 Wir wollen hier einen Zugang nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 39]{Achieser:1967}
+\begin_inset LatexCommand \cite[\S\,39]{Achieser:1967}
 
 \end_inset 
 
@@ -842,7 +842,7 @@ f(x)=\frac{1}{\sqrt{1-k^{2}x}}\msp,\qquad\qquad0\leq k\leq1\]
 
 minimiert wird.
 \begin_inset Formula \[
-\max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\min\]
+\max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
 
 \end_inset 
 
@@ -858,7 +858,7 @@ ion der Konstante\SpecialChar ~
 
  handelt.
 \begin_inset Formula \[
-\max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\min\]
+\max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
 
 \end_inset 
 
