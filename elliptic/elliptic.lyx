@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: elliptic.lyx,v 1.7 2005-12-21 16:04:11 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.8 2006-01-21 19:39:18 ralf Exp $
 \end_inset 
 
 
@@ -77,7 +77,7 @@ Einige der zitierten Bücher sind dafür aber als Online-Ausgabe der\SpecialChar ~
 
 \end_inset 
 
- zu nennen, Tafeln und ansprechende Abbildungen enthält 
+ zu nennen, weitere Tafeln und ansprechende Abbildungen enthält 
 \begin_inset ERT
 status Collapsed
 
@@ -100,13 +100,20 @@ eg
 
 \end_inset 
 
- und\SpecialChar ~
-
+, 
 \begin_inset LatexCommand \cite{Tricomi:1948}
 
 \end_inset 
 
-, weitere Details mit einer Unmenge von Formeln findet man in\SpecialChar ~
+ und (nebst einer Einführung in die Funktionentheorie) auch\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Hurwitz:1922}
+
+\end_inset 
+
+.
+ Weitere Details mit einer Unmenge von Formeln findet man unter anderem
+ in\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Cayley:1876}
 
@@ -119,8 +126,8 @@ eg
 \end_inset 
 
 .
- Alle diese Quellen befassen sich (bei unterschiedlichem Detailgrad) auch
- mit der Transformationstheorie der elliptischen Funktionen, in\SpecialChar ~
+ Alle diese Quellen befassen sich (in unterschiedlicher Tiefe) auch mit
+ der Transformationstheorie der elliptischen Funktionen, in\SpecialChar ~
 
 \begin_inset LatexCommand \cite{Koenigsberger:1874}
 
@@ -247,7 +254,7 @@ Diese Integrale haben ihren Namen wegen der Rolle, die sie bei der Berechnung
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[II, \S 3]{Tricomi:1948}
+\begin_inset LatexCommand \cite[II, \S\,3]{Tricomi:1948}
 
 \end_inset 
 
@@ -268,7 +275,7 @@ Legendre
 \end_inset 
 
  nennt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align*}
@@ -361,7 +368,7 @@ Legendre
 \end_inset 
 
  folgendermaßen definiert
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -451,7 +458,7 @@ Um im weiteren die Eindeutigkeit zu gewährleisten und außerdem eine einfache
 \end_inset 
 
  zu erhalten, soll außerdem definiert sein:
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -731,7 +738,7 @@ Diese Schreibweise ist in der elektrischen Filtertheorie recht verbreitet\Specia
 \end_inset 
 
 .
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -827,8 +834,8 @@ Der Funktionswert bei
 
 \begin_inset Formula \begin{align*}
 \eF{\pi}{k} & =\int_{0}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int_{\frac{\pi}{2}}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
- & =\eK{k}-\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
+ & =\int_{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}+\int_{\pi/2}^{\pi}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\\
+ & =\eK{k}-\int_{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}(\phi+\pi)}}\\
  & =2\eK{k}\end{align*}
 
 \end_inset 
@@ -1173,7 +1180,7 @@ collapsed false
 \end_inset 
 
 
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
@@ -1225,7 +1232,7 @@ Für imaginäre Argumente
  entartet das unvollständige elliptische Integral zu
 \layout Standard
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -1421,11 +1428,11 @@ Legendre
 \end_inset 
 
  ergibt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\eK{k}=\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\label{eq:ellk_def_sin}\end{equation}
+\eK{k}=\int_{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-k^{2}\sin^{2}\phi}}\label{eq:ellk_def_sin}\end{equation}
 
 \end_inset 
 
@@ -1458,8 +1465,8 @@ Spezielle Werte
 
 
 \begin_inset Formula \begin{align}
-\eK{0} & =\int_{0}^{\frac{\pi}{2}}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
-\eK{1} & =\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
+\eK{0} & =\int_{0}^{\pi/2}\tic\phi=\frac{\pi}{2}=\eK[\prime]{1}\label{eq:ellk_val_0}\\
+\eK{1} & =\int_{0}^{\pi/2}\frac{\tdc\phi}{\cos\phi}=\infty=\eK[\prime]{0}\nonumber \end{align}
 
 \end_inset 
 
@@ -1580,7 +1587,7 @@ Wie schon in Gleichung\SpecialChar ~
 
 
 \begin_inset Formula \begin{align}
-\int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
+\int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int_{0}^{\pi/2}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
  & =\frac{1}{a}\ellF\left[\epar{\frac{\pi}{2}}{\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp}\right]\nonumber \\
  & =\frac{1}{a}\jK\left[\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp\right]\msp.\label{eq:ellk_ab_k}\end{align}
 
@@ -1596,7 +1603,7 @@ Mit dem Modul entsprechend Gleichung\SpecialChar ~
 \end_inset 
 
  ergibt sich die Äquivalenz
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -1708,7 +1715,7 @@ Legendre
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -1797,7 +1804,7 @@ delta amplitudinis
 
 ) abgeleitet\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 17]{Jacobi:1829}
+\begin_inset LatexCommand \cite[\S\,17]{Jacobi:1829}
 
 \end_inset 
 
@@ -1805,7 +1812,7 @@ delta amplitudinis
 \end_inset 
 
 .
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -1963,7 +1970,7 @@ n
 \SpecialChar ~
 (1), was zu 9\SpecialChar ~
 Varianten führt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{xalignat*}{3}
@@ -2211,12 +2218,12 @@ Weierstraß
 
  zu bezeichnen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S$20 \sdot 1$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S\,$20 \sdot 1$]{Whittaker:1927}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[I, \S 2]{Tricomi:1948}
+\begin_inset LatexCommand \cite[I, \S\,2]{Tricomi:1948}
 
 \end_inset 
 
@@ -2541,12 +2548,12 @@ Euler
 
 ) bewiesen\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S$22 \sdot 2$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S\,$22 \sdot 2$]{Whittaker:1927}
 
 \end_inset 
 
 .
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -2559,7 +2566,7 @@ Euler
 
 Der hier dargelegte Beweis folgt (wie auch\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 28]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,28]{Achieser:1970}
 
 \end_inset 
 
@@ -2936,7 +2943,7 @@ t (wobei in den Formeln wieder auf das Modul
 \end_inset 
 
  verzichtet wird).
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{align}
@@ -2956,12 +2963,12 @@ collapsed true
 
 In\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S~93]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,93]{Cayley:1876}
 
 \end_inset 
 
  und 
-\begin_inset LatexCommand \cite[\S~93]{Weber:1891}
+\begin_inset LatexCommand \cite[\S\,93]{Weber:1891}
 
 \end_inset 
 
@@ -2969,7 +2976,7 @@ In\SpecialChar ~
 \end_inset 
 
  für den elliptischen Sinus
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -3102,7 +3109,7 @@ Die Gleichungen für doppelte Argumente
 \end_inset 
 
  setzt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -3154,7 +3161,7 @@ Weitere bekannte Relationen für doppelte Argumente sind nach\SpecialChar ~
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -3185,18 +3192,18 @@ Die Gleichungen für halbe Argumente sind aus dem Gleichungssystem für doppelte
 
  ersetzt und entsprechend umstellt\SpecialChar ~
 
-\begin_inset LatexCommand \cite[III, \S 3]{Tricomi:1948}
+\begin_inset LatexCommand \cite[III, \S\,3]{Tricomi:1948}
 
 \end_inset 
 
 .
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
 \jsn\frac{u}{2} & =\sqrt{\frac{1-\jcn u}{1-\jdn u}}\label{eq:ellsn_half_arg}\\
-\jcn\frac{u}{2} & =\sqrt{\frac{\jdn u+\jcn u}{1+\jdn u}}\nonumber \\
-\jdn\frac{u}{2} & =\sqrt{\frac{\jdn u+k^{2}\jcn u+k'^{2}}{1+\jdn u}}\nonumber \end{align}
+\jcn\frac{u}{2} & =\sqrt{\frac{\jdn u+\jcn u}{1+\jdn u}}\\
+\jdn\frac{u}{2} & =\sqrt{\frac{\jdn u+k^{2}\jcn u+k'^{2}}{1+\jdn u}}\end{align}
 
 \end_inset 
 
@@ -3218,7 +3225,7 @@ Imaginäre Argumente
 
 Ausgehend von den grundlegenden Definitionsgleichungen des elliptischen
  Sinus'
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{xalignat*}{3}
@@ -3291,7 +3298,7 @@ Jacobi
 
  für den elliptischen Sinus\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 19]{Jacobi:1829}
+\begin_inset LatexCommand \cite[\S\,19]{Jacobi:1829}
 
 \end_inset 
 
@@ -3306,7 +3313,7 @@ Jacobi
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -3506,7 +3513,7 @@ Ausgehend von der Definitionsgleichung\SpecialChar ~
 
 Abschließend noch (ohne Beweis) die anderen elliptischen Funktionen für
  imaginäre Argumente.
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{xalignat*}{3}
@@ -3589,10 +3596,18 @@ Die Gleichungen für komplexe Argumente
 \layout Standard
 
 
+\begin_inset Formula \begin{align*}
+\edn{\alpha+\ji\beta}{k} & =\frac{\edn{\alpha}{k}\edn{\ji\beta}{k}-k^{2}\esn{\alpha}{k}\ecn{\alpha}{k}\esn{\ji\beta}{k}\ecn{\ji\beta}{k}}{1-k^{2}\esn[2]{\alpha}{k}\esn[2]{\ji\beta}{k}}\\
+ & =\frac{\edn{\alpha}{k}\edc{\beta}{k'}-k^{2}\esn{\alpha}{k}\ecn{\alpha}{k}\ji\esc{\beta}{k'}\enc{\beta}{k'}}{1-k^{2}\esn[2]{\alpha}{k}\ji\esc[2]{\beta}{k'}}\end{align*}
+
+\end_inset 
+
+
+\layout Emph(asized)
+
+
 \begin_inset Formula \begin{align}
-\edn{\alpha+\ji\beta}{k} & =\frac{\edn{\alpha}{k}\cdot\edn{\ji\beta}{k}-k^{2}\esn{\alpha}{k}\cdot\ecn{\alpha}{k}\cdot\esn{\ji\beta}{k}\cdot\ecn{\ji\beta}{k}}{1-k^{2}\esn[2]{\alpha}{k}\cdot\esn[2]{\ji\beta}{k}}\nonumber \\
- & =\frac{\edn{\alpha}{k}\cdot\edc{\beta}{k'}-k^{2}\esn{\alpha}{k}\cdot\ecn{\alpha}{k}\cdot\ji\esc{\beta}{k'}\cdot\enc{\beta}{k'}}{1-k^{2}\esn[2]{\alpha}{k}\cdot\ji\esc[2]{\beta}{k'}}\nonumber \\
- & =\frac{\edn{\alpha}{k}\cdot\ecn{\beta}{k'}\cdot\edn{\beta}{k'}-\ji k^{2}\esn{\alpha}{k}\cdot\ecn{\alpha}{k}\cdot\esn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\cdot\esn[2]{\beta}{k'}}\label{eq:elldn_complex_arg}\end{align}
+\edn{\alpha+\ji\beta}{k} & =\frac{\edn{\alpha}{k}\ecn{\beta}{k'}\edn{\beta}{k'}-\ji k^{2}\esn{\alpha}{k}\ecn{\alpha}{k}\esn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\esn[2]{\beta}{k'}}\label{eq:elldn_complex_arg}\end{align}
 
 \end_inset 
 
@@ -3618,12 +3633,12 @@ Wobei der allen gemeinsame Nenner
 \end_inset 
 
 .
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
-\esn{\alpha+\ji\beta}{k} & =\frac{\esn{\alpha}{k}\cdot\edn{\beta}{k'}+\ji\ecn{\alpha}{k}\cdot\edn{\alpha}{k}\cdot\esn{\beta}{k'}\cdot\ecn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\cdot\esn[2]{\beta}{k'}}\label{eq:ellsn_complex_arg}\\
-\ecn{\alpha+\ji\beta}{k} & =\frac{\ecn{\alpha}{k}\cdot\ecn{\beta}{k'}-\ji\esn{\alpha}{k}\cdot\esn{\beta}{k'}\cdot\edn{\alpha}{k}\cdot\edn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\cdot\esn[2]{\beta}{k'}}\label{eq:ellcn_complex_arg}\end{align}
+\esn{\alpha+\ji\beta}{k} & =\frac{\esn{\alpha}{k}\edn{\beta}{k'}+\ji\ecn{\alpha}{k}\edn{\alpha}{k}\esn{\beta}{k'}\ecn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\esn[2]{\beta}{k'}}\label{eq:ellsn_complex_arg}\\
+\ecn{\alpha+\ji\beta}{k} & =\frac{\ecn{\alpha}{k}\ecn{\beta}{k'}-\ji\esn{\alpha}{k}\esn{\beta}{k'}\edn{\alpha}{k}\edn{\beta}{k'}}{\ecn[2]{\beta}{k'}+k^{2}\esn[2]{\alpha}{k}\esn[2]{\beta}{k'}}\label{eq:ellcn_complex_arg}\end{align}
 
 \end_inset 
 
@@ -3650,7 +3665,7 @@ collapsed true
 
 Sehr schöne Darstellungen (inklusive der des elliptischen Kosinus') sind
  auch in 
-\begin_inset LatexCommand \cite[VI, Abb.~49ff.]{Jahnke:1952}
+\begin_inset LatexCommand \cite[VI, Abb.~49~ff.]{Jahnke:1952}
 
 \end_inset 
 
@@ -3995,7 +4010,7 @@ Jacobi
 
  interessant.
  Hervorzuheben sind dabei die folgenden Beziehungen:
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -4024,7 +4039,7 @@ Aus Gleichung\SpecialChar ~
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -4095,7 +4110,7 @@ und somit für das unvollständige elliptische Integral an der Stelle
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -4121,7 +4136,7 @@ Dieser Fall ergibt sich aus dem vorherigen, indem man
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -5542,7 +5557,7 @@ Jacobi
 \end_inset 
 
  der Differentialgleichung
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -5575,7 +5590,7 @@ Jacobi
 
 Die hier bevorzugte Betrachtungsweise ist (wie auch in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 20]{Jacobi:1829}
+\begin_inset LatexCommand \cite[\S\,20]{Jacobi:1829}
 
 \end_inset 
 
@@ -5660,7 +5675,7 @@ Solange man bei dieser differentiellen Darstellung bleibt, sind die Formeln\Spec
 \end_inset 
 
  zu
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -5734,17 +5749,17 @@ Es handelt sich anders gesagt um das Auffinden einer Invarianten
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 219]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,219]{Cayley:1876}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 34]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,34]{Achieser:1970}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 5]{Todd:1983}
+\begin_inset LatexCommand \cite[\S\,5]{Todd:1983}
 
 \end_inset 
 
@@ -6084,7 +6099,7 @@ Um für diesen Funktionstyp den Nachweis zu erbringen, daß es sich um eine
 
  handelt, folgen wir\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S~218~ff.]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,218~ff.]{Cayley:1876}
 
 \end_inset 
 
@@ -6222,7 +6237,7 @@ collapsed true
 \layout Standard
 
 Wie auch in 
-\begin_inset LatexCommand \cite[\S 219]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,219]{Cayley:1876}
 
 \end_inset 
 
@@ -6549,12 +6564,12 @@ Legendre
 
  (siehe\SpecialChar ~
 
-\begin_inset LatexCommand \cite[II, \S 3]{Tricomi:1948}
+\begin_inset LatexCommand \cite[II, \S\,3]{Tricomi:1948}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S$20 \sdot 54$, \S$20 \sdot 6$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S\,$20 \sdot 54$, \S$20 \sdot 6$]{Whittaker:1927}
 
 \end_inset 
 
@@ -6668,11 +6683,11 @@ Integriert man nun beide Seiten und nimmt die Definitionsgleichung\SpecialChar ~
 \end_inset 
 
 
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
-u & =\int_{0}^{\varphi}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}=\eF{\varphi}{k}\label{eq:elltr_general_x}\\
+u & =\eF{\varphi}{k}=\int_{0}^{\varphi}\frac{\tdc\xi}{\sqrt{1-k^{2}\sin^{2}\xi}}\label{eq:elltr_general_x}\\
 \varphi & =\eam{u}{k}\nonumber \\
 x & =\sin\varphi=\esn{u}{k}\msp.\nonumber \end{align}
 
@@ -7023,7 +7038,7 @@ resp
 \end_inset 
 
 :
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{alignat*}{2}
@@ -7279,7 +7294,7 @@ resp
 \end_inset 
 
  der Form
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -7390,7 +7405,7 @@ Im Zusammenhang mit reziproken Argumenten sei auf folgende bemerkenswerte
 \end_inset 
 
  hingewiesen:
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -7679,7 +7694,7 @@ Funktionswerte
 
 
 \layout Standard
-
+\align center 
 
 \size small 
 
@@ -8174,7 +8189,7 @@ Funktionswerte
 
 
 \layout Standard
-
+\align center 
 
 \size small 
 
@@ -8464,8 +8479,8 @@ Mit den soeben gewonnen Erkenntnissen kann man die rationale Lösung nach
 
 \begin_inset Formula \begin{equation}
 y=\begin{cases}
-x\frac{u(x^{2})}{v(x^{2})}, & C=0\;(\gamma\textrm{ ungerade})\\
-\frac{u(x^{2})}{v(x^{2})}, & C=M\Lambda\;(\gamma\textrm{ gerade})\end{cases}\label{eq:elltr_general_rational_sqx}\end{equation}
+x\frac{u(x^{2})}{v(x^{2})}, & C=0\qquad(\gamma\textrm{ ungerade})\\
+\frac{u(x^{2})}{v(x^{2})}, & C=M\Lambda\qquad(\gamma\textrm{ gerade})\end{cases}\label{eq:elltr_general_rational_sqx}\end{equation}
 
 \end_inset 
 
@@ -8677,7 +8692,7 @@ eg
 \end_inset 
 
  bestimmt werden.
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -8697,7 +8712,7 @@ Mit der Substitution
 
  nach\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 8]{Jacobi:1829}
+\begin_inset LatexCommand \cite[\S\,8]{Jacobi:1829}
 
 \end_inset 
 
@@ -8745,7 +8760,7 @@ Transformationen erster Ordnung
 Eine tabellarische Übersicht der Transformationen erster Ordnung sowie der
  geeigneten Substitutionen ist unter anderem in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[lV, \S 2]{Tricomi:1948}
+\begin_inset LatexCommand \cite[lV, \S\,2]{Tricomi:1948}
 
 \end_inset 
 
@@ -8805,7 +8820,7 @@ Die imaginäre Transformation wurde in Bezug auf das elliptische Integral
 \end_inset 
 
  notwendig.
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -8874,12 +8889,11 @@ mit der Substitution nach Gleichung\SpecialChar ~
 \end_inset 
 
  (vom Grad Eins) ablesen.
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{align*}
-M & =\ji\\
-\lambda & =k'\qquad(\lambda'=k)\end{align*}
+\begin_inset Formula \begin{xalignat*}{3}
+M & =\ji & \lambda & =k' & (\lambda' & =k)\end{xalignat*}
 
 \end_inset 
 
@@ -8892,7 +8906,7 @@ Die Bestimmung des Periodenverhältnisses
 \end_inset 
 
  ist mit diesen Werten kein Problem mehr.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -8961,7 +8975,7 @@ Reelle Transformation
 Jacobi
 \noun default 
 's reelle Transformation nach folgender Gleichung
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -9037,12 +9051,11 @@ aus welcher nur noch die Parameter
 \end_inset 
 
  abgelesen werden müssen.
-\layout Proof
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{align*}
-M & =\frac{1}{k}\\
-\lambda & =\frac{1}{k}\end{align*}
+\begin_inset Formula \begin{xalignat*}{2}
+M & =\frac{1}{k} & \lambda & =\frac{1}{k}\end{xalignat*}
 
 \end_inset 
 
@@ -9109,7 +9122,7 @@ Eine schöne tabellarische Übersicht aller 18\SpecialChar ~
 quadratischen Transformationen
  in ihrer Standardform ist in\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 252, \S 478ff.]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,252, \S\,478~ff.]{Cayley:1876}
 
 \end_inset 
 
@@ -9132,7 +9145,7 @@ eg
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -9177,22 +9190,22 @@ en\SpecialChar ~
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S$22 \sdot 42$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S\,$22 \sdot 42$]{Whittaker:1927}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 38]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,38]{Achieser:1970}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 254]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,254]{Cayley:1876}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S\,7]{Tricomi:1948}
 
 \end_inset 
 
@@ -9209,9 +9222,8 @@ Periodenbeziehungen
 \layout Standard
 
 
-\begin_inset Formula \begin{align}
-K & =2M\Lambda\label{eq:elltr_landen_periods}\\
-\ji K' & =\ji M\Lambda'\nonumber \end{align}
+\begin_inset Formula \begin{xalignat}{2}
+K & =2M\Lambda & \ji K' & =\ji M\Lambda'\label{eq:elltr_landen_periods}\end{xalignat}
 
 \end_inset 
 
@@ -9277,34 +9289,26 @@ cf
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S\,7]{Tricomi:1948}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 420]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,420]{Cayley:1876}
 
 \end_inset 
 
 .
 \end_inset 
 
-
-\layout Emphasized
-
-
-\begin_inset Formula \begin{equation}
-\esn{\frac{u}{M}}{\lambda}=\frac{(1+k')\,\esn{u}{k}\,\ecn{u}{k}}{\edn{u}{k}}\label{eq:elltr_landen_sn}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
+:
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
-\lambda & =\frac{1-k'}{1+k'}<k\label{eq:elltr_landen_k}\\
-M & =\frac{1}{1+k'}.\label{eq:elltr_landen_M}\end{align}
+\esn{\frac{u}{M}}{\lambda} & =\frac{(1+k')\,\esn{u}{k}\,\ecn{u}{k}}{\edn{u}{k}}\label{eq:elltr_landen_sn}\\
+\nonumber \\\lambda & =\frac{1-k'}{1+k'}<k\label{eq:elltr_landen_k}\\
+M & =\frac{1}{1+k'}\msp.\label{eq:elltr_landen_M}\end{align}
 
 \end_inset 
 
@@ -9536,7 +9540,7 @@ Eine weitere interessante Darstellung der Transformationsbeziehung ist möglich,
 \end_inset 
 
  zu Hilfe nimmt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -9584,7 +9588,7 @@ Der Verlauf der Transformationsbeziehung
 \end_inset 
 
 
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -9993,7 +9997,7 @@ Die Transformationsbeziehung für
 \end_inset 
 
  lautet
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -10067,7 +10071,7 @@ Die Beziehung für
 \end_inset 
 
  ermittelt werden.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -10166,7 +10170,7 @@ Bezüglich Differentialgleichung\SpecialChar ~
 Landen
 \noun default 
 -Transformation durch die Substitution
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -10187,7 +10191,7 @@ gekennzeichnet.
 
 
 \begin_inset Formula \[
-\sin\theta=\frac{1}{1+\lambda}\frac{\sin2\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\msp.\]
+\sin\theta=\frac{1}{1+\lambda}\,\frac{\sin2\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}}\msp.\]
 
 \end_inset 
 
@@ -10261,7 +10265,7 @@ Insbesondere für numerische Berechnungen hat der trigonometrische Tangens
 
 Eine weitere oft verwendete Darstellungsvariante auf der Grundlage des Tangens
  ist
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -10317,14 +10321,14 @@ Mit dem Additionstheorem
 
 \layout Standard
 
-Eine ebenfalls interessante Darstellung mit Hilfe des trigonometrischen
- Sinus' lautet
-\layout Standard
+Eine ebenfalls oft zu findende Darstellung mit Hilfe des trigonometrischen
+ Sinus' lautet:
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
 \sin(2\varphi-\theta) & =\lambda\sin\theta\label{eq:elltr_landen_sindiff}\\
-\sin\left[\varphi-(\theta-\varphi)\right] & =\lambda\sin\left[\varphi+(\theta-\varphi)\right].\nonumber \end{align}
+\sin\left[\varphi-(\theta-\varphi)\right] & =\lambda\sin\left[\varphi+(\theta-\varphi)\right]\msp.\nonumber \end{align}
 
 \end_inset 
 
@@ -10355,7 +10359,7 @@ Sie kann aus Gleichung\SpecialChar ~
 \end_inset 
 
 
-\layout Standard
+\layout Paragraph*
 
 Beziehungen für 
 \begin_inset Formula $\eF{\varphi}{k}$
@@ -10383,7 +10387,7 @@ Aus den allgemeinen Transformationsbeziehungen\SpecialChar ~
 \end_inset 
 
  resultiert sofort folgende Darstellung
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -10428,32 +10432,24 @@ Landen
 -Transformation (welche die reelle Periode teilt) eine Division der imaginären
  Periode durch zwei\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 39]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,39]{Achieser:1970}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 246]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,246]{Cayley:1876}
 
 \end_inset 
 
 .
  Sie wird in vielen Literaturquellen durch folgende Gleichungen beschrieben.
-\layout Emphasized
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{equation}
-\esn{\frac{u}{M}}{\lambda}=\frac{(1+k)\,\esn{u}{k}}{1+k\,\esn[2]{u}{k}}\label{eq:elltr_gauss_sn}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Formula \begin{align*}
-M & =\frac{1}{1+k}\\
-\lambda & =\frac{2\sqrt{k}}{1+k}\end{align*}
+\begin_inset Formula \begin{align}
+\esn{\frac{u}{M}}{\lambda} & =\frac{(1+k)\,\esn{u}{k}}{1+k\,\esn[2]{u}{k}}\label{eq:elltr_gauss_sn}\\
+\nonumber \\M & =\frac{1}{1+k}\\
+\lambda & =\frac{2\sqrt{k}}{1+k}\end{align}
 
 \end_inset 
 
@@ -10687,20 +10683,12 @@ k^{2}\esn[2]{u}{k}=1-\edn[2]{u}{k}\]
 \layout Standard
 
 berücksichtigt wird.
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \[
-\edn{\frac{u}{M}}{\lambda}=\frac{1-k\esn[2]{u}{k}}{1+k\esn[2]{u}{k}}\]
-
-\end_inset 
-
-
-\layout Emphasized
-
-
-\begin_inset Formula \begin{equation}
-\edn{\frac{u}{M}}{\lambda}=\frac{k-\left[1-\edn[2]{u}{k}\right]}{k+\left[1-\edn[2]{u}{k}\right]}\label{eq:elltr_gauss_dn}\end{equation}
+\begin_inset Formula \begin{align}
+\edn{\frac{u}{M}}{\lambda} & =\frac{1-k\esn[2]{u}{k}}{1+k\esn[2]{u}{k}}\nonumber \\
+ & =\frac{k-\left[1-\edn[2]{u}{k}\right]}{k+\left[1-\edn[2]{u}{k}\right]}\label{eq:elltr_gauss_dn}\end{align}
 
 \end_inset 
 
@@ -10719,7 +10707,7 @@ Die noch ausstehende Beziehung für
 \end_inset 
 
  lautet
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -10753,7 +10741,7 @@ Die gesuchte Beziehung für den Sinus erhält man wieder durch direkte Umsetzung
 \end_inset 
 
 .
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -10989,7 +10977,7 @@ Das sich ergebende Periodenverhältnis
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -11188,7 +11176,7 @@ Nach Tabelle\SpecialChar ~
 \end_inset 
 
 .
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
@@ -11516,17 +11504,17 @@ cf
 
  auch\SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S 229]{Cayley:1876}
+\begin_inset LatexCommand \cite[\S\,229]{Cayley:1876}
 
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S 40]{Achieser:1970}
+\begin_inset LatexCommand \cite[\S\,40]{Achieser:1970}
 
 \end_inset 
 
 ).
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -11662,7 +11650,7 @@ Die Koeffizienten
 \end_inset 
 
  sind nun folgendermaßen bestimmt
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -11775,11 +11763,10 @@ Die
 \end_inset 
 
  die Produktterme des Nenners Null setzt.
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
-1-k^{2}a_{\nu}^{2}\pn[2]{x}{\nu} & =0\nonumber \\
 \pn{x}{\nu} & =\frac{1}{ka_{\nu}}=\frac{1}{k\zn{x}{\nu}}\nonumber \\
 \pn{x}{\nu} & =\frac{1}{k\esn{\nu\frac{K}{n}}{k}}\geq\frac{1}{k},\qquad\left|\nu\right|=2,4,6,\ldots,n-1\label{eq:elltr1_odd_poles}\end{align}
 
@@ -12004,7 +11991,7 @@ Die Transformationsbeziehung bei Verwendung des elliptischen Sinus' ist
 \end_inset 
 
  ersetzt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -12236,7 +12223,7 @@ und damit die Transformationsbeziehung für
 \end_inset 
 
  angeben.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -12361,7 +12348,7 @@ Einsetzen und Ausmultiplizieren des Zählers liefert das Ergebnis
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -12481,7 +12468,7 @@ Jetzt kann ausgehend von Gleichung\SpecialChar ~
 \end_inset 
 
  konkretisiert werden.
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -12624,7 +12611,7 @@ Setzt man nun die Darstellung für
 \begin_inset Formula $k^{2}a_{\nu}^{2}$
 \end_inset 
 
- multipliziert und dann mittels Hilfsformel 
+ multipliziert und dann mittels 
 \begin_inset Formula $k\prod_{\nu=2,4,6,\ldots}^{n-1}k^{2}=k^{n}$
 \end_inset 
 
@@ -12643,7 +12630,7 @@ Setzt man nun die Darstellung für
 \layout Standard
 
 Wie auch in 
-\begin_inset LatexCommand \cite[\S 23]{Jacobi:1829}
+\begin_inset LatexCommand \cite[\S\,23]{Jacobi:1829}
 
 \end_inset 
 
@@ -12663,8 +12650,8 @@ Wie auch in
 \begin_inset Formula $\lambda$
 \end_inset 
 
-.
-\layout Standard
+:
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -12781,7 +12768,7 @@ cf
 \end_inset 
 
 ),
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
@@ -12943,7 +12930,7 @@ Aus den wichtigsten Eigenschaften der Differentialgleichung\SpecialChar ~
 \end_inset 
 
 .
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -12982,7 +12969,7 @@ Diese Relation ist, wenn man die Koeffizientenformel kennt, auch sofort
  abzuleiten.
 \end_inset 
 
-
+:
 \layout Standard
 
 
@@ -13057,7 +13044,7 @@ incircle{3}
 \end_inset 
 
 ).
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -13128,7 +13115,7 @@ Die Transformationsbeziehung für den elliptischen Sinus ist wieder direkt
 \end_inset 
 
  durch die entsprechenden elliptischen Funktionen ersetzt.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -13193,7 +13180,7 @@ cf
 \end_inset 
 
 ) kann man auch hier vorgehen und erhält in Folge
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -13387,11 +13374,11 @@ Die entsprechende Beziehung für
 \end_inset 
 
  lautet:
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-{\edn{\frac{u}{M}+\Lambda}{\lambda}=\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\msp.\label{eq:elltr1_{e}ven_{d}n}{equation}}\end{equation}
+\edn{\frac{u}{M}+\Lambda}{\lambda}=\lambda'\edn{u}{k}\frac{\prod\limits _{\mu=2,4,6,\ldots}^{n-2}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}\esn[2]{u}{k}}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}\esn[2]{u}{k}}\msp.\label{eq:elltr1_even_dn}\end{equation}
 
 \end_inset 
 
@@ -13564,8 +13551,19 @@ eg
 \end_inset 
 
 .
- An dieser Stelle soll zur Abwechslung jedoch ein anderer, ebenfalls sehr
- einfacher Weg, beschritten werden.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{equation}
+\lambda=k^{n}\prod_{\nu=1,3,5,\ldots}^{n-1}\esn[4]{\nu\frac{K}{n}}{k}\label{eq:elltr1_even_lambda}\end{equation}
+
+\end_inset 
+
+
+\layout Proof
+
+An dieser Stelle soll zur Abwechslung ein anderer, ebenfalls sehr einfacher
+ Weg, beschritten werden.
  Dazu evaluiert man Transformationsbeziehung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_poly}
@@ -13581,14 +13579,14 @@ eg
 \end_inset 
 
  gelten muß.
-\layout Standard
+\layout Proof
 
 
-\begin_inset Formula \begin{align}
-\frac{1}{\lambda} & =\lim_{x\rightarrow\infty}\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}\nonumber \\
- & =\lim_{x\rightarrow\infty}\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{\frac{1}{x^{2}}-\frac{1}{a_{\nu}^{2}}}{\frac{1}{x^{2}}-k^{2}a_{\nu}^{2}}\nonumber \\
- & =\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1}{k^{2}a_{\nu}^{4}}\nonumber \\
-\lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{n-1}\esn[4]{\nu\frac{K}{n}}{k}\label{eq:elltr1_even_lambda}\end{align}
+\begin_inset Formula \begin{align*}
+\frac{1}{\lambda} & =\lim_{x\rightarrow\infty}\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{a_{\nu}^{2}}}{1-k^{2}a_{\nu}^{2}x^{2}}\\
+ & =\lim_{x\rightarrow\infty}\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{\frac{1}{x^{2}}-\frac{1}{a_{\nu}^{2}}}{\frac{1}{x^{2}}-k^{2}a_{\nu}^{2}}\\
+ & =\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{1}{k^{2}a_{\nu}^{4}}\\
+ & =k^{n}\prod_{\nu=1,3,5,\ldots}^{n-1}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
 
 \end_inset 
 
@@ -13607,7 +13605,7 @@ Der Multiplikator
 \end_inset 
 
  den Wert
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -14055,7 +14053,7 @@ cf
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -14437,7 +14435,7 @@ als auch
 \layout Standard
 
 Aus diesen Gründen kann man als rationale Transformationsfunktion
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -14449,7 +14447,7 @@ y=\esn{\frac{u}{M}}{\lambda}=\frac{x}{M}\cdot\frac{\prod\limits _{\mu=2,4,6,\ldo
 \layout Standard
 
 mit
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -14792,8 +14790,8 @@ y & =\frac{\esn{u}{k}}{M}\prod_{\mu=2,4,6,\ldots}^{n-1}\frac{1+\ecs[2]{\mu\frac{
 
 \layout Standard
 
-Interessierte können die Formeln für den elliptischen Kosinus' und die Delta-Amp
-litude 
+Die Formeln für den elliptischen Kosinus' und die Delta-Amplitude kann man\SpecialChar ~
+
 \begin_inset LatexCommand \cite[Tab.~XXIII]{Achieser:1970}
 
 \end_inset 
@@ -15047,7 +15045,7 @@ cf
 ), sind die meisten Beziehungen ähnlich.
  Einziger Unterschied besteht generell darin, daß der Grad von Zähler- und
  Nennerpolynom entsprechend angepasst werden muß.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -15124,7 +15122,7 @@ Die Koeffizienten bestimmen sich genauso wie für den Fall ungerader Ordnung
 \end_inset 
 
 , zu
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -15304,7 +15302,7 @@ Landen
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[IV, \S 7]{Tricomi:1948}
+\begin_inset LatexCommand \cite[IV, \S\,7]{Tricomi:1948}
 
 \end_inset 
 
@@ -15408,9 +15406,9 @@ Gauß
 \layout Standard
 
 
-\begin_inset Formula \begin{align*}
-a_{1}\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}},\qquad t_{1}=b_{1}\tan\varphi,\quad k'=\frac{b_{1}}{a_{1}}\\
-a_{0}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\frac{\tdc\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}},\qquad t_{0}=b_{0}\tan\theta,\quad\lambda'=\frac{b_{0}}{a_{0}}\end{align*}
+\begin_inset Formula \begin{xalignat*}{3}
+a_{1}\frac{\tdc t_{1}}{\sqrt{(t_{1}^{2}+a_{1}^{2})(t_{1}^{2}+b_{1}^{2})}} & =\frac{\tdc\varphi}{\sqrt{1-k^{2}\sin^{2}\varphi}} & t_{1} & =b_{1}\tan\varphi & k' & =\frac{b_{1}}{a_{1}}\\
+a_{0}\frac{\tdc t_{0}}{\sqrt{(t_{0}^{2}+a_{0}^{2})(t_{0}^{2}+b_{0}^{2})}} & =\frac{\tdc\theta}{\sqrt{1-\lambda^{2}\sin^{2}\theta}} & t_{0} & =b_{0}\tan\theta & \lambda' & =\frac{b_{0}}{a_{0}}\end{xalignat*}
 
 \end_inset 
 
@@ -15617,7 +15615,7 @@ t_{0} & =b_{0}\tan\theta\nonumber \\
 
 Zurück zum eigentlichen Algorithmus läßt sich nun die folgende Rekursion
  durchführen,
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -15785,7 +15783,7 @@ Bedenkt man weiterhin, daß der Integrand in Gleichung\SpecialChar ~
 \end_inset 
 
  gegeben werden
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -15821,13 +15819,13 @@ Das Vollständige Elliptische Integral
 \begin_inset Formula $\jK$
 \end_inset 
 
- kann nun ausgehend von Gleichung\SpecialChar ~
+ kann ausgehend von Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:agm_integrsolution}
 
 \end_inset 
 
- mit Hilfe des AGM-Algorithmus' berechnet werden.
+ ebenfalls mit Hilfe des AGM-Algorithmus' berechnet werden.
  Dazu wird Gleichung\SpecialChar ~
 
 \begin_inset LatexCommand \ref{eq:agm_integrsolution}
@@ -15900,7 +15898,7 @@ eg
 
 .
  Damit berechnet sich das Elliptische Integral erster Art zu
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -15911,7 +15909,7 @@ eg
 
 \layout Standard
 
-was in folgendem Algorithmus dargestellt ist.
+was der zugehörige Algorithmus wiederspiegelt.
 \layout Standard
 
 
@@ -15930,7 +15928,7 @@ Numerische Berechnung von
 \begin_inset Formula $\eK{k}$
 \end_inset 
 
- mit Hilfe des AGM
+ mittels AGM
 \layout Standard
 
 
@@ -16055,19 +16053,7 @@ Für die Darstellung von
 \begin_inset Formula $\phi$
 \end_inset 
 
-
-\layout Standard
-
-
-\begin_inset Formula \[
-\eK{\varphi}=\int_{0}^{\frac{\pi}{2}}\frac{\tdc\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
-
-\end_inset 
-
-
-\layout Standard
-
-
+, 
 \begin_inset ERT
 status Collapsed
 
@@ -16081,11 +16067,20 @@ ie
 \begin_inset Formula $k=\sin\phi$
 \end_inset 
 
-, muß entsprechend 
+, ist 
 \begin_inset Formula $b_{0}=\cos\phi$
 \end_inset 
 
- gewählt werden.
+ zu wählen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\eK{\varphi}=\int_{0}^{\pi/2}\frac{\tdc\alpha}{\sqrt{1-\sin^{2}\phi\sin^{2}\alpha}}\]
+
+\end_inset 
+
+
 \layout Standard
 
 Jetzt soll noch kurz auf die Produktdarstellung für 
@@ -16117,8 +16112,8 @@ Jetzt soll noch kurz auf die Produktdarstellung für
 \layout Standard
 
 
-\begin_inset Formula \[
-\eK{k_{i}}=\frac{2}{1+k_{i}'}\eK{k_{i+1}},\qquad k_{i+1}=\frac{1-k_{i}'}{1+k_{i}'}<k_{i}\]
+\begin_inset Formula \begin{xalignat*}{2}
+\eK{k_{i}} & =\frac{2}{1+k_{i}'}\eK{k_{i+1}} & k_{i+1} & =\frac{1-k_{i}'}{1+k_{i}'}<k_{i}\end{xalignat*}
 
 \end_inset 
 
@@ -16255,7 +16250,7 @@ Landen
 \end_inset 
 
 .
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{align}
@@ -16449,20 +16444,12 @@ Gauß
 \end_inset 
 
  in der Form
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{equation}
-\esn{u_{i}}{k_{i}}=\frac{(1+k_{i+1})\esn{u_{i+1}}{k_{i+1}}}{1+k_{i+1}\esn[2]{u_{i+1}}{k_{i+1}}}\label{eq:ellsn_numeric_sn}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-k_{i+1}=\frac{1-k_{i}'}{1+k_{i}'}<k_{i}\qquad\qquad u_{i+1}=\frac{u_{i}}{1+k_{i+1}}\label{eq:ellsn_numeric_module}\end{equation}
+\begin_inset Formula \begin{xalignat}{2}
+\esn{u_{i}}{k_{i}} & =\frac{(1+k_{i+1})\esn{u_{i+1}}{k_{i+1}}}{1+k_{i+1}\esn[2]{u_{i+1}}{k_{i+1}}}\label{eq:ellsn_numeric_sn}\\
+\nonumber \\u_{i+1} & =\frac{u_{i}}{1+k_{i+1}} & k_{i+1} & =\frac{1-k_{i}'}{1+k_{i}'}<k_{i}\label{eq:ellsn_numeric_module}\end{xalignat}
 
 \end_inset 
 
@@ -16562,7 +16549,7 @@ Mit
 
  nun folgendermaßen nähern
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -16633,7 +16620,7 @@ Das Modul
 
  in jedem Schritt rückwärts berechnet werden
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -16665,7 +16652,7 @@ Nach\SpecialChar ~
 \end_inset 
 
  ist der absolute Gesamtfehler des Verfahrens kleiner als 
-\begin_inset Formula $\frac{k_{N}^{2}}{2}\eK{k}$
+\begin_inset Formula $\eK{k}\, k_{N}^{2}/2$
 \end_inset 
 
 .
