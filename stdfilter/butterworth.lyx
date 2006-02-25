@@ -34,7 +34,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: butterworth.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
+Version: $Id: butterworth.lyx,v 1.7 2006-02-25 13:53:09 ralf Exp $
 \end_inset 
 
 
@@ -77,11 +77,11 @@ Butterworth
 \end_inset 
 
 -ter Ordnung zeichnet sich durch die Amplitudencharakteristik
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}\end{equation}
 
 \end_inset 
 
@@ -95,11 +95,11 @@ aus, besitzt also nach Gleichung\SpecialChar ~
 \end_inset 
 
  die Drosselung
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\delta\omega^{n}\msp.\label{eq:filter_butter_chfunc}\end{equation}
+\drf(\omega)=\sigma\omega^{n}\msp.\label{eq:filter_butter_chfunc}\end{equation}
 
 \end_inset 
 
@@ -118,7 +118,7 @@ er
 
  genannt und als maximal flach
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -149,7 +149,7 @@ Als maximal flach werden Funktionen der Ordnung
 
 .
  Mit Hilfe des Parameters 
-\begin_inset Formula $\delta$
+\begin_inset Formula $\sigma$
 \end_inset 
 
  kann die maximale Dämpfung im Durchlaßbereich 
@@ -182,7 +182,7 @@ cf
 
 
 \begin_inset Formula \begin{xalignat*}{2}
-\trf(1) & =\frac{1}{\sqrt{1+\delta^{2}}} & \delta & =\sqrt{\frac{1}{\trf^{2}(1)}-1}\end{xalignat*}
+\trf(1) & =\frac{1}{\sqrt{1+\sigma^{2}}} & \sigma & =\sqrt{\frac{1}{\trf^{2}(1)}-1}\end{xalignat*}
 
 \end_inset 
 
@@ -194,7 +194,7 @@ gilt und deshalb für die maximale Dämpfung im Durchlaßbereich:
 
 
 \begin_inset Formula \begin{xalignat*}{2}
-A_{max} & =-20\log\trf(1)=10\log\left(1+\delta^{2}\right) & \delta & =\sqrt{10^{A_{max}/10}-1}\msp.\end{xalignat*}
+A_{max} & =-20\log\trf(1)=10\log\left(1+\sigma^{2}\right) & \sigma & =\sqrt{10^{A_{max}/10}-1}\msp.\end{xalignat*}
 
 \end_inset 
 
@@ -202,7 +202,7 @@ A_{max} & =-20\log\trf(1)=10\log\left(1+\delta^{2}\right) & \delta & =\sqrt{10^{
 \layout Standard
 
 Oft werden Filter in Bezug auf ihre 3dB Grenzfrequenz 
-\begin_inset Formula $\omega_{g}=\omega_{3dB}$
+\begin_inset Formula $\omega_{g}=\omega_{\textrm{3dB}}$
 \end_inset 
 
 , 
@@ -221,11 +221,11 @@ ie
 
 , dimensioniert.
  Dann gilt 
-\begin_inset Formula $\delta=1/\omega_{3dB}^{n}$
+\begin_inset Formula $\sigma=1/\omega_{\textrm{3dB}}^{n}$
 \end_inset 
 
  und für den Amplitudengang
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -315,7 +315,7 @@ etc
 
 
 \begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\delta^{2}\omega^{2n}}\]
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\omega^{2n}}\]
 
 \end_inset 
 
@@ -328,7 +328,7 @@ Laplace
 \noun default 
 -Bereich
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -361,7 +361,7 @@ Laplace
 
 
 \begin_inset Formula \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\delta^{2}\left(\lps/\ji\right)^{2n}}\msp.\label{eq:filter_butter_amplitude_inf}\end{equation}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\left(\lps/\ji\right)^{2n}}\msp.\label{eq:filter_butter_amplitude_inf}\end{equation}
 
 \end_inset 
 
@@ -383,8 +383,8 @@ An den Polstellen von
 
 
 \begin_inset Formula \begin{align*}
-1+\delta^{2}\left(\frac{\lps}{\ji}\right)^{2n} & =0\\
-\lps^{2n} & =(-1)^{n+1}\cdot\delta^{-2}\msp.\end{align*}
+1+\sigma^{2}\left(\frac{\lps}{\ji}\right)^{2n} & =0\\
+\lps^{2n} & =(-1)^{n+1}\cdot\sigma^{-2}\msp.\end{align*}
 
 \end_inset 
 
@@ -401,7 +401,7 @@ Moivre
 \noun default 
 
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -420,7 +420,7 @@ In seiner Exponentialform
 .
 \end_inset 
 
- sofort angeben.
+ sofort angeben:
 \layout Standard
 
 
@@ -431,11 +431,11 @@ collapsed false
 
 
 \begin_inset Formula \[
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\left\{ \begin{array}{l}
-\e^{\ji\frac{2k\pi}{2n}}\\
-\e^{\ji\frac{\pi+2k\pi}{2n}}\end{array}\right.=\frac{1}{\sqrt[n]{\delta}}\cdot\left\{ \begin{array}{ll}
-\e^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
-\e^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\]
+\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left\{ \begin{array}{l}
+\expf^{\ji\frac{2k\pi}{2n}}\\
+\expf^{\ji\frac{\pi+2k\pi}{2n}}\end{array}\right.=\frac{1}{\sqrt[n]{\sigma}}\cdot\left\{ \begin{array}{ll}
+\expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
+\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\]
 
 \end_inset 
 
@@ -443,13 +443,13 @@ collapsed false
 \end_inset 
 
 
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \[
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\left\{ \begin{array}{ll}
-\e^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
-\e^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\]
+\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\cdot\left\{ \begin{array}{ll}
+\expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
+\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\msp.\]
 
 \end_inset 
 
@@ -482,7 +482,7 @@ Butterworth
 
 
 \begin_inset Formula \begin{equation}
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\e^{\ji\frac{\pi}{2}}\e^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\delta}}\e^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
+\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
 
 \end_inset 
 
@@ -501,11 +501,11 @@ Sind insbesondere Real- und Imaginärteile (also eine Darstellung in kartesischen
 Euler
 \noun default 
 'sche Formel anzuwenden.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\delta}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
+\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset 
 
@@ -513,7 +513,7 @@ Euler
 \layout Standard
 
 Anschaulich liegen alle Pole auf einem Kreis mit Radius 
-\begin_inset Formula $1/\sqrt[n]{\smash[b]{\delta}}$
+\begin_inset Formula $1/\sqrt[n]{\smash[b]{\sigma}}$
 \end_inset 
 
 , was deutlich auch in Abbildung\SpecialChar ~
@@ -526,7 +526,7 @@ Anschaulich liegen alle Pole auf einem Kreis mit Radius
  Außerdem zeigt die Darstellung, daß einerseits keine Pole auf der imaginären
  Achse liegen und andererseits alle immer konjugiert komplex auftreten
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -622,7 +622,7 @@ Allgemein gelten Polkenngrößen
 
  und die Polgüte
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -631,7 +631,7 @@ Manchmal wird statt der Polgüte
 \end_inset 
 
  die Poldämpfung 
-\begin_inset Formula $A=\frac{1}{2Q}$
+\begin_inset Formula $(2Q)^{-1}$
 \end_inset 
 
  als Maßzahl herangezogen.
@@ -657,7 +657,7 @@ status Collapsed
 resp
 \end_inset 
 
- Bestimmung geht man von der Erkenntnis aus, daß Pole immer konjugiert kompex
+ Bestimmung geht man von der Erkenntnis aus, daß Pole immer konjugiert komplex
  auftreten und deshalb in der Linearfaktordarstellung von 
 \begin_inset Formula $\trf(\lps)$
 \end_inset 
@@ -683,7 +683,7 @@ Laplace
 \end_inset 
 
 ) kann man auch folgendermaßen schreiben
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -713,7 +713,7 @@ führt sofort zur Definition der Polfrequenz
 \end_inset 
 
 .
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
@@ -740,7 +740,7 @@ Q & =-\frac{\omega_{0}}{2\reop\left(\pn{\lps}{\nu}\right)}=-\frac{\left|\pn{\lps
 \end_inset 
 
 
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
@@ -756,11 +756,11 @@ Speziell für einen
 Butterworth
 \noun default 
 -Tiefpaß gilt deshalb in Bezug auf die Polfrequenzen
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
-\omega_{0}=\left|\pn{\lps}{\nu}\right|=\frac{1}{\sqrt[n]{\delta}}=\textrm{ konstant}\]
+\omega_{0}=\left|\pn{\lps}{\nu}\right|=\frac{1}{\sqrt[n]{\sigma}}=\textrm{ konstant}\]
 
 \end_inset 
 
@@ -768,7 +768,7 @@ Butterworth
 \layout Standard
 
 und Polgüte
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -793,7 +793,7 @@ In der letzten Formel ist erkennbar, daß die einzelnen Polgüten
 
 -Achse die höchsten Güten aufweisen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
