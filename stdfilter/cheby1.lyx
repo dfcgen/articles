@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby1.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
+Version: $Id: cheby1.lyx,v 1.7 2006-02-25 13:56:29 ralf Exp $
 \end_inset 
 
 
@@ -62,7 +62,7 @@ Amplitudencharakteristik
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Filter!Elliptisches}
+\begin_inset LatexCommand \index{Filter!elliptisches}
 
 \end_inset 
 
@@ -82,7 +82,7 @@ Der erste Typ des
 
  ist durch direkte Anwendung der 
 \noun on 
-Tschebscheff
+Tschebyscheff
 \noun default 
 -Funktionen erster Art (siehe Anhang\SpecialChar ~
 
@@ -91,11 +91,11 @@ Tschebscheff
 \end_inset 
 
 ) f¸r die Drosselung gekennzeichnet.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\delta\,\T_{n}(\omega)\end{equation}
+\drf(\omega)=\sigma\,\T_{n}(\omega)\end{equation}
 
 \end_inset 
 
@@ -132,7 +132,7 @@ cf
 \end_inset 
 
  oder 
-\begin_inset LatexCommand \cite[\S~4]{Meinardus:1964}
+\begin_inset LatexCommand \cite[\S\,4]{Meinardus:1964}
 
 \end_inset 
 
@@ -150,8 +150,8 @@ cf
 
 \begin_inset Formula \[
 \T_{n}(\omega)=\begin{cases}
-\cos(n\arccos\omega), & \left|\omega\right|\leq1\\
-\cosh(n\arcosh\omega), & \left|\omega\right|>1\end{cases}\]
+\cos(n\arccos\omega) & \quad \left|\omega\right|\leq1\\
+\cosh(n\arcosh\omega) & \quad \left|\omega\right|>1\end{cases}\]
 
 \end_inset 
 
@@ -181,7 +181,7 @@ Daﬂ es sich hier wirklich um Polynome in
 .
  Dort sind auch 
 \noun on 
-Tschebscheff
+Tschebyscheff
 \noun default 
 -Polynome bis zum Grad 
 \begin_inset Formula $n=5$
@@ -199,11 +199,11 @@ Tschebscheff
 \end_inset 
 
  sich auf den normierten Amplitudengang nach
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
-\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\T_{n}^{2}(\omega)}}\]
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\T_{n}^{2}(\omega)}}\]
 
 \end_inset 
 
@@ -336,7 +336,7 @@ An diesen Stellen ist
 \end_inset 
 
  oder 
-\begin_inset Formula $(1+\delta^{2})^{-1/2}$
+\begin_inset Formula $(1+\sigma^{2})^{-1/2}$
 \end_inset 
 
  und die Welligkeit 
@@ -348,7 +348,7 @@ An diesen Stellen ist
 
 
 \begin_inset Formula \[
-\varepsilon=1-\frac{1}{\sqrt{1+\delta^{2}}}\msp.\]
+\varepsilon=1-\frac{1}{\sqrt{1+\sigma^{2}}}\msp.\]
 
 \end_inset 
 
@@ -373,7 +373,7 @@ Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
 
 
 \begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\omega)}\]
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\omega)}\]
 
 \end_inset 
 
@@ -393,7 +393,7 @@ Laplace
 
 
 \begin_inset Formula \[
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\lps/\ji)}\msp.\]
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\lps/\ji)}\msp.\]
 
 \end_inset 
 
@@ -405,8 +405,8 @@ An den Polstellen muﬂ der Nenner verschwinden, was heiﬂt:
 
 
 \begin_inset Formula \begin{align}
-1+\delta^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
-\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\delta}\msp.\label{eq:filter_cheby1_pole_cond}\end{align}
+1+\sigma^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
+\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\msp.\label{eq:filter_cheby1_pole_cond}\end{align}
 
 \end_inset 
 
@@ -431,7 +431,7 @@ Wegen
 
 
 \begin_inset Formula \[
-\cos(nu+\ji nv)=\pm\ji\frac{1}{\delta}\msp.\]
+\cos(nu+\ji nv)=\pm\ji\frac{1}{\sigma}\msp.\]
 
 \end_inset 
 
@@ -447,8 +447,8 @@ Nimmt man das Additionstheorem
 
 
 \begin_inset Formula \begin{align*}
-\cos(nu+\ji nv)=\cos(nu)\cos(\ji nv)-\sin(nu)\sin(\ji nv) & =\pm\ji\frac{1}{\delta}\\
-\cos(nu)\cosh(nv)-\ji\sin(nu)\sinh(nv) & =\pm\ji\frac{1}{\delta}\end{align*}
+\cos(nu+\ji nv)=\cos(nu)\cos(\ji nv)-\sin(nu)\sin(\ji nv) & =\pm\ji\frac{1}{\sigma}\\
+\cos(nu)\cosh(nv)-\ji\sin(nu)\sinh(nv) & =\pm\ji\frac{1}{\sigma}\end{align*}
 
 \end_inset 
 
@@ -461,7 +461,7 @@ Nimmt man das Additionstheorem
 
 
 \begin_inset Formula \begin{xalignat*}{2}
-\cos(nu)\cosh(nv) & =0 & -\sin(nu)\sinh(nv) & =\pm\frac{1}{\delta}\end{xalignat*}
+\cos(nu)\cosh(nv) & =0 & -\sin(nu)\sinh(nv) & =\pm\frac{1}{\sigma}\end{xalignat*}
 
 \end_inset 
 
@@ -496,9 +496,9 @@ resp
 
 
 \begin_inset Formula \begin{align*}
--\sin\left(k\pi-\frac{\pi}{2}\right)\:\sinh(nv) & =\pm\frac{1}{\delta}\\
-\pm\sinh(nv) & =\pm\frac{1}{\delta}\\
-v & =\frac{1}{n}\arsinh\frac{1}{\delta}=\textrm{konstant.}\end{align*}
+-\sin\left(k\pi-\frac{\pi}{2}\right)\:\sinh(nv) & =\pm\frac{1}{\sigma}\\
+\pm\sinh(nv) & =\pm\frac{1}{\sigma}\\
+v & =\frac{1}{n}\arsinh\frac{1}{\sigma}=\textrm{konstant.}\end{align*}
 
 \end_inset 
 
@@ -543,12 +543,12 @@ Einsetzen von
 \end_inset 
 
 , getrennt f¸r Real- und Imagin‰rteil:
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{align*}
-\reop\left(\pn{\lps}{k}\right) & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
-\imop\left(\pn{\lps}{k}\right) & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
+\reop\left(\pn{\lps}{k}\right) & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
+\imop\left(\pn{\lps}{k}\right) & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
 
 \end_inset 
 
@@ -558,7 +558,7 @@ Einsetzen von
 Interpretiert man beide Anteile geometrisch, dann ist zu bemerken, daﬂ alle
  Pole auf einer Ellipse
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -578,11 +578,11 @@ Die Parameterdarstellung der Ellipse lautet:
 \end_inset 
 
  mit den Halbachsen
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right) & \omega_{H} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\delta}\right)\end{xalignat}
+\alpha_{H} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right) & \omega_{H} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\end{xalignat}
 
 \end_inset 
 
@@ -676,7 +676,7 @@ Abschlieﬂend w‰hlen wir die H‰lfte der
 
  zu
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -684,7 +684,7 @@ Wobei praktischerweise mit
 \begin_inset Formula $\nu=k-n$
 \end_inset 
 
- umindiziert, das Argument der trigonometrischen Funktionen also um 
+ um-indiziert, das Argument der trigonometrischen Funktionen also um 
 \begin_inset Formula $\pi$
 \end_inset 
 
@@ -692,7 +692,7 @@ Wobei praktischerweise mit
 \end_inset 
 
 .
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
