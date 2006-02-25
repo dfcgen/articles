@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cauer.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
+Version: $Id: cauer.lyx,v 1.7 2006-02-25 13:54:09 ralf Exp $
 \end_inset 
 
 
@@ -56,7 +56,7 @@ Cauer
 \end_inset 
 
 
-\begin_inset LatexCommand \index{Filter!Elliptisches}
+\begin_inset LatexCommand \index{Filter!elliptisches}
 
 \end_inset 
 
@@ -104,7 +104,7 @@ resp
  Wir wollen hier (der Kürze halber) auf die Erkenntnisse zu den elliptischen
  Haupt-Transformationen höherer Ordnung zurückgreifen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -162,7 +162,7 @@ I.
 \noun default 
  und dessen drittes Approximationsproblem stützen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -218,7 +218,7 @@ Wir gehen also von den genannten Gleichungen\SpecialChar ~
 
  aus und definieren eine Funktion
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -235,7 +235,7 @@ W.
 \end_inset 
 
 
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -405,11 +405,11 @@ Solotareff
 \end_inset 
 
  als Drosselung an
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
-\edrf{\omega}{k}=\delta\efunc{\textup{C}}{\omega}{k}\]
+\edrf{\omega}{k}=\sigma\efunc{\textup{C}}{\omega}{k}\]
 
 \end_inset 
 
@@ -417,11 +417,11 @@ Solotareff
 \layout Standard
 
 und erhalten für die Amplitudencharakteristik
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\delta^{2}\msp\efunc[2]{\textup{C}}{\omega}{k}}}\msp.\label{eq:filter_cauer_amplitude}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\,\efunc[2]{\textup{C}}{\omega}{k}}}\msp.\label{eq:filter_cauer_amplitude}\end{equation}
 
 \end_inset 
 
@@ -465,8 +465,8 @@ lassen sich die Dämpfungswerte
 
 
 \begin_inset Formula \begin{align*}
-A_{max} & =-20\log\trf(1)=10\log\left[1+\edrf{\omega_{g}}{k}\right]=10\log\left(1+\delta^{2}\right)\\
-A_{min} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\edrf{\omega_{s}}{k}\right]=10\log\left(1+\frac{\delta^{2}}{\lambda^{2}}\right)\\
+A_{max} & =-20\log\trf(1)=10\log\left[1+\edrf{\omega_{g}}{k}\right]=10\log\left(1+\sigma^{2}\right)\\
+A_{min} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\edrf{\omega_{s}}{k}\right]=10\log\left(1+\frac{\sigma^{2}}{\lambda^{2}}\right)\\
 \textrm{mit}\\
 \lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
 
@@ -561,7 +561,7 @@ Bemerkenswert ist in diesem Zusammenhang eine Eigenschaft von Gleichung\SpecialC
 
 \end_inset 
 
-, welche ebenfalls der Transfomationstheorie (
+, welche ebenfalls der Transformationstheorie (
 \begin_inset ERT
 status Collapsed
 
@@ -583,11 +583,11 @@ Jacobi
 \noun default 
  entspringt
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
-In der Lieratur findet man meist die Form 
+In der Literatur findet man meist die Form 
 \begin_inset Formula $\zn{\omega}{\nu}\cdot\pn{\omega}{\mu}=1$
 \end_inset 
 
@@ -617,7 +617,7 @@ Zunächst sei auf eine Konsequenz von Gleichung\SpecialChar ~
 
  im Hinblick auf die Pol- und Nullstellen der Drosselung
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -633,8 +633,8 @@ Nicht aber der von
 \end_inset 
 
  eingegangen.
- Sie führt nämlich sofort zu der Schlußfolgerung, daß diese nicht unabhängig
- voneinander sind.
+ Sie führt sofort zu der Schlußfolgerung, daß diese nicht unabhängig voneinander
+ sind.
  Setzt man in die Beziehung nämlich beispielhaft eine Nullstelle 
 \begin_inset Formula $\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}$
 \end_inset 
@@ -672,7 +672,7 @@ Folglich muß die linke Seite in Gleichung\SpecialChar ~
  besitzen.
  Der Zusammenhang zwischen den Null- und Polstellen der Dämpfung ist demzufolge
  durch folgende Beziehung charakterisiert.
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
