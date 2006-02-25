@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: cheby2.lyx,v 1.6 2005-12-21 16:05:12 ralf Exp $
+Version: $Id: cheby2.lyx,v 1.7 2006-02-25 13:57:15 ralf Exp $
 \end_inset 
 
 
@@ -62,7 +62,7 @@ Amplitudencharakteristik
 \layout Standard
 
 
-\begin_inset LatexCommand \index{Filter!Elliptisches}
+\begin_inset LatexCommand \index{Filter!elliptisches}
 
 \end_inset 
 
@@ -83,7 +83,7 @@ Der
  vom Typ\SpecialChar ~
 II
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -104,7 +104,7 @@ Tschebyscheff
 
  ist ebenfalls eine Anwendung der 
 \noun on 
-Tschebscheff
+Tschebyscheff
 \noun default 
 -Funktionen erster Art -- diesmal aber so, daß eine Welligkeit im Durchlaßbereic
 h vermieden wird, dafür aber Dämpfungsminima im Sperrbereich hingenommen
@@ -135,7 +135,7 @@ Konstanten
 
  im Sperrbereich die Nullinie bestmöglich nähern möge
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -157,7 +157,7 @@ Tschebyscheff
 
  ist, muß eine entsprechende Abbildung auf den Sperrbereich erfolgen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -176,11 +176,11 @@ Hier durch geometrische Spiegelung von Durchlaß- und Sperrbereich um die
 Tschebyscheff
 \noun default 
 -Tiefpaß ableiten.
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\delta\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\msp.\label{eq:filter_cheby2_chfunc}\end{equation}
+\drf(\omega)=\sigma\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\msp.\label{eq:filter_cheby2_chfunc}\end{equation}
 
 \end_inset 
 
@@ -214,7 +214,7 @@ Wie
 
 
 \begin_inset Formula \[
-A_{max}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\delta^{2}\right)\msp.\]
+A_{max}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\sigma^{2}\right)\msp.\]
 
 \end_inset 
 
@@ -225,7 +225,8 @@ Die minimale Dämpfung im Sperrbereich (inklusive
 \begin_inset Formula $\omega_{s}$
 \end_inset 
 
-) wird durch die Funktionswerte 
+) wird durch die Funktions\SpecialChar \-
+werte 
 \begin_inset Formula $\pm1$
 \end_inset 
 
@@ -254,7 +255,7 @@ cf
 
 
 \begin_inset Formula \[
-A_{min}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\delta^{2}\T_{n}^{2}(\omega_{s})\right]=10\log\left[1+\delta^{2}\cosh^{2}(n\arcosh\omega_{s})\right]\]
+A_{min}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\T_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]\]
 
 \end_inset 
 
@@ -284,7 +285,7 @@ Die zugehörigen
 Tschebyscheff
 \noun default 
 -Funktion erzeugt und sind deshalb bei 
-\begin_inset Formula $\omega_{s}/\cos\left[(k-1/2)\pi/n\right]$
+\begin_inset Formula $\omega_{s}/\cos[(k-1/2)\pi/n]$
 \end_inset 
 
  lokalisiert.
@@ -357,9 +358,9 @@ Aufgrund der für
 
 
 \begin_inset Formula \[
-\lim_{\omega\rightarrow\infty}\drf(\omega)=\lim_{\omega\rightarrow\infty}\delta\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(0\right)}=\left\{ \begin{array}{ll}
-\infty, & \quad n\textrm{ ungerade}\\
-\pm\delta\,\T_{n}(\omega_{s}), & \quad n\textrm{ gerade}\end{array}\right.\]
+\lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(0\right)}=\left\{ \begin{array}{ll}
+\infty & \qquad(n\textrm{ ungerade})\\
+\pm\sigma\,\T_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})\end{array}\right.\]
 
 \end_inset 
 
@@ -401,7 +402,7 @@ Laplace
 
 
 \begin_inset Formula \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\delta^{2}\T_{n}^{2}(\omega_{s})/\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\delta^{2}\T_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}\end{equation}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\omega_{s})/\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\T_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}\end{equation}
 
 \end_inset 
 
@@ -457,11 +458,11 @@ liegen und deshalb bezüglich
 \end_inset 
 
  bei
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
-\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\qquad\nu=1,2,\ldots,n-1,n\msp.\end{equation}
+\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n-1,n\msp.\end{equation}
 
 \end_inset 
 
@@ -489,7 +490,7 @@ g und Übertragungsfunktion nach Formel\SpecialChar ~
 \end_inset 
 
  berücksichtigen.
- Wählt man letzteren Ansatz, dann ist sofort erkannbar, daß alle Pole durch
+ Wählt man letzteren Ansatz, dann ist sofort erkennbar, daß alle Pole durch
  die Beziehung 
 \begin_inset Formula $\drf(\lps/\ji)=\pm\ji$
 \end_inset 
@@ -506,7 +507,7 @@ g und Übertragungsfunktion nach Formel\SpecialChar ~
 
 
 \begin_inset Formula \[
-\delta\T_{n}(\omega_{s})=\pm\ji\T_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\msp.\]
+\sigma\T_{n}(\omega_{s})=\pm\ji\T_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\msp.\]
 
 \end_inset 
 
@@ -525,7 +526,7 @@ I Tiefpaß substituieren wir
 \end_inset 
 
  und 
-\begin_inset Formula $1/\delta'=\delta\T_{n}(\omega_{s})$
+\begin_inset Formula $1/\sigma'=\sigma\T_{n}(\omega_{s})$
 \end_inset 
 
  und erhalten:
@@ -533,7 +534,7 @@ I Tiefpaß substituieren wir
 
 
 \begin_inset Formula \[
-\T_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\delta'}\msp.\]
+\T_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\msp.\]
 
 \end_inset 
 
@@ -562,7 +563,7 @@ nichts mehr im Wege.
  Wir ersetzen nur noch die Zwischenvariablen (mit Strich) und erhalten für
  die Pole
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -587,7 +588,7 @@ I) von
 \end_inset 
 
 :
-\layout Emphasized
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -603,11 +604,11 @@ sowie die Halbachsen (mit
 \end_inset 
 
 ) der elliptischen Verteilung:
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\delta\T_{n}(\omega_{s})\right]\right\} \msp.\end{xalignat}
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\} \msp.\end{xalignat}
 
 \end_inset 
 
