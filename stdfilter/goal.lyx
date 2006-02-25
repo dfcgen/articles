@@ -32,7 +32,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: goal.lyx,v 1.7 2005-12-21 16:05:12 ralf Exp $
+Version: $Id: goal.lyx,v 1.8 2006-02-25 20:51:11 ralf Exp $
 \end_inset 
 
 
@@ -51,11 +51,11 @@ Approximationsziel
 
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung 
-\begin_inset Formula $A=-20\log\left|\trf(\ji\omega)\right|$
+\begin_inset Formula $\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|$
 \end_inset 
 
  sowie der Phasengang 
-\begin_inset Formula $B=-\ang\{\trf(\ji\omega)\}$
+\begin_inset Formula $\phf(\omega)=-\ang\trf(\ji\omega)$
 \end_inset 
 
 .
@@ -66,7 +66,7 @@ Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
 \noun default 
 -) Approximation des Amplitudenganges
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -115,7 +115,7 @@ resp
 
  herangezogen.
  Als Zusammenhang zwischen beiden Größen gilt bekanntermaßen:
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \begin{equation}
@@ -146,7 +146,7 @@ ie
 
  fast jede rationale Funktion ist hier erlaubt
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -203,15 +203,15 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
 \end_inset 
 
  mit einer Konstanten 
-\begin_inset Formula $\delta$
+\begin_inset Formula $\sigma$
 \end_inset 
 
  zu definieren.
-\layout Emphasized
+\layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\delta\, g(\omega)\end{equation}
+\drf(\omega)=\sigma\, g(\omega)\end{equation}
 
 \end_inset 
 
@@ -249,7 +249,7 @@ collapsed false
 
 \end_inset 
 
-Approximations-Kenngrößen
+Approximationskenngrößen
 \layout Standard
 \align center 
 
@@ -311,7 +311,7 @@ Approximations-Kenngrößen
 \layout Standard
 
 
-\begin_inset Formula $A(\omega)$
+\begin_inset Formula $\atf(\omega)$
 \end_inset 
 
 
@@ -402,7 +402,7 @@ Durchlaßbereich
 \layout Standard
 
 
-\begin_inset Formula $\delta$
+\begin_inset Formula $\sigma$
 \end_inset 
 
 
@@ -414,7 +414,7 @@ Durchlaßbereich
 \layout Standard
 
 
-\begin_inset Formula $\mtab{\frac{1}{\sqrt{1+\delta^{2}}}}$
+\begin_inset Formula $\mtab{\frac{1}{\sqrt{1+\sigma^{2}}}}$
 \end_inset 
 
 
@@ -426,7 +426,7 @@ Durchlaßbereich
 \layout Standard
 
 
-\begin_inset Formula $10\log\left(1+\delta^{2}\right)$
+\begin_inset Formula $10\log\left(1+\sigma^{2}\right)$
 \end_inset 
 
 
@@ -510,7 +510,7 @@ Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
 
  angenommen
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -534,16 +534,16 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 \end_inset 
 
 , das außerdem eine maximale (erlaubte) Durchlaß-Dämpfung 
-\begin_inset Formula $A_{max}$
+\begin_inset Formula $\atf_{max}$
 \end_inset 
 
  und eine minimale Sperr-Dämpfung 
-\begin_inset Formula $A_{min}$
+\begin_inset Formula $\atf_{min}$
 \end_inset 
 
  definiert
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -596,7 +596,7 @@ Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
 
 
 \begin_inset Formula \[
-A(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\delta^{2}g^{2}(\omega)\right]\]
+\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\sigma^{2}g^{2}(\omega)\right]\]
 
 \end_inset 
 
@@ -616,7 +616,7 @@ aus den Nullstellen von
 
 
 \begin_inset Formula \[
-\frac{\tdc A(\omega)}{\tdc\omega}=\frac{10}{\ln10}\cdot\frac{2\delta^{2}g(\omega)\, g'(\omega)}{1+\delta^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
+\tdiff{A(\omega)}{\omega}=\frac{10}{\ln10}\,\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
 
 \end_inset 
 
@@ -654,7 +654,7 @@ Alternantensatz
 
 Eine Bestapproximation
 \begin_inset Foot
-collapsed true
+collapsed false
 
 \layout Standard
 
@@ -708,7 +708,7 @@ Tschebyscheff
 
 
 \begin_inset Formula \begin{equation}
-\left\Vert f-g_{n}\right\Vert _{\infty}=\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\min\label{eq:approx_cheby_goal}\end{equation}
+\left\Vert f-g_{n}\right\Vert _{\infty}=\sup\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\min\label{eq:approx_cheby_goal}\end{equation}
 
 \end_inset 
 
@@ -860,20 +860,19 @@ Geht man nun von einer Bestapproximation (wie in Abbildung\SpecialChar ~
 \end_inset 
 
 , da es sich um die Randpunkte handelt, die Dämpfungswerte 
-\begin_inset Formula $A_{min}$
+\begin_inset Formula $\atf_{min}$
 \end_inset 
 
  und 
-\begin_inset Formula $A_{max}$
+\begin_inset Formula $\atf_{max}$
 \end_inset 
 
  zuordnen.
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{align*}
-A_{min} & =10\log\left[1+\drf^{2}(\omega_{s})\right]\\
-A_{max} & =10\log\left[1+\drf^{2}(\omega_{g})\right]\end{align*}
+\begin_inset Formula \begin{xalignat*}{2}
+\atf_{min} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{max} & =10\log[1+\drf^{2}(\omega_{g})]\end{xalignat*}
 
 \end_inset 
 
@@ -882,7 +881,7 @@ A_{max} & =10\log\left[1+\drf^{2}(\omega_{g})\right]\end{align*}
 
 Umgekehrt kann man aus vorgegebenen Dämpfungswerten den Skalierungsfaktor
  
-\begin_inset Formula $\delta$
+\begin_inset Formula $\sigma$
 \end_inset 
 
  bestimmen.
@@ -890,7 +889,7 @@ Umgekehrt kann man aus vorgegebenen Dämpfungswerten den Skalierungsfaktor
 
 
 \begin_inset Formula \[
-\delta=\frac{\sqrt{10^{A_{min}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{A_{max}/10}-1}}{\drf(\omega_{g})}\]
+\sigma=\frac{\sqrt{10^{\atf_{min}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{max}/10}-1}}{\drf(\omega_{g})}\]
 
 \end_inset 
 
