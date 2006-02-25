@@ -26,13 +26,25 @@
 \papersides 1
 \paperpagestyle default
 
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Version: $Id: ltisys.lyx,v 1.6 2006-02-25 20:54:12 ralf Exp $
+\end_inset 
+
+
 \layout Section
 
 LTI-Systeme
 \layout Standard
 
 
-\begin_inset LatexCommand \index{LTI-System}
+\begin_inset LatexCommand \index{LTI-System|(}
 
 \end_inset 
 
@@ -42,21 +54,17 @@ LTI-Systeme
 Systemüberblick
 \layout Standard
 
-Bevor auf die konventionellen Standard-Approximationen für analoge Filter
- eingegangen werden kann, noch eine kurze Rekapitulation der Eigenschaften
- linearer zeit-invarianter Systeme
-\begin_inset Foot
-collapsed true
+Bevor auf die konventionellen Approximationen für zeit- und wertkontinuierliche
+ Filter eingegangen werden kann, noch eine kurze Rekapitulation der Eigenschafte
+n linearer zeit-invarianter Systeme\SpecialChar ~
 
-\layout Standard
-
-Zu empfehlen (wenn auch wenig bekannt) ist an dieser Stelle\SpecialChar ~
-
-\begin_inset LatexCommand \cite[1]{Kress:1979}
+\begin_inset LatexCommand \cite[5.]{Papoulis:1962}
 
 \end_inset 
 
-.
+, 
+\begin_inset LatexCommand \cite[1]{Kress:1979}
+
 \end_inset 
 
 .
@@ -85,7 +93,7 @@ Systemgrößen in Original- und Bildbereich
 \layout Subsection
 
 Linearität
-\begin_inset LatexCommand \index{LTI-System!Linearität}
+\begin_inset LatexCommand \index{LTI-System!lineares}
 
 \end_inset 
 
@@ -144,7 +152,7 @@ y(t)=(x*\irf)(t)=\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\]
 \layout Standard
 
 weshalb die Summe durch
-\layout Standard
+\layout Emph(asized)
 
 
 \begin_inset Formula \[
@@ -171,8 +179,13 @@ Fourier
 .
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec:ltisys_stability}
+
+\end_inset 
+
 Stabilität
-\begin_inset LatexCommand \index{LTI-System!Stabilität}
+\begin_inset LatexCommand \index{LTI-System!stabiles}
 
 \end_inset 
 
@@ -185,19 +198,20 @@ Eine notwendige und hinreichende Bedingung für die (asymptotische) Stabilität
 \end_inset 
 
  eines linearen, zeit-invarianten Systems ist, daß unter der Voraussetzung
- endlicher Eingangssignale für das Ausgangssignal 
+ eines endlichen Eingangssignals das Ausgangssignal sowohl im Zeitbereich
+ (
 \begin_inset Formula $|y(t)|<\infty$
 \end_inset 
 
- 
+) als auch Bildbereich
 \emph on 
-und
-\emph default 
  
-\begin_inset Formula $\left|Y(\jw)\right|<\infty$
+\emph default 
+(
+\begin_inset Formula $\left|Y(\ji\omega)\right|<\infty$
 \end_inset 
 
- an jeder Stelle eingehalten wird\SpecialChar ~
+) beschränkt ist\SpecialChar ~
 
 \begin_inset LatexCommand \cite[1.2.1]{Kress:1979}
 
@@ -209,30 +223,25 @@ und
 \end_inset 
 
 .
- Gleichbedeutend damit ist folgende Forderung an die Impulsantwort eines
- solchen Systems
+ Im Zeitbereich fordert man deshalb für die Impulsantwort eines solchen
+ Systems:
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty}\msp,\end{equation}
+\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty\msp,\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-welche außerdem die Existenz des 
+was gleichzeitig die Existenz des 
 \noun on 
 Fourier
 \noun default 
--Integrals
-\begin_inset LatexCommand \index{Fourier-Integral@\noun{Fourier}-Integral!Existenz}
-
-\end_inset 
-
- 
-\begin_inset Formula $\trf(\jw)=\ft\{\irf(t)\}$
+-Integrals 
+\begin_inset Formula $\trf(\ji\omega)=\ft[\irf(t)]$
 \end_inset 
 
  sichert\SpecialChar ~
@@ -242,7 +251,7 @@ Fourier
 \end_inset 
 
 , 
-\begin_inset LatexCommand \cite[\S$4 \sdot 43$]{Whittaker:1927}
+\begin_inset LatexCommand \cite[\S\,$4 \sdot 43$]{Whittaker:1927}
 
 \end_inset 
 
@@ -254,21 +263,17 @@ Eine davon abgeleitete Forderung bei rationaler Übertragungsfunktion ist
 \begin_inset Formula $\trf(\lps)$
 \end_inset 
 
- negative Realteile aufweisen müssen
-\begin_inset Foot
-collapsed true
-
-\layout Standard
-
-Man sagt auch, der Nenner müsse ein 
+ negative Realteile aufweisen müssen (
 \noun on 
 Hurwitz
 \noun default 
--Polynom sein.
+-Polynom
+\begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
+
 \end_inset 
 
- und der Grad des Zählerpolynoms höchstens so groß wie der des Nenners sein
- darf.
+) und der Grad des Zählerpolynoms höchstens so groß wie der des Nenners
+ sein darf.
  So kann gewährleistet werden, daß die Partialbruchzerlegung
 \begin_inset LatexCommand \index{Partialbruchzerlegung}
 
@@ -284,18 +289,18 @@ Hurwitz
 \end_inset 
 
 bei der Rücktransformation in den Zeitbereich als
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \[
-\irf(t)=\frac{c_{1}}{(m_{1}-1)!}t^{m_{1}-1}\e^{\pn{\lps}{1}t}+\frac{c_{2}}{(m_{2}-1)!}t^{m_{2}-1}\e^{\pn{\lps}{2}t}+\cdots\]
+\begin_inset Formula \begin{equation}
+\irf(t)=\frac{c_{1}}{(m_{1}-1)!}t^{m_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(m_{2}-1)!}t^{m_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots\label{eq:ltisys_time_response}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-zu beschränkten Signalen führt\SpecialChar ~
+zu einer beschränkten Impulsantwort führt\SpecialChar ~
 
 \begin_inset LatexCommand \cite[2.5.4]{Stopp:1992}
 
@@ -314,8 +319,18 @@ zu beschränkten Signalen führt\SpecialChar ~
 .
 \layout Subsection
 
+
+\begin_inset LatexCommand \label{sec:ltisys_causality}
+
+\end_inset 
+
 Kausalität
-\begin_inset LatexCommand \index{LTI-System!Kausalität}
+\begin_inset LatexCommand \index{LTI-System!kausales}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Kausalität|see{LTI-System}}
 
 \end_inset 
 
@@ -393,24 +408,30 @@ noun{Fourier}}}
 \end_inset 
 
 -Bildfunktion
+\begin_inset LatexCommand \index{Transformation!Fourier@\noun{Fourier}-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Fourier-Transformation@\noun{Fourier}-Transformation}
+
+\end_inset 
+
+
 \layout Standard
 
 
 \noun on 
 Fourier
 \noun default 
--Transformation
-\begin_inset LatexCommand \index{Fourier-Transformation@\noun{Fourier}-Transformation}
-
-\end_inset 
-
- der vorgenannten (notwendigen, für realisierbare Systeme nicht hinreichenden)
- Bedingung in den Bildbereich führt durch Anwendung des Faltungssatzes 
-\begin_inset Formula $f_{1}(t)f_{2}(t)\;\lft\; F_{1}(\jw)*F_{2}(\jw)/2\pi$
+-Transformation der vorgenannten (notwendigen, für realisierbare Systeme
+ nicht hinreichenden) Bedingung in den Bildbereich führt durch Anwendung
+ des Faltungssatzes 
+\begin_inset Formula $f_{1}(t)\, f_{2}(t)\;\lft\; F_{1}(\ji\omega)*F_{2}(\ji\omega)/2\pi$
 \end_inset 
 
  sowie der Regel 
-\begin_inset Formula $\usf(t)\;\lft\;\pi\delta(\omega)+1/\jw$
+\begin_inset Formula $\usf(t)\;\lft\;\pi\dirac(\omega)+1/\ji\omega$
 \end_inset 
 
  zu
@@ -419,13 +440,13 @@ collapsed false
 
 \layout Standard
 
-Außerdem nicht zu vergessen der Ähnlichkeitssatz sowie die Ausblendeigenschaften
- der 
+Außerdem nicht zu vergessen der Ähnlichkeitssatz sowie die Eigenschaft der
+ 
 \noun on 
 Dirac
 \noun default 
--Funktion: 
-\begin_inset Formula $(f*\delta)(t)=f(t)$
+-Funktion 
+\begin_inset Formula $f(t)*\dirac(t-t_{0})=f(t-t_{0})$
 \end_inset 
 
 .
@@ -436,7 +457,7 @@ Dirac
 
 
 \begin_inset Formula \[
-\frac{Y(\jw)}{2\pi}*\left[\pi\delta(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\jw)+\ji\frac{1}{\pi\omega}*Y(\jw)\right]=0\msp.\]
+\frac{Y(\ji\omega)}{2\pi}*\left[\pi\dirac(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\ji\omega)+\ji\frac{1}{\pi\omega}*Y(\ji\omega)\right]=0\msp.\]
 
 \end_inset 
 
@@ -448,8 +469,8 @@ Separiert man Real- und Imaginärteil, dann muß für ein kausales Signal
 
 
 \begin_inset Formula \begin{align*}
-\reop\left[Y(\jw)\right]-\frac{1}{\pi\omega}*\imop\left[Y(\jw)\right] & =0\\
-\imop\left[Y(\jw)\right]+\frac{1}{\pi\omega}*\reop\left[Y(\jw)\right] & =0\end{align*}
+\reop[Y(\ji\omega)]-\frac{1}{\pi\omega}*\imop[Y(\ji\omega)] & =0\\
+\imop[Y(\ji\omega)]+\frac{1}{\pi\omega}*\reop[Y(\ji\omega)] & =0\end{align*}
 
 \end_inset 
 
@@ -458,20 +479,20 @@ Separiert man Real- und Imaginärteil, dann muß für ein kausales Signal
 
 gelten.
  Umstellen nach 
-\begin_inset Formula $\reop\left[Y(\jw)\right]$
+\begin_inset Formula $\reop\left[Y(\ji\omega)\right]$
 \end_inset 
 
  und 
-\begin_inset Formula $\imop\left[Y(\jw)\right]$
+\begin_inset Formula $\imop\left[Y(\ji\omega)\right]$
 \end_inset 
 
  ergibt folgende Zusammenhänge:
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \begin{alignat*}{4}
-\reop\left[Y(\jw)\right] & = & \frac{1}{\pi\omega}*\imop\left[Y(\jw)\right] & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop\left[Y(\xi)\right]}{\omega-\xi}\tic\xi & = & \mathcal{H}\left\{ \imop\left[Y(\jw)\right]\right\} \\
-\imop\left[Y(\jw)\right] & = & -\frac{1}{\pi\omega}*\reop\left[Y(\jw)\right] & = & -\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop\left[Y(\xi)\right]}{\omega-\xi}\tic\xi & = & -\mathcal{H}\left\{ \reop\left[Y(\jw)\right]\right\} \end{alignat*}
+\begin_inset Formula \begin{alignat}{4}
+\reop[Y(\ji\omega)] & = & \frac{1}{\pi\omega}*\imop\left[Y(\ji\omega)\right] & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[Y(\Omega)]}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \imop[Y(\ji\omega)]\right\} \label{eq:ltisys_hilbert_real}\\
+\imop[Y(\ji\omega)] & = & -\frac{1}{\pi\omega}*\reop[Y(\ji\omega)] & = & -\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop[Y(\Omega)]}{\omega-\Omega}\tic\Omega & = & -\mathcal{H}\left\{ \reop[Y(\ji\omega)]\right\} \label{eq:ltisys_hilbert_imag}\end{alignat}
 
 \end_inset 
 
@@ -493,6 +514,11 @@ Hilbert
 \end_inset 
 
 
+\begin_inset LatexCommand \index{Transformation!Hilbert@\noun{Hilbert}-}
+
+\end_inset 
+
+
 \begin_inset Foot
 collapsed false
 
@@ -503,7 +529,7 @@ Von
 David Hilbert
 \noun default 
  begründete Integraltransformation 
-\begin_inset Formula $\mathcal{H}(f)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
+\begin_inset Formula $\mathcal{H}(f)(x)=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi$
 \end_inset 
 
 , welche auch als Faltung
@@ -524,16 +550,22 @@ David Hilbert
 
  verbunden.
  Für das Signal 
-\begin_inset Formula $Y(\jw)=\reop[Y(\jw)]+\ji\,\imop[Y(\jw)]$
+\begin_inset Formula $Y(\ji\omega)=\reop[Y(\ji\omega)]+\ji\,\imop[Y(\ji\omega)]$
 \end_inset 
 
- kann man aus diesem Grund folgende redundanzfreien Darstellungen geben:
+ kann man aus diesem Grund folgende redundanzfreien Darstellungen geben\SpecialChar ~
+
+\begin_inset LatexCommand \cite[13]{Bracewell:2003}
+
+\end_inset 
+
+:
 \layout Standard
 
 
-\begin_inset Formula \begin{xxalignat}{2}
-Y(\jw) & =\reop\left[Y(\jw)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\jw)\right] & Y(\jw) & =\frac{1}{\pi\omega}*\imop\left[Y(\jw)\right]+\ji\imop\left[Y(\jw)\right]\\
- & =\left[\delta(\omega)-\frac{\ji}{\pi\omega}\right]*\reop\left[Y(\jw)\right] &  & =\left[\ji\,\delta(\omega)+\frac{1}{\pi\omega}\right]*\imop\left[Y(\jw)\right]\msp.\end{xxalignat}
+\begin_inset Formula \begin{alignat*}{2}
+Y(\ji\omega) & =\reop\left[Y(\ji\omega)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\ji\omega)\right] &  & =\frac{1}{\pi\omega}*\imop\left[Y(\ji\omega)\right]+\ji\imop\left[Y(\ji\omega)\right]\\
+ & =\left[\dirac(\omega)-\frac{\ji}{\pi\omega}\right]*\reop\left[Y(\ji\omega)\right] &  & =\left[\ji\,\dirac(\omega)+\frac{1}{\pi\omega}\right]*\imop\left[Y(\ji\omega)\right]\msp.\end{alignat*}
 
 \end_inset 
 
@@ -541,12 +573,17 @@ Y(\jw) & =\reop\left[Y(\jw)\right]-\frac{\ji}{\pi\omega}*\reop\left[Y(\jw)\right
 \layout Standard
 
 Durch Anwendung des Faltungssatzes und (wieder) der Transformation für den
- Einheitssprung auf
+ Einheitssprung sowie 
+\begin_inset Formula $\int_{-\infty}^{\infty}\dirac(\omega-\Omega)\,\reop[Y(\ji\Omega)]\tic\Omega=\reop[Y(\ji\omega)]$
+\end_inset 
+
+ auf
 \layout Standard
 
 
-\begin_inset Formula \begin{xxalignat}{2}
-Y(\jw) & =\frac{1}{\pi}\left[\pi\delta(\omega)+\frac{1}{\jw}\right]*\reop\left[Y(\jw)\right] & y(t) & =\frac{\ji}{\pi}\left[\pi\delta(\omega)+\frac{1}{\jw}\right]*\imop\left[Y(\jw)\right]\end{xxalignat}
+\begin_inset Formula \begin{alignat*}{2}
+Y(\ji\omega) & =\frac{1}{\pi}\left[\pi\dirac(\omega)+\frac{1}{\ji\omega}\right]*\reop[Y(\ji\omega)] &  & =\frac{\ji}{\pi}\left[\pi\dirac(\omega)+\frac{1}{\ji\omega}\right]*\imop[Y(\ji\omega)]\\
+ & =\reop[Y(\ji\omega)]-\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{\reop[Y(\ji\Omega)]}{\omega-\Omega}\tic\Omega &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[Y(\ji\Omega)]}{\omega-\Omega}\tic\Omega+\ji\imop[Y(\ji\omega)]\end{alignat*}
 
 \end_inset 
 
@@ -557,36 +594,24 @@ erhält man für die Zeitfunktion
 \layout Standard
 
 
-\begin_inset Formula \begin{xalignat}{2}
-y(t) & =2\usf(t)\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\}  & y(t) & =2\ji\usf(t)\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} \end{xalignat}
+\begin_inset Formula \begin{alignat*}{2}
+y(t) & =2\usf(t)\ft^{-1}\left\{ \reop[Y(\ji\omega)]\right\}  &  & =2\ji\usf(t)\ft^{-1}\left\{ \reop[Y(\ji\omega)]\right\} \msp.\end{alignat*}
 
 \end_inset 
 
 
 \layout Standard
 
-und schlußendlich unter der Voraussetzung 
-\begin_inset Formula $y(t)=0$
+Sollte 
+\begin_inset Formula $\ft^{-1}\left\{ \reop[Y(\ji\omega)]\right\} $
 \end_inset 
 
  für 
-\begin_inset Formula $t<0$
+\begin_inset Formula $t=0$
 \end_inset 
 
- (Kausalität):
-\layout Standard
-
-
-\begin_inset Formula \begin{equation}
-\boxed{y(t)=2\ft^{-1}\left\{ \reop\left[Y(\jw)\right]\right\} =2\ji\ft^{-1}\left\{ \imop\left[Y(\jw)\right]\right\} }\msp.\label{eq:ltisys_causal_ftinv}\end{equation}
-
-\end_inset 
-
-
-\layout Standard
-
-Hiernach ist es ausreichend nur eine Komponente, entweder Real- oder Imaginärtei
-l, zur Beschreibung des Signals 
+ verschwinden, dann ist es sogar ausreichend nur eine Komponente, entweder
+ Real- oder Imaginärteil, zur Beschreibung des Signals 
 \begin_inset Formula $y(t)$
 \end_inset 
 
@@ -596,27 +621,47 @@ collapsed true
 
 \layout Standard
 
-Außerdem ist sehr gut erkennbar, daß der Realteil eine gerade, der Imaginärteil
- aber eine ungerade Funktion in 
-\begin_inset Formula $\jw$
+Ansonsten muß man den in 
+\begin_inset Formula $\usf(t)$
 \end_inset 
 
- sein muß, damit 
-\begin_inset Formula $y(t)$
-\end_inset 
-
- reell wird.
+ steckenden 
+\noun on 
+Dirac
+\noun default 
+-Stoß noch berücksichtigen.
 \end_inset 
 
 .
- Die jeweils andere ist faktisch redundant, was solche Transformationen
- wie die Kosinus- oder Sinus-Transformation
-\begin_inset LatexCommand \index{Kosinus-Transformation}
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+y(t)=2\ft^{-1}\left\{ \reop[Y(\ji\omega)]\right\} =2\ji\,\ft^{-1}\left\{ \imop[Y(\ji\omega)]\right\} \msp.\label{eq:ltisys_causal_ftinv}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Die jeweils andere ist faktisch redundant, was solche Transformationen wie
+ die Cosinus- oder Sinus-Transformation
+\begin_inset LatexCommand \index{Transformation!Cosinus-}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Transformation!Sinus-}
 
 \end_inset 
 
 
 \begin_inset LatexCommand \index{Sinus-Transformation}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Cosinus-Transformation}
 
 \end_inset 
 
@@ -644,8 +689,8 @@ htigt.
 
 
 \begin_inset Formula \begin{align*}
-y(t) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\reop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=\frac{2}{\pi}\int_{0}^{\infty}\reop\left[Y(\jw)\right]\cos(\omega t)\tic\omega\\
- & =\frac{\ji}{\pi}\int_{-\infty}^{\infty}\imop\left[Y(\jw)\right]\e^{\jw t}\tic\omega=-\frac{2}{\pi}\int_{0}^{\infty}\imop\left[Y(\jw)\right]\sin(\omega t)\tic\omega\end{align*}
+y(t) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\reop[Y(\ji\omega)]\expf^{\ji\omega t}\tic\omega=\frac{2}{\pi}\int_{0}^{\infty}\reop[Y(\ji\omega)]\cos(\omega t)\tic\omega\\
+ & =\frac{\ji}{\pi}\int_{-\infty}^{\infty}\imop[Y(\ji\omega)]\expf^{\ji\omega t}\tic\omega=-\frac{2}{\pi}\int_{0}^{\infty}\imop[Y(\ji\omega)]\sin(\omega t)\tic\omega\end{align*}
 
 \end_inset 
 
@@ -658,12 +703,12 @@ Alle vorgenannten Fakten müssen sicherlich auch dann gelten, wenn das System
 Dirac
 \noun default 
 -Stoß angeregt wird.
- Aus diesem Grund können alle Formeln genauso auf die 
+ Aus diesem Grund können alle Beziehungen genauso auf die 
 \begin_inset Formula $\ft$
 \end_inset 
 
 -Übertragungsfunktion eines LTI-Systems angewandt werden, wenn man 
-\begin_inset Formula $Y(\jw)=\trf(\jw)$
+\begin_inset Formula $Y(\ji\omega)=\trf(\ji\omega)$
 \end_inset 
 
  und 
@@ -671,48 +716,6 @@ Dirac
 \end_inset 
 
  setzt.
- Verschwindet 
-\begin_inset Formula $\irf(t)$
-\end_inset 
-
- für 
-\begin_inset Formula $t<0$
-\end_inset 
-
-, 
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-ie
-\end_inset 
-
- die Vormultiplikation mit 
-\begin_inset Formula $\usf(t)$
-\end_inset 
-
- ist unnötig, dann führt 
-\noun on 
-Fourier
-\noun default 
--Transformation von Gleichung\SpecialChar ~
-
-\begin_inset LatexCommand \ref{eq:ltisys_causal_ftinv}
-
-\end_inset 
-
- zu:
-\layout Standard
-
-
-\begin_inset Formula \[
-\irf(t)\;\lft\;\trf(\jw)=2\reop\left[Y(\jw)\right]=2\ji\,\imop\left[Y(\jw)\right]\msp.\]
-
-\end_inset 
-
-
 \layout Subsubsection
 
 
@@ -732,18 +735,23 @@ noun{Laplace}}}
 \end_inset 
 
 -Bildfunktion
+\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Transformation!Laplace@\noun{Laplace}-}
+
+\end_inset 
+
+
 \layout Standard
 
 Nehmen wir als Ausgangssituation der Betrachtungen an, daß die 
 \noun on 
 Laplace
 \noun default 
--Transformierte
-\begin_inset LatexCommand \index{Laplace@\noun{Laplace}!-Transformation}
-
-\end_inset 
-
- 
+-Transformierte 
 \begin_inset Formula $Y(\lps)=\reop[Y(\lps)]+\ji\,\imop[Y(\lps)]$
 \end_inset 
 
@@ -762,19 +770,43 @@ status Collapsed
 ie
 \end_inset 
 
- dort keine Singularitäten (also auch keine Pole) hat.
- Aus der Funktionentheorie ist bekannt, daß sich eine solche Funktion für
- 
-\begin_inset Formula $\reop(\lps)\geq+0$
+ dort weder Singularitäten (also auch keine Pole) noch Sprünge hat.
+ Aus der Funktionentheorie ist bekannt, daß sich eine solche Funktion (unter
+ der Bedingung 
+\begin_inset Formula $\lim_{\lps\rightarrow\infty}\! Y(\lps)=0$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \vref{sec:analysis_improper_integrals_halfplane}
+
+\end_inset 
+
+) für 
+\begin_inset Formula $\reop(\lps)>0$
 \end_inset 
 
  vollständig durch ihre Randwerte auf der imaginären Achse
 \begin_inset Foot
-collapsed false
+collapsed true
 
 \layout Standard
 
-Entspricht dem Übergang von der 
+Entspricht mit 
+\begin_inset Formula $\lps\rightarrow\ji\omega$
+\end_inset 
+
+ dem Übergang von der 
 \noun on 
 Fourier
 \noun default 
@@ -783,79 +815,50 @@ Fourier
 Laplace
 \noun default 
 -Transformierten.
- Der Übergang 
-\begin_inset Formula $\lps\rightarrow\jw$
 \end_inset 
 
- in Formel\SpecialChar ~
+ definiert\SpecialChar ~
 
-\begin_inset LatexCommand \ref{eq:ltisys_causal_lt_boundary}
-
-\end_inset 
-
- erfordert jedoch eine eingehende Berücksichtigung der Singularität im Integrand
-en (
-\begin_inset ERT
-status Collapsed
-
-\layout Standard
-
-\backslash 
-eg
-\end_inset 
-
- durch Anwendung des 
-\noun on 
-Cauchy
-\noun default 
-'schen Hauptwerts
-\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!-Hauptwert}
-
-\end_inset 
-
-).
-\end_inset 
-
- definert\SpecialChar ~
-
-\begin_inset LatexCommand \cite[\bibsec{119}]{Brown:1996}
+\begin_inset LatexCommand \cite[119]{Brown:1996}
 
 \end_inset 
 
 .
- Hierbei ist die Kenntnis des Real- oder Imaginärteils vollkommen ausreicht,
- da beide für 
-\begin_inset Formula $\reop(\lps)=0$
-\end_inset 
-
- über die 
-\noun on 
-Hilbert
-\noun default 
--Transformation
-\begin_inset LatexCommand \index{Hilbert-Transformation@\noun{Hilbert}-Transformation}
-
-\end_inset 
-
- verknüpft sind.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{Y(\lps)=\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop\left[Y(\xi)\right]}{\lps-\xi}\tic\xi=\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop\left[Y(\xi)\right]}{\lps-\xi}\tic\xi}\label{eq:ltisys_causal_lt_boundary}\end{equation}
+Y(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{Y(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega,\qquad\reop(\lps)>0\label{eq:ltisys_causal_boundary}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Zur Rücktransformation in den Zeitbereich wenden wir den Faltungssatz der
- 
+Aus demselben mathematischen Gebiet entstammen auch die folgenden Formeln,
+ welche (für 
+\begin_inset Formula $\reop(\lps)>0$
+\end_inset 
+
+) die Rückgewinnung der Funktion nur aus dem Real- oder Imaginärteil ermöglichen.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{equation}
+Y(\lps)=\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[Y(\Omega)]}{\lps-\Omega}\tic\Omega=\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[Y(\Omega)]}{\lps-\Omega}\tic\Omega\label{eq:ltisys_causal_boundary_component}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Zur Rücktransformation der letzten Darstellung in den Zeitbereich wenden
+ wir jetzt den Faltungssatz der 
 \noun on 
 Laplace
 \noun default 
 -Transformation 
-\begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\xi)F_{2}(\lps-\xi)\tic\xi\quad\rlt\quad2\pi\ji\, f_{1}(t)\, f_{2}(t)$
+\begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\Omega)F_{2}(\lps-\Omega)\tic\Omega\quad\rlt\quad2\pi\ji\, f_{1}(t)\, f_{2}(t)$
 \end_inset 
 
  an, wobei 
@@ -892,7 +895,7 @@ y(t)=2\lt^{-1}\left(\frac{1}{\lps}\right)\cdot\lt^{-1}\left[F_{1}(\lps)\right]=2
 
 \layout Standard
 
-Letzte Formel enthält das wesentliche Resultat: wegen der Multiplikation
+Diese Beziehung enthält das wesentliche Resultat: wegen der Multiplikation
  mit dem Einheitssprung 
 \begin_inset Formula $\usf(t)$
 \end_inset 
@@ -906,11 +909,6 @@ Letzte Formel enthält das wesentliche Resultat: wegen der Multiplikation
 \end_inset 
 
  (Kausalität
-\begin_inset LatexCommand \index{Kausalität}
-
-\end_inset 
-
-
 \begin_inset LatexCommand \index{Funktion!kausale}
 
 \end_inset 
@@ -954,23 +952,23 @@ ie
 \begin_inset Formula $y(t)$
 \end_inset 
 
- vollständig durch den Real- oder Imaginärteil beschrieben seiner 
+ vollständig durch den Real- oder Imaginärteil seiner 
 \noun on 
 Laplace
 \noun default 
--Transformierten.
+-Transformierten beschrieben.
 \layout Standard
 
 
 \begin_inset Formula \begin{equation}
-\boxed{y(t)=2\lt^{-1}\left\{ \reop\left[Y(\lps)\right]\right\} =2\ji\lt^{-1}\left\{ \imop\left[Y(\lps)\right]\right\} }\end{equation}
+y(t)=2\lt^{-1}\left\{ \reop[Y(\lps)]\right\} =2\ji\lt^{-1}\left\{ \imop[Y(\lps)]\right\} \end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-Diese Aussage führt zu der entscheidenden Forderung an die Übertragungsfunktion
+Die Aussage führt zu der entscheidenden Forderung an die Übertragungsfunktion
  eines LTI-Systems (wenn 
 \begin_inset Formula $y(t)=\irf(t)$
 \end_inset 
@@ -988,22 +986,16 @@ Diese Aussage führt zu der entscheidenden Forderung an die Übertragungsfunktion
 \end_inset 
 
  keine Pole in der rechten Halbebene besitzen darf.
-\layout Subsection
+\layout Subsubsection
 
-Realisierbarkeit
-\begin_inset LatexCommand \index{LTI-System!Realisierbarkeit}
-
-\end_inset 
-
-
+Schlußfolgerungen (Integralsätze)
 \layout Standard
 
-Eine hinreichende Bedingung für Kausalität und Stabilität (also Realisierbarkeit
-) gibt der Satz von 
+Berücksichtigt man die Eigenschaften der 
 \noun on 
-Paley-Wiener
+Fourier
 \noun default 
- 
+- 
 \begin_inset ERT
 status Collapsed
 
@@ -1013,18 +1005,1319 @@ status Collapsed
 resp
 \end_inset 
 
- das 
+ 
+\noun on 
+Laplace
+\noun default 
+-Transformierten reeller Zeitfunktionen, so lassen sich für die Übertragungsfunk
+tion von kausalen LTI-Systemen zahlreiche Darstellungsformen angeben\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Bode:1945}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[10.]{Papoulis:1962}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[2.3.2]{Seron:1997}
+
+\end_inset 
+
+.
+\layout Paragraph
+
+Real-/Imaginärteilbeziehungen in der 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Ebene
+\layout Standard
+
+Eine erste Betrachtung dazu (die etwas ausführlicher erfolgt), geht von
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_boundary}
+
+\end_inset 
+
+ aus und erweitert zunächst den Integranden mit 
+\begin_inset Formula $\lps+\ji\Omega$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \begin{eqnarray*}
+\trf(\lps) & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\lps+\ji\Omega)\,\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\\
+ & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\lps\,\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega+\frac{\ji}{2\pi}\int_{-\infty}^{\infty}\frac{\Omega\,\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\msp.\end{eqnarray*}
+
+\end_inset 
+
+
+\layout Standard
+
+Bedenkt man nun, daß:
+\layout Itemize
+
+die Integration von 
+\begin_inset Formula $-\infty$
+\end_inset 
+
+ bis 
+\begin_inset Formula $\infty$
+\end_inset 
+
+ über eine ungerade Funktion Null ergibt;
+\layout Itemize
+
+Integration einer geraden Funktion durch Verdoppelung in den neuen Grenzen
+ 
+\begin_inset Formula $[0,\infty)$
+\end_inset 
+
+ ausgedrückt werden kann;
+\layout Itemize
+
+der Imaginärteil der 
+\begin_inset Formula $\ft$
+\end_inset 
+
+-Transformierten einer reellen Zeitfunktion eine ungerade Funktion ist;
+\layout Itemize
+
+der Realteil der 
+\begin_inset Formula $\ft$
+\end_inset 
+
+-Transformierten einer reellen Zeitfunktion eine gerade Funktion ist;
+\layout Itemize
+
+Division/Multiplikation einer geraden und einer ungeraden Funktion wieder
+ eine ungerade Funktion ergibt;
+\layout Itemize
+
+der Nenner 
+\begin_inset Formula $\Omega^{2}+\lps^{2}$
+\end_inset 
+
+ als auch 
+\begin_inset Formula $\Omega\,\imop[\trf(\ji\Omega)]$
+\end_inset 
+
+ bezüglich der Integrationsvariable 
+\begin_inset Formula $\Omega$
+\end_inset 
+
+ gerade Funktionen sind;
+\layout Itemize
+
+
+\begin_inset Formula $\Omega\,\reop[F(\ji\Omega)]$
+\end_inset 
+
+ hingegen eine ungerade Funktion darstellt;
+\layout Standard
+
+so ergibt sich im 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Bildbereich:
+\layout Emph(asized)
+
+
+\begin_inset Formula \[
+\trf(\lps)=\frac{1}{\pi}\int_{0}^{\infty}\frac{\lps\,\reop[\trf(\ji\Omega)]-\Omega\,\imop[\trf(\ji\Omega)]}{\lps^{2}+\Omega^{2}}\tic\Omega\msp,\qquad\reop(\lps)>0\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Eine weitere Darstellung, der allerdings keinerlei Annahmen in Bezug auf
+ die Zeitfunktionen zugrunde liegen, kann ausgehend von\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_boundary_component}
+
+\end_inset 
+
+ gewonnen werden\SpecialChar ~
+
+\begin_inset LatexCommand \cite[3.13]{Wunsch:1962}
+
+\end_inset 
+
+.
+ Dazu addiert und subtrahiert man einfach 
+\begin_inset Formula $\reop[\trf(\lps)]$
+\end_inset 
+
+ im Zähler des Integrals
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\trf(\lps) & =\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]+\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
+ & =\frac{\reop[\trf(\lps)]}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+und nimmt die für 
+\begin_inset Formula $\reop(\lps)>0$
+\end_inset 
+
+ geltende Beziehung 
+\begin_inset Formula $\int_{-\ji\infty}^{\ji\infty}(\lps-\Omega)^{-1}\tic\Omega=\ji\pi$
+\end_inset 
+
+ zu Hilfe.
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\lps)=\reop[\trf(\lps)]+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\]
+
+\end_inset 
+
+
+\layout Standard
+
+Bringt man noch 
+\begin_inset Formula $\reop[\trf(\lps)]$
+\end_inset 
+
+ auf die linke Seite, so kann direkt eine neue Variante der Abhängigkeitsdarstel
+lung zwischen Real- und Imaginärteil gewonnen werden
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Genauso für die reelle Komponente, hier jedoch ohne Beweis.
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Und für den Realteil
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]+\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
+ & =\frac{\imop[\trf(\lps)]}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
+\reop[\trf(\lps)] & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{align*}
+\imop[\trf(\lps)] & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\msp,\qquad\reop(\lps)>0\\
+\reop[\trf(\lps)] & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+
+\end_inset 
+
+
+\layout Paragraph
+
+Real-/Imaginärteilbeziehungen auf der 
+\begin_inset Formula $\ji\omega$
+\end_inset 
+
+-Achse
+\layout Standard
+
+Auf der imaginären Achse gilt (für Systeme mit 
+\begin_inset Formula $\lim_{\omega\rightarrow\infty}\trf(\ji\omega)=0$
+\end_inset 
+
+, 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \vref{sec:analysis_improper_integrals_halfplane}
+
+\end_inset 
+
+) die aus der Funktionentheorie bekannte Beziehung:
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Man beachte immer die Voraussetzung, denn nach 
+\begin_inset LatexCommand \cite[10.]{Papoulis:1962}
+
+\end_inset 
+
+ gilt: 
+\begin_inset Formula $\lim_{\omega\rightarrow\infty}\ji\omega\,\trf(\ji\omega)=\irf(+0)$
+\end_inset 
+
+.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\trf(\ji\omega)=\trf(\ji\omega)*\frac{1}{\ji\omega\pi}=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega\msp.\label{eq:ltisys_causal_int_infty}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Mit dem Ziel den Nenner des Integranden zu einer geraden (oder ungeraden)
+ Funktion zu machen, soll uns 
+\begin_inset Formula $\omega+\Omega$
+\end_inset 
+
+ als Erweiterung dienen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\ji\omega)=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{(\omega+\Omega)\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\]
+
+\end_inset 
+
+
+\layout Standard
+
+Dabei verschwinden die Integrale über 
+\begin_inset Formula $\omega\imop[\trf(\ji\Omega)]$
+\end_inset 
+
+ und 
+\begin_inset Formula $\Omega\reop[\trf(\ji\Omega)]$
+\end_inset 
+
+, da es sich bezüglich 
+\begin_inset Formula $\Omega$
+\end_inset 
+
+ um ungerade Funktionen handelt.
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\trf(\ji\omega)=\frac{2}{\pi\ji}\vp\int_{0}^{\infty}\frac{\omega\reop[\trf(\ji\Omega)]+\ji\Omega\imop[\trf(\ji\Omega)]\}}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_int_even}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Für den Real- und Imaginärteil kann man nun direkt ablesen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Beide Gleichungen bestätigen augenscheinlich 
+\begin_inset Formula $\trf(-\ji\omega)=\conjgt{\trf}(\ji\omega)$
+\end_inset 
+
+.
+\end_inset 
+
+:
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{eqnarray}
+\reop[\trf(\ji\omega)] & = & \frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop[\trf(\ji\Omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_even}\\
+\imop[\trf(\ji\omega)] & = & -\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop[\trf(\ji\Omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\msp.\label{eq:ltisys_causal_imint_even}\end{eqnarray}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Note
+collapsed false
+
+\layout Standard
+
+Mit
+\layout Standard
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\frac{2\omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}+\frac{1}{\omega+\Omega} & \frac{2\Omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}-\frac{1}{\omega+\Omega}\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+kann man den Beweis relativ leicht umkehren.
+\layout Standard
+
+
+\begin_inset Formula \begin{alignat*}{3}
+\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega+\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)-\trf(-\ji\omega)}{2} &  & =\ji\,\imop[\trf(\ji\omega)]\\
+\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\Omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)+\trf(-\ji\omega)}{2} &  & =\reop[\trf(\ji\omega)]\end{alignat*}
+
+\end_inset 
+
+
+\end_inset 
+
+
+\layout Paragraph
+
+
+\noun on 
+Bode
+\noun default 
+'s Real-/Imaginärteilbeziehungen
+\layout Standard
+
+Oftmals sind in der Literatur Darstellungen zu finden, in denen 
+\begin_inset Formula $\trf(\ji\omega)$
+\end_inset 
+
+ auch auf der rechten Seite im Integranden auftaucht und die letztlich auf\SpecialChar ~
+
+\begin_inset LatexCommand \cite{Bode:1945}
+
+\end_inset 
+
+ zurückgehen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Der Summand 
+\begin_inset Formula $\trf(\infty)$
+\end_inset 
+
+ sei zunächst ignoriert, da er nur bei Systemen mit 
+\begin_inset Formula $\lim_{|\lps|\rightarrow\infty}\trf(\lps)\neq0$
+\end_inset 
+
+ berücksichtigt werden muß (auf die noch eingegangen wird).
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Bode@\noun{Bode}!Integralsätze}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Integral!-sätze von Bode@-sätze von \noun{Bode}}
+
+\end_inset 
+
+.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{align}
+\reop[\trf(\ji\omega)] & =\trf(\infty)+\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop[\trf(\ji\Omega)]-\omega\imop[\trf(\ji\omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_infty}\\
+\imop[\trf(\ji\omega)] & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop[\trf(\ji\Omega)]-\reop[\trf(\ji\omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_imint_infty}\end{align}
+
+\end_inset 
+
+
+\layout Standard
+
+Offensichtlich kann aber der Term mit 
+\begin_inset Formula $\trf(\ji\omega)$
+\end_inset 
+
+ aus dem Integral herausgezogen werden, da er nicht von der Integrationsvariable
+ 
+\begin_inset Formula $\Omega$
+\end_inset 
+
+ abhängt.
+ Unsere Aufmerksamkeit soll deshalb 
+\begin_inset Formula $\int_{0}^{\infty}2\omega/(\omega^{2}-\Omega^{2})\tic\Omega$
+\end_inset 
+
+ gelten, dessen 
+\noun on 
+Cauchy
+\noun default 
+'scher Hauptwert
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Für 
+\begin_inset Formula $\Omega\rightarrow\omega$
+\end_inset 
+
+ existiert die Funktion offensichtlich nicht.
+\end_inset 
+
+ sowohl anschaulich als auch im Hinblick auf dessen Stammfunktion 
+\begin_inset Formula $\ln\left|\frac{\omega+\Omega}{\omega-\Omega}\right|$
+\end_inset 
+
+ verschwindet
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Ein Spezialfall des Grenzwertes 
+\begin_inset Formula $\lim_{\omega\rightarrow\infty}\omega\,\ln\left|\frac{\omega+\lps}{\omega-\lps}\right|=2\reop(\lps)$
+\end_inset 
+
+ in der 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Ebene\SpecialChar ~
+
+\begin_inset LatexCommand \cite[B.1]{Seron:1997}
+
+\end_inset 
+
+.
+\end_inset 
+
+\SpecialChar ~
+
+\begin_inset LatexCommand \cite[3.3.23]{Abramowitz:1972}
+
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\vp\int_{0}^{\infty}\frac{2\omega}{\omega^{2}-\Omega^{2}}\tic\Omega=\vp\int_{0}^{\infty}\frac{1}{\Omega+\omega}-\frac{1}{\Omega-\omega}\tic\Omega=\ln\left|\frac{\omega+\Omega}{\omega-\Omega}\right|_{\Omega=0}^{\Omega\rightarrow\infty}=0\]
+
+\end_inset 
+
+
+\layout Standard
+
+Beide Beziehungen entsprechen folglich den Formeln\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_reint_even}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_imint_even}
+
+\end_inset 
+
+, nutzen also nur die Äquivalenz:
+\layout Standard
+
+
+\begin_inset Formula \[
+\vp\int_{0}^{\infty}\frac{2\omega\,\trf(\ji\omega)}{\omega^{2}-\Omega^{2}}\tic\Omega=2\omega\,\trf(\ji\omega)\;\vp\int_{0}^{\infty}\frac{\tdc\Omega}{\omega^{2}-\Omega^{2}}=0\msp.\]
+
+\end_inset 
+
+
+\layout Paragraph
+
+Systeme mit 
+\begin_inset ERT
+status Inlined
+
+\layout Standard
+
+\backslash 
+texorpdfstring{$
+\backslash 
+trf(
+\backslash 
+infty) 
+\backslash 
+neq 0$}{
+\backslash 
+latex{}}
+\end_inset 
+
+
+\layout Standard
+
+Für LTI-Systeme mit der Eigenschaft
+\layout Standard
+
+
+\begin_inset Formula \[
+\lim_{\substack{|\lps|\rightarrow\infty\\
+\reop(\lps)>0}
+}\!\trf(\lps)\neq0\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+aber mit beschränkter 
+\begin_inset Formula $\ft$
+\end_inset 
+
+-Übertragungsfunktion 
+\begin_inset Formula $|\trf(\infty)|=\lim_{|\lps|\rightarrow\infty}|\trf(\lps)|$
+\end_inset 
+
+, kann man nicht auf 
+\noun on 
+Jordan
+\noun default 
+'s Lemma zurückgreifen.
+ Aus diesem Grund sind alle vorangegangenen Aussagen derart anzupassen,
+ daß der im Unendlichen verlaufende Integrationsweg (nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \vref{fig:analysis_halfplane_int_singularity}
+
+\end_inset 
+
+) bei der Anwendung von 
+\noun on 
+Cauchy
+\noun default 
+'s Integralformel berücksichtigt wird\SpecialChar ~
+
+\begin_inset LatexCommand \cite[3.12]{Wunsch:1962}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[10-2]{Papoulis:1962}
+
+\end_inset 
+
+.
+ Den allgemeinen Fall einer, in der rechten Halbebene analytischen Funktion,
+ muß man dementsprechend so korrigieren:
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega\msp.\label{eq:ltisys_causal_boundary_nonlp}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+Betrachten wir zuerst den Integrationsweg 
+\begin_inset Formula $C_{\infty}$
+\end_inset 
+
+ und bringen die Substitution 
+\begin_inset Formula $\Omega-\lps=r\expf^{\ji\theta}$
+\end_inset 
+
+ mit 
+\begin_inset Formula $\tdc\Omega=\ji\, r\expf^{\ji\theta}\tdc\theta$
+\end_inset 
+
+ zur Anwendung.
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\int_{C_{\infty}}\frac{\trf(\Omega)}{\Omega-\lps}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\pi/2}^{\pi/2}\trf(r\expf^{\ji\theta}-\lps)\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+Unter der Maßgabe 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+ kann man sicherlich 
+\begin_inset Formula $|\Omega|\gg|\lps|$
+\end_inset 
+
+ annehmen, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ 
+\begin_inset Formula $\Omega-\lps\approx\Omega$
+\end_inset 
+
+ setzen.
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\pi/2}^{\pi/2}\trf(r\expf^{\ji\theta})\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+Außerdem ist wegen der (für reelle Zeitfunktionen immer geltenden) Relation
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\conjgt{\lps})=\conjgt{\trf}(\lps)\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+eine Beschränkung des Integrationsweges auf einen positiven Viertelkreis
+ möglich.
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega & =-\ji\lim_{r\rightarrow\infty}\left[\int_{-\pi/2}^{0}\trf(r\expf^{\ji\theta})\tic\theta+\int_{0}^{\pi/2}\trf(r\expf^{\ji\theta})\tic\theta\right]\\
+ & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\pi/2}\trf(r\expf^{-\ji\theta})+\trf(r\expf^{\ji\theta})\tic\theta\\
+ & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\pi/2}\conjgt{\trf}(r\expf^{\ji\theta})+\trf(r\expf^{\ji\theta})\tic\theta\\
+ & =-2\ji\lim_{r\rightarrow\infty}\int_{0}^{\pi/2}\reop[\trf(r\expf^{\ji\theta})]\tic\theta\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+Letzter Ausdruck weist nun eindeutig darauf hin, daß es sich bei dem Integral
+ entlang 
+\begin_inset Formula $C_{\infty}$
+\end_inset 
+
+ um eine rein imaginäre Konstante handelt, welche für 
+\begin_inset Formula $r\rightarrow\infty$
+\end_inset 
+
+ sowohl allgemein als auch speziell auf der reellen Achse (
+\begin_inset Formula $\theta=0$
+\end_inset 
+
+, 
+\begin_inset Formula $\reop(\lps)\rightarrow\infty$
+\end_inset 
+
+) nicht notwendigerweise verschwinden muß.
+\layout Standard
+
+Zurück zur Ausgangsbeziehung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_boundary_nonlp}
+
+\end_inset 
+
+ erhalten wir durch Einsetzen
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega+\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\pi/2}\reop[\trf(r\expf^{\ji\theta})]\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+und stellen fest, daß sich der Realteil
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+Aus diesem Grund haben alle Beziehungen für den Imaginärteil der 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Übertragungsfunktion von Systemen mit 
+\begin_inset Formula $\lim_{|s|\rightarrow\infty}\trf(\lps)=0$
+\end_inset 
+
+ Bestand.
+\end_inset 
+
+ von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ um den konstanten Betrag
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\infty)=\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\pi/2}\reop[\trf(r\expf^{\ji\theta})]\tic\theta\]
+
+\end_inset 
+
+
+\layout Standard
+
+erhöht.
+ Aus diesem Grund ändert sich 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+eg
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_boundary}
+
+\end_inset 
+
+ wiefolgt:
+\layout Emph(asized)
+
+
+\begin_inset Formula \[
+\trf(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega+\trf(\infty)\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ der Realteil kann bei solchen Systemen nur bis auf eine Konstante aus dem
+ Imaginärteil bestimmt werden\SpecialChar ~
+
+\begin_inset LatexCommand \cite[10-2]{Papoulis:1962}
+
+\end_inset 
+
+.
+ Umgekehrt bleibt die Abhängigkeit nach Beziehung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_hilbert_imag}
+
+\end_inset 
+
+ jedoch bestehen, so daß sich die neue Gesamtsituation folgendermaßen darstellt:
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{xalignat}{2}
+\reop[\trf(\ji\omega)]-\trf(\infty) & =\mathcal{H}\left\{ \imop[\trf(\ji\omega)]\right\}  & \imop[\trf(\ji\omega)] & =-\mathcal{H}\left\{ \reop[\trf(\ji\omega)]\right\} \msp.\label{eq:ltisys_causal_nonlp_hilbert}\end{xalignat}
+
+\end_inset 
+
+
+\layout Subsection
+
+
+\begin_inset LatexCommand \label{sec:ltisys_minphase}
+
+\end_inset 
+
+Minimalphasensysteme (MPS)
+\begin_inset LatexCommand \index{LTI-System!Minimalphasen-|(}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Minimalphasensystem|(}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Mindestphasensystem|see{Minimalphasensystem}}
+
+\end_inset 
+
+
+\layout Standard
+
+Minimalphasig nennt man Systeme, die in der rechten 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Halbebene weder Pole noch Nullstellen
+\begin_inset LatexCommand \index{Nullstellen!der Übertragungsfunktion}
+
+\end_inset 
+
+ besitzen\SpecialChar ~
+
+\begin_inset LatexCommand \cite[10-3]{Papoulis:1962}
+
+\end_inset 
+
+.
+ Für rationale Übertragungsfunktionen bedeutet diese Eigenschaft, daß Nenner
+ und Zähler von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ 
+\noun on 
+Hurwitz
+\noun default 
+-Polynome
+\begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
+
+\end_inset 
+
+ sein müssen.
+ Die Freiheit von Polen 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Nullstellen für 
+\begin_inset Formula $\reop(\lps)>0$
+\end_inset 
+
+ machen 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ und 
+\begin_inset Formula $\trf^{-1}(\lps)$
+\end_inset 
+
+ in diesem Gebiet zu analytischen Funktionen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Übertragungsfunktion 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ gehört wegen der dort vorausgesetzten Polfreiheit zu einem stabilen System
+ (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_stability}
+
+\end_inset 
+
+).
+\end_inset 
+
+.
+ Unter solchen Voraussetzungen ist man in der Lage, 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ zu logarithmieren und dabei die Holomorphieeigenschaft trotzdem zu bewahren.
+ Bezeichnen wir 
+\begin_inset Formula $F(\lps)=\ln\trf(\lps)$
+\end_inset 
+
+, so kann man nach Beziehung\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_hilbert_real}
+
+\end_inset 
+
+ und\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_hilbert_imag}
+
+\end_inset 
+
+ einen determinierten Zusammenhang zwischen Dämpfung
+\begin_inset LatexCommand \index{Dämpfung}
+
+\end_inset 
+
+
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+
+\begin_inset LatexCommand \label{foot:ltisys_mps_neper}
+
+\end_inset 
+
+Bei Anwendung der Definition in 
+\noun on 
+Neper
+\noun default 
+
+\begin_inset LatexCommand \index{Neper}
+
+\end_inset 
+
+: 
+\begin_inset Formula $\atf(\omega)=-\ln|\trf(\ji\omega)|$
+\end_inset 
+
+.
+\end_inset 
+
+ 
+\begin_inset Formula $\atf(\lps)=-\reop[F(\lps)]=-\ln|\trf(\lps)|$
+\end_inset 
+
+ und Phase
+\begin_inset LatexCommand \index{Phase}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\phf(\lps)=-\imop[F(\lps)]=-\ji\,\ang\trf(\lps)$
+\end_inset 
+
+ angeben.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\atf(\omega) & =\mathcal{H}[\phf(\omega)] & \phf(\omega) & =-\mathcal{H}[\atf(\omega)]\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Eine wichtige Voraussetzung für die Anwendbarkeit beider Formeln ist nach
+ dem Lemma von 
+\noun on 
+Jordan
+\noun default 
+ allerdings 
+\begin_inset Formula $\lim_{|\lps|\rightarrow\infty}|F(\lps)|=0$
+\end_inset 
+
+.
+ Im Allgemeinen kann man von dieser Voraussetzung jedoch nicht ausgehen,
+ so daß (genau wie in den Beziehungen\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_causal_nonlp_hilbert}
+
+\end_inset 
+
+) bei der Integration auf dem Weg 
+\begin_inset Formula $C_{\infty}$
+\end_inset 
+
+ nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \vref{fig:analysis_halfplane_int_singularity}
+
+\end_inset 
+
+ die Dämpfung 
+\begin_inset Formula $\atf(\infty)$
+\end_inset 
+
+ zu berücksichtigen ist\SpecialChar ~
+
+\begin_inset LatexCommand \cite[5.3.1.2]{Fritzsche:1981a}
+
+\end_inset 
+
+.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{xalignat*}{2}
+\atf(\omega)-\atf(\infty) & =\mathcal{H}[\phf(\omega)] & \phf(\omega) & =-\mathcal{H}[\atf(\omega)]\end{xalignat*}
+
+\end_inset 
+
+
+\layout Standard
+
+Praktisch kann man jedes LTI-System mit rationaler Übertragungsfunktion
+\begin_inset LatexCommand \index{Übertragungsfunktion!rationale}
+
+\end_inset 
+
+ 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ als Kettenschaltung eines Allpaß-
+\begin_inset LatexCommand \index{Allpaß}
+
+\end_inset 
+
+ und eines Minimalphasensystems verstehen (Zerlegungssatz von 
+\noun on 
+Bode
+\noun default 
+
+\begin_inset LatexCommand \index{Bode@\noun{Bode}!Zerlegungssatz von}
+
+\end_inset 
+
+).
+ Spalten wir dazu die Zählerfunktion 
+\begin_inset Formula $U(\lps)$
+\end_inset 
+
+ so auf, daß alle Nullstellen mit negativem Realteil in 
+\begin_inset Formula $U_{-}(\lps)$
+\end_inset 
+
+ liegen, die mit positivem in 
+\begin_inset Formula $U_{+}(\lps)$
+\end_inset 
+
+.
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\lps)=\frac{U(\lps)}{V(\lps)}=\frac{U_{-}(\lps)\, U_{+}(\lps)}{V(\lps)}\]
+
+\end_inset 
+
+
+\layout Standard
+
+Einfache Erweiterung mit 
+\begin_inset Formula $\conjgt{U}_{+}(\lps)$
+\end_inset 
+
+ ergibt
+\layout Standard
+
+
+\begin_inset Formula \[
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textrm{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textrm{ALP}}}\msp,\]
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ die Zerlegung in
+\layout Itemize
+
+ein minimalphasiges System 
+\begin_inset Formula $\trf_{\textrm{MPS}}$
+\end_inset 
+
+, welches keine Nullstellen in der rechten 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Halbebene besitzt;
+\layout Itemize
+
+sowie einen Allpaß 
+\begin_inset Formula $\trf_{\textrm{ALP}}$
+\end_inset 
+
+, also ein stabiles System mit 
+\begin_inset Formula $|\trf_{\textrm{ALP}}(\lps)|=1$
+\end_inset 
+
+.
+\layout Emph(asized)
+
+
+\begin_inset Formula \begin{equation}
+\trf(\lps)=\trf_{\textrm{MPS}}(\lps)\,\trf_{\textrm{ALP}}(\lps)\label{eq:ltisys_split_bode}\end{equation}
+
+\end_inset 
+
+
+\layout Subsection
+
+Realisierbarkeit
+\begin_inset LatexCommand \index{LTI-System!realisierbares}
+
+\end_inset 
+
+
+\layout Standard
+
+LTI-Systeme, die sowohl kausal als auch stabil sind, nennt man auch (physikalisc
+h) realisierbar.
+ Kausalität bedeutet 
+\begin_inset Formula $y(t)=0$
+\end_inset 
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset 
+
+ oder, wie in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_causality}
+
+\end_inset 
+
+ herausgestellt, daß alle Pole der Übertragungsfunktion einen negativen
+ Realteil aufweisen und damit in der linken 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Halbebene lokalisiert sind.
+ Stabilität liegt vor, wenn die Impulsantwort 
+\begin_inset Formula $\irf(t)$
+\end_inset 
+
+ beschränkt
+\begin_inset LatexCommand \index{Beschränktheit}
+
+\end_inset 
+
+ ist (und für 
+\begin_inset Formula $t\rightarrow\infty$
+\end_inset 
+
+ verschwindet, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_stability}
+
+\end_inset 
+
+).
+ Speziell für quadratisch integrierbare
+\begin_inset LatexCommand \index{Konvergenz!quadratische}
+
+\end_inset 
+
+ Übertragungsfunktionen mit
+\begin_inset Foot
+collapsed false
+
+\layout Standard
+
+
+\noun on 
+Parseval
+\noun default 
+'sches Theorem\SpecialChar ~
+
+\begin_inset LatexCommand \cite[2-6]{Papoulis:1962}
+
+\end_inset 
+
+.
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega=2\pi\int_{-\infty}^{\infty}\irf^{2}(t)\tic t<\infty\label{eq:ltisys_paley_wiener_cond}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+können beide Bedingungen im 
 \noun on 
 Paley-Wiener
 \noun default 
--Kriterium
+-Kriterium für Realisierbarkeit zusammengefaßt werden
 \begin_inset LatexCommand \index{Paley-Wiener-Kriterium@\noun{Paley-Wiener}-Kriterium}
 
 \end_inset 
 
 \SpecialChar ~
 
-\begin_inset LatexCommand \cite[\S~82]{Achieser:1967}
+\begin_inset LatexCommand \cite[10-5]{Papoulis:1962}
+
+\end_inset 
+
+, 
+\begin_inset LatexCommand \cite[\S\,82]{Achieser:1967}
 
 \end_inset 
 
@@ -1034,34 +2327,542 @@ Paley-Wiener
 \end_inset 
 
 .
-\layout Standard
+\layout Emph(asized)
 
 
-\begin_inset Formula \[
-\boxed{\int_{-\infty}^{\infty}\frac{\left|\log|\trf(\jw)|\right|}{1+\omega^{2}}\tic\omega=\int_{-\infty}^{\infty}\frac{A(\omega)}{1+\omega^{2}}\tic\omega<\infty}\]
-
-\end_inset 
-
-
-\layout Standard
-
-Es schließt die (nur) notwendige Bedingung
-\layout Standard
-
-
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}|\trf(\jw)|^{2}\tic\omega<\infty\]
+\begin_inset Formula \begin{equation}
+\int_{-\infty}^{\infty}\frac{|\ln|\trf(\ji\omega)||}{1+\omega^{2}}\tic\omega<\infty\label{eq:ltisys_paley_wiener}\end{equation}
 
 \end_inset 
 
 
 \layout Standard
 
-ein.
-\layout Subsection
+Die Bedeutung des 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriteriums liegt unter anderem darin, daß es
+\layout Itemize
 
-Mindestphasensysteme
-\begin_inset LatexCommand \index{LTI-System!Mindestphasen-}
+sich bei 
+\begin_inset Formula $|\trf(\ji\omega)|$
+\end_inset 
+
+ und 
+\begin_inset Formula $-\ln|\trf(\ji\omega)|$
+\end_inset 
+
+ um die meßbaren Größen Amplitudengang und Dämpfungsverlauf (siehe Fußnote\SpecialChar ~
+
+\begin_inset LatexCommand \vref{foot:ltisys_mps_neper}
+
+\end_inset 
+
+) handelt und
+\layout Itemize
+
+nicht auf Minimalphasensysteme beschränkt ist, denn bezüglich des Amplitudengang
+es 
+\begin_inset Formula $\trf(\omega)=|\trf(\ji\omega)|$
+\end_inset 
+
+ unterscheiden sich diese nicht von anderen LTI-Systemen (Zerlegungssatz
+ von 
+\noun on 
+Bode
+\noun default 
+, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Formel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_split_bode}
+
+\end_inset 
+
+ in Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_minphase}
+
+\end_inset 
+
+).
+\layout Standard
+
+Man kann man nun fragen, ob stabile, kausale Minimalphasensysteme mit quadratisc
+h-integrierbarer Übertragungsfunktion 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ Impulsantwort (nach\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_paley_wiener_cond}
+
+\end_inset 
+
+) das 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriterium grundsätzlich immer erfüllen
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Frage, ob instabile LTI-Systeme das 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriterium erfüllen stellt sich deshalb nicht, weil deren Impulsantwort
+ 
+\begin_inset Formula $\irf(t)$
+\end_inset 
+
+ wegen der Pole in der rechten Halbebene nicht quadratisch integrierbar
+ sein kann (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ auch Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_stability}
+
+\end_inset 
+
+, insbesondere Formel\SpecialChar ~
+
+\begin_inset LatexCommand \vref{eq:ltisys_time_response}
+
+\end_inset 
+
+).
+\end_inset 
+
+?
+\layout Standard
+
+Da die Übertragungsfunktion 
+\begin_inset Formula $\trf(\lps)$
+\end_inset 
+
+ von solchen LTI-Systemen
+\begin_inset LatexCommand \index{LTI-System!kausales}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{LTI-System!stabiles}
+
+\end_inset 
+
+ weder Pole noch Nullstellen in der rechten 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Halbebene (und auch nicht auf der 
+\begin_inset Formula $\ji\omega$
+\end_inset 
+
+-Achse) aufweist, gilt 
+\begin_inset Formula $0<\trf(\omega)<\infty$
+\end_inset 
+
+.
+ Unter dieser Voraussetzung wird die einzige (wesentliche) Singularität
+ des Logarithmus im Koordinatenursprung ausgeschlossen und die komplexe
+ Dämpfung 
+\begin_inset Formula $\atf(\lps)=-\ln\trf(\lps)\in\mathbb{C}$
+\end_inset 
+
+ in der rechten Halbebene, 
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+ie
+\end_inset 
+
+ für 
+\begin_inset Formula $\reop(\lps)\geq0$
+\end_inset 
+
+ zu einer analytischen Funktion.
+ Aus der Darstellung des komplexen Logarithmus
+\layout Standard
+
+
+\begin_inset Formula \[
+\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi\msp,\qquad k\in\mathbb{Z}\]
+
+\end_inset 
+
+
+\layout Standard
+
+wird ersichtlich, daß 
+\begin_inset Formula $\ln|\trf(\ji\omega)|$
+\end_inset 
+
+ den Realteil von 
+\begin_inset Formula $\atf(\lps)$
+\end_inset 
+
+ entlang der imaginären Achse ausmacht.
+\layout Standard
+
+
+\begin_inset Formula \[
+-\ln|\trf(\ji\omega)|=\lim_{\alpha\rightarrow0}\reop[\atf(\lps)]=\reop[\atf(\ji\omega)]\]
+
+\end_inset 
+
+
+\layout Standard
+
+Definieren wir nun zwei logarithmische (
+\begin_inset Quotes eld
+\end_inset 
+
+Gleichrichter
+\begin_inset Quotes erd
+\end_inset 
+
+-) Funktionen folgendermaßen:
+\layout Standard
+
+
+\begin_inset Formula \begin{xxalignat}{2}
+\atf_{+}(\omega) & =\begin{cases}
+\ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|\geq1)\\
+0 & \quad(\,|\trf(\ji\omega)|<1)\end{cases} & \atf_{-}(\omega) & =\begin{cases}
+\ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|<1)\\
+0 & \quad(\,|\trf(\ji\omega)|\geq1)\end{cases}\msp,\end{xxalignat}
+
+\end_inset 
+
+
+\layout Standard
+
+dann wird 
+\begin_inset Formula $\atf_{+}(\omega)$
+\end_inset 
+
+ immer positiv, 
+\begin_inset Formula $\atf_{-}(\omega)$
+\end_inset 
+
+ hingegen stets negativ sein.
+ Mit
+\layout Standard
+
+
+\begin_inset Formula \begin{align*}
+\int_{-\infty}^{\infty}\frac{|\atf(\omega)|}{1+\omega^{2}}\tic\omega & =\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega-\int_{-\infty}^{\infty}\frac{\atf_{-}(\omega)}{1+\omega^{2}}\tic\omega\\
+-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega & =\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega+\int_{-\infty}^{\infty}\frac{\atf_{-}(\omega)}{1+\omega^{2}}\tic\omega\end{align*}
+
+\end_inset 
+
+
+\layout Standard
+
+kann man folgende Beweismöglichkeiten in Betracht ziehen:
+\layout Enumerate
+
+Sind beide Teilintegrale (Summanden) konvergent, dann wird das 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriterium bestätigt.
+\layout Enumerate
+
+Sollte ein Teilintegral und ein Summenintegral konvergent sein, dann muß
+ es das andere Teilintegral auch sein (und das 
+\noun on 
+Paley-Wiener
+\noun default 
+-Kriterium ebenfalls verifiziert).
+\layout Standard
+
+Nach Voraussetzung (
+\begin_inset LatexCommand \ref{eq:ltisys_paley_wiener_cond}
+
+\end_inset 
+
+) ist 
+\begin_inset Formula $|\trf(\ji\omega)|$
+\end_inset 
+
+ quadratisch integrierbar, wodurch sich (mit der Ungleichung 
+\begin_inset Formula $x>\ln x$
+\end_inset 
+
+) folgende Relationen für die positiven Werte von 
+\begin_inset Formula $\ln|\trf(\ji\omega)|$
+\end_inset 
+
+ ergeben:
+\layout Standard
+
+
+\begin_inset Formula \[
+\infty>\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega>2\int_{-\infty}^{\infty}\atf_{+}(\omega)\tic\omega>2\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Damit ist die Konvergenz eines Teilintegrals schon nachgewiesen und es bietet
+ sich an
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Die Beschränktheit des Teilintegrals für 
+\begin_inset Formula $\atf_{-}(\omega)$
+\end_inset 
+
+ in gleicher Art und Weise wie für 
+\begin_inset Formula $\atf_{+}(\omega)$
+\end_inset 
+
+ nachzuweisen scheitert im Wesen daran, daß die Ungleichung 
+\begin_inset Formula $|\trf(\ji\omega)|>\ln|\trf(\ji\omega)|$
+\end_inset 
+
+ nicht hilfreich eingesetzt werden kann (in Beziehung zur quadratischen
+ Integrierbarkeit von 
+\begin_inset Formula $|\trf(\ji\omega)|<1$
+\end_inset 
+
+).
+\end_inset 
+
+, einen Konvergenzbeweis für das (analytisch einfach behandelbare) Summenintegra
+l
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega<\infty\]
+
+\end_inset 
+
+
+\layout Standard
+
+zu erbringen.
+ Dazu gehen wir in die komplexe 
+\begin_inset Formula $\lt$
+\end_inset 
+
+-Ebene über (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+resp
+\end_inset 
+
+ substituieren 
+\begin_inset Formula $\lps=\ji\omega$
+\end_inset 
+
+)
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega=\reop\left[-\ji\,\int_{\omega=-\infty}^{\infty}\frac{\atf(\ji\omega)}{1+\omega^{2}}\tic(\ji\omega)\right]=\reop\left[-\ji\,\int_{\lps=-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps\right]\label{eq:ltisys_paley_wiener_notabs}\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+und zerlegen das rechte Integral
+\begin_inset Foot
+collapsed true
+
+\layout Standard
+
+Wobei wir auch den Imaginärteil des Ausdrucks berücksichtigen, denn bei
+ minimalphasigen LTI-Systemen besteht ein determinierter Zusammenhang zwischen
+ Real- und Imaginärteil der Übertragungsfunktion und deshalb auch zwischen
+ Dämpfung und Phase (
+\begin_inset ERT
+status Collapsed
+
+\layout Standard
+
+\backslash 
+cf
+\end_inset 
+
+ Abschnitt\SpecialChar ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_causality}
+
+\end_inset 
+
+).
+\end_inset 
+
+ wiefolgt:
+\layout Standard
+
+
+\begin_inset Formula \[
+\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps=\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps+1}\tic\lps-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps\msp.\]
+
+\end_inset 
+
+
+\layout Standard
+
+Die beiden Teilintegrale können nun durch Kurvenintegration auf dem halbkreisför
+migen (rechts liegendem) Weg nach Abbildung\SpecialChar ~
+
+\begin_inset LatexCommand \vref{fig:analysis_imag_inf_integral}
+
+\end_inset 
+
+ bestimmt werden.
+ Die Rechnung soll an dieser Stelle jedoch nicht durchgeführt werden, statt
+ dessen die bekannten Ergebnisse aus der Funktionentheorie zur Anwendung
+ kommen:
+\layout Itemize
+
+Bei dem rechten Kurvenintegral handelt es sich wegen der Polfreiheit von
+ 
+\begin_inset Formula $\atf(\lps)$
+\end_inset 
+
+ in der rechten Halbebene um 
+\noun on 
+Cauchy
+\noun default 
+'s Integralformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:analysis_halfplane_right_cauchy_imint}
+
+\end_inset 
+
+ in der (rechten) Halbebene
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Integralformel in der Halbebene}
+
+\end_inset 
+
+ für den Funktionswert 
+\begin_inset Formula $z_{0}=1$
+\end_inset 
+
+.
+\begin_deeper 
+\layout Standard
+
+
+\begin_inset Formula \[
+-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps=\ji\,\pi\,\res{1}{\frac{\atf(\lps)}{\lps-1}}=\ji\,\pi\atf(1)<\infty\]
+
+\end_inset 
+
+
+\end_deeper 
+\layout Itemize
+
+Das linke Integral verschwindet nach dem Satz von 
+\noun on 
+Cauchy
+\noun default 
+
+\begin_inset LatexCommand \index{Cauchy@\noun{Cauchy}!Satz von}
+
+\end_inset 
+
+ (Gleichung\SpecialChar ~
+
+\begin_inset LatexCommand \vref{eq:analysis_cauchy_integral}
+
+\end_inset 
+
+) für 
+\begin_inset Formula $\reop(\lps)\geq0$
+\end_inset 
+
+, denn alle Pole von 
+\begin_inset Formula $\atf(\lps)$
+\end_inset 
+
+ selbst sowie 
+\begin_inset Formula $\pn{\lps}{}=-1$
+\end_inset 
+
+ liegen in der linken Halbebene.
+\layout Standard
+
+Einsetzen der letzten beiden Ergebnisse in Zwischenformel\SpecialChar ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_paley_wiener_notabs}
+
+\end_inset 
+
+ zeigt, daß für stabile, kausale Minimalphasensysteme das Integral
+\layout Standard
+
+
+\begin_inset Formula \begin{equation}
+\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=\pi\reop[\atf(1)]=\pi\ln|\trf(1)|\end{equation}
+
+\end_inset 
+
+
+\layout Standard
+
+konvergiert.
+\layout Standard
+
+
+\begin_inset LatexCommand \index{LTI-System!Minimalphasen-|)}
+
+\end_inset 
+
+
+\begin_inset LatexCommand \index{Minimalphasensystem|)}
+
+\end_inset 
+
+
+\layout Standard
+
+
+\begin_inset LatexCommand \index{LTI-System|)}
 
 \end_inset 
 
