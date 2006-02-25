@@ -45,7 +45,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: stdfilter.lyx,v 1.7 2005-12-21 16:10:01 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.8 2006-02-25 20:54:57 ralf Exp $
 \layout Itemize
 
 Needs the following packages: 
@@ -100,7 +100,11 @@ bibgerm
 \emph on 
 varioref
 \emph default 
-, \SpecialChar \ldots{}
+, 
+\emph on 
+newclude
+\emph default 
+ (Frankenstein), \SpecialChar \ldots{}
 
 \layout Itemize
 
@@ -182,7 +186,11 @@ frontmatter
 
 \layout Title
 
-Analoge Standard-Filter
+Konventionelle Filter
+\newline 
+
+\size normal 
+und ihre Approximationsfunktionen
 \layout Author
 
 Copyright 
@@ -236,7 +244,7 @@ mainmatter
 
 \layout Chapter
 
-Analoge Standard-Filter
+Tiefpaﬂfilter
 \layout Standard
 
 
@@ -361,6 +369,18 @@ Funktionentheorie -- Analytische Funktionen
 
 
 \begin_inset Include \include{../analysis/analysis.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Chapter
+
+Tabellen
+\layout Standard
+
+
+\begin_inset Include \include{tables.lyx}
 preview false
 
 \end_inset 

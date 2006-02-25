@@ -21,7 +21,7 @@
 \paperfontsize default
 \spacing onehalf 
 \papersize a4paper
-\paperpackage a4wide
+\paperpackage widemarginsa4
 \use_geometry 0
 \use_amsmath 1
 \use_natbib 0
@@ -45,7 +45,7 @@ collapsed false
 
 \layout Standard
 
-Version: $Id: stdfilter_article.lyx,v 1.7 2005-12-21 16:08:59 ralf Exp $
+Version: $Id: stdfilter_article.lyx,v 1.8 2006-02-25 20:55:21 ralf Exp $
 \layout Standard
 
 Normally this file is provided for HTML conversion only.
@@ -150,7 +150,11 @@ end{htmlonly}
 
 \layout Title
 
-Analoge Standard-Filter
+Konventionelle Filter
+\newline 
+
+\size normal 
+und ihre Approximationsfunktionen
 \layout Author
 
 Copyright 
@@ -238,11 +242,27 @@ preview false
 
 \layout Section
 \start_of_appendix 
+
+\noun on 
+Fourier
+\noun default 
+-Transformation
+\layout Standard
+
+
+\begin_inset Include \include{tables.lyx}
+preview false
+
+\end_inset 
+
+
+\layout Section
+
 Notation
 \layout Standard
 \align center 
 
-\begin_inset Include \input{notation.lyx}
+\begin_inset Include \include{notation.lyx}
 preview false
 
 \end_inset 
