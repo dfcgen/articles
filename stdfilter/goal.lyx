@@ -1,259 +1,289 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing single 
-\papersize Default
-\paperpackage a4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Version: $Id: goal.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+\end_layout
+
+\end_inset
 
 
-\begin_inset Note
-collapsed false
+\end_layout
 
-\layout Standard
-
-Version: $Id: goal.lyx,v 1.8 2006-02-25 20:51:11 ralf Exp $
-\end_inset 
-
-
-\layout Section
-
+\begin_layout Section
 Approximation im Frequenzbereich
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Approximationsziel
 \begin_inset LatexCommand \label{sec:approx_ampl}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung 
 \begin_inset Formula $\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|$
-\end_inset 
+\end_inset
 
  sowie der Phasengang 
 \begin_inset Formula $\phf(\omega)=-\ang\trf(\ji\omega)$
-\end_inset 
+\end_inset
 
 .
  Fast alle Standard-Tiefpässe beschränken sich dabei auf die gleichmäßige
  
-\noun on 
+\noun on
 (Tschebyscheff
-\noun default 
+\noun default
 -) Approximation des Amplitudenganges
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
 ne Filtertypen 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
 
- sehr schön in\SpecialChar ~
+\end_inset
+
+ sehr schön in\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Henderson:1958}
 
-\end_inset 
+\end_inset
 
  dargestellt sind, werden dann einfach hingenommen.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\trf(\omega)=\left|\trf(\ji\omega)\right|$
-\end_inset 
+\end_inset
 
 .
  Dazu wird üblicherweise statt der Amplitudencharakteristik 
 \begin_inset Formula $\trf(\omega)$
-\end_inset 
+\end_inset
 
  die charakteristische Funktion 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Drosselung 
 \begin_inset Formula $\drf(\omega)=\left|\drf(\ji\omega)\right|$
-\end_inset 
+\end_inset
 
  herangezogen.
  Als Zusammenhang zwischen beiden Größen gilt bekanntermaßen:
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Es gibt verschiedene Gründe die Drosselung als Zielfunktion zu verwenden:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Aus Sicht der technischen Realisierbarkeit sind die Einschränkungen in Bezug
  auf die reellen Koeffizienten des Nenner- und Zählerpolynoms von 
 \begin_inset Formula $\drf(\omega)$
-\end_inset 
+\end_inset
 
  viel schwächer, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  fast jede rationale Funktion ist hier erlaubt
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Im Gegensatz dazu muß 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  der Nenner der Übertragungsfunktion 
 \begin_inset Formula $\trf(\lps)$
-\end_inset 
+\end_inset
 
  immer ein Hurwitzpolynom sein.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Die Drosselung bringt das Filter-Problem einerseits gut zum Ausdruck (Approximat
 ion der Null-Linie im Durchlaßbereich), andererseits können bekannte mathematisc
 he Lösungen (die üblicherweise Standard-Intervalle approximieren) relativ
- problemlos verwendet werden\SpecialChar ~
+ problemlos verwendet werden\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Saal:1958}
 
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 An Reaktanz- (LC-) Vierpolen, welche allerdings vorwiegend historische Bedeutung
  haben, entspricht die Drosselung genau dem Verhältnis zwischen reflektierter
- und abgegebener Ausgangsleistung\SpecialChar ~
+ und abgegebener Ausgangsleistung\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Fritzsche:1979a}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßigen
  Approximation (bezeichnet mit 
 \begin_inset Formula $g(x)$
-\end_inset 
+\end_inset
 
 ) macht es sich außerdem günstig, die Drosselung als Produkt von 
 \begin_inset Formula $g(x)$
-\end_inset 
+\end_inset
 
  mit einer Konstanten 
 \begin_inset Formula $\sigma$
-\end_inset 
+\end_inset
 
  zu definieren.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \drf(\omega)=\sigma\, g(\omega)\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-In Tabelle\SpecialChar ~
+\begin_layout Standard
+In Tabelle\InsetSpace ~
 
 \begin_inset LatexCommand \ref{tab:approx_ampl_interval}
 
-\end_inset 
+\end_inset
 
  sind nun ausgewählte Approximationsintervalle 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  -punkte sowie die Zusammenhänge mit den soeben eingeführten Größen dargelegt.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float table
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Caption
-
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{tab:approx_ampl_interval}
 
-\end_inset 
+\end_inset
 
 Approximationskenngrößen
-\layout Standard
-\align center 
+\end_layout
 
-\begin_inset  Tabular
+\begin_layout Standard
+\align center
+\begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features>
 <column alignment="center" valignment="top" leftline="true" width="0">
@@ -265,633 +295,668 @@ Approximationskenngrößen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $g(\omega)$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\drf(\omega)$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\trf(\omega)$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\atf(\omega)$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Durchlaßbereich
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\sigma$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\mtab{\frac{1}{\sqrt{1+\sigma^{2}}}}$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $10\log\left(1+\sigma^{2}\right)$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true" bottomline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Sperrbereich
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\infty$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\infty$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\infty$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 </lyxtabular>
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
  alle konventionellen Standard-Filter den idealen Tiefpaß (zumindest stückweise)
  approximieren.
  Es wird deshalb für den Durchlaßbereich das Intervall 
 \begin_inset Formula $0\leq\omega\leq\omega_{g}$
-\end_inset 
+\end_inset
 
  angenommen
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
  
 \begin_inset Formula $\omega_{g}=1$
-\end_inset 
+\end_inset
 
  gesetzt wird.
-\end_inset 
+\end_layout
+
+\end_inset
 
 , für den Sperrbereich 
 \begin_inset Formula $\omega_{s}\leq\omega<\infty$
-\end_inset 
+\end_inset
 
 .
- Man erhält damit ein Tiefpaß-Toleranzschema nach Abbildung\SpecialChar ~
+ Man erhält damit ein Tiefpaß-Toleranzschema nach Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:lp_tol_scheme}
 
-\end_inset 
+\end_inset
 
 , das außerdem eine maximale (erlaubte) Durchlaß-Dämpfung 
 \begin_inset Formula $\atf_{max}$
-\end_inset 
+\end_inset
 
  und eine minimale Sperr-Dämpfung 
 \begin_inset Formula $\atf_{min}$
-\end_inset 
+\end_inset
 
  definiert
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Gleichbedeutend mit der Forderung 
 \begin_inset Formula $\drf(\omega)\Rightarrow\infty$
-\end_inset 
+\end_inset
 
  für den Sperrbereich ist 
 \begin_inset Formula $1/\drf(\omega)\Rightarrow0$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float figure
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-\align center 
-
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename lp_tol_scheme.eps
 	display color
-	width 100text%
+	scale 80
+	keepAspectRatio
 
-\end_inset 
+\end_inset
 
 
-\layout Caption
+\end_layout
 
+\begin_layout Caption
 Tiefpaß-Toleranzfeld
 \begin_inset LatexCommand \label{fig:lp_tol_scheme}
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
  sein, daß die Extremstellen der Dämpfung sich auf der Grundlage von
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \atf(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\sigma^{2}g^{2}(\omega)\right]\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 aus den Nullstellen von 
 \begin_inset Formula $g(\omega)$
-\end_inset 
+\end_inset
 
  als auch deren Ableitung 
 \begin_inset Formula $g'(\omega)$
-\end_inset 
+\end_inset
 
  zusammensetzen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\tdiff{A(\omega)}{\omega}=\frac{10}{\ln10}\,\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
+\tdiff{A(\omega)}{\omega}=\frac{10}{\ln10}\cdot\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
 
-\end_inset 
-
-
-\layout Subsection
+\end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
 \begin_inset LatexCommand \label{sec:filter_goal_best_approx}
 
-\end_inset 
+\end_inset
 
 Bestapproximationen
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 
-\noun on 
-P.\SpecialChar ~
+\noun on
+P.\InsetSpace ~
 L.
  Tschebyscheff
-\noun default 
- hat im 19.\SpecialChar ~
+\noun default
+ hat im 19.\InsetSpace ~
 Jahrhundert mit dem nach ihm benannten 
-\emph on 
+\emph on
 Alternantensatz
-\emph default 
- die grundlegende Bedingung für eine Bestapproximation gefunden\SpecialChar ~
+\emph default
+ die grundlegende Bedingung für eine Bestapproximation gefunden\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Chebyshev:1899,Meinardus:1964,Koerner:1988}
 
-\end_inset 
+\end_inset
 
 .
  In kurzer Form ist der Inhalt folgender:
-\layout Quote
+\end_layout
 
+\begin_layout Quote
 Eine Bestapproximation
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Im Sinne der Bestimmung von 
 \begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
-\end_inset 
+\end_inset
 
 , wenn 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  die Dimension des durch 
 \begin_inset Formula $g_{n}(x)$
-\end_inset 
+\end_inset
 
  aufgespannten Raumes ist.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $g_{n}(x;c_{n},c_{n-1},\ldots,c_{2},c_{1})$
-\end_inset 
+\end_inset
 
  der Funktion 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
  im Intervall 
 \begin_inset Formula $[a,b]$
-\end_inset 
+\end_inset
 
  durch eine Funktion geringster Abweichung 
 \begin_inset Formula $g(x)$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  eine Näherung für die folgende 
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 -Norm gilt:
-\layout Quotation
+\end_layout
 
-
+\begin_layout Quotation
 \begin_inset Formula \begin{equation}
-\left\Vert f-g_{n}\right\Vert _{\infty}=\sup\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\min\label{eq:approx_cheby_goal}\end{equation}
+\left\Vert f-g_{n}\right\Vert _{\infty}=\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\mbox{Min.}\label{eq:approx_cheby_goal}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Quote
+\end_layout
 
+\begin_layout Quote
 ist dadurch gekennzeichnet, daß die Fehlerfunktion 
 \begin_inset Formula $\varepsilon(x)=f(x)-g_{n}(x)$
-\end_inset 
+\end_inset
 
  an 
 \begin_inset Formula $n+1$
-\end_inset 
+\end_inset
 
  verschiedenen Punkten 
 \begin_inset Formula $x_{\nu}$
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\nu=0,1,\ldots,n)$
-\end_inset 
+\end_inset
 
  alternierend den Wert 
 \begin_inset Formula $\pm\varepsilon$
-\end_inset 
+\end_inset
 
  annimmt.
  Dabei muß der Punkt 
 \begin_inset Formula $x_{0}$
-\end_inset 
+\end_inset
 
  genau auf den Intervallanfang 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $x_{n}$
-\end_inset 
+\end_inset
 
  auf den Endpunkt 
 \begin_inset Formula $b$
-\end_inset 
+\end_inset
 
  fallen.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 In der Filtertheorie ist die (gesuchte) Funktion 
 \begin_inset Formula $g_{n}$
-\end_inset 
+\end_inset
 
  geringster Abweichung
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Weitere Normen und Fehlermaße sowie die Beziehung zwischen Fehlern im Frequenz-
  und Zeitbereich faßt 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset LatexCommand \cite{Gumowski:1958}
 
-\end_inset 
+\end_inset
 
  zusammen.
-\end_inset 
+\end_layout
+
+\end_inset
 
  meist die Drosselung 
 \begin_inset Formula $\drf(\omega)$
-\end_inset 
+\end_inset
 
 .
  Die zu approximierende Funktion 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
  kann als Drosselung des (fast) idealen Tiefpaß verstanden werden.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 f(\omega)=\left\{ \begin{array}{ll}
 0 & \quad(0\leq\omega\leq\omega_{g})\\
 \infty & \quad(\omega_{s}\leq\omega<\infty)\end{array}\right.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
  daß jeder Typ die Zielfunktion 
 \begin_inset Formula $f(\omega)$
-\end_inset 
+\end_inset
 
  in anderen Frequenzbereichen approximiert.
  Abgesehen davon ist jede dieser Bestapproximationen, welche ja als Zielgröße
  
 \begin_inset Formula $\drf(\omega)$
-\end_inset 
+\end_inset
 
  verwenden, auch eine in Bezug auf 
 \begin_inset Formula $\trf(\omega)$
-\end_inset 
+\end_inset
 
 .
- Der Grund ist in Ausgangsgleichung\SpecialChar ~
+ Der Grund ist in Ausgangsgleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:approx_discrimination}
 
-\end_inset 
+\end_inset
 
  zu finden, welche nur eine direkte Abhängigkeit 
 \begin_inset Formula $\trf(\drf)$
-\end_inset 
+\end_inset
 
  und keine weitere von 
 \begin_inset Formula $\omega$
-\end_inset 
+\end_inset
 
  enthält.
  Aus diesem Grund unterscheiden sich zwar die Fehlerfunktion 
 \begin_inset Formula $\varepsilon(\omega)$
-\end_inset 
+\end_inset
 
  im Wert, nicht aber im alternierenden Verhalten.
-\layout Standard
+\end_layout
 
-Geht man nun von einer Bestapproximation (wie in Abbildung\SpecialChar ~
+\begin_layout Standard
+Geht man nun von einer Bestapproximation (wie in Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:lp_tol_scheme}
 
-\end_inset 
+\end_inset
 
  getan) aus, dann kann man den Frequenz-Eckwerten 
 \begin_inset Formula $\omega_{g}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\omega_{s}$
-\end_inset 
+\end_inset
 
 , da es sich um die Randpunkte handelt, die Dämpfungswerte 
 \begin_inset Formula $\atf_{min}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\atf_{max}$
-\end_inset 
+\end_inset
 
  zuordnen.
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{2}
 \atf_{min} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{max} & =10\log[1+\drf^{2}(\omega_{g})]\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Umgekehrt kann man aus vorgegebenen Dämpfungswerten den Skalierungsfaktor
  
 \begin_inset Formula $\sigma$
-\end_inset 
+\end_inset
 
  bestimmen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \sigma=\frac{\sqrt{10^{\atf_{min}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{max}/10}-1}}{\drf(\omega_{g})}\]
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

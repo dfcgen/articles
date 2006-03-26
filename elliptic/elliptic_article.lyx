@@ -1,252 +1,237 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartams
 \begin_preamble
 \input{text-inc.tex}
-\input{pdf-inc.tex}
 \input{math-inc.tex}
 \input{electr-inc.tex}
+\input{pdf-inc.tex}
+\input{html-inc.tex}
 \end_preamble
 \options reqno
 \language german
 \inputencoding latin1
-\fontscheme times
-\graphics dvips
-\float_placement !hbtp
+\fontscheme palatino
+\graphics default
 \paperfontsize default
-\spacing onehalf 
+\spacing onehalf
 \papersize a4paper
-\paperpackage widemarginsa4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
-\papersides 2
+\papersides 1
 \paperpagestyle headings
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
+\begin_layout Standard
+Version: $Id: elliptic_article.lyx,v 1.11 2006-03-26 12:42:09 ralf Exp $
+\end_layout
 
-\layout Standard
-
-Version: $Id: elliptic_article.lyx,v 1.10 2006-01-21 19:37:30 ralf Exp $
-\layout Standard
-
+\begin_layout Standard
 Compatible with article document classes 
-\emph on 
+\emph on
 ams 
-\emph default 
+\emph default
 and 
-\emph on 
+\emph on
 koma-script w/ amsmath, amsthm
-\emph default 
+\emph default
  (my own LyX extension)
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Open
+status inlined
 
-\layout Standard
-%% PDF Setup (see file "preferences" in 
-\backslash 
-LyX Dir)
-\newline 
-%%
-\newline 
-%% dvips -Z -G0 -Ppdf
-\newline 
-%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.3 -dSubsetFonts=true -dEmbedAllFonts=true
-\newline 
+\begin_layout Standard
 
-\newline 
 
-\backslash 
+\backslash
 begin{latexonly}
-\newline 
-    
-\backslash 
-hypersetup{
-\newline 
-        pdfauthor = {
-\backslash 
-textcopyright ~ Ralf Hoppe},
-\newline 
-        pdftitle = {Elliptische Integrale und Funktionen nach Jacobi},
-\newline 
-        pdfsubject = {Elliptische Funktionen},
-\newline 
-        pdfkeywords = {Jacobi, Landen, AGM, Elliptisches Integral, Elliptische Funktionen, Modultransformation, sn, cn, dn}
-\newline 
-    }
-\newline 
+\end_layout
 
-\backslash 
+\begin_layout Standard
+
+  
+\backslash
+pdfsubj{Elliptische Integrale und Funktionen nach Jacobi}{Elliptische Funktionen
+}{Jacobi, Landen, AGM, Elliptisches Integral, Elliptische Funktionen, Modultrans
+formation, sn, cn, dn}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
 end{latexonly}
-\layout Standard
+\end_layout
 
-\end_inset 
-
-
-\layout Standard
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
-status Open
+status inlined
 
-\layout Standard
-%% HTML Setup
-\layout Standard
-
-\backslash 
-begin{htmlonly}
-\newline 
-    
-\backslash 
-originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="robots" CONTENT="index, follow">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="description" LANG ="de" CONTENT="Elliptische Integrale und Funktionen nach Jacobi">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Jacobi, Landen, AGM, Elliptisches Integral, Elliptische Funktionen, Modultransformation, sn, cn, dn">}
-\newline 
-    
-\backslash 
-germanTeX
-\newline 
-
-\newline 
-    
-\backslash 
-renewcommand{
-\backslash 
-qedsymbol}{
-\backslash 
-Box}
-\newline 
-
-\newline 
-    
-\backslash 
-renewenvironment{algorithm}[1][htbp] 
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
-\backslash 
-end{rawhtml} }
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <br> <hr> <br> <br> 
-\backslash 
-end{rawhtml} }
-\newline 
-
-\newline 
-
-\backslash 
-end{htmlonly}
-\end_inset 
+\begin_layout Standard
 
 
-\layout Title
+\backslash
+htmlsubj{Elliptische Integrale und Funktionen nach Jacobi}{Jacobi, Landen,
+ AGM, Elliptisches Integral, Elliptische Funktionen, Modultransformation,
+ sn, cn, dn}
+\end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
 Elliptische Integrale und Funktionen nach 
-\noun on 
+\noun on
 Jacobi
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
+
 %% Jacobi portrait
-\layout Standard
+\end_layout
 
-\backslash 
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
 begin{rawhtml}
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
 <hr>
-\layout Standard
-<p align=center> Diese Seiten sind optimiert f&uuml;r Mozilla/Netscape<sup>&reg;</sup> und verwandte Browser <br> </p>
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+<p align=center> Diese Seiten sind optimiert f&uuml;r Mozilla/Netscape<sup>&reg;
+</sup> und verwandte Browser <br> </p>
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
 <hr> <p align=center> Carl Gustav Jacob Jacobi <br> <br>
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
 <img align="top" src="jacobi.jpg" alt="Portr&auml;t"> </p>
-\layout Standard
+\end_layout
 
-\backslash 
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
 end{rawhtml}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \tableofcontents{}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{elliptic.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{zolotarev.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \bibtex[geralpha]{adsp,computers,math}
+
+\end_inset
 
 
-\begin_inset LatexCommand \BibTeX[geralpha]{adsp,computers,math}
+\end_layout
 
-\end_inset 
-
-
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset LatexCommand \printindex{}
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

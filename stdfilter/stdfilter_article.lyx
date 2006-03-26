@@ -1,11 +1,14 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
-\textclass scrartcl
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass scrbook
 \begin_preamble
 \input{text-inc}
 \input{math-inc}
 \input{electr-inc}
 \input{pdf-inc}
+\input{html-inc}
 
 %% \usepackage{showlabels}
 %% \usepackage{showidx}
@@ -17,271 +20,270 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement hbtp
 \paperfontsize default
-\spacing onehalf 
+\spacing onehalf
 \papersize a4paper
-\paperpackage widemarginsa4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 4
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
+\begin_layout Standard
+Version: $Id: stdfilter_article.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+\end_layout
 
-\layout Standard
-
-Version: $Id: stdfilter_article.lyx,v 1.8 2006-02-25 20:55:21 ralf Exp $
-\layout Standard
-
+\begin_layout Standard
 Normally this file is provided for HTML conversion only.
  If used for PDF generation there will be some unresolved references to
  labels defined in the elliptic integrals/functions chapters (elliptic.lyx,
  zolotarev.lyx, cheby.lyx).
  These parts are not included here, but referenced by external labels (see
  
-\backslash 
+\backslash
 externallables commands in ERT below).
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status inlined
 
-\layout Standard
+\begin_layout Standard
+
 %% HTML setup
-\layout Standard
+\end_layout
 
-\backslash 
-begin{htmlonly}
-\newline 
+\begin_layout Standard
 
-\newline 
-    
-\backslash 
+\end_layout
+
+\begin_layout Standard
+
+  
+\backslash
 externallabels{../elliptic}{../elliptic/html/labels.pl}
-\newline 
-    
-\backslash 
+\end_layout
+
+\begin_layout Standard
+
+  
+\backslash
 externallabels{../cheby}{../cheby/html/labels.pl}
-\newline 
-    
-\backslash 
+\end_layout
+
+\begin_layout Standard
+
+  
+\backslash
 externallabels{../analysis}{../analysis/html/labels.pl}
-\newline 
+\end_layout
 
-\newline 
-    
-\backslash 
-originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="robots" CONTENT="index, follow">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="description" LANG ="de" CONTENT="Algebra - Strukturen">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Tschebyscheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische">}
-\newline 
-    
-\backslash 
-germanTeX
-\newline 
+\begin_layout Standard
 
-\newline 
+\end_layout
+
+\begin_layout Standard
+
     
-\backslash 
-renewcommand{
-\backslash 
-qedsymbol}{
-\backslash 
-Box}
-\newline 
+\backslash
+htmlsubj{Algebra - Strukturen}{Tschebyscheff, Cauer, Bessel, Butterworth,
+ Filter, Tiefpass, Approximation, Elliptische}
+\end_layout
 
-\newline 
-    
-\backslash 
-renewenvironment{algorithm}[1][htbp] 
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
-\backslash 
-end{rawhtml} }
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <br> <hr> <br> <br> 
-\backslash 
-end{rawhtml} }
-\newline 
-
-\newline 
-
-\backslash 
-end{htmlonly}
-\end_inset 
+\end_inset
 
 
-\layout Title
+\end_layout
 
+\begin_layout Title
 Konventionelle Filter
-\newline 
+\newline
 
-\size normal 
+\size normal
 und ihre Approximationsfunktionen
-\layout Author
+\end_layout
 
+\begin_layout Author
 Copyright 
 \begin_inset ERT
-status Collapsed
+status inlined
 
-\layout Standard
-
-\backslash 
-copyright
-\end_inset 
-
-\SpecialChar ~
-Ralf Hoppe
-\layout Standard
+\begin_layout Standard
 
 
+\backslash
+textcopyright
+\backslash
+  
+\backslash
+number
+\backslash
+year
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ Ralf Hoppe
+\end_layout
+
+\begin_layout Standard
 \begin_inset LatexCommand \tableofcontents{}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Tiefpaﬂfilter
+\end_layout
+
+\begin_layout Standard
 \begin_inset Include \include{ltisys.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{goal.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{butterworth.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{cheby1.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{cheby2.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{cauer.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{bessel.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Section
-\start_of_appendix 
+\end_layout
 
-\noun on 
-Fourier
-\noun default 
--Transformation
-\layout Standard
+\begin_layout Chapter
+\start_of_appendix
+Tabellen
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{tables.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Section
+\end_layout
 
+\begin_layout Chapter
 Notation
-\layout Standard
-\align center 
+\end_layout
 
+\begin_layout Standard
+\align center
 \begin_inset Include \include{notation.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \bibtex[geralpha]{adsp,computers,crypto,math}
+
+\end_inset
 
 
-\begin_inset LatexCommand \BibTeX[geralpha]{adsp,computers,crypto,math}
+\end_layout
 
-\end_inset 
-
-
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset LatexCommand \printindex{}
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

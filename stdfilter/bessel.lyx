@@ -1,18 +1,19 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing single 
-\papersize Default
-\paperpackage a4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \leftmargin 2cm
 \rightmargin 2cm
@@ -21,513 +22,553 @@
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Version: $Id: bessel.lyx,v 1.8 2006-03-26 12:39:51 ralf Exp $
+\end_layout
+
+\end_inset
 
 
-\begin_inset Note
-collapsed false
+\end_layout
 
-\layout Standard
-
-Version: $Id: bessel.lyx,v 1.7 2006-02-25 13:51:48 ralf Exp $
-\end_inset 
-
-
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Bessel-Tiefpaß@\noun{Bessel}-Tiefpaß|(}
 
-\end_inset 
+\end_inset
 
 
-\layout Section
+\end_layout
 
+\begin_layout Section
 
-\series bold 
+\series bold
 Bessel-Tiefpaß
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Der 
-\noun on 
+\noun on
 Bessel
-\noun default 
+\noun default
 -Tiefpaß
 \begin_inset LatexCommand \index{Tiefpaß!Bessel@\noun{Bessel}-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Filter!Bessel@\noun{Bessel}-}
 
-\end_inset 
+\end_inset
 
  ist vom Syntheseansatz her kein Filter mit dem Ziel der Selektion von Frequenza
 nteilen (wie die vorangegangen Filter), sondern eher als verzerrungsarmes
  Übertragungssystem zu verstehen.
  Approximiert wird dabei die Übertragungsfunktion 
 \begin_inset Formula $\trf(\lps)$
-\end_inset 
+\end_inset
 
  eines idealen LTI-Systems
 \begin_inset LatexCommand \index{LTI-System!verzerrungsfreies}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  dessen linearer Phasengang.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\dirac(t-t_{0})\;\lpt\;\trf(\lps)=\expf^{-\lps\, t_{0}}\;\Rightarrow\;\expf^{-\ji\omega\, t_{0}}\]
+\dirac(t-t_{0})\lpt\trf(\lps)=\expf^{-\lps\, t_{0}}\;\Rightarrow\;\expf^{-\ji\omega\, t_{0}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Verzögerungszeit 
 \begin_inset Formula $t_{0}$
-\end_inset 
+\end_inset
 
  ignorierend konzentrieren wir uns zuerst auf die Darstellungsmöglichkeiten
  der Exponentialfunktion 
 \begin_inset Formula $\expf^{x}$
-\end_inset 
+\end_inset
 
  durch Hyperbelfunktionen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \expf^{x}=\sinh x+\cosh x\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 und deren Reihenentwicklungen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \coth x=\frac{\cosh x}{\sinh x}=\frac{\mbig{1+\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\frac{x^{6}}{6!}+\cdots}}{\mbig{x+\frac{x^{3}}{3}+\frac{x^{5}}{5!}+\frac{x^{7}}{7!}+\cdots}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Bricht man die Reihen für 
 \begin_inset Formula $\sinh x$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\cosh x$
-\end_inset 
+\end_inset
 
  nun einfach nach einer beschränkten Anzahl von Gliedern ab, dann
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 wird wahrscheinlich das Konvergenzverhalten, insbesondere für Werte 
 \begin_inset Formula $x>1$
-\end_inset 
+\end_inset
 
 , unbefriedigend
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 und die Näherung für 
 \begin_inset Formula $\expf^{x}$
-\end_inset 
+\end_inset
 
  unter Umständen kein 
-\noun on 
+\noun on
 Hurwitz
-\noun default 
+\noun default
 -Polynom
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ein Polynom, dessen Wurzeln allesamt einen negativen Realteil besitzen.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
 \begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
 
-\end_inset 
+\end_inset
 
  (als Bedingung für stabile Systeme) sein.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Besser ist an dieser Stelle eine Kettenbruchentwicklung -- mit den vorteilhaften
  Eigenschaften:
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 daß der wahre Wert mit wachsender Anzahl von Gliedern (abwechselnd von oben
  und unten) immer genauer genähert wird
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 und (wie noch zu sehen sein wird) der Kettenbruch eine zulässige Systemfunktion
  repräsentiert.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Durch eigene Rechnung oder Verwendung eines geeigneten Nachschlagewerks
  erhält man aus der Reihenentwicklung den folgenden Kettenbruch des hyperbolisch
 en Cotangens:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 begin{htmlonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \coth x=\frac{1}{x}+\frac{1}{\mbig{\frac{3}{x}+\frac{1}{\frac{5}{x}+\frac{1}{\frac{7}{x}+\cdots}}}}\msp.\label{eq:filter_bessel_cfrac}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 end{htmlonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
+\begin_layout Standard
 Latex2html cannot convert 
-\backslash 
+\backslash
 cfrac properly, but 
-\backslash 
+\backslash
 cfrac from AMS is better style!
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 begin{latexonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \coth x=\cfrac{1}{x}+\cfrac{1}{\cfrac{3}{x}+\cfrac{1}{\cfrac{5}{x}+\cfrac{1}{\cfrac[r]{7}{x}+\cdots}}}\msp.\label{eq:filter_bessel_cfrac}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 end{latexonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Bricht man diese Entwicklung nach 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Schritten ab, so kann man daraus eine rationalen Bruch 
 \begin_inset Formula $\coth x\approx P_{n}/Q_{n}$
-\end_inset 
+\end_inset
 
  bestimmen.
  Durch vollständige Induktion
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Gleichfalls zum Ziel führt die Anwendung der allgemeinen Formeln für Kettenbrüch
 e.
-\end_inset 
+\end_layout
+
+\end_inset
 
  kann verifiziert werden, daß Zähler und Nenner den Rekursionsformeln
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{3}
 P_{n} & =(2n-1)P_{n-1}+x^{2}P_{n-2} & P_{0} & =1 & P_{-1} & =0\\
 Q_{n} & =(2n-1)Q_{n-1}+x^{2}Q_{n-2} & Q_{0} & =0 & Q_{-1} & =\frac{1}{x}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 gehorchen.
  Berücksichtigt man die Anfangswerte 
 \begin_inset Formula $P_{0}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $Q_{0}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $P_{-1}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $Q_{-1}$
-\end_inset 
+\end_inset
 
 , dann lassen die Formeln sofort erkennen, daß das Zählerpolynom 
 \begin_inset Formula $P_{n}$
-\end_inset 
+\end_inset
 
  nur gerade Potenzen von 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  enthält, das Nennerpolynom 
 \begin_inset Formula $Q_{n}$
-\end_inset 
+\end_inset
 
  dagegen alle Ungeraden.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Kommen wir nun zurück zur Approximation von 
 \begin_inset Formula $\expf^{x}$
-\end_inset 
+\end_inset
 
  und interpretieren 
 \begin_inset Formula $P_{n}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $Q_{n}$
-\end_inset 
+\end_inset
 
  als Näherung für Zähler und Nenner in
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \coth x=\frac{\cosh x}{\sinh x}\approx\frac{P_{n}}{Q_{n}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 und in Konsequenz als Summenterme in der Exponentialfunktion
-\begin_inset LatexCommand \index{Exponentialfunktion!Näherung der}
+\begin_inset LatexCommand \index{Exponentialfunktion}
 
-\end_inset 
-
-
-\layout Standard
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula \[
 \expf^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Summe (und gleichzeitig Berechnungsvorschrift auf der rechten Seite)
  nennt man 
-\noun on 
+\noun on
 Bessel
-\noun default 
+\noun default
 -Polynom
 \begin_inset LatexCommand \index{Bessel-Polynom@\noun{Bessel}-Polynom}
 
-\end_inset 
+\end_inset
 
  vom Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 .
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat}{3}
 \textrm{B}_{n}(x) & =(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x)\msp, & \textrm{B}_{0}(x) & =1\msp, & \textrm{B}_{-1}(x) & =\frac{1}{x}\end{xalignat}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die ersten 
-\noun on 
+\noun on
 Bessel
-\noun default 
+\noun default
 -Polynome sind demzufolge
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 \textrm{B}_{1}(x) & =x+1\\
 \textrm{B}_{2}(x) & =x^{2}+3x+3\\
 \textrm{B}_{3}(x) & =x^{3}+6x^{2}+15x+15\\
 \textrm{B}_{4}(x) & =x^{4}+10x^{3}+45x^{2}+105x+105\msp.\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Mit der so gewonnen Näherung für 
 \begin_inset Formula $\expf^{x}$
-\end_inset 
+\end_inset
 
  kann man als Übertragungsfunktion des verzerrungsarmen Systems
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \trf(\lps)=\frac{b_{0}}{\textrm{B}_{n}(\lps)}=\frac{b_{0}}{\poly{b}{\lps}{n}}\label{eq:filter_bessel_laplace}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 angeben, wobei 
 \begin_inset Formula $b_{0}$
-\end_inset 
+\end_inset
 
  nur zum Zwecke der Normierung auf 
 \begin_inset Formula $\trf(0)=1$
-\end_inset 
+\end_inset
 
  hinzugefügt wurde.
  Da in der Kettenbruchentwicklung des Quotienten 
 \begin_inset Formula $P_{n}/Q_{n}$
-\end_inset 
+\end_inset
 
- nach Formel\SpecialChar ~
+ nach Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:filter_bessel_cfrac}
 
-\end_inset 
+\end_inset
 
  alle linksseitigen Summanden 
 \begin_inset Formula $(2n-1)/\lps$
-\end_inset 
+\end_inset
 
  positive Koeffizienten (
 \begin_inset Formula $2n-1$
-\end_inset 
+\end_inset
 
 ) haben, handelt es sich bei 
 \begin_inset Formula $\textrm{B}_{n}(\lps)$
-\end_inset 
+\end_inset
 
  wirklich um ein 
-\noun on 
+\noun on
 Hurwitz
-\noun default 
+\noun default
 -Polynom
 \begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
 
-\end_inset 
+\end_inset
 
-\SpecialChar ~
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[3.1.3]{Fritzsche:1979b}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-Einen typischen Frequenzgang nach Gleichung\SpecialChar ~
+\begin_layout Standard
+Einen typischen Frequenzgang nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:filter_bessel_laplace}
 
-\end_inset 
+\end_inset
 
- zeigt Abbildung\SpecialChar ~
+ zeigt Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:filter_bessel_response}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float figure
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Graphics
 	filename bessel_amplitude.eps
 	keepAspectRatio
 	subcaption
 	subcaptionText "Amplitudengang"
 
-\end_inset 
+\end_inset
 
 
-\hfill 
+\hfill
 
 \begin_inset Graphics
 	filename bessel_phase.eps
@@ -535,34 +576,39 @@ collapsed false
 	subcaption
 	subcaptionText "Phasengang"
 
-\end_inset 
+\end_inset
 
 
-\layout Caption
+\end_layout
 
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{fig:filter_bessel_response}
 
-\end_inset 
+\end_inset
 
 Typischer Frequenzgang eines 
-\noun on 
+\noun on
 Bessel
-\noun default 
+\noun default
 -Filters (
 \begin_inset Formula $n=4$
-\end_inset 
+\end_inset
 
 )
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Bessel-Tiefpaß@\noun{Bessel}-Tiefpaß|)}
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

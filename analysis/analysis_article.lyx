@@ -1,330 +1,289 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartcl
 \begin_preamble
-\usepackage{html}
-
 \input{text-inc.tex}
-\input{pdf-inc.tex}
 \input{math-inc.tex}
 \input{electr-inc.tex}
+\input{pdf-inc.tex}
+\input{html-inc.tex}
 \end_preamble
 \options reqno
 \language german
 \inputencoding latin1
-\fontscheme times
-\graphics dvips
-\float_placement !hbtp
+\fontscheme palatino
+\graphics default
 \paperfontsize default
-\spacing onehalf 
+\spacing onehalf
 \papersize a4paper
-\paperpackage a4wide
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 2
 \paperpagestyle headings
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
+\begin_layout Standard
+$Id: analysis_article.lyx,v 1.8 2006-03-26 12:44:11 ralf Exp $
+\end_layout
 
-\layout Standard
-
-$Id: analysis_article.lyx,v 1.7 2006-01-21 17:35:10 ralf Exp $
-\layout Itemize
-
+\begin_layout Itemize
 Wrapper file for 
-\emph on 
+\emph on
 analysis.lyx
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 Compatible with article document classes 
-\emph on 
+\emph on
 latex
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 ams
-\emph default 
+\emph default
 ,
-\emph on 
+\emph on
  koma-script
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 svjour
-\emph default 
+\emph default
  (
-\emph on 
+\emph on
 Springer
-\emph default 
+\emph default
 )
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 Needs the following packages: 
-\emph on 
+\emph on
 pifont
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 txfonts
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 trfsigns
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 amsopn
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 amsfonts
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 algorithm
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 algorithmic
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 newclude
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 html
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 ifthen
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 babel
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 bibgerm
-\emph default 
+\emph default
 , 
-\emph on 
+\emph on
 varioref
-\emph default 
+\emph default
 , \SpecialChar \ldots{}
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status inlined
 
-\layout Standard
-%% PDF Setup (see file "preferences" in 
-\backslash 
-LyX Dir)
-\newline 
-%%
-\newline 
-%% dvips -Z -G0 -Ppdf
-\newline 
-%% ps2pdf -dMaxSubsetPct=100 -dCompatibilityLevel=1.3 -dSubsetFonts=true -dEmbedAllFonts=true
-\newline 
+\begin_layout Standard
 
-\newline 
 
-\backslash 
+\backslash
+htmlsubj{Grundlagen der Funktionentheorie}{Mathematik, Analysis, Funktionentheor
+ie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
 begin{latexonly}
-\newline 
-    
-\backslash 
-hypersetup{
-\newline 
-        pdfauthor = {
-\backslash 
-textcopyright ~ Ralf Hoppe},
-\newline 
-        pdftitle = {Funktionentheorie - Analytische Funktionen},
-\newline 
-        pdfsubject = {Funktionentheorie},
-\newline 
-        pdfkeywords = {Funktionentheorie}
-\newline 
-    }
-\newline 
+\end_layout
 
-\backslash 
+\begin_layout Standard
+
+  
+\backslash
+pdfsubj{Funktionentheorie - Analytische Funktionen}{Grundlagen der Funktionenthe
+orie}{Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor,
+ Liouville, Jordan, Residuen}
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
 end{latexonly}
-\layout Standard
+\end_layout
 
-\end_inset 
-
-
-\layout Standard
+\end_inset
 
 
-\begin_inset ERT
-status Collapsed
+\end_layout
 
-\layout Standard
-%% HTML Setup
-\layout Standard
-
-\backslash 
-begin{htmlonly}
-\newline 
-    
-\backslash 
-originalTeX %% Needed because "> in htmlmeta produces french guillemets in german
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="robots" CONTENT="index, follow">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="author" CONTENT="Ralf Hoppe">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="description" LANG ="de" CONTENT="Grundlagen der Funktionentheorie">}
-\newline 
-    
-\backslash 
-htmlmeta{<META NAME="keywords" LANG ="de" CONTENT="Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen">}
-\newline 
-    
-\backslash 
-germanTeX
-\newline 
-
-\newline 
-    
-\backslash 
-renewenvironment{algorithm}[1][htbp] 
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <hr> <em> Algorithmus </em> <hr> 
-\backslash 
-end{rawhtml} }
-\newline 
-    { 
-\backslash 
-begin{rawhtml} <br> <hr> <br> <br> 
-\backslash 
-end{rawhtml} }
-\newline 
-
-\newline 
-
-\backslash 
-end{htmlonly}
-\end_inset 
-
-
-\layout Title
-
+\begin_layout Title
 Funktionentheorie -- Analytische Funktionen
-\layout Author
+\end_layout
 
+\begin_layout Author
 Copyright 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 copyright
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 Ralf Hoppe
-\layout Abstract
-\pagebreak_bottom 
+\end_layout
+
+\begin_layout Abstract
 Das vorliegende Papier richtet sich an Studenten und Ingenieure der Elektrotechn
 ik, Signalverarbeitung oder Nachrichtentechnik, die ihr Wissen zur Funktionenthe
 orie auffrischen wollen.
  Vorausgesetzt werden dabei Grundkenntnisse der höheren Mathematik, insbesondere
  der Differential- und Integralrechnung.
- Empfehlenswert für einen tieferen Einstieg halte ich besonders\SpecialChar ~
+ Empfehlenswert für einen tieferen Einstieg halte ich besonders\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Brown:1996}
 
-\end_inset 
+\end_inset
 
 , 
 \begin_inset LatexCommand \cite{Freitag:2000}
 
-\end_inset 
+\end_inset
 
- und wegen der permanenten Anschaulichkeit\SpecialChar ~
+ und wegen der permanenten Anschaulichkeit\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Needham:1998}
 
-\end_inset 
+\end_inset
 
-, außerdem den Klassiker\SpecialChar ~
+, außerdem den Klassiker\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Whittaker:1927}
 
-\end_inset 
+\end_inset
 
- sowie die kurzen anwendungsbezogenen Einführungen in\SpecialChar ~
+ sowie die kurzen anwendungsbezogenen Einführungen in\InsetSpace ~
 
 \begin_inset LatexCommand \cite[jeweils Anhang~II]{Cauer:1954,Papoulis:1962}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 
+\newpage
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset LatexCommand \tableofcontents{}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Include \include{analysis.lyx}
 preview false
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \bibtex[geralpha]{adsp,math}
+
+\end_inset
 
 
-\begin_inset LatexCommand \BibTeX[geralpha]{adsp,math}
+\end_layout
 
-\end_inset 
-
-
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset LatexCommand \printindex{}
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

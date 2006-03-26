@@ -1,1202 +1,1260 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartams
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing single 
-\papersize Default
-\paperpackage a4
-\use_geometry 0
-\use_amsmath 0
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Version: $Id: zolotarev.lyx,v 1.7 2006-03-26 12:42:09 ralf Exp $
+\end_layout
+
+\end_inset
 
 
-\begin_inset Note
-collapsed false
+\end_layout
 
-\layout Standard
-
-Version: $Id: zolotarev.lyx,v 1.6 2006-01-21 19:40:33 ralf Exp $
-\end_inset 
-
-
-\layout Section
-
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:zolotarev}
 
-\end_inset 
+\end_inset
 
 
-\noun on 
+\noun on
 Solotareff
-\noun default 
+\noun default
 's drittes Problem
 \begin_inset LatexCommand \index{Solotareff's drittes Problem@\noun{Solotareff}'s drittes Problem}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 
-\noun on 
-E.\SpecialChar ~
+\noun on
+E.\InsetSpace ~
 I.
  Solotareff 
-\noun default 
-hat sich in\SpecialChar ~
+\noun default
+hat sich in\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Zolotarev:1932}
 
-\end_inset 
+\end_inset
 
  mit mehreren praktischen Problemen der gleichm‰ﬂigen 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 -Approximation
 \begin_inset LatexCommand \index{Approximation!gleichm"a{\ss}ige}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Approximation}
 
-\end_inset 
+\end_inset
 
  auseinandergesetzt, von denen insbesondere das dritte Problem hier von
  Interesse sei
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
-Kurze Darstellungen sind auch in\SpecialChar ~
+\begin_layout Standard
+Kurze Darstellungen sind auch in\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Todd:1983}
 
-\end_inset 
+\end_inset
 
 , 
 \begin_inset LatexCommand \cite[II]{Achieser:1967}
 
-\end_inset 
+\end_inset
 
  und 
 \begin_inset LatexCommand \cite[\S\,50]{Achieser:1970}
 
-\end_inset 
+\end_inset
 
- sowie\SpecialChar ~
+ sowie\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Piloty:1954}
 
-\end_inset 
+\end_inset
 
  zu finden.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
- Es widmet sich der Suche nach einer gebrochen-rationalen Funktion
-\begin_inset LatexCommand \index{Funktion!gebrochen-rationale}
+ Es widmet sich der Suche nach einer gebrochen rationalen Funktion
+\begin_inset LatexCommand \index{Funktion!gebrochen rationale}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $f(x)=U(x)/V(x)$
-\end_inset 
+\end_inset
 
 , welche im Intervall 
 \begin_inset Formula $\left|x\right|\leq\sqrt{k}$
-\end_inset 
+\end_inset
 
  am wenigsten von Null abweicht (mit 
 \begin_inset Formula $0<k<1$
-\end_inset 
+\end_inset
 
 ), dagegen f¸r 
 \begin_inset Formula $\left|x\right|\geq1/\sqrt{k}$
-\end_inset 
+\end_inset
 
  am st‰rksten von Null verschieden ist.
  Dabei sollen 
 \begin_inset Formula $U(x)$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $V(x)$
-\end_inset 
+\end_inset
 
  algebraische Polynome der Form 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align}
 U(x) & =\sum_{\upsilon=0}^{n}c_{\upsilon}x^{\upsilon}=\poly{c}{x}{n}\label{eq:zolotar_poly_start}\\
 V(x) & =\sum_{\mu=0}^{m}d_{\mu}x^{\mu}=\poly{d}{x}{m}\nonumber \end{align}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 sein, deren Koeffizienten 
 \begin_inset Formula $c_{\upsilon}$
-\end_inset 
+\end_inset
 
 und 
 \begin_inset Formula $d_{\mu}$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Nullstellen der Linearfaktordarstellung entsprechend der Zielvorgabe (f¸r
  die Fehlerfunktion, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Toleranzschema in Abbildung\SpecialChar ~
+\end_inset
+
+ Toleranzschema in Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:zolotar_tol}
 
-\end_inset 
+\end_inset
 
 )
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \left.\begin{array}{l}
 \max\limits _{\left|x\right|\leq\sqrt{k}}f(x)\\
 \max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}\end{array}\right\} \Rightarrow\textrm{Min.}\label{eq:zolotar_goal}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 bestimmt werden.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float figure
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-\align center 
-
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename zolotarev_problem3.eps
 
-\end_inset 
+\end_inset
 
 
-\layout Caption
+\end_layout
 
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{fig:zolotar_tol}
 
-\end_inset 
+\end_inset
 
 Toleranzschema f¸r 
 \begin_inset Formula $\left|f(x)\right|$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 
-\noun on 
+\noun on
 Solotareff
-\noun default 
+\noun default
  hat nun aus Symmetrieeigenschaften sowie der Bedingung
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 f(x)\, f\left(\frac{1}{x}\right)=1\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 die folgende Form von 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
- geschluﬂfolgert\SpecialChar ~
+ geschluﬂfolgert\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Todd:1983}
 
-\end_inset 
+\end_inset
 
 :
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 f(x)\sim\prod\frac{b_{\upsilon}^{2}-x^{2}}{1-b_{\upsilon}^{2}x^{2}}\label{eq:zolotar_rational_base}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Lˆsung dieser Approximationsaufgabe 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
 
- der nach\SpecialChar ~
+\end_inset
+
+ der nach\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_goal}
 
-\end_inset 
+\end_inset
 
  beruht auf 
-\noun on 
+\noun on
 Jacobi
-\noun default 
+\noun default
 'schen elliptischen Funktionen in Verbindung mit der ersten elliptischen
  Haupttransformation.
  Um den speziellen Intervallgrenzen in 
-\noun on 
+\noun on
 Zolotareff
-\noun default 
+\noun default
 's drittem Problem Rechnung zu tragen, m¸ssen die Achsen allerdings noch
  passend skaliert werden.
- Dazu setzt man in den rationalen Transformationsbeziehungen\SpecialChar ~
+ Dazu setzt man in den rationalen Transformationsbeziehungen\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_poly}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 x & \Rightarrow\frac{x}{\sqrt{k}} & y & \Rightarrow\frac{f(x)}{\sqrt{\lambda}}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 und erh‰lt
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \[
 \efunc{f}{x}{k}=\begin{cases}
-\sqrt{\frac{\lambda}{k}}\,\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ ungerade})\\
-\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})\end{cases}\]
+\sqrt{\frac{\lambda}{k}}\cdot\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & \quad(n\textrm{ ungerade})\\
+\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & \quad(n\textrm{ gerade})\end{cases}\]
 
-\end_inset 
-
-
-\layout Standard
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
 
- nach den Parameterdarstellungen\SpecialChar ~
+\end_inset
+
+ nach den Parameterdarstellungen\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_param_y}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_param_y}
 
-\end_inset 
+\end_inset
 
  der ersten elliptischen Haupttransformation:
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{2}
-x & =\sqrt{k}\,\esn{u}{k} & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\begin{cases}
+x & =\sqrt{k}\,\esn{u}{k}\msp, & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\cdot\,\begin{cases}
 \esn{u/M}{\lambda} & \quad(n\textrm{ ungerade})\\
 \ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})\end{cases}\msp.\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Verschiebung der ehemaligen Extremwerte 
 \begin_inset Formula $y=\pm1$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $y=\pm\lambda^{-1}$
-\end_inset 
+\end_inset
 
  hin zu 
 \begin_inset Formula $\pm\lambda^{1/2}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\pm\lambda^{-1/2}$
-\end_inset 
+\end_inset
 
- entspricht dem Toleranzschema nach Abbildung\SpecialChar ~
+ entspricht dem Toleranzschema nach Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:zolotar_tol}
 
-\end_inset 
+\end_inset
 
 , wenn man die Verl‰ufe der ersten elliptischen Haupttransformation in den
- zugehˆrigen Abbildungen\SpecialChar ~
+ zugehˆrigen Abbildungen\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:elltr1_odd_function}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:elltr1_even_function}
 
-\end_inset 
+\end_inset
 
  betrachtet.
-\layout Standard
+\end_layout
 
-Passt man auch die Berechnungsformeln\SpecialChar ~
+\begin_layout Standard
+Passt man auch die Berechnungsformeln\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_lambda}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_lambda}
 
-\end_inset 
+\end_inset
 
  f¸r 
 \begin_inset Formula $\lambda$
-\end_inset 
+\end_inset
 
  an, dann ist auch 
 \begin_inset Formula $\varepsilon=\sqrt{\lambda}$
-\end_inset 
+\end_inset
 
  leicht zu ermitteln.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \varepsilon=\begin{cases}
 \sqrt{k}\prod\limits _{\nu=1,3,5,\ldots}^{n-2}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ ungerade})\\
 \prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ gerade})\end{cases}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ber¸cksichtigt man f¸r den Fall eines ungeraden 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
- die Gleichung\SpecialChar ~
+ die Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_lambda_coeff}
 
-\end_inset 
+\end_inset
 
  und f¸r gerades 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
- entsprechend\SpecialChar ~
+ entsprechend\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_lambda}
 
-\end_inset 
+\end_inset
 
  in der Form
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 \frac{\lambda}{kM^{2}} & =\prod_{\nu=2,4,6,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ ungerade})\\
 \lambda & =\prod_{\nu=1,3,5,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ gerade})\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 dann ergeben sich noch die folgenden Vereinfachungen:
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \efunc{f}{x}{k}=\begin{cases}
 (-1)^{\frac{n-1}{2}}x\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ ungerade})\\
 (-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})\end{cases}\label{eq:zolotar_solution}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Bez¸glich des 
-\noun on 
+\noun on
 Solotareff
-\noun default 
-'schen Ausgangspunktes nach Beziehung\SpecialChar ~
+\noun default
+'schen Ausgangspunktes nach Beziehung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_rational_base}
 
-\end_inset 
+\end_inset
 
  kann man nun die Unbestimmten 
 \begin_inset Formula $b_{\nu}$
-\end_inset 
+\end_inset
 
  angeben.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 b_{\upsilon}=\sqrt{k}\, a_{\nu}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wegen der Skalierung der x-Achse verschieben sich nat¸rlich auch alle Nullstelle
-n und Pole nach den Formeln\SpecialChar ~
+n und Pole nach den Formeln\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_poles}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_zeroes}
 
-\end_inset 
+\end_inset
 
  (
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
- ungerade) sowie\SpecialChar ~
+ ungerade) sowie\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_zeroes}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_poles}
 
-\end_inset 
+\end_inset
 
  (
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  gerade).
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{1}
 \zn{x}{\nu} & =\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}\\
 \pn{x}{\nu} & =\frac{1}{\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Die Berechnungsformeln\SpecialChar ~
+\begin_layout Standard
+Die Berechnungsformeln\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_coeffs}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_even_zeroes}
 
-\end_inset 
+\end_inset
 
  f¸r die Koeffizienten 
 \begin_inset Formula $a_{\nu}$
-\end_inset 
+\end_inset
 
  bleiben unver‰ndert bei:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 a_{\nu}=\esn{\nu\frac{K}{n}}{k}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Sie repr‰sentieren letztlich das Ergebnis der Bestapproximation.
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Der Beweis der Bestapproximation beruht auf 
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 's Alternantensatz
 \begin_inset LatexCommand \index{Tschebyscheff'sche Alternantenbedingung@\noun{Tschebyscheff}'sche Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Approximation!Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Alternantensatz}
 
-\end_inset 
+\end_inset
 
-\SpecialChar ~
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[Satz~23]{Meinardus:1964}
 
-\end_inset 
+\end_inset
 
-, welcher angewandt auf die Ausgangspolynome\SpecialChar ~
+, welcher angewandt auf die Ausgangspolynome\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_poly_start}
 
-\end_inset 
+\end_inset
 
- in kurzer Form lautet\SpecialChar ~
+ in kurzer Form lautet\InsetSpace ~
 
 \begin_inset LatexCommand \cite[\S\,6]{Meinardus:1964}
 
-\end_inset 
+\end_inset
 
 :
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Die Funktion 
 \begin_inset Formula $\efunc{f}{x}{k}=U(x)/V(x)$
-\end_inset 
+\end_inset
 
  stellt dann eine Minimallˆsung dar, wenn die absolute Fehlerfunktion
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \varepsilon(x)=\begin{cases}
-\efunc{f}{x}{k}, & \left|x\right|\leq\sqrt{k}\\
-\frac{1}{\efunc{f}{x}{k}}, & \left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}}\end{cases}\]
+\efunc{f}{x}{k} & \quad(\left|x\right|\leq\sqrt{k})\\
+\mbig{\frac{1}{\efunc{f}{x}{k}}} & \quad(\left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}})\end{cases}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 im Approximationsintervall genau 
 \begin_inset Formula $m+n+3$
-\end_inset 
+\end_inset
 
  Extremalpunkte hat
 \begin_inset Foot
-collapsed true
+status collapsed
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $n+1$
-\end_inset 
+\end_inset
 
  unbekannte Koeffizienten im Z‰hler und 
 \begin_inset Formula $m+1$
-\end_inset 
+\end_inset
 
  im Nenner, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  die Dimension ist demzufolge 
 \begin_inset Formula $m+n+2$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset LatexCommand \cite[Satz~23]{Meinardus:1964}
 
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 , an denen sie alternierend den Wert 
 \begin_inset Formula $\pm\varepsilon$
-\end_inset 
+\end_inset
 
  annimmt.
- Ber¸cksichtigt man den Polynomgrad in Z‰hler und Nenner der Lˆsungsformel\SpecialChar ~
+ Ber¸cksichtigt man den Polynomgrad in Z‰hler und Nenner der Lˆsungsformel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_solution}
 
-\end_inset 
+\end_inset
 
 , dann gilt:
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 m=\begin{cases}
 n-1 & (n\textrm{ ungerade})\\
 n & (n\textrm{ gerade})\end{cases}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Betrachtet man nun einfach die Funktionsverl‰ufe der ersten elliptischen
- Haupttransformation in den Abbildungen\SpecialChar ~
+ Haupttransformation in den Abbildungen\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:elltr1_odd_function}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:elltr1_even_function}
 
-\end_inset 
+\end_inset
 
 , dann ist zu erkennen, daﬂ 
 \begin_inset Formula $\varepsilon(x)$
-\end_inset 
+\end_inset
 
  genau 
 \begin_inset Formula $n+1$
-\end_inset 
+\end_inset
 
  Alternantenpunkte im Intervall 
 \begin_inset Formula $0\leq\left|x\right|\leq k^{1/2}$
-\end_inset 
+\end_inset
 
  und dazu nocheinmal 
 \begin_inset Formula $m+2$
-\end_inset 
+\end_inset
 
  solcher Punkte im Intervall 
 \begin_inset Formula $k^{-1/2}\leq\left|x\right|\leq\infty$
-\end_inset 
+\end_inset
 
  hat.
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Aufgrund ihrer Anzahl sowie des alternierenden Fehlers 
 \begin_inset Formula $\pm\sqrt{\lambda}$
-\end_inset 
+\end_inset
 
  an den Stellen 
 \begin_inset Formula $x=\pm\esn{\nu K/n}{k}$
-\end_inset 
+\end_inset
 
  ist die 
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 'sche Alternantenbedingung erf¸llt und die Funktion 
 \begin_inset Formula $\efunc{f}{x}{k}$
-\end_inset 
+\end_inset
 
  stellt folgerichtig eine Bestapproximation dar.
-\begin_inset Note
-collapsed false
+\begin_inset Note Note
+status open
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula \[
 \efunc{f}{x}{k}=\sqrt{\lambda}\,\esn{\frac{u}{M}}{\lambda}\]
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Formula \[
 \edn[2]{\frac{u}{M}}{\lambda}=1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}=1-\lambda\efunc[2]{f}{x}{k}=1-\varepsilon^{2}\efunc[2]{g}{x}{k}\]
 
-\end_inset 
+\end_inset
 
-Wir wollen hier einen Zugang nach\SpecialChar ~
+Wir wollen hier einen Zugang nach\InsetSpace ~
 
 \begin_inset LatexCommand \cite[\S\,39]{Achieser:1967}
 
-\end_inset 
+\end_inset
 
  verfolgen, der sich mit dem Auffinden einer rationalen Funktion 
 \begin_inset Formula $g(x)=U(x)/V(x)$
-\end_inset 
+\end_inset
 
  vom Grade 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  befaﬂt, so daﬂ der relative Fehler einer Abweichung von der Zielfunktion
 \begin_inset Formula \[
 f(x)=\frac{1}{\sqrt{1-k^{2}x}}\msp,\qquad\qquad0\leq k\leq1\]
 
-\end_inset 
+\end_inset
 
 minimiert wird.
 \begin_inset Formula \[
 \max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
 
-\end_inset 
+\end_inset
 
 Es ist erkennbar, daﬂ es sich bei dieser Aufgabenstellung um eine Bestapproximat
-ion der Konstante\SpecialChar ~
+ion der Konstante\InsetSpace ~
 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  durch die Funktion 
 \begin_inset Formula $g(x)/f(x)$
-\end_inset 
+\end_inset
 
  handelt.
 \begin_inset Formula \[
 \max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
 
-\end_inset 
+\end_inset
 
 Die Lˆsung der Approximationsaufgabe beruht auf 
-\noun on 
+\noun on
 Jacobi
-\noun default 
+\noun default
 schen elliptischen Funktionen in Verbindung mit der ersten elliptischen
- Haupttransformation nach Gleichung\SpecialChar ~
+ Haupttransformation nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_dn_x}
 
-\end_inset 
+\end_inset
 
 .
  Dazu wird in genannter Gleichung noch 
 \begin_inset Formula $x^{2}$
-\end_inset 
+\end_inset
 
  zu 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  (und notwendigerweise
 \begin_inset Foot
-collapsed true
+status collapsed
 
-\layout Standard
-
-Es sei daran erinnert, daﬂ Gleichung\SpecialChar ~
+\begin_layout Standard
+Es sei daran erinnert, daﬂ Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_dn_x}
 
-\end_inset 
+\end_inset
 
  f¸r ungerades 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  gilt.
-\end_inset 
+\end_layout
+
+\end_inset
 
  auch 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  zu 
 \begin_inset Formula $2m+1$
-\end_inset 
+\end_inset
 
 ) substituiert, wodurch man eine rationale Funktion vom Grade 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  multipliziert mit 
 \begin_inset Formula $\sqrt{1-k^{2}x}$
-\end_inset 
+\end_inset
 
  erh‰lt.
 \begin_inset Formula \begin{align}
 x & =\esn[2]{u}{k}\label{eq:zolotar_solution}\\
 \edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\label{eq:zolotar_solution_dn}\end{align}
 
-\end_inset 
+\end_inset
 
 Das Modul 
 \begin_inset Formula $\lambda$
-\end_inset 
+\end_inset
 
  sowie der Multiplikator 
 \begin_inset Formula $M$
-\end_inset 
+\end_inset
 
- sind schon in Anhang\SpecialChar ~
+ sind schon in Anhang\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:elliptic}
 
-\end_inset 
+\end_inset
 
- bestimmt worden, die Berechnung dieser Grˆﬂen kann mittels Gleichung\SpecialChar ~
+ bestimmt worden, die Berechnung dieser Grˆﬂen kann mittels Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_odd_M}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:elltr1_lambda}
 
-\end_inset 
+\end_inset
 
  erfolgen.Hintergrund ist nun der Gedanke, daﬂ die Funktionswerte von 
 \begin_inset Formula $\edn{u/M}{\lambda}$
-\end_inset 
+\end_inset
 
  immer zwischen 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\lambda'$
-\end_inset 
+\end_inset
 
  liegen und demzufolge um den Mittelwert 
 \begin_inset Formula $(1+\lambda')/2$
-\end_inset 
+\end_inset
 
  schwanken.
  Multipliziert man 
 \begin_inset Formula $\edn{u/M}{\lambda}$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $2/(1+\lambda')$
-\end_inset 
+\end_inset
 
 , dann erh‰lt man eine Bestapproximation
 \begin_inset LatexCommand \index{Approximation!Bestapproximation}
 
-\end_inset 
+\end_inset
 
- der Konstante\SpecialChar ~
+ der Konstante\InsetSpace ~
 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  bez¸glich der Norm 
 \begin_inset Formula $L_{\infty}$
-\end_inset 
+\end_inset
 
 , also entsprechend unserer Eingangsbetrachtungen
 \begin_inset Formula \begin{equation}
 \frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\msp.\label{eq:zolotar_approx_func}\end{equation}
 
-\end_inset 
+\end_inset
 
 Der Beweis der Bestapproximation beruht auf 
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 's Alternantensatzes
 \begin_inset LatexCommand \index{Tschebyscheff'sche Alternantenbedingung@\noun{Tschebyscheff}'sche Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Approximation!Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Alternantenbedingung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Alternantensatz}
 
-\end_inset 
+\end_inset
 
 , welcher in kurzer Form lautet:Die Funktion 
 \begin_inset Formula $g(x)/f(x)$
-\end_inset 
+\end_inset
 
- stellt genau dann eine Bestapproximation (der Konstante\SpecialChar ~
+ stellt genau dann eine Bestapproximation (der Konstante\InsetSpace ~
 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
 ) dar, wenn die Fehlerfunktion im Approximationsintervall 
 \begin_inset Formula $0\leq x\leq1$
-\end_inset 
+\end_inset
 
  genau 
 \begin_inset Formula $2m+2$
-\end_inset 
+\end_inset
 
  Extremalpunkte hat, an denen sie alternierend den Wert 
 \begin_inset Formula $\pm\varepsilon$
-\end_inset 
+\end_inset
 
  annimmt.Der Abstand zwischen den Extremalstellen der Funktion 
 \begin_inset Formula $g(x)/f(x)$
-\end_inset 
+\end_inset
 
- nach Gleichung\SpecialChar ~
+ nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_approx_func}
 
-\end_inset 
+\end_inset
 
  ist genau 
 \begin_inset Formula $M\Lambda$
-\end_inset 
+\end_inset
 
  (
 \begin_inset Formula $\Lambda=\eK{\lambda}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:elltr1}
 
-\end_inset 
+\end_inset
 
 ).
- ƒhnlich wie in Abschnitt\SpecialChar ~
+ ƒhnlich wie in Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:elltr_general_solution}
 
-\end_inset 
+\end_inset
 
  muﬂ 
 \begin_inset Formula $u$
-\end_inset 
+\end_inset
 
- wegen Gleichung\SpecialChar ~
+ wegen Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_solution}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
  bis 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  laufen, wenn 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  im Approximationsintervall von 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
  nach 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  laufen soll.
  Da die Division der reellen Periode durch 
 \begin_inset Formula $2m+1$
-\end_inset 
+\end_inset
 
  eine charakteristische Eigenschaft der ersten elliptischen Transformation
  ist 
 \begin_inset Formula \[
 M\Lambda=\frac{K}{2m+1}\msp,\]
 
-\end_inset 
+\end_inset
 
 befinden sich also 
 \begin_inset Formula $2m+2$
-\end_inset 
+\end_inset
 
  Extremalwerte im Intervall 
 \begin_inset Formula $0\leq x\leq1$
-\end_inset 
+\end_inset
 
 .
  Sie liegen bei 
 \begin_inset Formula $u_{\upsilon}=\upsilon M\Lambda$
-\end_inset 
+\end_inset
 
  und deshalb bez¸glich 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  bei
 \begin_inset Formula \[
 x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\msp.\]
 
-\end_inset 
+\end_inset
 
 Aufgrund ihrer Anzahl sowie der Fehlerfunktion
 \begin_inset Formula \[
 \varepsilon=1-\frac{2}{1+\lambda'}\edn{\frac{u_{\upsilon}}{M}}{\lambda}=\pm\frac{1-\lambda'}{1+\lambda'}\]
 
-\end_inset 
+\end_inset
 
 ist die 
-\noun on 
+\noun on
 Tschebyscheff
-\noun default 
+\noun default
 'sche Alternantenbedingung erf¸llt und die Funktion 
 \begin_inset Formula $g(x)/f(x)$
-\end_inset 
+\end_inset
 
  stellt folgerichtig eine Bestapproximation dar.Da 
 \begin_inset Formula $\edn{u/M}{\lambda}$
-\end_inset 
+\end_inset
 
- nach Formel\SpecialChar ~
+ nach Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:zolotar_solution_dn}
 
-\end_inset 
+\end_inset
 
  selbst den Faktor 
 \begin_inset Formula $f^{-1}(x)$
-\end_inset 
+\end_inset
 
  enth‰lt, ist die Approximationsfunktion 
 \begin_inset Formula $g(x)$
-\end_inset 
+\end_inset
 
  bestimmt durch
 \begin_inset Formula \begin{align*}
 g(x) & =f(x)\cdot\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}\\
  & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\msp.\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

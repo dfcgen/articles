@@ -1,562 +1,599 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartams
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing single 
-\papersize Default
-\paperpackage a4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
+\begin_layout Standard
 Properties of algebraic polynomials
-\layout Standard
+\end_layout
 
-Version: $Id: polynomials.lyx,v 1.8 2006-02-25 20:52:51 ralf Exp $
-\end_inset 
+\begin_layout Standard
+Version: $Id: polynomials.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+\end_layout
+
+\end_inset
 
 
-\layout Section
+\end_layout
 
+\begin_layout Section
 Algebraische Funktionen
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Algebraische Funktionen
 \begin_inset LatexCommand \index{Funktion!algebraische}
 
-\end_inset 
+\end_inset
 
  verknüpfen ein Argument 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  mit einem Funktionswert 
 \begin_inset Formula $y$
-\end_inset 
+\end_inset
 
  so, daß sie einer algebraischen Gleichung der Form 
 \begin_inset Formula $g(x,y)=0$
-\end_inset 
+\end_inset
 
  genügen.
  
 \begin_inset Formula $g(x,y)$
-\end_inset 
+\end_inset
 
  enthält dabei Verknüpfungen von 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $y$
-\end_inset 
+\end_inset
 
 , die nur Grundrechenarten (algebraisch) sind, also
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 g(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x)\msp,\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 wobei 
 \begin_inset Formula $p_{0},p_{1},\ldots p_{m-1},p_{m}$
-\end_inset 
+\end_inset
 
  algebraische Polynome in 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  sind.
  Für 
 \begin_inset Formula $g(x,y)=0$
-\end_inset 
+\end_inset
 
  kann in einfachen Spezialfällen (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $m=1$
-\end_inset 
+\end_inset
 
 ) eine explizite Lösungsformel 
 \begin_inset Formula $y=f(x)$
-\end_inset 
+\end_inset
 
  gegeben werden, die entweder
-\layout Itemize
+\end_layout
 
-ein Polynom (ganz-rationale Funktion
-\begin_inset LatexCommand \index{Funktion!ganz-rationale}
+\begin_layout Itemize
+ein Polynom (ganzrationale Funktion
+\begin_inset LatexCommand \index{Funktion!ganzrationale}
 
-\end_inset 
+\end_inset
 
 ),
-\layout Itemize
+\end_layout
 
-eine gebrochen-rationale Funktion
-\begin_inset LatexCommand \index{Funktion!gebrochen-rationale}
+\begin_layout Itemize
+eine gebrochen rationale Funktion
+\begin_inset LatexCommand \index{Funktion!gebrochen rationale}
 
-\end_inset 
+\end_inset
 
 
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 oder eine irrationale Funktion ist
 \begin_inset LatexCommand \index{Funktion!irrationale}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die beiden ersten Fälle werden deshalb rational genannt, weil ein Ergebnis
  nach Anwendung endlich vieler (rationaler) Rechenoperationen (Addition,
  Subtraktion, Multiplikation, Division) zur Verfügung steht.
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:poly}
 
-\end_inset 
+\end_inset
 
-Ganz-rationale Funktionen (Polynome
+Ganzrationale Funktionen (Polynome
 \begin_inset LatexCommand \index{Polynome|(}
 
-\end_inset 
+\end_inset
 
 )
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Definition
-\layout Standard
+\end_layout
 
-Polynome sind ganz-rationale Funktionen
-\begin_inset LatexCommand \index{Funktion!ganz-rationale}
+\begin_layout Standard
+Polynome sind ganzrationale Funktionen
+\begin_inset LatexCommand \index{Funktion!ganzrationale}
 
-\end_inset 
+\end_inset
 
  der Form
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 p(x)=\poly{a}{x}{n}=\sum_{i=0}^{n}a_{i}x^{i},\qquad a_{n}\neq0\label{eq:poly_sum}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 mit (hier reellen) Koeffizienten 
 \begin_inset Formula $a_{i}$
-\end_inset 
+\end_inset
 
 .
  Sie werden als normiert bezeichnet, wenn der Leitkoeffizient 
 \begin_inset Formula $a_{n}=1$
-\end_inset 
+\end_inset
 
  ist.
  Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors 
 \begin_inset Formula $C=a_{n}$
-\end_inset 
+\end_inset
 
  immer möglich.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 p(x)=C\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^{n}+\sum_{i=0}^{n-1}b_{i}x^{i}\right)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die letzte Form ist vor allem dann von Bedeutung, wenn die Linearfaktordarstellu
 ng mit Hilfe der 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Nullstellen 
 \begin_inset Formula $\zn{x}{i}$
-\end_inset 
+\end_inset
 
- Anwendung finden soll (Fundamentalsatz der Algebra
-\begin_inset LatexCommand \index{Algebra!Fundamentalsatz}
+ Anwendung finden soll (Hauptsatz der Algebra
+\begin_inset LatexCommand \index{Algebra!Hauptsatz der}
 
-\end_inset 
+\end_inset
 
 ).
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 p(x)=a_{n}(x-\zn{x}{1})(x-\zn{x}{2})\cdots(x-\zn{x}{n})=a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\label{eq:poly_prd}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Erste Ableitung
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Ableitung eines Polynoms in Summendarstellung, also aus den Koeffizienten,
  ist trivial und lautet
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 p'(x)=\sum_{i=1}^{n}i\, a_{i}x^{i-1}=\sum_{k=0}^{n-1}(k+1)a_{k+1}x^{k}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Interessant ist jedoch die Gewinnung der ersten Ableitung von 
 \begin_inset Formula $p(x)$
-\end_inset 
+\end_inset
 
  aus den Nullstellen 
 \begin_inset Formula $\zn{x}{i}$
-\end_inset 
+\end_inset
 
 .
- Dazu geht man von Formel\SpecialChar ~
+ Dazu geht man von Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
 
-\end_inset 
+\end_inset
 
  aus und verwendet (wegen der störenden Produkte) logarithmische Differentiation
  in Verbindung mit der Regel 
 \begin_inset Formula $\left[\ln x\right]'=x^{-1}$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align}
 p'(x) & =p(x)\frac{p'(x)}{p(x)}=p(x)\left[\ln p(x)\right]'\nonumber \\
  & =p(x)\,\frac{\tdc}{\tdc x}\ln\left[a_{n}\prod_{i=1}^{n}(x-\zn{x}{i})\right]\nonumber \\
  & =p(x)\sum_{i=1}^{n}\left[\frac{\tdc}{\tdc x}\ln(x-\zn{x}{i})\right]\nonumber \\
 p'(x) & =p(x)\sum_{i=1}^{n}\frac{1}{x-\zn{x}{i}}\label{eq:poly_prd_deriv}\end{align}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Dieses Ergebnis
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
  
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
- Faktoren (von Formel\SpecialChar ~
+ Faktoren (von Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
 
-\end_inset 
+\end_inset
 
 ) wieder.
-\end_inset 
+\end_layout
+
+\end_inset
 
  gibt uns die Möglichkeit die Ableitung eines Polynoms an Stelle 
 \begin_inset Formula $x\neq\zn{x}{i}$
-\end_inset 
+\end_inset
 
  mittels der Nullstellen zu bestimmen.
  Für die Berechnung der Ableitung an einer der Nullstellen 
 \begin_inset Formula $\zn{x}{k}$
-\end_inset 
+\end_inset
 
  selbst, scheint letzte Formel wegen 
 \begin_inset Formula $\lim_{x\rightarrow\zn{x}{k}}p(x)/(x-\zn{x}{k})\rightarrow0/0$
-\end_inset 
+\end_inset
 
  zuerst ungeeignet.
  Schreibt man die ganze Formel aber ausführlich und setzt 
 \begin_inset Formula $x=\zn{x}{k}$
-\end_inset 
+\end_inset
 
 , also
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 p'(\zn{x}{k})=\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\ldots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{p(x)}{x-\zn{x}{i}}}_{i=k}+\ldots+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 dann ist zu erkennen, daß
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 wegen 
 \begin_inset Formula $p(\zn{x}{k})=0$
-\end_inset 
+\end_inset
 
  alle Summanden mit 
 \begin_inset Formula $i\neq k$
-\end_inset 
+\end_inset
 
  verschwinden und
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 für 
 \begin_inset Formula $i=k$
-\end_inset 
+\end_inset
 
  der Faktor 
 \begin_inset Formula $x-\zn{x}{i}$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $x-\zn{x}{k}$
-\end_inset 
+\end_inset
 
 , welcher in Zähler und Nenner vorhanden ist, gekürzt werden kann.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Ableitung an der Nullstelle 
 \begin_inset Formula $\zn{x}{k}$
-\end_inset 
+\end_inset
 
  nimmt deshalb folgende einfache Form an:
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \[
 p'(\zn{x}{k})=a_{n}\prod_{\substack{i=1\\
 i\neq k}
 }^{n}(\zn{x}{k}-\zn{x}{i})\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Nullstellen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Nullstellen!von Polynomen}
 
-\end_inset 
+\end_inset
 
-Bei der Linearfaktordarstellung nach Formel\SpecialChar ~
+Bei der Linearfaktordarstellung nach Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
 
-\end_inset 
+\end_inset
 
  handelt es sich prinzipiell um den von 
-\noun on 
-C.\SpecialChar ~
+\noun on
+C.\InsetSpace ~
 F.
  Gauss
-\noun default 
- in seiner Dissertation\SpecialChar ~
-1799 erstmals bewiesenen Fundamentalsatz der Algebra
-\begin_inset LatexCommand \index{Algebra!Fundamentalsatz}
+\noun default
+ in seiner Dissertation\InsetSpace ~
+1799 erstmals bewiesenen Hauptsatz der Algebra
+\begin_inset LatexCommand \index{Algebra!Hauptsatz der}
 
-\end_inset 
+\end_inset
 
 :
-\layout Quote
+\end_layout
 
+\begin_layout Quote
 Jedes algebraische Polynom 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 -ten Grades hat genau 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
- komplexe Lösungen\SpecialChar ~
+ komplexe Lösungen\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Gauss:1799}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Bei Polynomen mit reellen Koeffizienten 
 \begin_inset Formula $a_{i}$
-\end_inset 
+\end_inset
 
  müssen diese Nullstellen entweder konjugiert komplex (als Spezialfall imaginär)
  auftreten oder aber reell sein.
  Wäre diese Bedingung nicht erfüllt, dann würde Ausmultiplizieren der Produktdar
-stellung\SpecialChar ~
+stellung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
 
-\end_inset 
+\end_inset
 
- (zur Gewinnung der Summenformel\SpecialChar ~
+ (zur Gewinnung der Summenformel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_sum}
 
-\end_inset 
+\end_inset
 
 ) nicht zu reellen Koeffizienten 
 \begin_inset Formula $a_{i}$
-\end_inset 
+\end_inset
 
  führen.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Nullstellen eines Polynoms müssen nicht notwendigerweise alle verschieden
  sein, oftmals sind 
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 mehrfache
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  Nullstellen vorhanden.
  Dieser Umstand spiegelt sich dann in der Darstellungsmöglichkeit als Linearfakt
 or der Form 
 \begin_inset Formula $(x-\zn{x}{k})^{m}$
-\end_inset 
+\end_inset
 
  wieder, in der 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  die Vielfachheit (Ordnung) der Nullstelle angibt.
  Die allgemeine Definition der Vielfachheit einer Nullstelle 
 \begin_inset Formula $\zn{x}{k}$
-\end_inset 
+\end_inset
 
  hat aber etwas mit den Ableitungen von 
 \begin_inset Formula $p(x)$
-\end_inset 
+\end_inset
 
  an dieser Stelle zu tun.
  Um diesen Zusammenhang herzustellen gehen wir davon aus, daß 
 \begin_inset Formula $p(x)$
-\end_inset 
+\end_inset
 
  in der Form
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 p(x)=(x-\zn{x}{})^{m}q_{0}(x)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 vorliegt.
  Das Polynom 
 \begin_inset Formula $q_{0}(x)$
-\end_inset 
+\end_inset
 
  sei normiert und vom Grad 
 \begin_inset Formula $n-m$
-\end_inset 
+\end_inset
 
  mit den Nullstellen 
 \begin_inset Formula $\zn{x}{i}\neq\zn{x}{},\msp i=1\ldots n-m$
-\end_inset 
+\end_inset
 
  (ansonsten wäre 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  zu erhöhen).
  Die Ableitung von 
 \begin_inset Formula $p(x)$
-\end_inset 
+\end_inset
 
  ist nach der Produktregel
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 p'(x) & =m(x-\zn{x}{})^{m-1}q_{0}(x)+(x-\zn{x}{})^{m}{q_{0}}'(x)\\
  & =(x-\zn{x}{})^{m-1}\left[m\, q_{0}(x)+(x-\zn{x}{}){q_{0}}'(x)\right]\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Der rechte Faktor hat aber 
 \begin_inset Formula $\zn{x}{}$
-\end_inset 
+\end_inset
 
  nicht als Nullstelle und kann deshalb mit 
 \begin_inset Formula $q_{1}(x)$
-\end_inset 
+\end_inset
 
  abgekürzt werden.
  Die höheren Ableitungen ergeben sich so rekursiv zu
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
 p'(x) & = & (x-\zn{x}{})^{m-1}q_{1}(x)\\
 p''(x) & = & (x-\zn{x}{})^{m-2}q_{2}(x)\\
@@ -564,382 +601,535 @@ p''(x) & = & (x-\zn{x}{})^{m-2}q_{2}(x)\\
 p^{(m-1)}(x) & = & (x-\zn{x}{})q_{m-1}(x)\\
 p^{(m)}(x) & = & q_{m}(x)\neq0\end{eqnarray*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  alle Ableitungen bis zur Ordnung 
 \begin_inset Formula $m-1$
-\end_inset 
+\end_inset
 
  verschwinden an der Nullstelle 
 \begin_inset Formula $\zn{x}{}$
-\end_inset 
+\end_inset
 
 , die 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
 -te jedoch nicht.
  Diese Aussage stellt eine Verallgemeinerung des Begriffes der Vielfachheit
 \begin_inset LatexCommand \index{Nullstellen!Vielfachheit}
 
-\end_inset 
+\end_inset
 
  einer Nullstelle dar
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Außerdem wird eine Funktion mit solchen Eigenschaften als maximal flach
  an dieser Stelle (hier 
 \begin_inset Formula $x=\zn{x}{}$
-\end_inset 
+\end_inset
 
 ) bezeichnet.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
- von den Koeffizienten in Summenformel\SpecialChar ~
+ von den Koeffizienten in Summenformel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_sum}
 
-\end_inset 
+\end_inset
 
  Aussagen zu deren Lage machen
 \begin_inset LatexCommand \index{Nullstellen!Lage}
 
-\end_inset 
+\end_inset
 
 .
  Hier sei nur der Lokalisierungssatz von 
-\noun on 
+\noun on
 Cauchy
-\noun default 
+\noun default
  erwähnt, weitere findet man 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
 
- in\SpecialChar ~
+\end_inset
+
+ in\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.2.2.]{Kaiser:1980}
 
-\end_inset 
+\end_inset
 
 .
-\layout Quote
+\end_layout
 
+\begin_layout Quote
 Ist 
 \begin_inset Formula $A$
-\end_inset 
+\end_inset
 
  der Maximalwert der Beträge aller Koeffizienten 
 \begin_inset Formula $a_{i}$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $i=0\ldots n-1$
-\end_inset 
+\end_inset
 
 , also 
 \begin_inset Formula $A=\max\left(\left|a_{0}\right|,\left|a_{1}\right|,\left|a_{2}\right|\ldots\left|a_{n-1}\right|\right)$
-\end_inset 
+\end_inset
 
 , dann sind die Beträge sämtlicher Nullstellen kleiner als
-\begin_deeper 
-\layout Standard
+\end_layout
 
-
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula \[
 1+\frac{A}{\left|a_{n}\right|}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\end_deeper 
-\layout Proof
+\end_layout
 
+\end_deeper
+\begin_layout Proof
 An einer Nullstelle gilt bekanntermaßen 
 \begin_inset Formula $p(x)=0$
-\end_inset 
+\end_inset
 
  und somit
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 -a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Wir bilden nun auf beiden Seiten den Betrag
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \left|a_{n}\zn[n]{x}{}\right|=\left|r(\zn{x}{})\right|\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 und betrachten den Wert von 
 \begin_inset Formula $\left|r(\zn{x}{})\right|$
-\end_inset 
+\end_inset
 
 .
  Er ist sicherlich dann am größten, wenn alle Koeffizienten positiv und
  nahezu dem Wert 
 \begin_inset Formula $A$
-\end_inset 
+\end_inset
 
  entsprechen.
  Aus diesem Grund gilt die Ungleichung
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \left|a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}\right|\leq A\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 und gleichbedeutend
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \begin{align*}
 \left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
 \left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\msp.\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Die rechte Seite kann man auch als Quotient zweier Polynome darstellen,
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \left|a_{n}\zn[n]{x}{}\right|\leq A\frac{\left|\zn{x}{}\right|^{n}-1}{\left|\zn{x}{}\right|-1}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 Ausklammern von 
 \begin_inset Formula $\left|\zn{x}{}\right|^{n}$
-\end_inset 
+\end_inset
 
  führt zu
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \left|a_{n}\right|\leq A\frac{1-\left|\zn{x}{}\right|^{-n}}{\left|\zn{x}{}\right|-1}\stackrel{\left|\zn{x}{}\right|>1}{\quad\leq\quad}A\frac{1}{\left|\zn{x}{}\right|-1}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
+\begin_layout Proof
 und damit zu 
-\noun on 
+\noun on
 Cauchy
-\noun default 
+\noun default
 's oberer Grenze für den Betrag der Nullstellen.
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset Formula \[
 \left|\zn{x}{}\right|\leq1+\frac{A}{\left|a_{n}\right|}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Proof
+\end_layout
 
-
+\begin_layout Proof
 \begin_inset LatexCommand \index{Polynome|)}
 
-\end_inset 
+\end_inset
 
 
-\layout Section
+\end_layout
 
-Gebrochen-rationale Funktionen
-\layout Subsection
+\begin_layout Section
+Gebrochen rationale Funktionen
+\end_layout
 
+\begin_layout Subsection
 Definition
-\layout Standard
+\end_layout
 
+\begin_layout Standard
+\begin_inset LatexCommand \index{Funktion!gebrochen rationale}
 
-\begin_inset LatexCommand \index{Funktion!gebrochen-rationale}
-
-\end_inset 
+\end_inset
 
 Dieser Typ der algebraischen Funktionen ist als Quotient zweier Polynome
  erklärbar, wobei das Nennerpolynom nicht konstant sein darf
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
+\begin_layout Standard
+Sonst würde es sich um eine ganzrationale Funktion handeln.
+\end_layout
 
-Sonst würde es sich um eine ganz-rationale Funktion handeln.
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 r(x)=\frac{u(x)}{v(x)}=\frac{\poly{a}{x}{m}}{\poly{b}{x}{n}}=\frac{\sum\limits _{i=0}^{m}a_{i}x^{i}}{\sum\limits _{i=0}^{n}b_{i}x^{i}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Die verschiedenen Darstellungsformen der ganz-rationalen Funktionen aus
- Abschnitt\SpecialChar ~
+\begin_layout Standard
+Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:poly}
 
-\end_inset 
+\end_inset
 
- lassen sich hier direkt auf Nenner- und Zählerpolynom anwenden, was zu
- weiteren Darstellungsmöglichkeiten führt.
-\layout Standard
+ lassen sich hierbei auf Nenner- und Zähler anwenden, was zu weiteren Darstellun
+gsmöglichkeiten führt
+\begin_inset Foot
+status open
 
+\begin_layout Standard
 Den Spezialfall 
 \begin_inset Formula $r(x)=\frac{ax+b}{cx+d}$
-\end_inset 
+\end_inset
 
- bezeichnet man als gebrochen-lineare Funktion
-\begin_inset Foot
-collapsed false
-
-\layout Standard
-
-Im Komplexen auch als 
-\noun on 
+ bezeichnet man als gebrochen-lineare Funktion, im Komplexen auch 
+\noun on
 Möbius
-\noun default 
+\noun default
 -Transformation
 \begin_inset LatexCommand \index{Möbius-Transformation@\noun{Möbius}-Transformation}
 
-\end_inset 
+\end_inset
 
- bezeichnet.
-\end_inset 
+ genannt.
+\end_layout
+
+\end_inset
 
 .
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
+Asymptotisches Verhalten
+\end_layout
+
+\begin_layout Standard
+Abhängig von der Differenz zwischen dem Grad von Nenner- und Zählerpolynom
+ lassen sich drei Fälle in Bezug auf das asymptotischen Verhalten von 
+\begin_inset Formula $r(x)$
+\end_inset
+
+ unterscheiden:
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $n>m$
+\end_inset
+
+ handelt es sich bei 
+\begin_inset Formula $r(x)$
+\end_inset
+
+ um eine echt gebrochen rationale Funktion mit der Eigenschaft 
+\begin_inset Formula $\lim_{x\rightarrow\infty}r(x)=0$
+\end_inset
+
+.
+ Solche Funktionen können mit Hilfe ihrer 
+\begin_inset Formula $n$
+\end_inset
+
+ Pole und deren jeweiliger Vielfachheit 
+\begin_inset Formula $m_{i}$
+\end_inset
+
+ in einen Partialbruch wiefolgt entwickelt werden:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+r(x)=\sum\limits _{i}\frac{c_{i}}{(x-\pn{x}{i})^{m_{i}}}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $m>n$
+\end_inset
+
+ gilt: 
+\begin_inset Formula $\lim_{x\rightarrow\infty}r(x)=\infty$
+\end_inset
+
+ und man spricht von einem 
+\begin_inset Formula $m-n$
+\end_inset
+
+ fachen Pol im Unendlichen
+\begin_inset LatexCommand \index{Pol!im Unendlichen}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Sollte jedoch 
+\begin_inset Formula $n=m$
+\end_inset
+
+ gelten, dann nähert sich 
+\begin_inset Formula $r(x)$
+\end_inset
+
+ im Unendlichen dem Wert 
+\begin_inset Formula $a_{n}/b_{n}$
+\end_inset
+
+.
+ Eine Partialbruchzerlegung ist in diesem Fall ebenfalls möglich, allerdings
+ muß vorher die Konstante 
+\begin_inset Formula $a_{n}/b_{n}$
+\end_inset
+
+ abgespalten werden.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+r(x)=\frac{u(x)}{v(x)}=\frac{u_{1}(x)}{v(x)}+\frac{a_{n}}{b_{n}}=\frac{u_{1}(x)+\mbig{\frac{a_{n}}{b_{n}}}v(x)}{v(x)}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dadurch erhält man ein Zählerpolynom 
+\begin_inset Formula $u_{1}(x)$
+\end_inset
+
+ vom Grad 
+\begin_inset Formula $n-1$
+\end_inset
+
+, dessen höchstwertiger Koeffizient also verschwindet.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+u_{1}(x)=u(x)-\frac{a_{n}}{b_{n}}v(x)\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
 Erste Ableitung
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die erste Ableitung kann ganz allgemein mit Hilfe der Quotientenregel
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 r'(x)=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)}\msp,\label{eq:rational_func_deriv_base}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 gefolgt von Einsetzen der Ableitungsformeln für Polynome, ermittelt werden.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Unter anderem kann man auch wieder (ausgehend von Nullstellen und Polen)
  den Weg der logarithmischen Differentiation beschreiten.
  Dazu sei von den Polynomen 
 \begin_inset Formula $u(x)$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $v(x)$
-\end_inset 
+\end_inset
 
  und deren Linearfaktorzerlegung ausgegangen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 u(x) & =a_{m}\prod_{i=1}^{m}(x-\zn{x}{i}) & v(x) & =b_{n}\prod_{l=1}^{n}(x-\pn{x}{l})\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Einsetzen der Ableitungsformel\SpecialChar ~
+\begin_layout Standard
+Einsetzen der Ableitungsformel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd_deriv}
 
-\end_inset 
+\end_inset
 
- für Polynome in die Quotientenregel\SpecialChar ~
+ für Polynome in die Quotientenregel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:rational_func_deriv_base}
 
-\end_inset 
+\end_inset
 
 , sowie nachfolgendes Kürzen von 
 \begin_inset Formula $v(x)$
-\end_inset 
+\end_inset
 
 , führt zu
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 r'(x)=r(x)\left(a_{m}\sum\limits _{i=1}^{m}\frac{1}{x-\zn{x}{i}}-b_{n}\sum\limits _{l=1}^{n}\frac{1}{x-\pn{x}{l}}\right)\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document

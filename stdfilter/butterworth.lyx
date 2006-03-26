@@ -1,18 +1,19 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing single 
-\papersize Default
-\paperpackage a4
-\use_geometry 0
-\use_amsmath 1
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 2
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \leftmargin 2cm
 \rightmargin 2cm
@@ -21,415 +22,443 @@
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Standard
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Version: $Id: butterworth.lyx,v 1.8 2006-03-26 12:39:51 ralf Exp $
+\end_layout
+
+\end_inset
 
 
-\begin_inset Note
-collapsed false
+\end_layout
 
-\layout Standard
+\begin_layout Section
 
-Version: $Id: butterworth.lyx,v 1.7 2006-02-25 13:53:09 ralf Exp $
-\end_inset 
-
-
-\layout Section
-
-
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Butterworth-Tiefpaß@\noun{Butterworth}-Tiefpaß|(}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Amplitudencharakteristik
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Der 
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß
 \begin_inset LatexCommand \index{Tiefpaß!Butterworth@\noun{Butterworth}-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Filter!Butterworth@\noun{Butterworth}-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 -ter Ordnung zeichnet sich durch die Amplitudencharakteristik
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-aus, besitzt also nach Gleichung\SpecialChar ~
+\begin_layout Standard
+aus, besitzt also nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:approx_discrimination}
 
-\end_inset 
+\end_inset
 
  die Drosselung
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \drf(\omega)=\sigma\omega^{n}\msp.\label{eq:filter_butter_chfunc}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Da die Kreisfrequenz 
 \begin_inset Formula $\omega$
-\end_inset 
+\end_inset
 
  nur in der höchsten Potenz vorhanden ist, werden solche Systeme auch Potenzfilt
 er
 \begin_inset LatexCommand \index{Potenzfilter}
 
-\end_inset 
+\end_inset
 
  genannt und als maximal flach
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Als maximal flach werden Funktionen der Ordnung 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  bezeichnet, deren erste bis 
 \begin_inset Formula $n-1$
-\end_inset 
+\end_inset
 
  -te Ableitung an einer ausgewählten Stelle (hier 
 \begin_inset Formula $\omega=0$
-\end_inset 
+\end_inset
 
 ) verschwinden, die 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  -te Ableitung jedoch nicht.
-\end_inset 
+\end_layout
 
- bezeichnet\SpecialChar ~
+\end_inset
+
+ bezeichnet\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Fritzsche:1979a}
 
-\end_inset 
+\end_inset
 
 .
  Mit Hilfe des Parameters 
 \begin_inset Formula $\sigma$
-\end_inset 
+\end_inset
 
  kann die maximale Dämpfung im Durchlaßbereich 
 \begin_inset Formula $A_{max}$
-\end_inset 
+\end_inset
 
  variiert werden (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:approx_ampl}
 
-\end_inset 
+\end_inset
 
 ).
  Dazu sei von der normierten Grenzfrequenz 
 \begin_inset Formula $\omega_{g}=1$
-\end_inset 
+\end_inset
 
  ausgegangen, bei der
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 \trf(1) & =\frac{1}{\sqrt{1+\sigma^{2}}} & \sigma & =\sqrt{\frac{1}{\trf^{2}(1)}-1}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 gilt und deshalb für die maximale Dämpfung im Durchlaßbereich:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 A_{max} & =-20\log\trf(1)=10\log\left(1+\sigma^{2}\right) & \sigma & =\sqrt{10^{A_{max}/10}-1}\msp.\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Oft werden Filter in Bezug auf ihre 3dB Grenzfrequenz 
 \begin_inset Formula $\omega_{g}=\omega_{\textrm{3dB}}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  auf 
 \begin_inset Formula $\trf(1)=1/\sqrt{\smash[b]{2}}$
-\end_inset 
+\end_inset
 
 , dimensioniert.
  Dann gilt 
 \begin_inset Formula $\sigma=1/\omega_{\textrm{3dB}}^{n}$
-\end_inset 
+\end_inset
 
  und für den Amplitudengang
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \[
 \trf(\omega)=\frac{1}{\sqrt{1+\left(\frac{\omega}{\omega_{\textrm{3dB}}}\right)^{2n}}}\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Abbildung\SpecialChar ~
+\begin_layout Standard
+Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:filter_butter_amplitude}
 
-\end_inset 
+\end_inset
 
- zeigt den Amplitudengang nach Gleichung\SpecialChar ~
+ zeigt den Amplitudengang nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:filter_butter_amplitude}
 
-\end_inset 
+\end_inset
 
  für unterschiedlichen Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float figure
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-\align center 
-
+\begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename butterworth_amplitude.eps
 
-\end_inset 
+\end_inset
 
 
-\layout Caption
+\end_layout
 
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{fig:filter_butter_amplitude}
 
-\end_inset 
+\end_inset
 
 Amplitudengang des 
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Polstellen
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Verteilung der Polstellen eines Filters (in der komplexen Ebene) ist
  grundsätzlich immer interessant, da sie Aufschlüsse bezüglich der anderen
  Charakteristiken, wie Amplitudengang, Phasengang, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 etc
-\end_inset 
+\end_layout
+
+\end_inset
 
  zuläßt.
  Dazu gehen wir von der komplexen Übertragungsfunktion 
 \begin_inset Formula $\trf(\ji\omega)$
-\end_inset 
+\end_inset
 
 , in Verbindung mit der generellen Eigenschaft 
 \begin_inset Formula $\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)$
-\end_inset 
+\end_inset
 
 , aus.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\omega^{2n}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Der Grenzübergang in den 
-\noun on 
+\noun on
 Laplace
-\noun default 
+\noun default
 -Bereich
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Dieser Übergang (
-\noun on 
+\noun on
 Fourier
-\noun default 
+\noun default
  
 \begin_inset Formula $\Rightarrow$
-\end_inset 
+\end_inset
 
  
-\noun on 
+\noun on
 Laplace
-\noun default 
+\noun default
 -Transformierte) ist mathematisch immer nur dann möglich, wenn das Integral
  
 \begin_inset Formula $\int_{-\infty}^{\infty}\trf(\omega)\msp d\omega<\infty$
-\end_inset 
+\end_inset
 
  ist.
-\end_inset 
+\end_layout
+
+\end_inset
 
  mit 
 \begin_inset Formula $\ji\omega\Rightarrow\lps$
-\end_inset 
+\end_inset
 
  führt zu
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\left(\lps/\ji\right)^{2n}}\msp.\label{eq:filter_butter_amplitude_inf}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 An den Polstellen von 
 \begin_inset Formula $\trf(\lps)\trf(-\lps)$
-\end_inset 
+\end_inset
 
- muß der Nenner in Gleichung\SpecialChar ~
+ muß der Nenner in Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:filter_butter_amplitude_inf}
 
-\end_inset 
+\end_inset
 
  verschwinden, was bedeutet:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 1+\sigma^{2}\left(\frac{\lps}{\ji}\right)^{2n} & =0\\
 \lps^{2n} & =(-1)^{n+1}\cdot\sigma^{-2}\msp.\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die komplexen 
 \begin_inset Formula $2n$
-\end_inset 
+\end_inset
 
  Wurzeln lassen sich mit Hilfe des Satzes von 
-\noun on 
+\noun on
 Moivre
-\noun default 
+\noun default
 
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 In seiner Exponentialform 
 \begin_inset Formula $z^{n}=r^{n}\cdot e^{\ji n\varphi}$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $r=\left|z\right|$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\varphi=\ang z$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
  sofort angeben:
-\layout Standard
+\end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula \[
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left\{ \begin{array}{l}
 \expf^{\ji\frac{2k\pi}{2n}}\\
@@ -437,117 +466,122 @@ collapsed false
 \expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
 \expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\]
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\cdot\left\{ \begin{array}{ll}
 \expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
 \expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.\msp,\qquad k=0,1,\ldots,2n-1\msp.\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Um realisierbare Systeme zu erhalten ordnet man nun 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Pole mit negativem Realteil 
 \begin_inset Formula $\trf(\lps)$
-\end_inset 
+\end_inset
 
 , die anderen 
 \begin_inset Formula $\trf(-\lps)$
-\end_inset 
+\end_inset
 
  zu.
  Man erhält, was sich durch Einsetzen einzelner Werte 
 \begin_inset Formula $k$
-\end_inset 
+\end_inset
 
  leicht nachprüfen läßt, folgende Polverteilung für einen 
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Sind insbesondere Real- und Imaginärteile (also eine Darstellung in kartesischen
- Koordinaten) von Interesse, dann ist auf Gleichung\SpecialChar ~
+ Koordinaten) von Interesse, dann ist auf Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:filter_butter_poles}
 
-\end_inset 
+\end_inset
 
  noch die 
-\noun on 
+\noun on
 Euler
-\noun default 
+\noun default
 'sche Formel anzuwenden.
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Anschaulich liegen alle Pole auf einem Kreis mit Radius 
 \begin_inset Formula $1/\sqrt[n]{\smash[b]{\sigma}}$
-\end_inset 
+\end_inset
 
-, was deutlich auch in Abbildung\SpecialChar ~
+, was deutlich auch in Abbildung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{fig:filter_butter_pn}
 
-\end_inset 
+\end_inset
 
  zu erkennen ist.
  Außerdem zeigt die Darstellung, daß einerseits keine Pole auf der imaginären
  Achse liegen und andererseits alle immer konjugiert komplex auftreten
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Abgesehen von einem reellen Pol für ungeraden Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float figure
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Graphics
 	filename butterworth_roots_odd.eps
 	width 45col%
@@ -555,10 +589,10 @@ collapsed false
 	subcaption
 	subcaptionText "$n$ ungerade ($n=5$)"
 
-\end_inset 
+\end_inset
 
 
-\hfill 
+\hfill
 
 \begin_inset Graphics
 	filename butterworth_roots_even.eps
@@ -567,247 +601,267 @@ collapsed false
 	subcaption
 	subcaptionText "$n$ gerade ($n=6$)"
 
-\end_inset 
+\end_inset
 
 
-\layout Caption
+\end_layout
 
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{fig:filter_butter_pn}
 
-\end_inset 
+\end_inset
 
 P/N-Verteilung des 
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Polkenngrößen
-\layout Standard
+\end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
+\begin_layout Standard
 Dieser Abschnitt sollte später einmal in den allgemeinen Teil der systembeschrei
 benden Größen von LTI-Systemen (zum Thema Amplitudengang, Phasengang, Bode-Diagr
 amm) verschoben werden.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Allgemein gelten Polkenngrößen
-\begin_inset LatexCommand \index{Polkenngrößen}
+\begin_inset LatexCommand \index{Pol!kenngrößen@-kenngrößen}
 
-\end_inset 
+\end_inset
 
  als geeignet zur Abschätzung des Systemverhaltens im Frequenzbereich.
  Dabei sind es vor allem zwei Größen, die entsprechende Bedeutung erlangt
  haben -- die Polfrequenz
-\begin_inset LatexCommand \index{Polfrequenz}
+\begin_inset LatexCommand \index{Pol!frequenz@-frequenz}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\omega_{0}$
-\end_inset 
+\end_inset
 
  und die Polgüte
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Manchmal wird statt der Polgüte 
 \begin_inset Formula $Q$
-\end_inset 
+\end_inset
 
  die Poldämpfung 
 \begin_inset Formula $(2Q)^{-1}$
-\end_inset 
+\end_inset
 
  als Maßzahl herangezogen.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\begin_inset LatexCommand \index{Polgüte}
+\begin_inset LatexCommand \index{Pol!güte@-güte}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $Q$
-\end_inset 
+\end_inset
 
 .
  Zur Definition 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Bestimmung geht man von der Erkenntnis aus, daß Pole immer konjugiert komplex
  auftreten und deshalb in der Linearfaktordarstellung von 
 \begin_inset Formula $\trf(\lps)$
-\end_inset 
+\end_inset
 
  paarweise (zur Vermeidung komplexer Faktoren) zusammengefaßt werden können.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-(\lps-\pn{\lps}{\nu})(\lps-\pn[*]{\lps}{\nu})=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
+(\lps-\pn{\lps}{\nu})(\lps-\conjgt{\pn{\lps}{\nu}})=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Dieses Polynom zweiten Grades (bezüglich der 
-\noun on 
+\noun on
 Laplace
-\noun default 
+\noun default
 -Variable 
 \begin_inset Formula $\lps$
-\end_inset 
+\end_inset
 
 ) kann man auch folgendermaßen schreiben
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \[
-(\lps-\pn{\lps}{\nu})(\lps-\pn[*]{\lps}{\nu})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}\msp,\]
+(\lps-\pn{\lps}{\nu})(\lps-\conjgt{\pn{\lps}{\nu}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}\msp,\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 wodurch Polfrequenz und -güte letztlich definiert werden.
  Koeffizientenvergleich beider Darstellungen, also
 \begin_inset Formula \[
 \lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 führt sofort zur Definition der Polfrequenz 
 \begin_inset Formula $\omega_{0}$
-\end_inset 
+\end_inset
 
  als Betragswert der jeweiligen Polstelle 
 \begin_inset Formula $\pn{\lps}{\nu}$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-\omega_{0}=\sqrt{\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)}=\left|\pn{\lps}{\nu}\right|\label{eq:filter_pole_frequency}\end{equation}
+\omega_{0}=\sqrt{\reop^{2}(\pn{\lps}{\nu})+\imop^{2}(\pn{\lps}{\nu})}=\left|\pn{\lps}{\nu}\right|\label{eq:filter_pole_frequency}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Polgüte 
 \begin_inset Formula $Q$
-\end_inset 
+\end_inset
 
  ist nicht sofort ablesbar, kann aber ohne größeren Aufwand bestimmt werden.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
-\frac{\omega_{0}}{Q} & =-2\reop\left(\pn{\lps}{\nu}\right)\\
-Q & =-\frac{\omega_{0}}{2\reop\left(\pn{\lps}{\nu}\right)}=-\frac{\left|\pn{\lps}{\nu}\right|}{2\reop\left(\pn{\lps}{\nu}\right)}\\
- & =-\frac{1}{2}\sqrt{1+\left[\frac{\imop\left(\pn{\lps}{\nu}\right)}{\reop\left(\pn{\lps}{\nu}\right)}\right]^{2}}=-\frac{1}{2}\sqrt{1+\tan^{2}\ang\pn{\lps}{\nu}}\end{align*}
+\frac{\omega_{0}}{Q} & =-2\reop\pn{\lps}{\nu}\\
+Q & =-\frac{\omega_{0}}{2\reop\pn{\lps}{\nu}}=-\frac{\left|\pn{\lps}{\nu}\right|}{2\reop\pn{\lps}{\nu}}\\
+ & =-\frac{1}{2}\sqrt{1+\left[\frac{\imop\pn{\lps}{\nu}}{\reop\pn{\lps}{\nu}}\right]^{2}}=-\frac{1}{2}\sqrt{1+\tan^{2}\ang\pn{\lps}{\nu}}\end{align*}
 
-\end_inset 
-
-
-\layout Standard
+\end_inset
 
 
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 Q_{\nu}=-\frac{1}{2}\cdot\frac{1}{\cos\ang\pn{\lps}{\nu}}=-\frac{1}{2}\sec\ang\pn{\lps}{\nu}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_pole_quality}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Speziell für einen 
-\noun on 
+\noun on
 Butterworth
-\noun default 
+\noun default
 -Tiefpaß gilt deshalb in Bezug auf die Polfrequenzen
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \[
 \omega_{0}=\left|\pn{\lps}{\nu}\right|=\frac{1}{\sqrt[n]{\sigma}}=\textrm{ konstant}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 und Polgüte
-\layout Emph(asized)
+\end_layout
 
-
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
 Q_{\nu}=-\frac{1}{2}\sec\left(\frac{\pi}{2}+\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)=\frac{1}{2}\cosec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\msp,\qquad\nu=1,2,\ldots,n\msp.\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 In der letzten Formel ist erkennbar, daß die einzelnen Polgüten 
 \begin_inset Formula $Q_{\nu}$
-\end_inset 
+\end_inset
 
  für höhere Filterordnung 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  immer größer werden, wobei Pole in der Nähe der 
 \begin_inset Formula $\ji\omega$
-\end_inset 
+\end_inset
 
 -Achse die höchsten Güten aufweisen
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Pole mit dieser Lage reagieren dann im allgemeinen auch viel empfindlicher
  auf Bauelemente-Toleranzen.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Butterworth-Tiefpaß@\noun{Butterworth}-Tiefpaß|)}
 
-\end_inset 
+\end_inset
 
 
-\the_end
+\end_layout
+
+\end_body
+\end_document
