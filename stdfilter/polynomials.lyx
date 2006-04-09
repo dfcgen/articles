@@ -2,7 +2,7 @@
 \lyxformat 245
 \begin_document
 \begin_header
-\textclass scrartams
+\textclass scrartcl
 \language german
 \inputencoding latin1
 \fontscheme times
@@ -38,7 +38,7 @@ Properties of algebraic polynomials
 \end_layout
 
 \begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.10 2006-04-09 16:36:14 ralf Exp $
 \end_layout
 
 \end_inset
@@ -716,7 +716,7 @@ Ist
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Emph(asized)
 \begin_inset Formula \[
 1+\frac{A}{\left|a_{n}\right|}\msp.\]
 
@@ -726,7 +726,7 @@ Ist
 \end_layout
 
 \end_deeper
-\begin_layout Proof
+\begin_layout Standard
 An einer Nullstelle gilt bekanntermaßen 
 \begin_inset Formula $p(x)=0$
 \end_inset
@@ -734,7 +734,7 @@ An einer Nullstelle gilt bekanntermaßen
  und somit
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 -a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\msp.\]
 
@@ -743,11 +743,11 @@ An einer Nullstelle gilt bekanntermaßen
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Wir bilden nun auf beiden Seiten den Betrag
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 \left|a_{n}\zn[n]{x}{}\right|=\left|r(\zn{x}{})\right|\]
 
@@ -756,7 +756,7 @@ Wir bilden nun auf beiden Seiten den Betrag
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 und betrachten den Wert von 
 \begin_inset Formula $\left|r(\zn{x}{})\right|$
 \end_inset
@@ -771,7 +771,7 @@ und betrachten den Wert von
  Aus diesem Grund gilt die Ungleichung
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 \left|a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}\right|\leq A\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\]
 
@@ -780,11 +780,11 @@ und betrachten den Wert von
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 und gleichbedeutend
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 \left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
 \left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\msp.\end{align*}
@@ -794,7 +794,7 @@ und gleichbedeutend
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Die rechte Seite kann man auch als Quotient zweier Polynome darstellen,
  
 \begin_inset ERT
@@ -812,7 +812,7 @@ ie
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 \left|a_{n}\zn[n]{x}{}\right|\leq A\frac{\left|\zn{x}{}\right|^{n}-1}{\left|\zn{x}{}\right|-1}\msp.\]
 
@@ -821,7 +821,7 @@ ie
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 Ausklammern von 
 \begin_inset Formula $\left|\zn{x}{}\right|^{n}$
 \end_inset
@@ -829,7 +829,7 @@ Ausklammern von
  führt zu
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 \left|a_{n}\right|\leq A\frac{1-\left|\zn{x}{}\right|^{-n}}{\left|\zn{x}{}\right|-1}\stackrel{\left|\zn{x}{}\right|>1}{\quad\leq\quad}A\frac{1}{\left|\zn{x}{}\right|-1}\]
 
@@ -838,7 +838,7 @@ Ausklammern von
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 und damit zu 
 \noun on
 Cauchy
@@ -846,7 +846,7 @@ Cauchy
 's oberer Grenze für den Betrag der Nullstellen.
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset Formula \[
 \left|\zn{x}{}\right|\leq1+\frac{A}{\left|a_{n}\right|}\]
 
@@ -855,7 +855,7 @@ Cauchy
 
 \end_layout
 
-\begin_layout Proof
+\begin_layout Standard
 \begin_inset LatexCommand \index{Polynome|)}
 
 \end_inset
@@ -900,8 +900,7 @@ r(x)=\frac{u(x)}{v(x)}=\frac{\poly{a}{x}{m}}{\poly{b}{x}{n}}=\frac{\sum\limits _
 \end_layout
 
 \begin_layout Standard
-Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus
- Abschnitt\InsetSpace ~
+Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:poly}
 
