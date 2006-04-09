@@ -46,7 +46,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: stdfilter.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.10 2006-04-09 16:36:58 ralf Exp $
 \end_layout
 
 \begin_layout Itemize
@@ -174,11 +174,7 @@ frontmatter
 \end_layout
 
 \begin_layout Title
-Konventionelle Filter
-\newline
-
-\size normal
-und ihre Approximationsfunktionen
+Systeme, Filter, Approximationsfunktionen
 \end_layout
 
 \begin_layout Author
@@ -204,6 +200,136 @@ year
 \end_inset
 
  Ralf Hoppe
+\end_layout
+
+\begin_layout Standard
+Vorliegendes Werk soll dem Ingenieur 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ der Elektrotechnik, Nachrichtentechnik oder Signalverarbeitung die Grundlagen
+ der konventionellen (analogen) Filterapproximationen nahebringen.
+ Mit etwas mehr Ausführlichkeit als bei anderen Publikationen zu dieser
+ Thematik wird versucht, auch die mathematischen Hintergründe zu vermitteln
+ und dadurch etwas mehr Verständnis für die Zusammenhänge zu erreichen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Wobei der Lesende selbst darüber entscheiden kann, wie stark er sich von
+ der Thematik einfangen läßt.
+\end_layout
+
+\end_inset
+
+.
+ Besondere Aufmerksamkeit wird dabei der Verbindung zur 
+\noun on
+Tschebyscheff
+\noun default
+'schen Approximationstheorie, der Funktionentheorie sowie 
+\noun on
+Jacobi
+\noun default
+'s elliptischen Funktionen geschenkt.
+ Ausgehend von den Eigenschaften zeit- sowie wertkontinuierlicher LTI-Systeme
+ werden die bekanntesten (realisierbaren) Standard-Tiefpaßfilter erörtert.
+ Dabei sind es insbesondere Forderungen an den Amplitudengang, welche im
+ Mittelpunkt der Betrachtungen stehen.
+ Abschließend wird die Transformation der Übertragungsfunktion in andere
+ Frequenzbereiche 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Filtertypen, wie Hochpaß, Bandpaß oder Bandsperre behandelt.
+ Zahlreiche Anhänge sind von ihrer Ausführlichkeit so gestaltet, daß eine
+ Einarbeitung in die mathematischen Grundlagen ermöglicht wird.
+\end_layout
+
+\begin_layout Standard
+Approximationsvorschriften im Zeitbereich, numerische Verfahren sowie die
+ Näherung von anderen charakteristischen Größen, wie der Gruppenlaufzeit
+ oder des Phasengangs werden bei den Betrachtungen fast vollständig ausgespart
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Approximationen im Zeitbereich (
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ das dortige Verhalten der Standard-Tiefpaßfilter) werden 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Hli:1954}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite{Kautz:1954}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite{Henderson:1958}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite{Gumowski:1958}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite{Guillemin:1957}
+
+\end_inset
+
+ behandelt.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -247,7 +373,7 @@ mainmatter
 \end_layout
 
 \begin_layout Chapter
-Tiefpaßfilter
+LTI-Systeme
 \end_layout
 
 \begin_layout Standard
@@ -257,6 +383,10 @@ preview false
 \end_inset
 
 
+\end_layout
+
+\begin_layout Chapter
+Tiefpaßfilter
 \end_layout
 
 \begin_layout Standard
