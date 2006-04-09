@@ -20,8 +20,8 @@
 \paperorientation portrait
 \leftmargin 2cm
 \rightmargin 2cm
-\secnumdepth 2
-\tocdepth 2
+\secnumdepth 3
+\tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
@@ -39,16 +39,12 @@
 status open
 
 \begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.7 2006-03-26 12:39:49 ralf Exp $
+Version: $Id: ltisys.lyx,v 1.8 2006-04-09 16:39:34 ralf Exp $
 \end_layout
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Section
-LTI-Systeme
 \end_layout
 
 \begin_layout Standard
@@ -59,7 +55,7 @@ LTI-Systeme
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Systemüberblick
 \end_layout
 
@@ -105,7 +101,7 @@ Systemgrößen in Original- und Bildbereich
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Linearität
 \end_layout
 
@@ -199,7 +195,7 @@ Fourier
 .
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:ltisys_stability}
 
 \end_inset
@@ -261,7 +257,7 @@ Eine notwendige und hinreichende Bedingung für die (asymptotische) Stabilität
 
  fordert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Und den Mittelwertsatz der Integralrechnung
@@ -270,7 +266,7 @@ Und den Mittelwertsatz der Integralrechnung
 \end_inset
 
  berücksichtigt: 
-\begin_inset Formula $\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x$
+\begin_inset Formula $\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x\msp,\mbox{ mit }\xi\in[a,b]$
 \end_inset
 
 .
@@ -339,12 +335,53 @@ Fourier
 
 \end_inset
 
+, 
+\begin_inset LatexCommand \cite[2-1]{Papoulis:1962}
+
+\end_inset
+
 .
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
 |\trf(\ji\omega)| & =\left|\int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|\irf(t)\vphantom{\expf^{-\ji\omega t}}\right|\,\left|\expf^{-\ji\omega t}\right|\tic t\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Aus dem Mittelwertsatz der Integralrechnung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x\msp,\qquad\xi\in(-\infty,\infty)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ergeben sich die Relationen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+\trf(\ji\omega) & = & \int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t=\expf^{-\ji\omega\xi}\int_{-\infty}^{\infty}\irf(t)\tic t\msp,\qquad\xi\in(-\infty,\infty)\\
+|\trf(\ji\omega)| & \leq & \left|\int_{-\infty}^{\infty}\irf(t)\tic t\right|\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -379,8 +416,7 @@ Eine davon abgeleitete Forderung bei rationaler
 \end_layout
 
 \begin_layout Standard
-ist die, daß alle Polstellen des Nenners negative Realteile aufweisen müssen
- (
+ist die, daß alle Polstellen negative Realteile aufweisen müssen (
 \noun on
 Hurwitz
 \noun default
@@ -436,7 +472,7 @@ t
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots\msp,\label{eq:ltisys_stability_irf_propfrac}\end{equation}
+\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots\label{eq:ltisys_stability_irf_propfrac}\end{equation}
 
 \end_inset
 
@@ -444,11 +480,11 @@ t
 \end_layout
 
 \begin_layout Standard
-Sollte 
+Sollte jedoch 
 \begin_inset Formula $n=m$
 \end_inset
 
- sein, dann kann 
+ gelten, dann kann 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
@@ -473,12 +509,35 @@ Sollte
 \begin_inset Formula $a_{n}/b_{n}$
 \end_inset
 
- zerlegt werden.
+ zerlegt werden
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die Abspaltung einer Konstanten, welche bei der Rücktransformation in den
+ Zeitbereich zu einem 
+\noun on
+Dirac
+\noun default
+-Stoß führt, kann für den Fall 
+\begin_inset Formula $0<\trf(\infty)<\infty$
+\end_inset
+
+ grundsätzlich immer vorgenommen werden, selbst wenn es sich bei 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ nicht um eine rationale Funktion handelt.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{align}
-\trf(\lps) & =\frac{\sum\limits _{i=0}^{n-1}\left(a_{i}-\frac{a_{n}}{b_{n}}b_{i}\right)\,\lps^{i}}{\sum\limits _{k=0}^{n}b_{k}\lps^{k}}+\cdots+\frac{a_{n}}{b_{n}}\label{eq:ltisys_stability_trf_propsum}\\
+\trf(\lps) & =\frac{\sum\limits _{i=0}^{n-1}\left(a_{i}-\mbig{\frac{a_{n}}{b_{n}}}b_{i}\right)\,\lps^{i}}{\sum\limits _{k=0}^{n}b_{k}\lps^{k}}+\cdots+\frac{a_{n}}{b_{n}}\label{eq:ltisys_stability_trf_propsum}\\
  & =\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots+\frac{a_{n}}{b_{n}}\nonumber \end{align}
 
 \end_inset
@@ -627,7 +686,7 @@ die verallgemeinerte Impulsantwort
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:ltisys_causality}
 
 \end_inset
@@ -645,8 +704,8 @@ Kausalität
 
 \end_inset
 
-Für Systeme der realen Welt kann man grundsätzlich festhalten, daß es keine
- Wirkung vor der Ursache gibt.
+Für Systeme der realen Welt kann man grundsätzlich davon ausgehen, daß es
+ eine Wirkung vor der Ursache ausgeschlossen ist.
  Man fordert deshalb von einem so charakterisierten LTI-System, daß für
  
 \begin_inset Formula $t<0$
@@ -658,7 +717,7 @@ Für Systeme der realen Welt kann man grundsätzlich festhalten, daß es keine
 
  verschwindet.
  Aus systemtheoretischer Sicht kann eine derartige Einschränkung an die
- Zeitfunktion nicht ohne Einfluß auf die Bildfunktion (der 
+ Zeitfunktion nicht ohne Einfluß auf die Bildfunktion der 
 \noun on
 Fourier
 \noun default
@@ -679,7 +738,7 @@ resp
 \noun on
 Laplace
 \noun default
--Transformation) bleiben.
+-Transformation bleiben.
  Welche Forderungen an die Transformierte eines kausalen Signals 
 \begin_inset Formula $y(t)$
 \end_inset
@@ -687,7 +746,7 @@ Laplace
  unter dieser Bedingung zu stellen sind, soll im Folgenden ermittelt werden.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset ERT
 status inlined
 
@@ -808,7 +867,7 @@ gelten.
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{alignat}{4}
 \reop Y(\ji\omega) & = & \frac{1}{\pi\omega}*\imop Y(\ji\omega) & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\Omega)}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \imop Y(\ji\omega)\right\} \label{eq:ltisys_hilbert_real}\\
--\imop Y(\ji\omega) & = & \frac{1}{\pi\omega}*\reop Y(\ji\omega) & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \label{eq:ltisys_hilbert_imag}\end{alignat}
+-\imop Y(\ji\omega) & = & \frac{1}{\pi\omega}*\reop Y(\ji\omega) & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \msp.\label{eq:ltisys_hilbert_imag}\end{alignat}
 
 \end_inset
 
@@ -897,7 +956,16 @@ verbunden\InsetSpace ~
 
 \begin_layout Standard
 Ein anderer, aber sehr einfacher Ansatz geht davon aus, daß grundsätzlich
- jede Zeitfunktion in eine gerade und eine ungerade Teilfunktion der Art
+ jede Zeitfunktion in eine gerade und eine ungerade Teilfunktion
+\begin_inset LatexCommand \index{Funktion!gerade}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Funktion!ungerade}
+
+\end_inset
+
  
 \begin_inset Formula $y(t)=y_{g}(t)+y_{u}(t)$
 \end_inset
@@ -947,7 +1015,7 @@ ie
 \begin_inset Formula $y(t)$
 \end_inset
 
- und deshalb auch gegenseitig abhängig
+ und deshalb auch wechselseitig abhängig
 \begin_inset Foot
 status open
 
@@ -1098,7 +1166,7 @@ Hieraus läßt sich die Abhängigkeit zwischen geradem und ungeradem Anteil
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
-y_{g}(t) & =\sign(t)\, y_{u}(t) & y_{u}(t) & =\sign(t)\, y_{g}(t)\end{xalignat*}
+y_{g}(t) & =\sign(t)y_{u}(t) & y_{u}(t) & =\sign(t)y_{g}(t)\end{xalignat*}
 
 \end_inset
 
@@ -1164,7 +1232,7 @@ cf
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 \begin_inset ERT
 status inlined
 
@@ -1199,7 +1267,7 @@ Nehmen wir als Ausgangssituation der Betrachtungen in der
 Laplace
 \noun default
 -Ebene an, daß die Transformierte 
-\begin_inset Formula $Y(\lps)=\reop Y(\lps)+\ji\,\imop Y(\lps)$
+\begin_inset Formula $Y(\lps)=\reop Y(\lps)+\ji\imop Y(\lps)$
 \end_inset
 
  des reellen Signals 
@@ -1222,7 +1290,7 @@ ie
  dort weder Singularitäten (also auch keine Pole) noch Sprünge hat.
  Aus der Funktionentheorie ist bekannt, daß sich eine solche Funktion (unter
  der Bedingung 
-\begin_inset Formula $\lim_{\lps\rightarrow\infty}\! Y(\lps)=0$
+\begin_inset Formula $\lim_{\lps\rightarrow\infty}Y(\lps)=0$
 \end_inset
 
 , 
@@ -1241,6 +1309,12 @@ cf
  Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \vref{sec:analysis_improper_integrals_halfplane}
+
+\end_inset
+
+ oder\InsetSpace ~
+
+\begin_inset LatexCommand \cite[10-5]{Papoulis:1962}
 
 \end_inset
 
@@ -1448,7 +1522,7 @@ Die Aussage führt zu einer wesentlichen Forderung an die Übertragungsfunktion
  keine Pole in der rechten Halbebene besitzen darf.
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Schlußfolgerungen
 \end_layout
 
@@ -1487,7 +1561,7 @@ Hilbert
 
 \begin_layout Standard
 Was die kausalen Signale angeht, so kann man aufgrund der Abhängigkeit zwischen
- Real- und Imaginärteil auch gewisse redundanzfreien Darstellungen ableiten\InsetSpace ~
+ Real- und Imaginärteil noch redundanzfreie Darstellungen ableiten\InsetSpace ~
 
 \begin_inset LatexCommand \cite[13]{Bracewell:2003}
 
@@ -1583,8 +1657,8 @@ y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(
 \end_layout
 
 \begin_layout Standard
-Die jeweils andere ist faktisch redundant, was solche Transformationen wie
- die Cosinus- oder Sinus-Transformation
+Die jeweils andere Komponente ist faktisch redundant, was solche Transformatione
+n wie die Cosinus- oder Sinus-Transformation
 \begin_inset LatexCommand \index{Transformation!Cosinus-}
 
 \end_inset
@@ -1711,7 +1785,7 @@ y(t)=2\lt^{-1}\left\{ \reop Y(\lps)\right\} =2\ji\lt^{-1}\left\{ \imop Y(\lps)\r
 
 \end_layout
 
-\begin_layout Subsubsection
+\begin_layout Subsection
 Integralsätze
 \end_layout
 
@@ -1771,7 +1845,7 @@ Bode
 .
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Real-/Imaginärteilbeziehungen in der 
 \begin_inset ERT
 status inlined
@@ -1869,7 +1943,7 @@ der Nenner
 \end_inset
 
  als auch 
-\begin_inset Formula $\Omega\imop[\trf(\ji\Omega)]$
+\begin_inset Formula $\Omega\imop\trf(\ji\Omega)$
 \end_inset
 
  bezüglich der Integrationsvariable 
@@ -1880,7 +1954,7 @@ der Nenner
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\Omega\reop[F(\ji\Omega)]$
+\begin_inset Formula $\Omega\reop F(\ji\Omega)$
 \end_inset
 
  hingegen eine ungerade Funktion darstellt;
@@ -1919,7 +1993,7 @@ Eine weitere Darstellung, der allerdings keinerlei Annahmen in Bezug auf
 
 .
  Dazu addiert und subtrahiert man einfach 
-\begin_inset Formula $\reop[\trf(\lps)]$
+\begin_inset Formula $\reop\trf(\lps)$
 \end_inset
 
  im Zähler des Integrals
@@ -1958,13 +2032,13 @@ und nimmt die für
 
 \begin_layout Standard
 Bringt man noch 
-\begin_inset Formula $\reop[\trf(\lps)]$
+\begin_inset Formula $\reop\trf(\lps)$
 \end_inset
 
  auf die linke Seite, so kann direkt eine neue Variante der Abhängigkeitsdarstel
 lung zwischen Real- und Imaginärteil gewonnen werden
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Genauso für die reelle Komponente, hier jedoch ohne Beweis.
@@ -1987,7 +2061,7 @@ Und für den Realteil
 \begin_inset Formula \begin{align*}
 \trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]+\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
  & =\frac{\imop[\trf(\lps)]}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
-\reop[\trf(\lps)] & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
 
 \end_inset
 
@@ -2009,7 +2083,7 @@ Und für den Realteil
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 Real-/Imaginärteilbeziehungen auf der 
 \begin_inset ERT
 status inlined
@@ -2138,7 +2212,7 @@ status open
 
 \begin_layout Standard
 Beide Gleichungen bestätigen augenscheinlich 
-\begin_inset Formula $\trf(-\ji\omega)=\conjgt{\trf}(\ji\omega)$
+\begin_inset Formula $\trf(-\ji\omega)=\cjgt[\trf]{\ji\omega}$
 \end_inset
 
 .
@@ -2179,8 +2253,8 @@ cf
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
-\reop[\trf(\ji\omega)] & =\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_even}\\
-\imop[\trf(\ji\omega)] & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\msp.\label{eq:ltisys_causal_imint_even}\end{align}
+\reop\trf(\ji\omega) & =\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_even}\\
+\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\msp.\label{eq:ltisys_causal_imint_even}\end{align}
 
 \end_inset
 
@@ -2223,7 +2297,7 @@ kann man den Beweis relativ leicht umkehren.
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 
 \noun on
 Bode
@@ -2310,7 +2384,7 @@ Offensichtlich kann aber der Term mit
 \end_inset
 
  abhängt.
- Unsere Aufmerksamkeit soll deshalb 
+ Unsere Aufmerksamkeit soll deshalb dem Integral 
 \begin_inset Formula $\int_{0}^{\infty}2\omega/(\omega^{2}-\Omega^{2})\tic\Omega$
 \end_inset
 
@@ -2320,7 +2394,7 @@ Cauchy
 \noun default
 'scher Hauptwert
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Für 
@@ -2403,7 +2477,7 @@ Beide Beziehungen entsprechen folglich den Formeln\InsetSpace ~
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 \begin_inset LatexCommand \label{par:ltisys_causal_infty}
 
 \end_inset
@@ -2437,7 +2511,7 @@ Für LTI-Systeme mit der Eigenschaft
 \begin_layout Standard
 \begin_inset Formula \[
 \lim_{\substack{|\lps|\rightarrow\infty\\
-\reop(\lps)>0}
+\reop\lps>0}
 }\!\trf(\lps)\neq0\msp,\]
 
 \end_inset
@@ -2489,7 +2563,7 @@ Cauchy
 
 .
  Den allgemeinen Fall einer, in der rechten Halbebene analytischen Funktion,
- muß man dementsprechend so korrigieren:
+ muß man deshalb folgendermaßen korrigieren:
 \end_layout
 
 \begin_layout Standard
@@ -2570,7 +2644,7 @@ Außerdem ist wegen der (für reelle Zeitfunktionen immer geltenden) Relation
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\conjgt{\lps})=\conjgt{\trf}(\lps)\msp,\]
+\trf(\cjgt{\lps})=\cjgt[\trf]{\lps}\msp,\]
 
 \end_inset
 
@@ -2586,7 +2660,7 @@ eine Beschränkung des Integrationsweges auf einen positiven Viertelkreis
 \begin_inset Formula \begin{align*}
 \int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega & =-\ji\lim_{r\rightarrow\infty}\left[\int_{-\frac{\pi}{2}}^{0}\trf(r\expf^{\ji\theta})\tic\theta+\int_{0}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta})\tic\theta\right]\\
  & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\trf(r\expf^{-\ji\theta})+\trf(r\expf^{\ji\theta})\tic\theta\\
- & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\conjgt{\trf}(r\expf^{\ji\theta})+\trf(r\expf^{\ji\theta})\tic\theta\\
+ & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\cjgt[\trf]{r\expf^{\ji\theta}}+\trf(r\expf^{\ji\theta})\tic\theta\\
  & =-2\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta\end{align*}
 
 \end_inset
@@ -2763,19 +2837,27 @@ ie
 status open
 
 \begin_layout Standard
-Das gleiche Ergebnis kann man auch gewinnen, wenn die Abhängigkeit zwischen
- Real- und Imaginärteil wie in\InsetSpace ~
+In\InsetSpace ~
 
-\begin_inset LatexCommand \cite[10-2, \noun{Hilbert}-Transformation]{Papoulis:1962}
+\begin_inset LatexCommand \cite[10-5]{Papoulis:1962}
 
 \end_inset
 
- über die 
+ werden LTI-Systeme mit 
+\begin_inset Formula $0<\trf(\infty)<\infty$
+\end_inset
+
+ als nicht-kausal angesehen, denn die Impulsantwort enthält (wie in Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand \vref{sec:ltisys_stability}
+
+\end_inset
+
+ schon dargelegt) unweigerlich 
 \noun on
-Fourier
+Dirac
 \noun default
--Transformierte des geraden und ungeraden Funktionsanteils der Impulsantwort
- abgeleitet wird.
+-Anteile.
 \end_layout
 
 \end_inset
@@ -2800,12 +2882,16 @@ Fourier
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:ltisys_minphase}
 
 \end_inset
 
 Minimalphasensysteme (MPS)
+\end_layout
+
+\begin_layout Subsection
+Eigenschaften
 \end_layout
 
 \begin_layout Standard
@@ -2983,7 +3069,7 @@ Neper
  angeben.
 \end_layout
 
-\begin_layout Emph(asized)
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 \atf(\omega) & =\mathcal{H}\left\{ \phf(\omega)\right\}  & \phf(\omega) & =-\mathcal{H}\left\{ \atf(\omega)\right\} \end{xalignat*}
 
@@ -3004,19 +3090,9 @@ Jordan
 
 .
  Im Allgemeinen kann man von dieser Voraussetzung jedoch nicht ausgehen,
- so daß (genau wie in den Beziehungen\InsetSpace ~
+ so daß genau wie in den Beziehungen\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:ltisys_causal_nonlp_hilbert}
-
-\end_inset
-
-) bei der Integration auf dem Weg 
-\begin_inset Formula $C_{\infty}$
-\end_inset
-
- nach Abbildung\InsetSpace ~
-
-\begin_inset LatexCommand \vref{fig:analysis_halfplane_int_singularity}
 
 \end_inset
 
@@ -3042,14 +3118,24 @@ Jordan
 
 \end_layout
 
+\begin_layout Subsection
+Zerlegungssatz von 
+\noun on
+Bode
+\end_layout
+
 \begin_layout Standard
+\begin_inset LatexCommand \index{Bode@\noun{Bode}!Zerlegungssatz}
+
+\end_inset
+
 Praktisch kann man jedes LTI-System mit rationaler Übertragungsfunktion
 \begin_inset LatexCommand \index{LTI-System!Uebertragungsfunktion@\"{U}bertragungsfunktion}
 
 \end_inset
 
  
-\begin_inset Formula $\trf(\lps)$
+\begin_inset Formula $\trf(\lps)=U(\lps)/V(\lps)$
 \end_inset
 
  als Kettenschaltung eines Allpaß-
@@ -3057,16 +3143,7 @@ Praktisch kann man jedes LTI-System mit rationaler Übertragungsfunktion
 
 \end_inset
 
- und eines Minimalphasensystems verstehen (Zerlegungssatz von 
-\noun on
-Bode
-\noun default
-
-\begin_inset LatexCommand \index{Bode@\noun{Bode}!Zerlegungssatz von}
-
-\end_inset
-
-)\InsetSpace ~
+ und eines Minimalphasensystems verstehen\InsetSpace ~
 
 \begin_inset LatexCommand \cite[10-3]{Papoulis:1962}
 
@@ -3079,6 +3156,11 @@ Bode
 
 , 
 \begin_inset LatexCommand \cite[3.14]{Wunsch:1962}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite[3.5]{Fritzsche:1979a}
 
 \end_inset
 
@@ -3108,16 +3190,34 @@ Bode
 \end_layout
 
 \begin_layout Standard
-Einfache Erweiterung mit 
-\begin_inset Formula $\conjgt{U}_{+}(\lps)$
+Einfache Erweiterung mit dem 
+\noun on
+Hurwitz
+\noun default
+-Polynom 
+\begin_inset Formula $U_{+}(-\lps)$
 \end_inset
 
  ergibt
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die Nullstellen von 
+\begin_inset Formula $U_{+}(-\lps)$
+\end_inset
+
+ besitzen allesamt negative Realteile.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{MPS}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{ALP}}\msp,\]
+\begin_inset Formula \begin{equation}
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{MPS}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{ALP}}\msp,\label{eq:ltisys_mps_split_rational}\end{equation}
 
 \end_inset
 
@@ -3153,11 +3253,11 @@ ein minimalphasiges System
 \end_layout
 
 \begin_layout Itemize
-sowie einen Allpaß 
+sowie einen stabilen Allpaß 
 \begin_inset Formula $\trf_{ALP}$
 \end_inset
 
-, also ein stabiles System mit 
+, also ein System mit 
 \begin_inset Formula $|\trf_{ALP}(\lps)|=1$
 \end_inset
 
@@ -3166,7 +3266,222 @@ sowie einen Allpaß
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\trf_{MPS}(\lps)\,\trf_{ALP}(\lps)\label{eq:ltisys_split_bode}\end{equation}
+\trf(\lps)=\trf_{MPS}(\lps)\cdot\trf_{ALP}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Schlußfolgerungen
+\end_layout
+
+\begin_layout Enumerate
+Der eigentliche Begriff 
+\begin_inset Quotes eld
+\end_inset
+
+Minimalphasensystem
+\begin_inset Quotes erd
+\end_inset
+
+ sollte an dieser Stelle klar werden, wenn man die Gesamtphase
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+-\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{MPS}(\ji\omega)+\ang\trf_{ALP}(\ji\omega)\]
+
+\end_inset
+
+betrachtet.
+ Denn würde der Anteil des Allpaß' vermieden, so reduzierte sich das Gesamtsyste
+m auf ein Minimalphasensystem.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Der determinierte Zusammenhang zwischen Dämpfung und Phase eines Minimalphasensy
+stems besteht aufgrund der Nullstellenlage (
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Analytizität von 
+\begin_inset Formula $\ln\trf_{MPS}(\lps)$
+\end_inset
+
+ und 
+\begin_inset Formula $\ln\trf_{MPS}^{-1}(\lps)$
+\end_inset
+
+ in der rechten 
+\begin_inset Formula $\lt$
+\end_inset
+
+-Halbebene).
+ Die Abhängigkeit von Real- und Imaginärteil der einzelnen Übertragungsfunktion
+ (
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand \ref{sec:ltisys_causality}
+
+\end_inset
+
+) ist davon thematisch unberührt, zumal sich die dadurch bedingte Kausalität
+ und Stabilität auf die Lage der Polstellen bezieht.
+\end_layout
+
+\begin_layout Enumerate
+Aus Formel\InsetSpace ~
+
+\begin_inset LatexCommand \ref{eq:ltisys_mps_split_rational}
+
+\end_inset
+
+ kann man als allgemeine Übertragungsfunktion eines Allpaß' ablesen:
+\end_layout
+
+\begin_deeper
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat*}{3}
+\trf_{ALP}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{ALP}(\omega) & =2\ang G(\ji\omega)\msp.\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Um die Problematik etwas anschaulicher zu gestalten, hier ein Beispiel aus\InsetSpace ~
+
+\begin_inset LatexCommand \cite[10-3]{Papoulis:1962}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{MPS}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{ALP}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie sofort erkennbar, handelt es sich um ein stabiles System mit den Polen
+ 
+\begin_inset Formula $\pn{\lps}{1}=-1$
+\end_inset
+
+ und 
+\begin_inset Formula $\pn{\lps}{2}=-2$
+\end_inset
+
+.
+ Die Nullstelle des Allpaß' bei 
+\begin_inset Formula $\zn{\lps}{}=+1$
+\end_inset
+
+ hat einen positiven Realteil, ist also 
+\begin_inset Formula $\trf_{ALP}(\lps)$
+\end_inset
+
+ richtig zugeordnet.
+ Obwohl insgesamt 
+\begin_inset Formula $\trf(\infty)=0$
+\end_inset
+
+ gilt (
+\noun on
+Jordan
+\noun default
+-Bedingung), verschwindet die Amplitude des Allpaß-Anteils 
+\begin_inset Formula $\trf_{ALP}(\infty)$
+\end_inset
+
+ im Unendlichen nicht
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die Korrespondenz 
+\begin_inset Formula $\mbig{\frac{1-\lps}{1+\lps}}\rlt2\expf^{-t}-\dirac(t)$
+\end_inset
+
+ deutet wegen der Beteiligung eines 
+\noun on
+Dirac
+\noun default
+-Stoßes schon darauf hin.
+\end_layout
+
+\end_inset
+
+.
+ Auch die Partialbruchzerlegung für 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ deutet einerseits auf Stabilität (speziell auch 
+\begin_inset Formula $\irf(\infty)=0$
+\end_inset
+
+), andererseits auch auf Kausalität (
+\begin_inset Formula $\irf(t)=0$
+\end_inset
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset
+
+) hin.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf(\lps)=\frac{3}{2+\lps}-\frac{2}{1+\lps}\rlt\irf(t)=\usf(t)\,(3\expf^{-2t}-2\expf^{-t})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\trf_{ALP}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{MPS}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
+\reop\trf_{ALP}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{MPS}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
+\imop\trf_{ALP}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{MPS}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
 
 \end_inset
 
@@ -3178,19 +3493,16 @@ sowie einen Allpaß
 status open
 
 \begin_layout Standard
-Beispiel in\InsetSpace ~
-
-\begin_inset LatexCommand \cite[10-3]{Papoulis:1962}
-
-\end_inset
-
-:
-\end_layout
-
-\begin_layout Standard
 \begin_inset Formula \begin{align*}
-\trf_{1}(\lps) & =\frac{1}{\lps+2}\\
-\trf_{2}(\lps) & =\frac{1}{\lps+2}\cdot\frac{\lps-1}{\lps+1}\end{align*}
+\mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\}  & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
+ & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
+ & =-\frac{1}{a}\cdot\frac{1}{1+(x/a)^{2}}\\
+ & =-\frac{a}{a^{2}+x^{2}}\end{align*}
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3198,20 +3510,13 @@ Beispiel in\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Obwohl 
-\begin_inset Formula $|\trf_{1}(\ji\omega)|=|\trf_{2}(\ji\omega)|$
-\end_inset
-
- gilt, kommt bei 
-\begin_inset Formula $\trf_{2}(\lps)$
-\end_inset
-
- eine zusätzliche Phase von
+haben voneinander abhängige Real- und Imaginärteile, wie man mit der Transformat
+ionsbeziehung
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-\arctan\frac{2\omega}{1-\omega^{2}}\]
+\mathcal{H}\{\frac{x}{a^{2}+x^{2}}\}=-\frac{a}{a^{2}+x^{2}}\]
 
 \end_inset
 
@@ -3219,15 +3524,39 @@ Obwohl
 \end_layout
 
 \begin_layout Standard
-hinzu!
+feststellt.
 \end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\reop\trf_{ALP}(\ji\omega)-\trf_{ALP}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{ALP}(\ji\omega)\right\} \\
+\reop\trf_{MPS}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{MPS}(\ji\omega)\right\} \end{align*}
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Standard
+Trotzdem besteht ein fester Zusammenhang zwischen Dämpfungs- und Phaseverlauf
+ nur für den Minimalphasenteil 
+\begin_inset Formula $\trf_{MPS}(\lps)$
+\end_inset
+
+, nicht für 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ insgesamt.
+ Der Allpaß-Anteil sorgt insbesondere dafür, daß sich die Phase um den Betrag
+ 
+\begin_inset Formula $\arctan\frac{2\omega}{1-\omega^{2}}$
+\end_inset
+
+ erhöht.
+\end_layout
+
+\begin_layout Section
 Realisierbarkeit
 \end_layout
 
@@ -3236,8 +3565,8 @@ Realisierbarkeit
 
 \end_inset
 
-LTI-Systeme, die sowohl kausal als auch stabil sind, nennt man auch (physikalisc
-h) realisierbar.
+LTI-Systeme, die sowohl kausal als auch stabil sind, nennt man (physikalisch)
+ realisierbar.
  Kausalität bedeutet 
 \begin_inset Formula $y(t)=0$
 \end_inset
@@ -3246,18 +3575,39 @@ h) realisierbar.
 \begin_inset Formula $t<0$
 \end_inset
 
- oder, wie in Abschnitt\InsetSpace ~
-
-\begin_inset LatexCommand \ref{sec:ltisys_causality}
-
+ oder im Bildbereich, daß 
+\begin_inset Formula $\trf(\lps)$
 \end_inset
 
- herausgestellt, daß alle Pole der Übertragungsfunktion einen negativen
- Realteil aufweisen und damit in der linken 
+ in der rechten 
 \begin_inset Formula $\lt$
 \end_inset
 
--Halbebene lokalisiert sind.
+-Halbebene vollständig analytisch ist
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Was dazu führt, daß Real- und Imaginärteil von 
+\begin_inset Formula $\trf(\ji\omega)$
+\end_inset
+
+ über die 
+\noun on
+Hilbert
+\noun default
+-Transformation verbunden sind (siehe Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand \vref{sec:ltisys_causality}
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+.
  Stabilität liegt vor, wenn die Impulsantwort 
 \begin_inset Formula $\irf(t)$
 \end_inset
@@ -3290,13 +3640,17 @@ cf
 
 \end_inset
 
-).
+) oder, bei rationaler Übertragungsfunktion, alle Pole von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ negative Realteile aufweisen.
  Speziell für quadratisch integrierbare
 \begin_inset LatexCommand \index{Konvergenz!quadratische}
 
 \end_inset
 
- Übertragungsfunktionen mit
+ Übertragungsfunktionen
 \begin_inset Foot
 status open
 
@@ -3307,7 +3661,7 @@ Parseval
 \noun default
 'sches Theorem\InsetSpace ~
 
-\begin_inset LatexCommand \cite[2-6]{Papoulis:1962}
+\begin_inset LatexCommand \cite[2-5]{Papoulis:1962}
 
 \end_inset
 
@@ -3334,11 +3688,11 @@ Parseval
 \end_layout
 
 \begin_layout Standard
-können beide Bedingungen im 
+sind diese Bedingungen mit Hilfe des 
 \noun on
 Paley-Wiener
 \noun default
--Kriterium für Realisierbarkeit zusammengefaßt werden
+-Kriteriums für Realisierbarkeit prüfbar
 \begin_inset LatexCommand \index{Paley-Wiener-Kriterium@\noun{Paley-Wiener}-Kriterium}
 
 \end_inset
@@ -3377,11 +3731,11 @@ Paley-Wiener
 \end_layout
 
 \begin_layout Standard
-Die Bedeutung des 
+Die Bedeutung der 
 \noun on
 Paley-Wiener
 \noun default
--Kriteriums liegt unter anderem darin, daß es
+-Bedingung liegt unter anderem darin, daß es
 \end_layout
 
 \begin_layout Itemize
@@ -3428,7 +3782,7 @@ cf
 
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:ltisys_split_bode}
+\begin_inset LatexCommand \ref{eq:ltisys_mps_split_bode}
 
 \end_inset
 
