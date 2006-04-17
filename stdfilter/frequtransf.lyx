@@ -1,0 +1,796 @@
+#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
+\textclass scrartcl
+\language german
+\inputencoding auto
+\fontscheme times
+\graphics default
+\paperfontsize default
+\spacing single
+\papersize a4paper
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Version: $Id: frequtransf.lyx,v 1.1 2006-04-17 12:51:16 ralf Exp $
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Frequenztransformationen
+\end_layout
+
+\begin_layout Subsection
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Aus den Tiefpaﬂapproximationen kann man durch Transformation der logarithmischen
+ Frequenz\SpecialChar \-
+achse relativ leicht Filtertypen wie Hochpaﬂ, Bandpaﬂ oder Bandsperre
+ gewinnen\InsetSpace ~
+
+\begin_inset LatexCommand \cite[5.4~ff.]{Zverev:1967}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite[66.1]{Chen:1995}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite[4]{Fritzsche:1979a}
+
+\end_inset
+
+.
+ Da es sich bei 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ um eine rationale Funktion von 
+\begin_inset Formula $\lps$
+\end_inset
+
+ handelt, sind die folgenden Substitutionen naheliegend
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Die Transformation in einen Tiefpaﬂ dient nur der Skalierung 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Verschiebung der Grenzfrequenz.
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Caption
+\begin_inset LatexCommand \label{tab:ftr_overview}
+
+\end_inset
+
+Frequenztransformationen
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="4">
+<features>
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Zieltyp
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\lps:=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\ji\omega:=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\omega:=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Tiefpaﬂ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\lps}{\omega_{0}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\ji\omega}{\omega_{0}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\omega}{\omega_{0}}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Hochpaﬂ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\omega_{0}}{\lps}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\omega_{0}}{\ji\omega}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{-\frac{\omega_{0}}{\omega}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Bandpaﬂ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{Q\left(\frac{\lps}{\omega_{0}}+\frac{\omega_{0}}{\lps}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\ji Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Bandsperre
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{1}{Q\left(\frac{\lps}{\omega_{0}}+\frac{\omega_{0}}{\lps}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{\ji}{Q\left(\frac{\omega_{0}}{\omega}-\frac{\omega}{\omega_{0}}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{1}{Q\left(\frac{\omega_{0}}{\omega}-\frac{\omega}{\omega_{0}}\right)}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Grˆﬂe 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ dient vor allem dem Zweck, eine geeignete Transformation der Grenzfrequenz(en)
+ zu erreichen.
+ Man kann sie sich entweder als physikalische Frequenz oder einheitenlosen
+ Skalierungsfaktor vorstellen, je nachdem ob 
+\begin_inset Formula $\lps$
+\end_inset
+
+ bei der Tiefpaﬂapproximation als normiert oder entnormiert angenommen wird.
+\end_layout
+
+\begin_layout Subsection
+Hochpaﬂ
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Hochpass@Hochpaﬂ|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ}
+
+\end_inset
+
+Die Substitution 
+\begin_inset Formula $\lps:=\omega_{0}/\lps$
+\end_inset
+
+ nach Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand \ref{tab:ftr_overview}
+
+\end_inset
+
+ entspricht im Amplitudengang einer Spiegelung an der Frequenz 
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+, wenn man von einer logarithmischen Frequenzachse ausgeht (siehe auch Abbildung\InsetSpace ~
+
+\begin_inset LatexCommand \ref{fig:ftr_hp}
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename hp_tol_scheme.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Caption
+\begin_inset LatexCommand \label{fig:ftr_hp}
+
+\end_inset
+
+Hochpaﬂ-Toleranzschema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da bei den Standardapproximationen die normierte Grenzfrequenz
+\begin_inset LatexCommand \index{Grenzfrequenz}
+
+\end_inset
+
+ ¸blicherweise zu 
+\begin_inset Formula $\omega_{g}=1$
+\end_inset
+
+ gew‰hlt wird, kann man 
+\begin_inset Formula $\omega_{0}=1$
+\end_inset
+
+ setzen und f¸r die ‹bertragungsfunktion in der 
+\begin_inset Formula $\lt$
+\end_inset
+
+-Ebene schreiben:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf_{HP}(\lps)=\frac{\poly{a}{(\frac{1}{\lps})}{m}}{\poly{b}{(\frac{1}{\lps})}{n}}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multipliziert man noch den Nenner mit 
+\begin_inset Formula $\lps^{n}$
+\end_inset
+
+ und den Z‰hler mit 
+\begin_inset Formula $\lps^{m}$
+\end_inset
+
+, so f¸hrt dies zu einer Umordnung der Koeffizienten.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf_{HP}(\lps)=\lps^{n-m}\,\frac{a_{0}\lps^{m}+a_{1}\lps^{m-1}+\ldots+a_{m-1}\lps+a_{m}}{b_{0}\lps^{n}+b_{1}\lps^{n-1}+\ldots+b_{n-1}\lps+b_{n}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese Eigenschaft der Transformation korrespondiert mit einer bestimmten
+ Verschiebung der Pol- und Nullstellen in der komplexen Ebene.
+ Sehen wir uns dazu die ‹bertragungsfunktion 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ eines Tiefpaﬂ' in Produktdarstellung an.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ƒhnlich der Summendarstellung wird (mit der Substitution 
+\begin_inset Formula $\lps:=\lps^{-1}$
+\end_inset
+
+) daraus:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\trf_{HP}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\lps}}-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\lps}}-\pn{\lps}{\nu})}\\
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(1-\lps\,\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(1-\lps\,\pn{\lps}{\nu})}\\
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{n}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{m}\pn{\lps}{\nu}}\cdot\frac{\prod\limits _{\mu=1}^{n}(\mbig{\frac{1}{\zn{\lps}{\mu}}}-\lps)}{\prod\limits _{\nu=1}^{m}(\mbig{\frac{1}{\pn{\lps}{\nu}}}-\lps)}\msp,\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Pole und Nullstellen des Tiefpaﬂ' werden invertiert (am Einheitskreis gespiegelt
+);
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\zn{\lps}{} & :=\frac{1}{\zn{\lps}{}}\msp, & \pn{\lps}{} & :=\frac{1}{\pn{\lps}{}}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+es entsteht eine neue Nullstelle bei 
+\begin_inset Formula $\zn{\lps}{}=0$
+\end_inset
+
+ mit der Vielfachheit 
+\begin_inset Formula $n-m$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+als neuer Vorfaktor wirkt das (komplexe) Produkt aller Pole 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Nullstellen:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+(-1)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset LatexCommand \index{Hochpass@Hochpaﬂ|)}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Bandpaﬂ
+\end_layout
+
+\begin_layout Standard
+Folgt man der Abbildungsvorschrift f¸r die Frequenzachse nach Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand \ref{tab:ftr_overview}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega_{HP}=Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)\msp,\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+so folgt als Toleranzschema f¸r den Bandpaﬂ Abbildung\InsetSpace ~
+
+\begin_inset LatexCommand \ref{fig:ftr_bp}
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename bp_tol_scheme.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Caption
+\begin_inset LatexCommand \label{fig:ftr_bp}
+
+\end_inset
+
+Bandpaﬂ-Toleranzschema
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An der normierten Tiefpaﬂ-Grenzfrequenz 
+\begin_inset Formula $\omega_{g}=1$
+\end_inset
+
+ gilt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega=\pm Q\left(\frac{1}{\omega_{0}}-\frac{\omega_{0}}{1}\right)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nullsetzen der einzelnen Faktoren
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+0 & =Q(1+\lps^{2})-\lps\,\pn{\lps}{}\\
+ & =\lps^{2}-\frac{\pn{\lps}{}}{Q}\lps+1\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Quadratische Lˆsungsformel
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\pn{\lps}{i,ii}=\frac{\pn{\lps}{}}{2Q}\pm\sqrt{\frac{\pn[2]{\lps}{}}{4Q^{2}}-1}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+\pn{\lps}{i}\pn{\lps}{ii} & = & 1\\
+\frac{\pn{\lps}{ii}+\pn{\lps}{ii}}{2} & = & \frac{\pn{\lps}{}}{2Q}\\
+\pn{\lps}{ii}-\pn{\lps}{ii} & =\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|(}
+
+\end_inset
+
+
+\begin_inset Formula $\omega_{0}$
+\end_inset
+
+ nimmt die Funktion einer geometrischen Mittenfrequenz wahr.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ƒhnlich der Summendarstellung wird (mit der Substitution 
+\begin_inset Formula $\lps:=Q(\lps+\lps^{-1})$
+\end_inset
+
+) daraus:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\trf_{HP}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q\left(\lps+\mbig{\frac{1}{\lps})}\right)-\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q\left(\lps+\mbig{\frac{1}{\lps})}\right)-\pn{\lps}{\nu}\right]}\\
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}[Q(1+\lps^{2})-\lps\,\zn{\lps}{\mu}]}{\prod\limits _{\nu=1}^{n}[Q(1+\lps^{2})-\lps\,\pn{\lps}{\nu}]}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|)}
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
