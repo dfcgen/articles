@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding auto
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize a4paper
@@ -34,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: frequtransf.lyx,v 1.1 2006-04-17 12:51:16 ralf Exp $
+Version: $Id: frequtransf.lyx,v 1.2 2006-04-19 20:59:18 ralf Exp $
 \end_layout
 
 \end_inset
@@ -43,14 +44,14 @@ Version: $Id: frequtransf.lyx,v 1.1 2006-04-17 12:51:16 ralf Exp $
 \end_layout
 
 \begin_layout Section
-Frequenztransformationen
-\end_layout
-
-\begin_layout Subsection
 Einleitung
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand \index{Frequenztransformationen|(}
+
+\end_inset
+
 Aus den Tiefpaﬂapproximationen kann man durch Transformation der logarithmischen
  Frequenz\SpecialChar \-
 achse relativ leicht Filtertypen wie Hochpaﬂ, Bandpaﬂ oder Bandsperre
@@ -113,7 +114,7 @@ sideways false
 status open
 
 \begin_layout Caption
-\begin_inset LatexCommand \label{tab:ftr_overview}
+\begin_inset LatexCommand \label{tab:frqtf_overview}
 
 \end_inset
 
@@ -391,8 +392,12 @@ Die Grˆﬂe
  bei der Tiefpaﬂapproximation als normiert oder entnormiert angenommen wird.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Hochpaﬂ
+\end_layout
+
+\begin_layout Subsection
+‹bertragungsfunktion
 \end_layout
 
 \begin_layout Standard
@@ -401,7 +406,12 @@ Hochpaﬂ
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ}
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Filter!Hochpass@Hochpaﬂ|(}
 
 \end_inset
 
@@ -411,7 +421,7 @@ Die Substitution
 
  nach Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \ref{tab:ftr_overview}
+\begin_inset LatexCommand \ref{tab:frqtf_overview}
 
 \end_inset
 
@@ -421,7 +431,7 @@ Die Substitution
 
 , wenn man von einer logarithmischen Frequenzachse ausgeht (siehe auch Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:ftr_hp}
+\begin_inset LatexCommand \ref{fig:frqtf_hp}
 
 \end_inset
 
@@ -435,6 +445,7 @@ sideways false
 status open
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename hp_tol_scheme.eps
 
@@ -444,7 +455,7 @@ status open
 \end_layout
 
 \begin_layout Caption
-\begin_inset LatexCommand \label{fig:ftr_hp}
+\begin_inset LatexCommand \label{fig:frqtf_hp}
 
 \end_inset
 
@@ -479,7 +490,7 @@ Da bei den Standardapproximationen die normierte Grenzfrequenz
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf_{HP}(\lps)=\frac{\poly{a}{(\frac{1}{\lps})}{m}}{\poly{b}{(\frac{1}{\lps})}{n}}\msp.\]
+\trf_{\msubtxt{HP}}(\lps)=\frac{\poly{a}{(\frac{1}{\lps})}{m}}{\poly{b}{(\frac{1}{\lps})}{n}}\msp.\]
 
 \end_inset
 
@@ -498,28 +509,39 @@ Multipliziert man noch den Nenner mit
 , so f¸hrt dies zu einer Umordnung der Koeffizienten.
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula \[
-\trf_{HP}(\lps)=\lps^{n-m}\,\frac{a_{0}\lps^{m}+a_{1}\lps^{m-1}+\ldots+a_{m-1}\lps+a_{m}}{b_{0}\lps^{n}+b_{1}\lps^{n-1}+\ldots+b_{n-1}\lps+b_{n}}\]
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+\trf_{\msubtxt{HP}}(\lps)=\lps^{n-m}\,\frac{a_{0}\lps^{m}+a_{1}\lps^{m-1}+\ldots+a_{m-1}\lps+a_{m}}{b_{0}\lps^{n}+b_{1}\lps^{n-1}+\ldots+b_{n-1}\lps+b_{n}}\label{eq:frqtf_hp_rational}\end{equation}
 
 \end_inset
 
 
 \end_layout
 
+\begin_layout Subsection
+Pole und Nullstellen
+\end_layout
+
 \begin_layout Standard
-Diese Eigenschaft der Transformation korrespondiert mit einer bestimmten
- Verschiebung der Pol- und Nullstellen in der komplexen Ebene.
+Die Wirkung der Transformation auf die rationale ‹bertragungsfunktion nach
+ Formel\InsetSpace ~
+
+\begin_inset LatexCommand \ref{eq:frqtf_hp_rational}
+
+\end_inset
+
+ korrespondiert mit einer bestimmten Verschiebung der Pol- und Nullstellen
+ in der komplexen Ebene.
  Sehen wir uns dazu die ‹bertragungsfunktion 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
- eines Tiefpaﬂ' in Produktdarstellung an.
+ eines Tiefpaﬂ' in Linearfaktordarstellung an.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+\trf_{\msubtxt{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
 
 \end_inset
 
@@ -527,18 +549,18 @@ Diese Eigenschaft der Transformation korrespondiert mit einer bestimmten
 \end_layout
 
 \begin_layout Standard
-ƒhnlich der Summendarstellung wird (mit der Substitution 
+Einsetzen der Substitution 
 \begin_inset Formula $\lps:=\lps^{-1}$
 \end_inset
 
-) daraus:
+ l‰ﬂt daraus
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\trf_{HP}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\lps}}-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\lps}}-\pn{\lps}{\nu})}\\
+\trf_{\msubtxt{HP}}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\lps}}-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\lps}}-\pn{\lps}{\nu})}\\
  & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(1-\lps\,\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(1-\lps\,\pn{\lps}{\nu})}\\
- & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{n}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{m}\pn{\lps}{\nu}}\cdot\frac{\prod\limits _{\mu=1}^{n}(\mbig{\frac{1}{\zn{\lps}{\mu}}}-\lps)}{\prod\limits _{\nu=1}^{m}(\mbig{\frac{1}{\pn{\lps}{\nu}}}-\lps)}\msp,\end{align*}
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\zn{\lps}{\mu}}}-\lps)}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\pn{\lps}{\nu}}}-\lps)}\end{align*}
 
 \end_inset
 
@@ -546,6 +568,7 @@ Diese Eigenschaft der Transformation korrespondiert mit einer bestimmten
 \end_layout
 
 \begin_layout Standard
+werden, 
 \begin_inset ERT
 status inlined
 
@@ -562,14 +585,23 @@ ie
 \end_layout
 
 \begin_layout Itemize
-Pole und Nullstellen des Tiefpaﬂ' werden invertiert (am Einheitskreis gespiegelt
-);
+Pole
+\begin_inset LatexCommand \index{Pol!der ‹bertragungsfunktion}
+
+\end_inset
+
+ und Nullstellen
+\begin_inset LatexCommand \index{Nullstellen!der ‹bertragungsfunktion}
+
+\end_inset
+
+ des Tiefpaﬂ' werden invertiert (am Einheitskreis gespiegelt);
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\zn{\lps}{} & :=\frac{1}{\zn{\lps}{}}\msp, & \pn{\lps}{} & :=\frac{1}{\pn{\lps}{}}\end{xalignat*}
+\begin_layout Emph(asized)
+\begin_inset Formula \[
+\zn{\lps}{}:=\frac{1}{\zn{\lps}{}},\qquad\qquad\pn{\lps}{}:=\frac{1}{\pn{\lps}{}}\]
 
 \end_inset
 
@@ -590,7 +622,12 @@ es entsteht eine neue Nullstelle bei
 \end_layout
 
 \begin_layout Itemize
-als neuer Vorfaktor wirkt das (komplexe) Produkt aller Pole 
+als Vorfaktor
+\begin_inset LatexCommand \index{Vorfaktor}
+
+\end_inset
+
+ wirkt nun das (komplexe) Produkt aller Pole 
 \begin_inset ERT
 status inlined
 
@@ -618,6 +655,16 @@ resp
 
 \end_deeper
 \begin_layout Standard
+\begin_inset LatexCommand \index{Filter!Hochpass@Hochpaﬂ|)}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ|)}
+
+\end_inset
+
+
 \begin_inset LatexCommand \index{Hochpass@Hochpaﬂ|)}
 
 \end_inset
@@ -625,14 +672,32 @@ resp
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Section
 Bandpaﬂ
 \end_layout
 
+\begin_layout Subsection
+‹bertragungsfunktion
+\end_layout
+
 \begin_layout Standard
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandpaﬂ|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Filter!Bandpass@Bandpaﬂ|(}
+
+\end_inset
+
 Folgt man der Abbildungsvorschrift f¸r die Frequenzachse nach Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \ref{tab:ftr_overview}
+\begin_inset LatexCommand \ref{tab:frqtf_overview}
 
 \end_inset
 
@@ -640,8 +705,8 @@ Folgt man der Abbildungsvorschrift f¸r die Frequenzachse nach Tabelle\InsetSpace
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{HP}=Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)\msp,\]
+\begin_inset Formula \begin{equation}
+\omega_{\msubtxt{LP}}=Q\left(\frac{\omega_{\msubtxt{BP}}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{\msubtxt{BP}}}\right)\msp,\label{eq:frqtf_bp_map}\end{equation}
 
 \end_inset
 
@@ -649,9 +714,10 @@ Folgt man der Abbildungsvorschrift f¸r die Frequenzachse nach Tabelle\InsetSpace
 \end_layout
 
 \begin_layout Standard
-so folgt als Toleranzschema f¸r den Bandpaﬂ Abbildung\InsetSpace ~
+so ergibt sich als (logarithmisches) Toleranzschema f¸r den Bandpaﬂ die
+ Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:ftr_bp}
+\begin_inset LatexCommand \ref{fig:frqtf_bp}
 
 \end_inset
 
@@ -665,6 +731,7 @@ sideways false
 status open
 
 \begin_layout Standard
+\align center
 \begin_inset Graphics
 	filename bp_tol_scheme.eps
 
@@ -674,7 +741,7 @@ status open
 \end_layout
 
 \begin_layout Caption
-\begin_inset LatexCommand \label{fig:ftr_bp}
+\begin_inset LatexCommand \label{fig:frqtf_bp}
 
 \end_inset
 
@@ -687,97 +754,42 @@ Bandpaﬂ-Toleranzschema
 \end_layout
 
 \begin_layout Standard
-An der normierten Tiefpaﬂ-Grenzfrequenz 
-\begin_inset Formula $\omega_{g}=1$
-\end_inset
-
- gilt
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-\omega=\pm Q\left(\frac{1}{\omega_{0}}-\frac{\omega_{0}}{1}\right)\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Nullsetzen der einzelnen Faktoren
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{align*}
-0 & =Q(1+\lps^{2})-\lps\,\pn{\lps}{}\\
- & =\lps^{2}-\frac{\pn{\lps}{}}{Q}\lps+1\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Quadratische Lˆsungsformel
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-\pn{\lps}{i,ii}=\frac{\pn{\lps}{}}{2Q}\pm\sqrt{\frac{\pn[2]{\lps}{}}{4Q^{2}}-1}\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-mit
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
-\pn{\lps}{i}\pn{\lps}{ii} & = & 1\\
-\frac{\pn{\lps}{ii}+\pn{\lps}{ii}}{2} & = & \frac{\pn{\lps}{}}{2Q}\\
-\pn{\lps}{ii}-\pn{\lps}{ii} & =\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|(}
-
-\end_inset
-
-
+Die Frequenz 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- nimmt die Funktion einer geometrischen Mittenfrequenz wahr.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+ nimmt in diesem Fall die Bedeutung der Mittenfrequenz
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Mittenfrequenz}
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-ƒhnlich der Summendarstellung wird (mit der Substitution 
-\begin_inset Formula $\lps:=Q(\lps+\lps^{-1})$
+ an, 
+\begin_inset Formula $Q$
 \end_inset
 
-) daraus:
+ bezeichnet man als G¸te
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Guete@G¸te}
+
+\end_inset
+
+.
+ Aus der Transformationsvorschrift\InsetSpace ~
+
+\begin_inset LatexCommand \ref{eq:frqtf_bp_map}
+
+\end_inset
+
+ folgt mit 
+\begin_inset Formula $\omega_{0}=1$
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\trf_{HP}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q\left(\lps+\mbig{\frac{1}{\lps})}\right)-\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q\left(\lps+\mbig{\frac{1}{\lps})}\right)-\pn{\lps}{\nu}\right]}\\
- & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}[Q(1+\lps^{2})-\lps\,\zn{\lps}{\mu}]}{\prod\limits _{\nu=1}^{n}[Q(1+\lps^{2})-\lps\,\pn{\lps}{\nu}]}\end{align*}
+0 & =\omega_{\msubtxt{BP}}-\frac{\omega_{\msubtxt{LP}}}{Q}-\frac{1}{\omega_{\msubtxt{BP}}}\\
+0 & =\omega_{\msubtxt{BP}}^{2}-\frac{\omega_{\msubtxt{LP}}}{Q}\omega_{\msubtxt{BP}}-1\end{align*}
 
 \end_inset
 
@@ -785,7 +797,518 @@ mit
 \end_layout
 
 \begin_layout Standard
+und weiter bei formaler Anwendung der quadratischen Lˆsungsformel f¸r solche
+ Gleichungen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega_{\msubtxt{BP}_{1,2}}=\frac{\omega_{\msubtxt{LP}}}{2Q}\pm\sqrt{\left(\frac{\omega_{\msubtxt{LP}}}{2Q}\right)^{2}+1}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Was wir hierbei allerdings ber¸cksichtigen m¸ssen ist die Tatsache, daﬂ
+ sich die Frequenztransformation sowohl auf positive als auch negative Kreisfreq
+uenzen st¸tzt.
+ Dazu kommt, daﬂ wegen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\frac{\omega_{\msubtxt{LP}}}{2Q}<\sqrt{\left(\frac{\omega_{\msubtxt{LP}}}{2Q}\right)^{2}+1}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+eine der beiden Frequenzen 
+\begin_inset Formula $\omega_{\msubtxt{BP}}$
+\end_inset
+
+ in der gewonnenen Lˆsungsformel immer negativ wird.
+ Man darf sich nun insofern nicht t‰uschen lassen, als das die andere zugehˆrige
+ Frequenz (mit gleichem Vorzeichen) durch Einsetzen von 
+\begin_inset Formula $-\omega_{\msubtxt{LP}}$
+\end_inset
+
+ erzeugt wird.
+ F¸r den (normierten) Zusammenhang zwischen 
+\begin_inset Formula $\omega_{\msubtxt{LP}}$
+\end_inset
+
+ und 
+\begin_inset Formula $\omega_{\msubtxt{BP}}$
+\end_inset
+
+ ergibt sich aus diesen Gr¸nden letztlich:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+\omega_{\msubtxt{BP}_{1,2}}=\sqrt{\left(\frac{\omega_{\msubtxt{LP}}}{2Q}\right)^{2}+1}\:\pm\frac{\omega_{\msubtxt{LP}}}{2Q}\msp.\label{eq:frqtf_bp_mapinv}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Jede Frequenz des Tiefpasses wird demzufolge auf zwei neue Frequenzen abgebildet
+, die (arithmetisch) symmetrisch zu dem Wurzelausdruck 
+\begin_inset Formula $\sqrt{\smash[b]{1+(\omega_{\msubtxt{LP}}/2Q)^{2}}}$
+\end_inset
+
+ liegen.
+ F¸r die Abbildung der Grenzfrequenz 
+\begin_inset Formula $\omega_{g}=1$
+\end_inset
+
+ (der normierten Approximationsfunktion) bedeutet dies:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega_{g_{1,2}}=\sqrt{\left(\frac{1}{2Q}\right)^{2}+1}\:\pm\frac{1}{2Q}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und f¸r die Mittenfrequenz des Bandpaﬂ': 
+\begin_inset Formula $\omega_{\msubtxt{BP}}=1$
+\end_inset
+
+ (aus vorher 
+\begin_inset Formula $\omega_{\msubtxt{LP}}=0$
+\end_inset
+
+).
+ F¸r das Produkt der beiden Grenzfrequenzen kann man bei Anwendung des dritten
+ binomischen Satzes sofort ablesen:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+\omega_{g_{1}}\omega_{g_{2}}=1,\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ die so gewonnene Bandpaﬂcharakteristik verl‰uft im geometrischen Sinn
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Bei logarithmischer Abszisse 
+\begin_inset Formula $\omega_{\msubtxt{BP}}$
+\end_inset
+
+ liegen logischerweise auch die beiden Grenzfrequenzen symmetrisch zu 
+\begin_inset Formula $\omega_{0}=1$
+\end_inset
+
+.
+ Aus arithmetischer Sicht (
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ linearer Frequenzachse) ist dem nicht so, denn es gilt: 
+\begin_inset Formula $(\omega_{g_{1}}+\omega_{g_{2}})/2=\sqrt{\smash[b]{1+(2Q)^{-2}}}\neq1$
+\end_inset
+
+.
+ Allerdings wird f¸r G¸ten 
+\begin_inset Formula $Q\gg1/2$
+\end_inset
+
+, welche aus technischer Sicht den Sinn eines Bandpaﬂ' darstellen, diese
+ Abweichung vernachl‰ssigbar und dadurch 
+\begin_inset Formula $(\omega_{g_{1}}+\omega_{g_{2}})/2\approx1$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ symmetrisch zur Mittenfrequenz
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Mittenfrequenz}
+
+\end_inset
+
+ 
+\begin_inset Formula $\omega_{0}=1$
+\end_inset
+
+.
+ Den Sinn, 
+\begin_inset Formula $Q$
+\end_inset
+
+ als G¸tedefinition
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Guete@G¸te}
+
+\end_inset
+
+ zu nehmen, unterstreicht folgende Formel f¸r die Bandbreite
+\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Bandbreite}
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Solange man bei normierten Grˆﬂen und der Mittenfrequenz 
+\begin_inset Formula $\omega_{0}=1$
+\end_inset
+
+ bleibt, gibt es keinen Unterschied zwischen absoluter und relativer Bandbreite.
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \[
+\Delta\!\omega=\omega_{g_{2}}-\omega_{g_{1}}=\frac{1}{Q}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Pole und Nullstellen
+\end_layout
+
+\begin_layout Standard
+Was die Transformation der Pol- und Nullstellen angeht, so gilt daf¸r grunds‰tzl
+ich ebenfalls Formel\InsetSpace ~
+
+\begin_inset LatexCommand \ref{eq:frqtf_bp_mapinv}
+
+\end_inset
+
+.
+ Um eine gewisse Geradlinigkeit zu wahren, w‰hlen wir jedoch den 
+\begin_inset Quotes eld
+\end_inset
+
+umst‰ndlichen
+\begin_inset Quotes erd
+\end_inset
+
+ Weg
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Da Pole und Nullstellen bei der Transformation nach dem gleichen Schema
+ wie jede andere Frequenz abgebildet werden, kann man sie einfach in die
+ Transformationsbeziehung 
+\begin_inset Formula $\lps_{\msubtxt{LP}}=Q(\lps_{\msubtxt{BP}}+\lps_{\msubtxt{BP}}^{-1})$
+\end_inset
+
+ einsetzen und gelangt sofort zu: 
+\begin_inset Formula $\pn{\lps}{\msubtxt{LP}}=Q(1+\pn[2]{\lps}{\msubtxt{BP}})/\pn{\lps}{\msubtxt{BP}}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ und substituieren in der Produktdarstellung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\trf_{\msubtxt{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+zuerst die 
+\begin_inset Formula $\lt$
+\end_inset
+
+-Variable 
+\begin_inset Formula $\lps:=Q(\lps+\lps^{-1})$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\trf_{\msubtxt{LP}}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q\left(\lps+\mbig{\frac{1}{\lps}}\right)-\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q\left(\lps+\mbig{\frac{1}{\lps}}\right)-\pn{\lps}{\nu}\right]}\\
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q(1+\lps^{2})-\lps\,\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q(1+\lps^{2})-\lps\,\pn{\lps}{\nu}\right]}\\
+ & =\left(\frac{\lps}{Q}\right)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left(\lps^{2}-\mbig{\frac{\zn{\lps}{\mu}}{Q}}\lps+1\right)}{\prod\limits _{\nu=1}^{n}\left(\lps^{2}-\mbig{\frac{\pn{\lps}{\nu}}{Q}}\lps+1\right)}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus jedem Linearfaktor der Tiefpaﬂ-‹bertragungsfunktion entspringen (wegen
+ des quadratischen Auftretens von 
+\begin_inset Formula $\lps$
+\end_inset
+
+ in letzter Gleichung) also zwei neue Wurzeln.
+ Die Evaluation erfolgt durch Nullsetzen eines Faktors (hier beispielhaft
+ an einer Nullstelle) und Anwendung der quadratischen Lˆsungsformel.
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \[
+\zn{\lps}{\msubtxt{BP}_{1,2}}=\frac{\zn{\lps}{}}{2Q}\pm\sqrt{\left(\frac{\zn{\lps}{}}{2Q}\right)^{2}-1},\quad\mbox{mit}\quad\zn{\lps}{\msubtxt{BP}_{1}}\zn{\lps}{\msubtxt{BP}_{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zusammenfassend kann festgestellt werden, daﬂ:
+\end_layout
+
+\begin_layout Itemize
+jede Nullstelle
+\begin_inset LatexCommand \index{Nullstellen!der ‹bertragungsfunktion}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Pol!der ‹bertragungsfunktion}
+
+\end_inset
+
+ (und sinngem‰ﬂ jeder Pol) nach
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\zn{\lps}{\msubtxt{BP}_{1,2}} & =\frac{1}{2Q}\left(\zn{\lps}{}\pm\sqrt{\zn[2]{\lps}{}-4Q^{2}}\,\right)\\
+\pn{\lps}{\msubtxt{BP}_{1,2}} & =\frac{1}{2Q}\left(\pn{\lps}{}\pm\sqrt{\pn[2]{\lps}{}-4Q^{2}}\,\right)\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wieder zwei neue Nullstellen hervorbringt, wobei reelle Nullstellen nur
+ unter der Bedingung 
+\begin_inset Formula $\zn{\lps}{}\geq2Q$
+\end_inset
+
+ auch wieder reelle erzeugen (ansonsten ein konjugiert-komplexes Nullstellenpaar
+);
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+die Transformation der Frequenzachse zu einer neuen Nullstelle bei 
+\begin_inset Formula $\zn{\lps}{}=0$
+\end_inset
+
+ mit der Vielfachheit 
+\begin_inset Formula $n-m$
+\end_inset
+
+ f¸hrt;
+\end_layout
+
+\begin_layout Itemize
+als neuer Vorfaktor
+\begin_inset LatexCommand \index{Vorfaktor}
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+\frac{a_{m}}{b_{n}}Q^{-(n-m)}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wirkt.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset LatexCommand \index{Filter!Bandpass@Bandpaﬂ|)}
+
+\end_inset
+
+
 \begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|)}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandpaﬂ|)}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Bandsperre
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Bandsperre|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandsperre|(}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Filter!Bandsperre|(}
+
+\end_inset
+
+Zur Bandsperre bleibt nicht soviel zu sagen -- vor allem weil sich diese
+ Frequenztransformation als Kombination von Bandpaﬂ und Hochpaﬂ erweist.
+ Vergleicht man n‰mlich die Beziehung f¸r die Bandsperre
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega_{\msubtxt{LP}}=\frac{1}{Q\left(\frac{1}{\omega_{\msubtxt{BS}}}-\omega_{\msubtxt{BS}}\right)}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit Formel\InsetSpace ~
+ des Bandpaﬂ, so stellt man fest, daﬂ 
+\begin_inset Formula $\omega_{\msubtxt{LP}}$
+\end_inset
+
+ der Tiefpaﬂ-Bandpaﬂ-Transformation einfach nur durch 
+\begin_inset Formula $\omega_{\msubtxt{LP}}^{-1}$
+\end_inset
+
+ zu ersetzen ist.
+ Im Vergleich mit 
+\begin_inset LatexCommand \ref{eq:frqtf_bp_mapinv}
+
+\end_inset
+
+ kann man sofort die inverse Beziehung ablesen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\omega_{\msubtxt{BS}_{1,2}}=\sqrt{\left(\frac{1}{2Q\,\omega_{\msubtxt{LP}}}\right)^{2}+1}\:\pm\frac{1}{2Q\,\omega_{\msubtxt{LP}}}=\frac{\sqrt{4Q^{2}\omega_{\msubtxt{LP}}^{2}+1}\:\pm1}{2Q\,\omega_{\msubtxt{LP}}}\msp.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\align center
+\begin_inset Graphics
+	filename bs_tol_scheme.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Caption
+Bandsperre
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Filter!Bandsperre|)}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandsperre|)}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Bandsperre|)}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \index{Frequenztransformationen|)}
 
 \end_inset
 
