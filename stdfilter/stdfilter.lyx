@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -46,7 +46,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: stdfilter.lyx,v 1.10 2006-04-09 16:36:58 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.11 2006-04-19 21:02:38 ralf Exp $
 \end_layout
 
 \begin_layout Itemize
@@ -267,9 +267,9 @@ resp
 \begin_layout Standard
 Approximationsvorschriften im Zeitbereich, numerische Verfahren sowie die
  Näherung von anderen charakteristischen Größen, wie der Gruppenlaufzeit
- oder des Phasengangs werden bei den Betrachtungen fast vollständig ausgespart
+ oder des Phasengangs, werden bei den Betrachtungen fast vollständig ausgespart
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Approximationen im Zeitbereich (
@@ -300,32 +300,24 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Hli:1954}
+\begin_inset LatexCommand \cite{Hli:1954,Kautz:1954,Gumowski:1958,Guillemin:1957,Zverev:1967}
 
 \end_inset
 
-, 
-\begin_inset LatexCommand \cite{Kautz:1954}
-
-\end_inset
-
-, 
-\begin_inset LatexCommand \cite{Henderson:1958}
-
-\end_inset
-
-, 
-\begin_inset LatexCommand \cite{Gumowski:1958}
-
-\end_inset
-
-, 
-\begin_inset LatexCommand \cite{Guillemin:1957}
-
-\end_inset
-
- behandelt.
+ untersucht.
 \end_layout
+
+\end_inset
+
+.
+ Ebenfalls nicht behandelt (und außerdem vorausgesetzt) werden die Grundlagen
+ der 
+\noun on
+Fourier
+\noun default
+-Analyse, für welche es wirklich gute Literatur gibt\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Papoulis:1962,Bracewell:2003,Koerner:1988,Kuepfmueller:1968,Marko:1995,Fritzsche:1985}
 
 \end_inset
 
@@ -436,6 +428,19 @@ preview false
 
 \begin_layout Standard
 \begin_inset Include \include{bessel.lyx}
+preview false
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Frequenztransformationen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Include \include{frequtransf.lyx}
 preview false
 
 \end_inset
