@@ -1,6 +1,6 @@
 // Plot of Cauer bandpass
 //
-// $Id: bp_tol_scheme.sci,v 1.1 2006-04-17 12:47:51 ralf Exp $
+// $Id: bp_tol_scheme.sci,v 1.2 2006-04-19 20:51:13 ralf Exp $
 //
 
 filename="bp_tol_scheme.fig";
@@ -12,7 +12,7 @@ epsilon=1.0;A=60;                       //ripple parameters
 n=4;omegac=1;
 m=find_freq(epsilon,A,n);
 omegar=omegac/sqrt(m);
-Q=2.0                                   // quality
+Q=2.0;                                  // quality
 [z,p,g]=zpell(epsilon,A,omegac,omegar);
 
 //lowpass transfer function calculation
