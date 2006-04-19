@@ -1,0 +1,1680 @@
+%!PS-Adobe-2.0 EPSF-2.0
+%%Title: bs_tol_scheme.fig
+%%Creator: fig2dev Version 3.2 Patchlevel 5-alpha5
+%%CreationDate: Wed Apr 19 12:34:23 2006
+%%For: ralf@dfcgen (Ralf Hoppe,,,)
+%%BoundingBox: 0 0 358 252
+%Magnification: 1.0000
+%%EndComments
+/MyAppDict 100 dict dup begin def
+/$F2psDict 200 dict def
+$F2psDict begin
+$F2psDict /mtrx matrix put
+/col-1 {0 setgray} bind def
+/col0 {0.000 0.000 0.000 srgb} bind def
+/col1 {0.000 0.000 1.000 srgb} bind def
+/col2 {0.000 1.000 0.000 srgb} bind def
+/col3 {0.000 1.000 1.000 srgb} bind def
+/col4 {1.000 0.000 0.000 srgb} bind def
+/col5 {1.000 0.000 1.000 srgb} bind def
+/col6 {1.000 1.000 0.000 srgb} bind def
+/col7 {1.000 1.000 1.000 srgb} bind def
+/col8 {0.000 0.000 0.560 srgb} bind def
+/col9 {0.000 0.000 0.690 srgb} bind def
+/col10 {0.000 0.000 0.820 srgb} bind def
+/col11 {0.530 0.810 1.000 srgb} bind def
+/col12 {0.000 0.560 0.000 srgb} bind def
+/col13 {0.000 0.690 0.000 srgb} bind def
+/col14 {0.000 0.820 0.000 srgb} bind def
+/col15 {0.000 0.560 0.560 srgb} bind def
+/col16 {0.000 0.690 0.690 srgb} bind def
+/col17 {0.000 0.820 0.820 srgb} bind def
+/col18 {0.560 0.000 0.000 srgb} bind def
+/col19 {0.690 0.000 0.000 srgb} bind def
+/col20 {0.820 0.000 0.000 srgb} bind def
+/col21 {0.560 0.000 0.560 srgb} bind def
+/col22 {0.690 0.000 0.690 srgb} bind def
+/col23 {0.820 0.000 0.820 srgb} bind def
+/col24 {0.500 0.190 0.000 srgb} bind def
+/col25 {0.630 0.250 0.000 srgb} bind def
+/col26 {0.750 0.380 0.000 srgb} bind def
+/col27 {1.000 0.500 0.500 srgb} bind def
+/col28 {1.000 0.630 0.630 srgb} bind def
+/col29 {1.000 0.750 0.750 srgb} bind def
+/col30 {1.000 0.880 0.880 srgb} bind def
+/col31 {1.000 0.840 0.000 srgb} bind def
+/col32 {0.000 0.000 0.000 srgb} bind def
+/col33 {0.000 0.000 1.000 srgb} bind def
+/col34 {0.000 1.000 0.000 srgb} bind def
+/col35 {0.000 1.000 1.000 srgb} bind def
+/col36 {1.000 0.000 0.000 srgb} bind def
+/col37 {1.000 0.000 1.000 srgb} bind def
+/col38 {1.000 1.000 0.000 srgb} bind def
+/col39 {1.000 1.000 1.000 srgb} bind def
+/col40 {0.000 0.000 0.561 srgb} bind def
+/col41 {0.000 0.000 0.686 srgb} bind def
+/col42 {0.000 0.000 0.812 srgb} bind def
+/col43 {0.529 0.808 1.000 srgb} bind def
+/col44 {0.000 0.561 0.000 srgb} bind def
+/col45 {0.000 0.686 0.000 srgb} bind def
+/col46 {0.000 0.812 0.000 srgb} bind def
+/col47 {0.000 0.561 0.561 srgb} bind def
+/col48 {0.000 0.686 0.686 srgb} bind def
+/col49 {0.000 0.812 0.812 srgb} bind def
+/col50 {0.561 0.000 0.000 srgb} bind def
+/col51 {0.686 0.000 0.000 srgb} bind def
+/col52 {0.812 0.000 0.000 srgb} bind def
+/col53 {0.561 0.000 0.561 srgb} bind def
+/col54 {0.686 0.000 0.686 srgb} bind def
+/col55 {0.812 0.000 0.812 srgb} bind def
+/col56 {0.498 0.184 0.000 srgb} bind def
+/col57 {0.624 0.247 0.000 srgb} bind def
+/col58 {0.749 0.373 0.000 srgb} bind def
+/col59 {1.000 0.498 0.498 srgb} bind def
+/col60 {1.000 0.624 0.624 srgb} bind def
+/col61 {1.000 0.749 0.749 srgb} bind def
+/col62 {1.000 0.875 0.875 srgb} bind def
+/col63 {1.000 0.843 0.000 srgb} bind def
+/col64 {0.000 0.000 0.000 srgb} bind def
+/col65 {1.000 1.000 1.000 srgb} bind def
+
+end
+save
+newpath 0 252 moveto 0 0 lineto 358 0 lineto 358 252 lineto closepath clip newpath
+% Fill background color
+0 0 moveto 358 0 lineto 358 252 lineto 0 252 lineto
+closepath 1.00 1.00 1.00 setrgbcolor fill
+
+-2.9 256.2 translate
+1 -1 scale
+
+% This junk string is used by the show operators
+/PATsstr 1 string def
+/PATawidthshow { 	% cx cy cchar rx ry string
+  % Loop over each character in the string
+  {  % cx cy cchar rx ry char
+    % Show the character
+    dup				% cx cy cchar rx ry char char
+    PATsstr dup 0 4 -1 roll put	% cx cy cchar rx ry char (char)
+    false charpath		% cx cy cchar rx ry char
+    /clip load PATdraw
+    % Move past the character (charpath modified the
+    % current point)
+    currentpoint			% cx cy cchar rx ry char x y
+    newpath
+    moveto			% cx cy cchar rx ry char
+    % Reposition by cx,cy if the character in the string is cchar
+    3 index eq {			% cx cy cchar rx ry
+      4 index 4 index rmoveto
+    } if
+    % Reposition all characters by rx ry
+    2 copy rmoveto		% cx cy cchar rx ry
+  } forall
+  pop pop pop pop pop		% -
+  currentpoint
+  newpath
+  moveto
+} bind def
+/PATcg {
+  7 dict dup begin
+    /lw currentlinewidth def
+    /lc currentlinecap def
+    /lj currentlinejoin def
+    /ml currentmiterlimit def
+    /ds [ currentdash ] def
+    /cc [ currentrgbcolor ] def
+    /cm matrix currentmatrix def
+  end
+} bind def
+% PATdraw - calculates the boundaries of the object and
+% fills it with the current pattern
+/PATdraw {			% proc
+  save exch
+    PATpcalc			% proc nw nh px py
+    5 -1 roll exec		% nw nh px py
+    newpath
+    PATfill			% -
+  restore
+} bind def
+% PATfill - performs the tiling for the shape
+/PATfill { % nw nh px py PATfill -
+  PATDict /CurrentPattern get dup begin
+    setfont
+    % Set the coordinate system to Pattern Space
+    PatternGState PATsg
+    % Set the color for uncolored pattezns
+    PaintType 2 eq { PATDict /PColor get PATsc } if
+    % Create the string for showing
+    3 index string		% nw nh px py str
+    % Loop for each of the pattern sources
+    0 1 Multi 1 sub {		% nw nh px py str source
+	% Move to the starting location
+	3 index 3 index		% nw nh px py str source px py
+	moveto			% nw nh px py str source
+	% For multiple sources, set the appropriate color
+	Multi 1 ne { dup PC exch get PATsc } if
+	% Set the appropriate string for the source
+	0 1 7 index 1 sub { 2 index exch 2 index put } for pop
+	% Loop over the number of vertical cells
+	3 index 		% nw nh px py str nh
+	{			% nw nh px py str
+	  currentpoint		% nw nh px py str cx cy
+	  2 index oldshow	% nw nh px py str cx cy
+	  YStep add moveto	% nw nh px py str
+	} repeat		% nw nh px py str
+    } for
+    5 { pop } repeat
+  end
+} bind def
+
+% PATkshow - kshow with the current pattezn
+/PATkshow {			% proc string
+  exch bind			% string proc
+  1 index 0 get			% string proc char
+  % Loop over all but the last character in the string
+  0 1 4 index length 2 sub {
+				% string proc char idx
+    % Find the n+1th character in the string
+    3 index exch 1 add get	% string proc char char+1
+    exch 2 copy			% strinq proc char+1 char char+1 char
+    % Now show the nth character
+    PATsstr dup 0 4 -1 roll put	% string proc chr+1 chr chr+1 (chr)
+    false charpath		% string proc char+1 char char+1
+    /clip load PATdraw
+    % Move past the character (charpath modified the current point)
+    currentpoint newpath moveto
+    % Execute the user proc (should consume char and char+1)
+    mark 3 1 roll		% string proc char+1 mark char char+1
+    4 index exec		% string proc char+1 mark...
+    cleartomark			% string proc char+1
+  } for
+  % Now display the last character
+  PATsstr dup 0 4 -1 roll put	% string proc (char+1)
+  false charpath		% string proc
+  /clip load PATdraw
+  neewath
+  pop pop			% -
+} bind def
+% PATmp - the makepattern equivalent
+/PATmp {			% patdict patmtx PATmp patinstance
+  exch dup length 7 add		% We will add 6 new entries plus 1 FID
+  dict copy			% Create a new dictionary
+  begin
+    % Matrix to install when painting the pattern
+    TilingType PATtcalc
+    /PatternGState PATcg def
+    PatternGState /cm 3 -1 roll put
+    % Check for multi pattern sources (Level 1 fast color patterns)
+    currentdict /Multi known not { /Multi 1 def } if
+    % Font dictionary definitions
+    /FontType 3 def
+    % Create a dummy encoding vector
+    /Encoding 256 array def
+    3 string 0 1 255 {
+      Encoding exch dup 3 index cvs cvn put } for pop
+    /FontMatrix matrix def
+    /FontBBox BBox def
+    /BuildChar {
+	mark 3 1 roll		% mark dict char
+	exch begin
+	Multi 1 ne {PaintData exch get}{pop} ifelse  % mark [paintdata]
+	  PaintType 2 eq Multi 1 ne or
+	  { XStep 0 FontBBox aload pop setcachedevice }
+	  { XStep 0 setcharwidth } ifelse
+	  currentdict		% mark [paintdata] dict
+	  /PaintProc load	% mark [paintdata] dict paintproc
+	end
+	gsave
+	  false PATredef exec true PATredef
+	grestore
+	cleartomark		% -
+    } bind def
+    currentdict
+  end				% newdict
+  /foo exch			% /foo newlict
+  definefont			% newfont
+} bind def
+% PATpcalc - calculates the starting point and width/height
+% of the tile fill for the shape
+/PATpcalc {	% - PATpcalc nw nh px py
+  PATDict /CurrentPattern get begin
+    gsave
+	% Set up the coordinate system to Pattern Space
+	% and lock down pattern
+	PatternGState /cm get setmatrix
+	BBox aload pop pop pop translate
+	% Determine the bounding box of the shape
+	pathbbox			% llx lly urx ury
+    grestore
+    % Determine (nw, nh) the # of cells to paint width and height
+    PatHeight div ceiling		% llx lly urx qh
+    4 1 roll				% qh llx lly urx
+    PatWidth div ceiling		% qh llx lly qw
+    4 1 roll				% qw qh llx lly
+    PatHeight div floor			% qw qh llx ph
+    4 1 roll				% ph qw qh llx
+    PatWidth div floor			% ph qw qh pw
+    4 1 roll				% pw ph qw qh
+    2 index sub cvi abs			% pw ph qs qh-ph
+    exch 3 index sub cvi abs exch	% pw ph nw=qw-pw nh=qh-ph
+    % Determine the starting point of the pattern fill
+    %(px, py)
+    4 2 roll				% nw nh pw ph
+    PatHeight mul			% nw nh pw py
+    exch				% nw nh py pw
+    PatWidth mul exch			% nw nh px py
+  end
+} bind def
+
+% Save the original routines so that we can use them later on
+/oldfill	/fill load def
+/oldeofill	/eofill load def
+/oldstroke	/stroke load def
+/oldshow	/show load def
+/oldashow	/ashow load def
+/oldwidthshow	/widthshow load def
+/oldawidthshow	/awidthshow load def
+/oldkshow	/kshow load def
+
+% These defs are necessary so that subsequent procs don't bind in
+% the originals
+/fill	   { oldfill } bind def
+/eofill	   { oldeofill } bind def
+/stroke	   { oldstroke } bind def
+/show	   { oldshow } bind def
+/ashow	   { oldashow } bind def
+/widthshow { oldwidthshow } bind def
+/awidthshow { oldawidthshow } bind def
+/kshow 	   { oldkshow } bind def
+/PATredef {
+  MyAppDict begin
+    {
+    /fill { /clip load PATdraw newpath } bind def
+    /eofill { /eoclip load PATdraw newpath } bind def
+    /stroke { PATstroke } bind def
+    /show { 0 0 null 0 0 6 -1 roll PATawidthshow } bind def
+    /ashow { 0 0 null 6 3 roll PATawidthshow }
+    bind def
+    /widthshow { 0 0 3 -1 roll PATawidthshow }
+    bind def
+    /awidthshow { PATawidthshow } bind def
+    /kshow { PATkshow } bind def
+  } {
+    /fill   { oldfill } bind def
+    /eofill { oldeofill } bind def
+    /stroke { oldstroke } bind def
+    /show   { oldshow } bind def
+    /ashow  { oldashow } bind def
+    /widthshow { oldwidthshow } bind def
+    /awidthshow { oldawidthshow } bind def
+    /kshow  { oldkshow } bind def
+    } ifelse
+  end
+} bind def
+false PATredef
+% Conditionally define setcmykcolor if not available
+/setcmykcolor where { pop } {
+  /setcmykcolor {
+    1 sub 4 1 roll
+    3 {
+	3 index add neg dup 0 lt { pop 0 } if 3 1 roll
+    } repeat
+    setrgbcolor - pop
+  } bind def
+} ifelse
+/PATsc {		% colorarray
+  aload length		% c1 ... cn length
+    dup 1 eq { pop setgray } { 3 eq { setrgbcolor } { setcmykcolor
+  } ifelse } ifelse
+} bind def
+/PATsg {		% dict
+  begin
+    lw setlinewidth
+    lc setlinecap
+    lj setlinejoin
+    ml setmiterlimit
+    ds aload pop setdash
+    cc aload pop setrgbcolor
+    cm setmatrix
+  end
+} bind def
+
+/PATDict 3 dict def
+/PATsp {
+  true PATredef
+  PATDict begin
+    /CurrentPattern exch def
+    % If it's an uncolored pattern, save the color
+    CurrentPattern /PaintType get 2 eq {
+      /PColor exch def
+    } if
+    /CColor [ currentrgbcolor ] def
+  end
+} bind def
+% PATstroke - stroke with the current pattern
+/PATstroke {
+  countdictstack
+  save
+  mark
+  {
+    currentpoint strokepath moveto
+    PATpcalc				% proc nw nh px py
+    clip newpath PATfill
+    } stopped {
+	(*** PATstroke Warning: Path is too complex, stroking
+	  with gray) =
+    cleartomark
+    restore
+    countdictstack exch sub dup 0 gt
+	{ { end } repeat } { pop } ifelse
+    gsave 0.5 setgray oldstroke grestore
+  } { pop restore pop } ifelse
+  newpath
+} bind def
+/PATtcalc {		% modmtx tilingtype PATtcalc tilematrix
+  % Note: tiling types 2 and 3 are not supported
+  gsave
+    exch concat					% tilingtype
+    matrix currentmatrix exch			% cmtx tilingtype
+    % Tiling type 1 and 3: constant spacing
+    2 ne {
+	% Distort the pattern so that it occupies
+	% an integral number of device pixels
+	dup 4 get exch dup 5 get exch		% tx ty cmtx
+	XStep 0 dtransform
+	round exch round exch			% tx ty cmtx dx.x dx.y
+	XStep div exch XStep div exch		% tx ty cmtx a b
+	0 YStep dtransform
+	round exch round exch			% tx ty cmtx a b dy.x dy.y
+	YStep div exch YStep div exch		% tx ty cmtx a b c d
+	7 -3 roll astore			% { a b c d tx ty }
+    } if
+  grestore
+} bind def
+/PATusp {
+  false PATredef
+  PATDict begin
+    CColor PATsc
+  end
+} bind def
+
+% left45
+11 dict begin
+/PaintType 1 def
+/PatternType 1 def
+/TilingType 1 def
+/BBox [0 0 1 1] def
+/XStep 1 def
+/YStep 1 def
+/PatWidth 1 def
+/PatHeight 1 def
+/Multi 2 def
+/PaintData [
+  { clippath } bind
+  { 20 20 true [ 20 0 0 -20 0 20 ]
+	{<8020004010002008001004000802000401000200
+	8001004000802000401080200040100020080010
+	0400080200040100020080010040008020004010>}
+     imagemask } bind
+] def
+/PaintProc {
+	pop
+	exec fill
+} def
+currentdict
+end
+/P4 exch def
+
+/cp {closepath} bind def
+/ef {eofill} bind def
+/gr {grestore} bind def
+/gs {gsave} bind def
+/sa {save} bind def
+/rs {restore} bind def
+/l {lineto} bind def
+/m {moveto} bind def
+/rm {rmoveto} bind def
+/n {newpath} bind def
+/s {stroke} bind def
+/sh {show} bind def
+/slc {setlinecap} bind def
+/slj {setlinejoin} bind def
+/slw {setlinewidth} bind def
+/srgb {setrgbcolor} bind def
+/rot {rotate} bind def
+/sc {scale} bind def
+/sd {setdash} bind def
+/ff {findfont} bind def
+/sf {setfont} bind def
+/scf {scalefont} bind def
+/sw {stringwidth} bind def
+/tr {translate} bind def
+/tnt {dup dup currentrgbcolor
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add
+  4 -2 roll dup 1 exch sub 3 -1 roll mul add srgb}
+  bind def
+/shd {dup dup currentrgbcolor 4 -2 roll mul 4 -2 roll mul
+  4 -2 roll mul srgb} bind def
+/$F2psBegin {$F2psDict begin /$F2psEnteredState save def} def
+/$F2psEnd {$F2psEnteredState restore end} def
+
+$F2psBegin
+10 setmiterlimit
+0 slj 0 slc
+ 0.06000 0.06000 sc
+%
+% Fig objects follow
+%
+% 
+% here starts figure with depth 100
+/Symbol ff 183.33 scf sf
+3029 4192 m
+gs 1 -1 sc (w) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman ff 150.00 scf sf
+3032 4209 m
+gs 1 -1 sc (g) col0 sh gr
+/Times-Roman ff 100.00 scf sf
+3091 4255 m
+gs 1 -1 sc (1) col0 sh gr
+/Symbol ff 183.33 scf sf
+3623 4190 m
+gs 1 -1 sc (w) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman ff 150.00 scf sf
+3626 4207 m
+gs 1 -1 sc (g) col0 sh gr
+/Times-Roman ff 100.00 scf sf
+3685 4250 m
+gs 1 -1 sc (2) col0 sh gr
+/Times-Roman ff 150.00 scf sf
+218 1758 m
+gs 1 -1 sc (min) col0 sh gr
+/Times-Roman ff 183.33 scf sf
+210 1742 m
+gs 1 -1 sc (A) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman ff 200.00 scf sf
+510 225 m
+gs 1 -1 sc (A/dB) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman ff 183.33 scf sf
+210 3783 m
+gs 1 -1 sc (A) dup sw pop neg 0 rm  col0 sh gr
+/Times-Roman ff 150.00 scf sf
+218 3801 m
+gs 1 -1 sc (max) col0 sh gr
+% Polyline
+0 slj
+0 slc
+7.500 slw
+n 3572 167 m 5947 167 l 5947 3759 l 3572 3759 l
+ cp gs /PC [[1.00 1.00 1.00] [1.00 0.50 0.50]] def
+15.00 15.00 sc P4 [16 0 0 -16 238.13 11.13] PATmp PATsp ef gr PATusp gs col27 s gr 
+% Polyline
+n 596 167 m 2971 167 l 2971 3759 l 596 3759 l
+ cp gs /PC [[1.00 1.00 1.00] [1.00 0.50 0.50]] def
+15.00 15.00 sc P4 [16 0 0 -16 39.73 11.13] PATmp PATsp ef gr PATusp gs col27 s gr 
+% Polyline
+n 3049 1718 m 3489 1718 l 3489 3949 l 3049 3949 l
+ cp gs /PC [[1.00 1.00 1.00] [1.00 0.50 0.50]] def
+15.00 15.00 sc P4 [16 0 0 -16 203.27 114.53] PATmp PATsp ef gr PATusp gs col27 s gr 
+/Times-Roman ff 200.00 scf sf
+5775 4200 m
+gs 1 -1 sc (log) dup sw pop neg 0 rm  col0 sh gr
+/Symbol ff 200.00 scf sf
+5925 4200 m
+gs 1 -1 sc (w) dup sw pop 2 div neg 0 rm  col0 sh gr
+% here ends figure;
+% 
+% here starts figure with depth 50
+% Polyline
+2 slj
+0 slc
+15.000 slw
+n 5947 3762 m 5946 3762 l 5941 3762 l 5929 3762 l 5910 3762 l 5887 3763 l
+ 5863 3763 l 5840 3763 l 5819 3763 l 5801 3764 l 5785 3764 l
+ 5770 3764 l 5756 3764 l 5742 3764 l 5727 3764 l 5713 3764 l
+ 5698 3765 l 5682 3765 l 5667 3765 l 5651 3765 l 5636 3765 l
+ 5622 3765 l 5608 3766 l 5595 3766 l 5583 3766 l 5571 3766 l
+ 5558 3766 l 5545 3766 l 5532 3766 l 5519 3766 l 5505 3767 l
+ 5492 3767 l 5479 3767 l 5467 3767 l 5455 3767 l 5444 3767 l
+ 5433 3767 l 5420 3768 l 5407 3768 l 5394 3768 l 5380 3768 l
+ 5366 3769 l 5352 3769 l 5338 3769 l 5326 3769 l 5314 3770 l
+ 5303 3770 l 5291 3770 l 5280 3771 l 5268 3771 l 5256 3771 l
+ 5243 3772 l 5231 3772 l 5219 3772 l 5208 3772 l 5197 3773 l
+ 5187 3773 l 5177 3773 l 5167 3774 l 5157 3774 l 5146 3774 l
+ 5135 3775 l 5124 3775 l 5114 3775 l 5104 3775 l 5094 3776 l
+ 5085 3776 l 5074 3776 l 5063 3777 l 5050 3777 l 5038 3777 l
+ 5026 3778 l 5014 3778 l 5003 3779 l 4993 3779 l 4983 3779 l
+ 4972 3779 l 4961 3780 l 4950 3780 l 4939 3780 l 4928 3781 l
+ 4918 3781 l 4909 3781 l 4900 3782 l 4890 3782 l 4881 3783 l
+ 4870 3783 l 4860 3784 l 4851 3784 l 4842 3785 l 4833 3785 l
+ 4825 3785 l 4816 3786 l 4807 3786 l 4798 3787 l 4789 3788 l
+ 4780 3788 l 4772 3789 l 4764 3789 l 4756 3789 l 4748 3790 l
+ 4740 3790 l 4731 3791 l 4723 3792 l 4715 3792 l 4707 3793 l
+ 4700 3793 l 4691 3794 l 4681 3794 l 4670 3795 l 4660 3796 l
+ 4650 3796 l 4642 3797 l 4633 3798 l 4623 3799 l 4614 3800 l
+ 4604 3800 l 4595 3801 l 4587 3802 l 4579 3803 l 4570 3804 l
+ 4561 3805 l 4552 3805 l 4544 3806 l 4537 3807 l 4529 3808 l
+ 4521 3809 l 4513 3810 l 4504 3810 l 4497 3811 l 4490 3812 l
+ 4482 3813 l 4475 3814 l 4467 3815 l 4459 3815 l 4452 3816 l
+ 4446 3817 l 4439 3818 l 4432 3819 l 4425 3820 l 4417 3820 l
+ 4411 3821 l 4405 3822 l 4398 3823 l 4392 3824 l 4385 3825 l
+ 4378 3826 l 4372 3827 l 4366 3828 l 4361 3829 l 4355 3830 l
+ 4348 3831 l 4342 3832 l 4336 3833 l 4330 3834 l 4324 3835 l
+ 4317 3836 l 4309 3838 l 4303 3839 l 4296 3840 l 4290 3841 l
+ 4284 3842 l 4277 3844 l 4270 3845 l 4264 3846 l 4259 3847 l
+ 4252 3849 l 4246 3850 l 4240 3852 l 4234 3853 l 4229 3854 l
+ 4223 3855 l 4216 3857 l 4211 3858 l 4205 3859 l 4200 3860 l
+ 4194 3861 l 4189 3863 l 4183 3864 l 4178 3865 l 4173 3866 l
+ 4168 3868 l 4163 3869 l 4158 3871 l 4153 3872 l 4149 3873 l
+ 4144 3875 l 4138 3876 l 4134 3878 l 4129 3879 l 4125 3880 l
+ 4120 3881 l 4115 3883 l 4110 3884 l 4106 3885 l 4102 3886 l
+ 4097 3887 l 4093 3889 l 4088 3890 l 4084 3891 l 4080 3892 l
+ 4076 3894 l 4071 3895 l 4067 3897 l 4063 3898 l 4060 3899 l
+ 4056 3900 l 4051 3902 l 4048 3903 l 4044 3904 l 4040 3905 l
+ 4037 3906 l 4033 3908 l 4029 3909 l 4025 3910 l 4022 3911 l
+ 4018 3912 l 4014 3914 l 4010 3915 l 4007 3916 l 4004 3917 l
+ 4000 3918 l 3997 3920 l 3993 3921 l 3990 3922 l 3987 3923 l
+ 3983 3924 l 3980 3925 l 3976 3926 l 3973 3927 l 3970 3928 l
+ 3967 3929 l 3964 3930 l 3961 3931 l 3958 3932 l 3955 3933 l
+ 3952 3934 l 3948 3934 l 3945 3935 l 3942 3936 l 3940 3937 l
+ 3937 3938 l 3934 3938 l 3931 3939 l 3928 3940 l 3925 3940 l
+ 3923 3941 l 3919 3942 l 3917 3942 l 3914 3943 l 3911 3944 l
+ 3909 3944 l 3906 3945 l 3903 3945 l 3900 3946 l 3898 3946 l
+ 3895 3946 l 3893 3947 l 3890 3947 l 3888 3947 l 3886 3947 l
+ 3883 3948 l 3881 3948 l 3878 3948 l 3876 3949 l 3874 3949 l
+ 3871 3949 l 3869 3949 l 3866 3949 l 3864 3949 l 3862 3949 l
+ 3859 3949 l 3857 3948 l 3854 3948 l 3852 3948 l 3850 3948 l
+ 3848 3948 l 3846 3947 l 3844 3947 l 3842 3947 l 3840 3947 l
+ 3838 3946 l 3835 3946 l 3833 3945 l 3831 3945 l 3829 3944 l
+ 3827 3944 l 3825 3943 l 3823 3942 l 3821 3942 l 3819 3941 l
+ 3817 3940 l 3814 3940 l 3812 3939 l 3811 3938 l 3809 3937 l
+ 3807 3936 l 3805 3935 l 3803 3934 l 3802 3933 l 3800 3932 l
+ 3798 3931 l 3796 3930 l 3794 3929 l 3792 3928 l 3790 3927 l
+ 3789 3926 l 3787 3924 l 3785 3923 l 3783 3922 l 3782 3921 l
+ 3780 3919 l 3778 3918 l 3776 3916 l 3775 3915 l 3773 3914 l
+ 3771 3913 l 3770 3911 l 3768 3910 l 3766 3909 l 3765 3907 l
+ 3763 3905 l 3761 3904 l 3760 3902 l 3758 3900 l 3756 3899 l
+ 3755 3897 l 3753 3896 l 3752 3894 l 3750 3893 l 3749 3891 l
+ 3747 3889 l 3746 3888 l 3744 3886 l 3743 3884 l 3741 3883 l
+ 3740 3881 l 3738 3879 l 3737 3877 l 3735 3876 l 3734 3874 l
+ 3732 3872 l 3731 3871 l 3729 3869 l 3728 3867 l 3727 3865 l
+ 3725 3863 l 3724 3862 l 3722 3860 l 3721 3858 l 3720 3856 l
+ 3719 3854 l 3717 3853 l 3716 3851 l 3715 3849 l 3714 3847 l
+ 3712 3845 l 3711 3844 l 3709 3842 l 3708 3840 l 3707 3838 l
+ 3706 3836 l 3704 3835 l 3703 3833 l 3702 3831 l 3701 3829 l
+ 3700 3827 l 3698 3826 l 3697 3824 l 3696 3822 l 3695 3821 l
+ 3694 3819 l 3692 3817 l 3691 3816 l 3690 3814 l 3689 3812 l
+ 3688 3811 l 3686 3809 l 3685 3808 l 3684 3806 l 3683 3805 l
+ 3682 3803 l 3680 3802 l 3679 3800 l 3678 3799 l 3677 3797 l
+ 3676 3796 l 3675 3794 l 3674 3793 l 3673 3791 l 3672 3790 l
+ 3671 3788 l 3670 3787 l 3669 3785 l 3668 3784 l 3667 3783 l
+ 3666 3782 l 3664 3781 l 3663 3780 l 3662 3779 l 3661 3778 l
+ 3660 3777 l 3659 3775 l 3658 3774 l 3657 3773 l 3656 3772 l
+ 3655 3771 l 3654 3770 l 3653 3769 l 3652 3768 l 3651 3767 l
+ 3650 3766 l 3649 3766 l 3648 3765 l 3647 3764 l 3646 3764 l
+ 3645 3763 l 3644 3762 l 3643 3762 l 3642 3761 l 3641 3761 l
+ 3640 3761 l 3640 3760 l 3639 3760 l 3638 3760 l 3637 3760 l
+ 3636 3760 l 3636 3759 l 3635 3759 l 3634 3759 l 3633 3759 l
+ 3632 3759 l 3631 3759 l 3630 3759 l 3629 3759 l 3628 3760 l
+ 3627 3760 l 3626 3761 l 3625 3761 l 3624 3762 l 3623 3762 l
+ 3623 3763 l 3622 3764 l 3621 3764 l 3620 3765 l 3619 3766 l
+ 3618 3767 l 3617 3768 l 3616 3769 l 3616 3770 l 3615 3772 l
+ 3614 3773 l 3613 3775 l 3613 3776 l 3612 3778 l 3611 3779 l
+ 3610 3781 l 3609 3783 l 3608 3784 l 3608 3786 l 3607 3788 l
+ 3606 3790 l 3605 3792 l 3605 3794 l 3604 3796 l 3603 3799 l
+ 3603 3801 l 3602 3804 l 3601 3807 l 3600 3809 l 3599 3812 l
+ 3599 3815 l 3598 3818 l 3597 3821 l 3597 3824 l 3596 3827 l
+ 3595 3831 l 3594 3834 l 3594 3838 l 3593 3841 l 3592 3845 l
+ 3592 3849 l 3591 3853 l 3590 3857 l 3590 3861 l 3589 3865 l
+ 3588 3869 l 3588 3873 l 3587 3877 l 3586 3881 l 3586 3886 l
+ 3585 3890 l 3584 3895 l 3584 3899 l 3583 3903 l 3582 3907 l
+ 3582 3912 l 3581 3916 l 3580 3920 l 3580 3923 l 3579 3927 l
+ 3578 3931 l 3578 3934 l 3577 3937 l 3576 3939 l 3576 3941 l
+ 3575 3944 l 3575 3945 l 3574 3946 l 3573 3947 l 3572 3946 l
+ 3572 3945 l 3571 3944 l 3571 3943 l 3570 3941 l 3570 3937 l
+ 3569 3933 l 3569 3928 l 3568 3923 l 3568 3918 l 3567 3912 l
+ 3566 3906 l 3566 3898 l 3565 3891 l 3565 3884 l 3565 3876 l
+ 3564 3868 l 3563 3858 l 3563 3848 l 3562 3837 l 3562 3828 l
+ 3562 3820 l 3561 3812 l 3561 3803 l 3561 3794 l 3560 3785 l
+ 3560 3775 l 3559 3766 l 3559 3758 l 3559 3749 l 3558 3740 l
+ 3558 3730 l 3558 3719 l 3557 3709 l 3557 3698 l 3556 3688 l
+ 3556 3679 l 3556 3669 l 3555 3659 l 3555 3649 l 3555 3637 l
+ 3554 3626 l 3554 3615 l 3553 3605 l 3553 3595 l 3553 3585 l
+ 3553 3575 l 3552 3563 l 3552 3552 l 3552 3541 l 3551 3529 l
+ 3551 3519 l 3551 3509 l 3551 3499 l 3550 3489 l 3550 3478 l
+ 3550 3467 l 3549 3455 l 3549 3444 l 3548 3434 l 3548 3424 l
+ 3548 3414 l 3548 3404 l 3547 3393 l 3547 3382 l 3547 3371 l
+ 3546 3360 l 3546 3350 l 3546 3340 l 3546 3331 l 3545 3320 l
+ 3545 3310 l 3545 3299 l 3544 3288 l 3544 3277 l 3543 3267 l
+ 3543 3257 l 3543 3248 l 3543 3238 l 3542 3227 l 3542 3217 l
+ 3542 3206 l 3541 3195 l 3541 3185 l 3541 3176 l 3541 3167 l
+ 3540 3157 l 3540 3147 l 3540 3136 l 3539 3125 l 3539 3115 l
+ 3538 3105 l 3538 3096 l 3538 3087 l 3538 3078 l 3537 3068 l
+ 3537 3057 l 3537 3047 l 3536 3037 l 3536 3027 l 3536 3018 l
+ 3536 3009 l 3535 3000 l 3535 2990 l 3535 2980 l 3534 2969 l
+ 3534 2959 l 3533 2950 l 3533 2941 l 3533 2932 l 3533 2923 l
+ 3532 2913 l 3532 2903 l 3532 2892 l 3531 2882 l 3531 2873 l
+ 3531 2864 l 3531 2856 l 3531 2846 l 3530 2837 l 3530 2827 l
+ 3530 2816 l 3529 2807 l 3529 2798 l 3529 2789 l 3529 2780 l
+ 3529 2771 l 3528 2761 l 3528 2751 l 3528 2741 l 3527 2731 l
+ 3527 2722 l 3527 2713 l 3527 2704 l 3526 2695 l 3526 2685 l
+ 3526 2675 l 3525 2665 l 3525 2655 l 3524 2646 l 3524 2637 l
+ 3524 2628 l 3524 2619 l 3523 2609 l 3523 2598 l 3523 2588 l
+ 3522 2578 l 3522 2569 l 3522 2560 l 3522 2551 l 3522 2542 l
+ 3521 2532 l 3521 2521 l 3521 2511 l 3520 2501 l 3520 2492 l
+ 3520 2483 l 3520 2474 l 3520 2464 l 3519 2454 l 3519 2444 l
+ 3519 2433 l 3518 2423 l 3518 2414 l 3518 2405 l 3518 2395 l
+ 3518 2386 l 3517 2375 l 3517 2364 l 3517 2354 l 3516 2343 l
+ 3516 2333 l 3516 2324 l 3516 2314 l 3516 2304 l 3515 2293 l
+ 3515 2282 l 3515 2271 l 3514 2260 l 3514 2250 l 3514 2241 l
+ 3514 2231 l 3514 2220 l 3513 2209 l 3513 2198 l 3513 2186 l
+ 3512 2175 l 3512 2164 l 3512 2154 l 3512 2144 l 3512 2133 l
+ 3511 2122 l 3511 2110 l 3511 2098 l 3510 2086 l 3510 2075 l
+ 3510 2064 l 3510 2053 l 3510 2042 l 3509 2030 l 3509 2017 l
+ 3509 2004 l 3508 1992 l 3508 1980 l 3508 1969 l 3508 1960 l
+ 3508 1950 l 3507 1940 l 3507 1930 l 3507 1919 l 3507 1908 l
+ 3507 1897 l 3506 1886 l 3506 1876 l 3506 1866 l 3506 1856 l
+ 3506 1846 l 3505 1835 l 3505 1823 l 3505 1812 l 3505 1799 l
+ 3505 1788 l 3504 1776 l 3504 1765 l 3504 1754 l 3504 1743 l
+ 3504 1732 l 3504 1720 l 3504 1707 l 3503 1694 l 3503 1680 l
+ 3503 1667 l 3503 1654 l 3503 1642 l 3503 1630 l 3503 1620 l
+ 3503 1609 l 3502 1598 l 3502 1586 l 3502 1574 l 3502 1561 l
+ 3502 1548 l 3502 1535 l 3501 1523 l 3501 1510 l 3501 1498 l
+ 3501 1486 l 3501 1474 l 3501 1462 l 3501 1448 l 3500 1434 l
+ 3500 1420 l 3500 1404 l 3500 1389 l 3500 1373 l 3499 1358 l
+ 3499 1343 l 3499 1328 l 3499 1313 l 3499 1301 l 3499 1287 l
+ 3499 1273 l 3498 1258 l 3498 1243 l 3498 1227 l 3498 1210 l
+ 3498 1192 l 3498 1175 l 3498 1157 l 3497 1140 l 3497 1123 l
+ 3497 1106 l 3497 1089 l 3497 1075 l 3497 1061 l 3497 1046 l
+ 3497 1030 l 3496 1014 l 3496 996 l 3496 978 l 3496 959 l
+ 3496 939 l 3496 918 l 3496 897 l 3496 875 l 3496 853 l
+ 3496 831 l 3495 808 l 3495 786 l 3495 763 l 3495 739 l
+ 3495 719 l 3495 699 l 3495 677 l 3495 654 l 3495 629 l
+ 3495 602 l 3495 573 l 3495 541 l 3495 506 l 3495 469 l
+ 3494 430 l 3494 390 l 3494 349 l 3494 309 l 3494 272 l
+ 3494 239 l 3494 212 l 3494 192 l 3494 178 l 3494 171 l
+
+ 3494 167 l gs col0 s gr 
+% Polyline
+n 3492 167 m 3492 169 l 3492 173 l 3492 180 l 3492 189 l 3492 200 l
+ 3492 214 l 3492 229 l 3492 248 l 3492 272 l 3492 285 l
+ 3492 300 l 3492 316 l 3491 334 l 3491 353 l 3491 373 l
+ 3491 394 l 3491 416 l 3491 439 l 3491 463 l 3491 487 l
+ 3491 511 l 3491 534 l 3491 558 l 3491 580 l 3490 602 l
+ 3490 623 l 3490 644 l 3490 663 l 3490 682 l 3490 704 l
+ 3490 726 l 3490 747 l 3490 768 l 3490 788 l 3490 808 l
+ 3490 828 l 3490 846 l 3489 864 l 3489 882 l 3489 898 l
+ 3489 913 l 3489 927 l 3489 940 l 3489 952 l 3489 964 l
+ 3489 979 l 3489 994 l 3488 1009 l 3488 1024 l 3488 1039 l
+ 3488 1054 l 3488 1068 l 3488 1082 l 3488 1094 l 3487 1106 l
+ 3487 1117 l 3487 1127 l 3487 1139 l 3487 1151 l 3487 1164 l
+ 3487 1176 l 3486 1188 l 3486 1200 l 3486 1211 l 3486 1222 l
+ 3486 1231 l 3486 1241 l 3486 1251 l 3485 1263 l 3485 1274 l
+ 3485 1285 l 3485 1297 l 3485 1307 l 3484 1316 l 3484 1325 l
+ 3484 1333 l 3484 1342 l 3484 1351 l 3484 1360 l 3483 1368 l
+ 3483 1377 l 3483 1384 l 3483 1391 l 3483 1400 l 3482 1409 l
+ 3482 1419 l 3482 1428 l 3481 1436 l 3481 1444 l 3481 1451 l
+ 3481 1459 l 3480 1467 l 3480 1474 l 3480 1481 l 3480 1488 l
+ 3480 1494 l 3479 1500 l 3479 1507 l 3479 1513 l 3478 1519 l
+ 3478 1524 l 3478 1530 l 3478 1537 l 3477 1543 l 3477 1549 l
+ 3477 1554 l 3477 1560 l 3476 1565 l 3476 1571 l 3475 1576 l
+ 3475 1580 l 3475 1585 l 3475 1589 l 3474 1594 l 3474 1599 l
+ 3474 1603 l 3474 1606 l 3473 1610 l 3473 1614 l 3472 1618 l
+ 3472 1622 l 3472 1625 l 3472 1628 l 3471 1632 l 3471 1635 l
+ 3471 1638 l 3471 1640 l 3470 1643 l 3470 1646 l 3470 1648 l
+ 3469 1651 l 3469 1653 l 3469 1655 l 3469 1658 l 3469 1660 l
+ 3469 1662 l 3468 1664 l 3468 1666 l 3468 1669 l 3467 1671 l
+ 3467 1673 l 3467 1674 l 3467 1676 l 3466 1678 l 3466 1679 l
+ 3466 1681 l 3466 1682 l 3465 1684 l 3465 1685 l 3464 1687 l
+ 3464 1688 l 3464 1689 l 3464 1690 l 3463 1691 l 3463 1692 l
+ 3463 1693 l 3463 1694 l 3463 1695 l 3462 1696 l 3462 1697 l
+ 3462 1698 l 3461 1699 l 3461 1700 l 3460 1701 l 3460 1702 l
+ 3460 1703 l 3460 1704 l 3459 1704 l 3459 1705 l 3458 1706 l
+ 3457 1707 l 3456 1707 l 3455 1707 l 3454 1707 l 3454 1706 l
+ 3453 1706 l 3453 1705 l 3452 1705 l 3452 1704 l 3451 1704 l
+ 3451 1703 l 3451 1702 l 3450 1702 l 3450 1701 l 3450 1700 l
+ 3449 1699 l 3449 1698 l 3449 1697 l 3448 1696 l 3448 1695 l
+ 3448 1694 l 3448 1693 l 3447 1693 l 3447 1692 l 3447 1691 l
+ 3447 1690 l 3446 1689 l 3446 1688 l 3446 1687 l 3446 1686 l
+ 3445 1685 l 3445 1684 l 3445 1683 l 3445 1682 l 3445 1681 l
+ 3444 1681 l 3444 1680 l 3444 1679 l 3444 1678 l 3444 1677 l
+ 3443 1676 l 3443 1675 l 3443 1674 l 3443 1673 l 3443 1672 l
+ 3442 1671 l 3442 1670 l 3442 1669 l 3442 1668 l 3442 1667 l
+ 3441 1666 l 3441 1665 l 3441 1664 l 3441 1663 l 3441 1662 l
+ 3440 1660 l 3440 1659 l 3440 1658 l 3440 1657 l 3440 1656 l
+ 3439 1655 l 3439 1654 l 3439 1653 l 3439 1652 l 3439 1651 l
+ 3438 1649 l 3438 1648 l 3438 1647 l 3438 1646 l 3438 1644 l
+ 3437 1643 l 3437 1641 l 3437 1640 l 3437 1639 l 3437 1638 l
+ 3436 1636 l 3436 1635 l 3436 1634 l 3436 1633 l 3436 1631 l
+ 3435 1630 l 3435 1628 l 3435 1627 l 3435 1626 l 3435 1624 l
+ 3434 1623 l 3434 1621 l 3434 1620 l 3434 1619 l 3434 1617 l
+ 3434 1616 l 3434 1614 l 3434 1613 l 3433 1612 l 3433 1610 l
+ 3433 1609 l 3432 1607 l 3432 1606 l 3432 1605 l 3432 1603 l
+ 3431 1602 l 3431 1600 l 3431 1599 l 3431 1597 l 3431 1596 l
+ 3431 1594 l 3431 1593 l 3431 1591 l 3431 1589 l 3431 1588 l
+ 3430 1586 l 3430 1585 l 3430 1583 l 3430 1581 l 3430 1580 l
+ 3429 1578 l 3429 1577 l 3429 1575 l 3429 1573 l 3429 1572 l
+ 3428 1570 l 3428 1568 l 3428 1567 l 3428 1565 l 3428 1563 l
+ 3428 1562 l 3428 1560 l 3428 1558 l 3427 1557 l 3427 1555 l
+ 3427 1553 l 3426 1551 l 3426 1550 l 3426 1548 l 3426 1546 l
+ 3425 1545 l 3425 1543 l 3425 1541 l 3425 1540 l 3425 1538 l
+ 3425 1536 l 3425 1534 l 3425 1533 l 3425 1531 l 3425 1529 l
+ 3424 1528 l 3424 1526 l 3424 1524 l 3424 1522 l 3424 1520 l
+ 3423 1519 l 3423 1517 l 3423 1515 l 3423 1513 l 3423 1511 l
+ 3422 1509 l 3422 1508 l 3422 1506 l 3422 1504 l 3422 1502 l
+ 3422 1500 l 3422 1498 l 3422 1496 l 3422 1494 l 3422 1492 l
+ 3421 1491 l 3421 1489 l 3421 1487 l 3421 1485 l 3421 1483 l
+ 3420 1481 l 3420 1479 l 3420 1477 l 3420 1475 l 3420 1473 l
+ 3420 1471 l 3420 1469 l 3420 1467 l 3420 1465 l 3420 1463 l
+ 3419 1461 l 3419 1459 l 3419 1457 l 3419 1455 l 3419 1453 l
+ 3418 1451 l 3418 1449 l 3418 1447 l 3418 1445 l 3418 1443 l
+ 3417 1441 l 3417 1439 l 3417 1437 l 3417 1435 l 3417 1433 l
+ 3417 1430 l 3417 1428 l 3417 1426 l 3417 1424 l 3417 1422 l
+ 3416 1420 l 3416 1418 l 3416 1416 l 3416 1414 l 3416 1412 l
+ 3415 1409 l 3415 1407 l 3415 1405 l 3415 1403 l 3415 1401 l
+ 3414 1398 l 3414 1396 l 3414 1394 l 3414 1392 l 3414 1390 l
+ 3414 1387 l 3414 1385 l 3414 1383 l 3414 1381 l 3414 1379 l
+ 3413 1376 l 3413 1374 l 3413 1372 l 3413 1370 l 3413 1367 l
+ 3412 1365 l 3412 1362 l 3412 1360 l 3412 1358 l 3412 1356 l
+ 3411 1353 l 3411 1351 l 3411 1349 l 3411 1347 l 3411 1344 l
+ 3411 1342 l 3411 1339 l 3411 1337 l 3411 1334 l 3411 1332 l
+ 3411 1329 l 3411 1327 l 3411 1324 l 3411 1322 l 3411 1319 l
+ 3410 1317 l 3410 1314 l 3410 1312 l 3410 1310 l 3410 1307 l
+ 3409 1305 l 3409 1302 l 3409 1300 l 3409 1297 l 3409 1295 l
+ 3408 1292 l 3408 1290 l 3408 1287 l 3408 1285 l 3408 1282 l
+ 3408 1280 l 3408 1277 l 3408 1275 l 3408 1272 l 3408 1270 l
+ 3407 1267 l 3407 1264 l 3407 1262 l 3407 1260 l 3407 1257 l
+ 3406 1254 l 3406 1251 l 3406 1249 l 3406 1246 l 3406 1243 l
+ 3406 1240 l 3406 1238 l 3406 1235 l 3406 1232 l 3406 1230 l
+ 3405 1227 l 3405 1224 l 3405 1221 l 3405 1219 l 3405 1216 l
+ 3405 1213 l 3405 1210 l 3405 1208 l 3405 1205 l 3405 1202 l
+ 3404 1199 l 3404 1196 l 3404 1193 l 3404 1190 l 3404 1188 l
+ 3403 1184 l 3403 1182 l 3403 1179 l 3403 1176 l 3403 1173 l
+ 3402 1170 l 3402 1167 l 3402 1164 l 3402 1161 l 3402 1158 l
+ 3402 1155 l 3402 1152 l 3402 1149 l 3402 1146 l 3402 1143 l
+ 3402 1139 l 3402 1136 l 3402 1133 l 3402 1130 l 3402 1127 l
+ 3401 1124 l 3401 1121 l 3401 1118 l 3401 1115 l 3401 1112 l
+ 3400 1108 l 3400 1105 l 3400 1102 l 3400 1099 l 3400 1096 l
+ 3400 1092 l 3400 1089 l 3400 1086 l 3400 1083 l 3400 1079 l
+ 3399 1076 l 3399 1072 l 3399 1069 l 3399 1066 l 3399 1062 l
+ 3399 1059 l 3399 1055 l 3399 1052 l 3399 1049 l 3399 1045 l
+ 3398 1041 l 3398 1037 l 3398 1034 l 3398 1031 l 3398 1027 l
+ 3398 1024 l 3398 1020 l 3398 1017 l 3398 1014 l 3398 1010 l
+ 3397 1006 l 3397 1002 l 3397 999 l 3397 995 l 3397 991 l
+ 3396 987 l 3396 983 l 3396 979 l 3396 976 l 3396 972 l
+ 3396 967 l 3396 964 l 3396 960 l 3396 956 l 3396 953 l
+ 3396 948 l 3396 944 l 3396 941 l 3396 937 l 3396 933 l
+ 3395 929 l 3395 925 l 3395 921 l 3395 917 l 3395 912 l
+ 3394 908 l 3394 903 l 3394 899 l 3394 895 l 3394 891 l
+ 3394 886 l 3394 882 l 3394 878 l 3394 873 l 3394 869 l
+ 3393 864 l 3393 859 l 3393 855 l 3393 851 l 3393 846 l
+ 3393 842 l 3393 837 l 3393 833 l 3393 828 l 3393 823 l
+ 3393 818 l 3393 814 l 3393 809 l 3393 804 l 3393 800 l
+ 3392 794 l 3392 789 l 3392 785 l 3392 780 l 3392 775 l
+ 3391 769 l 3391 764 l 3391 759 l 3391 754 l 3391 749 l
+ 3391 743 l 3391 738 l 3391 733 l 3391 727 l 3391 722 l
+ 3391 715 l 3391 710 l 3391 704 l 3391 699 l 3391 693 l
+ 3390 687 l 3390 681 l 3390 676 l 3390 670 l 3390 664 l
+ 3390 658 l 3390 652 l 3390 646 l 3390 640 l 3390 634 l
+ 3389 627 l 3389 621 l 3389 615 l 3389 608 l 3389 602 l
+ 3388 594 l 3388 587 l 3388 581 l 3388 574 l 3388 567 l
+ 3388 560 l 3388 552 l 3388 546 l 3388 540 l 3388 534 l
+ 3388 527 l 3388 521 l 3388 515 l 3388 509 l 3388 503 l
+ 3388 496 l 3387 489 l 3387 482 l 3387 476 l 3387 470 l
+ 3387 463 l 3387 456 l 3387 449 l 3387 441 l 3387 434 l
+ 3387 428 l 3387 421 l 3387 413 l 3386 405 l 3386 397 l
+ 3386 390 l 3386 382 l 3386 375 l 3386 367 l 3386 358 l
+ 3386 350 l 3386 341 l 3386 333 l 3386 325 l 3386 317 l
+ 3385 307 l 3385 298 l 3385 289 l 3385 280 l 3385 271 l
+ 3385 262 l 3385 252 l 3385 242 l 3385 232 l 3385 223 l
+ 3385 214 l 3385 204 l 3385 191 l 3385 178 l 3385 169 l
+
+ 3385 167 l gs col0 s gr 
+% Polyline
+n 3159 167 m 3159 169 l 3159 178 l 3159 191 l 3159 204 l 3159 214 l
+ 3159 223 l 3159 232 l 3159 242 l 3158 252 l 3158 262 l
+ 3158 271 l 3158 280 l 3158 289 l 3158 298 l 3158 307 l
+ 3157 317 l 3157 325 l 3157 333 l 3157 341 l 3157 350 l
+ 3157 358 l 3157 367 l 3157 375 l 3157 382 l 3157 390 l
+ 3157 397 l 3156 405 l 3156 413 l 3156 421 l 3156 428 l
+ 3156 434 l 3156 441 l 3156 449 l 3156 456 l 3156 463 l
+ 3156 470 l 3156 476 l 3156 482 l 3156 489 l 3156 496 l
+ 3156 503 l 3156 509 l 3156 515 l 3156 521 l 3155 527 l
+ 3155 534 l 3155 540 l 3155 546 l 3155 552 l 3155 560 l
+ 3155 567 l 3155 574 l 3155 581 l 3155 587 l 3155 594 l
+ 3154 602 l 3154 608 l 3154 615 l 3154 621 l 3154 627 l
+ 3153 634 l 3153 640 l 3153 646 l 3153 652 l 3153 658 l
+ 3153 664 l 3153 670 l 3153 676 l 3153 681 l 3153 687 l
+ 3153 693 l 3153 699 l 3153 704 l 3153 710 l 3153 715 l
+ 3152 722 l 3152 727 l 3152 733 l 3152 738 l 3152 743 l
+ 3152 749 l 3152 754 l 3152 759 l 3152 764 l 3152 769 l
+ 3151 775 l 3151 780 l 3151 785 l 3151 789 l 3151 794 l
+ 3150 800 l 3150 804 l 3150 809 l 3150 814 l 3150 818 l
+ 3150 823 l 3150 828 l 3150 833 l 3150 837 l 3150 842 l
+ 3150 846 l 3150 851 l 3150 855 l 3150 859 l 3150 864 l
+ 3149 869 l 3149 873 l 3149 878 l 3149 882 l 3149 886 l
+ 3149 891 l 3149 895 l 3149 899 l 3149 903 l 3149 908 l
+ 3148 912 l 3148 917 l 3148 921 l 3148 925 l 3148 929 l
+ 3147 933 l 3147 937 l 3147 941 l 3147 944 l 3147 948 l
+ 3147 953 l 3147 956 l 3147 960 l 3147 964 l 3147 967 l
+ 3147 972 l 3147 976 l 3147 979 l 3147 983 l 3147 987 l
+ 3146 991 l 3146 995 l 3146 999 l 3146 1002 l 3146 1006 l
+ 3145 1010 l 3145 1014 l 3145 1017 l 3145 1020 l 3145 1024 l
+ 3145 1027 l 3145 1031 l 3145 1034 l 3145 1037 l 3145 1041 l
+ 3145 1045 l 3145 1049 l 3145 1052 l 3145 1055 l 3145 1059 l
+ 3144 1062 l 3144 1066 l 3144 1069 l 3144 1072 l 3144 1076 l
+ 3143 1079 l 3143 1083 l 3143 1086 l 3143 1089 l 3143 1092 l
+ 3143 1096 l 3143 1099 l 3143 1102 l 3143 1105 l 3143 1108 l
+ 3142 1112 l 3142 1115 l 3142 1118 l 3142 1121 l 3142 1124 l
+ 3142 1127 l 3142 1130 l 3142 1133 l 3142 1136 l 3142 1139 l
+ 3141 1143 l 3141 1146 l 3141 1149 l 3141 1152 l 3141 1155 l
+ 3141 1158 l 3141 1161 l 3141 1164 l 3141 1167 l 3141 1170 l
+ 3140 1173 l 3140 1176 l 3140 1179 l 3140 1182 l 3140 1184 l
+ 3139 1188 l 3139 1190 l 3139 1193 l 3139 1196 l 3139 1199 l
+ 3139 1202 l 3139 1205 l 3139 1208 l 3139 1210 l 3139 1213 l
+ 3138 1216 l 3138 1219 l 3138 1221 l 3138 1224 l 3138 1227 l
+ 3137 1230 l 3137 1232 l 3137 1235 l 3137 1238 l 3137 1240 l
+ 3137 1243 l 3137 1246 l 3137 1249 l 3137 1251 l 3137 1254 l
+ 3136 1257 l 3136 1260 l 3136 1262 l 3136 1264 l 3136 1267 l
+ 3136 1270 l 3136 1272 l 3136 1275 l 3136 1277 l 3136 1280 l
+ 3135 1282 l 3135 1285 l 3135 1287 l 3135 1290 l 3135 1292 l
+ 3134 1295 l 3134 1297 l 3134 1300 l 3134 1302 l 3134 1305 l
+ 3133 1307 l 3133 1310 l 3133 1312 l 3133 1314 l 3133 1317 l
+ 3133 1319 l 3133 1322 l 3133 1324 l 3133 1327 l 3133 1329 l
+ 3133 1332 l 3133 1334 l 3133 1337 l 3133 1339 l 3133 1342 l
+ 3132 1344 l 3132 1347 l 3132 1349 l 3132 1351 l 3132 1353 l
+ 3131 1356 l 3131 1358 l 3131 1360 l 3131 1362 l 3131 1365 l
+ 3130 1367 l 3130 1370 l 3130 1372 l 3130 1374 l 3130 1376 l
+ 3130 1379 l 3130 1381 l 3130 1383 l 3130 1385 l 3130 1387 l
+ 3129 1390 l 3129 1392 l 3129 1394 l 3129 1396 l 3129 1398 l
+ 3128 1401 l 3128 1403 l 3128 1405 l 3128 1407 l 3128 1409 l
+ 3127 1412 l 3127 1414 l 3127 1416 l 3127 1418 l 3127 1420 l
+ 3127 1422 l 3127 1424 l 3127 1426 l 3127 1428 l 3127 1430 l
+ 3126 1433 l 3126 1435 l 3126 1437 l 3126 1439 l 3126 1441 l
+ 3125 1443 l 3125 1445 l 3125 1447 l 3125 1449 l 3125 1451 l
+ 3124 1453 l 3124 1455 l 3124 1457 l 3124 1459 l 3124 1461 l
+ 3124 1463 l 3124 1465 l 3124 1467 l 3124 1469 l 3124 1471 l
+ 3123 1473 l 3123 1475 l 3123 1477 l 3123 1479 l 3123 1481 l
+ 3122 1483 l 3122 1485 l 3122 1487 l 3122 1489 l 3122 1491 l
+ 3121 1492 l 3121 1494 l 3121 1496 l 3121 1498 l 3121 1500 l
+ 3121 1502 l 3121 1504 l 3121 1506 l 3121 1508 l 3121 1509 l
+ 3120 1511 l 3120 1513 l 3120 1515 l 3120 1517 l 3120 1519 l
+ 3119 1520 l 3119 1522 l 3119 1524 l 3119 1526 l 3119 1528 l
+ 3118 1529 l 3118 1531 l 3118 1533 l 3118 1534 l 3118 1536 l
+ 3118 1538 l 3118 1540 l 3118 1541 l 3118 1543 l 3118 1545 l
+ 3117 1546 l 3117 1548 l 3117 1550 l 3117 1551 l 3117 1553 l
+ 3116 1555 l 3116 1557 l 3116 1558 l 3116 1560 l 3116 1562 l
+ 3115 1563 l 3115 1565 l 3115 1567 l 3115 1568 l 3115 1570 l
+ 3114 1572 l 3114 1573 l 3114 1575 l 3114 1577 l 3114 1578 l
+ 3113 1580 l 3113 1581 l 3113 1583 l 3113 1585 l 3113 1586 l
+ 3113 1588 l 3113 1589 l 3113 1591 l 3113 1593 l 3113 1594 l
+ 3112 1596 l 3112 1597 l 3112 1599 l 3112 1600 l 3112 1602 l
+ 3111 1603 l 3111 1605 l 3111 1606 l 3111 1607 l 3111 1609 l
+ 3110 1610 l 3110 1612 l 3110 1613 l 3110 1614 l 3110 1616 l
+ 3109 1617 l 3109 1619 l 3109 1620 l 3109 1621 l 3109 1623 l
+ 3108 1624 l 3108 1626 l 3108 1627 l 3108 1628 l 3108 1630 l
+ 3107 1631 l 3107 1633 l 3107 1634 l 3107 1635 l 3107 1636 l
+ 3106 1638 l 3106 1639 l 3106 1640 l 3106 1641 l 3106 1643 l
+ 3105 1644 l 3105 1646 l 3105 1647 l 3105 1648 l 3105 1649 l
+ 3104 1651 l 3104 1652 l 3104 1653 l 3104 1654 l 3104 1655 l
+ 3104 1656 l 3104 1657 l 3104 1658 l 3103 1659 l 3103 1660 l
+ 3103 1662 l 3102 1663 l 3102 1664 l 3102 1665 l 3102 1666 l
+ 3101 1667 l 3101 1668 l 3101 1669 l 3101 1670 l 3101 1671 l
+ 3101 1672 l 3101 1673 l 3101 1674 l 3100 1675 l 3100 1676 l
+ 3100 1677 l 3099 1678 l 3099 1679 l 3099 1680 l 3099 1681 l
+ 3098 1681 l 3098 1682 l 3098 1683 l 3098 1684 l 3098 1685 l
+ 3097 1686 l 3097 1687 l 3097 1688 l 3097 1689 l 3096 1690 l
+ 3096 1691 l 3096 1692 l 3096 1693 l 3095 1693 l 3095 1694 l
+ 3095 1695 l 3095 1696 l 3094 1697 l 3094 1698 l 3094 1699 l
+ 3093 1700 l 3093 1701 l 3093 1702 l 3092 1702 l 3092 1703 l
+ 3092 1704 l 3091 1704 l 3091 1705 l 3090 1705 l 3090 1706 l
+ 3089 1706 l 3089 1707 l 3088 1707 l 3087 1707 l 3086 1707 l
+ 3086 1706 l 3085 1706 l 3085 1705 l 3084 1705 l 3084 1704 l
+ 3084 1703 l 3083 1702 l 3083 1701 l 3083 1700 l 3082 1700 l
+ 3082 1699 l 3081 1698 l 3081 1697 l 3081 1696 l 3080 1695 l
+ 3080 1694 l 3080 1693 l 3080 1692 l 3080 1691 l 3079 1690 l
+ 3079 1689 l 3079 1688 l 3079 1687 l 3079 1685 l 3078 1684 l
+ 3078 1682 l 3078 1681 l 3078 1679 l 3077 1678 l 3077 1676 l
+ 3076 1674 l 3076 1673 l 3076 1671 l 3076 1669 l 3075 1666 l
+ 3075 1664 l 3075 1662 l 3075 1660 l 3075 1658 l 3074 1655 l
+ 3074 1653 l 3074 1651 l 3074 1648 l 3073 1646 l 3073 1643 l
+ 3072 1640 l 3072 1638 l 3072 1635 l 3072 1632 l 3071 1628 l
+ 3071 1625 l 3071 1622 l 3071 1618 l 3070 1614 l 3070 1610 l
+ 3069 1606 l 3069 1603 l 3069 1599 l 3069 1594 l 3068 1589 l
+ 3068 1585 l 3068 1580 l 3068 1576 l 3067 1571 l 3067 1565 l
+ 3066 1560 l 3066 1554 l 3066 1549 l 3066 1543 l 3065 1537 l
+ 3065 1530 l 3065 1524 l 3065 1519 l 3064 1513 l 3064 1507 l
+ 3064 1500 l 3063 1494 l 3063 1488 l 3063 1481 l 3063 1474 l
+ 3063 1467 l 3062 1459 l 3062 1451 l 3062 1444 l 3062 1436 l
+ 3062 1428 l 3061 1419 l 3061 1409 l 3061 1400 l 3061 1391 l
+ 3061 1384 l 3060 1377 l 3060 1368 l 3060 1360 l 3060 1351 l
+ 3060 1342 l 3059 1333 l 3059 1325 l 3059 1316 l 3059 1307 l
+ 3059 1297 l 3059 1285 l 3058 1274 l 3058 1263 l 3058 1251 l
+ 3058 1241 l 3058 1231 l 3058 1222 l 3057 1211 l 3057 1200 l
+ 3057 1188 l 3057 1176 l 3057 1164 l 3056 1151 l 3056 1139 l
+ 3056 1127 l 3056 1117 l 3056 1106 l 3056 1094 l 3056 1082 l
+ 3056 1068 l 3055 1054 l 3055 1039 l 3055 1024 l 3055 1009 l
+ 3055 994 l 3055 979 l 3055 964 l 3055 952 l 3055 940 l
+ 3055 927 l 3054 913 l 3054 898 l 3054 882 l 3054 864 l
+ 3054 846 l 3054 828 l 3054 808 l 3054 788 l 3053 768 l
+ 3053 747 l 3053 726 l 3053 704 l 3053 682 l 3053 663 l
+ 3053 644 l 3053 623 l 3053 602 l 3053 580 l 3052 558 l
+ 3052 534 l 3052 511 l 3052 487 l 3052 463 l 3052 439 l
+ 3052 416 l 3052 394 l 3052 373 l 3052 353 l 3051 334 l
+ 3051 316 l 3051 300 l 3051 285 l 3051 272 l 3051 248 l
+ 3051 229 l 3051 214 l 3051 200 l 3050 189 l 3050 180 l
+ 3050 173 l 3050 169 l
+ 3050 167 l gs col0 s gr 
+% Polyline
+n 3377 167 m 3377 168 l 3377 173 l 3377 180 l 3377 187 l 3377 193 l
+ 3377 199 l 3377 206 l 3376 214 l 3376 223 l 3376 231 l
+ 3376 238 l 3376 246 l 3376 254 l 3376 262 l 3376 271 l
+ 3376 278 l 3376 285 l 3376 292 l 3376 300 l 3376 307 l
+ 3376 315 l 3376 322 l 3376 329 l 3376 335 l 3376 342 l
+ 3376 349 l 3376 356 l 3376 362 l 3376 368 l 3376 374 l
+ 3376 380 l 3375 387 l 3375 393 l 3375 399 l 3375 405 l
+ 3375 411 l 3375 418 l 3375 425 l 3375 432 l 3375 438 l
+ 3375 444 l 3375 450 l 3374 457 l 3374 464 l 3374 470 l
+ 3374 475 l 3374 481 l 3374 488 l 3374 494 l 3374 499 l
+ 3374 504 l 3374 510 l 3373 516 l 3373 522 l 3373 528 l
+ 3373 533 l 3373 538 l 3373 544 l 3373 549 l 3373 554 l
+ 3373 558 l 3373 563 l 3373 569 l 3373 573 l 3373 578 l
+ 3373 583 l 3373 587 l 3373 592 l 3373 597 l 3373 602 l
+ 3373 606 l 3373 611 l 3373 615 l 3373 620 l 3373 624 l
+ 3373 628 l 3373 633 l 3372 637 l 3372 642 l 3372 646 l
+ 3372 650 l 3372 654 l 3372 658 l 3372 662 l 3372 666 l
+ 3372 669 l 3372 673 l 3371 678 l 3371 681 l 3371 685 l
+ 3371 689 l 3371 692 l 3371 696 l 3371 700 l 3371 704 l
+ 3371 707 l 3371 711 l 3370 715 l 3370 719 l 3370 722 l
+ 3370 725 l 3370 729 l 3370 732 l 3370 736 l 3370 739 l
+ 3370 742 l 3370 745 l 3370 749 l 3370 752 l 3370 755 l
+ 3370 758 l 3370 761 l 3370 765 l 3370 768 l 3370 771 l
+ 3370 774 l 3370 777 l 3369 780 l 3369 783 l 3369 786 l
+ 3369 789 l 3369 792 l 3369 795 l 3369 798 l 3369 801 l
+ 3369 804 l 3369 806 l 3369 809 l 3369 812 l 3369 815 l
+ 3369 818 l 3369 820 l 3368 823 l 3368 826 l 3368 829 l
+ 3368 831 l 3368 834 l 3368 837 l 3368 840 l 3368 842 l
+ 3368 844 l 3368 847 l 3367 850 l 3367 852 l 3367 855 l
+ 3367 857 l 3367 860 l 3367 862 l 3367 865 l 3367 867 l
+ 3367 870 l 3367 872 l 3367 875 l 3367 877 l 3367 880 l
+ 3367 882 l 3367 884 l 3367 887 l 3367 889 l 3367 891 l
+ 3367 893 l 3367 896 l 3367 898 l 3367 901 l 3367 903 l
+ 3367 905 l 3367 907 l 3366 910 l 3366 912 l 3366 914 l
+ 3366 916 l 3366 918 l 3366 920 l 3366 922 l 3366 924 l
+ 3366 926 l 3366 928 l 3365 931 l 3365 933 l 3365 935 l
+ 3365 937 l 3365 939 l 3365 941 l 3365 943 l 3365 945 l
+ 3365 947 l 3365 949 l 3365 951 l 3365 953 l 3365 955 l
+ 3365 957 l 3365 959 l 3365 961 l 3365 963 l 3365 965 l
+ 3365 967 l 3365 968 l 3365 970 l 3365 972 l 3365 974 l
+ 3365 976 l 3365 978 l 3364 979 l 3364 981 l 3364 983 l
+ 3364 985 l 3364 987 l 3364 988 l 3364 990 l 3364 992 l
+ 3364 993 l 3364 995 l 3364 997 l 3364 999 l 3364 1000 l
+ 3364 1002 l 3364 1004 l 3363 1005 l 3363 1007 l 3363 1009 l
+ 3363 1010 l 3363 1012 l 3363 1014 l 3363 1016 l 3363 1017 l
+ 3363 1019 l 3363 1021 l 3362 1022 l 3362 1024 l 3362 1026 l
+ 3362 1027 l 3362 1029 l 3362 1030 l 3362 1032 l 3362 1033 l
+ 3362 1035 l 3362 1036 l 3362 1038 l 3362 1039 l 3362 1041 l
+ 3362 1043 l 3362 1044 l 3362 1046 l 3362 1047 l 3362 1049 l
+ 3362 1050 l 3362 1052 l 3362 1053 l 3362 1055 l 3362 1056 l
+ 3362 1057 l 3362 1059 l 3362 1060 l 3362 1062 l 3362 1063 l
+ 3362 1064 l 3362 1066 l 3361 1067 l 3361 1069 l 3361 1070 l
+ 3361 1071 l 3361 1073 l 3361 1074 l 3361 1076 l 3361 1077 l
+ 3361 1078 l 3361 1080 l 3360 1081 l 3360 1083 l 3360 1084 l
+ 3360 1085 l 3360 1087 l 3360 1088 l 3360 1090 l 3360 1091 l
+ 3360 1092 l 3360 1093 l 3360 1095 l 3360 1096 l 3360 1097 l
+ 3360 1098 l 3360 1100 l 3359 1101 l 3359 1103 l 3359 1104 l
+ 3359 1105 l 3359 1106 l 3359 1108 l 3359 1109 l 3359 1110 l
+ 3359 1111 l 3359 1112 l 3359 1114 l 3359 1115 l 3359 1116 l
+ 3359 1117 l 3359 1118 l 3359 1120 l 3359 1121 l 3359 1122 l
+ 3359 1123 l 3359 1124 l 3359 1126 l 3359 1127 l 3359 1128 l
+ 3359 1129 l 3359 1130 l 3359 1131 l 3359 1132 l 3359 1133 l
+ 3359 1134 l 3359 1135 l 3358 1137 l 3358 1138 l 3358 1139 l
+ 3358 1140 l 3358 1141 l 3358 1143 l 3358 1144 l 3358 1145 l
+ 3358 1146 l 3358 1147 l 3358 1148 l 3358 1149 l 3358 1150 l
+ 3358 1151 l 3358 1152 l 3357 1154 l 3357 1155 l 3357 1156 l
+ 3357 1157 l 3357 1158 l 3357 1159 l 3357 1160 l 3357 1161 l
+ 3357 1162 l 3357 1163 l 3357 1164 l 3357 1165 l 3357 1166 l
+ 3357 1167 l 3357 1168 l 3356 1169 l 3356 1170 l 3356 1171 l
+ 3356 1172 l 3356 1173 l 3356 1174 l 3356 1175 l 3356 1176 l
+ 3356 1177 l 3356 1178 l 3356 1180 l 3356 1181 l 3356 1182 l
+ 3356 1183 l 3356 1184 l 3356 1185 l 3356 1186 l 3356 1187 l
+ 3356 1188 l 3356 1189 l 3356 1190 l 3356 1191 l 3356 1192 l
+ 3356 1193 l 3356 1194 l 3356 1195 l 3356 1196 l 3356 1197 l
+ 3356 1198 l 3355 1198 l 3355 1199 l 3355 1200 l 3355 1201 l
+ 3355 1202 l 3355 1203 l 3355 1204 l 3355 1205 l 3355 1206 l
+ 3355 1207 l 3355 1208 l 3355 1209 l 3355 1210 l 3355 1211 l
+ 3354 1212 l 3354 1213 l 3354 1214 l 3354 1215 l 3354 1216 l
+ 3354 1217 l 3354 1218 l 3354 1219 l 3354 1220 l 3354 1221 l
+ 3354 1222 l 3354 1223 l 3354 1224 l 3353 1224 l 3353 1225 l
+ 3353 1226 l 3353 1227 l 3353 1228 l 3353 1229 l 3353 1230 l
+ 3353 1231 l 3353 1232 l 3353 1233 l 3353 1234 l 3353 1235 l
+ 3353 1236 l 3353 1237 l 3353 1238 l 3353 1239 l 3353 1240 l
+ 3353 1241 l 3353 1242 l 3353 1243 l 3353 1244 l 3353 1245 l
+ 3353 1246 l 3353 1247 l 3353 1248 l 3352 1248 l 3352 1249 l
+ 3352 1250 l 3352 1251 l 3352 1252 l 3352 1253 l 3352 1254 l
+ 3352 1255 l 3352 1256 l 3352 1257 l 3352 1258 l 3352 1259 l
+ 3352 1260 l 3352 1261 l 3352 1262 l 3352 1263 l 3351 1263 l
+ 3351 1264 l 3351 1265 l 3351 1266 l 3351 1267 l 3351 1268 l
+ 3351 1269 l 3351 1270 l 3351 1271 l 3351 1272 l 3351 1273 l
+ 3350 1274 l 3350 1275 l 3350 1276 l 3350 1277 l 3350 1278 l
+ 3350 1279 l 3350 1280 l 3350 1281 l 3350 1282 l 3350 1283 l
+ 3350 1284 l 3350 1285 l 3350 1286 l 3350 1287 l 3350 1288 l
+ 3350 1289 l 3350 1290 l 3350 1291 l 3350 1292 l 3350 1293 l
+ 3350 1294 l 3350 1295 l 3350 1296 l 3349 1297 l 3349 1298 l
+ 3349 1299 l 3349 1300 l 3349 1301 l 3349 1302 l 3349 1303 l
+ 3349 1304 l 3349 1305 l 3349 1306 l 3349 1307 l 3349 1308 l
+ 3349 1309 l 3348 1310 l 3348 1311 l 3348 1312 l 3348 1313 l
+ 3348 1314 l 3348 1315 l 3348 1316 l 3348 1317 l 3348 1318 l
+ 3348 1319 l 3348 1320 l 3347 1321 l 3347 1322 l 3347 1323 l
+ 3347 1324 l 3347 1325 l 3347 1326 l 3347 1327 l 3347 1328 l
+ 3347 1329 l 3347 1330 l 3347 1331 l 3347 1332 l 3347 1333 l
+ 3347 1334 l 3347 1335 l 3347 1336 l 3347 1337 l 3347 1338 l
+ 3347 1339 l 3346 1340 l 3346 1341 l 3346 1342 l 3346 1343 l
+ 3346 1344 l 3346 1345 l 3346 1346 l 3346 1347 l 3346 1348 l
+ 3346 1349 l 3346 1350 l 3345 1350 l 3345 1351 l 3345 1352 l
+ 3345 1353 l 3345 1354 l 3345 1355 l 3345 1356 l 3345 1357 l
+ 3345 1358 l 3345 1359 l 3345 1360 l 3344 1360 l 3344 1361 l
+ 3344 1362 l 3344 1363 l 3344 1364 l 3344 1365 l 3344 1366 l
+ 3344 1367 l 3344 1368 l 3344 1369 l 3344 1370 l 3344 1371 l
+ 3344 1372 l 3344 1373 l 3344 1374 l 3344 1375 l 3344 1376 l
+ 3344 1377 l 3343 1378 l 3343 1379 l 3343 1380 l 3343 1381 l
+ 3343 1382 l 3343 1383 l 3343 1384 l 3343 1385 l 3343 1386 l
+ 3343 1387 l 3343 1388 l 3342 1388 l 3342 1389 l 3342 1390 l
+ 3342 1391 l 3342 1392 l 3342 1393 l 3342 1394 l 3342 1395 l
+ 3342 1396 l 3341 1396 l 3341 1397 l 3341 1398 l 3341 1399 l
+ 3341 1400 l 3341 1401 l 3341 1402 l 3341 1403 l 3341 1404 l
+ 3341 1405 l 3341 1406 l 3341 1407 l 3341 1408 l 3341 1409 l
+ 3341 1410 l 3341 1411 l 3341 1412 l 3341 1413 l 3340 1413 l
+ 3340 1414 l 3340 1415 l 3340 1416 l 3340 1417 l 3340 1418 l
+ 3340 1419 l 3340 1420 l 3339 1420 l 3339 1421 l 3339 1422 l
+ 3339 1423 l 3339 1424 l 3339 1425 l 3339 1426 l 3339 1427 l
+ 3339 1428 l 3338 1429 l 3338 1430 l 3338 1431 l 3338 1432 l
+ 3338 1433 l 3338 1434 l 3338 1435 l 3338 1436 l 3338 1437 l
+ 3338 1438 l 3338 1439 l 3338 1440 l 3338 1441 l 3338 1442 l
+ 3338 1443 l 3338 1444 l 3337 1444 l 3337 1445 l 3337 1446 l
+ 3337 1447 l 3337 1448 l 3337 1449 l 3337 1450 l 3337 1451 l
+ 3336 1452 l 3336 1453 l 3336 1454 l 3336 1455 l 3336 1456 l
+ 3336 1457 l 3336 1458 l 3336 1459 l 3336 1460 l 3336 1461 l
+ 3336 1462 l 3336 1463 l 3336 1464 l 3336 1465 l 3335 1465 l
+ 3335 1466 l 3335 1467 l 3335 1468 l 3335 1469 l 3335 1470 l
+ 3335 1471 l 3335 1472 l 3334 1473 l 3334 1474 l 3334 1475 l
+ 3334 1476 l 3334 1477 l 3334 1478 l 3334 1479 l 3333 1479 l
+ 3333 1480 l 3333 1481 l 3333 1482 l 3333 1483 l 3333 1484 l
+ 3333 1485 l 3333 1486 l 3333 1487 l 3333 1488 l 3333 1489 l
+ 3333 1490 l 3333 1491 l 3333 1492 l 3332 1493 l 3332 1494 l
+ 3332 1495 l 3332 1496 l 3332 1497 l 3332 1498 l 3331 1499 l
+ 3331 1500 l 3331 1501 l 3331 1502 l 3331 1503 l 3331 1504 l
+ 3330 1505 l 3330 1506 l 3330 1507 l 3330 1508 l 3330 1509 l
+ 3330 1510 l 3330 1511 l 3330 1512 l 3330 1513 l 3330 1514 l
+ 3330 1515 l 3330 1516 l 3329 1517 l 3329 1518 l 3329 1519 l
+ 3329 1520 l 3329 1521 l 3328 1522 l 3328 1523 l 3328 1524 l
+ 3328 1525 l 3328 1526 l 3328 1527 l 3327 1528 l 3327 1529 l
+ 3327 1530 l 3327 1531 l 3327 1532 l 3327 1533 l 3327 1534 l
+ 3327 1535 l 3327 1536 l 3327 1537 l 3327 1538 l 3326 1539 l
+ 3326 1540 l 3326 1541 l 3326 1542 l 3326 1543 l 3325 1543 l
+ 3325 1544 l 3325 1545 l 3325 1546 l 3325 1547 l 3325 1548 l
+ 3325 1549 l 3324 1549 l 3324 1550 l 3324 1551 l 3324 1552 l
+ 3324 1553 l 3324 1554 l 3324 1555 l 3324 1556 l 3324 1557 l
+ 3324 1558 l 3323 1559 l 3323 1560 l 3323 1561 l 3323 1562 l
+ 3323 1563 l 3323 1564 l 3322 1564 l 3322 1565 l 3322 1566 l
+ 3322 1567 l 3322 1568 l 3321 1568 l 3321 1569 l 3321 1570 l
+ 3321 1571 l 3321 1572 l 3321 1573 l 3321 1574 l 3321 1575 l
+ 3321 1576 l 3321 1577 l 3320 1578 l 3320 1579 l 3320 1580 l
+ 3320 1581 l 3319 1581 l 3319 1582 l 3319 1583 l 3319 1584 l
+ 3319 1585 l 3319 1586 l 3318 1586 l 3318 1587 l 3318 1588 l
+ 3318 1589 l 3318 1590 l 3318 1591 l 3318 1592 l 3318 1593 l
+ 3318 1594 l 3317 1594 l 3317 1595 l 3317 1596 l 3317 1597 l
+ 3317 1598 l 3316 1598 l 3316 1599 l 3316 1600 l 3316 1601 l
+ 3316 1602 l 3315 1602 l 3315 1603 l 3315 1604 l 3315 1605 l
+ 3315 1606 l 3315 1607 l 3315 1608 l 3315 1609 l 3315 1610 l
+ 3314 1610 l 3314 1611 l 3314 1612 l 3314 1613 l 3313 1613 l
+ 3313 1614 l 3313 1615 l 3313 1616 l 3313 1617 l 3312 1617 l
+ 3312 1618 l 3312 1619 l 3312 1620 l 3312 1621 l 3312 1622 l
+ 3312 1623 l 3312 1624 l 3311 1624 l 3311 1625 l 3311 1626 l
+ 3311 1627 l 3310 1627 l 3310 1628 l 3310 1629 l 3310 1630 l
+ 3310 1631 l 3310 1632 l 3310 1633 l 3310 1634 l 3309 1634 l
+ 3309 1635 l 3309 1636 l 3308 1636 l 3308 1637 l 3308 1638 l
+ 3308 1639 l 3307 1639 l 3307 1640 l 3307 1641 l 3307 1642 l
+ 3307 1643 l 3307 1644 l 3307 1645 l 3306 1645 l 3306 1646 l
+ 3306 1647 l 3306 1648 l 3305 1648 l 3305 1649 l 3305 1650 l
+ 3305 1651 l 3304 1651 l 3304 1652 l 3304 1653 l 3304 1654 l
+ 3304 1655 l 3304 1656 l 3303 1656 l 3303 1657 l 3303 1658 l
+ 3302 1659 l 3302 1660 l 3302 1661 l 3301 1661 l 3301 1662 l
+ 3301 1663 l 3301 1664 l 3301 1665 l 3300 1665 l 3300 1666 l
+ 3300 1667 l 3300 1668 l 3299 1668 l 3299 1669 l 3299 1670 l
+ 3298 1670 l 3298 1671 l 3298 1672 l 3298 1673 l 3298 1674 l
+ 3297 1674 l 3297 1675 l 3297 1676 l 3296 1676 l 3296 1677 l
+ 3295 1678 l 3295 1679 l 3295 1680 l 3295 1681 l 3294 1681 l
+ 3294 1682 l 3294 1683 l 3293 1683 l 3293 1684 l 3293 1685 l
+ 3292 1685 l 3292 1686 l 3292 1687 l 3292 1688 l 3291 1688 l
+ 3291 1689 l 3290 1689 l 3290 1690 l 3290 1691 l 3289 1691 l
+ 3289 1692 l 3289 1693 l 3288 1693 l 3288 1694 l 3287 1694 l
+ 3287 1695 l 3287 1696 l 3286 1696 l 3286 1697 l 3286 1698 l
+ 3285 1698 l 3285 1699 l 3284 1699 l 3284 1700 l 3283 1700 l
+ 3283 1701 l 3282 1702 l 3282 1703 l 3281 1703 l 3280 1703 l
+ 3280 1704 l 3279 1704 l 3279 1705 l 3278 1705 l 3278 1706 l
+ 3277 1706 l 3276 1706 l 3275 1706 l
+ 3275 1707 l gs col0 s gr 
+% Polyline
+n 3269 1707 m 3268 1707 l 3268 1706 l 3267 1706 l 3266 1706 l 3265 1706 l
+ 3265 1705 l 3264 1705 l 3264 1704 l 3263 1704 l 3263 1703 l
+ 3262 1703 l 3261 1703 l 3261 1702 l 3260 1701 l 3260 1700 l
+ 3259 1700 l 3259 1699 l 3258 1699 l 3258 1698 l 3257 1698 l
+ 3257 1697 l 3257 1696 l 3256 1696 l 3256 1695 l 3256 1694 l
+ 3255 1694 l 3255 1693 l 3255 1692 l 3254 1692 l 3254 1691 l
+ 3253 1691 l 3253 1690 l 3253 1689 l 3252 1689 l 3252 1688 l
+ 3252 1687 l 3252 1686 l 3251 1686 l 3251 1685 l 3250 1685 l
+ 3250 1684 l 3250 1683 l 3249 1683 l 3249 1682 l 3249 1681 l
+ 3249 1680 l 3248 1680 l 3248 1679 l 3248 1678 l 3247 1678 l
+ 3247 1677 l 3247 1676 l 3246 1676 l 3246 1675 l 3246 1674 l
+ 3246 1673 l 3246 1672 l 3245 1672 l 3245 1671 l 3245 1670 l
+ 3244 1670 l 3244 1669 l 3244 1668 l 3243 1668 l 3243 1667 l
+ 3243 1666 l 3243 1665 l 3243 1664 l 3243 1663 l 3242 1663 l
+ 3242 1662 l 3242 1661 l 3241 1661 l 3241 1660 l 3241 1659 l
+ 3240 1658 l 3240 1657 l 3240 1656 l 3240 1655 l 3240 1654 l
+ 3239 1654 l 3239 1653 l 3239 1652 l 3239 1651 l 3238 1651 l
+ 3238 1650 l 3238 1649 l 3238 1648 l 3237 1648 l 3237 1647 l
+ 3237 1646 l 3237 1645 l 3237 1644 l 3237 1643 l 3237 1642 l
+ 3236 1642 l 3236 1641 l 3236 1640 l 3236 1639 l 3235 1639 l
+ 3235 1638 l 3235 1637 l 3235 1636 l 3234 1636 l 3234 1635 l
+ 3234 1634 l 3234 1633 l 3234 1632 l 3234 1631 l 3233 1630 l
+ 3233 1629 l 3233 1628 l 3233 1627 l 3232 1627 l 3232 1626 l
+ 3232 1625 l 3232 1624 l 3231 1624 l 3231 1623 l 3231 1622 l
+ 3231 1621 l 3231 1620 l 3231 1619 l 3231 1618 l 3231 1617 l
+ 3230 1617 l 3230 1616 l 3230 1615 l 3230 1614 l 3230 1613 l
+ 3229 1613 l 3229 1612 l 3229 1611 l 3229 1610 l 3228 1610 l
+ 3228 1609 l 3228 1608 l 3228 1607 l 3228 1606 l 3228 1605 l
+ 3228 1604 l 3228 1603 l 3228 1602 l 3227 1602 l 3227 1601 l
+ 3227 1600 l 3227 1599 l 3226 1598 l 3226 1597 l 3226 1596 l
+ 3226 1595 l 3226 1594 l 3226 1593 l 3226 1592 l 3226 1591 l
+ 3226 1590 l 3225 1590 l 3225 1589 l 3225 1588 l 3225 1587 l
+ 3225 1586 l 3224 1586 l 3224 1585 l 3224 1584 l 3224 1583 l
+ 3224 1582 l 3224 1581 l 3223 1581 l 3223 1580 l 3223 1579 l
+ 3223 1578 l 3223 1577 l 3223 1576 l 3223 1575 l 3223 1574 l
+ 3223 1573 l 3222 1573 l 3222 1572 l 3222 1571 l 3222 1570 l
+ 3222 1569 l 3222 1568 l 3221 1568 l 3221 1567 l 3221 1566 l
+ 3221 1565 l 3221 1564 l 3220 1564 l 3220 1563 l 3220 1562 l
+ 3220 1561 l 3220 1560 l 3220 1559 l 3220 1558 l 3220 1557 l
+ 3220 1556 l 3220 1555 l 3219 1554 l 3219 1553 l 3219 1552 l
+ 3219 1551 l 3219 1550 l 3218 1549 l 3218 1548 l 3218 1547 l
+ 3218 1546 l 3218 1545 l 3218 1544 l 3217 1543 l 3217 1542 l
+ 3217 1541 l 3217 1540 l 3217 1539 l 3217 1538 l 3217 1537 l
+ 3217 1536 l 3217 1535 l 3217 1534 l 3216 1533 l 3216 1532 l
+ 3216 1531 l 3216 1530 l 3216 1529 l 3216 1528 l 3215 1527 l
+ 3215 1526 l 3215 1525 l 3215 1524 l 3215 1523 l 3215 1522 l
+ 3214 1522 l 3214 1521 l 3214 1520 l 3214 1519 l 3214 1518 l
+ 3214 1517 l 3214 1516 l 3214 1515 l 3214 1514 l 3214 1513 l
+ 3214 1512 l 3214 1511 l 3213 1510 l 3213 1509 l 3213 1508 l
+ 3213 1507 l 3213 1506 l 3213 1505 l 3212 1504 l 3212 1503 l
+ 3212 1502 l 3212 1501 l 3212 1500 l 3212 1499 l 3211 1498 l
+ 3211 1497 l 3211 1496 l 3211 1495 l 3211 1494 l 3211 1493 l
+ 3211 1492 l 3211 1491 l 3211 1490 l 3211 1489 l 3211 1488 l
+ 3211 1487 l 3211 1486 l 3210 1485 l 3210 1484 l 3210 1483 l
+ 3210 1482 l 3210 1481 l 3210 1480 l 3210 1479 l 3209 1479 l
+ 3209 1478 l 3209 1477 l 3209 1476 l 3209 1475 l 3209 1474 l
+ 3209 1473 l 3208 1472 l 3208 1471 l 3208 1470 l 3208 1469 l
+ 3208 1468 l 3208 1467 l 3208 1466 l 3208 1465 l 3208 1464 l
+ 3208 1463 l 3208 1462 l 3208 1461 l 3208 1460 l 3208 1459 l
+ 3207 1458 l 3207 1457 l 3207 1456 l 3207 1455 l 3207 1454 l
+ 3207 1453 l 3207 1452 l 3206 1451 l 3206 1450 l 3206 1449 l
+ 3206 1448 l 3206 1447 l 3206 1446 l 3206 1445 l 3206 1444 l
+ 3205 1444 l 3205 1443 l 3205 1442 l 3205 1441 l 3205 1440 l
+ 3205 1439 l 3205 1438 l 3205 1437 l 3205 1436 l 3205 1435 l
+ 3205 1434 l 3205 1433 l 3205 1432 l 3205 1431 l 3205 1430 l
+ 3205 1429 l 3204 1428 l 3204 1427 l 3204 1426 l 3204 1425 l
+ 3204 1424 l 3204 1423 l 3204 1422 l 3204 1421 l 3204 1420 l
+ 3203 1420 l 3203 1419 l 3203 1418 l 3203 1417 l 3203 1416 l
+ 3203 1415 l 3203 1414 l 3203 1413 l 3202 1413 l 3202 1412 l
+ 3202 1411 l 3202 1410 l 3202 1409 l 3202 1408 l 3202 1407 l
+ 3202 1406 l 3202 1405 l 3202 1404 l 3202 1403 l 3202 1402 l
+ 3202 1401 l 3202 1400 l 3202 1399 l 3202 1398 l 3202 1397 l
+ 3202 1396 l 3201 1396 l 3201 1395 l 3201 1394 l 3201 1393 l
+ 3201 1392 l 3201 1391 l 3201 1390 l 3201 1389 l 3201 1388 l
+ 3200 1388 l 3200 1387 l 3200 1386 l 3200 1385 l 3200 1384 l
+ 3200 1383 l 3200 1382 l 3200 1381 l 3200 1380 l 3200 1379 l
+ 3200 1378 l 3200 1377 l 3200 1376 l 3200 1375 l 3200 1374 l
+ 3200 1373 l 3200 1372 l 3200 1371 l 3200 1370 l 3200 1369 l
+ 3199 1368 l 3199 1367 l 3199 1366 l 3199 1365 l 3199 1364 l
+ 3199 1363 l 3199 1362 l 3199 1361 l 3199 1360 l 3198 1360 l
+ 3198 1359 l 3198 1358 l 3198 1357 l 3198 1356 l 3198 1355 l
+ 3198 1354 l 3198 1353 l 3198 1352 l 3198 1351 l 3198 1350 l
+ 3197 1350 l 3197 1349 l 3197 1348 l 3197 1347 l 3197 1346 l
+ 3197 1345 l 3197 1344 l 3197 1343 l 3197 1342 l 3197 1341 l
+ 3197 1340 l 3197 1339 l 3197 1338 l 3197 1337 l 3197 1336 l
+ 3197 1335 l 3197 1334 l 3197 1333 l 3197 1332 l 3197 1331 l
+ 3197 1330 l 3197 1329 l 3196 1329 l 3196 1328 l 3196 1327 l
+ 3196 1326 l 3196 1325 l 3196 1324 l 3196 1323 l 3196 1322 l
+ 3196 1321 l 3195 1320 l 3195 1319 l 3195 1318 l 3195 1317 l
+ 3195 1316 l 3195 1315 l 3195 1314 l 3195 1313 l 3195 1312 l
+ 3195 1311 l 3195 1310 l 3194 1309 l 3194 1308 l 3194 1307 l
+ 3194 1306 l 3194 1305 l 3194 1304 l 3194 1303 l 3194 1302 l
+ 3194 1301 l 3194 1300 l 3194 1299 l 3194 1298 l 3194 1297 l
+ 3194 1296 l 3194 1295 l 3194 1294 l 3194 1293 l 3194 1292 l
+ 3194 1291 l 3194 1290 l 3194 1289 l 3194 1288 l 3193 1287 l
+ 3193 1286 l 3193 1285 l 3193 1284 l 3193 1283 l 3193 1282 l
+ 3193 1281 l 3193 1280 l 3193 1279 l 3193 1278 l 3193 1277 l
+ 3193 1276 l 3193 1275 l 3193 1274 l 3192 1273 l 3192 1272 l
+ 3192 1271 l 3192 1270 l 3192 1269 l 3192 1268 l 3192 1267 l
+ 3192 1266 l 3192 1265 l 3192 1264 l 3192 1263 l 3191 1263 l
+ 3191 1262 l 3191 1261 l 3191 1260 l 3191 1259 l 3191 1258 l
+ 3191 1257 l 3191 1256 l 3191 1255 l 3191 1254 l 3191 1253 l
+ 3191 1252 l 3191 1251 l 3191 1250 l 3191 1249 l 3191 1248 l
+ 3191 1247 l 3191 1246 l 3191 1245 l 3191 1244 l 3191 1243 l
+ 3191 1242 l 3191 1241 l 3191 1240 l 3191 1239 l 3191 1238 l
+ 3191 1237 l 3190 1236 l 3190 1235 l 3190 1234 l 3190 1233 l
+ 3190 1232 l 3190 1231 l 3190 1230 l 3190 1229 l 3190 1228 l
+ 3190 1227 l 3190 1226 l 3190 1225 l 3190 1224 l 3189 1224 l
+ 3189 1223 l 3189 1222 l 3189 1221 l 3189 1220 l 3189 1219 l
+ 3189 1218 l 3189 1217 l 3189 1216 l 3189 1215 l 3189 1214 l
+ 3189 1213 l 3189 1212 l 3188 1211 l 3188 1210 l 3188 1209 l
+ 3188 1208 l 3188 1207 l 3188 1206 l 3188 1205 l 3188 1204 l
+ 3188 1203 l 3188 1202 l 3188 1201 l 3188 1200 l 3188 1199 l
+ 3188 1198 l 3188 1197 l 3188 1196 l 3188 1195 l 3188 1194 l
+ 3188 1193 l 3188 1192 l 3188 1191 l 3188 1190 l 3188 1189 l
+ 3188 1188 l 3188 1187 l 3188 1186 l 3188 1185 l 3188 1184 l
+ 3187 1184 l 3187 1183 l 3187 1182 l 3187 1181 l 3187 1180 l
+ 3187 1178 l 3187 1177 l 3187 1176 l 3187 1175 l 3187 1174 l
+ 3187 1173 l 3187 1172 l 3187 1171 l 3187 1170 l 3187 1169 l
+ 3186 1168 l 3186 1167 l 3186 1166 l 3186 1165 l 3186 1164 l
+ 3186 1163 l 3186 1162 l 3186 1161 l 3186 1160 l 3186 1159 l
+ 3186 1158 l 3186 1157 l 3186 1156 l 3186 1155 l 3186 1154 l
+ 3185 1152 l 3185 1151 l 3185 1150 l 3185 1149 l 3185 1148 l
+ 3185 1147 l 3185 1146 l 3185 1145 l 3185 1144 l 3185 1143 l
+ 3185 1141 l 3185 1140 l 3185 1139 l 3185 1138 l 3185 1137 l
+ 3185 1135 l 3185 1134 l 3185 1133 l 3185 1132 l 3185 1131 l
+ 3185 1130 l 3185 1129 l 3185 1128 l 3185 1127 l 3185 1126 l
+ 3185 1124 l 3185 1123 l 3185 1122 l 3185 1121 l 3185 1120 l
+ 3184 1118 l 3184 1117 l 3184 1116 l 3184 1115 l 3184 1114 l
+ 3184 1112 l 3184 1111 l 3184 1110 l 3184 1109 l 3184 1108 l
+ 3184 1106 l 3184 1105 l 3184 1104 l 3184 1103 l 3184 1101 l
+ 3183 1100 l 3183 1098 l 3183 1097 l 3183 1096 l 3183 1095 l
+ 3183 1093 l 3183 1092 l 3183 1091 l 3183 1090 l 3183 1088 l
+ 3183 1087 l 3183 1085 l 3183 1084 l 3183 1083 l 3183 1081 l
+ 3182 1080 l 3182 1078 l 3182 1077 l 3182 1076 l 3182 1074 l
+ 3182 1073 l 3182 1071 l 3182 1070 l 3182 1069 l 3182 1067 l
+ 3182 1066 l 3182 1064 l 3182 1063 l 3182 1062 l 3182 1060 l
+ 3182 1059 l 3182 1057 l 3182 1056 l 3182 1055 l 3182 1053 l
+ 3182 1052 l 3182 1050 l 3182 1049 l 3182 1047 l 3182 1046 l
+ 3181 1044 l 3181 1043 l 3181 1041 l 3181 1039 l 3181 1038 l
+ 3181 1036 l 3181 1035 l 3181 1033 l 3181 1032 l 3181 1030 l
+ 3181 1029 l 3181 1027 l 3181 1026 l 3181 1024 l 3181 1022 l
+ 3180 1021 l 3180 1019 l 3180 1017 l 3180 1016 l 3180 1014 l
+ 3180 1012 l 3180 1010 l 3180 1009 l 3180 1007 l 3180 1005 l
+ 3179 1004 l 3179 1002 l 3179 1000 l 3179 999 l 3179 997 l
+ 3179 995 l 3179 993 l 3179 992 l 3179 990 l 3179 988 l
+ 3179 987 l 3179 985 l 3179 983 l 3179 981 l 3179 979 l
+ 3179 978 l 3179 976 l 3179 974 l 3179 972 l 3179 970 l
+ 3179 968 l 3179 967 l 3179 965 l 3179 963 l 3179 961 l
+ 3178 959 l 3178 957 l 3178 955 l 3178 953 l 3178 951 l
+ 3178 949 l 3178 947 l 3178 945 l 3178 943 l 3178 941 l
+ 3178 939 l 3178 937 l 3178 935 l 3178 933 l 3178 931 l
+ 3177 928 l 3177 926 l 3177 924 l 3177 922 l 3177 920 l
+ 3177 918 l 3177 916 l 3177 914 l 3177 912 l 3177 910 l
+ 3176 907 l 3176 905 l 3176 903 l 3176 901 l 3176 898 l
+ 3176 896 l 3176 893 l 3176 891 l 3176 889 l 3176 887 l
+ 3176 884 l 3176 882 l 3176 880 l 3176 877 l 3176 875 l
+ 3176 872 l 3176 870 l 3176 867 l 3176 865 l 3176 862 l
+ 3176 860 l 3176 857 l 3176 855 l 3176 852 l 3176 850 l
+ 3175 847 l 3175 844 l 3175 842 l 3175 840 l 3175 837 l
+ 3175 834 l 3175 831 l 3175 829 l 3175 826 l 3175 823 l
+ 3174 820 l 3174 818 l 3174 815 l 3174 812 l 3174 809 l
+ 3174 806 l 3174 804 l 3174 801 l 3174 798 l 3174 795 l
+ 3174 792 l 3174 789 l 3174 786 l 3174 783 l 3174 780 l
+ 3173 777 l 3173 774 l 3173 771 l 3173 768 l 3173 765 l
+ 3173 761 l 3173 758 l 3173 755 l 3173 752 l 3173 749 l
+ 3173 745 l 3173 742 l 3173 739 l 3173 736 l 3173 732 l
+ 3173 729 l 3173 725 l 3173 722 l 3173 719 l 3173 715 l
+ 3172 711 l 3172 707 l 3172 704 l 3172 700 l 3172 696 l
+ 3172 692 l 3172 689 l 3172 685 l 3172 681 l 3172 678 l
+ 3171 673 l 3171 669 l 3171 666 l 3171 662 l 3171 658 l
+ 3171 654 l 3171 650 l 3171 646 l 3171 642 l 3171 637 l
+ 3171 633 l 3171 628 l 3171 624 l 3171 620 l 3171 615 l
+ 3171 611 l 3171 606 l 3171 602 l 3171 597 l 3171 592 l
+ 3171 587 l 3171 583 l 3171 578 l 3171 573 l 3171 569 l
+ 3170 563 l 3170 558 l 3170 554 l 3170 549 l 3170 544 l
+ 3170 538 l 3170 533 l 3170 528 l 3170 522 l 3170 516 l
+ 3169 510 l 3169 504 l 3169 499 l 3169 494 l 3169 488 l
+ 3169 481 l 3169 475 l 3169 470 l 3169 464 l 3169 457 l
+ 3168 450 l 3168 444 l 3168 438 l 3168 432 l 3168 425 l
+ 3168 418 l 3168 411 l 3168 405 l 3168 399 l 3168 393 l
+ 3168 387 l 3168 380 l 3168 374 l 3168 368 l 3168 362 l
+ 3168 356 l 3168 349 l 3168 342 l 3168 335 l 3168 329 l
+ 3168 322 l 3168 315 l 3167 307 l 3167 300 l 3167 292 l
+ 3167 285 l 3167 278 l 3167 271 l 3167 262 l 3167 254 l
+ 3167 246 l 3167 238 l 3167 231 l 3167 223 l 3166 214 l
+ 3166 206 l 3166 199 l 3166 193 l 3166 187 l 3166 180 l
+ 3166 173 l 3166 168 l
+ 3166 167 l gs col0 s gr 
+% Polyline
+n 3049 167 m 3049 171 l 3049 178 l 3049 192 l 3049 212 l 3049 239 l
+ 3049 272 l 3049 309 l 3049 349 l 3049 390 l 3049 430 l
+ 3048 469 l 3048 506 l 3048 541 l 3048 573 l 3048 602 l
+ 3048 629 l 3048 654 l 3048 677 l 3048 699 l 3048 719 l
+ 3048 739 l 3048 763 l 3048 786 l 3048 808 l 3047 831 l
+ 3047 853 l 3047 875 l 3047 897 l 3047 918 l 3047 939 l
+ 3047 959 l 3047 978 l 3047 996 l 3047 1014 l 3046 1030 l
+ 3046 1046 l 3046 1061 l 3046 1075 l 3046 1089 l 3046 1106 l
+ 3046 1123 l 3046 1140 l 3045 1157 l 3045 1175 l 3045 1192 l
+ 3045 1210 l 3045 1227 l 3045 1243 l 3045 1258 l 3044 1273 l
+ 3044 1287 l 3044 1301 l 3044 1313 l 3044 1328 l 3044 1343 l
+ 3044 1358 l 3044 1373 l 3044 1389 l 3043 1404 l 3043 1420 l
+ 3043 1434 l 3043 1448 l 3043 1462 l 3043 1474 l 3043 1486 l
+ 3043 1498 l 3042 1510 l 3042 1523 l 3042 1535 l 3042 1548 l
+ 3041 1561 l 3041 1574 l 3041 1586 l 3041 1598 l 3041 1609 l
+ 3040 1620 l 3040 1630 l 3040 1642 l 3040 1654 l 3040 1667 l
+ 3040 1680 l 3040 1694 l 3039 1707 l 3039 1720 l 3039 1732 l
+ 3039 1743 l 3039 1754 l 3039 1765 l 3039 1776 l 3038 1788 l
+ 3038 1799 l 3038 1812 l 3038 1823 l 3038 1835 l 3037 1846 l
+ 3037 1856 l 3037 1866 l 3037 1876 l 3037 1886 l 3036 1897 l
+ 3036 1908 l 3036 1919 l 3036 1930 l 3036 1940 l 3035 1950 l
+ 3035 1960 l 3035 1969 l 3035 1980 l 3035 1992 l 3034 2004 l
+ 3034 2017 l 3034 2030 l 3034 2042 l 3033 2053 l 3033 2064 l
+ 3033 2075 l 3033 2086 l 3033 2098 l 3032 2110 l 3032 2122 l
+ 3032 2133 l 3032 2144 l 3032 2154 l 3031 2164 l 3031 2175 l
+ 3031 2186 l 3030 2198 l 3030 2209 l 3030 2220 l 3029 2231 l
+ 3029 2241 l 3029 2250 l 3029 2260 l 3028 2271 l 3028 2282 l
+ 3028 2293 l 3027 2304 l 3027 2314 l 3027 2324 l 3027 2333 l
+ 3027 2343 l 3026 2354 l 3026 2364 l 3026 2375 l 3025 2386 l
+ 3025 2395 l 3025 2405 l 3025 2414 l 3025 2423 l 3024 2433 l
+ 3024 2444 l 3024 2454 l 3023 2464 l 3023 2474 l 3023 2483 l
+ 3023 2492 l 3023 2501 l 3022 2511 l 3022 2521 l 3022 2532 l
+ 3021 2542 l 3021 2551 l 3021 2560 l 3021 2569 l 3021 2578 l
+ 3020 2588 l 3020 2598 l 3020 2609 l 3019 2619 l 3019 2628 l
+ 3019 2637 l 3019 2646 l 3019 2655 l 3018 2665 l 3018 2675 l
+ 3018 2685 l 3017 2695 l 3017 2704 l 3017 2713 l 3017 2722 l
+ 3016 2731 l 3016 2741 l 3016 2751 l 3015 2761 l 3015 2771 l
+ 3014 2780 l 3014 2789 l 3014 2798 l 3014 2807 l 3013 2816 l
+ 3013 2827 l 3013 2837 l 3012 2846 l 3012 2856 l 3012 2864 l
+ 3012 2873 l 3012 2882 l 3011 2892 l 3011 2903 l 3011 2913 l
+ 3010 2923 l 3010 2932 l 3010 2941 l 3010 2950 l 3009 2959 l
+ 3009 2969 l 3009 2980 l 3008 2990 l 3008 3000 l 3007 3009 l
+ 3007 3018 l 3007 3027 l 3007 3037 l 3006 3047 l 3006 3057 l
+ 3006 3068 l 3005 3078 l 3005 3087 l 3005 3096 l 3005 3105 l
+ 3005 3115 l 3004 3125 l 3004 3136 l 3004 3147 l 3003 3157 l
+ 3003 3167 l 3003 3176 l 3003 3185 l 3002 3195 l 3002 3206 l
+ 3001 3217 l 3001 3227 l 3001 3238 l 3000 3248 l 3000 3257 l
+ 3000 3267 l 2999 3277 l 2999 3288 l 2999 3299 l 2998 3310 l
+ 2998 3320 l 2997 3331 l 2997 3340 l 2997 3350 l 2997 3360 l
+ 2996 3371 l 2996 3382 l 2996 3393 l 2995 3404 l 2995 3414 l
+ 2995 3424 l 2995 3434 l 2994 3444 l 2994 3455 l 2994 3467 l
+ 2993 3478 l 2993 3489 l 2992 3499 l 2992 3509 l 2992 3519 l
+ 2992 3529 l 2991 3541 l 2991 3552 l 2991 3563 l 2990 3575 l
+ 2990 3585 l 2990 3595 l 2990 3605 l 2989 3615 l 2989 3626 l
+ 2988 3637 l 2988 3649 l 2988 3659 l 2987 3669 l 2987 3679 l
+ 2987 3688 l 2986 3698 l 2986 3709 l 2986 3719 l 2985 3730 l
+ 2985 3740 l 2984 3749 l 2984 3758 l 2984 3766 l 2983 3775 l
+ 2983 3785 l 2983 3794 l 2982 3803 l 2982 3812 l 2981 3820 l
+ 2981 3828 l 2981 3837 l 2980 3848 l 2979 3858 l 2979 3868 l
+ 2978 3876 l 2978 3884 l 2978 3891 l 2977 3898 l 2976 3906 l
+ 2976 3912 l 2975 3918 l 2975 3923 l 2974 3928 l 2974 3933 l
+ 2973 3937 l 2973 3941 l 2972 3943 l 2972 3944 l 2971 3945 l
+ 2971 3946 l 2970 3946 l 2970 3947 l 2969 3946 l 2968 3945 l
+ 2968 3944 l 2967 3941 l 2967 3939 l 2966 3937 l 2965 3934 l
+ 2965 3931 l 2964 3927 l 2963 3923 l 2963 3920 l 2962 3916 l
+ 2961 3912 l 2961 3907 l 2960 3903 l 2959 3899 l 2959 3895 l
+ 2958 3890 l 2957 3886 l 2957 3881 l 2956 3877 l 2955 3873 l
+ 2955 3869 l 2954 3865 l 2953 3861 l 2953 3857 l 2952 3853 l
+ 2951 3849 l 2951 3845 l 2950 3841 l 2949 3838 l 2949 3834 l
+ 2948 3831 l 2947 3827 l 2946 3824 l 2946 3821 l 2945 3818 l
+ 2944 3815 l 2944 3812 l 2943 3809 l 2942 3807 l 2942 3804 l
+ 2941 3801 l 2940 3799 l 2939 3796 l 2939 3794 l 2938 3792 l
+ 2937 3790 l 2937 3788 l 2936 3786 l 2935 3784 l 2934 3783 l
+ 2933 3781 l 2932 3779 l 2931 3778 l 2930 3776 l 2930 3775 l
+ 2929 3773 l 2928 3772 l 2927 3770 l 2927 3769 l 2926 3768 l
+ 2925 3767 l 2924 3766 l 2923 3765 l 2922 3764 l 2921 3763 l
+ 2920 3762 l 2919 3762 l 2919 3761 l 2918 3761 l 2917 3760 l
+ 2916 3760 l 2915 3760 l 2914 3759 l 2913 3759 l 2912 3759 l
+ 2911 3759 l 2910 3759 l 2909 3759 l 2908 3759 l 2907 3760 l
+ 2906 3760 l 2905 3760 l 2904 3760 l 2903 3760 l 2903 3761 l
+ 2902 3761 l 2901 3761 l 2900 3762 l 2899 3762 l 2898 3763 l
+ 2897 3764 l 2896 3764 l 2895 3765 l 2894 3766 l 2893 3766 l
+ 2892 3767 l 2891 3768 l 2890 3769 l 2889 3770 l 2888 3771 l
+ 2887 3772 l 2886 3773 l 2885 3774 l 2884 3775 l 2883 3777 l
+ 2882 3778 l 2881 3779 l 2880 3780 l 2879 3781 l 2877 3782 l
+ 2876 3783 l 2875 3784 l 2874 3785 l 2873 3787 l 2872 3788 l
+ 2871 3790 l 2870 3791 l 2869 3793 l 2868 3794 l 2867 3796 l
+ 2866 3797 l 2865 3799 l 2864 3800 l 2863 3802 l 2861 3803 l
+ 2860 3805 l 2859 3806 l 2858 3808 l 2857 3809 l 2855 3811 l
+ 2854 3812 l 2853 3814 l 2852 3816 l 2851 3817 l 2849 3819 l
+ 2848 3821 l 2847 3822 l 2846 3824 l 2845 3826 l 2843 3827 l
+ 2842 3829 l 2841 3831 l 2840 3833 l 2839 3835 l 2837 3836 l
+ 2836 3838 l 2835 3840 l 2834 3842 l 2833 3844 l 2831 3845 l
+ 2830 3847 l 2829 3849 l 2828 3851 l 2826 3853 l 2825 3854 l
+ 2823 3856 l 2822 3858 l 2821 3860 l 2819 3862 l 2818 3863 l
+ 2816 3865 l 2815 3867 l 2814 3869 l 2812 3871 l 2811 3872 l
+ 2809 3874 l 2808 3876 l 2806 3877 l 2805 3879 l 2803 3881 l
+ 2802 3883 l 2800 3884 l 2799 3886 l 2797 3888 l 2796 3889 l
+ 2794 3891 l 2793 3893 l 2791 3894 l 2790 3896 l 2788 3897 l
+ 2787 3899 l 2785 3900 l 2783 3902 l 2782 3904 l 2780 3905 l
+ 2778 3907 l 2777 3909 l 2775 3910 l 2773 3911 l 2772 3913 l
+ 2770 3914 l 2768 3915 l 2767 3916 l 2765 3918 l 2763 3919 l
+ 2761 3921 l 2760 3922 l 2758 3923 l 2756 3924 l 2755 3926 l
+ 2753 3927 l 2751 3928 l 2749 3929 l 2747 3930 l 2746 3931 l
+ 2744 3932 l 2742 3933 l 2740 3934 l 2738 3935 l 2736 3936 l
+ 2735 3937 l 2733 3938 l 2731 3939 l 2729 3940 l 2726 3940 l
+ 2724 3941 l 2722 3942 l 2720 3942 l 2719 3943 l 2716 3944 l
+ 2715 3944 l 2713 3945 l 2711 3945 l 2709 3946 l 2706 3946 l
+ 2704 3947 l 2702 3947 l 2700 3947 l 2698 3947 l 2695 3948 l
+ 2693 3948 l 2691 3948 l 2689 3948 l 2686 3948 l 2684 3949 l
+ 2681 3949 l 2679 3949 l 2677 3949 l 2674 3949 l 2672 3949 l
+ 2669 3949 l 2667 3949 l 2665 3948 l 2662 3948 l 2660 3948 l
+ 2657 3947 l 2655 3947 l 2653 3947 l 2650 3947 l 2648 3946 l
+ 2645 3946 l 2643 3946 l 2640 3945 l 2637 3945 l 2634 3944 l
+ 2632 3944 l 2629 3943 l 2626 3942 l 2624 3942 l 2620 3941 l
+ 2618 3940 l 2615 3940 l 2612 3939 l 2609 3938 l 2606 3938 l
+ 2604 3937 l 2601 3936 l 2598 3935 l 2595 3934 l 2592 3934 l
+ 2589 3933 l 2586 3932 l 2583 3931 l 2580 3930 l 2576 3929 l
+ 2573 3928 l 2570 3927 l 2567 3926 l 2564 3925 l 2560 3924 l
+ 2557 3923 l 2554 3922 l 2551 3921 l 2547 3920 l 2544 3918 l
+ 2540 3917 l 2537 3916 l 2534 3915 l 2530 3914 l 2526 3912 l
+ 2522 3911 l 2519 3910 l 2515 3909 l 2511 3908 l 2507 3906 l
+ 2503 3905 l 2499 3904 l 2496 3903 l 2492 3902 l 2487 3900 l
+ 2483 3899 l 2480 3898 l 2476 3897 l 2472 3895 l 2467 3894 l
+ 2463 3892 l 2459 3891 l 2455 3890 l 2450 3889 l 2446 3887 l
+ 2441 3886 l 2437 3885 l 2433 3884 l 2428 3883 l 2424 3881 l
+ 2419 3880 l 2415 3879 l 2410 3878 l 2405 3876 l 2400 3875 l
+ 2395 3873 l 2390 3872 l 2385 3871 l 2380 3869 l 2375 3868 l
+ 2370 3866 l 2365 3865 l 2360 3864 l 2354 3863 l 2349 3861 l
+ 2343 3860 l 2338 3859 l 2332 3858 l 2327 3857 l 2320 3855 l
+ 2314 3854 l 2309 3853 l 2303 3852 l 2297 3850 l 2291 3849 l
+ 2284 3847 l 2279 3846 l 2273 3845 l 2266 3844 l 2259 3842 l
+ 2253 3841 l 2247 3840 l 2240 3839 l 2234 3838 l 2226 3836 l
+ 2219 3835 l 2213 3834 l 2207 3833 l 2202 3832 l 2195 3831 l
+ 2189 3830 l 2183 3829 l 2177 3828 l 2172 3827 l 2165 3826 l
+ 2158 3825 l 2151 3824 l 2145 3823 l 2139 3822 l 2132 3821 l
+ 2126 3820 l 2118 3820 l 2111 3819 l 2104 3818 l 2098 3817 l
+ 2091 3816 l 2084 3815 l 2076 3814 l 2068 3814 l 2061 3813 l
+ 2054 3812 l 2046 3811 l 2039 3810 l 2030 3809 l 2022 3809 l
+ 2014 3808 l 2007 3807 l 1999 3806 l 1991 3805 l 1982 3804 l
+ 1973 3804 l 1964 3803 l 1956 3802 l 1948 3801 l 1939 3800 l
+ 1930 3800 l 1920 3799 l 1911 3798 l 1902 3797 l 1893 3796 l
+ 1884 3796 l 1873 3795 l 1863 3794 l 1853 3794 l 1843 3793 l
+ 1836 3793 l 1828 3792 l 1820 3792 l 1812 3791 l 1803 3790 l
+ 1795 3790 l 1787 3789 l 1779 3789 l 1771 3789 l 1763 3788 l
+ 1754 3788 l 1745 3787 l 1736 3786 l 1727 3786 l 1718 3785 l
+ 1710 3785 l 1701 3785 l 1692 3784 l 1683 3784 l 1673 3783 l
+ 1662 3783 l 1653 3782 l 1643 3782 l 1634 3781 l 1625 3781 l
+ 1615 3781 l 1604 3780 l 1593 3780 l 1582 3780 l 1571 3779 l
+ 1561 3779 l 1551 3779 l 1540 3779 l 1529 3778 l 1518 3778 l
+ 1506 3777 l 1493 3777 l 1481 3777 l 1469 3776 l 1458 3776 l
+ 1449 3776 l 1440 3775 l 1430 3775 l 1419 3775 l 1408 3774 l
+ 1397 3774 l 1387 3774 l 1376 3774 l 1366 3773 l 1356 3773 l
+ 1346 3773 l 1335 3772 l 1324 3772 l 1312 3772 l 1300 3771 l
+ 1287 3771 l 1275 3771 l 1263 3771 l 1252 3770 l 1241 3770 l
+ 1229 3770 l 1217 3769 l 1205 3769 l 1191 3769 l 1177 3769 l
+ 1163 3768 l 1149 3768 l 1136 3768 l 1123 3768 l 1110 3767 l
+ 1099 3767 l 1088 3767 l 1076 3767 l 1064 3767 l 1051 3767 l
+ 1038 3767 l 1025 3766 l 1011 3766 l 998 3766 l 985 3766 l
+ 973 3766 l 961 3766 l 948 3766 l 935 3766 l 922 3765 l
+ 907 3765 l 892 3765 l 877 3765 l 861 3765 l 846 3765 l
+ 831 3764 l 816 3764 l 802 3764 l 788 3764 l 773 3764 l
+ 758 3764 l 742 3764 l 724 3763 l 703 3763 l 680 3763 l
+ 656 3763 l 633 3762 l 614 3762 l 602 3762 l 597 3762 l
+
+ 596 3762 l gs col0 s gr 
+% here ends figure;
+% 
+% here starts figure with depth 0
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+0 slj
+0 slc
+7.500 slw
+n 596 3949 m
+ 596 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 5947 3949 m
+ 5947 4024 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 525 3949 l gs col0 s gr 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3759 m
+ 560 3759 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 167 m
+ 525 167 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 596 4024 l gs col0 s gr 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 3572 3949 m
+ 3572 3986 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 3272 3949 m
+ 3272 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 5947 3949 m
+ 5947 4024 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 525 3949 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 167 m
+ 525 167 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 596 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 3272 3949 m
+ 3272 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 5947 3949 m
+ 5947 4024 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 525 3949 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 167 m
+ 525 167 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 596 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 3272 3949 m
+ 3272 4024 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 5947 3949 m
+ 5947 4024 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 3949 m
+ 525 3949 l gs col0 s gr 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 596 167 m
+ 525 167 l gs col0 s gr 
+%  /Helvetica findfont 128 scalefont setfont 
+%  16 Setgray 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 3272 3949 m
+ 3272 4024 l gs col0 s gr 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 2971 3949 m
+ 2971 3986 l gs col0 s gr 
+%  Object : 0 segments -<16>-  
+% Polyline
+n 560 1718 m
+ 596 1718 l gs col0 s gr 
+%  fillsolid 
+%  /absolu true def 
+%  Object : 0 drawpoly -<pat:0,areafill=-1,white=16>-  
+% Polyline
+ [15 60] 60 sd
+n 596 1718 m
+ 3049 1718 l gs col0 s gr  [] 0 sd
+%  16 Setgray 
+%  /absolu true def 
+%  16 Setgray 
+%  Object : 0 drawbox -<0>-  
+% Polyline
+n 596 167 m 5947 167 l 5947 3949 l 596 3949 l
+ cp gs col0 s gr 
+%  16 Setgray 
+/Times-Roman ff 183.33 scf sf
+3272 4200 m
+gs 1 -1 sc (1) dup sw pop 2 div neg 0 rm  col0 sh gr
+%  /Helvetica findfont 160 scalefont setfont 
+%  16 Setgray 
+%  /Helvetica findfont 160 scalefont setfont 
+%  16 Setgray 
+/Helvetica ff 183.33 scf sf
+600 4200 m
+gs 1 -1 sc (0) dup sw pop 2 div neg 0 rm  col0 sh gr
+% here ends figure;
+$F2psEnd
+rs
+end
+showpage
+%%Trailer
+%EOF
