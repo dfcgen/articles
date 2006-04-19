@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -10,6 +10,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -39,7 +40,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.8 2006-04-09 16:39:34 ralf Exp $
+Version: $Id: ltisys.lyx,v 1.9 2006-04-19 20:57:40 ralf Exp $
 \end_layout
 
 \end_inset
@@ -2075,8 +2076,8 @@ Und für den Realteil
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align*}
-\imop\trf(\lps) & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop\trf(\Omega)-\reop\trf(\lps)}{\lps-\Omega}\tic\Omega\msp,\qquad\reop\lps>0\\
-\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop\trf(\Omega)-\imop\trf(\lps)}{\lps-\Omega}\tic\Omega\end{align*}
+\imop\trf(\lps) & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\msp,\qquad\reop\lps>0\\
+\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
 
 \end_inset
 
@@ -2489,6 +2490,8 @@ status inlined
 \begin_layout Standard
 
 
+\backslash
+protect
 \backslash
 mhead{
 \backslash
@@ -3217,7 +3220,7 @@ Die Nullstellen von
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{MPS}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{ALP}}\msp,\label{eq:ltisys_mps_split_rational}\end{equation}
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\msubtxt{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\msubtxt{ALP}}}\msp,\label{eq:ltisys_mps_split_rational}\end{equation}
 
 \end_inset
 
@@ -3242,7 +3245,7 @@ ie
 
 \begin_layout Itemize
 ein minimalphasiges System 
-\begin_inset Formula $\trf_{MPS}$
+\begin_inset Formula $\trf_{\msubtxt{MPS}}$
 \end_inset
 
 , welches keine Nullstellen in der rechten 
@@ -3254,11 +3257,11 @@ ein minimalphasiges System
 
 \begin_layout Itemize
 sowie einen stabilen Allpaß 
-\begin_inset Formula $\trf_{ALP}$
+\begin_inset Formula $\trf_{\msubtxt{ALP}}$
 \end_inset
 
 , also ein System mit 
-\begin_inset Formula $|\trf_{ALP}(\lps)|=1$
+\begin_inset Formula $|\trf_{\msubtxt{ALP}}(\lps)|=1$
 \end_inset
 
 .
@@ -3266,7 +3269,7 @@ sowie einen stabilen Allpaß
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\trf_{MPS}(\lps)\cdot\trf_{ALP}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
+\trf(\lps)=\trf_{\msubtxt{MPS}}(\lps)\cdot\trf_{\msubtxt{ALP}}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
 
 \end_inset
 
@@ -3292,7 +3295,7 @@ Minimalphasensystem
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula \[
--\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{MPS}(\ji\omega)+\ang\trf_{ALP}(\ji\omega)\]
+-\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{\msubtxt{MPS}}(\ji\omega)+\ang\trf_{\msubtxt{ALP}}(\ji\omega)\]
 
 \end_inset
 
@@ -3318,11 +3321,11 @@ resp
 \end_inset
 
  Analytizität von 
-\begin_inset Formula $\ln\trf_{MPS}(\lps)$
+\begin_inset Formula $\ln\trf_{\msubtxt{MPS}}(\lps)$
 \end_inset
 
  und 
-\begin_inset Formula $\ln\trf_{MPS}^{-1}(\lps)$
+\begin_inset Formula $\ln\trf_{\msubtxt{MPS}}^{-1}(\lps)$
 \end_inset
 
  in der rechten 
@@ -3367,7 +3370,7 @@ Aus Formel\InsetSpace ~
 \begin_deeper
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{3}
-\trf_{ALP}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{ALP}(\omega) & =2\ang G(\ji\omega)\msp.\end{xalignat*}
+\trf_{\msubtxt{ALP}}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{\msubtxt{ALP}}(\omega) & =2\ang G(\ji\omega)\msp.\end{xalignat*}
 
 \end_inset
 
@@ -3387,7 +3390,7 @@ Um die Problematik etwas anschaulicher zu gestalten, hier ein Beispiel aus\Inset
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{MPS}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{ALP}}\]
+\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{\msubtxt{MPS}}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{\msubtxt{ALP}}}\]
 
 \end_inset
 
@@ -3410,7 +3413,7 @@ Wie sofort erkennbar, handelt es sich um ein stabiles System mit den Polen
 \end_inset
 
  hat einen positiven Realteil, ist also 
-\begin_inset Formula $\trf_{ALP}(\lps)$
+\begin_inset Formula $\trf_{\msubtxt{ALP}}(\lps)$
 \end_inset
 
  richtig zugeordnet.
@@ -3423,7 +3426,7 @@ Wie sofort erkennbar, handelt es sich um ein stabiles System mit den Polen
 Jordan
 \noun default
 -Bedingung), verschwindet die Amplitude des Allpaß-Anteils 
-\begin_inset Formula $\trf_{ALP}(\infty)$
+\begin_inset Formula $\trf_{\msubtxt{ALP}}(\infty)$
 \end_inset
 
  im Unendlichen nicht
@@ -3479,9 +3482,9 @@ Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
-\trf_{ALP}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{MPS}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
-\reop\trf_{ALP}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{MPS}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
-\imop\trf_{ALP}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{MPS}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
+\trf_{\msubtxt{ALP}}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
+\reop\trf_{\msubtxt{ALP}}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
+\imop\trf_{\msubtxt{ALP}}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{\msubtxt{MPS}}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
 
 \end_inset
 
@@ -3516,7 +3519,7 @@ ionsbeziehung
 
 \begin_layout Standard
 \begin_inset Formula \[
-\mathcal{H}\{\frac{x}{a^{2}+x^{2}}\}=-\frac{a}{a^{2}+x^{2}}\]
+\mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\} =-\frac{a}{a^{2}+x^{2}}\]
 
 \end_inset
 
@@ -3529,8 +3532,8 @@ feststellt.
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\reop\trf_{ALP}(\ji\omega)-\trf_{ALP}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{ALP}(\ji\omega)\right\} \\
-\reop\trf_{MPS}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{MPS}(\ji\omega)\right\} \end{align*}
+\reop\trf_{\msubtxt{ALP}}(\ji\omega)-\trf_{\msubtxt{ALP}}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\msubtxt{ALP}}(\ji\omega)\right\} \\
+\reop\trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\msubtxt{MPS}}(\ji\omega)\right\} \end{align*}
 
 \end_inset
 
@@ -3540,7 +3543,7 @@ feststellt.
 \begin_layout Standard
 Trotzdem besteht ein fester Zusammenhang zwischen Dämpfungs- und Phaseverlauf
  nur für den Minimalphasenteil 
-\begin_inset Formula $\trf_{MPS}(\lps)$
+\begin_inset Formula $\trf_{\msubtxt{MPS}}(\lps)$
 \end_inset
 
 , nicht für 
