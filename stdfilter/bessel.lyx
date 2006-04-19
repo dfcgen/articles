@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -36,7 +37,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: bessel.lyx,v 1.8 2006-03-26 12:39:51 ralf Exp $
+Version: $Id: bessel.lyx,v 1.9 2006-04-19 20:52:49 ralf Exp $
 \end_layout
 
 \end_inset
@@ -73,7 +74,7 @@ Bessel
 
 \end_inset
 
- ist vom Syntheseansatz her kein Filter mit dem Ziel der Selektion von Frequenza
+ ist vom Syntheseansatz her kein System mit dem Ziel der Selektion von Frequenza
 nteilen (wie die vorangegangen Filter), sondern eher als verzerrungsarmes
  Übertragungssystem zu verstehen.
  Approximiert wird dabei die Übertragungsfunktion 
@@ -98,7 +99,13 @@ resp
 
 \end_inset
 
- dessen linearer Phasengang.
+ dessen linearer Phasengang\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Thomson:1949,Storch:1951}
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
@@ -529,7 +536,17 @@ Hurwitz
 
 \InsetSpace ~
 
+\begin_inset LatexCommand \cite[VIII, 15b]{Cauer:1954}
+
+\end_inset
+
+, 
 \begin_inset LatexCommand \cite[3.1.3]{Fritzsche:1979b}
+
+\end_inset
+
+, 
+\begin_inset LatexCommand \cite[44.5]{Chen:1995}
 
 \end_inset
 
