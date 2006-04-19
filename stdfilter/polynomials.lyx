@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -38,7 +39,7 @@ Properties of algebraic polynomials
 \end_layout
 
 \begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.10 2006-04-09 16:36:14 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.11 2006-04-19 21:00:27 ralf Exp $
 \end_layout
 
 \end_inset
@@ -210,7 +211,12 @@ mit (hier reellen) Koeffizienten
 \end_inset
 
  ist.
- Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors 
+ Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors
+\begin_inset LatexCommand \index{Vorfaktor}
+
+\end_inset
+
+ 
 \begin_inset Formula $C=a_{n}$
 \end_inset
 
@@ -228,7 +234,12 @@ p(x)=C\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^
 
 \begin_layout Standard
 Die letzte Form ist vor allem dann von Bedeutung, wenn die Linearfaktordarstellu
-ng mit Hilfe der 
+ng
+\begin_inset LatexCommand \index{Linearfaktoren}
+
+\end_inset
+
+ mit Hilfe der 
 \begin_inset Formula $n$
 \end_inset
 
@@ -432,7 +443,12 @@ Nullstellen
 
 \end_inset
 
-Bei der Linearfaktordarstellung nach Formel\InsetSpace ~
+Bei der Linearfaktordarstellung
+\begin_inset LatexCommand \index{Linearfaktoren}
+
+\end_inset
+
+ nach Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:poly_prd}
 
