@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -34,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: goal.lyx,v 1.9 2006-03-26 12:39:49 ralf Exp $
+Version: $Id: goal.lyx,v 1.10 2006-04-19 20:56:35 ralf Exp $
 \end_layout
 
 \end_inset
@@ -165,7 +166,7 @@ ie
 
  fast jede rationale Funktion ist hier erlaubt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Im Gegensatz dazu muß 
@@ -190,6 +191,12 @@ eg
 
 \end_inset
 
+\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Saal:1958}
+
+\end_inset
+
 .
 \end_layout
 
@@ -199,7 +206,7 @@ ion der Null-Linie im Durchlaßbereich), andererseits können bekannte mathematisc
 he Lösungen (die üblicherweise Standard-Intervalle approximieren) relativ
  problemlos verwendet werden\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Saal:1958}
+\begin_inset LatexCommand \cite{Winkler:1954}
 
 \end_inset
 
@@ -269,6 +276,7 @@ resp
 
 \begin_layout Standard
 \begin_inset Float table
+placement H
 wide false
 sideways false
 status open

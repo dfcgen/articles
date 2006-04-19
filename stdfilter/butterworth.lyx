@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -36,7 +37,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: butterworth.lyx,v 1.9 2006-04-09 16:35:09 ralf Exp $
+Version: $Id: butterworth.lyx,v 1.10 2006-04-19 20:59:34 ralf Exp $
 \end_layout
 
 \end_inset
@@ -96,7 +97,13 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-aus, besitzt also nach Gleichung\InsetSpace ~
+aus\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Zverev:1967,Chen:1995,Fritzsche:1979a}
+
+\end_inset
+
+, besitzt also nach Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:approx_discrimination}
 
@@ -127,7 +134,7 @@ er
 
  genannt und als maximal flach
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Als maximal flach werden Funktionen der Ordnung 
@@ -514,7 +521,7 @@ Butterworth
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
+\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\msp,\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
 
 \end_inset
 
@@ -538,7 +545,7 @@ Euler
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
+\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right]\msp,\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset
 
@@ -730,8 +737,8 @@ Laplace
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-(\lps-\pn{\lps}{\nu})(\lps-\cjgt{\pn{\lps}{\nu}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}\msp,\]
+\begin_inset Formula \begin{equation}
+(\lps-\pn{\lps}{\nu})(\lps-\cjgt{\pn{\lps}{\nu}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}\msp,\end{equation}
 
 \end_inset
 
