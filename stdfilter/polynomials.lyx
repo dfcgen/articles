@@ -39,7 +39,7 @@ Properties of algebraic polynomials
 \end_layout
 
 \begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.11 2006-04-19 21:00:27 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.12 2006-05-26 09:43:32 ralf Exp $
 \end_layout
 
 \end_inset
@@ -87,7 +87,7 @@ Algebraische Funktionen
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-g(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x)\msp,\end{equation}
+g(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x),\end{equation}
 
 \end_inset
 
@@ -275,7 +275,7 @@ Die Ableitung eines Polynoms in Summendarstellung, also aus den Koeffizienten,
 
 \begin_layout Standard
 \begin_inset Formula \[
-p'(x)=\sum_{i=1}^{n}i\, a_{i}x^{i-1}=\sum_{k=0}^{n-1}(k+1)a_{k+1}x^{k}\msp.\]
+p'(x)=\sum_{i=1}^{n}i\, a_{i}x^{i-1}=\sum_{k=0}^{n-1}(k+1)a_{k+1}x^{k}\mperiod\]
 
 \end_inset
 
@@ -427,7 +427,7 @@ Die Ableitung an der Nullstelle
 \begin_inset Formula \[
 p'(\zn{x}{k})=a_{n}\prod_{\substack{i=1\\
 i\neq k}
-}^{n}(\zn{x}{k}-\zn{x}{i})\msp.\]
+}^{n}(\zn{x}{k}-\zn{x}{i})\mperiod\]
 
 \end_inset
 
@@ -658,8 +658,12 @@ ie
 status open
 
 \begin_layout Standard
-Außerdem wird eine Funktion mit solchen Eigenschaften als maximal flach
- an dieser Stelle (hier 
+Außerdem wird eine Funktion
+\begin_inset LatexCommand \index{Funktion!maximal flache}
+
+\end_inset
+
+ mit solchen Eigenschaften als maximal flach an dieser Stelle (hier 
 \begin_inset Formula $x=\zn{x}{}$
 \end_inset
 
@@ -734,7 +738,7 @@ Ist
 \begin_deeper
 \begin_layout Emph(asized)
 \begin_inset Formula \[
-1+\frac{A}{\left|a_{n}\right|}\msp.\]
+1+\frac{A}{\left|a_{n}\right|}\mperiod\]
 
 \end_inset
 
@@ -752,7 +756,7 @@ An einer Nullstelle gilt bekanntermaßen
 
 \begin_layout Standard
 \begin_inset Formula \[
--a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\msp.\]
+-a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\mperiod\]
 
 \end_inset
 
@@ -803,7 +807,7 @@ und gleichbedeutend
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
 \left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
-\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\msp.\end{align*}
+\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\mperiod\end{align*}
 
 \end_inset
 
@@ -830,7 +834,7 @@ ie
 
 \begin_layout Standard
 \begin_inset Formula \[
-\left|a_{n}\zn[n]{x}{}\right|\leq A\frac{\left|\zn{x}{}\right|^{n}-1}{\left|\zn{x}{}\right|-1}\msp.\]
+\left|a_{n}\zn[n]{x}{}\right|\leq A\frac{\left|\zn{x}{}\right|^{n}-1}{\left|\zn{x}{}\right|-1}\mperiod\]
 
 \end_inset
 
@@ -932,16 +936,26 @@ Den Spezialfall
 \begin_inset Formula $r(x)=\frac{ax+b}{cx+d}$
 \end_inset
 
- bezeichnet man als gebrochen-lineare Funktion, im Komplexen auch 
+ bezeichnet man als gebrochen-lineare Funktion, im Komplexen auch als 
 \noun on
 Möbius
 \noun default
 -Transformation
-\begin_inset LatexCommand \index{Möbius-Transformation@\noun{Möbius}-Transformation}
+\begin_inset LatexCommand \index{Moebius-Transformation@\noun{Möbius}-Transformation}
 
 \end_inset
 
- genannt.
+
+\begin_inset LatexCommand \index{Transformation!Moebius-@\noun{Möbius}-}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Transformation!gebrochen-lineare}
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -990,7 +1004,7 @@ Für
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula \[
-r(x)=\sum\limits _{i}\frac{c_{i}}{(x-\pn{x}{i})^{m_{i}}}\msp.\]
+r(x)=\sum\limits _{i}\frac{c_{i}}{(x-\pn{x}{i})^{m_{i}}}\mperiod\]
 
 \end_inset
 
@@ -1083,7 +1097,7 @@ Die erste Ableitung kann ganz allgemein mit Hilfe der Quotientenregel
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-r'(x)=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)}\msp,\label{eq:rational_func_deriv_base}\end{equation}
+r'(x)=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)},\label{eq:rational_func_deriv_base}\end{equation}
 
 \end_inset
 
@@ -1139,7 +1153,7 @@ Einsetzen der Ableitungsformel\InsetSpace ~
 
 \begin_layout Standard
 \begin_inset Formula \[
-r'(x)=r(x)\left(a_{m}\sum\limits _{i=1}^{m}\frac{1}{x-\zn{x}{i}}-b_{n}\sum\limits _{l=1}^{n}\frac{1}{x-\pn{x}{l}}\right)\msp.\]
+r'(x)=r(x)\left(a_{m}\sum\limits _{i=1}^{m}\frac{1}{x-\zn{x}{i}}-b_{n}\sum\limits _{l=1}^{n}\frac{1}{x-\pn{x}{l}}\right)\mperiod\]
 
 \end_inset
 

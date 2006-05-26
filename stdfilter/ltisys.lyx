@@ -40,7 +40,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.9 2006-04-19 20:57:40 ralf Exp $
+Version: $Id: ltisys.lyx,v 1.10 2006-05-26 09:42:23 ralf Exp $
 \end_layout
 
 \end_inset
@@ -135,7 +135,7 @@ ie
 
 \begin_layout Standard
 \begin_inset Formula \[
-x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mit}\quad y_{i}=f_{\textrm{System}}(x_{i})\msp.\]
+x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mit}\quad y_{i}=f_{\textrm{System}}(x_{i})\mperiod\]
 
 \end_inset
 
@@ -267,7 +267,7 @@ Und den Mittelwertsatz der Integralrechnung
 \end_inset
 
  berücksichtigt: 
-\begin_inset Formula $\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x\msp,\mbox{ mit }\xi\in[a,b]$
+\begin_inset Formula $\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\mbox{ mit }\xi\in[a,b]$
 \end_inset
 
 .
@@ -304,7 +304,7 @@ Im Zeitbereich fordert man deshalb für die Impulsantwort
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty\msp,\end{equation}
+\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty,\end{equation}
 
 \end_inset
 
@@ -363,7 +363,7 @@ Aus dem Mittelwertsatz der Integralrechnung
 
 \begin_layout Standard
 \begin_inset Formula \[
-\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x\msp,\qquad\xi\in(-\infty,\infty)\]
+\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)\]
 
 \end_inset
 
@@ -376,7 +376,7 @@ ergeben sich die Relationen:
 
 \begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
-\trf(\ji\omega) & = & \int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t=\expf^{-\ji\omega\xi}\int_{-\infty}^{\infty}\irf(t)\tic t\msp,\qquad\xi\in(-\infty,\infty)\\
+\trf(\ji\omega) & = & \int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t=\expf^{-\ji\omega\xi}\int_{-\infty}^{\infty}\irf(t)\tic t,\qquad\xi\in(-\infty,\infty)\\
 |\trf(\ji\omega)| & \leq & \left|\int_{-\infty}^{\infty}\irf(t)\tic t\right|\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t\end{eqnarray*}
 
 \end_inset
@@ -680,7 +680,7 @@ die verallgemeinerte Impulsantwort
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots+\trf(\infty)\,\dirac(t)\msp.\label{eq:ltisys_stability_irf_genfrac}\end{equation}
+\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots+\trf(\infty)\,\dirac(t)\mperiod\label{eq:ltisys_stability_irf_genfrac}\end{equation}
 
 \end_inset
 
@@ -781,7 +781,7 @@ Der geradlinigste Ansatz formuliert das Verschwinden des Signals
 
 \begin_layout Standard
 \begin_inset Formula \[
-\usf(-t)\, y(t)\equiv0\msp.\]
+\usf(-t)\, y(t)\equiv0\mperiod\]
 
 \end_inset
 
@@ -831,7 +831,7 @@ Dirac
 
 \begin_layout Standard
 \begin_inset Formula \[
-\frac{Y(\ji\omega)}{2\pi}*\left[\pi\dirac(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\ji\omega)+\ji\frac{1}{\pi\omega}*Y(\ji\omega)\right]=0\msp.\]
+\frac{Y(\ji\omega)}{2\pi}*\left[\pi\dirac(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\ji\omega)+\ji\frac{1}{\pi\omega}*Y(\ji\omega)\right]=0\mperiod\]
 
 \end_inset
 
@@ -866,9 +866,9 @@ gelten.
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat}{4}
-\reop Y(\ji\omega) & = & \frac{1}{\pi\omega}*\imop Y(\ji\omega) & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\Omega)}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \imop Y(\ji\omega)\right\} \label{eq:ltisys_hilbert_real}\\
--\imop Y(\ji\omega) & = & \frac{1}{\pi\omega}*\reop Y(\ji\omega) & = & \frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega & = & \mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \msp.\label{eq:ltisys_hilbert_imag}\end{alignat}
+\begin_inset Formula \begin{alignat}{3}
+\reop Y(\ji\omega) & =\frac{1}{\pi\omega}*\imop Y(\ji\omega) &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\Omega)}{\omega-\Omega}\tic\Omega &  & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\} \label{eq:ltisys_hilbert_real}\\
+-\imop Y(\ji\omega) & =\frac{1}{\pi\omega}*\reop Y(\ji\omega) &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega &  & =\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_hilbert_imag}\end{alignat}
 
 \end_inset
 
@@ -992,7 +992,7 @@ Ein anderer, aber sehr einfacher Ansatz geht davon aus, daß grundsätzlich
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
-y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t)\msp,\end{xalignat*}
+y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t),\end{xalignat*}
 
 \end_inset
 
@@ -1148,8 +1148,8 @@ resp
 
  kann folgendermaßen vereinfacht werden:
 \begin_inset Formula \begin{alignat*}{2}
-y(t) & =2y_{g}(t)=2y_{u}(t)\msp, & \qquad t & \geq0\\
-y(-t) & =2y_{g}(t)=-2y_{u}(t)\msp, & \qquad t & <0\msp.\end{alignat*}
+y(t) & =2y_{g}(t)=2y_{u}(t), & \qquad t & \geq0\\
+y(-t) & =2y_{g}(t)=-2y_{u}(t), & \qquad t & <0\mperiod\end{alignat*}
 
 \end_inset
 
@@ -1226,7 +1226,7 @@ cf
 \begin_inset Formula \begin{xalignat*}{2}
 \reop Y(\ji\omega) & =\frac{2}{\ji\omega}*\ji\frac{\imop Y(\ji\omega)}{2\pi} & \ji\,\imop Y(\ji\omega) & =\frac{2}{\ji\omega}*\frac{\reop Y(\ji\omega)}{2\pi}\\
 \reop Y(\ji\omega) & =\frac{1}{\pi\omega}*\imop Y(\ji\omega) & \imop Y(\ji\omega) & =-\frac{1}{\pi\omega}*\reop Y(\ji\omega)\\
-\reop Y(\ji\omega) & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\}  & \imop Y(\ji\omega) & =-\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \msp.\end{xalignat*}
+\reop Y(\ji\omega) & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\}  & \imop Y(\ji\omega) & =-\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod\end{xalignat*}
 
 \end_inset
 
@@ -1574,7 +1574,7 @@ Was die kausalen Signale angeht, so kann man aufgrund der Abhängigkeit zwischen
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
 Y(\ji\omega) & =\reop[Y(\ji\omega)]-\frac{\ji}{\pi\omega}*\reop[Y(\ji\omega)] &  & =\frac{1}{\pi\omega}*\imop[Y(\ji\omega)]+\ji\imop[Y(\ji\omega)]\\
- & =\left[\dirac(\omega)-\frac{\ji}{\pi\omega}\right]*\reop Y(\ji\omega) &  & =\left[\ji\,\dirac(\omega)+\frac{1}{\pi\omega}\right]*\imop Y(\ji\omega)\msp.\end{alignat*}
+ & =\left[\dirac(\omega)-\frac{\ji}{\pi\omega}\right]*\reop Y(\ji\omega) &  & =\left[\ji\,\dirac(\omega)+\frac{1}{\pi\omega}\right]*\imop Y(\ji\omega)\mperiod\end{alignat*}
 
 \end_inset
 
@@ -1606,7 +1606,7 @@ erhält man für die Zeitfunktion
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
-y(t) & =2\usf(t)\ft^{-1}\left\{ \reop Y(\ji\omega)\right\}  &  & =2\ji\usf(t)\,\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} \msp.\end{alignat*}
+y(t) & =2\usf(t)\ft^{-1}\left\{ \reop Y(\ji\omega)\right\}  &  & =2\ji\usf(t)\,\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} \mperiod\end{alignat*}
 
 \end_inset
 
@@ -1650,7 +1650,7 @@ Dirac
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(\ji\omega)\right\} \msp.\label{eq:ltisys_causal_ftinv}\end{equation}
+y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_ftinv}\end{equation}
 
 \end_inset
 
@@ -1885,7 +1885,7 @@ Eine erste Betrachtung dazu (die etwas ausführlicher erfolgt), geht von
 \begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
 \trf(\lps) & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\lps+\ji\Omega)\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\\
- & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\lps\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega+\frac{\ji}{2\pi}\int_{-\infty}^{\infty}\frac{\Omega\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\msp.\end{eqnarray*}
+ & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\lps\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega+\frac{\ji}{2\pi}\int_{-\infty}^{\infty}\frac{\Omega\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\mperiod\end{eqnarray*}
 
 \end_inset
 
@@ -1971,7 +1971,7 @@ so ergibt sich im
 
 \begin_layout Emph(asized)
 \begin_inset Formula \[
-\trf(\lps)=\frac{1}{\pi}\int_{0}^{\infty}\frac{\lps\reop[\trf(\ji\Omega)]-\Omega\imop[\trf(\ji\Omega)]}{\lps^{2}+\Omega^{2}}\tic\Omega\msp,\qquad\reop\lps>0\msp.\]
+\trf(\lps)=\frac{1}{\pi}\int_{0}^{\infty}\frac{\lps\reop[\trf(\ji\Omega)]-\Omega\imop[\trf(\ji\Omega)]}{\lps^{2}+\Omega^{2}}\tic\Omega,\qquad\reop\lps>0\mperiod\]
 
 \end_inset
 
@@ -2076,7 +2076,7 @@ Und für den Realteil
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align*}
-\imop\trf(\lps) & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\msp,\qquad\reop\lps>0\\
+\imop\trf(\lps) & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega,\qquad\reop\lps>0\\
 \reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
 
 \end_inset
@@ -2156,7 +2156,7 @@ Man beachte immer die Voraussetzung, denn nach
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\trf(\ji\omega)=\trf(\ji\omega)*\frac{1}{\ji\omega\pi}=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega\msp.\label{eq:ltisys_causal_int_infty}\end{equation}
+\trf(\ji\omega)=\trf(\ji\omega)*\frac{1}{\ji\omega\pi}=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_int_infty}\end{equation}
 
 \end_inset
 
@@ -2255,7 +2255,7 @@ cf
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
 \reop\trf(\ji\omega) & =\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_even}\\
-\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\msp.\label{eq:ltisys_causal_imint_even}\end{align}
+\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\mperiod\label{eq:ltisys_causal_imint_even}\end{align}
 
 \end_inset
 
@@ -2471,7 +2471,7 @@ Beide Beziehungen entsprechen folglich den Formeln\InsetSpace ~
 
 \begin_layout Standard
 \begin_inset Formula \[
-\vp\int_{0}^{\infty}\frac{2\omega\trf(\ji\omega)}{\omega^{2}-\Omega^{2}}\tic\Omega=2\omega\trf(\ji\omega)\vp\int_{0}^{\infty}\frac{\tdc\Omega}{\omega^{2}-\Omega^{2}}=0\msp.\]
+\vp\int_{0}^{\infty}\frac{2\omega\trf(\ji\omega)}{\omega^{2}-\Omega^{2}}\tic\Omega=2\omega\trf(\ji\omega)\vp\int_{0}^{\infty}\frac{\tdc\Omega}{\omega^{2}-\Omega^{2}}=0\mperiod\]
 
 \end_inset
 
@@ -2515,7 +2515,7 @@ Für LTI-Systeme mit der Eigenschaft
 \begin_inset Formula \[
 \lim_{\substack{|\lps|\rightarrow\infty\\
 \reop\lps>0}
-}\!\trf(\lps)\neq0\msp,\]
+}\!\trf(\lps)\neq0,\]
 
 \end_inset
 
@@ -2571,7 +2571,7 @@ Cauchy
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega\msp.\label{eq:ltisys_causal_boundary_nonlp}\end{equation}
+\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_boundary_nonlp}\end{equation}
 
 \end_inset
 
@@ -2647,7 +2647,7 @@ Außerdem ist wegen der (für reelle Zeitfunktionen immer geltenden) Relation
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\cjgt{\lps})=\cjgt[\trf]{\lps}\msp,\]
+\trf(\cjgt{\lps})=\cjgt[\trf]{\lps},\]
 
 \end_inset
 
@@ -2801,7 +2801,7 @@ eg
 
 \begin_layout Emph(asized)
 \begin_inset Formula \[
-\trf(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega+\trf(\infty)\msp,\]
+\trf(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega+\trf(\infty),\]
 
 \end_inset
 
@@ -2870,7 +2870,7 @@ Dirac
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat}{2}
-\reop\trf(\ji\omega)-\trf(\infty) & =\mathcal{H}\left\{ \imop\trf(\ji\omega)\right\}  & \imop\trf(\ji\omega) & =-\mathcal{H}\left\{ \reop\trf(\ji\omega)\right\} \msp.\label{eq:ltisys_causal_nonlp_hilbert}\end{xalignat}
+\reop\trf(\ji\omega)-\trf(\infty) & =\mathcal{H}\left\{ \imop\trf(\ji\omega)\right\}  & \imop\trf(\ji\omega) & =-\mathcal{H}\left\{ \reop\trf(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_nonlp_hilbert}\end{xalignat}
 
 \end_inset
 
@@ -3220,7 +3220,7 @@ Die Nullstellen von
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\msubtxt{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\msubtxt{ALP}}}\msp,\label{eq:ltisys_mps_split_rational}\end{equation}
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textup{ALP}}},\label{eq:ltisys_mps_split_rational}\end{equation}
 
 \end_inset
 
@@ -3245,7 +3245,7 @@ ie
 
 \begin_layout Itemize
 ein minimalphasiges System 
-\begin_inset Formula $\trf_{\msubtxt{MPS}}$
+\begin_inset Formula $\trf_{\textup{MPS}}$
 \end_inset
 
 , welches keine Nullstellen in der rechten 
@@ -3257,11 +3257,11 @@ ein minimalphasiges System
 
 \begin_layout Itemize
 sowie einen stabilen Allpaß 
-\begin_inset Formula $\trf_{\msubtxt{ALP}}$
+\begin_inset Formula $\trf_{\textup{ALP}}$
 \end_inset
 
 , also ein System mit 
-\begin_inset Formula $|\trf_{\msubtxt{ALP}}(\lps)|=1$
+\begin_inset Formula $|\trf_{\textup{ALP}}(\lps)|=1$
 \end_inset
 
 .
@@ -3269,7 +3269,7 @@ sowie einen stabilen Allpaß
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\trf(\lps)=\trf_{\msubtxt{MPS}}(\lps)\cdot\trf_{\msubtxt{ALP}}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
+\trf(\lps)=\trf_{\textup{MPS}}(\lps)\cdot\trf_{\textup{ALP}}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
 
 \end_inset
 
@@ -3295,7 +3295,7 @@ Minimalphasensystem
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula \[
--\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{\msubtxt{MPS}}(\ji\omega)+\ang\trf_{\msubtxt{ALP}}(\ji\omega)\]
+-\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{\textup{MPS}}(\ji\omega)+\ang\trf_{\textup{ALP}}(\ji\omega)\]
 
 \end_inset
 
@@ -3321,11 +3321,11 @@ resp
 \end_inset
 
  Analytizität von 
-\begin_inset Formula $\ln\trf_{\msubtxt{MPS}}(\lps)$
+\begin_inset Formula $\ln\trf_{\textup{MPS}}(\lps)$
 \end_inset
 
  und 
-\begin_inset Formula $\ln\trf_{\msubtxt{MPS}}^{-1}(\lps)$
+\begin_inset Formula $\ln\trf_{\textup{MPS}}^{-1}(\lps)$
 \end_inset
 
  in der rechten 
@@ -3370,7 +3370,7 @@ Aus Formel\InsetSpace ~
 \begin_deeper
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{3}
-\trf_{\msubtxt{ALP}}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{\msubtxt{ALP}}(\omega) & =2\ang G(\ji\omega)\msp.\end{xalignat*}
+\trf_{\textup{ALP}}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{\textup{ALP}}(\omega) & =2\ang G(\ji\omega)\mperiod\end{xalignat*}
 
 \end_inset
 
@@ -3390,7 +3390,7 @@ Um die Problematik etwas anschaulicher zu gestalten, hier ein Beispiel aus\Inset
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{\msubtxt{MPS}}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{\msubtxt{ALP}}}\]
+\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{\textup{ALP}}}\]
 
 \end_inset
 
@@ -3413,7 +3413,7 @@ Wie sofort erkennbar, handelt es sich um ein stabiles System mit den Polen
 \end_inset
 
  hat einen positiven Realteil, ist also 
-\begin_inset Formula $\trf_{\msubtxt{ALP}}(\lps)$
+\begin_inset Formula $\trf_{\textup{ALP}}(\lps)$
 \end_inset
 
  richtig zugeordnet.
@@ -3426,7 +3426,7 @@ Wie sofort erkennbar, handelt es sich um ein stabiles System mit den Polen
 Jordan
 \noun default
 -Bedingung), verschwindet die Amplitude des Allpaß-Anteils 
-\begin_inset Formula $\trf_{\msubtxt{ALP}}(\infty)$
+\begin_inset Formula $\trf_{\textup{ALP}}(\infty)$
 \end_inset
 
  im Unendlichen nicht
@@ -3482,9 +3482,9 @@ Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
-\trf_{\msubtxt{ALP}}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
-\reop\trf_{\msubtxt{ALP}}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
-\imop\trf_{\msubtxt{ALP}}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{\msubtxt{MPS}}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
+\trf_{\textup{ALP}}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{\textup{MPS}}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
+\reop\trf_{\textup{ALP}}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{\textup{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
+\imop\trf_{\textup{ALP}}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{\textup{MPS}}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
 
 \end_inset
 
@@ -3532,8 +3532,8 @@ feststellt.
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\reop\trf_{\msubtxt{ALP}}(\ji\omega)-\trf_{\msubtxt{ALP}}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\msubtxt{ALP}}(\ji\omega)\right\} \\
-\reop\trf_{\msubtxt{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\msubtxt{MPS}}(\ji\omega)\right\} \end{align*}
+\reop\trf_{\textup{ALP}}(\ji\omega)-\trf_{\textup{ALP}}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\textup{ALP}}(\ji\omega)\right\} \\
+\reop\trf_{\textup{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\textup{MPS}}(\ji\omega)\right\} \end{align*}
 
 \end_inset
 
@@ -3543,7 +3543,7 @@ feststellt.
 \begin_layout Standard
 Trotzdem besteht ein fester Zusammenhang zwischen Dämpfungs- und Phaseverlauf
  nur für den Minimalphasenteil 
-\begin_inset Formula $\trf_{\msubtxt{MPS}}(\lps)$
+\begin_inset Formula $\trf_{\textup{MPS}}(\lps)$
 \end_inset
 
 , nicht für 
@@ -3695,7 +3695,7 @@ sind diese Bedingungen mit Hilfe des
 \noun on
 Paley-Wiener
 \noun default
--Kriteriums für Realisierbarkeit prüfbar
+-Kriteriums prüfbar
 \begin_inset LatexCommand \index{Paley-Wiener-Kriterium@\noun{Paley-Wiener}-Kriterium}
 
 \end_inset
@@ -3750,7 +3750,20 @@ sich bei
 \begin_inset Formula $-\ln|\trf(\ji\omega)|$
 \end_inset
 
- um die meßbaren Größen Amplitudengang und Dämpfungsverlauf (siehe Fußnote\InsetSpace ~
+ um die meßbaren Größen Amplitudengang 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Dämpfungsverlauf (siehe Fußnote\InsetSpace ~
 
 \begin_inset LatexCommand \vref{foot:ltisys_mps_neper}
 
@@ -3929,7 +3942,7 @@ ie
 
 \begin_layout Standard
 \begin_inset Formula \[
-\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi\msp,\qquad k\in\mathbb{Z}\]
+\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi,\qquad k\in\mathbb{Z}\]
 
 \end_inset
 
@@ -3975,7 +3988,7 @@ Gleichrichter
 \ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|\geq1)\\
 0 & \quad(\,|\trf(\ji\omega)|<1)\end{cases} & \atf_{-}(\omega) & =\begin{cases}
 \ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|<1)\\
-0 & \quad(\,|\trf(\ji\omega)|\geq1)\end{cases}\msp,\end{xxalignat}
+0 & \quad(\,|\trf(\ji\omega)|\geq1)\end{cases},\end{xxalignat}
 
 \end_inset
 
@@ -4049,7 +4062,7 @@ Nach Voraussetzung (
 
 \begin_layout Standard
 \begin_inset Formula \[
-\infty>\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega>2\int_{-\infty}^{\infty}\atf_{+}(\omega)\tic\omega>2\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega\msp.\]
+\infty>\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega>2\int_{-\infty}^{\infty}\atf_{+}(\omega)\tic\omega>2\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega\mperiod\]
 
 \end_inset
 
@@ -4153,7 +4166,7 @@ cf
 
 \begin_layout Standard
 \begin_inset Formula \[
-\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps=\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps+1}\tic\lps-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps\msp.\]
+\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps=\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps+1}\tic\lps-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps\mperiod\]
 
 \end_inset
 
