@@ -7,7 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement !bh
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby1.lyx,v 1.9 2006-04-19 20:54:37 ralf Exp $
+Version: $Id: cheby1.lyx,v 1.10 2006-05-26 09:37:58 ralf Exp $
 \end_layout
 
 \end_inset
@@ -191,7 +191,7 @@ Daﬂ es sich hier wirklich um Polynome in
 
  im Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:chebyt_poly_def}
+\begin_inset LatexCommand \vref{sec:chebyt_poly_def}
 
 \end_inset
 
@@ -219,8 +219,8 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\T_{n}^{2}(\omega)}}\]
+\begin_inset Formula \begin{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\T_{n}^{2}(\omega)}}\end{equation}
 
 \end_inset
 
@@ -278,12 +278,8 @@ I
 \end_layout
 
 \begin_layout Standard
-Die Grenzfrequenz 
-\begin_inset Formula $\omega_{g}$
-\end_inset
-
- ist bei diesem Tiefpaﬂ-Typ immer (normiert) 
-\begin_inset Formula $1$
+Die Grenzfrequenz ist bei diesem Tiefpaﬂ-Typ immer normiert 
+\begin_inset Formula $\omega_{g}=1$
 \end_inset
 
 , zumindest soweit man sie als Eckfrequenz entsprechend Tiefpaﬂ-Toleranzfeld
@@ -328,7 +324,7 @@ cf
 \end_inset
 
  an -- dazwischen liegen (notwendigerweise) die Nullstellen bei 
-\begin_inset Formula $\cos\left[(k-1/2)\pi/n\right]$
+\begin_inset Formula $\cos[(k-1/2)\pi/n]$
 \end_inset
 
 .
@@ -373,7 +369,44 @@ An diesen Stellen ist
 
 \begin_layout Standard
 \begin_inset Formula \[
-\varepsilon=1-\frac{1}{\sqrt{1+\sigma^{2}}}\msp.\]
+\varepsilon=1-\frac{1}{\sqrt{1+\sigma^{2}}}\mperiod\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie schon beim 
+\noun on
+Butterworth
+\noun default
+-Tiefpaﬂ besteht ein determinierter Zusammenhang zwischen der Grenz- und
+ Sperrfrequenz sowie der minimalen und maximalen Sperrd‰mpfung.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\atf_{\textup{max}} & =-20\log\trf(\omega_{g})=10\log(1+\sigma^{2}), & \sigma & =\sqrt{10^{\atf_{\textup{max}}/10}-1}\\
+\atf_{\textup{min}} & =-20\log\trf(\omega_{s})=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right], & \sigma & =\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\cosh(n\arcosh\omega_{s})}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus diesen Abh‰ngigkeiten kann man durch Gleichsetzen der Ausdr¸cke f¸r
+ 
+\begin_inset Formula $\sigma$
+\end_inset
+
+ wieder den minimalen Grad des Filters bestimmen.
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+n\geq\frac{\arcosh\sqrt{\frac{10^{\atf_{\textup{min}}/10}-1}{10^{\atf_{\textup{max}}/10}-1}}}{\arcosh\omega_{s}}\end{equation}
 
 \end_inset
 
@@ -420,7 +453,7 @@ Laplace
 
 \begin_layout Standard
 \begin_inset Formula \[
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\lps/\ji)}\msp.\]
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\lps/\ji)}\mperiod\]
 
 \end_inset
 
@@ -434,7 +467,7 @@ An den Polstellen muﬂ der Nenner verschwinden, was heiﬂt:
 \begin_layout Standard
 \begin_inset Formula \begin{align}
 1+\sigma^{2}\T_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
-\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\msp.\label{eq:filter_cheby1_pole_cond}\end{align}
+\T_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\mperiod\label{eq:filter_cheby1_pole_cond}\end{align}
 
 \end_inset
 
@@ -460,7 +493,7 @@ Wegen
 
 \begin_layout Standard
 \begin_inset Formula \[
-\cos(nu+\ji nv)=\pm\ji\frac{1}{\sigma}\msp.\]
+\cos(nu+\ji nv)=\pm\ji\frac{1}{\sigma}\mperiod\]
 
 \end_inset
 
@@ -585,7 +618,7 @@ Einsetzen von
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
 \reop\pn{\lps}{k} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
-\imop\pn{\lps}{k} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\msp.\end{align*}
+\imop\pn{\lps}{k} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\mperiod\end{align*}
 
 \end_inset
 
@@ -740,7 +773,7 @@ Wobei praktischerweise mit
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\msp,\qquad\nu=1,2,\ldots,n\end{equation}
+\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n\end{equation}
 
 \end_inset
 
