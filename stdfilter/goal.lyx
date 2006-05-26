@@ -7,7 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement !bh
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: goal.lyx,v 1.10 2006-04-19 20:56:35 ralf Exp $
+Version: $Id: goal.lyx,v 1.11 2006-05-26 09:40:00 ralf Exp $
 \end_layout
 
 \end_inset
@@ -74,7 +74,7 @@ Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
 \noun default
 -) Approximation des Amplitudenganges
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
@@ -106,35 +106,40 @@ eg
 \begin_inset Formula $\trf(\omega)=\left|\trf(\ji\omega)\right|$
 \end_inset
 
+, 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset LatexCommand \cite{Guillemin:1952,Guillemin:1957,Winkler:1954,Zverev:1967,Fritzsche:1979a,Mildenberger:1992}
+
+\end_inset
+
 .
  Dazu wird üblicherweise statt der Amplitudencharakteristik 
 \begin_inset Formula $\trf(\omega)$
 \end_inset
 
  die charakteristische Funktion 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- Drosselung 
 \begin_inset Formula $\drf(\omega)=\left|\drf(\ji\omega)\right|$
 \end_inset
 
- herangezogen.
- Als Zusammenhang zwischen beiden Größen gilt bekanntermaßen:
+, welche auch Drosselung genannt wird, herangezogen.
+ Als Zusammenhang zwischen beiden Größen gilt bekanntlich:
 \end_layout
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\msp.\label{eq:approx_discrimination}\end{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\mperiod\label{eq:approx_discrimination}\end{equation}
 
 \end_inset
 
@@ -557,7 +562,7 @@ Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
 
  angenommen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
@@ -591,7 +596,7 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 
  definiert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Gleichbedeutend mit der Forderung 
@@ -671,7 +676,7 @@ aus den Nullstellen von
 
 \begin_layout Standard
 \begin_inset Formula \[
-\tdiff{A(\omega)}{\omega}=\frac{10}{\ln10}\cdot\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
+\tdiff{\atf(\omega)}{\omega}=\frac{10}{\ln10}\cdot\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
 
 \end_inset
 
