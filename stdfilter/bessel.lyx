@@ -7,7 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement !bh
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -37,7 +37,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: bessel.lyx,v 1.9 2006-04-19 20:52:49 ralf Exp $
+Version: $Id: bessel.lyx,v 1.10 2006-05-26 09:35:06 ralf Exp $
 \end_layout
 
 \end_inset
@@ -63,6 +63,23 @@ Bessel-Tiefpaﬂ
 Der 
 \noun on
 Bessel
+\noun default
+- 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\noun on
+Thomson
 \noun default
 -Tiefpaﬂ
 \begin_inset LatexCommand \index{Tiefpaﬂ!Bessel@\noun{Bessel}-}
@@ -99,7 +116,7 @@ resp
 
 \end_inset
 
- dessen linearer Phasengang\InsetSpace ~
+ dessen linearen Phasengang\InsetSpace ~
 
 \begin_inset LatexCommand \cite{Thomson:1949,Storch:1951}
 
@@ -216,8 +233,12 @@ und (wie noch zu sehen sein wird) der Kettenbruch eine zul‰ssige Systemfunktion
 
 \begin_layout Standard
 Durch eigene Rechnung oder Verwendung eines geeigneten Nachschlagewerks
- erh‰lt man aus der Reihenentwicklung den folgenden Kettenbruch des hyperbolisch
-en Cotangens:
+ erh‰lt man aus der Reihenentwicklung den folgenden Kettenbruch
+\begin_inset LatexCommand \index{Kettenbruch!-entwicklung von coth@-entwicklung von $\coth$}
+
+\end_inset
+
+ des hyperbolischen Cotangens:
 \end_layout
 
 \begin_layout Standard
@@ -238,7 +259,7 @@ begin{htmlonly}
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\coth x=\frac{1}{x}+\frac{1}{\mbig{\frac{3}{x}+\frac{1}{\frac{5}{x}+\frac{1}{\frac{7}{x}+\cdots}}}}\msp.\label{eq:filter_bessel_cfrac}\end{equation}
+\coth x=\frac{1}{x}+\frac{1}{\mbig{\frac{3}{x}+\frac{1}{\frac{5}{x}+\frac{1}{\frac{7}{x}+\cdots}}}}\mperiod\label{eq:filter_bessel_cfrac}\end{equation}
 
 \end_inset
 
@@ -296,7 +317,7 @@ begin{latexonly}
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\coth x=\cfrac{1}{x}+\cfrac{1}{\cfrac{3}{x}+\cfrac{1}{\cfrac{5}{x}+\cfrac{1}{\cfrac[r]{7}{x}+\cdots}}}\msp.\label{eq:filter_bessel_cfrac}\end{equation}
+\coth x=\cfrac{1}{x}+\cfrac{1}{\cfrac{3}{x}+\cfrac{1}{\cfrac{5}{x}+\cfrac{1}{\cfrac[r]{7}{x}+\cdots}}}\mperiod\label{eq:filter_bessel_cfrac}\end{equation}
 
 \end_inset
 
@@ -422,7 +443,7 @@ und in Konsequenz als Summenterme in der Exponentialfunktion
 
 \begin_layout Standard
 \begin_inset Formula \[
-\expf^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\msp.\]
+\expf^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\mperiod\]
 
 \end_inset
 
@@ -449,7 +470,7 @@ Bessel
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat}{3}
-\textrm{B}_{n}(x) & =(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x)\msp, & \textrm{B}_{0}(x) & =1\msp, & \textrm{B}_{-1}(x) & =\frac{1}{x}\end{xalignat}
+\textrm{B}_{n}(x) & =(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x), & \textrm{B}_{0}(x) & =1, & \textrm{B}_{-1}(x) & =\frac{1}{x}\end{xalignat}
 
 \end_inset
 
@@ -469,7 +490,7 @@ Bessel
 \textrm{B}_{1}(x) & =x+1\\
 \textrm{B}_{2}(x) & =x^{2}+3x+3\\
 \textrm{B}_{3}(x) & =x^{3}+6x^{2}+15x+15\\
-\textrm{B}_{4}(x) & =x^{4}+10x^{3}+45x^{2}+105x+105\msp.\end{align*}
+\textrm{B}_{4}(x) & =x^{4}+10x^{3}+45x^{2}+105x+105\mperiod\end{align*}
 
 \end_inset
 
@@ -530,13 +551,38 @@ angeben, wobei
 Hurwitz
 \noun default
 -Polynom
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Ein maximal flacher Phasengang l‰ﬂt sich auch bei Hinzunahme von Nullstellen
+ erzielen, wenn man in 
+\begin_inset Formula $\trf(\lps)=\expf^{-m\lps}/\expf^{-(m-1)\lps}$
+\end_inset
+
+ Z‰hler und Nenner (getrennt) durch 
+\noun on
+Bessel
+\noun default
+-Polynome approximiert\InsetSpace ~
+
+\begin_inset LatexCommand \cite{Budak:1965}
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \begin_inset LatexCommand \index{Hurwitz-Polynom@\noun{Hurwitz}-Polynom}
 
 \end_inset
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[VIII, 15b]{Cauer:1954}
+\begin_inset LatexCommand \cite[VIII-15b]{Cauer:1954}
 
 \end_inset
 
@@ -567,6 +613,30 @@ Einen typischen Frequenzgang nach Gleichung\InsetSpace ~
 \end_inset
 
 .
+ Recht gut zu erkennen ist dabei der relativ lineare Phasengang
+\begin_inset LatexCommand \index{Phase!maximal flache}
+
+\end_inset
+
+, welcher sich im Nullpunkt als maximal flache Gruppen
+\begin_inset LatexCommand \index{Gruppenlaufzeit!maximal flache}
+
+\end_inset
+
+- 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Signallaufzeit pr‰sentiert.
 \end_layout
 
 \begin_layout Standard
