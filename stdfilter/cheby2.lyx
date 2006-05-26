@@ -7,7 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
-\float_placement !bh
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby2.lyx,v 1.9 2006-04-19 20:54:54 ralf Exp $
+Version: $Id: cheby2.lyx,v 1.10 2006-05-26 09:38:58 ralf Exp $
 \end_layout
 
 \end_inset
@@ -44,15 +44,15 @@ Version: $Id: cheby2.lyx,v 1.9 2006-04-19 20:54:54 ralf Exp $
 \end_layout
 
 \begin_layout Section
-
-\noun on
 \begin_inset LatexCommand \label{sec:filter_cheby2}
 
 \end_inset
 
+Inverser 
+\noun on
 Tschebyscheff
 \noun default
--Invers-Tiefpaﬂ
+-Tiefpaﬂ
 \end_layout
 
 \begin_layout Standard
@@ -173,7 +173,7 @@ Tschebyscheff
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\msp.\label{eq:filter_cheby2_chfunc}\end{equation}
+\drf(\omega)=\sigma\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}\end{equation}
 
 \end_inset
 
@@ -208,7 +208,7 @@ Wie
 
 \begin_layout Standard
 \begin_inset Formula \[
-A_{max}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\sigma^{2}\right)\msp.\]
+A_{max}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\sigma^{2}\right)\mperiod\]
 
 \end_inset
 
@@ -473,7 +473,7 @@ liegen und deshalb bez¸glich
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n-1,n\msp.\end{equation}
+\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n-1,n\mperiod\end{equation}
 
 \end_inset
 
@@ -520,7 +520,7 @@ g und ‹bertragungsfunktion nach Formel\InsetSpace ~
 
 \begin_layout Standard
 \begin_inset Formula \[
-\sigma\T_{n}(\omega_{s})=\pm\ji\T_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\msp.\]
+\sigma\T_{n}(\omega_{s})=\pm\ji\T_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod\]
 
 \end_inset
 
@@ -548,7 +548,7 @@ I Tiefpaﬂ substituieren wir
 
 \begin_layout Standard
 \begin_inset Formula \[
-\T_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\msp.\]
+\T_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod\]
 
 \end_inset
 
@@ -609,7 +609,7 @@ I) von
 
 \begin_layout Emph(asized)
 \begin_inset Formula \[
-\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)}\msp,\qquad\nu=1,2,\ldots,n\]
+\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)},\qquad\nu=1,2,\ldots,n\]
 
 \end_inset
 
@@ -626,7 +626,7 @@ sowie die Halbachsen (mit
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\} \msp.\end{xalignat}
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\} \mperiod\end{xalignat}
 
 \end_inset
 
