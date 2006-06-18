@@ -1,1805 +1,1932 @@
-#LyX 1.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 221
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 245
+\begin_document
+\begin_header
 \textclass scrartcl
+\begin_preamble
+\usepackage{a4}
+\end_preamble
 \language german
 \inputencoding latin1
 \fontscheme times
 \graphics default
 \float_placement htbp
 \paperfontsize default
-\spacing single 
-\papersize a4paper
-\paperpackage a4wide
-\use_geometry 0
-\use_amsmath 0
-\use_natbib 0
-\use_numerical_citations 0
+\spacing single
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\cite_engine basic
+\use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
 \quotes_language english
-\quotes_times 2
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
+\tracking_changes false
+\output_changes true
+\end_header
 
-\layout Section
+\begin_body
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_group}
 
-\end_inset 
+\end_inset
 
 Gruppen
-\layout Subsection
+\end_layout
 
-
+\begin_layout Subsection
 \begin_inset LatexCommand \label{sec:algebra_group_def}
 
-\end_inset 
+\end_inset
 
 Allgemeine Definition
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Algebra}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe}
 
-\end_inset 
+\end_inset
 
 Eine Gruppe
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Der Begriff wurde zuerst von 
-\noun on 
+\noun on
 Galois
-\noun default 
+\noun default
  benutzt.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $(G,\diamond)$
-\end_inset 
+\end_inset
 
  ist ein algebraisches System, daß aus einer nicht-leeren Menge von Elementen
  
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  besteht, für die eine Operation 
 \begin_inset Formula $\diamond$
-\end_inset 
+\end_inset
 
- mit folgenden Eigenschaften definiert ist\SpecialChar ~
+ mit folgenden Eigenschaften definiert ist\InsetSpace ~
 
 \begin_inset LatexCommand \cite[2.1]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 , 
-\begin_inset LatexCommand \cite[101ff.]{Koerner:1988}
+\begin_inset LatexCommand \cite[101~ff.]{Koerner:1988}
 
-\end_inset 
+\end_inset
 
 :
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 die Anwendung der Operation 
 \begin_inset Formula $\diamond$
-\end_inset 
+\end_inset
 
  auf zwei Elemente muß wieder zu einem Element in 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  führen (Abgeschlossenheit
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
 ): 
 \begin_inset Formula $\diamond:G\times G\rightarrow G$
-\end_inset 
+\end_inset
 
 ;
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 für alle 
 \begin_inset Formula $a,b,c\in G$
-\end_inset 
+\end_inset
 
  muß gelten: 
 \begin_inset Formula $a\diamond(b\diamond c)=(a\diamond b)\diamond c$
-\end_inset 
+\end_inset
 
  (Assoziativität
 \begin_inset LatexCommand \index{Assoziativität}
 
-\end_inset 
+\end_inset
 
 );
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 ein neutrales Element
 \begin_inset LatexCommand \index{Element!neutrales}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $e\in G$
-\end_inset 
+\end_inset
 
  muß existieren, so daß gilt: 
 \begin_inset Formula $x\diamond e=x$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $x\in G$
-\end_inset 
+\end_inset
 
  (Identität
 \begin_inset LatexCommand \index{Identität}
 
-\end_inset 
+\end_inset
 
 );
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 für jedes Element 
 \begin_inset Formula $a\in G$
-\end_inset 
+\end_inset
 
  muß ein inverses Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $b\in G$
-\end_inset 
+\end_inset
 
  existieren, so daß 
 \begin_inset Formula $a\diamond b=e$
-\end_inset 
+\end_inset
 
  gilt.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Menge 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  kann aus einer endlichen oder unendlichen Anzahl von Elementen bestehen.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ist außerdem die Zusatzbedingung 
 \begin_inset Formula $a\diamond b=b\diamond a$
-\end_inset 
+\end_inset
 
  erfüllt, wird die Gruppe kommutativ
 \begin_inset LatexCommand \index{Gruppe!kommutative}
 
-\end_inset 
+\end_inset
 
  genannt 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  als 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sch
 \begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Abel'sche@\noun{Abel}'sche Gruppe}
 
-\end_inset 
+\end_inset
 
  bezeichnet.
  Die Ordnung
 \begin_inset LatexCommand \index{Ordnung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe!Ordnung}
 
-\end_inset 
+\end_inset
 
  (auch Mächtigkeit
 \begin_inset LatexCommand \index{Mächtigkeit}
 
-\end_inset 
+\end_inset
 
 ) einer Gruppe ist die Anzahl der Elemente in 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 , geschrieben als 
 \begin_inset Formula $\ord(G)$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $\left|G\right|$
-\end_inset 
+\end_inset
 
  oder auch 
 \begin_inset Formula $\# G$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ist 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
  eine Teilmenge von 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $U\subseteq G$
-\end_inset 
+\end_inset
 
 , dann wird 
 \begin_inset Formula $(U,\diamond)$
-\end_inset 
+\end_inset
 
  als Untergruppe
 \begin_inset LatexCommand \index{Gruppe!Unter-}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $(G,\diamond)$
-\end_inset 
+\end_inset
 
  bezeichnet, wenn mit derselben Operation 
 \begin_inset Formula $\diamond$
-\end_inset 
+\end_inset
 
  auch 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
- alle Eigenschaften einer Gruppe erfüllt\SpecialChar ~
+ alle Eigenschaften einer Gruppe erfüllt\InsetSpace ~
 
 \begin_inset LatexCommand \cite[1.]{Bosch:1996}
 
-\end_inset 
+\end_inset
 
 , 
 \begin_inset LatexCommand \cite[2.4]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Der Zusammenhang zwischen der Ordnung von 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
  und der von 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  wird durch den Satz von 
-\noun on 
+\noun on
 Lagrange
 \begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
 
-\end_inset 
+\end_inset
 
 
-\noun default 
+\noun default
  beschrieben
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Interessant ist in diesem Zusammenhang die Erkenntnis, daß die Ordnung der
  Untergruppe 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
  höchstens halb so groß sein kann, wie die der Gruppe 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \left|G\right|=i\,\left|U\right|\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Ordnung 
 \begin_inset Formula $\left|U\right|$
-\end_inset 
+\end_inset
 
  ist danach ein Teiler von 
 \begin_inset Formula $\left|G\right|$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $i$
-\end_inset 
+\end_inset
 
  der sogenannte Index
 \begin_inset LatexCommand \index{Index}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
  (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Index von 
 \begin_inset Formula $U$
-\end_inset 
+\end_inset
 
  in 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 ), welcher auch als 
 \begin_inset Formula $i=\left|G:U\right|$
-\end_inset 
+\end_inset
 
  geschrieben wird
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Die Bezeichnungsweise des Index in der Form 
 \begin_inset Formula $\left|G:U\right|$
-\end_inset 
+\end_inset
 
  ist dabei durch den Quotienten 
 \begin_inset Formula $\frac{\left|G\right|}{\left|U\right|}$
-\end_inset 
+\end_inset
 
  motiviert.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Additive Gruppen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Gruppe!additive}
 
-\end_inset 
+\end_inset
 
 Entsprechend der allgemeinen Definition wird eine Menge 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  additive Gruppe 
 \begin_inset Formula $(G,+)$
-\end_inset 
+\end_inset
 
  genannt, wenn für sie
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 eine assoziative Operation 
 \begin_inset Formula $a+(b+c)=(a+b)+c$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $a,b,c\in G$
-\end_inset 
+\end_inset
 
  definiert ist;
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 ein neutrales (Null-) Element 
 \begin_inset Formula $e_{(+)}=0\in G$
-\end_inset 
+\end_inset
 
  mit der Beziehung 
 \begin_inset Formula $a+0=0+a=a$
-\end_inset 
+\end_inset
 
  für alle 
 \begin_inset Formula $a\in G$
-\end_inset 
+\end_inset
 
  existiert;
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 und für sie außerdem ein inverses Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $-a\in G$
-\end_inset 
+\end_inset
 
  zu 
 \begin_inset Formula $a\in G$
-\end_inset 
+\end_inset
 
  mit der Relation 
 \begin_inset Formula $a+(-a)=0$
-\end_inset 
+\end_inset
 
  definiert ist.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Das bekannteste Beispiel einer solchen Gruppe ist die der ganzen Zahlen
 \begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\mathbb{Z},+)$
-\end_inset 
+\end_inset
 
 .
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Multiplikative Gruppen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
 Für die multiplikative Gruppe 
 \begin_inset Formula $(G,\cdot)$
-\end_inset 
+\end_inset
 
  gilt äquivalent:
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 eine assoziative Operation 
 \begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $a,b,c\in G$
-\end_inset 
+\end_inset
 
 ,
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 ein neutrales (Eins-) Element
 \begin_inset LatexCommand \index{Einselement}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $e_{(\cdot)}=1\in G$
-\end_inset 
+\end_inset
 
  mit der Identität 
 \begin_inset Formula $a\cdot1=1\cdot a=a$
-\end_inset 
+\end_inset
 
  für 
 \begin_inset Formula $a\in G$
-\end_inset 
+\end_inset
 
 ,
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 und ein inverses Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $a^{-1}\in G$
-\end_inset 
+\end_inset
 
  zu jedem 
 \begin_inset Formula $a\in G$
-\end_inset 
+\end_inset
 
  mit der Relation 
 \begin_inset Formula $a\cdot a^{-1}=1$
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 sind definiert.
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_ring}
 
-\end_inset 
+\end_inset
 
 Ringe
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Ring}
 
-\end_inset 
+\end_inset
 
 Eine Menge 
 \begin_inset Formula $R$
-\end_inset 
+\end_inset
 
  nennt man einen Ring 
 \begin_inset Formula $(R,+,\cdot)$
-\end_inset 
+\end_inset
 
 , wenn auf ihr sowohl Addition als auch Multiplikation mit 
 \begin_inset Formula $R\times R\rightarrow R$
-\end_inset 
+\end_inset
 
- erklärt sind\SpecialChar ~
+ erklärt sind\InsetSpace ~
 
 \begin_inset LatexCommand \cite[2.2]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Speziell müssen folgende Axiome gelten:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Bezüglich der Addition bildet 
 \begin_inset Formula $R$
-\end_inset 
+\end_inset
 
  eine 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe 
 \begin_inset Formula $(R,+)$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
-
+\begin_layout Enumerate
 \begin_inset Formula $(R,\cdot)$
-\end_inset 
+\end_inset
 
  ist eine sogenannte Halbgruppe
 \begin_inset LatexCommand \index{Halbgruppe}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe!Halb-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ein inverses Element wird dabei 
-\emph on 
+\emph on
 nicht
-\emph default 
+\emph default
  gefordert, wenngleich einzelne Elemente von 
 \begin_inset Formula $R$
-\end_inset 
+\end_inset
 
  ein Inverses besitzen können.
-\end_inset 
+\end_layout
+
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\begin_deeper 
-\layout Itemize
+\end_layout
 
-
+\begin_deeper
+\begin_layout Itemize
 \begin_inset Formula $(R,\cdot)$
-\end_inset 
+\end_inset
 
  ist abgeschlossen (
 \begin_inset Formula $\cdot:R\times R\rightarrow R$
-\end_inset 
+\end_inset
 
 )
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 und es gilt das Assoziativgesetz 
 \begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
-\end_inset 
+\end_inset
 
  für 
 \begin_inset Formula $a,b,c\in R$
-\end_inset 
+\end_inset
 
 .
-\end_deeper 
-\layout Enumerate
+\end_layout
 
+\end_deeper
+\begin_layout Enumerate
 Außerdem muß für 
 \begin_inset Formula $a,b,c\in R$
-\end_inset 
+\end_inset
 
  das Distributivgesetz
 \begin_inset LatexCommand \index{Distributivgesetz}
 
-\end_inset 
+\end_inset
 
  gelten 
 \begin_inset Formula $a\cdot(b+c)=ab+ac$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Existiert zusätzlich noch die Identität 
 \begin_inset Formula $e_{(\cdot)}=1\in R$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $a\cdot1=1\cdot a=a$
-\end_inset 
+\end_inset
 
  für alle 
 \begin_inset Formula $a\in R$
-\end_inset 
+\end_inset
 
 , dann wird 
 \begin_inset Formula $(R,+,\cdot)$
-\end_inset 
+\end_inset
 
  Monoid
 \begin_inset LatexCommand \index{Monoid}
 
-\end_inset 
+\end_inset
 
  oder Ring
 \begin_inset LatexCommand \index{Ring!mit Eins}
 
-\end_inset 
+\end_inset
 
  mit 
-\emph on 
+\emph on
 Eins
-\emph default 
+\emph default
  genannt.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Zur Multiplikation ist zu bemerken, daß nicht-negative Potenzen
 \begin_inset LatexCommand \index{Element!Potenzierung}
 
-\end_inset 
+\end_inset
 
  eines Ringelements induktiv definiert sind
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 a^{0}=e_{(\cdot)}=1,\qquad a^{n+1}=a\cdot a^{n},\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 also durch 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 -malige Multiplikation.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 a^{n}=\underbrace{a\cdot a\cdots a}_{n\text{{-mal}}}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ein Ring wird außerdem als 
-\emph on 
+\emph on
 
 \begin_inset LatexCommand \index{Ring!kommutativer}
 
-\end_inset 
+\end_inset
 
 kommutativ
-\emph default 
+\emph default
  bezeichnet, wenn auch für die Multiplikation das Kommutativgesetz
 \begin_inset LatexCommand \index{Kommutativgesetz}
 
-\end_inset 
+\end_inset
 
  gilt 
 \begin_inset Formula $a\cdot b=b\cdot a$
-\end_inset 
+\end_inset
 
 .
  Ein typisches Beispiel hierfür ist der Ring
 \begin_inset LatexCommand \index{Ring!$\mathbb{Z}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\mathbb{Z},+,\cdot)$
-\end_inset 
+\end_inset
 
  der ganzen Zahlen
 \begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
 
-\end_inset 
+\end_inset
 
 , denn er erfüllt offensichtlich alle Axiome.
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_field}
 
-\end_inset 
+\end_inset
 
-Körper\SpecialChar ~
+Körper\InsetSpace ~
 (Field)
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Körper}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Field|see{K{\"o}rper}}
 
-\end_inset 
+\end_inset
 
 Ein Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  wird durch ein System von Elementen (endlich oder unendlich) gebildet,
  die sich durch die definierten Operationen Addition, Subtraktion, Multiplikatio
 n und Division verknüpfen lassen
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Jede dieser Operationen muß wieder zu einem Element dieses Körpers führen
  (Abgeschlossenheit).
-\end_inset 
+\end_layout
 
- und für die das Distributivgesetz gilt\SpecialChar ~
+\end_inset
+
+ und für die das Distributivgesetz gilt\InsetSpace ~
 
 \begin_inset LatexCommand \cite[2.3]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Präzise heißt das:
-\layout Enumerate
+\end_layout
 
-
+\begin_layout Enumerate
 \begin_inset Formula $(K,+,\cdot)$
-\end_inset 
+\end_inset
 
  ist ein kommutativer Ring (zu den Eigenschaften 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_ring}
 
-\end_inset 
+\end_inset
 
 ).
-\layout Enumerate
+\end_layout
 
-
+\begin_layout Enumerate
 \begin_inset Formula $(K\setminus\{0\},\cdot)$
-\end_inset 
+\end_inset
 
  ist eine kommutative Gruppe, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  alle Elemente der Menge 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 , ausgenommen 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
  (oft auch geschrieben als 
 \begin_inset Formula $K^{*}=K\setminus\{0\}$
-\end_inset 
+\end_inset
 
 ), müssen ein inverses Element besitzen.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die bekanntesten Körper sind die der 
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 reellen Zahlen
 \begin_inset LatexCommand \index{Zahlen!reelle $\mathbb{R}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\mathbb{R},+,\cdot)$
-\end_inset 
+\end_inset
 
 ,
-\begin_inset Note
-collapsed true
+\begin_inset Note Note
+status open
 
-\layout Standard
-
+\begin_layout Standard
 mathbb{} ist für sogenannte double-line capitals
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 in Font "Blackboard-Bold"
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 komplexen Zahlen
 \begin_inset LatexCommand \index{Zahlen!komplexe $\mathbb{C}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\mathbb{C},+,\cdot)$
-\end_inset 
+\end_inset
 
 ,
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 rationalen Zahlen
 \begin_inset LatexCommand \index{Zahlen!rationale $\mathbb{Q}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(\mathbb{Q},+,\cdot)$
-\end_inset 
+\end_inset
 
 
-\begin_inset Note
-collapsed true
+\begin_inset Note Note
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Umfaßt nicht die transzendent entwickelten Zahlen wie Pi, e etc.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Itemize
+\end_layout
 
+\begin_layout Itemize
 sowie der endliche Körper
 \begin_inset LatexCommand \index{Körper!endlicher}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{Z}_{2}:=\{0,1\}$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Eine Menge von Funktionen über einem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  kann selbst auch wieder ein Körper sein, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  die Menge der rationalen Funktionen 
 \begin_inset Formula $\mathbb{R}(x)$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $\mathbb{R}$
-\end_inset 
+\end_inset
 
 , geschrieben 
 \begin_inset Formula $(\mathbb{R}(x),+,\cdot)$
-\end_inset 
+\end_inset
 
 .
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_vector_space}
 
-\end_inset 
+\end_inset
 
 Vektorraum
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Vektor!-raum}
 
-\end_inset 
+\end_inset
 
 Eine Menge von Vektoren
 \begin_inset LatexCommand \index{Vektor}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $V:=\{\mvec{v}_{1},\mvec{v}_{2},\mvec{v}_{3},\ldots\}$
-\end_inset 
+\end_inset
 
 , jeder bestehend aus einem geordneten 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 -Tupel von Elementen 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  aus einem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 , wird Vektorraum über dem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  genannt (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- 
+\end_inset
+
+\InsetSpace ~
+
 \begin_inset LatexCommand \cite[2.5]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 ), wenn:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 die additive Gruppe 
 \begin_inset Formula $(V,+)$
-\end_inset 
+\end_inset
 
  existiert
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Entscheidend in Bezug auf den Begriff des Vektorraumes (in Relation zu einer
  Algebra, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_algebra}
 
-\end_inset 
+\end_inset
 
 ) ist, daß nur die Addition zwischen Vektoren (
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe) sowie die Multiplikation mit einem Skalar aus 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  definiert ist.
-\end_inset 
+\end_layout
+
+\end_inset
 
  und vom 
-\noun on 
+\noun on
 abel
-\noun default 
+\noun default
 'schen Typ ist (
 \begin_inset Formula $+:V\times V\rightarrow V$
-\end_inset 
+\end_inset
 
 );
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 für jeden Vektor 
 \begin_inset Formula $\mvec{v}\in V$
-\end_inset 
+\end_inset
 
  die Multiplikation mit einem Körperelement (Skalar) 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  definiert ist
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Die mit 
 \begin_inset Formula $\cdot$
-\end_inset 
+\end_inset
 
  gekennzeichnete Operation nennt man auch die äußere,
 \begin_inset Formula $+$
-\end_inset 
+\end_inset
 
  die innere Verknüpfung.
-\end_inset 
+\end_layout
+
+\end_inset
 
  und wieder zu einem Vektor 
 \begin_inset Formula $\mvec{u}=a\mvec{v}\in V$
-\end_inset 
+\end_inset
 
  führt (Abgeschlossenheit
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
  der Abbildung 
 \begin_inset Formula $\cdot:K\times V\rightarrow V$
-\end_inset 
+\end_inset
 
- );
-\layout Enumerate
+);
+\end_layout
 
+\begin_layout Enumerate
 bezüglich zweier Skalare 
 \begin_inset Formula $a,b$
-\end_inset 
+\end_inset
 
  und der Vektoren 
 \begin_inset Formula $\mvec{u},\mvec{v}$
-\end_inset 
+\end_inset
 
  die folgenden Distributivgesetze
 \begin_inset LatexCommand \index{Distributivgesetz}
 
-\end_inset 
+\end_inset
 
  gelten:
-\newline 
+\newline
 
 \begin_inset Formula \begin{align*}
 a(\mvec{u}+\mvec{v}) & =a\mvec{u}+a\mvec{v}\\
 \mvec{v}(a+b) & =a\mvec{v}+b\mvec{v}\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 das Assoziativgesetz
 \begin_inset LatexCommand \index{Assoziativgesetz}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(ab)\mvec{v}=a(b\mvec{v})$
-\end_inset 
+\end_inset
 
  gilt;
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 und es ein multiplikativ neutrales Element
 \begin_inset LatexCommand \index{Element!neutrales}
 
-\end_inset 
+\end_inset
 
  in Bezug auf die Vektoren in 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  gibt.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wenn mit 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  die Anzahl der Tupel eines Vektors 
 \begin_inset Formula $\mvec{v}$
-\end_inset 
+\end_inset
 
  bezeichnet wird, dann nennt man den zugehörigen Vektorraum (über dem Körper
  
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 ) üblicherweise 
 \begin_inset Formula $V_{n}(K)$
-\end_inset 
+\end_inset
 
  oder kurz 
 \begin_inset Formula $V=K^{n}$
-\end_inset 
+\end_inset
 
 , also 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\mathbb{R}^{3}$
-\end_inset 
+\end_inset
 
  oder 
 \begin_inset Formula $\mathbb{Z}_{2}^{n}$
-\end_inset 
+\end_inset
 
 .
  Entsprechend ist auch das neutrale Element
 \begin_inset LatexCommand \index{Element!neutrales}
 
-\end_inset 
+\end_inset
 
 , welches als 
 \begin_inset Formula $\mvec{0}=(0,0,\ldots,0)$
-\end_inset 
+\end_inset
 
  geschrieben wird, ein Vektor mit 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Elementen.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Kann man jeden Vektor von 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  als Linearkombination
 \begin_inset LatexCommand \index{Linearkombination}
 
-\end_inset 
+\end_inset
 
  von unabhängigen Vektoren 
 \begin_inset Formula $\mvec{u}_{1},\mvec{u}_{2},\ldots,\mvec{u}_{n}\in U\subseteq V$
-\end_inset 
+\end_inset
 
  darstellen, also als
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\mvec{v}=\sum_{i=1}^{n}\alpha_{i}\mvec{u}_{i}\msp,\]
+\mvec{v}=\sum_{i=1}^{n}\alpha_{i}\mvec{u}_{i},\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 so nennt man 
 \begin_inset Formula $\mvec{u}_{1},\mvec{u}_{2},\ldots,\mvec{u}_{n}$
-\end_inset 
+\end_inset
 
  die Basis
 \begin_inset LatexCommand \index{Vektor!-raum!Basis}
 
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $\alpha_{1},\alpha_{2},\ldots,\alpha_{n}$
-\end_inset 
+\end_inset
 
  die Koeffizienten und 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  die Dimension
 \begin_inset LatexCommand \index{Vektor!-raum!Dimension}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 n=\dim(V)=\left|V\right|\]
 
-\end_inset 
+\end_inset
 
 
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_algebra}
 
-\end_inset 
+\end_inset
 
 Algebra (Verband)
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Verband|see{Algebra}}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Algebra}
 
-\end_inset 
+\end_inset
 
 Eine Algebra über einem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  ist eine Erweiterung des Begriffs Vektorraum in Bezug auf die Vektormultiplikat
 ion
 \begin_inset LatexCommand \index{Vektor!-multiplikation}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ohne für jeden Vektor ein multiplikativ inverses Element zu fordern.
  Man spricht deshalb auch manchmal von einem assoziativen Vektorring.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
  Speziell sind es folgende Axiome, die eine Algebra auszeichnen:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 die Menge 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  ist ein Vektorraum über einem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_vector_space}
 
-\end_inset 
+\end_inset
 
 );
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 für zwei Vektoren 
 \begin_inset Formula $\mvec{u},\mvec{v}\in V$
-\end_inset 
+\end_inset
 
  ist ein Produkt
 \begin_inset LatexCommand \index{Vektor!-produkt}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mvec{u}\mvec{v}$
-\end_inset 
+\end_inset
 
  definiert und in Bezug auf 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  abgeschlossen
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
  (
 \begin_inset Formula $\cdot:V\times V\rightarrow V$
-\end_inset 
+\end_inset
 
 );
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 das Assoziativgesetz
 \begin_inset LatexCommand \index{Assoziativgesetz}
 
-\end_inset 
+\end_inset
 
  für Vektoren 
 \begin_inset Formula $(\mvec{u}\mvec{v})\mvec{w}=\mvec{u}(\mvec{v}\mvec{w})$
-\end_inset 
+\end_inset
 
  ist erfüllt;
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 auch das Distributivgesetz
 \begin_inset LatexCommand \index{Distributivgesetz}
 
-\end_inset 
+\end_inset
 
  läßt sich auf Vektoren anwenden: 
 \begin_inset Formula $(\mvec{u}+\mvec{v})\mvec{w}=\mvec{u}\mvec{w}+\mvec{v}\mvec{w}$
-\end_inset 
+\end_inset
 
 .
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:algebra_residue_classes}
 
-\end_inset 
+\end_inset
 
 Restklassen
 \begin_inset LatexCommand \index{Restklassen|(}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Einführung
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Restklassen sind Kongruenzen
 \begin_inset LatexCommand \index{Kongruenz}
 
-\end_inset 
+\end_inset
 
  von Elementen (einer algebraischen Struktur) modulo eines fixen Elements
  
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
 .
  Das Rechnen mit solchen Elementen wird als modulare
 \begin_inset LatexCommand \index{Arithmetik!modulare}
 
-\end_inset 
+\end_inset
 
  oder Modulo-Arithmetik
 \begin_inset LatexCommand \index{Arithmetik!Modulo-}
 
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  als das Modul
 \begin_inset LatexCommand \index{Modul}
 
-\end_inset 
+\end_inset
 
  bezeichnet.
  In diesem Sinne definiert man
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 r\equiv a\bmod m\label{eq:algebra_def_mod}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 als den Rest 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
 , der bei der 
 \begin_inset Quotes eld
-\end_inset 
+\end_inset
 
 Division
 \begin_inset Quotes erd
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $a/m$
-\end_inset 
+\end_inset
 
  entsteht und sagt 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  ist kongruent 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  modulo 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
 .
  Im Umkehrschluß sind die Restklassenelemente
 \begin_inset LatexCommand \index{Element!Restklassen-}
 
-\end_inset 
+\end_inset
 
  durch die Relation
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 a=qm+r,\qquad0\leq r<m\label{eq:algebra_mod_reverse}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 bestimmt.
  Die Äquivalenzrelation 
 \begin_inset Formula $r\equiv a\bmod m$
-\end_inset 
+\end_inset
 
  kann man 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  im Ring der ganzen Zahlen
 \begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{Z}$
-\end_inset 
+\end_inset
 
  definieren, ist aber nicht auf diesen beschränkt.
  Im allgemeinen Fall 
 \begin_inset Formula $a\in R$
-\end_inset 
+\end_inset
 
  schreibt man für die Restklasse
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \rcls{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  die Restklasse 
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  ist die Menge aller Elemente 
 \begin_inset Formula $a\in R$
-\end_inset 
+\end_inset
 
 , die bei der Division modulo 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  genau den Rest 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  ergeben.
  Ein Beispiel für 
 \begin_inset Formula $a\in\mathbb{Z}$
-\end_inset 
+\end_inset
 
  mit einem Modul von 
 \begin_inset Formula $m=4$
-\end_inset 
+\end_inset
 
  soll das veranschaulichen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 \rcls{0}{4} & =\{\ldots,-12,-8,-4,0,4,8,\ldots\} & \rcls{2}{4} & =\{\ldots,-10,-6,-2,2,6,10,\ldots\}\\
 \rcls{1}{4} & =\{\ldots,-11,-7,-3,1,5,9,\ldots\} & \rcls{3}{4} & =\{\ldots,-9,-5,-1,3,7,11,\ldots\}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Üblicherweise bezeichnet man die Menge aller Restklassen mit
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 R_{m}=\{\rcls{r_{0}}{m},\rcls{r_{1}}{m},\ldots,\rcls{r_{n-1}}{m}\}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 und mit 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  deren Anzahl (Ordnung
 \begin_inset LatexCommand \index{Ordnung}
 
-\end_inset 
+\end_inset
 
 ).
  Im speziellen Fall der ganzen Zahlen 
 \begin_inset Formula $a\in\mathbb{Z}$
-\end_inset 
+\end_inset
 
  modulo 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  schreibt man, falls 
 \begin_inset Formula $n=m$
-\end_inset 
+\end_inset
 
  gilt
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Auch eine Einschränkung auf 
 \begin_inset Formula $n<m$
-\end_inset 
+\end_inset
 
  ist möglich, nur darf man dann (von vornherein) nicht alle Elemente aus
  
 \begin_inset Formula $\mathbb{Z}_{m}$
-\end_inset 
+\end_inset
 
  zulassen.
-\end_inset 
+\end_layout
+
+\end_inset
 
 :
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\rcls{0}{m},\rcls{1}{m},\ldots,\rcls{m-1}{m}\}\msp.\]
+\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\rcls{0}{m},\rcls{1}{m},\ldots,\rcls{m-1}{m}\}\mperiod\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Im Allgemeinen werden Vernüpfungsoperationen (Addition, Multiplikation usw.)
- zwischen zwei Restklassen dadurch definiert, daß man jeweils einen Vertreter
- aus den Restklassen auswählt und dann die Operation mit diesem Repräsentanten
- durchführt.
+\begin_layout Standard
+Im Allgemeinen werden Verknüpfungsoperationen (Addition, Multiplikation
+ usw.) zwischen zwei Restklassen dadurch definiert, daß man jeweils einen
+ Vertreter aus den Restklassen auswählt und dann die Operation mit diesem
+ Repräsentanten durchführt.
  Kann man die eine oder andere Art solcher Operationen auf der Menge aller
  Restklassen definieren, dann lassen sich Restklassenringe, -gruppen oder
  sogar -körper angeben.
-\layout Subsection
+\end_layout
 
+\begin_layout Subsection
 Restklassenringe
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Ring!Restklassen-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Restklassen!-ring}
 
-\end_inset 
+\end_inset
 
 Um von einem Restklassenring 
 \begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset 
+\end_inset
 
- sprechen zu können ist der Nachweis (bzw.
- die Definition) aller Ringaxiome von Abschnitt\SpecialChar ~
+ sprechen zu können ist der Nachweis (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ die Definition) aller Ringaxiome von Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_ring}
 
-\end_inset 
+\end_inset
 
  in Bezug auf die Menge der Restklassen 
 \begin_inset Formula $R_{m}$
-\end_inset 
+\end_inset
 
- notwendig\SpecialChar ~
+ notwendig\InsetSpace ~
 
 \begin_inset LatexCommand \cite[5.]{Welschenbach:2001}
 
-\end_inset 
+\end_inset
 
 .
- Dazu geht man von der Modulo-Arithmetik entsprechend Gleichung\SpecialChar ~
+ Dazu geht man von der Modulo-Arithmetik entsprechend Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_def_mod}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_mod_reverse}
 
-\end_inset 
+\end_inset
 
  aus und prüft jeden Punkt durch Einzelbetrachtung:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Bezüglich der Addition muß 
 \begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset 
+\end_inset
 
  eine 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe
 \begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
 
-\end_inset 
+\end_inset
 
  bilden, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\begin_deeper 
-\layout Enumerate
+\end_layout
 
+\begin_deeper
+\begin_layout Enumerate
 die Addition existiert und ist abgeschlossen
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Die Operation führt immer wieder auf ein Element in 
 \begin_inset Formula $R_{m}$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 ; 
 \begin_inset Formula \begin{eqnarray*}
@@ -1807,78 +1934,83 @@ Die Operation führt immer wieder auf ein Element in
  & = & (a_{1}+a_{2})\bmod m-\left[m(q_{1}+q_{2})\right]\bmod m=(r_{1}+r_{2})\bmod m\\
  & = & \rcls{r_{1}+r_{2}}{m}\end{eqnarray*}
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 sie ist außerdem sowohl assoziativ als auch kommutativ (
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sch); 
 \begin_inset Formula \[
 \rcls{r_{1}}{m}+(\rcls{r_{2}}{m}+\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}+\rcls{r_{2}}{m})+\rcls{r_{3}}{m}=\rcls{r_{3}}{m}+\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 das neutrale Element
 \begin_inset LatexCommand \index{Element!neutrales}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $e_{(+)}=\rcls{0}{m}=mq_{0}$
-\end_inset 
+\end_inset
 
  existiert;
 \begin_inset Formula \[
 \rcls{r}{m}+\rcls{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\rcls{r}{m}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 jedes Element besitzt ein inverses Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $-\rcls{r}{m}=(m-a)\bmod m$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula \[
 \rcls{r}{m}+(-\rcls{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\rcls{0}{m}.\]
 
-\end_inset 
+\end_inset
 
 
-\end_deeper 
-\layout Enumerate
+\end_layout
 
+\end_deeper
+\begin_layout Enumerate
 Für die Multiplikation muß 
 \begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset 
+\end_inset
 
  eine Halbgruppe
 \begin_inset LatexCommand \index{Halbgruppe}
 
-\end_inset 
+\end_inset
 
  darstellen, also
-\begin_deeper 
-\layout Enumerate
+\end_layout
 
+\begin_deeper
+\begin_layout Enumerate
 ebenfalls abgeschlossen
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
  sein; 
 \begin_inset Formula \begin{align*}
@@ -1886,1093 +2018,1138 @@ ebenfalls abgeschlossen
  & =\left[r_{1}r_{2}+m(mq_{1}q_{2}-r_{1}q_{2}-r_{2}q_{1})\right]\bmod m=(r_{1}\cdot r_{2})\bmod m\\
  & =\rcls{r_{1}\cdot r_{2}}{m}\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 und das Assoziativgesetz
 \begin_inset LatexCommand \index{Assoziativgesetz}
 
-\end_inset 
+\end_inset
 
  für 
 \begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
-\end_inset 
+\end_inset
 
  erfüllen;
 \begin_inset Formula \[
 \rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}\cdot\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m})\cdot\rcls{r_{3}}{m}\]
 
-\end_inset 
+\end_inset
 
 
-\end_deeper 
-\layout Enumerate
+\end_layout
 
+\end_deeper
+\begin_layout Enumerate
 Außerdem muß für alle 
 \begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
-\end_inset 
+\end_inset
 
  das Distributivgesetz
 \begin_inset LatexCommand \index{Distributivgesetz}
 
-\end_inset 
+\end_inset
 
  erfüllt sein.
-\newline 
+\newline
 
 \begin_inset Formula \begin{alignat*}{1}
 \rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}+\rcls{r_{3}}{m}) & =(r_{1}-mq_{1})\cdot\left[r_{2}+r_{3}-m(q_{2}+q_{3})\right]\bmod m\\
  & =(r_{1}r_{2}+r_{1}r_{3})\bmod m\\
  & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\cdot\rcls{r_{3}}{m}\end{alignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Da 
 \begin_inset Formula $(R_{m},\cdot)$
-\end_inset 
+\end_inset
 
  ein neutrales Element
 \begin_inset LatexCommand \index{Element!neutrales}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $e_{(\cdot)}$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $\rcls{r}{m}\cdot e_{(\cdot)}=\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  besitzt, handelt es sich sogar um einen
 \begin_inset LatexCommand \index{Ring!mit Eins}
 
-\end_inset 
+\end_inset
 
  
-\emph on 
+\emph on
 Ring mit Eins
-\emph default 
+\emph default
 .
 \begin_inset Formula \[
 \rcls{r}{m}\cdot\rcls{1}{m}=(r\cdot1)\bmod m=r\bmod m=\rcls{r}{m}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
 \begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_m$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $R_{m}=\mathbb{Z}_{m}$
-\end_inset 
+\end_inset
 
  alle diese Bedingungen für 
 \begin_inset Formula $m\geq2$
-\end_inset 
+\end_inset
 
  erfüllen und somit einen kommutativen Ring mit Einselement bilden.
-\layout Subsection
+\end_layout
 
-
+\begin_layout Subsection
 \begin_inset LatexCommand \label{sec:algebra_residue_field}
 
-\end_inset 
+\end_inset
 
 Restklassenkörper
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 
-\noun on 
+\noun on
 Galois
-\noun default 
+\noun default
 -Körper
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Restklassen!-körper}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Körper!Restklassen-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Galois-Körper@\noun{Galois}-Körper}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Körper!Galois-@\noun{Galois}-}
 
-\end_inset 
+\end_inset
 
 Für den Übergang zu einem endlichen Körper ist es notwendig, daß zu den
  Eigenschaften eines Ringes 
 \begin_inset Formula $\left(R_{m},+,\cdot\right)$
-\end_inset 
+\end_inset
 
  noch die einer multiplikativen Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
  kommt (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_group}
 
-\end_inset 
+\end_inset
 
- und\SpecialChar ~
+ und\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_field}
 
-\end_inset 
+\end_inset
 
 ).
  Einziges zusätzliches Kriterium ist danach die Existenz eines multiplikativ
  inversen Elements
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $r^{-1}$
-\end_inset 
+\end_inset
 
  zu jedem 
 \begin_inset Formula $r\in R_{m}\setminus\{0\}$
-\end_inset 
+\end_inset
 
 , so daß 
 \begin_inset Formula $r\cdot r^{-1}=e_{(\cdot)}=1$
-\end_inset 
+\end_inset
 
  gilt.
  Endliche Körper
 \begin_inset LatexCommand \index{Körper!endlicher}
 
-\end_inset 
+\end_inset
 
  nennt man auch 
-\noun on 
+\noun on
 Galois
-\noun default 
--Köper und bezeichnet sie mit 
+\noun default
+-Körper und bezeichnet sie mit 
 \begin_inset Formula $\GF(q)$
-\end_inset 
+\end_inset
 
  oder 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
 , wobei der Parameter 
 \begin_inset Formula $q$
-\end_inset 
+\end_inset
 
  die Ordnung
 \begin_inset LatexCommand \index{Ordnung}
 
-\end_inset 
+\end_inset
 
  (Anzahl der Elemente 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
 ) des Körpers ist
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Unerheblich ist dabei, ob die Menge der Körperelemente 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  durch eine Restklassenoperation oder irgendeine andere Methode definiert
  wird.
  Bei gleicher Anzahl von Elementen kann man solche Mengen nämlich immer
- (strukturerhaltend, ein-eindeutig) aufeinander abbilden\SpecialChar ~
+ (Struktur erhaltend, ein-eindeutig) aufeinander abbilden\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.2]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 In einem Restklassenkörper muß man für das inverse Element 
 \begin_inset Formula $\rcls{r}{m}\cdot{\rcls{r}{m}}^{-1}=\rcls{1}{m}$
-\end_inset 
+\end_inset
 
  fordern, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  die Frage nach der Division im Restklassenring
 \begin_inset LatexCommand \index{Restklassen!-ring}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Ring!Restklassen-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset 
+\end_inset
 
  klären.
  Ausgangspunkt soll deshalb das Auffinden einer Lösung 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  in der Kongruenz
 \begin_inset LatexCommand \index{Kongruenz}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 rx\equiv a\pmod m,\qquad a,m\in\mathbb{F}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 sein.
  Es ist sofort erkennbar, daß mit Hilfe des inversen Vertreterelements
 \begin_inset LatexCommand \index{Element!Vertreter-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $r^{-1}$
-\end_inset 
+\end_inset
 
  eine solche direkt bestimmt werden kann.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
 r^{-1}rx & \equiv & r^{-1}a\pmod m\\
 x & \equiv & r^{-1}a\pmod m\end{eqnarray*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Existenz eines inversen Elements
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  ist allerdings nur dann gegeben, wenn 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  und (jedes beliebige) 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  teilerfremd sind, also 
 \begin_inset Formula $\gcd(r,m)=1$
-\end_inset 
+\end_inset
 
- gilt\SpecialChar ~
+ gilt\InsetSpace ~
 
 \begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Bezieht man diese Aussage 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
+
+\end_inset
 
  auf den Ring 
 \begin_inset Formula $\mathbb{Z}_{m}\setminus\{0\}$
-\end_inset 
+\end_inset
 
 , dann müssen (wenn keine weiteren Forderungen an 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  gestellt werden) alle Elemente 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
 , für die 
 \begin_inset Formula $\gcd(r,m)=1$
-\end_inset 
+\end_inset
 
  nicht erfüllt werden kann, aus dem Ring
 \begin_inset LatexCommand \index{Ring!$\mathbb{Z}_m$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{Z}_{m}$
-\end_inset 
+\end_inset
 
  ausgeschlossen werden.
  Sowohl im allgemeinen als auch speziellen Fall von 
 \begin_inset Formula $\mathbb{Z}_{m}^{*}=\mathbb{Z}_{m}\setminus\{0\}=\{1,2,3,\ldots,m-1\}$
-\end_inset 
+\end_inset
 
  ist diese Bedingung grundsätzlich hinfällig, wenn 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  ein Primelement
 \begin_inset LatexCommand \index{Primelement}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Element!Prim-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Primzahlenkörper}
 
-\end_inset 
+\end_inset
 
  ist
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Also in Bezug auf den Ring 
 \begin_inset Formula $\mathbb{Z}_{m}$
-\end_inset 
+\end_inset
 
  eine Primzahl 
 \begin_inset Formula $p\in\mathbb{P}$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ist nämlich 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  kein primes Element, dann läßt es sich mindestens in zwei Faktoren 
 \begin_inset Formula $r,s\in R_{m}$
-\end_inset 
+\end_inset
 
  zerlegen (und die nicht Vielfache von 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  sind, also 
 \begin_inset Formula $r,s\bmod m\neq0$
-\end_inset 
+\end_inset
 
 ).
  Da nun 
 \begin_inset Formula $m\bmod m=0$
-\end_inset 
+\end_inset
 
  ist, gilt für die Restklassenmultiplikation 
 \begin_inset Formula $\rcls{r}{m}\cdot\rcls{s}{m}=\rcls{m}{m}=0$
-\end_inset 
+\end_inset
 
 .
  Soll aber 
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  eine inverse Restklasse 
 \begin_inset Formula $\rcls{r}{m}^{-1}$
-\end_inset 
+\end_inset
 
  besitzen, dann kann man beide Seiten des Produktes mit 
 \begin_inset Formula ${\rcls{r}{m}}^{-1}$
-\end_inset 
+\end_inset
 
  multiplizieren.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \underbrace{{\rcls{r}{m}}^{-1}\rcls{r}{m}}_{e_{(\cdot)}=1}\cdot\rcls{s}{m}=\rcls{s}{m}={\rcls{r}{m}}^{-1}\rcls{m}{m}=0\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula $\rcls{s}{m}$
-\end_inset 
+\end_inset
 
  ist aber nach Voraussetzung nicht 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 , demzufolge kann ein Inverses zu 
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  für den Fall dieser Zerlegung nicht existieren.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Im Gegenzug bleibt noch nachzuweisen, daß, wenn 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  ein Primelement ist, für jede Restklasse 
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  aus 
 \begin_inset Formula $R_{m}$
-\end_inset 
+\end_inset
 
  ein inverses Element 
 \begin_inset Formula ${\rcls{r}{m}}^{-1}$
-\end_inset 
+\end_inset
 
  auch wirklich existiert.
  Zu diesem Zweck betrachten wir alle 
 \begin_inset Formula $\rcls{r}{m}\in R_{m}$
-\end_inset 
+\end_inset
 
 , ausgenommen die Restklasse 
 \begin_inset Formula $\rcls{1}{m}$
-\end_inset 
+\end_inset
 
 , welche bei der Inversion bekanntlich auf sich selbst abgebildet wird.
  Da wegen der Modulo-Reduktion (wir verwenden jetzt wieder den Vertreter
  der Restklasse) immer 
 \begin_inset Formula $m>r$
-\end_inset 
+\end_inset
 
  gilt, kann nur 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  sein und nicht umgekehrt.
  Aber auch dies ist nicht möglich, wenn nach Voraussetzung 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  relativ prim zu 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  ist.
  Deshalb kann der größte gemeinsame Teiler von 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  nur das Einselement sein.
  Berücksichtigt man jetzt noch die aus dem euklidischen Algorithmus
 \begin_inset LatexCommand \index{Euklidischer Algorithmus}
 
-\end_inset 
+\end_inset
 
  stammende Erkenntnis, daß der größte gemeinsame Teiler 
 \begin_inset Formula $d$
-\end_inset 
+\end_inset
 
  zweier Elemente 
 \begin_inset Formula $r,s$
-\end_inset 
+\end_inset
 
  eines (gleichnamigen) Ringes in der Form 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 d=\gcd(r,s)=ar+bs\label{eq:algebra_gcd_general}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 darstellbar ist
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Lemma von B
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 '{e}
-\end_inset 
+\end_layout
+
+\end_inset
 
 zout.
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[2.4]{Bosch:1996}
 
-\end_inset 
+\end_inset
 
 , dann gilt speziell hier:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 \gcd(r,m)=1 & \equiv ar+bm=ar\pmod m\\
-\rcls{1}{m} & =\rcls{a}{m}\cdot\rcls{r}{m}\msp.\end{align*}
+\rcls{1}{m} & =\rcls{a}{m}\cdot\rcls{r}{m}\mperiod\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Das inverse Element von 
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  ist demzufolge
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
-Auf der Grundlage von Gleichung\SpecialChar ~
+\begin_layout Standard
+Auf der Grundlage von Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_gcd_general}
 
-\end_inset 
+\end_inset
 
  ergibt sich damit die Möglichkeit der Ermittlung von 
 \begin_inset Formula $r^{-1}$
-\end_inset 
+\end_inset
 
  (Erweiterter euklidischer 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  
-\noun on 
+\noun on
 Berlekamp
-\noun default 
+\noun default
 -Algorithmus).
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\rcls{a}{m}={\rcls{r}{m}}^{-1}\msp.\]
+\rcls{a}{m}={\rcls{r}{m}}^{-1}\mperiod\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Von praktischer Bedeutung ist insbesondere der Körper
 \begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_2$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\GF(2):=\mathbb{Z}_{2}$
-\end_inset 
+\end_inset
 
 , denn er bildet häufig die Grundlage technischer Realisierungen.
  Die beiden Elemente von 
 \begin_inset Formula $\mathbb{Z}_{2}$
-\end_inset 
+\end_inset
 
  werden mit 
 \begin_inset Formula $\{\rcls{0}{2},\rcls{1}{2}\}$
-\end_inset 
+\end_inset
 
  oder kürzer mit 
 \begin_inset Formula $0,1$
-\end_inset 
+\end_inset
 
  bezeichnet.
  Wegen ihrer einfachen Implementierung sind die Operationen in 
 \begin_inset Formula $\mathbb{Z}_{2}$
-\end_inset 
+\end_inset
 
  besonders effizient.
-\layout Enumerate
+\end_layout
 
-
+\begin_layout Enumerate
 \begin_inset LatexCommand \label{enum:algebra_mod2_operations}
 
-\end_inset 
+\end_inset
 
 Die Addition (modulo 
 \begin_inset Formula $2$
-\end_inset 
+\end_inset
 
 ) ist mit
-\newline 
+\newline
 
 \begin_inset Formula \begin{xalignat}{2}
 0+0 & =0 & 1+1 & =2\bmod2=0\label{eq:algebra_mod2_add_inv}\\
 0+1 & =1 & 1+0 & =1\nonumber \end{xalignat}
 
-\end_inset 
+\end_inset
 
  geradezu primitiv und entspricht dem logischen 
-\emph on 
+\emph on
 Exklusiv-Oder
 \begin_inset LatexCommand \index{Exklusiv-Oder}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Oftmals auch mit 
-\emph on 
+\emph on
 XOR
-\emph default 
+\emph default
  oder dem Symbol 
 \begin_inset Formula $\oplus$
-\end_inset 
+\end_inset
 
  bezeichnet.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\emph default 
+\emph default
 .
  Wie man sofort sieht ist das neutrale Element die 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
- und wegen Beziehung\SpecialChar ~
+ und wegen Beziehung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_mod2_add_inv}
 
-\end_inset 
+\end_inset
 
- das additiv Inverse die 
+ das additive Inverse die 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
 .
  Addition und Subtraktion sind in diesem Sinne gleichwertig, denn es gilt
  ja 
 \begin_inset Formula $-1=1$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Ebenfalls eine einfache Operation ist die Multiplikation, denn sie entspricht
  dem logischen 
-\emph on 
+\emph on
 Und
-\emph default 
+\emph default
 .
-\newline 
+\newline
 
 \begin_inset Formula \begin{xalignat*}{2}
 0\cdot0 & =0 & 1\cdot1 & =1\\
 0\cdot1 & =0 & 1\cdot0 & =0\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Die Division erklärt sich mit Hilfe des inversen Elements in 
 \begin_inset Formula $\mathbb{Z}_{2}^{*}=\mathbb{Z}_{2}\setminus\{0\}=\{1\}$
-\end_inset 
+\end_inset
 
 , welches ja die Bedingung 
 \begin_inset Formula $1\cdot1^{-1}=e_{(\cdot)}=1$
-\end_inset 
+\end_inset
 
  erfüllen muß.
  Einzig mögliche Schlußfolgerung ist die, daß es sich bei dem inversen Element
  
 \begin_inset Formula $1^{-1}$
-\end_inset 
+\end_inset
 
  um 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  selbst handelt.
-\layout Subsubsection
+\end_layout
 
-
+\begin_layout Subsubsection
 \begin_inset LatexCommand \label{sec:algebra_galois_multgrp}
 
-\end_inset 
+\end_inset
 
 Multiplikative Gruppe
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
 Die multiplikative Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  eines 
-\noun on 
+\noun on
 Galois
-\noun default 
+\noun default
 -Körpers 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
- ist wegen ihrer Eigenschaften bezüglich der Potenzierung von Gruppenelementen
+ ist wegen ihrer Eigenschaften bezüglich des Potenzierens von Gruppenelementen
  sehr interessant
 \begin_inset Foot
-collapsed false
+status open
 
-\layout Standard
-
+\begin_layout Standard
 An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
  Aussagen auf endliche Körper 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  im Allgemeinen zutreffen und nicht auf Restklassen beschränkt sind.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
  Dazu soll die Folge aller Potenzen
 \begin_inset LatexCommand \index{Element!Potenzierung}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $r^{1},r^{2},r^{3},r^{4},\ldots$
-\end_inset 
+\end_inset
 
  irgendeines Elements 
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  betrachtet werden.
  Nach dem Prinzip der Abgeschlossenheit
 \begin_inset LatexCommand \index{Abgeschlossenheit}
 
-\end_inset 
+\end_inset
 
  (Gruppenaxiom) wird auch jede Potenz von 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  wieder in 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  liegen.
  Wegen der endlichen Zahl von Elementen in 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
 , muß sich deshalb ab irgendeiner Potenz 
 \begin_inset Formula $l$
-\end_inset 
+\end_inset
 
  die Folge wiederholen
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß 
 \begin_inset Formula $l$
-\end_inset 
+\end_inset
 
  für jedes Element 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  verschieden sein kann (also eine Funktion von 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  ist).
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
  Die Wiederholung der Folge ab einem bestimmten 
 \begin_inset Formula $l$
-\end_inset 
+\end_inset
 
  läßt den Ansatz 
 \begin_inset Formula $r^{i}=r^{l}$
-\end_inset 
+\end_inset
 
  zu.
  Multiplikation mit dem inversen Element von 
 \begin_inset Formula $r^{i}$
-\end_inset 
+\end_inset
 
  ergibt 
 \begin_inset Formula $1=r^{l-i}$
-\end_inset 
+\end_inset
 
 , was wegen 
 \begin_inset Formula $l>i$
-\end_inset 
+\end_inset
 
  wiederum die Schlußfolgerung zuläßt, das es immer ein Element
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{eqnarray}
 r^{k} & = & 1,\qquad r\in\mathbb{F}_{q}^{*}\label{eq:algebra_ord_elem}\\
-r^{k}-1 & = & 0\msp.\label{eq:algebra_ord_elem_root}\end{eqnarray}
+r^{k}-1 & = & 0\mperiod\label{eq:algebra_ord_elem_root}\end{eqnarray}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 gibt.
  Die Folge 
 \begin_inset Formula $\{ r,r^{2},r^{3},\ldots,r^{k-1},r^{k}=1=r^{0}\}$
-\end_inset 
+\end_inset
 
  nennt man die vom Element 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  erzeugte Untergruppe
 \begin_inset LatexCommand \index{Gruppe!Unter-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Untergruppe}
 
-\end_inset 
+\end_inset
 
  und kennzeichnet sie mit
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-\left\langle r\right\rangle =\left\{ \left.r^{\nu}\right|0\leq\nu\leq k-1\right\} \subseteq\mathbb{F}_{q}^{*}\msp.\label{eq:algebra_subgroup_elem}\end{equation}
+\left\langle r\right\rangle =\left\{ \left.r^{\nu}\right|0\leq\nu\leq k-1\right\} \subseteq\mathbb{F}_{q}^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Das Element 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  wird als erzeugendes Element
 \begin_inset LatexCommand \index{Element!erzeugendes}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Generator
 \begin_inset LatexCommand \index{Generator!-element}
 
-\end_inset 
+\end_inset
 
  der Untergruppe 
 \begin_inset Formula $\left\langle r\right\rangle $
-\end_inset 
+\end_inset
 
  bezeichnet.
  Ist 
 \begin_inset Formula $k$
-\end_inset 
+\end_inset
 
  die kleinste Potenz, die zu 
 \begin_inset Formula $r^{k}=1$
-\end_inset 
+\end_inset
 
  führt, dann wird 
 \begin_inset Formula $k=\left|\left\langle r\right\rangle \right|$
-\end_inset 
+\end_inset
 
  die Ordnung
 \begin_inset LatexCommand \index{Ordnung}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Element!Ordnung}
 
-\end_inset 
+\end_inset
 
  des Elements 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  genannt.
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Eine Ausdrucksmöglichkeit für die Potenzen 
 \begin_inset Formula $r^{\nu}$
-\end_inset 
+\end_inset
 
  zeigt sich, wenn man nocheinmal deren Abfolge betrachtet.
  Da auf 
 \begin_inset Formula $r^{k-1}$
-\end_inset 
+\end_inset
 
  wieder das Element 
 \begin_inset Formula $r^{0}$
-\end_inset 
+\end_inset
 
  folgt, kann man sie wiefolgt definieren
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ohne dabei zu vergessen, daß jede Potenz 
 \begin_inset Formula $r^{\nu}$
-\end_inset 
+\end_inset
 
  (bedingt durch die Modulo-Reduktion 
 \begin_inset Formula $\bmod m$
-\end_inset 
+\end_inset
 
 ) auf ein anderes Element 
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  abgebildet wird.
-\end_inset 
+\end_layout
+
+\end_inset
 
 :
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-\left\langle r\right\rangle =\left\{ \left.r^{\nu}\bmod\left(r^{k}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\label{eq:algebra_subgroup_elem_mod}\end{equation}
+\left\langle r\right\rangle =\left\{ \left.r^{\nu}\bmod\left(r^{k}-1\right)\right|\nu\in\mathbb{N}\right\} \mperiod\label{eq:algebra_subgroup_elem_mod}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Betrachtet man jedes 
 \begin_inset Formula $r^{\nu}$
-\end_inset 
+\end_inset
 
  für jeden Exponenten 
 \begin_inset Formula $\nu$
-\end_inset 
+\end_inset
 
 , dann ist die Richtigkeit der Modulo-Schreibweise mittels 
 \begin_inset Formula $\bmod\left(r^{k}-1\right)$
-\end_inset 
+\end_inset
 
  einfach zu belegen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 r^{0}\bmod(r^{k}-1) & =r^{0}\\
 r^{1}\bmod(r^{k}-1) & =r^{1}\\
@@ -2982,2657 +3159,2795 @@ r^{k-1}\bmod(r^{k}-1) & =r^{k-1}\\
 r^{k}\bmod(r^{k}-1) & =1=r^{0}\\
  & \vdots\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Nun erhält man aus Gleichung\SpecialChar ~
+\begin_layout Standard
+Nun erhält man aus Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_elem}
 
-\end_inset 
+\end_inset
 
  durch Multiplikation mit 
 \begin_inset Formula $r^{-1}$
-\end_inset 
+\end_inset
 
  auch die Berechnungsvorschrift für das inverse Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 r^{-1}=r^{k-1}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Nach dem Satz von 
-\noun on 
+\noun on
 Lagrange
 \begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
 
-\end_inset 
+\end_inset
 
 
-\noun default 
+\noun default
  (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_group_def}
 
-\end_inset 
+\end_inset
 
 ) ist die Ordnung der von 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  erzeugten Untergruppe 
 \begin_inset Formula $(\left\langle r\right\rangle ,\cdot)$
-\end_inset 
+\end_inset
 
  ein Teiler der Gruppenordnung 
 \begin_inset Formula $\left|\mathbb{F}_{q}^{*}\right|$
-\end_inset 
+\end_inset
 
 .
  Man kann die Ordnung der multiplikativen Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
- deshalb auch folgendermaßen ausdrücken\SpecialChar ~
+ deshalb auch folgendermaßen ausdrücken\InsetSpace ~
 
 \begin_inset LatexCommand \cite[1.2, Satz~3]{Bosch:1996}
 
-\end_inset 
+\end_inset
 
 :
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\left|\mathbb{F}_{q}^{*}\right|=q-1=i\, k\msp.\]
+\left|\mathbb{F}_{q}^{*}\right|=q-1=i\, k\mperiod\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Das die Ordnung von 
 \begin_inset Formula $\left\langle r\right\rangle $
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $\left|\mathbb{F}_{q}^{*}\right|$
-\end_inset 
+\end_inset
 
- ist, kann auch mit Hilfe von Gleichung\SpecialChar ~
+ ist, kann auch mit Hilfe von Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_elem}
 
-\end_inset 
+\end_inset
 
  nachgewiesen werden.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align}
 r^{q-1} & =r^{i\cdot k}=\left(r^{k}\right)^{i}=1^{i}=\underbrace{1\cdot1\cdot1\cdots1\cdot1}_{i\textrm{-mal}}=1\label{eq:algebra_ord_divider}\\
 r^{q} & =r\label{eq:algebra_ord_cyclic}\end{align}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Anschaulich bedeutet dies, daß sich die Potenzen 
 \begin_inset Formula $r^{\nu}$
-\end_inset 
+\end_inset
 
  (mit 
 \begin_inset Formula $0\leq\nu\leq k-1$
-\end_inset 
+\end_inset
 
 ) immer nach 
 \begin_inset Formula $k$
-\end_inset 
+\end_inset
 
  Werten wiederholen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \underbrace{\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}}_{k\textrm{ Elemente}},\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}},\ldots,\underbrace{r^{0},r^{1},r^{2},\ldots,r^{k-1}}}_{q-1\textrm{ Elemente }(i\textrm{ Zyklen})}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
  Zerlegung 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 r^{q-1}-1=r^{i\cdot k}-1 & =\left(r^{k}-1\right)\,\left[r^{(i-1)k}+r^{(i-2)k}+\cdots+r^{2k}+r^{k}+1\right]\\
  & =\left(r^{k}-1\right)\,\left[\left(r^{k}\right)^{i-1}+\left(r^{k}\right)^{i-2}+\cdots+\left(r^{k}\right)^{2}+\left(r^{k}\right)^{1}+\left(r^{k}\right)^{0}\right]\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 welche außerdem zeigt, daß 
 \begin_inset Formula $r^{k}-1$
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $r^{q-1}-1$
-\end_inset 
+\end_inset
 
  ist (gegebene Voraussetzung war, daß 
 \begin_inset Formula $k$
-\end_inset 
+\end_inset
 
  die Ordnung 
 \begin_inset Formula $q-1$
-\end_inset 
+\end_inset
 
  teilt).
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Eine für die praktische Anwendung von Restklassenkörpern sehr wichtige Schlußfol
-gerung aus Gleichung\SpecialChar ~
+gerung aus Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_divider}
 
-\end_inset 
+\end_inset
 
 , also 
 \begin_inset Formula $r^{q-1}\equiv1\pmod{m}$
-\end_inset 
+\end_inset
 
  ist die, daß wegen 
 \begin_inset Formula $0\equiv m\pmod m$
-\end_inset 
+\end_inset
 
  das Modul 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $r^{q-1}-1$
-\end_inset 
+\end_inset
 
  sein muß.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-r^{q-1}-1=h\, m\msp.\label{eq:algebra_ord_mod_factor}\end{equation}
+r^{q-1}-1=h\, m\mperiod\label{eq:algebra_ord_mod_factor}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Für den Körper
 \begin_inset LatexCommand \index{Körper!$\mathbb{Z}_5$}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{Z}_{5}$
-\end_inset 
+\end_inset
 
 , also dem Fall einer multiplikativen Gruppe der Ordnung 
 \begin_inset Formula $q-1=4$
-\end_inset 
+\end_inset
 
 , gilt beispielsweise:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{5}
 r_{1} & =1 & \left\langle r_{1}\right\rangle  & =\left\{ 1\right\}  & r_{1}^{k}-1 & =0 & r_{1}^{p-1}-1 & =0\\
 r_{2} & =2 & \left\langle r_{2}\right\rangle  & =\left\{ 1,2,4,3\right\}  & r_{2}^{k}-1 & =15\equiv0 & r_{2}^{p-1}-1 & =15\equiv0 & \pmod{5}\\
 r_{3} & =3 & \left\langle r_{3}\right\rangle  & =\left\{ 1,3,4,2\right\}  & r_{3}^{k}-1 & =80\equiv0 & r_{3}^{p-1}-1 & =80\equiv0 & \pmod{5}\\
 r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4\right\}  & r_{4}^{k}-1 & =15\equiv0 & r_{4}^{p-1}-1 & =255\equiv0 & \pmod{5}\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 Zyklische Gruppe
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Gruppe!zyklische}
 
-\end_inset 
+\end_inset
 
 Eine multiplikative Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
 , bei der alle Potenzen
 \begin_inset LatexCommand \index{Element!Potenzierung}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $g^{i}$
-\end_inset 
+\end_inset
 
  eines bestimmten Generatorelements
 \begin_inset LatexCommand \index{Element!Generator-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $g\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  genau alle Elemente 
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  in irgendeiner Abfolge durchläuft,
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \left\langle g\right\rangle :=\left\{ 1,g^{1},g^{2},g^{3},\ldots,g^{q-3},g^{q-2}\right\} =\mathbb{F}_{q}^{*}\qquad\qquad\left(\textrm{Bem.: }1=g^{q-1}\right)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 bezeichnet man als zyklische Gruppe.
  Die Ordnung dieses sogenannten primitiven
 \begin_inset LatexCommand \index{Element!primitives}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \label{page:algebra_cyclic_primitive}
 
-\end_inset 
+\end_inset
 
  (Generator-) Elements muß demzufolge gleich der Ordnung der Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  sein
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Man kann mit Hilfe von 
-\noun on 
+\noun on
 Euler
-\noun default 
+\noun default
 's Totient-Funktion nachweisen, daß es in einem 
-\noun on 
+\noun on
 Galois
-\noun default 
+\noun default
 -Körper immer mindestens ein erzeugendes (primitives) Element 
 \begin_inset Formula $g$
-\end_inset 
+\end_inset
 
  gibt.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  der Index
 \begin_inset LatexCommand \index{Index}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $\left\langle g\right\rangle $
-\end_inset 
+\end_inset
 
  genau Eins
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Man spricht auch von einer maximalen Periode und meint damit 
 \begin_inset Formula $\left|g\right|=\left|\mathbb{F}_{q}^{*}\right|$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 k=\left|g\right|=q-1\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Da auch das Generatorelement 
 \begin_inset Formula $g$
-\end_inset 
+\end_inset
 
- Gleichung\SpecialChar ~
+ Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_elem}
 
-\end_inset 
+\end_inset
 
  erfüllt, gilt äquivalent:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-g^{q-1}=1\msp.\label{eq:algebra_generator_cond}\end{equation}
+g^{q-1}=1\mperiod\label{eq:algebra_generator_cond}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ähnliches trifft auf die Darstellung von 
 \begin_inset Formula $\left\langle g\right\rangle $
-\end_inset 
+\end_inset
 
- entsprechend Formel\SpecialChar ~
+ entsprechend Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_subgroup_elem_mod}
 
-\end_inset 
+\end_inset
 
  zu, welche sich folgendermaßen konkretisieren läßt:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-\mathbb{F}_{q}^{*}=\left\{ \left.g^{\nu}\bmod\left(g^{q-1}-1\right)\right|\nu\in\mathbb{N}\right\} \msp.\]
+\mathbb{F}_{q}^{*}=\left\{ \left.g^{\nu}\bmod\left(g^{q-1}-1\right)\right|\nu\in\mathbb{N}\right\} \mperiod\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wie schon früher festgestellt, beschränken sich für einen Körper
 \begin_inset LatexCommand \index{Körper!endlicher}
 
-\end_inset 
+\end_inset
 
  die erlaubten Module 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  auf Primelemente, speziell wieder im Restklassenkörper 
 \begin_inset Formula $\mathbb{Z}_{m}^{*}$
-\end_inset 
+\end_inset
 
  also auf Primzahlen.
  Da die Ordnung der multiplikativen Gruppe 
 \begin_inset Formula $\mathbb{Z}_{p}^{*}=\mathbb{Z}_{p}\setminus\{0\}=\{1,2,3,\ldots,p-1\}$
-\end_inset 
+\end_inset
 
  genau 
 \begin_inset Formula $p-1$
-\end_inset 
+\end_inset
 
- ist, kann man mit Hilfe von Gleichung\SpecialChar ~
+ ist, kann man mit Hilfe von Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_generator_cond}
 
-\end_inset 
+\end_inset
 
  den kleinen Satz von 
-\noun on 
+\noun on
 Fermat
-\noun default 
+\noun default
 
 \begin_inset LatexCommand \index{Fermat@\noun{Fermat}!kleiner Satz}
 
-\end_inset 
+\end_inset
 
  formulieren.
-\layout Emphasized
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 g^{p-1}\equiv1\pmod p,\qquad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsubsection
+\end_layout
 
-
+\begin_layout Subsubsection
 \begin_inset LatexCommand \label{sec:algebra_zeroes_split}
 
-\end_inset 
+\end_inset
 
 Körperelemente als Nullstellen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Nullstellen}
 
-\end_inset 
+\end_inset
 
-In Vorbereitung des Abschnittes\SpecialChar ~
+In Vorbereitung des Abschnittes\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_extfield}
 
-\end_inset 
+\end_inset
 
  zu den Erweiterungskörpern wenden wir uns jetzt einer etwas anderen Sichtweise
  auf die Elemente des endlichen Körpers 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  zu, nämlich der Betrachtung über Nullstellen.
  Dazu gehen wir von dem speziellen Polynom 
 \begin_inset Formula $\varphi(x)=x^{q-1}-1$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $x,\varphi(x)\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  aus, welches die Nullstellen 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Einheitswurzeln
 \begin_inset LatexCommand \index{Einheitswurzeln}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
  haben soll.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat}{3}
-\alpha^{q-1}-1 & =0 & \alpha^{q-1} & =1 & (\alpha\in\mathbb{F}_{q}^{*})\msp.\label{eq:algebra_zeroes_poly}\end{xalignat}
+\alpha^{q-1}-1 & =0 & \alpha^{q-1} & =1 & (\alpha\in\mathbb{F}_{q}^{*})\mperiod\label{eq:algebra_zeroes_poly}\end{xalignat}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
  
 \begin_inset Formula $\varphi(x)$
-\end_inset 
+\end_inset
 
  genau 
 \begin_inset Formula $q-1$
-\end_inset 
+\end_inset
 
  Nullstellen haben muß.
- Nach Formel\SpecialChar ~
+ Nach Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_divider}
 
-\end_inset 
+\end_inset
 
  wird diese Bedingung aber auch durch jedes einzelne Element aus 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  erfüllt.
  Da deren Anzahl genau mit der Anzahl der Nullstellen übereinstimmt, kann
  es sich bei den Elementen 
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*},\msp q>1$
-\end_inset 
+\end_inset
 
  nur (und genau) um die 
 \begin_inset Formula $q-1$
-\end_inset 
+\end_inset
 
  Nullstellen von 
 \begin_inset Formula $\varphi(x)$
-\end_inset 
+\end_inset
 
- handeln\SpecialChar ~
+ handeln\InsetSpace ~
 
 \begin_inset LatexCommand \cite[Satz~6.18]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Das mehrfache Nullstellen nicht vorhanden sind, kann man (in Verbindung
- mit Gleichung\SpecialChar ~
+ mit Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_zeroes_poly}
 
-\end_inset 
+\end_inset
 
 ) durch Ableitung von 
 \begin_inset Formula $\varphi(x)$
-\end_inset 
+\end_inset
 
  an den Stellen 
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
  nachprüfen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.(q-1)\, x^{q-2}\right|_{x=\alpha}=(q-1)\,\alpha^{-1}\alpha^{q-1}=(q-1)\,\alpha^{-1}\neq0\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Mit diesen Erkenntnissen läßt sich für 
 \begin_inset Formula $\varphi(x)$
-\end_inset 
+\end_inset
 
- eine Linearfaktordarstellung auf Basis der Elemente 
+ eine Linearfaktordarstellung
+\begin_inset LatexCommand \index{Linearfaktoren}
+
+\end_inset
+
+ auf Basis der Elemente 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  angeben.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \varphi(x)=x^{q-1}-1=\prod_{r\in\mathbb{F}_{q}^{*}}(x-r)\label{eq:algebra_group_factors_split}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Nimmt man jetzt noch das Nullelement 
 \begin_inset Formula $r=0$
-\end_inset 
+\end_inset
 
  hinzu, dehnt also die Betrachtung von der multiplikativen Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}=\mathbb{F}_{q}\setminus\{0\}$
-\end_inset 
+\end_inset
 
  auf alle Elemente des Körpers 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  aus, dann muß man das Element 
 \begin_inset Formula $r=0$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  den Linearfaktor 
 \begin_inset Formula $x-0$
-\end_inset 
+\end_inset
 
  mit einbeziehen
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Somit bilden die Nullstellen von 
 \begin_inset Formula $\psi(x)=x^{q}-x$
-\end_inset 
+\end_inset
 
  einen endlichen Körper 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\label{eq:algebra_field_factors_split}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ausmultiplizieren der rechten Seite, gefolgt von einem Koeffizientenvergleich
  für 
 \begin_inset Formula $x^{0}$
-\end_inset 
+\end_inset
 
 , führt noch zu der interessanten Äquivalenz
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-1+\prod_{r\in\mathbb{F}_{q}^{*}}r=0\msp.\label{eq:algebra_product_elements}\end{equation}
+1+\prod_{r\in\mathbb{F}_{q}^{*}}r=0\mperiod\label{eq:algebra_product_elements}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
  
 \begin_inset Formula $\mathbb{Z}_{p>2}$
-\end_inset 
+\end_inset
 
 , so handelt es sich bei den Zahlen 
 \begin_inset Formula $r=1\ldots p-1$
-\end_inset 
+\end_inset
 
  um die 
 \begin_inset Formula $p-1$
-\end_inset 
+\end_inset
 
  Nullstellen 
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
  des Polynoms 
 \begin_inset Formula $\varphi(x)=x^{p-1}-1\pmod{p}$
-\end_inset 
+\end_inset
 
 .
- Anwendung von Gleichung\SpecialChar ~
+ Anwendung von Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_product_elements}
 
-\end_inset 
+\end_inset
 
  auf 
 \begin_inset Formula $\mathbb{Z}_{p}^{*}$
-\end_inset 
+\end_inset
 
  führt folgerichtig zum Satz von 
-\noun on 
+\noun on
 Wilson
-\noun default 
+\noun default
 
 \begin_inset LatexCommand \index{Wilson@\noun{Wilson}!Satz von}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
  bei 
 \begin_inset Formula $p$
-\end_inset 
+\end_inset
 
  wirklich um eine Primzahl handelt.
-\end_inset 
+\end_layout
 
-\SpecialChar ~
+\end_inset
+
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[II]{Pollard:1998}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 (p-1)!\equiv-1\equiv p-1\pmod{p}\label{eq:algebra_lemma_wilson}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsection
+\end_layout
 
-
+\begin_layout Subsection
 \begin_inset LatexCommand \label{sec:algebra_extfield}
 
-\end_inset 
+\end_inset
 
 Erweiterungskörper
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 Vorbetrachtungen
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Körper!Erweiterungs-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Erweiterungskörper}
 
-\end_inset 
+\end_inset
 
 Ein Erweiterungskörper 
 \begin_inset Formula $M/K$
-\end_inset 
+\end_inset
 
  ist ein Körper 
 \begin_inset Formula $(M,+,\cdot)$
-\end_inset 
+\end_inset
 
 , der einen anderen Körper 
 \begin_inset Formula $(K,+,\cdot)$
-\end_inset 
+\end_inset
 
  als Teilkörper
 \begin_inset LatexCommand \index{Körper!Teil-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Teilkörper}
 
-\end_inset 
+\end_inset
 
- enthält\SpecialChar ~
+ enthält\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
  Der Grad der Körpererweiterung
 \begin_inset LatexCommand \index{Körper!-erweiterung}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $M$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  ist die Dimension von 
 \begin_inset Formula $M$
-\end_inset 
+\end_inset
 
  als (sogenannter) 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 -Vektorraum und wird als 
 \begin_inset Formula $[M:K]$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\dim_{K}M$
-\end_inset 
+\end_inset
 
  geschrieben
 \begin_inset LatexCommand \index{Dimension}
 
-\end_inset 
+\end_inset
 
 .
  Jeder Vektor in 
 \begin_inset Formula $M$
-\end_inset 
+\end_inset
 
  besteht entsprechend der Definition des Vektorraumes
 \begin_inset LatexCommand \index{Vektor!-raum}
 
-\end_inset 
+\end_inset
 
  (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_vector_space}
 
-\end_inset 
+\end_inset
 
 ) aus jeweils 
 \begin_inset Formula $[M:K]$
-\end_inset 
+\end_inset
 
  Tupeln in 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 .
  Bekannte Beispiele für Körpererweiterungen sind:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
 {[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension um eine imaginäre Komponente;}\\
 {[\mathbb{R}:\mathbb{Q}]} & = & \infty,\textrm{ hier sind die rationalen Zahlen noch abzählbar.}\end{eqnarray*}
 
-\end_inset 
+\end_inset
 
 
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 Polynomringe
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ausgehend von den Vorbetrachtungen konstruieren wir jetzt einen endlichen
  Polynomring
 \begin_inset LatexCommand \index{Ring!Polynom-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Polynom!-ring}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $(K[x],+,\cdot)$
-\end_inset 
+\end_inset
 
  auf dem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 .
  
 \begin_inset Formula \begin{align}
-K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\ldots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
+K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
 f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{align}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
  gültig, weshalb man auch von einem Vektorraum der Polynome in der Unbestimmten
  
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
  mit Koeffizienten aus dem Körper 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  spricht.
  Ist der Leitkoeffizient 
 \begin_inset Formula $a_{n-1}=1$
-\end_inset 
+\end_inset
 
 , dann wird das Polynom
 \begin_inset LatexCommand \index{Polynom!monisches}
 
-\end_inset 
+\end_inset
 
  als normiert (monisch) bezeichnet, sonst ist 
 \begin_inset Formula $a_{n-1}x^{n-1}$
-\end_inset 
+\end_inset
 
  das sogenannte Leitmonom
 \begin_inset LatexCommand \index{Leitmonom}
 
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wird anschließend eine Restklassendivision
 \begin_inset LatexCommand \index{Restklassen!-division}
 
-\end_inset 
+\end_inset
 
  dieser Polynome 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
  durch ein Polynom
 \begin_inset LatexCommand \index{Generator!-polynom}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  mit Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  definiert, also 
 \begin_inset Formula $r(x)=f(x)\bmod m(x)$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $r(x)\in K[x]/m(x)$
-\end_inset 
+\end_inset
 
 , dann bildet die Menge der darin enthaltenen Restklassen wieder einen Restklass
 enring
 \begin_inset LatexCommand \index{Restklassen!-ring}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Ring!Restklassen-}
 
-\end_inset 
+\end_inset
 
-\SpecialChar ~
+\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 , 
 \begin_inset LatexCommand \cite[2.5.4]{Menezes:1992}
 
-\end_inset 
+\end_inset
 
 :
-\layout Enumerate
+\end_layout
 
-Da bei einer Polynomaddition die einzelen Koeffizienten unabhängig voneinander
+\begin_layout Enumerate
+Da bei einer Polynomaddition die einzelnen Koeffizienten unabhängig voneinander
  (und jeder für sich) addiert werden und außerdem nach Voraussetzung immer
  
 \begin_inset Formula $\deg r(x)<\deg m(x)=n$
-\end_inset 
+\end_inset
 
  gilt, bildet 
 \begin_inset Formula $K[x]/m(x)$
-\end_inset 
+\end_inset
 
  eine additive 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe.
-\begin_deeper 
-\layout Enumerate
+\end_layout
 
+\begin_deeper
+\begin_layout Enumerate
 Das Assoziativgesetz gilt: 
 \begin_inset Formula $r(x)+\left[g(x)+h(x)\right]=\left[r(x)+g(x)\right]+h(x)$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $r(x),g(x),h(x)\in K[x]/m(x)$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Das neutrale Element 
 \begin_inset Formula $e_{(+)}=0\in K\left[x\right]/m(x)$
-\end_inset 
+\end_inset
 
  mit der Beziehung 
 \begin_inset Formula $r(x)+e_{(+)}=r(x)$
-\end_inset 
+\end_inset
 
  ist das Nullpolynom.
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Ein additiv inverses Element
 \begin_inset LatexCommand \index{Element!inverses}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $-r\left(x\right)\in K\left[x\right]/m(x)$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $r\left(x\right)+\left[-r(x)\right]=0$
-\end_inset 
+\end_inset
 
  ist vorhanden.
  Es ergibt sich aus den inversen Elementen der Koeffizienten 
 \begin_inset Formula $a_{\nu}\in K$
-\end_inset 
+\end_inset
 
  zu 
 \begin_inset Formula $-r(x)=\sum_{\nu=0}^{n-1}-a_{\nu}x^{\nu}=-\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}$
-\end_inset 
+\end_inset
 
 .
-\end_deeper 
-\layout Enumerate
+\end_layout
 
-
+\end_deeper
+\begin_layout Enumerate
 \begin_inset Formula $(K[x]/m(x),\cdot)$
-\end_inset 
+\end_inset
 
  ist eine multiplikative Halbgruppe
 \begin_inset LatexCommand \index{Halbgruppe}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe!Halb-}
 
-\end_inset 
+\end_inset
 
 , denn:
-\begin_deeper 
-\layout Enumerate
+\end_layout
 
+\begin_deeper
+\begin_layout Enumerate
 Aufgrund der Modulo-Reduktion ist 
 \begin_inset Formula $(K[x]/m(x),\cdot)$
-\end_inset 
+\end_inset
 
  abgeschlossen, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  wenn 
 \begin_inset Formula $r(x),g(x)\in K[x]/m(x)$
-\end_inset 
+\end_inset
 
  angenommen wird, dann gilt für die Multiplikation 
 \begin_inset Formula $r(x)\, g(x)\equiv h(x)\pmod{m(x)}$
-\end_inset 
+\end_inset
 
  gleichfalls 
 \begin_inset Formula $h(x)\in K[x]/m(x)$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Auch das Assoziativgesetz 
 \begin_inset Formula $r(x)\left[g(x)\, h(x)\right]=\left[r(x)\, g(x)\right]h(x)$
-\end_inset 
+\end_inset
 
  ist in einem Restklassenring von Polynomen erfüllt.
-\end_deeper 
-\layout Enumerate
+\end_layout
 
+\end_deeper
+\begin_layout Enumerate
 Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
  mit Polynomoperationen zu schlußfolgern, daß das Distributivgesetz
 \begin_inset LatexCommand \index{Distributivgesetz}
 
-\end_inset 
+\end_inset
 
  ebenfalls gilt: 
 \begin_inset Formula $r(x)\left[g(x)+h(x)\right]=r(x)g(x)+r(x)h(x)$
-\end_inset 
+\end_inset
 
 .
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 Endlicher Erweiterungskörper
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Der Übergang zu einem Körper wird möglich, wenn 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  ein Primelement
 \begin_inset LatexCommand \index{Element!Prim-}
 
-\end_inset 
+\end_inset
 
  in Bezug auf die Menge der Polynome 
 \begin_inset Formula $K[x]$
-\end_inset 
+\end_inset
 
  ist, es sich also um ein (sogenanntes) irreduzibles
 \begin_inset LatexCommand \index{Polynom!irreduzibles}
 
-\end_inset 
+\end_inset
 
  Polynom handelt.
  Ein solches Polynom ist dadurch gekennzeichnet, daß es nicht weiter in
  Teilpolynome mit Koeffizienten aus 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  reduzierbar ist
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ausführliche Betrachtungen zu irreduziblen und primitiven Polynomen sind
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 eg
-\end_inset 
+\end_layout
 
- in\SpecialChar ~
+\end_inset
+
+ in\InsetSpace ~
 
 \begin_inset LatexCommand \cite[4.5]{Menezes:1992}
 
-\end_inset 
+\end_inset
 
-, Tabellen irreduzibler Polynome in\SpecialChar ~
+, Tabellen irreduzibler Polynome in\InsetSpace ~
 
 \begin_inset LatexCommand \cite[Anhang~C]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
  zu finden.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Es sei nun 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  ein Restklassenpolynom mit Koeffizienten 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  aus dem endlichen Grundkörper 
 \begin_inset Formula $K:=\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  vom Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 .
  Dann handelt es sich bei 
 \begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
-\end_inset 
+\end_inset
 
  um einen endlichen Körper mit 
 \begin_inset Formula $q=p^{n}$
-\end_inset 
+\end_inset
 
- Elementen\SpecialChar ~
+ Elementen\InsetSpace ~
 
 \begin_inset LatexCommand \cite[3.8]{Bosch:1996}
 
-\end_inset 
+\end_inset
 
 .
  Man spricht auch von einem Vektorraum
 \begin_inset LatexCommand \index{Vektor!-raum}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  der Dimension 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
-, denn auf diese Weise wird (im Sinne von Abschnitt\SpecialChar ~
+, denn auf diese Weise wird (im Sinne von Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_vector_space}
 
-\end_inset 
+\end_inset
 
 ) jedem Vektor 
 \begin_inset Formula $\mvec{v}=(v_{1},v_{2},v_{3},\ldots,v_{n})$
-\end_inset 
+\end_inset
 
  ein Polynom 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  vom Grad 
 \begin_inset Formula $n-1$
-\end_inset 
+\end_inset
 
  zugeordnet.
  Es handelt sich folglich nur um eine andere Darstellung der 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Tupel des Vektors 
 \begin_inset Formula $\mvec{v}$
-\end_inset 
+\end_inset
 
  in der Art 
 \begin_inset Formula $a_{0}=v_{1},a_{1}=v_{2},\ldots,a_{n-1}=v_{n}$
-\end_inset 
+\end_inset
 
 .
  Die Potenzen 
 \begin_inset Formula $x^{0},x^{1},x^{2},\ldots,x^{n-2},x^{n-1}$
-\end_inset 
+\end_inset
 
  bilden die (Polynom-) Basis
 \begin_inset LatexCommand \index{Polynom!-basis}
 
-\end_inset 
+\end_inset
 
  des Vektorraumes 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
 .
  Entsprechend ist die Dimension
 \begin_inset LatexCommand \index{Vektor!-raum!Dimension}
 
-\end_inset 
+\end_inset
 
  des Erweiterungskörpers 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  über dem Grundkörper 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  genau 
 \begin_inset Formula $[\mathbb{F}_{q}:\mathbb{Z}_{p}]=n$
-\end_inset 
+\end_inset
 
 .
  Als Notation für einen solchen Körper wird deshalb auch 
 \begin_inset Formula $\mathbb{F}_{p}^{n}$
-\end_inset 
+\end_inset
 
  verwendet, häufiger allerdings 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
-\end_inset 
+\end_inset
 
  oder 
 \begin_inset Formula $\GF\left(p^{n}\right)$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Mit diesen Vorbemerkungen lassen sich alle Aussagen zu Restklassenkörpern,
- wie sie in Abschnitt\SpecialChar ~
+ wie sie in Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_residue_field}
 
-\end_inset 
+\end_inset
 
  allgemein formuliert wurden, auf den Erweiterungskörper 
 \begin_inset Formula $\mathbb{F}_{q=p^{n}}$
-\end_inset 
+\end_inset
 
  anwenden:
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Das Modul
 \begin_inset LatexCommand \index{Modul}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
  (Primelement) wird nun als das irreduzible Polynom 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  interpretiert.
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Die Restklassendivision
 \begin_inset LatexCommand \index{Restklassen!-division}
 
-\end_inset 
+\end_inset
 
  ist definiert als 
 \begin_inset Formula $r(x)\equiv f(x)\bmod{m(x)}$
-\end_inset 
+\end_inset
 
 , was grundsätzlich immer zu einem Grad kleiner als 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  für 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  führt
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Die Menge der Elemente 
 \begin_inset Formula $r$
-\end_inset 
+\end_inset
 
  umfaßt alle Polynome mit einem Grad kleiner als 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
- Die Kennzeichung der zu 
+ Die Kennzeichnung der zu 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  gehörenden Restklasse
 \begin_inset LatexCommand \index{Restklassen}
 
-\end_inset 
+\end_inset
 
  erfolgt wie gewohnt mit 
 \begin_inset Formula $\rcls{r(x)}{m(x)}$
-\end_inset 
+\end_inset
 
 , wird meistens jedoch weggelassen.
  Das Element 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  steht also auch hier wieder als Restklassenvertreter aller Polynome 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
 , welche die Bedingung 
 \begin_inset Formula $f(x)=s(x)m(x)+r(x)$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $\deg r(x)<\deg m(x)$
-\end_inset 
+\end_inset
 
  erfüllen.
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Das Nullelement ist das Nullpolynom
 \begin_inset LatexCommand \index{Polynom!Null-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $r(x)=0\pmod{m(x)}$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  dessen Restklasse 
 \begin_inset Formula $\rcls{0}{m(x)}$
-\end_inset 
+\end_inset
 
 , das Einselement das Einheitspolynom
 \begin_inset LatexCommand \index{Polynom!Einheits-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $e_{(\cdot)}=x^{0}=1$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Addition und Multiplikation (von Polynomen) in 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
- sind wohldefiniert und abgeschlossen, die ensprechenden Gruppen 
+ sind wohldefiniert und abgeschlossen, die entsprechenden Gruppen 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  und 
 \begin_inset Formula $\mathbb{F}_{q}^{+}$
-\end_inset 
+\end_inset
 
  also existent.
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Die Anzahl der Elemente 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  im Restklassenkörper 
 \begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
-\end_inset 
+\end_inset
 
  ist aufgrund der Anzahl von möglichen Koeffizientenkombinationen 
 \begin_inset Formula $p^{n}$
-\end_inset 
+\end_inset
 
 .
  Bei 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  handelt es sich folglich um einen 
-\noun on 
+\noun on
 Galois
-\noun default 
+\noun default
 -Körper
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
  von Primelementen noch als Körperordnung zulässig sind.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\GF\left(p^{n}\right)$
-\end_inset 
+\end_inset
 
 .
  Wegen 
 \begin_inset Formula $\left|\mathbb{F}_{q}\right|=q=p^{n}$
-\end_inset 
+\end_inset
 
  hat dessen multiplikative Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Welche das Nullelement 
 \begin_inset Formula $\mvec{r}=(0,0,\ldots,0)$
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $r(x)=0$
-\end_inset 
+\end_inset
 
  ausschließt.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  die Ordnung 
 \begin_inset Formula $p^{n}-1$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
-
+\begin_layout Enumerate
 \begin_inset LatexCommand \label{enum:algebra_extfield_gen}
 
-\end_inset 
+\end_inset
 
 Jedes Element 
 \begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  hat eine Ordnung
 \begin_inset LatexCommand \index{Ordnung}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Periode
 \begin_inset LatexCommand \index{Periode}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $k=\left|\left\langle r(x)\right\rangle \right|$
-\end_inset 
+\end_inset
 
-, welche sich aus Gleichung\SpecialChar ~
+, welche sich aus Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_elem}
 
-\end_inset 
+\end_inset
 
  ableitet:
-\newline 
+\newline
 
 \begin_inset Formula \[
-\left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\msp.\]
+\left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\mperiod\]
 
-\end_inset 
+\end_inset
 
 Nach dem Satz von 
-\noun on 
+\noun on
 Lagrange
 \begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
 
-\end_inset 
+\end_inset
 
 
-\noun default 
+\noun default
  teilt die Ordnung 
 \begin_inset Formula $k$
-\end_inset 
+\end_inset
 
  des Elements die der multiplikativen Gruppe
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $q-1=p^{n}-1=i\, k$
-\end_inset 
+\end_inset
 
  und demzufolge ist
-\newline 
+\newline
 
 \begin_inset Formula \begin{equation}
-\left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\msp.\label{eq:algebra_extfield_zeroes_base}\end{equation}
+\left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\mperiod\label{eq:algebra_extfield_zeroes_base}\end{equation}
 
-\end_inset 
+\end_inset
 
 
-\layout Enumerate
+\end_layout
 
+\begin_layout Enumerate
 Jedes erzeugende (primitive) Element
 \begin_inset LatexCommand \index{Element!primitives}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Element!Generator-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $g(x)$
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  erfüllt die Bedingung der maximalen Zykluslänge
 \begin_inset LatexCommand \index{Periode!maximale}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Zykluslänge}
 
-\end_inset 
+\end_inset
 
  (Index 
 \begin_inset Formula $i=1$
-\end_inset 
+\end_inset
 
 ), hat also die Ordnung 
 \begin_inset Formula $\left|\left\langle g(x)\right\rangle \right|=p^{n}-1$
-\end_inset 
+\end_inset
 
 .
  Es ist damit geeignet, als Basiselement für die Erzeugung aller anderen
  Elemente 
 \begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  verwendet zu werden.
  Nimmt man das Nullelement
 \begin_inset LatexCommand \index{Element!Null-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $0=g^{q}$
-\end_inset 
+\end_inset
 
  sowie das Einselement
 \begin_inset LatexCommand \index{Element!Eins-}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset Formula $1=g^{q-1}$
-\end_inset 
+\end_inset
 
  hinzu, so gilt für die Menge der Elemente 
 \begin_inset Formula $\mathbb{F}_{q}=\{0,1,g^{1},g^{2},g^{3},\ldots,g^{p^{n}-3},g^{p^{n}-2}\}$
-\end_inset 
+\end_inset
 
 .
-\layout Enumerate
+\end_layout
 
-Aus Punkt\SpecialChar ~
+\begin_layout Enumerate
+Aus Punkt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{enum:algebra_extfield_gen}
 
-\end_inset 
+\end_inset
 
- läßt sich (in Übereinstimmung mit Gleichung\SpecialChar ~
+ läßt sich (in Übereinstimmung mit Gleichung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_ord_mod_factor}
 
-\end_inset 
+\end_inset
 
 ) schlußfolgern, daß für jedes Element 
 \begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  das Modul 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $\left[r(x)\right]^{q-1}-1$
-\end_inset 
+\end_inset
 
  ist, also die Zerlegung 
 \begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\, m(x)$
-\end_inset 
+\end_inset
 
  hat.
  Setzt man insbesondere 
 \begin_inset Formula $r(x)=x$
-\end_inset 
+\end_inset
 
  als das kleinste Element (mit einem Grad größer als 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
 ) aus 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
 , so erhält man die Beziehungen:
-\newline 
+\newline
 
 \begin_inset Formula \begin{eqnarray*}
 x^{q-1}-1 & = & h(x)\, m(x)\\
 x^{q-1}-1 & \equiv & 0\pmod{m(x)}\\
-x^{q}-x & \equiv & 0\pmod{m(x)}\msp,\end{eqnarray*}
+x^{q}-x & \equiv & 0\pmod{m(x)},\end{eqnarray*}
 
-\end_inset 
+\end_inset
 
 
-\newline 
+\newline
 welche auch die Kongruenz 
 \begin_inset Formula $h(x)\, m(x)\equiv0\pmod{x^{q-1}-1}$
-\end_inset 
+\end_inset
 
  rechtfertigen.
-\layout Subsubsection
+\end_layout
 
+\begin_layout Subsubsection
 Zerfällungskörper
-\layout Standard
+\end_layout
 
+\begin_layout Standard
+\begin_inset Note Note
+status open
 
-\begin_inset Note
-collapsed false
-
-\layout Standard
-
+\begin_layout Standard
 Siehe 
-\noun on 
+\noun on
 
 \begin_inset LatexCommand \htmlurl[Diskrete Mathematik]{file://~ralf/archiv/math/algebra/discrete_math_schnorr.pdf}
 
-\end_inset 
+\end_inset
 
 
-\noun default 
-, Abschnitt\SpecialChar ~
+\noun default
+, Abschnitt\InsetSpace ~
 8.2 von Prof.
  Dr.
  
-\noun on 
-C.P.\SpecialChar ~
+\noun on
+C.P.\InsetSpace ~
 Schnorr 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Körper!Zerfällungs-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Zerfällungskörper}
 
-\end_inset 
+\end_inset
 
 Nach dem Hauptsatz der elementaren Zahlentheorie kann man für jede natürliche
  Zahl eine eindeutigen Primfaktorzerlegung der Form
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\cdots\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 finden.
  Gleiches trifft auch für Polynome in 
 \begin_inset Formula $\mathbb{F}_{p}[x]$
-\end_inset 
+\end_inset
 
  zu, nur daß es sich um irreduzible Polynome anstatt Primzahlen handelt.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 f(x)=\left[m_{1}(x)\right]^{e_{1}}\,\left[m_{2}(x)\right]^{e_{2}}\left[m_{3}(x)\right]^{e_{3}}\cdots\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Jedes der irreduziblen Polynome
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Die Indizierung mit 
 \begin_inset Formula $i$
-\end_inset 
+\end_inset
 
  wird im weiteren wieder weggelassen, da wir uns auf die Betrachtung einer
  Funktion 
 \begin_inset Formula $m(x):=m_{i}(x)$
-\end_inset 
+\end_inset
 
  beschränken.
  Man sollte sich aber immer bewußt sein, daß die Variablen 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $q$
-\end_inset 
+\end_inset
 
  sowie die abgeleiteten Größen 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Funktionen 
 \begin_inset Formula $\psi(x)$
-\end_inset 
+\end_inset
 
  abhängig von 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  variieren.
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $m_{i}(x)$
-\end_inset 
+\end_inset
 
  hat eine vom jeweiligen Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  abhängige Anzahl von Nullstellen 
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
 , die entweder im Grundkörper 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  oder (sämtlich) in einem zugehörigen Erweiterungskörper 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
-\end_inset 
+\end_inset
 
  liegen.
  Nullstellen im Grundkörper, von denen 
 \begin_inset Formula $f(x)$
-\end_inset 
+\end_inset
 
  maximal 
 \begin_inset Formula $p=|\mathbb{F}_{p}|$
-\end_inset 
+\end_inset
 
  besitzen kann, lassen sich immer als einfache Faktoren der Art 
 \begin_inset Formula $m(x)=x-\alpha$
-\end_inset 
+\end_inset
 
  mit 
 \begin_inset Formula $\alpha\in\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  darstellen (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
+
+\end_inset
 
  Beispiel-Faktorisierung von 
 \begin_inset Formula $x^{3}-1$
-\end_inset 
+\end_inset
 
- in Abschnitt\SpecialChar ~
+ in Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_extfield_example}
 
-\end_inset 
+\end_inset
 
 ).
  Liegen dagegen alle 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Wurzeln von 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  in einem Erweiterungskörper, dann muß es sich um ein irreduzibles Polynom
  (höheren Grades) handeln
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Und umgekehrt, denn 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  ist ja im Grundkörper nicht weiter faktorisierbar.
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
  Ein solcher Körper besteht aus 
 \begin_inset Formula $p^{n}$
-\end_inset 
+\end_inset
 
  Elementen, welche die 
 \begin_inset Formula $q=p^{n}$
-\end_inset 
+\end_inset
 
  Nullstellen der zugeordneten Funktion 
 \begin_inset Formula $\psi(x)=x^{q}-x$
-\end_inset 
+\end_inset
 
  darstellen (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \vref{sec:algebra_zeroes_split}
 
-\end_inset 
+\end_inset
 
 ).
  
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
-\end_inset 
+\end_inset
 
  nennt man deshalb auch den kleinsten Körper über den 
 \begin_inset Formula $\psi(x)\in\mathbb{F}_{p}[x]$
-\end_inset 
+\end_inset
 
- vollständig in Linearfaktoren zerfällt\SpecialChar ~
+ vollständig in Linearfaktoren zerfällt\InsetSpace ~
 
 \begin_inset LatexCommand \cite[4.5]{Bosch:1996}
 
-\end_inset 
+\end_inset
 
  
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  kürzer: 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
-\end_inset 
+\end_inset
 
  sei der Zerfällungskörper von 
 \begin_inset Formula $x^{q}-x$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 \psi(x)=x^{q}-x=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha)\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Ein weiteres Charakteristikum des Zerfällungskörpers 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
-\end_inset 
+\end_inset
 
  sind die konjugierten
 \begin_inset LatexCommand \index{Nullstellen!konjugierte}
 
-\end_inset 
+\end_inset
 
  Nullstellen, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  bei Kenntnis einer Nullstelle 
 \begin_inset Formula $\alpha\neq0$
-\end_inset 
+\end_inset
 
  des irreduziblen Polynoms 
 \begin_inset Formula $m(\alpha)=0$
-\end_inset 
+\end_inset
 
  sind die restlichen 
 \begin_inset Formula $n-1$
-\end_inset 
+\end_inset
 
  Nullstellen genau die Potenzen 
 \begin_inset Formula $\alpha^{p},\alpha^{p^{2}},\ldots,\alpha^{p^{n-2}},\alpha^{p^{n-1}}$
-\end_inset 
+\end_inset
 
 .
  Das irreduzible Polynom 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  zerfällt also bei Kenntnis nur 
-\emph on 
+\emph on
 einer
-\emph default 
+\emph default
  Nullstelle 
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
  vollständig in seine 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Linearfaktoren.
  Der induktive Beweis dieses Satzes geht von der Hilfsformel
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 (b+c)^{p}=\sum_{k=0}^{p}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}+\sum_{k=1}^{p-1}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-aus, welche berücksichtigt:
-\layout Itemize
+\begin_layout Standard
+aus, welche berücksichtigt, daß:
+\end_layout
 
-daß mit 
+\begin_layout Itemize
+mit 
 \begin_inset Formula $b,c\in\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  der Binomialkoeffizient 
 \begin_inset Formula $\binom{p}{k}=\frac{p!}{k!(p-k)!}$
-\end_inset 
+\end_inset
 
  für 
 \begin_inset Formula $k\neq0$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $p!$
-\end_inset 
+\end_inset
 
  immer durch 
 \begin_inset Formula $p$
-\end_inset 
+\end_inset
 
- teilbar ist und demzufolge 
+ teilbar ist und folglich 
 \begin_inset Formula $\binom{p}{k}\bmod p=0$
-\end_inset 
+\end_inset
 
- gilt
-\layout Itemize
+ gilt;
+\end_layout
 
-und im Grundkörper 
+\begin_layout Itemize
+im Grundkörper 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  jedes Element 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  die Relation 
 \begin_inset Formula $a^{p}=a$
-\end_inset 
+\end_inset
 
  erfüllt (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Abschnitt\SpecialChar ~
+\end_inset
+
+ Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand \ref{sec:algebra_galois_multgrp}
 
-\end_inset 
+\end_inset
 
 ).
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 m\left(\alpha^{p}\right)=\sum_{i=0}^{n}a_{i}\alpha^{ip}=\sum_{i=0}^{n}a_{i}^{p}\alpha^{ip}=\sum_{i=0}^{n}\left(a_{i}\alpha^{i}\right)^{p}=\left(\sum_{i=0}^{n}a_{i}\alpha^{i}\right)^{p}=\left[m(\alpha)\right]^{p}=0\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Aus diesem Grund läßt sich für jedes der irreduziblen Polynome 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  die folgende Linearfaktordarstellung angeben
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Das irreduzible Polynom 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  wird auch Minimalpolynom
 \begin_inset LatexCommand \index{Minimalpolynom}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Polynom!Minimal-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Minimalfunktion}
 
-\end_inset 
+\end_inset
 
  von 
 \begin_inset Formula $\alpha$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  genannt.
  Bei einer Minimalfunktion handelt es sich allgemein um ein normiertes Polynom
  
 \begin_inset Formula $m(x)\in\mathbb{F}_{p}[x]$
-\end_inset 
+\end_inset
 
  
-\emph on 
+\emph on
 kleinsten
-\emph default 
+\emph default
  Grades, welches beim Einsetzen eines Elementes 
 \begin_inset Formula $\alpha\in\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  die Gleichung 
 \begin_inset Formula $m(\alpha)=0$
-\end_inset 
+\end_inset
 
- erfüllt\SpecialChar ~
+ erfüllt\InsetSpace ~
 
 \begin_inset LatexCommand \cite[6.5]{Peterson:1972}
 
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 :
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
-m(x)=\prod_{\nu=0}^{n-1}\left(x-\alpha^{p^{\nu}}\right)\msp.\]
+m(x)=\prod_{\nu=0}^{n-1}\left(x-\alpha^{p^{\nu}}\right)\mperiod\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Die Nullstellen 
 \begin_inset Formula $\alpha^{p^{\nu}}$
-\end_inset 
+\end_inset
 
  kann man (wegen ihrer linearen Unabhängigkeit) verwenden, um statt einer
  Polynombasis
 \begin_inset LatexCommand \index{Vektor!-raum!Basis}
 
-\end_inset 
+\end_inset
 
  eine sogenannte Normalbasis
 \begin_inset LatexCommand \index{Normalbasis}
 
-\end_inset 
+\end_inset
 
  des Vektorraumes (der Dimension 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
 ) über 
 \begin_inset Formula $\mathbb{F}_{p}$
-\end_inset 
+\end_inset
 
  zu definieren.
-\layout Subsubsection
+\end_layout
 
-
+\begin_layout Subsubsection
 \begin_inset LatexCommand \label{sec:algebra_extfield_example}
 
-\end_inset 
+\end_inset
 
 Erweiterungskörper 
 \begin_inset ERT
-status Inlined
+status inlined
 
-\layout Standard
-
-\backslash 
-texorpdfstring{$
-\backslash 
-mathbb{Z}_2^n$}{
-\backslash 
-latex{Z(2**n)}}
-\end_inset 
+\begin_layout Standard
 
 
-\layout Standard
+\backslash
+mhead{
+\backslash
+mathbb{Z}_2^n}{Z(2**n)}
+\end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 Für eine Erweiterung des Primkörpers 
 \begin_inset Formula $\mathbb{Z}_{2}$
-\end_inset 
+\end_inset
 
  auf 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  Dimensionen ist ein irreduzibles Polynom 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  vom Grad 
 \begin_inset Formula $n$
-\end_inset 
+\end_inset
 
  notwendig.
  Der dadurch entstehende Körper 
 \begin_inset Formula $\mathbb{Z}_{2}^{n}$
-\end_inset 
+\end_inset
 
  soll am Beispiel des Polynoms 
 \begin_inset Formula $m(x)=x^{2}+x+1$
-\end_inset 
+\end_inset
 
  mit Koeffizienten aus 
 \begin_inset Formula $\mathbb{Z}_{2}$
-\end_inset 
+\end_inset
 
  (zu den Rechenoperationen 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 cf
-\end_inset 
+\end_layout
 
- Seite\SpecialChar ~
+\end_inset
+
+ Seite\InsetSpace ~
 
 \begin_inset LatexCommand \pageref{enum:algebra_mod2_operations}
 
-\end_inset 
+\end_inset
 
 ) jetzt kurz betrachtet werden.
- Nach Darstellung\SpecialChar ~
+ Nach Darstellung\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_residue_poly}
 
-\end_inset 
+\end_inset
 
  gehören genau 
 \begin_inset Formula $q=p^{n}=4$
-\end_inset 
+\end_inset
 
  Polynome zum Erweiterungskörper
 \begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2^2$}
 
-\end_inset 
+\end_inset
 
  (
 \begin_inset Formula $p=2$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $n=2$
-\end_inset 
+\end_inset
 
 ), nämlich:
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 r_{0}(x) & =0 & r_{1}(x) & =1\\
-r_{2}(x) & =x & r_{3}(x) & =x+1\msp.\end{xalignat*}
+r_{2}(x) & =x & r_{3}(x) & =x+1\mperiod\end{xalignat*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Wie sich leicht feststellen läßt, ist 
 \begin_inset Formula $r_{3}(x)$
-\end_inset 
+\end_inset
 
  das erzeugende Element
 \begin_inset LatexCommand \index{Element!erzeugendes}
 
-\end_inset 
+\end_inset
 
  der multiplikativen Gruppe 
 \begin_inset Formula $\left\{ r_{1}(x),r_{2}(x),r_{3}(x)\right\} $
-\end_inset 
+\end_inset
 
 , denn die anderen Elemente ergeben sich als Potenzen 
 \begin_inset Formula $r_{3}^{\nu}(x)\bmod m(x)$
-\end_inset 
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 (x+1)^{0} & =1\\
 (x+1)^{1} & =x+1\\
 (x+1)^{2} & =x^{2}+x+x+1=x^{2}+1\equiv x\pmod{x^{2}+x+1}\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Außerdem sind alle Elemente (abgesehen von 
 \begin_inset Formula $r_{0}(x)$
-\end_inset 
+\end_inset
 
 ) wirklich Nullstellen des Polynoms 
 \begin_inset Formula $x^{q-1}-1=x^{3}-1=(x-1)\, m(x)$
-\end_inset 
+\end_inset
 
 .
  Auch gut erkennen läßt sich, daß 
 \begin_inset Formula $m(x)$
-\end_inset 
+\end_inset
 
  für jedes Element 
 \begin_inset Formula $r(x)$
-\end_inset 
+\end_inset
 
  ein Teiler von 
 \begin_inset Formula $\left[r(x)\right]^{q-1}-1$
-\end_inset 
+\end_inset
 
  ist.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \begin{align*}
 \left[r_{1}(x)\right]^{3}-1 & =0\\
 \left[r_{2}(x)\right]^{3}-1 & =x^{3}-1=(x-1)\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\\
 \left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\end{align*}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Äquivalent dazu ist das Produkt aller Elemente (konform zu Formel\SpecialChar ~
+\begin_layout Standard
+Äquivalent dazu ist das Produkt aller Elemente (konform zu Formel\InsetSpace ~
 
 \begin_inset LatexCommand \ref{eq:algebra_product_elements}
 
-\end_inset 
+\end_inset
 
 ) genau das neutrale Element 
 \begin_inset Formula $e_{(\cdot)}$
-\end_inset 
+\end_inset
 
  der multiplikativen Gruppe
 \begin_inset Foot
-collapsed true
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Welches in der additiven Gruppe 
 \begin_inset Formula $(\mathbb{Z}_{2},\cdot)$
-\end_inset 
+\end_inset
 
  gleich dem Inversen von 
 \begin_inset Formula $1$
-\end_inset 
+\end_inset
 
  ist, 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  zur Erinnerung 
 \begin_inset Formula $-1\equiv+1$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
 .
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Formula \[
 r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2}+x+1}\]
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Restklassen|)}
 
-\end_inset 
+\end_inset
 
 
-\layout Section
+\end_layout
 
-
+\begin_layout Section
 \begin_inset LatexCommand \label{sec:abstract}
 
-\end_inset 
+\end_inset
 
 Zusammenfassung
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Gruppe!additive}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe!multiplikative}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Gruppe!Halb-}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Monoid}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Ring}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Körper}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Körper!Schief-}
 
-\end_inset 
+\end_inset
 
 
-\begin_inset Note
-collapsed true
+\begin_inset Note Note
+status open
 
-\layout Standard
-
+\begin_layout Standard
 Vertikale Zellen (siehe folgende Tabelle) sind bei der HTML-Umwandlung nicht
  möglich.
  Deshalb gibt es die Tabelle hier zweimal, einmal mit vertikalen (LaTeX)
  und einmal mit horizontalen (HTML) Zellen in der Überschrift.
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Inlined
+status inlined
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 begin{latexonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-Tabelle\SpecialChar ~
+\begin_layout Standard
+Tabelle\InsetSpace ~
 
 \begin_inset LatexCommand \ref{tab:algebraic_structures}
 
-\end_inset 
+\end_inset
 
  gibt einen Überblick zu den verschiedenen algebraischen Grundstrukturen
  und ihren Existenzbedingungen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Caption
-
-
+\begin_layout Caption
 \begin_inset LatexCommand \label{tab:algebraic_structures}
 
-\end_inset 
+\end_inset
 
 Eigenschaften algebraischer Strukturen
-\layout Standard
-\align center 
+\end_layout
 
-\begin_inset  Tabular
+\begin_layout Standard
+\align center
+\begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="10">
 <features>
 <column alignment="left" valignment="top" leftline="true" rightline="true" width="0">
@@ -5649,980 +5964,1096 @@ Eigenschaften algebraischer Strukturen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Addition
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Multiplikation
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row bottomline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 assoziativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 kommutativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 neutral
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 invers
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 assoziativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 kommutativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 neutral
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 invers
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" rotate="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 distributiv
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Additive Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 (Multiplikative) Halbgruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Monoid
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Multiplikative Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 (Multiplikative) 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Ring
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Schiefkörper
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true" bottomline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Körper
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 </lyxtabular>
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Inlined
+status inlined
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 end{latexonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Inlined
+status inlined
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 begin{htmlonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
+\begin_layout Standard
 Nachfolgende Tabelle gibt einen Überblick zu den verschiedenen algebraischen
  Grundstrukturen und ihren Existenzbedingungen.
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset Float table
 placement H
 wide false
-collapsed false
+sideways false
+status open
 
-\layout Standard
-\align center 
-
-\begin_inset  Tabular
+\begin_layout Standard
+\align center
+\begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="10">
 <features>
 <column alignment="left" valignment="top" leftline="true" rightline="true" width="0">
@@ -6639,1398 +7070,1531 @@ collapsed false
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Addition
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Multiplikation
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row bottomline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 assoziativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 kommutativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 neutral
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 invers
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 assoziativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 kommutativ
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 neutral
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 invers
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 distributiv
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Additive Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 (Multiplikative) Halbgruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Monoid
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Multiplikative Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 (Multiplikative) 
-\noun on 
+\noun on
 Abel
-\noun default 
+\noun default
 'sche Gruppe
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Ring
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Schiefkörper
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
+\begin_layout Standard
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 <row topline="true" bottomline="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
+\begin_layout Standard
 Körper
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\layout Standard
-
-
+\begin_layout Standard
 \begin_inset Formula $\times$
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 </cell>
 </row>
 </lyxtabular>
 
-\end_inset 
+\end_inset
 
 
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Inlined
+status inlined
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 end{htmlonly}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Section
+\end_layout
 
+\begin_layout Section
 Notation
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset LatexCommand \index{Notation}
 
-\end_inset 
+\end_inset
 
 
 \begin_inset LatexCommand \index{Symbole}
 
-\end_inset 
+\end_inset
 
 
-\layout Standard
+\end_layout
 
-
+\begin_layout Standard
 \begin_inset ERT
-status Open
+status open
 
-\layout Standard
+\begin_layout Standard
+
 %% Description environment: modify label font and indentation
-\layout Standard
+\end_layout
 
-\backslash 
+\begin_layout Standard
+
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
 renewcommand{
-\backslash 
+\backslash
 descriptionlabel}[1]{
-\backslash 
+\backslash
 hspace{
-\backslash 
+\backslash
 labelsep}
-\backslash 
+\backslash
 makebox[1in][l]{
-\backslash 
+\backslash
 textsf{#1}}}
-\end_inset 
+\end_layout
+
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\forall$
-\end_inset 
+\end_inset
 
  Für alle 
 \begin_inset Formula $\ldots$
-\end_inset 
+\end_inset
 
  (Allquantor)
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\left\langle a\right\rangle $
-\end_inset 
+\end_inset
 
  Vom Element 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
  erzeugte Untergruppe
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\left|a\right|$
-\end_inset 
+\end_inset
 
  Ordnung des Elements 
 \begin_inset Formula $a$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\{ a_{1},a_{2},a_{3},\ldots\}$
-\end_inset 
+\end_inset
 
  Menge von Elementen 
 \begin_inset Formula $a_{i}$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{C}$
-\end_inset 
+\end_inset
 
  Körper der komplexen Zahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\deg{\left[h(x)\right]}$
-\end_inset 
+\end_inset
 
  Grad des Polynoms 
 \begin_inset Formula $h(x)$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\dim(V)$
-\end_inset 
+\end_inset
 
  Dimension des Vektorraums 
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $(G,\diamond)$
-\end_inset 
+\end_inset
 
  Gruppe mit Operation 
 \begin_inset Formula $\diamond$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\left|G\right|$
-\end_inset 
+\end_inset
 
  Ordnung der Gruppe 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula ${\# G}$
-\end_inset 
+\end_inset
 
  Ordnung der Gruppe 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\GF(q)$
-\end_inset 
+\end_inset
 
  
-\noun on 
+\noun on
 Galois
-\noun default 
--Field mit 
+\noun default
+-Körper mit 
 \begin_inset Formula $q$
-\end_inset 
+\end_inset
 
  Elementen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\left|G:H\right|$
-\end_inset 
+\end_inset
 
  Index der Gruppe 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $H$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula ${[M:K]}$
-\end_inset 
+\end_inset
 
  Grad der Körpererweiterung 
 \begin_inset Formula $M$
-\end_inset 
+\end_inset
 
  über 
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset 
+\end_inset
 
  Multiplikative Gruppe des endlichen Körpers 
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{F}_{q}$
-\end_inset 
+\end_inset
 
  Endlicher Körper mit 
 \begin_inset Formula $q$
-\end_inset 
+\end_inset
 
  Elementen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $K$
-\end_inset 
+\end_inset
 
  Körper
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{N}$
-\end_inset 
+\end_inset
 
  Menge der natürlichen Zahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\ord(G)$
-\end_inset 
+\end_inset
 
  Ordnung der Gruppe 
 \begin_inset Formula $G$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $p$
-\end_inset 
+\end_inset
 
  Primzahl (
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 resp
-\end_inset 
+\end_layout
+
+\end_inset
 
  Primelement)
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{P}$
-\end_inset 
+\end_inset
 
  Menge der Primzahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Q}$
-\end_inset 
+\end_inset
 
  Körper der rationalen Zahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\rcls{r}{m}$
-\end_inset 
+\end_inset
 
  Restklasse zum Modul 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{R}$
-\end_inset 
+\end_inset
 
  Körper der reellen Zahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $R(+,\cdot)$
-\end_inset 
+\end_inset
 
  Ring
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $R^{*}$
-\end_inset 
+\end_inset
 
  Multiplikative Gruppe des Ringes 
 \begin_inset Formula $R(+,\cdot)$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset 
+\end_inset
 
  Restklassenring
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $R{[x]}$
-\end_inset 
+\end_inset
 
  Polynomring in der Variablen 
 \begin_inset Formula $x$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}$
-\end_inset 
+\end_inset
 
  Ring der ganzen Zahlen
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}_{m}$
-\end_inset 
+\end_inset
 
  Restklassenring der ganzen Zahlen
 \begin_inset Foot
-collapsed true
+status collapsed
 
-\layout Standard
-
+\begin_layout Standard
 Die ganzen Zahlen von 
 \begin_inset Formula $0$
-\end_inset 
+\end_inset
 
  bis 
 \begin_inset Formula $m-1$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset ERT
-status Collapsed
+status collapsed
 
-\layout Standard
+\begin_layout Standard
 
-\backslash 
+
+\backslash
 ie
-\end_inset 
+\end_layout
+
+\end_inset
 
  modulo 
 \begin_inset Formula $m$
-\end_inset 
+\end_inset
 
 .
-\end_inset 
+\end_layout
+
+\end_inset
 
  
 \begin_inset Formula $\mod m$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset 
+\end_inset
 
  Primzahlenkörper 
 \begin_inset Formula $\mathbb{Z}/p\mathbb{Z}$
-\end_inset 
+\end_inset
 
 , 
 \begin_inset Formula $p\in\mathbb{P}$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}_{p}^{*}$
-\end_inset 
+\end_inset
 
  Multiplikative Gruppe des Körpers 
 \begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}/m\mathbb{Z}$
-\end_inset 
+\end_inset
 
  Restklassenring der ganzen Zahlen 
 \begin_inset Formula $\mod m$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
-\end_inset 
+\end_inset
 
  Polynom-Restklassenring auf dem Grundkörper 
 \begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset 
+\end_inset
 
 
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $V$
-\end_inset 
+\end_inset
 
  Vektorraum
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mvec{v}$
-\end_inset 
+\end_inset
 
  Vektor
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\mvec{v}^{T}$
-\end_inset 
+\end_inset
 
  Transponierter Vektor
-\layout Description
+\end_layout
 
-
+\begin_layout Description
 \begin_inset Formula $\diamond$
-\end_inset 
+\end_inset
 
  Operation
-\the_end
+\end_layout
+
+\end_body
+\end_document
