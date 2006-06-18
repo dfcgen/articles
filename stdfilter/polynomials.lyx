@@ -39,7 +39,7 @@ Properties of algebraic polynomials
 \end_layout
 
 \begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.12 2006-05-26 09:43:32 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.13 2006-06-18 10:00:24 ralf Exp $
 \end_layout
 
 \end_inset
@@ -87,7 +87,7 @@ Algebraische Funktionen
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-g(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\ldots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x),\end{equation}
+g(x,y)=p_{m}(x)y^{m}+p_{m-1}(x)y^{m-1}+\cdots+p_{2}(x)y^{2}+p_{1}(x)y+p_{0}(x),\end{equation}
 
 \end_inset
 
@@ -363,7 +363,7 @@ Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
 
 \begin_layout Standard
 \begin_inset Formula \[
-p'(\zn{x}{k})=\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\ldots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{p(x)}{x-\zn{x}{i}}}_{i=k}+\ldots+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\]
+p'(\zn{x}{k})=\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{2}}+\cdots+\underbrace{\lim_{x\rightarrow\zn{x}{k}}\frac{p(x)}{x-\zn{x}{i}}}_{i=k}+\cdots+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n-1}}+\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{n}}\]
 
 \end_inset
 
@@ -571,7 +571,7 @@ vorliegt.
 \end_inset
 
  mit den Nullstellen 
-\begin_inset Formula $\zn{x}{i}\neq\zn{x}{},\msp i=1\ldots n-m$
+\begin_inset Formula $\zn{x}{i}\neq\zn{x}{},\msp i=1,\ldots,n-m$
 \end_inset
 
  (ansonsten wäre 
@@ -725,7 +725,7 @@ Ist
 \end_inset
 
  mit 
-\begin_inset Formula $i=0\ldots n-1$
+\begin_inset Formula $i=0,\ldots,n-1$
 \end_inset
 
 , also 
@@ -756,7 +756,7 @@ An einer Nullstelle gilt bekanntermaßen
 
 \begin_layout Standard
 \begin_inset Formula \[
--a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\mperiod\]
+-a_{n}\zn[n]{x}{}=a_{n-1}\zn[n-1]{x}{}+\cdots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}=r(x)\mperiod\]
 
 \end_inset
 
@@ -793,7 +793,7 @@ und betrachten den Wert von
 
 \begin_layout Standard
 \begin_inset Formula \[
-\left|a_{n-1}\zn[n-1]{x}{}+\ldots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}\right|\leq A\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\]
+\left|a_{n-1}\zn[n-1]{x}{}+\cdots+a_{2}\zn[2]{x}{}+a_{1}\zn{x}{}+a_{0}\right|\leq A\left|\zn[n-1]{x}{}\right|+\cdots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\]
 
 \end_inset
 
@@ -806,8 +806,8 @@ und gleichbedeutend
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
-\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\mperiod\end{align*}
+\left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\cdots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
+\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\cdots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\mperiod\end{align*}
 
 \end_inset
 

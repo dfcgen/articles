@@ -37,7 +37,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: butterworth.lyx,v 1.11 2006-05-26 09:36:45 ralf Exp $
+Version: $Id: butterworth.lyx,v 1.12 2006-06-18 10:00:24 ralf Exp $
 \end_layout
 
 \end_inset
@@ -799,7 +799,7 @@ resp
 
 \end_inset
 
- Bestimmung geht man von der Erkenntnis aus, daß Pole immer konjugiert komplex
+ Bestimmung geht man von der Erkenntnis aus, daß komplexe Pole immer konjugiert
  auftreten und deshalb in der Linearfaktordarstellung von 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
@@ -809,7 +809,7 @@ resp
 
 \begin_layout Standard
 \begin_inset Formula \[
-(\lps-\pn{\lps}{\nu})(\lps-\cjgt{\pn{\lps}{\nu}})=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
+(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})\]
 
 \end_inset
 
@@ -830,7 +830,7 @@ Laplace
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-(\lps-\pn{\lps}{\nu})(\lps-\cjgt{\pn{\lps}{\nu}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2},\end{equation}
+(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2},\end{equation}
 
 \end_inset
 
@@ -841,7 +841,7 @@ Laplace
 wodurch Polfrequenz und -güte letztlich definiert werden.
  Koeffizientenvergleich beider Darstellungen, also
 \begin_inset Formula \[
-\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\reop\left(\pn{\lps}{\nu}\right)\lps+\reop^{2}\left(\pn{\lps}{\nu}\right)+\imop^{2}\left(\pn{\lps}{\nu}\right)\]
+\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})\]
 
 \end_inset
 
@@ -862,7 +862,7 @@ führt sofort zur Definition der Polfrequenz
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\omega_{0}=\sqrt{\reop^{2}(\pn{\lps}{\nu})+\imop^{2}(\pn{\lps}{\nu})}=\left|\pn{\lps}{\nu}\right|\label{eq:filter_pole_frequency}\end{equation}
+\omega_{0}=\sqrt{\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})}=\left|\pn{\lps}{}\right|\label{eq:filter_pole_frequency}\end{equation}
 
 \end_inset
 
@@ -874,14 +874,14 @@ Die Polgüte
 \begin_inset Formula $Q$
 \end_inset
 
- ist nicht sofort ablesbar, kann aber ohne größeren Aufwand bestimmt werden.
+ ist nicht sofort ablesbar, kann aus
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\frac{\omega_{0}}{Q} & =-2\reop\pn{\lps}{\nu}\\
-Q & =-\frac{\omega_{0}}{2\reop\pn{\lps}{\nu}}=-\frac{\left|\pn{\lps}{\nu}\right|}{2\reop\pn{\lps}{\nu}}\\
- & =-\frac{1}{2}\sqrt{1+\left[\frac{\imop\pn{\lps}{\nu}}{\reop\pn{\lps}{\nu}}\right]^{2}}=-\frac{1}{2}\sqrt{1+\tan^{2}\ang\pn{\lps}{\nu}}\end{align*}
+\frac{\omega_{0}}{Q} & =-2\reop(\pn{\lps}{})\\
+Q & =-\frac{\omega_{0}}{2\reop(\pn{\lps}{})}=-\frac{\left|\pn{\lps}{}\right|}{2\reop(\pn{\lps}{})}\\
+Q & =\frac{1}{2}\sqrt{1+\left[\frac{\imop(\pn{\lps}{})}{\reop(\pn{\lps}{})}\right]^{2}}=\frac{1}{2}\sqrt{1+\tan^{2}(\ang\pn{\lps}{})}\end{align*}
 
 \end_inset
 
@@ -889,8 +889,26 @@ Q & =-\frac{\omega_{0}}{2\reop\pn{\lps}{\nu}}=-\frac{\left|\pn{\lps}{\nu}\right|
 \end_layout
 
 \begin_layout Standard
+aber ohne größeren Aufwand bestimmt werden
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Wobei hier 
+\begin_inset Formula $\reop(\pn{\lps}{})<0$
+\end_inset
+
+ vorausgesetzt wurde.
+\end_layout
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
-Q_{\nu}=-\frac{1}{2}\cdot\frac{1}{\cos\ang\pn{\lps}{\nu}}=-\frac{1}{2}\sec\ang\pn{\lps}{\nu},\qquad\nu=1,2,\ldots,n\label{eq:filter_pole_quality}\end{equation}
+Q=-\frac{1}{2\cos(\ang\pn{\lps}{})}=-\frac{1}{2}\sec(\ang\pn{\lps}{})\mperiod\label{eq:filter_pole_quality}\end{equation}
 
 \end_inset
 
@@ -902,7 +920,7 @@ Speziell für einen
 \noun on
 Butterworth
 \noun default
--Tiefpaß gilt deshalb in Bezug auf die Polfrequenzen
+-Tiefpaß gilt deshalb in Bezug auf die Polfrequenzen:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -915,7 +933,7 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-und Polgüte
+und Polgüte:
 \end_layout
 
 \begin_layout Emph(asized)

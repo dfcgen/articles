@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: goal.lyx,v 1.12 2006-05-27 17:49:47 ralf Exp $
+Version: $Id: goal.lyx,v 1.13 2006-06-18 10:00:24 ralf Exp $
 \end_layout
 
 \end_inset
@@ -68,9 +68,9 @@ Bei der Ann‰herung einer Zielfunktion im Frequenzbereich sind im allgemeinen
 
 .
  Fast alle Standard-Tiefp‰sse beschr‰nken sich dabei auf die gleichm‰ﬂige
- 
+ (
 \noun on
-(Tschebyscheff
+Tschebyscheff
 \noun default
 -) Approximation des Amplitudenganges
 \begin_inset Foot
@@ -119,7 +119,8 @@ cf
 
 \end_inset
 
- 
+\InsetSpace ~
+
 \begin_inset LatexCommand \cite{Guillemin:1952,Guillemin:1957,Winkler:1954,Zverev:1967,Fritzsche:1979a,Mildenberger:1992}
 
 \end_inset
@@ -594,16 +595,16 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 \end_inset
 
 , das auﬂerdem eine maximale (erlaubte) Durchlaﬂ-D‰mpfung 
-\begin_inset Formula $\atf_{max}$
+\begin_inset Formula $\atf_{\textup{max}}$
 \end_inset
 
  und eine minimale Sperr-D‰mpfung 
-\begin_inset Formula $\atf_{min}$
+\begin_inset Formula $\atf_{\textup{min}}$
 \end_inset
 
  definiert
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Gleichbedeutend mit der Forderung 
@@ -842,7 +843,7 @@ status open
 Weitere Normen und Fehlermaﬂe sowie die Beziehung zwischen Fehlern im Frequenz-
  und Zeitbereich faﬂt 
 \begin_inset ERT
-status collapsed
+status inlined
 
 \begin_layout Standard
 
@@ -853,7 +854,8 @@ eg
 
 \end_inset
 
- 
+\InsetSpace ~
+
 \begin_inset LatexCommand \cite{Gumowski:1958}
 
 \end_inset
@@ -941,11 +943,11 @@ Geht man nun von einer Bestapproximation (wie in Abbildung\InsetSpace ~
 \end_inset
 
 , da es sich um die Randpunkte handelt, die D‰mpfungswerte 
-\begin_inset Formula $\atf_{min}$
+\begin_inset Formula $\atf_{\textup{min}}$
 \end_inset
 
  und 
-\begin_inset Formula $\atf_{max}$
+\begin_inset Formula $\atf_{\textup{max}}$
 \end_inset
 
  zuordnen.
@@ -953,7 +955,7 @@ Geht man nun von einer Bestapproximation (wie in Abbildung\InsetSpace ~
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{2}
-\atf_{min} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{max} & =10\log[1+\drf^{2}(\omega_{g})]\end{xalignat*}
+\atf_{\textup{min}} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{\textup{max}} & =10\log[1+\drf^{2}(\omega_{g})]\end{xalignat*}
 
 \end_inset
 
@@ -971,7 +973,7 @@ Umgekehrt kann man aus vorgegebenen D‰mpfungswerten den Skalierungsfaktor
 
 \begin_layout Standard
 \begin_inset Formula \[
-\sigma=\frac{\sqrt{10^{\atf_{min}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{max}/10}-1}}{\drf(\omega_{g})}\]
+\sigma=\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{\textup{max}}/10}-1}}{\drf(\omega_{g})}\]
 
 \end_inset
 

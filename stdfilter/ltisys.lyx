@@ -40,7 +40,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.10 2006-05-26 09:42:23 ralf Exp $
+Version: $Id: ltisys.lyx,v 1.11 2006-06-18 10:00:24 ralf Exp $
 \end_layout
 
 \end_inset
@@ -215,8 +215,8 @@ Stabilität
 \end_inset
 
 Eine notwendige und hinreichende Bedingung für die (asymptotische) Stabilität
- eines linearen, zeitinvarianten Systems ist, daß unter der Voraussetzung
- eines endlichen Eingangssignals 
+ eines linearen, zeitinvarianten Systems besteht darin, daß unter der Voraussetz
+ung eines endlichen Eingangssignals 
 \begin_inset Formula $|x(t)|<M<\infty$
 \end_inset
 
@@ -468,7 +468,7 @@ t
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -478,6 +478,23 @@ t
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+und wegen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\lim_{t\rightarrow\infty}\irf(t)=\lim_{\lps\rightarrow0}\lps\,\trf(\lps)=0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+im Unendlichen sogar verschwindet.
 \end_layout
 
 \begin_layout Standard
@@ -512,7 +529,7 @@ Sollte jedoch
 
  zerlegt werden
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die Abspaltung einer Konstanten, welche bei der Rücktransformation in den
@@ -599,8 +616,8 @@ Durch eine Grenzwertbetrachtung für
 status open
 
 \begin_layout Standard
-Wobei hierbei nicht konkret festgehalten wird, ob der Real- oder Imaginärteil
- (oder auch der Betrag) von 
+Wobei es hierbei irrelevant ist, ob der Real- oder Imaginärteil (oder auch
+ der Betrag) von 
 \begin_inset Formula $\lps$
 \end_inset
 
@@ -672,6 +689,24 @@ die verallgemeinerte Impulsantwort
 
 
 \begin_inset LatexCommand \index{LTI-System!Impulsantwort}
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Auch in diesem Fall gilt 
+\begin_inset Formula $\lim_{t\rightarrow\infty}\irf(t)=0$
+\end_inset
+
+, jedoch nicht mehr bei 
+\begin_inset Formula $\reop\,\pn{\lps}{}\geq0$
+\end_inset
+
+.
+\end_layout
 
 \end_inset
 
@@ -1911,7 +1946,7 @@ die Integration von
 \begin_layout Itemize
 Integration einer geraden Funktion durch Verdoppelung in den neuen Grenzen
  
-\begin_inset Formula $[0,\infty)$
+\begin_inset Formula $[0,\infty]$
 \end_inset
 
  ausgedrückt werden kann;
@@ -2234,7 +2269,8 @@ cf
 
 \end_inset
 
- auch 
+ auch\InsetSpace ~
+
 \begin_inset LatexCommand \cite[10-2]{Papoulis:1962}
 
 \end_inset
@@ -4280,12 +4316,12 @@ konvergiert.
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{LTI-System!Minimalphasen-|)}
+\begin_inset LatexCommand \index{Minimalphasensystem|)}
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Minimalphasensystem|)}
+\begin_inset LatexCommand \index{LTI-System!Minimalphasen-|)}
 
 \end_inset
 
