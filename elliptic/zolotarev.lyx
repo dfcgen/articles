@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !bh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -34,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: zolotarev.lyx,v 1.7 2006-03-26 12:42:09 ralf Exp $
+Version: $Id: zolotarev.lyx,v 1.8 2006-06-18 09:57:09 ralf Exp $
 \end_layout
 
 \end_inset
@@ -410,9 +411,9 @@ resp
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{2}
-x & =\sqrt{k}\,\esn{u}{k}\msp, & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\cdot\,\begin{cases}
+x & =\sqrt{k}\,\esn{u}{k}, & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\begin{cases}
 \esn{u/M}{\lambda} & \quad(n\textrm{ ungerade})\\
-\ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})\end{cases}\msp.\end{xalignat*}
+\ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})\end{cases}\mperiod\end{xalignat*}
 
 \end_inset
 
@@ -638,7 +639,7 @@ Die Berechnungsformeln\InsetSpace ~
 
 \begin_layout Standard
 \begin_inset Formula \[
-a_{\nu}=\esn{\nu\frac{K}{n}}{k}\msp.\]
+a_{\nu}=\esn{\nu\frac{K}{n}}{k}\mperiod\]
 
 \end_inset
 
@@ -789,7 +790,7 @@ cf
 \begin_inset Formula \[
 m=\begin{cases}
 n-1 & (n\textrm{ ungerade})\\
-n & (n\textrm{ gerade})\end{cases}\msp.\]
+n & (n\textrm{ gerade})\end{cases}\mperiod\]
 
 \end_inset
 
@@ -882,7 +883,7 @@ Wir wollen hier einen Zugang nach\InsetSpace ~
 
  befaﬂt, so daﬂ der relative Fehler einer Abweichung von der Zielfunktion
 \begin_inset Formula \[
-f(x)=\frac{1}{\sqrt{1-k^{2}x}}\msp,\qquad\qquad0\leq k\leq1\]
+f(x)=\frac{1}{\sqrt{1-k^{2}x}},\qquad\qquad0\leq k\leq1\]
 
 \end_inset
 
@@ -1051,7 +1052,7 @@ resp
 
 , also entsprechend unserer Eingangsbetrachtungen
 \begin_inset Formula \begin{equation}
-\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\msp.\label{eq:zolotar_approx_func}\end{equation}
+\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\mperiod\label{eq:zolotar_approx_func}\end{equation}
 
 \end_inset
 
@@ -1182,7 +1183,7 @@ cf
  eine charakteristische Eigenschaft der ersten elliptischen Transformation
  ist 
 \begin_inset Formula \[
-M\Lambda=\frac{K}{2m+1}\msp,\]
+M\Lambda=\frac{K}{2m+1},\]
 
 \end_inset
 
@@ -1205,7 +1206,7 @@ befinden sich also
 
  bei
 \begin_inset Formula \[
-x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\msp.\]
+x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\mperiod\]
 
 \end_inset
 
@@ -1244,7 +1245,7 @@ Tschebyscheff
  bestimmt durch
 \begin_inset Formula \begin{align*}
 g(x) & =f(x)\cdot\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}\\
- & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\msp.\end{align*}
+ & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\mperiod\end{align*}
 
 \end_inset
 
