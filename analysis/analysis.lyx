@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: analysis.lyx,v 1.18 2006-05-26 10:05:51 ralf Exp $
+Version: $Id: analysis.lyx,v 1.19 2006-06-18 09:51:40 ralf Exp $
 \end_layout
 
 \end_inset
@@ -2942,7 +2942,8 @@ cf
 
 \end_inset
 
- 
+\InsetSpace ~
+
 \begin_inset LatexCommand \cite[53]{Brown:1996}
 
 \end_inset
@@ -3680,8 +3681,8 @@ Laurent
 \begin_layout Standard
 \begin_inset Formula \begin{align}
 f(z) & =(z-z_{0})^{-n}\phi(z)\nonumber \\
- & =\frac{c_{0}}{(z-z_{0})^{n}}+\frac{c_{1}}{(z-z_{0})^{n-1}}+\ldots+\frac{c_{n-1}}{z-z_{0}}+c_{n}+c_{n+1}(z-z_{0})+c_{n+2}(z-z_{0})^{2}+\ldots\nonumber \\
- & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\ldots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\ldots,\label{eq:analysis_residue_pole_laurent}\end{align}
+ & =\frac{c_{0}}{(z-z_{0})^{n}}+\frac{c_{1}}{(z-z_{0})^{n-1}}+\cdots+\frac{c_{n-1}}{z-z_{0}}+c_{n}+c_{n+1}(z-z_{0})+c_{n+2}(z-z_{0})^{2}+\cdots\nonumber \\
+ & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots,\label{eq:analysis_residue_pole_laurent}\end{align}
 
 \end_inset
 
@@ -3788,7 +3789,7 @@ Differentiation der einzelnen Summanden, gefolgt von der Grenzwertbildung
 \begin_layout Standard
 \begin_inset Formula \begin{multline*}
 \res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\left[(n-1)!\, a_{-1}+\frac{n!}{1!}a_{0}(z-z_{0})+\frac{(n+1)!}{2!}a_{1}(z-z_{0})^{2}\right.\\
-\left.+\frac{(n+2)!}{3!}a_{2}(z-z_{0})^{3}+\frac{(n+3)!}{4!}a_{3}(z-z_{0})^{4}+\ldots\right]=a_{-1}\end{multline*}
+\left.+\frac{(n+2)!}{3!}a_{2}(z-z_{0})^{3}+\frac{(n+3)!}{4!}a_{3}(z-z_{0})^{4}+\cdots\right]=a_{-1}\end{multline*}
 
 \end_inset
 
@@ -4668,7 +4669,8 @@ Ist die Funktion
 \end_layout
 
 \begin_layout Standard
-Für den Beweis gehen wir wie in 
+Für den Beweis gehen wir wie in\InsetSpace ~
+
 \begin_inset LatexCommand \cite[\S\,$6 \sdot 222$]{Whittaker:1927}
 
 \end_inset
@@ -7688,7 +7690,8 @@ für Punkte auf der imaginären Achse.
 \begin_inset Formula $\reop(z_{0})>0$
 \end_inset
 
- gültigen Beziehungen (insbesondere dem Äquivalent zu 
+ gültigen Beziehungen (insbesondere dem Äquivalent zu\InsetSpace ~
+
 \begin_inset LatexCommand \ref{eq:analysis_halfplane_boundary1}
 
 \end_inset
