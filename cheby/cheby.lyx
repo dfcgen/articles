@@ -1,4 +1,4 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -7,6 +7,7 @@
 \inputencoding latin1
 \fontscheme times
 \graphics default
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \papersize default
@@ -34,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby.lyx,v 1.8 2006-04-09 16:33:34 ralf Exp $
+Version: $Id: cheby.lyx,v 1.9 2006-06-18 09:54:00 ralf Exp $
 \end_layout
 
 \end_inset
@@ -167,7 +168,7 @@ Tschebyscheff
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\T_{n}(x)=\cos(n\arccos x)\msp.\label{eq:chebyt_cos_def}\end{equation}
+\T_{n}(x)=\cos(n\arccos x)\mperiod\label{eq:chebyt_cos_def}\end{equation}
 
 \end_inset
 
@@ -213,7 +214,7 @@ Nimmt man die Substitutionen
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{alignat}{2}
-\T_{n}(x) & =\cos(n\varphi)\msp, & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}\end{alignat}
+\T_{n}(x) & =\cos(n\varphi), & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}\end{alignat}
 
 \end_inset
 
@@ -307,7 +308,7 @@ ie
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat}{2}
-\T_{n}(x) & =\cosh(n|\varphi|)\msp, & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\label{eq:chebyt_iparam_def}\end{alignat}
+\T_{n}(x) & =\cosh(n|\varphi|), & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\label{eq:chebyt_iparam_def}\end{alignat}
 
 \end_inset
 
@@ -428,7 +429,7 @@ Die Anfangswerte für
 
 \begin_layout Standard
 \begin_inset Formula \[
-\T_{0}(x)=1\msp,\qquad\T_{1}(x)=x\]
+\T_{0}(x)=1,\qquad\T_{1}(x)=x\]
 
 \end_inset
 
@@ -532,7 +533,7 @@ Euler
 \begin_inset Formula \begin{align*}
 \T_{n}(x) & =\cos\varphi=\frac{e^{\ji n\varphi}+e^{-\ji n\varphi}}{2}\\
  & =\frac{(\cos\varphi+\ji\sin\varphi)^{n}+(\cos\varphi-\ji\sin\varphi)^{n}}{2}\\
- & =\frac{\left(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\right)^{n}+\left(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\right)^{n}}{2}\end{align*}
+ & =\frac{(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\,)^{n}+(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\,)^{n}}{2}\end{align*}
 
 \end_inset
 
@@ -541,7 +542,7 @@ Euler
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\T_{n}(x)=\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2}\msp.\label{eq:chebyt_irrat_def}\end{equation}
+\T_{n}(x)=\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2}\mperiod\label{eq:chebyt_irrat_def}\end{equation}
 
 \end_inset
 
@@ -597,7 +598,7 @@ und bildet einen Grenzwert wiefolgt:
 \begin_inset Formula \begin{align*}
 \lim_{x\rightarrow\infty}\frac{\T_{n}(x)}{x^{n}} & =\lim_{x\rightarrow\infty}\frac{\sum\limits _{k=0}^{n}a_{k}x^{k}}{x^{n}}\\
  & =\sum_{k=0}^{n}\lim_{x\rightarrow\infty}a_{k}x^{k-n}\\
- & =a_{n}\msp.\end{align*}
+ & =a_{n}\mperiod\end{align*}
 
 \end_inset
 
@@ -621,8 +622,8 @@ Umstellen und Zuhilfenahme der irrationalen Darstellung\InsetSpace ~
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
 a_{n} & =\lim_{x\rightarrow\infty}\frac{\T_{n}(x)}{x^{n}}\\
- & =\lim_{x\rightarrow\infty}\frac{\left(x+\sqrt{x^{2}-1}\right)^{n}+\left(x-\sqrt{x^{2}-1}\right)^{n}}{2x^{n}}\\
- & =\frac{1}{2}\lim_{x\rightarrow\infty}\left(1+\sqrt{1-x^{-1}}\right)^{n}+\frac{1}{2}\lim_{x\rightarrow\infty}\left(1-\sqrt{1-x^{-1}}\right)^{n}\\
+ & =\lim_{x\rightarrow\infty}\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2x^{n}}\\
+ & =\frac{1}{2}\lim_{x\rightarrow\infty}(1+\sqrt{1-x^{-1}}\,)^{n}+\frac{1}{2}\lim_{x\rightarrow\infty}(1-\sqrt{1-x^{-1}}\,)^{n}\\
 a_{n} & =2^{n-1}\end{align*}
 
 \end_inset
@@ -863,7 +864,7 @@ gekennzeichnet ist\InsetSpace ~
 
 \begin_layout Standard
 \begin_inset Formula \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\msp.\]
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\T_{n}(x)\T_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\mperiod\]
 
 \end_inset
 
@@ -904,7 +905,7 @@ Kronecker
 \begin_inset Formula \[
 \delta_{m\, n}=\begin{cases}
 0 & \quad(n\neq m)\\
-1 & \quad(n=m)\end{cases}\msp.\]
+1 & \quad(n=m)\end{cases}\mperiod\]
 
 \end_inset
 
@@ -951,7 +952,7 @@ Imaginäre (oder komplexe) Nullstellen existieren nicht, da
 \begin_inset Formula \begin{align*}
 y & =0\\
 n\varphi_{k} & =\frac{\pi}{2}+k\pi\\
-\varphi_{k} & =\left(k+\frac{1}{2}\right)\frac{\pi}{n}\msp,\qquad k\in\mathbb{Z}\end{align*}
+\varphi_{k} & =\left(k+\frac{1}{2}\right)\frac{\pi}{n},\qquad k\in\mathbb{Z}\end{align*}
 
 \end_inset
 
@@ -970,7 +971,7 @@ Damit gilt für
 \begin_inset Formula \begin{align}
 \zn{x}{k} & =\cos\varphi_{k}\nonumber \\
  & =\cos\left[\left(k+\frac{1}{2}\right)\frac{\pi}{n}\right]\nonumber \\
-\zn{x}{k} & =\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right]\msp,\qquad k=1,2,\ldots,n-1,n\msp.\label{eq:chebyt_roots}\end{align}
+\zn{x}{k} & =\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right],\qquad k=1,2,\ldots,n-1,n\mperiod\label{eq:chebyt_roots}\end{align}
 
 \end_inset
 
@@ -1163,9 +1164,9 @@ Die Linearfaktordarstellung des Polynoms
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\T_{n}(x) & =2^{n-1}\prod_{k=1}^{n}\left(x-\zn{x}{k}\right)\\
- & =2^{n-1}x\prod_{k=1}^{(n-1)/2}\left(x-\zn{x}{k}\right)\left(x+\zn{x}{k}\right)\\
- & =2^{n-1}x\prod_{k=1}^{(n-1)/2}\left(x^{2}-\zn[2]{x}{k}\right)\end{align*}
+\T_{n}(x) & =2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})\\
+ & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x-\zn{x}{k})(x+\zn{x}{k})\\
+ & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x^{2}-\zn[2]{x}{k})\end{align*}
 
 \end_inset
 
@@ -1182,7 +1183,7 @@ Für gerades
 
 \begin_layout Standard
 \begin_inset Formula \[
-\T_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}\left(x^{2}-\zn[2]{x}{k}\right)\msp.\]
+\T_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}(x^{2}-\zn[2]{x}{k})\mperiod\]
 
 \end_inset
 
@@ -1267,7 +1268,7 @@ ergibt sich
  & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\T_{n}^{2}(x)}{1-\T_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
  & =\frac{n\sqrt{1-\cos^{2}(n\arccos x)}}{\sqrt{1-x^{2}}}\nonumber \\
  & =\frac{n\sin(n\arccos x)}{\sqrt{1-x^{2}}}\nonumber \\
-\T'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\msp.\label{eq:chebyt_diff_trigo}\end{align}
+\T'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\mperiod\label{eq:chebyt_diff_trigo}\end{align}
 
 \end_inset
 
@@ -1449,7 +1450,7 @@ oder aber durch Lösung des sich aus der Differentialgleichung\InsetSpace ~
 
  ergebenden Gleichungssystems
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Die Bestimmung der Koeffizienten aus der Differentialgleichung ist wohl
@@ -1474,7 +1475,8 @@ cf
 
 \end_inset
 
- 
+\InsetSpace ~
+
 \begin_inset LatexCommand \cite[\S\,4.2.]{Meinardus:1964}
 
 \end_inset
@@ -1509,7 +1511,7 @@ Die Tschebyscheff-Funktion zweiter Art ist definiert durch
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\U_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\msp.\end{equation}
+\U_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\mperiod\end{equation}
 
 \end_inset
 
