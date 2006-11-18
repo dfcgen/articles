@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby2.lyx,v 1.12 2006-06-18 10:00:24 ralf Exp $
+Version: $Id: cheby2.lyx,v 1.13 2006-11-18 08:18:25 ralf Exp $
 \end_layout
 
 \end_inset
@@ -370,8 +370,7 @@ Aufgrund der für
 \end_layout
 
 \begin_layout Standard
-und insbesondere der endlichen Dämpfung bei gerader Ordnung des Filters,
- werden praktisch meist Tiefpässe mit ungeradem Grad bevorzugt.
+werden praktisch meist Tiefpässe mit ungeradem Grad bevorzugt.
 \end_layout
 
 \begin_layout Subsection
@@ -456,7 +455,7 @@ cf
 
 \begin_layout Standard
 \begin_inset Formula \[
-\zn{x}{\nu}=\ji\frac{\omega_{s}}{\zn{\lps}{\nu}}=\cos\left(\frac{2\nu-1}{2}\frac{\pi}{n}\right)\]
+\zn{x}{\nu}=\ji\frac{\omega_{s}}{\zn{\lps}{\nu}}=\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\]
 
 \end_inset
 
@@ -478,6 +477,39 @@ liegen und deshalb bezüglich
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Für den Fall eines Filters mit ungeradem Grad ist jedoch zu beachten, daß
+ wegen 
+\begin_inset Formula $\cos(\pi/2)=0$
+\end_inset
+
+ die Nullstelle für 
+\begin_inset Formula $\nu=(n+1)/2$
+\end_inset
+
+ im Unendlichen zum Liegen kommt.
+ Aus diesem Grund kann sie nicht als solche angesehen werden, sondern eher
+ als Hinweis, daß der Grad des Zählerpolynoms von 
+\begin_inset Formula $\trf(\lps)$
+\end_inset
+
+ größer als der des Nennerpolynoms ist
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+Und damit auch zu einer (theoretisch) unbeschränkten Dämpfung für 
+\begin_inset Formula $\omega\rightarrow\infty$
+\end_inset
+
+ führt.
+\end_layout
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsection
