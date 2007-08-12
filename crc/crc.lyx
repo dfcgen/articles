@@ -1,17 +1,16 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\usepackage{a4wide}
-\input{text-inc.tex}
-\input{math-inc.tex}
-\input{electr-inc.tex}
-\input{pdf-inc.tex}
-\input{html-inc.tex}
+\input{text-inc}
+\input{math-inc}
+\input{electr-inc}
+\input{pdf-inc}
 
 \DeclareMathOperator{\crc}{CRC}
+\docsubj{CRC}{CRC}{CRC, Algebra}
 \end_preamble
 \options reqno
 \language german
@@ -19,10 +18,10 @@
 \fontscheme times
 \graphics default
 \paperfontsize default
-\spacing onehalf
+\spacing single
 \papersize default
 \use_geometry false
-\use_amsmath 2
+\use_amsmath 1
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -33,7 +32,7 @@
 \quotes_language english
 \papercolumns 1
 \papersides 1
-\paperpagestyle headings
+\paperpagestyle default
 \tracking_changes false
 \output_changes true
 \end_header
@@ -45,23 +44,7 @@
 status open
 
 \begin_layout Standard
-$Id: crc.lyx,v 1.4 2006-06-18 09:55:02 ralf Exp $
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-htmlsubj{CRC}{CRC, Algebra}
+$Id: crc.lyx,v 1.5 2007-08-12 13:33:09 ralf Exp $
 \end_layout
 
 \end_inset
@@ -146,12 +129,26 @@ Grundlagen
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand \index{Körper}
+
+\end_inset
+
+
+\begin_inset LatexCommand \index{Galois Field}
+
+\end_inset
+
 Eine grundlegende Vorbetrachtung für alle folgenden Ausführungen ist die,
  daß man einem beliebigen Bitstring der Länge 
 \begin_inset Formula $n$
 \end_inset
 
- ein äquivalentes Polynom 
+ ein äquivalentes Polynom
+\begin_inset LatexCommand \index{Polynom}
+
+\end_inset
+
+ 
 \begin_inset Formula $P(x)=a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}$
 \end_inset
 
@@ -224,7 +221,7 @@ cf
 
  an
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Bei Berechnungen muß im Körper 
@@ -302,9 +299,9 @@ Bit nach links verschoben.
 Der dabei entstehende Divisionsrest
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula \[
-R(x)=\crc\{ M(x)\}=x^{k}M(x)\bmod{G(x)}\]
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+R(x)=\crc\{ M(x)\}=x^{k}M(x)\bmod{G(x)}\end{equation}
 
 \end_inset
 
@@ -1459,18 +1456,6 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest
 \end_inset
 
  über einen Tabellenzugriff sehr schnell zu ermitteln.
-\newpage
-
-\end_layout
-
-\begin_layout Standard
-\start_of_appendix
-\begin_inset Include \input{../algebra/algebra.lyx}
-preview false
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
