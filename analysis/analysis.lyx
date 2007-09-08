@@ -1,4 +1,4 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -20,7 +20,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 2
 \paperpagestyle default
@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: analysis.lyx,v 1.19 2006-06-18 09:51:40 ralf Exp $
+Version: $Id: analysis.lyx,v 1.20 2007-09-08 16:59:59 ralf Exp $
 \end_layout
 
 \end_inset
@@ -3644,8 +3644,9 @@ Man denke an Formel\InsetSpace ~
 
 \end_inset
 
- und die mit ihr verbundenen Ideen 
-\begin_inset LatexCommand \vpageref{par:analysis_laurent_taylor_association}
+ und die mit ihr verbundenen Ideen auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand \pageref{par:analysis_laurent_taylor_association}
 
 \end_inset
 
@@ -3765,10 +3766,9 @@ Die dahinter steckende Idee besteht darin,
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\begin{split}\res{z_{0}}{f(z)} & =\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[\vphantom{a_{-1}(z-z_{0})^{n-1}}a_{-n}+a_{-n+1}(z-z_{0})+\cdots\right.\\
- & \left.+a_{-1}(z-z_{0})^{n-1}+a_{0}(z-z_{0})^{n}+a_{1}(z-z_{0})^{n+1}+\cdots\right]\end{split}
-\]
+\begin_inset Formula \begin{multline*}
+\res{z_{0}}{f(z)} & =\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[\vphantom{a_{-1}(z-z_{0})^{n-1}}a_{-n}+a_{-n+1}(z-z_{0})+\cdots\right.\\
+\left.+a_{-1}(z-z_{0})^{n-1}+a_{0}(z-z_{0})^{n}+a_{1}(z-z_{0})^{n+1}+\cdots\right]\end{multline*}
 
 \end_inset
 
@@ -3877,7 +3877,7 @@ was bei gebrochen rationalen Funktionen
 \begin_layout Standard
 führt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die Herleitung ist einfach, wenn man 
@@ -4632,7 +4632,7 @@ Ist die Funktion
 
  nach Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \vref{fig:analysis_real_inf_integral}
+\begin_inset LatexCommand \ref{fig:analysis_real_inf_integral}
 
 \end_inset
 
@@ -6211,7 +6211,7 @@ Weitere Varianten bezüglich der Halbebenen, in denen
 
  analytisch ist, sind in Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \vref{tab:analysis_inf_integrals_poisson}
+\begin_inset LatexCommand \ref{tab:analysis_inf_integrals_poisson}
 
 \end_inset
 
@@ -7698,7 +7698,7 @@ für Punkte auf der imaginären Achse.
 
  in Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \vpageref{tab:analysis_inf_integrals_poisson}
+\begin_inset LatexCommand \ref{tab:analysis_inf_integrals_poisson}
 
 \end_inset
 
@@ -7877,7 +7877,7 @@ cf
 
  Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \vref{tab:analysis_inf_integrals_poisson}
+\begin_inset LatexCommand \ref{tab:analysis_inf_integrals_poisson}
 
 \end_inset
 
@@ -7898,7 +7898,7 @@ Weitere Voraussetzungen für die Anwendbarkeit der Berechnungsformeln bestehen
 
  sein muß (siehe auch Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \vref{par:analysis_improper_convcond}
+\begin_inset LatexCommand \ref{par:analysis_improper_convcond}
 
 \end_inset
 
@@ -8146,7 +8146,7 @@ cf
 
  letzter Absatz in Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \vref{sec:analysis_jordan}
+\begin_inset LatexCommand \ref{sec:analysis_jordan}
 
 \end_inset
 
@@ -8237,7 +8237,7 @@ resp
 \begin_layout Standard
 Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \vref{tab:analysis_inf_integrals_jordan}
+\begin_inset LatexCommand \ref{tab:analysis_inf_integrals_jordan}
 
 \end_inset
 
