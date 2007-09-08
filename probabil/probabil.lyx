@@ -1,14 +1,12 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{text-inc.tex}
-\input{math-inc.tex}
-\input{electr-inc.tex}
-\input{pdf-inc.tex}
-\input{html-inc.tex}
+\input{all-inc}
+
+\docsubj{Zufallsgrößen und -prozesse}{Wahrscheinlichkeitstheorie}{Zufallsgrößen, Zufallsprozesse, Wahrscheinlichkeit}
 \end_preamble
 \options reqno
 \language german
@@ -19,7 +17,7 @@
 \spacing onehalf
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
+\use_amsmath 1
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -27,7 +25,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 2
 \paperpagestyle headings
@@ -42,55 +40,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: probabil.lyx,v 1.14 2006-06-18 09:58:00 ralf Exp $
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-htmlsubj{Zufallsgroessen}{Wahrscheinlichkeit, Zufall, Quantisierung, Rauschen,
- Zufallsgröße, Zufallsprozeß}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-begin{latexonly}
-\end_layout
-
-\begin_layout Standard
-
-  
-\backslash
-pdfsubj{Zufallsgrößen und -prozesse}{Wahrscheinlichkeitstheorie}{Zufallsgrößen,
- Zufallsprozesse, Wahrscheinlichkeit}
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-end{latexonly}
+Version: $Id: probabil.lyx,v 1.15 2007-09-08 17:25:30 ralf Exp $
 \end_layout
 
 \end_inset
@@ -112,12 +62,19 @@ status collapsed
 
 \backslash
 copyright
+\backslash
+  
+\backslash
+number
+\backslash
+year
+\backslash
+ 
 \end_layout
 
 \end_inset
 
-\InsetSpace ~
-Ralf Hoppe
+ Ralf Hoppe
 \end_layout
 
 \begin_layout Abstract
@@ -2743,7 +2700,7 @@ reibweisen der Art
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\mvec{Y}=\mvec{f}(\mvec{X})\qquad\qquad\mvec{X}=\mvec{f}^{(-1)}(\mvec{Y})=\mvec{h}(\mvec{Y})\label{eq:prob_transform_func_vectors}\end{equation}
+\mvec{Y}=\mvec{f}(\mvec{X})\qquad\qquad\mvec{X}=\mvec f^{(-1)}(\mvec{Y})=\mvec{h}(\mvec{Y})\label{eq:prob_transform_func_vectors}\end{equation}
 
 \end_inset
 
@@ -2865,7 +2822,7 @@ status open
 
 \begin_layout Standard
 Substitutionssatz für Mehrfach-Integrale: 
-\begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec{J}_{h}\right|\tic\mvec{z}$
+\begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec J_{h}\right|\tic\mvec{z}$
 \end_inset
 
 .
@@ -2909,7 +2866,7 @@ Jacobi
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=\left|\mvec{J}_{h}\right|\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_jacobian_det}\end{equation}
+\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=\left|\mvec J_{h}\right|\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_jacobian_det}\end{equation}
 
 \end_inset
 
@@ -2959,7 +2916,7 @@ tabvstretch
 
 \begin_layout Standard
 \begin_inset Formula \[
-\left|\mvec{J}_{h}\right|=\left|\begin{array}{cccc}
+\left|\mvec J_{h}\right|=\left|\begin{array}{cccc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{n}}}\\
 \mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{n}}}\\
 \vdots & \vdots & \ddots & \vdots\\
@@ -3015,7 +2972,7 @@ wobei wir die Betragszeichen sowohl als Kennzeichnung für eine Determinante
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-p_{Y}(\mvec{y})=\left|\mvec{J}_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}\end{equation}
+p_{Y}(\mvec{y})=\left|\mvec J_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}\end{equation}
 
 \end_inset
 
@@ -3306,7 +3263,7 @@ tabvstretch
 
 \begin_layout Standard
 \begin_inset Formula \[
-\left|\mvec{J}_{h}\right|=\left|\begin{array}{cc}
+\left|\mvec J_{h}\right|=\left|\begin{array}{cc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
 \mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\left|\begin{array}{cc}
 1/2 & 1/2\\
@@ -3336,7 +3293,7 @@ tabvnormal
 \begin_layout Standard
 Da in diesem Fall nur lineare Funktionen beteiligt sind, ist die Determinante
  
-\begin_inset Formula $\left|\mvec{J}_{h}\right|$
+\begin_inset Formula $\left|\mvec J_{h}\right|$
 \end_inset
 
  eine Konstante.
@@ -3357,7 +3314,7 @@ Da in diesem Fall nur lineare Funktionen beteiligt sind, ist die Determinante
 
 \begin_layout Standard
 \begin_inset Formula \[
-p_{Y}(y_{1},y_{2})=\left|\mvec{J}_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)\]
+p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)\]
 
 \end_inset
 
@@ -4268,7 +4225,7 @@ tabvstretch
 
 \begin_layout Standard
 \begin_inset Formula \[
-\left|\mvec{J}_{h}\right|=\left|\begin{array}{cc}
+\left|\mvec J_{h}\right|=\left|\begin{array}{cc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
 \mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\frac{1}{4}\left|\begin{array}{cc}
 \mbig{\sqrt{\frac{y_{2}}{y_{1}}}} & \mbig{\sqrt{\frac{y_{1}}{y_{2}}}}\\
@@ -4318,7 +4275,7 @@ Einleuchtende Erklärung notwendig
 
 \begin_layout Standard
 \begin_inset Formula \[
-p_{Y}(y_{1},y_{2})=2\left|\mvec{J}_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)\]
+p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)\]
 
 \end_inset
 
@@ -7067,7 +7024,7 @@ Dirac
 
 \begin_layout Standard
 \begin_inset Formula \[
-\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)=\spd_{0}\left.\irf(\tau)*\irf(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}{\irf}^{2}(t)\tic t\]
+\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)=\spd_{0}\left.\irf(\tau)*\irf(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t\]
 
 \end_inset
 
@@ -7080,7 +7037,7 @@ Bringen wir nun beide Zwischenergebnisse zusammen
 
 \begin_layout Standard
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\]
 
 \end_inset
 
@@ -7105,7 +7062,7 @@ und erweitern den Bruch noch um
 
 \begin_layout Standard
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}\]
 
 \end_inset
 
@@ -7156,7 +7113,7 @@ zwischen
 
 \begin_layout Standard
 \begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int_{-\infty}^{\infty}\irf(u)x(t_{0}-u)\tic u\right]^{2}}{\int_{-\infty}^{\infty}{\irf}^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}=\frac{E}{\spd_{0}}\corr^{2}\left[\irf(t),x(t_{0}-t)\right]\]
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int_{-\infty}^{\infty}\irf(u)x(t_{0}-u)\tic u\right]^{2}}{\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}=\frac{E}{\spd_{0}}\corr^{2}\left[\irf(t),x(t_{0}-t)\right]\]
 
 \end_inset
 
