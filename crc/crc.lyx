@@ -4,10 +4,7 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{text-inc}
-\input{math-inc}
-\input{electr-inc}
-\input{pdf-inc}
+\input{all-inc}
 
 \DeclareMathOperator{\crc}{CRC}
 \docsubj{CRC}{CRC}{CRC, Algebra}
@@ -19,7 +16,7 @@
 \graphics default
 \paperfontsize default
 \spacing single
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_amsmath 1
 \cite_engine basic
@@ -31,7 +28,7 @@
 \defskip medskip
 \quotes_language english
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes true
@@ -44,7 +41,7 @@
 status open
 
 \begin_layout Standard
-$Id: crc.lyx,v 1.5 2007-08-12 13:33:09 ralf Exp $
+$Id: crc.lyx,v 1.6 2007-09-08 17:08:23 ralf Exp $
 \end_layout
 
 \end_inset
@@ -59,15 +56,21 @@ Zyklische Codes & CRC
 \begin_layout Author
 Copyright 
 \begin_inset ERT
-status collapsed
+status inlined
 
 \begin_layout Standard
 
 
 \backslash
-copyright
+textcopyright
 \backslash
-
+  
+\backslash
+number
+\backslash
+year
+\backslash
+ 
 \end_layout
 
 \end_inset
