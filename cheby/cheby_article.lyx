@@ -1,14 +1,12 @@
-#LyX 1.4.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{text-inc.tex}
-\input{math-inc.tex}
-\input{electr-inc.tex}
-\input{pdf-inc.tex}
-\input{html-inc.tex}
+\input{all-inc}
+
+\docsubj{Tschebyscheff-Funktionen}{Tschebyscheff Funktionen}{Tschebyscheff, Chebyshev}
 \end_preamble
 \options reqno
 \language german
@@ -27,7 +25,7 @@
 \tocdepth 2
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 2
 \paperpagestyle headings
@@ -42,7 +40,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby_article.lyx,v 1.7 2006-04-09 16:32:51 ralf Exp $
+Version: $Id: cheby_article.lyx,v 1.8 2007-09-16 09:11:24 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -73,22 +71,6 @@ and
 koma-script w/ amsmath, amsthm
 \emph default
  (my own LyX extension)
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-htmlsubj{Tschebyscheff Funktionen}{Tschebyscheff, Chebyshev}
 \end_layout
 
 \end_inset
@@ -148,6 +130,14 @@ preview false
 
 \begin_layout Standard
 \begin_inset LatexCommand \bibtex[geralpha]{adsp,computers,math}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand \printindex{}
 
 \end_inset
 
