@@ -1,4 +1,4 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
+#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
 \lyxformat 245
 \begin_document
 \begin_header
@@ -20,7 +20,7 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 1
 \paperpagestyle default
@@ -35,7 +35,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: elliptic.lyx,v 1.11 2006-11-18 08:17:05 ralf Exp $
+Version: $Id: elliptic.lyx,v 1.12 2007-09-16 14:12:57 ralf Exp $
 \end_layout
 
 \end_inset
@@ -14281,7 +14281,7 @@ mit
 
 \begin_layout Proof
 \begin_inset Formula \begin{align*}
-1-\lambda^{2}y^{2}=\edn[2]{\frac{u}{M}+\Lambda}{\lambda} & =B^{2}\frac{\prod\limits _{{{{\mu=2,4,6,\ldots}\atop \mu\neq2n}}}^{4n-2}\left[x-k^{-1}\ens{\mu\frac{K}{n}}{k}\right]}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\left[1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}\right]^{2}}\mperiod\end{align*}
+1-\lambda^{2}y^{2}=\edn[2]{\frac{u}{M}+\Lambda}{\lambda} & =B^{2}\frac{\prod\limits _{{{\mu=2,4,6,\ldots}\atop \mu\neq2n}}^{4n-2}\left[x-k^{-1}\ens{\mu\frac{K}{n}}{k}\right]}{\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\left[1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x^{2}\right]^{2}}\mperiod\end{align*}
 
 \end_inset
 
@@ -14705,8 +14705,8 @@ Setzt man jetzt die Nullstelle
 \begin_inset Formula \begin{align*}
 \efunc{f'}{\zn{x}{m}}{k} & =\left[\frac{p_{m}'(\zn{x}{m})}{p_{m}(\zn{x}{m})}-\frac{q_{m}'(\zn{x}{m})}{q_{m}(\zn{x}{m})}\right]\,\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{p_{\nu}(\zn{x}{m})}{q_{\nu}(\zn{x}{m})}\\
  & =\frac{p_{m}'(\zn{x}{m})}{p_{m}(\zn{x}{m})}\prod_{\nu=1,3,5,\ldots}^{n-1}\frac{p_{\nu}(\zn{x}{m})}{q_{\nu}(\zn{x}{m})}\\
- & =-\frac{2}{\zn{x}{m}}\cdot\frac{1}{q_{m}(\zn{x}{m})}\prod_{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\frac{p_{\nu}(\zn{x}{m})}{q_{\nu}(\zn{x}{m})}\\
- & =-\frac{2}{\esn{\zn{u}{m}}{k}}\cdot\frac{1}{1-k^{2}\esn[4]{\zn{u}{m}}{k}}\prod_{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\frac{1-\frac{\esn[2]{\zn{u}{m}}{k}}{\esn[2]{\zn{u}{\nu}}{k}}}{1-k^{2}\esn[2]{\zn{u}{\nu}}{k}\esn[2]{\zn{u}{m}}{k}}\end{align*}
+ & =-\frac{2}{\zn{x}{m}}\cdot\frac{1}{q_{m}(\zn{x}{m})}\prod_{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\frac{p_{\nu}(\zn{x}{m})}{q_{\nu}(\zn{x}{m})}\\
+ & =-\frac{2}{\esn{\zn{u}{m}}{k}}\cdot\frac{1}{1-k^{2}\esn[4]{\zn{u}{m}}{k}}\prod_{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\frac{1-\frac{\esn[2]{\zn{u}{m}}{k}}{\esn[2]{\zn{u}{\nu}}{k}}}{1-k^{2}\esn[2]{\zn{u}{\nu}}{k}\esn[2]{\zn{u}{m}}{k}}\end{align*}
 
 \end_inset
 
@@ -14726,9 +14726,9 @@ Durch Hinzunahme von Multiplikationsformel\InsetSpace ~
 
 \begin_layout Proof
 \begin_inset Formula \begin{align*}
-\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\prod_{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\frac{\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\mperiod\end{align*}
+\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\prod_{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\frac{\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\mperiod\end{align*}
 
 \end_inset
 
@@ -14794,7 +14794,7 @@ resp
 
 \begin_layout Proof
 \begin_inset Formula \[
-\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{\esn{2m\frac{K}{n}}{k}}\mperiod\]
+\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{\esn{2m\frac{K}{n}}{k}}\mperiod\]
 
 \end_inset
 
@@ -14814,7 +14814,7 @@ rmel\InsetSpace ~
 
 \begin_layout Proof
 \begin_inset Formula \begin{align*}
-\prod\limits _{{{\nu=1,3,5,\ldots\atop \nu\neq m}}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\,\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\,\ecn{m\frac{K}{n}}{k}\,\edn{m\frac{K}{n}}{k}}\end{align*}
+\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\,\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\,\ecn{m\frac{K}{n}}{k}\,\edn{m\frac{K}{n}}{k}}\end{align*}
 
 \end_inset
 
@@ -17552,7 +17552,7 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \vref{sec:agm}
+\begin_inset LatexCommand \ref{sec:agm}
 
 \end_inset
 
@@ -17761,7 +17761,7 @@ Nach\InsetSpace ~
 
 \end_inset
 
- beträgt der Fehler 
+ ist der Fehler 
 \begin_inset Formula $|\esn{x_{N}}{k_{N}}-\esn{x}{0}|<\frac{\pi}{4}k^{2}$
 \end_inset
 
