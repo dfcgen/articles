@@ -1,5 +1,5 @@
-#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrartams
@@ -11,13 +11,21 @@
 \options reqno
 \language german
 \inputencoding latin1
-\fontscheme palatino
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \paperfontsize default
 \spacing onehalf
 \papersize a4paper
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -27,10 +35,11 @@
 \defskip medskip
 \quotes_language german
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle headings
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
 \end_header
 
 \begin_body
@@ -40,15 +49,15 @@
 status open
 
 \begin_layout Standard
-$Id: elliptic_article.lyx,v 1.12 2007-09-16 14:11:03 ralf Exp $
+$Id: elliptic_article.lyx,v 1.13 2007-09-22 17:44:45 ralf Exp $
 \end_layout
 
 \begin_layout Standard
 Compatible with article document classes 
 \emph on
-ams 
+ams
 \emph default
-and 
+ and 
 \emph on
 koma-script w/ amsmath, amsthm
 \emph default
@@ -70,6 +79,8 @@ Jacobi
 \align center
 \begin_inset Graphics
 	filename jacobi.eps
+	lyxscale 66
+	scale 50
 
 \end_inset
 
@@ -77,7 +88,7 @@ Jacobi
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \tableofcontents{}
+\begin_inset LatexCommand tableofcontents
 
 \end_inset
 
@@ -103,7 +114,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \bibtex[geralpha]{adsp,computers,math}
+\begin_inset LatexCommand bibtex
+options "geralpha"
+bibfiles "adsp,computers,math"
 
 \end_inset
 
@@ -111,7 +124,7 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \printindex{}
+\begin_inset LatexCommand printindex
 
 \end_inset
 

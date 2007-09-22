@@ -1,11 +1,18 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
-\textclass scrartcl
+\textclass scrbookams
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !tbh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -27,7 +35,8 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
 \end_header
 
 \begin_body
@@ -37,7 +46,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: butterworth.lyx,v 1.12 2006-06-18 10:00:24 ralf Exp $
+Version: $Id: butterworth.lyx,v 1.13 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \end_inset
@@ -50,11 +59,12 @@ Version: $Id: butterworth.lyx,v 1.12 2006-06-18 10:00:24 ralf Exp $
 \noun on
 Butterworth
 \noun default
--Tiefpaß
+-TiefpaÃŸ
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Butterworth-Tiefpaß@\noun{Butterworth}-Tiefpaß|(}
+\begin_inset LatexCommand index
+name "Butterworth-TiefpaÃŸ@\\noun{Butterworth}-TiefpaÃŸ|("
 
 \end_inset
 
@@ -70,13 +80,15 @@ Der
 \noun on
 Butterworth
 \noun default
--Tiefpaß
-\begin_inset LatexCommand \index{Tiefpaß!Butterworth@\noun{Butterworth}-}
+-TiefpaÃŸ
+\begin_inset LatexCommand index
+name "TiefpaÃŸ!Butterworth@\\noun{Butterworth}-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!Butterworth@\noun{Butterworth}-}
+\begin_inset LatexCommand index
+name "Filter!Butterworth@\\noun{Butterworth}-"
 
 \end_inset
 
@@ -99,13 +111,15 @@ Butterworth
 \begin_layout Standard
 aus\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Zverev:1967,Chen:1995,Fritzsche:1979a}
+\begin_inset LatexCommand cite
+key "Zverev:1967,Chen:1995,Fritzsche:1979a"
 
 \end_inset
 
 , besitzt also nach Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:approx_discrimination}
+\begin_inset LatexCommand ref
+reference "eq:approx_discrimination"
 
 \end_inset
 
@@ -126,14 +140,16 @@ Da die Kreisfrequenz
 \begin_inset Formula $\omega$
 \end_inset
 
- nur in der höchsten Potenz vorhanden ist, werden solche Systeme auch Potenzfilt
+ nur in der hÃ¶chsten Potenz vorhanden ist, werden solche Systeme auch Potenzfilt
 er
-\begin_inset LatexCommand \index{Potenzfilter}
+\begin_inset LatexCommand index
+name "Potenzfilter"
 
 \end_inset
 
  genannt und als maximal
-\begin_inset LatexCommand \index{Funktion!maximal flache}
+\begin_inset LatexCommand index
+name "Funktion!maximal flache"
 
 \end_inset
 
@@ -150,7 +166,7 @@ Als maximal flach werden Funktionen der Ordnung
 \begin_inset Formula $n-1$
 \end_inset
 
- -te Ableitung an einer ausgewählten Stelle (hier 
+ -te Ableitung an einer ausgewÃ¤hlten Stelle (hier 
 \begin_inset Formula $\omega=0$
 \end_inset
 
@@ -165,29 +181,33 @@ Als maximal flach werden Funktionen der Ordnung
 
  bezeichnet\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Fritzsche:1979a}
+\begin_inset LatexCommand cite
+key "Fritzsche:1979a"
 
 \end_inset
 
  
-\begin_inset LatexCommand \cite{Winkler:1954}
+\begin_inset LatexCommand cite
+key "Winkler:1954"
 
 \end_inset
 
 .
  Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:filter_butter_amplitude}
+\begin_inset LatexCommand ref
+reference "fig:filter_butter_amplitude"
 
 \end_inset
 
  zeigt den Amplitudengang nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_butter_amplitude}
+\begin_inset LatexCommand ref
+reference "eq:filter_butter_amplitude"
 
 \end_inset
 
- für unterschiedlichen Grad 
+ fÃ¼r unterschiedlichen Grad 
 \begin_inset Formula $n$
 \end_inset
 
@@ -210,8 +230,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:filter_butter_amplitude}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:filter_butter_amplitude"
 
 \end_inset
 
@@ -219,7 +243,12 @@ Amplitudengang des
 \noun on
 Butterworth
 \noun default
--Tiefpaß
+-TiefpaÃŸ
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -232,7 +261,7 @@ Mit Hilfe des Parameters
 \begin_inset Formula $\sigma$
 \end_inset
 
- kann die maximale Dämpfung im Durchlaßbereich 
+ kann die maximale DÃ¤mpfung im DurchlaÃŸbereich 
 \begin_inset Formula $\atf_{\textup{max}}$
 \end_inset
 
@@ -251,7 +280,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:approx_ampl}
+\begin_inset LatexCommand ref
+reference "sec:approx_ampl"
 
 \end_inset
 
@@ -273,7 +303,7 @@ cf
 \end_layout
 
 \begin_layout Standard
-gilt und deshalb für die maximale Dämpfung:
+gilt und deshalb fÃ¼r die maximale DÃ¤mpfung:
 \end_layout
 
 \begin_layout Standard
@@ -286,7 +316,7 @@ gilt und deshalb für die maximale Dämpfung:
 \end_layout
 
 \begin_layout Standard
-In gleicher Art und Weise kann man für die minimale Dämpfung im Sperrbereich
+In gleicher Art und Weise kann man fÃ¼r die minimale DÃ¤mpfung im Sperrbereich
 \end_layout
 
 \begin_layout Standard
@@ -312,7 +342,7 @@ ie
 
 \end_inset
 
- die charakteristischen Größen 
+ die charakteristischen GrÃ¶ÃŸen 
 \begin_inset Formula $\omega_{g}$
 \end_inset
 
@@ -328,16 +358,16 @@ ie
 \begin_inset Formula $\atf_{\textup{min}}$
 \end_inset
 
- sind nicht unabhängig voneinander.
- Der über den Grad 
+ sind nicht unabhÃ¤ngig voneinander.
+ Der Ã¼ber den Grad 
 \begin_inset Formula $n$
 \end_inset
 
- bestehende Zusammenhang kann durch Gleichsetzen der Beziehungen für 
+ bestehende Zusammenhang kann durch Gleichsetzen der Beziehungen fÃ¼r 
 \begin_inset Formula $\sigma$
 \end_inset
 
- ausgedrückt werden.
+ ausgedrÃ¼ckt werden.
 \end_layout
 
 \begin_layout Standard
@@ -350,11 +380,11 @@ ie
 \end_layout
 
 \begin_layout Standard
-Aus dieser Äquivalenz kann der minimale Grad eines 
+Aus dieser Ã„quivalenz kann der minimale Grad eines 
 \noun on
 Butterworth
 \noun default
--Tiefpaß' ausgehend von den charakteristischen Größen abgeleitet werden
+-TiefpaÃŸ' ausgehend von den charakteristischen GrÃ¶ÃŸen abgeleitet werden
  (
 \begin_inset Formula $\omega_{g}=1)$
 \end_inset
@@ -398,7 +428,7 @@ ie
 \begin_inset Formula $\sigma=1/\omega_{\textup{3dB}}^{n}$
 \end_inset
 
- und für den Amplitudengang
+ und fÃ¼r den Amplitudengang
 \end_layout
 
 \begin_layout Emph(asized)
@@ -416,7 +446,7 @@ Polstellen
 
 \begin_layout Standard
 Die Verteilung der Polstellen eines Filters (in der komplexen Ebene) ist
- grundsätzlich immer interessant, da sie Aufschlüsse bezüglich der anderen
+ grundsÃ¤tzlich immer interessant, da sie AufschlÃ¼sse bezÃ¼glich der anderen
  Charakteristiken, wie Amplitudengang, Phasengang, 
 \begin_inset ERT
 status collapsed
@@ -430,8 +460,8 @@ etc
 
 \end_inset
 
- zuläßt.
- Dazu gehen wir von der komplexen Übertragungsfunktion 
+ zulÃ¤ÃŸt.
+ Dazu gehen wir von der komplexen Ãœbertragungsfunktion 
 \begin_inset Formula $\trf(\ji\omega)$
 \end_inset
 
@@ -452,7 +482,7 @@ etc
 \end_layout
 
 \begin_layout Standard
-Der Übergang in den 
+Der Ãœbergang in den 
 \noun on
 Laplace
 \noun default
@@ -460,12 +490,12 @@ Laplace
 \begin_inset Formula $\ji\omega\Rightarrow\lps$
 \end_inset
 
-) führt zu
+)Â fÃ¼hrt zu
 \begin_inset Foot
 status collapsed
 
 \begin_layout Standard
-Für kausale, stabile Tiefpaßsysteme ist der Übergang von der 
+FÃ¼r kausale, stabile TiefpaÃŸsysteme ist der Ãœbergang von der 
 \noun on
 Fourier
 \noun default
@@ -473,9 +503,11 @@ Fourier
 \noun on
 Laplace
 \noun default
--Transformierten immer möglich\InsetSpace ~
+-Transformierten immer mÃ¶glich\InsetSpace ~
 
-\begin_inset LatexCommand \cite[9-2]{Papoulis:1962}
+\begin_inset LatexCommand cite
+after "9-2"
+key "Papoulis:1962"
 
 \end_inset
 
@@ -501,9 +533,10 @@ An den Polstellen von
 \begin_inset Formula $\trf(\lps)\trf(-\lps)$
 \end_inset
 
- muß der Nenner in Gleichung\InsetSpace ~
+ muÃŸ der Nenner in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_butter_amplitude_inf}
+\begin_inset LatexCommand ref
+reference "eq:filter_butter_amplitude_inf"
 
 \end_inset
 
@@ -601,15 +634,15 @@ Um realisierbare Systeme zu erhalten ordnet man nun
 \end_inset
 
  zu.
- Man erhält, was sich durch Einsetzen einzelner Werte 
+ Man erhÃ¤lt, was sich durch Einsetzen einzelner Werte 
 \begin_inset Formula $k$
 \end_inset
 
- leicht nachprüfen läßt, folgende Polverteilung für einen 
+ leicht nachprÃ¼fen lÃ¤ÃŸt, folgende Polverteilung fÃ¼r einen 
 \noun on
 Butterworth
 \noun default
--Tiefpaß.
+-TiefpaÃŸ.
 \end_layout
 
 \begin_layout Standard
@@ -622,9 +655,10 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-Sind insbesondere Real- oder Imaginärteile von Interesse, dann ist auf Gleichung\InsetSpace ~
+Sind insbesondere Real- oder ImaginÃ¤rteile von Interesse, dann ist auf Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_butter_poles}
+\begin_inset LatexCommand ref
+reference "eq:filter_butter_poles"
 
 \end_inset
 
@@ -651,18 +685,19 @@ Anschaulich liegen alle Pole auf einem Kreis mit Radius
 
 , was deutlich auch in Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:filter_butter_pn}
+\begin_inset LatexCommand ref
+reference "fig:filter_butter_pn"
 
 \end_inset
 
  zu erkennen ist.
- Außerdem zeigt die Darstellung, daß einerseits keine Pole auf der imaginären
+ AuÃŸerdem zeigt die Darstellung, daÃŸ einerseits keine Pole auf der imaginÃ¤ren
  Achse liegen und andererseits alle konjugiert komplex auftreten
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Abgesehen von einem reellen Pol für ungeraden Grad 
+Abgesehen von einem reellen Pol fÃ¼r ungeraden Grad 
 \begin_inset Formula $n$
 \end_inset
 
@@ -705,8 +740,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:filter_butter_pn}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:filter_butter_pn"
 
 \end_inset
 
@@ -714,7 +753,12 @@ P/N-Verteilung des
 \noun on
 Butterworth
 \noun default
--Tiefpaß
+-TiefpaÃŸ
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -723,7 +767,7 @@ Butterworth
 \end_layout
 
 \begin_layout Subsection
-Polkenngrößen
+PolkenngrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Standard
@@ -731,8 +775,8 @@ Polkenngrößen
 status open
 
 \begin_layout Standard
-Dieser Abschnitt sollte später einmal in den allgemeinen Teil der systembeschrei
-benden Größen von LTI-Systemen (zum Thema Amplitudengang, Phasengang, Bode-Diagr
+Dieser Abschnitt sollte spÃ¤ter einmal in den allgemeinen Teil der systembeschrei
+benden GrÃ¶ÃŸen von LTI-Systemen (zum Thema Amplitudengang, Phasengang, Bode-Diagr
 amm) verschoben werden.
 \end_layout
 
@@ -742,15 +786,17 @@ amm) verschoben werden.
 \end_layout
 
 \begin_layout Standard
-Allgemein gelten Polkenngrößen
-\begin_inset LatexCommand \index{Pol!kenngrößen@-kenngrößen}
+Allgemein gelten PolkenngrÃ¶ÃŸen
+\begin_inset LatexCommand index
+name "Pol!kenngrÃ¶ÃŸen@-kenngrÃ¶ÃŸen"
 
 \end_inset
 
- als geeignet zur Abschätzung des Systemverhaltens im Frequenzbereich.
- Dabei sind es vor allem zwei Größen, die entsprechende Bedeutung erlangt
+ als geeignet zur AbschÃ¤tzung des Systemverhaltens im Frequenzbereich.
+ Dabei sind es vor allem zwei GrÃ¶ÃŸen, die entsprechende Bedeutung erlangt
  haben -- die Polfrequenz
-\begin_inset LatexCommand \index{Pol!frequenz@-frequenz}
+\begin_inset LatexCommand index
+name "Pol!frequenz@-frequenz"
 
 \end_inset
 
@@ -758,26 +804,27 @@ Allgemein gelten Polkenngrößen
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- und die Polgüte
+ und die PolgÃ¼te
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Manchmal wird statt der Polgüte 
+Manchmal wird statt der PolgÃ¼te 
 \begin_inset Formula $Q$
 \end_inset
 
- die Poldämpfung 
+ die PoldÃ¤mpfung 
 \begin_inset Formula $(2Q)^{-1}$
 \end_inset
 
- als Maßzahl herangezogen.
+ als MaÃŸzahl herangezogen.
 \end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Pol!güte@-güte}
+\begin_inset LatexCommand index
+name "Pol!gÃ¼te@-gÃ¼te"
 
 \end_inset
 
@@ -799,12 +846,12 @@ resp
 
 \end_inset
 
- Bestimmung geht man von der Erkenntnis aus, daß komplexe Pole immer konjugiert
+ Bestimmung geht man von der Erkenntnis aus, daÃŸ komplexe Pole immer konjugiert
  auftreten und deshalb in der Linearfaktordarstellung von 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
- paarweise (zur Vermeidung komplexer Größen) zusammengefaßt werden können.
+ paarweise (zur Vermeidung komplexer GrÃ¶ÃŸen) zusammengefaÃŸt werden kÃ¶nnen.
 \end_layout
 
 \begin_layout Standard
@@ -817,7 +864,7 @@ resp
 \end_layout
 
 \begin_layout Standard
-Dieses Polynom zweiten Grades (bezüglich der 
+Dieses Polynom zweiten Grades (bezÃ¼glich der 
 \noun on
 Laplace
 \noun default
@@ -825,7 +872,7 @@ Laplace
 \begin_inset Formula $\lps$
 \end_inset
 
-) kann man auch folgendermaßen schreiben
+) kann man auch folgendermaÃŸen schreiben
 \end_layout
 
 \begin_layout Emph(asized)
@@ -838,7 +885,7 @@ Laplace
 \end_layout
 
 \begin_layout Standard
-wodurch Polfrequenz und -güte letztlich definiert werden.
+wodurch Polfrequenz und -gÃ¼te letztlich definiert werden.
  Koeffizientenvergleich beider Darstellungen, also
 \begin_inset Formula \[
 \lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})\]
@@ -849,7 +896,7 @@ wodurch Polfrequenz und -güte letztlich definiert werden.
 \end_layout
 
 \begin_layout Standard
-führt sofort zur Definition der Polfrequenz 
+fÃ¼hrt sofort zur Definition der Polfrequenz 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
@@ -870,7 +917,7 @@ führt sofort zur Definition der Polfrequenz
 \end_layout
 
 \begin_layout Standard
-Die Polgüte 
+Die PolgÃ¼te 
 \begin_inset Formula $Q$
 \end_inset
 
@@ -889,7 +936,7 @@ Q & =\frac{1}{2}\sqrt{1+\left[\frac{\imop(\pn{\lps}{})}{\reop(\pn{\lps}{})}\righ
 \end_layout
 
 \begin_layout Standard
-aber ohne größeren Aufwand bestimmt werden
+aber ohne grÃ¶ÃŸeren Aufwand bestimmt werden
 \begin_inset Foot
 status open
 
@@ -916,11 +963,11 @@ Q=-\frac{1}{2\cos(\ang\pn{\lps}{})}=-\frac{1}{2}\sec(\ang\pn{\lps}{})\mperiod\la
 \end_layout
 
 \begin_layout Standard
-Speziell für einen 
+Speziell fÃ¼r einen 
 \noun on
 Butterworth
 \noun default
--Tiefpaß gilt deshalb in Bezug auf die Polfrequenzen:
+-TiefpaÃŸ gilt deshalb in Bezug auf die Polfrequenzen:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -933,7 +980,7 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-und Polgüte:
+und PolgÃ¼te:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -946,19 +993,19 @@ Q_{\nu}=-\frac{1}{2}\sec\left(\frac{\pi}{2}+\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\r
 \end_layout
 
 \begin_layout Standard
-In der letzten Formel ist erkennbar, daß die einzelnen Polgüten 
+In der letzten Formel ist erkennbar, daÃŸ die einzelnen PolgÃ¼ten 
 \begin_inset Formula $Q_{\nu}$
 \end_inset
 
- für höhere Filterordnung 
+ fÃ¼r hÃ¶here Filterordnung 
 \begin_inset Formula $n$
 \end_inset
 
- immer größer werden, wobei Pole in der Nähe der 
+ immer grÃ¶ÃŸer werden, wobei Pole in der NÃ¤he der 
 \begin_inset Formula $\ji\omega$
 \end_inset
 
--Achse die höchsten Güten aufweisen
+-Achse die hÃ¶chsten GÃ¼ten aufweisen
 \begin_inset Foot
 status open
 
@@ -973,7 +1020,8 @@ Pole mit dieser Lage reagieren dann im allgemeinen auch viel empfindlicher
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Butterworth-Tiefpaß@\noun{Butterworth}-Tiefpaß|)}
+\begin_inset LatexCommand index
+name "Butterworth-TiefpaÃŸ@\\noun{Butterworth}-TiefpaÃŸ|)"
 
 \end_inset
 

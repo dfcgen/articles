@@ -1,11 +1,18 @@
-#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrartcl
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !tbh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -25,7 +33,9 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -35,7 +45,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby.lyx,v 1.10 2007-09-16 09:10:41 ralf Exp $
+Version: $Id: cheby.lyx,v 1.11 2007-09-22 17:44:45 ralf Exp $
 \end_layout
 
 \end_inset
@@ -44,7 +54,8 @@ Version: $Id: cheby.lyx,v 1.10 2007-09-16 09:10:41 ralf Exp $
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:cheby}
+\begin_inset LatexCommand label
+name "sec:cheby"
 
 \end_inset
 
@@ -56,25 +67,28 @@ Dieser Typ von Funktionen wurde insbesondere durch
 \noun on
 P.\InsetSpace ~
 L.
- Tschebyscheff
+ Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
  im Zusammenhang mit Approximations\SpecialChar \-
 problemen unter\SpecialChar \-
 sucht\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Chebyshev:1899,Achieser:1967,Meinardus:1964,Koerner:1988}
+\begin_inset LatexCommand cite
+key "Chebyshev:1899,Achieser:1967,Meinardus:1964,Koerner:1988"
 
 \end_inset
 
 .
- Eine verst‰ndliche Einf¸hrung in diese Funktionen
+ Eine verst√§ndliche Einf√ºhrung in diese Funktionen
 \begin_inset Foot
 status open
 
 \begin_layout Standard
 Meist sehr stark konzentriert auf die 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 -Funktionen erster Art.
 \end_layout
@@ -96,17 +110,19 @@ eg
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite{Haemmerlin:1992,Kaiser:1980}
+\begin_inset LatexCommand cite
+key "Haemmerlin:1992,Kaiser:1980"
 
 \end_inset
 
  sowie\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Sieber:1988}
+\begin_inset LatexCommand cite
+key "Sieber:1988"
 
 \end_inset
 
-, ¸bersichtliche Zusammenfassungen der Beziehungen untereinander 
+, √ºbersichtliche Zusammenfassungen der Beziehungen untereinander 
 \begin_inset ERT
 status collapsed
 
@@ -119,15 +135,17 @@ resp
 
 \end_inset
 
- zu anderen speziellen Funktionen enth‰lt\InsetSpace ~
+ zu anderen speziellen Funktionen enth√§lt\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Abramowitz:1972}
+\begin_inset LatexCommand cite
+key "Abramowitz:1972"
 
 \end_inset
 
 , numerische Aspekte werden in\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Press:1992}
+\begin_inset LatexCommand cite
+key "Press:1992"
 
 \end_inset
 
@@ -137,11 +155,13 @@ resp
 \begin_layout Section
 
 \noun on
-\begin_inset LatexCommand \index{Tschebyscheff-Funktion@\noun{Tschebyscheff}-Funktion!erster Art}
+\begin_inset LatexCommand index
+name "Tschebyscheff-Funktion@\\noun{Tschebyscheff}-Funktion!erster Art"
 
 \end_inset
 
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 -Funktionen erster Art
 \end_layout
@@ -157,7 +177,8 @@ Analytische Darstellung
 \begin_layout Standard
 Die 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 'sche Funktion erster Art 
 \begin_inset Formula $\T_{n}(x)$
@@ -184,7 +205,7 @@ Wegen
 \begin_inset Formula $\T_{n}$
 \end_inset
 
- f¸r 
+ f√ºr 
 \begin_inset Formula $|x|>1$
 \end_inset
 
@@ -201,7 +222,7 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-¸ber.
+√ºber.
 \end_layout
 
 \begin_layout Subsubsection
@@ -224,11 +245,12 @@ Nimmt man die Substitutionen
 \begin_layout Standard
 in Ausgangsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_cos_def"
 
 \end_inset
 
- vor, dann erh‰lt man f¸r 
+ vor, dann erh√§lt man f√ºr 
 \begin_inset Formula $\T_{n}(x)$
 \end_inset
 
@@ -245,7 +267,7 @@ in Ausgangsgleichung\InsetSpace ~
 \begin_inset Formula $+\pi/2$
 \end_inset
 
- l‰uft, dann bewegt sich 
+ l√§uft, dann bewegt sich 
 \begin_inset Formula $x$
 \end_inset
 
@@ -262,26 +284,26 @@ in Ausgangsgleichung\InsetSpace ~
 \end_inset
 
  alterniert im gleichen Intervall.
- Andere Werte f¸r 
+ Andere Werte f√ºr 
 \begin_inset Formula $x$
 \end_inset
 
-, die auﬂerhalb des Intervalls 
+, die au√üerhalb des Intervalls 
 \begin_inset Formula $[-1,+1]$
 \end_inset
 
- liegen, erh‰lt man, wenn der Parameter 
+ liegen, erh√§lt man, wenn der Parameter 
 \begin_inset Formula $\varphi$
 \end_inset
 
- imagin‰r wird.
- F¸r diesen Fall gilt
+ imagin√§r wird.
+ F√ºr diesen Fall gilt
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Denn f¸r imagin‰res Argument geht der Cosinus ja bekanntlich in die entsprechend
-e Hyperbelfunktion ¸ber, 
+Denn f√ºr imagin√§res Argument geht der Cosinus ja bekanntlich in die entsprechend
+e Hyperbelfunktion √ºber, 
 \begin_inset ERT
 status collapsed
 
@@ -316,7 +338,8 @@ ie
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:chebyt_poly_def}
+\begin_inset LatexCommand label
+name "sec:chebyt_poly_def"
 
 \end_inset
 
@@ -326,7 +349,8 @@ Rekursive (algebraische) Darstellung
 \begin_layout Standard
 Die 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 'schen Funktionen haben eine ganz bemerkenswerte Eigenschaft -- sie sind
  (rekursiv) als algebraische Polynome in 
@@ -338,9 +362,10 @@ Tschebyscheff
 status collapsed
 
 \begin_layout Standard
-Aus diesem Grund wird h‰ufig auch der Begriff der 
+Aus diesem Grund wird h√§ufig auch der Begriff der 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 -Polynome verwendet.
 \end_layout
@@ -406,7 +431,8 @@ Mit der trigonometrischen Multiplikationsformel
 \begin_layout Standard
 was nach Umindizierung Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
@@ -414,13 +440,14 @@ was nach Umindizierung Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Die Anfangswerte f¸r 
+Die Anfangswerte f√ºr 
 \begin_inset Formula $n=0,1$
 \end_inset
 
  ergeben sich direkt aus Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_cos_def"
 
 \end_inset
 
@@ -437,7 +464,7 @@ Die Anfangswerte f¸r
 \end_layout
 
 \begin_layout Standard
-Exemplarisch sind hier noch die n‰chsten Polynome aufgef¸hrt
+Exemplarisch sind hier noch die n√§chsten Polynome aufgef√ºhrt
 \begin_inset Foot
 status open
 
@@ -461,7 +488,9 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite[Tab.~22.3]{Abramowitz:1972}
+\begin_inset LatexCommand cite
+after "Tab.~22.3"
+key "Abramowitz:1972"
 
 \end_inset
 
@@ -488,11 +517,12 @@ eg
 \begin_layout Standard
 Aus Rekursionsformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
- ist auﬂerdem erkennbar, daﬂ das Polynom 
+ ist au√üerdem erkennbar, da√ü das Polynom 
 \begin_inset Formula $\T_{n}(x)$
 \end_inset
 
@@ -510,7 +540,8 @@ Irrationale Darstellung
 \begin_layout Standard
 Eine weitere Form der 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 'schen Funktion 
 \begin_inset Formula $\T_{n}(x)$
@@ -518,7 +549,8 @@ Tschebyscheff
 
  kann man aus der Parameterbeziehung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_param_def"
 
 \end_inset
 
@@ -552,7 +584,8 @@ Euler
 \begin_layout Standard
 Aus Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_irrat_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_irrat_def"
 
 \end_inset
 
@@ -567,7 +600,8 @@ status open
 \begin_layout Standard
 Der Wert des Leitkoeffizienten ist auch direkt aus der rekursiven Darstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
@@ -577,7 +611,7 @@ Der Wert des Leitkoeffizienten ist auch direkt aus der rekursiven Darstellung\In
 \end_inset
 
 .
- Dazu geht man von der allgemeinen Formel f¸r ein algebraisches Polynom
+ Dazu geht man von der allgemeinen Formel f√ºr ein algebraisches Polynom
  aus
 \end_layout
 
@@ -608,7 +642,8 @@ und bildet einen Grenzwert wiefolgt:
 \begin_layout Standard
 Umstellen und Zuhilfenahme der irrationalen Darstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_irrat_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_irrat_def"
 
 \end_inset
 
@@ -638,7 +673,8 @@ Spezielle Werte
 \begin_layout Standard
 Die folgenden Werte ergeben sich direkt aus Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_cos_def"
 
 \end_inset
 
@@ -668,17 +704,18 @@ Funktionsverlauf
 \begin_layout Standard
 Die 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 'sche Funktion 
 \begin_inset Formula $\T_{n}(x)$
 \end_inset
 
- ist f¸r geraden Grad 
+ ist f√ºr geraden Grad 
 \begin_inset Formula $n$
 \end_inset
 
- auch eine gerade Funktion, f¸r ungeraden Grad eine ungerade Funktion.
+ auch eine gerade Funktion, f√ºr ungeraden Grad eine ungerade Funktion.
 \end_layout
 
 \begin_layout Standard
@@ -694,7 +731,7 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Standard
-Die Form des Polynoms kann deshalb folgendermaﬂen angenommen werden.
+Die Form des Polynoms kann deshalb folgenderma√üen angenommen werden.
 \end_layout
 
 \begin_layout Standard
@@ -713,13 +750,14 @@ Der Funktionsverlauf von
 \begin_inset Formula $\T_{n}(x)$
 \end_inset
 
- ist f¸r einige Werte 
+ ist f√ºr einige Werte 
 \begin_inset Formula $n$
 \end_inset
 
  in Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:chebyt_plot}
+\begin_inset LatexCommand ref
+reference "fig:chebyt_plot"
 
 \end_inset
 
@@ -743,13 +781,27 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:chebyt_plot}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:chebyt_plot"
 
 \end_inset
 
-Tschebyscheff-Funktionen 
+
+\noun on
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
+\noun default
+-Funktionen 
 \begin_inset Formula $\T_{n}(x)$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -769,7 +821,7 @@ Die Funktionen
 \begin_inset Formula $[-1,+1]$
 \end_inset
 
- f¸r eine gegebene Ordnung die Nullinie gleichm‰ﬂig
+ f√ºr eine gegebene Ordnung die Nullinie gleichm√§√üig
 \begin_inset Foot
 status open
 
@@ -778,7 +830,7 @@ Die Funktion
 \begin_inset Formula $\T_{n}(x)$
 \end_inset
 
- erf¸llt im Sinne der gleichm‰ﬂigen Approximation 
+ erf√ºllt im Sinne der gleichm√§√üigen Approximation 
 \begin_inset Formula $\left\Vert f-g_{n}\right\Vert _{\infty}\Rightarrow\min$
 \end_inset
 
@@ -792,9 +844,10 @@ Die Funktion
 \end_inset
 
 .
- Auﬂerdem bilden die 
+ Au√üerdem bilden die 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 'schen Funktionen ein sogenanntes Orthogonalsystem
 \begin_inset Foot
@@ -804,12 +857,13 @@ status open
 Orthogonale Funktionen spielen eine wichtige Rolle bei der stetigen Approximatio
 n im Mittel (
 \noun on
-Gauﬂ
+Gau√ü
 \noun default
--Approximation), denn sie ermˆglichen die einfache Berechnung der Koeffizienten
- f¸r die N‰herungsfunktion\InsetSpace ~
+-Approximation), denn sie erm√∂glichen die einfache Berechnung der Koeffizienten
+ f√ºr die N√§herungsfunktion\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Koerner:1988,Oelschlaegel:1974}
+\begin_inset LatexCommand cite
+key "Koerner:1988,Oelschlaegel:1974"
 
 \end_inset
 
@@ -818,11 +872,11 @@ Gauﬂ
 
 \end_inset
 
-, welches f¸r 
+, welches f√ºr 
 \begin_inset Formula $n>0$
 \end_inset
 
- durch die Beziehung 
+ durch die Beziehung
 \end_layout
 
 \begin_layout Emph(asized)
@@ -839,19 +893,24 @@ Gauﬂ
 \begin_layout Standard
 gekennzeichnet ist\InsetSpace ~
 
-\begin_inset LatexCommand \cite[1.2.3.]{Haemmerlin:1992}
+\begin_inset LatexCommand cite
+after "1.2.3."
+key "Haemmerlin:1992"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[22.5]{Abramowitz:1972}
+\begin_inset LatexCommand cite
+after "22.5"
+key "Abramowitz:1972"
 
 \end_inset
 
 .
- Beweisen l‰ﬂt sich diese Relation ausgehend von der Parameterdarstellung\InsetSpace ~
+ Beweisen l√§√üt sich diese Relation ausgehend von der Parameterdarstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_param_def"
 
 \end_inset
 
@@ -859,7 +918,7 @@ gekennzeichnet ist\InsetSpace ~
 \begin_inset Formula $dx/d\varphi=-\sin\varphi=-\sqrt{1-x^{2}}$
 \end_inset
 
-, wenn man das Integral folgendermaﬂen schreibt:
+, wenn man das Integral folgenderma√üen schreibt:
 \end_layout
 
 \begin_layout Standard
@@ -876,7 +935,7 @@ Durch Erweiterung des Integrationsintervalls auf
 \begin_inset Formula $[-\pi,+\pi]$
 \end_inset
 
- erh‰lt man ein bekanntes (vollst‰ndiges) trigonometrisches Integral.
+ erh√§lt man ein bekanntes (vollst√§ndiges) trigonometrisches Integral.
 \end_layout
 
 \begin_layout Standard
@@ -889,12 +948,13 @@ Durch Erweiterung des Integrationsintervalls auf
 \end_layout
 
 \begin_layout Standard
-Die rechte Seite der letzten Gleichung enth‰lt das sogenannte 
+Die rechte Seite der letzten Gleichung enth√§lt das sogenannte 
 \noun on
 Kronecker
 \noun default
 -Symbol
-\begin_inset LatexCommand \index{Kronecker-Symbol@\noun{Kronecker}-Symbol}
+\begin_inset LatexCommand index
+name "Kronecker-Symbol@\\noun{Kronecker}-Symbol"
 
 \end_inset
 
@@ -923,7 +983,8 @@ Die Nullstellen
 
  sind leicht aus der (reellen) Parameterdarstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_param_def"
 
 \end_inset
 
@@ -936,7 +997,7 @@ Die Nullstellen
 status open
 
 \begin_layout Standard
-Imagin‰re (oder komplexe) Nullstellen existieren nicht, da 
+Imagin√§re (oder komplexe) Nullstellen existieren nicht, da 
 \begin_inset Formula $\T_{n}(\ji x)=\cosh(n\arcosh|x|)$
 \end_inset
 
@@ -960,7 +1021,7 @@ n\varphi_{k} & =\frac{\pi}{2}+k\pi\\
 \end_layout
 
 \begin_layout Standard
-Damit gilt f¸r 
+Damit gilt f√ºr 
 \begin_inset Formula $\zn{x}{k}$
 \end_inset
 
@@ -979,21 +1040,21 @@ Damit gilt f¸r
 \end_layout
 
 \begin_layout Standard
-Die Einschr‰nkung des Wertebereiches f¸r 
+Die Einschr√§nkung des Wertebereiches f√ºr 
 \begin_inset Formula $k$
 \end_inset
 
- ist an dieser Stelle sinnvoll, da sich wegen der Periodizit‰t des Cosinus
- sonst Werte f¸r 
+ ist an dieser Stelle sinnvoll, da sich wegen der Periodizit√§t des Cosinus
+ sonst Werte f√ºr 
 \begin_inset Formula $\zn{x}{k}$
 \end_inset
 
- wiederholen w¸rden
+ wiederholen w√ºrden
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Die Anzahl der Nullstellen deckt sich auﬂerdem ausgezeichnet mit dem Grad
+Die Anzahl der Nullstellen deckt sich au√üerdem ausgezeichnet mit dem Grad
  
 \begin_inset Formula $n$
 \end_inset
@@ -1004,7 +1065,8 @@ Die Anzahl der Nullstellen deckt sich auﬂerdem ausgezeichnet mit dem Grad
 
  in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
@@ -1022,7 +1084,7 @@ Die Anzahl der Nullstellen deckt sich auﬂerdem ausgezeichnet mit dem Grad
 \begin_inset Formula $\zn{x}{k}=0$
 \end_inset
 
- f¸r den Index 
+ f√ºr den Index 
 \begin_inset Formula $k=(n+1)/2$
 \end_inset
 
@@ -1061,8 +1123,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:chebyt_roots}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:chebyt_roots"
 
 \end_inset
 
@@ -1078,8 +1144,13 @@ Nullstellenverteilung (
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Betragsm‰ﬂig wiederholen sich also die Nullstellen wenn 
+Betragsm√§√üig wiederholen sich also die Nullstellen wenn 
 \begin_inset Formula $k$
 \end_inset
 
@@ -1087,7 +1158,7 @@ Betragsm‰ﬂig wiederholen sich also die Nullstellen wenn
 \begin_inset Formula $(n+1)/2$
 \end_inset
 
- ¸ber- 
+ √ºber- 
 \begin_inset ERT
 status collapsed
 
@@ -1115,13 +1186,15 @@ cf
 
  Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:chebyt_roots}
+\begin_inset LatexCommand ref
+reference "fig:chebyt_roots"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Haemmerlin:1992}
+\begin_inset LatexCommand cite
+key "Haemmerlin:1992"
 
 \end_inset
 
@@ -1130,7 +1203,7 @@ cf
 \begin_inset Formula $\zn{x}{n-k+1}=-\zn{x}{k}$
 \end_inset
 
- ausgedr¸ckt werden.
+ ausgedr√ºckt werden.
 \end_layout
 
 \begin_layout Standard
@@ -1174,7 +1247,7 @@ Die Linearfaktordarstellung des Polynoms
 \end_layout
 
 \begin_layout Standard
-F¸r gerades 
+F√ºr gerades 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1197,7 +1270,8 @@ Erste Ableitung
 \begin_layout Standard
 Die erste Ableitung ist zum Beispiel aus der Parameterform\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_param_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_param_def"
 
 \end_inset
 
@@ -1208,7 +1282,8 @@ status open
 \begin_layout Standard
 Noch einfacher ist die Anwendung der Kettenregel auf die analytische Darstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_cos_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_cos_def"
 
 \end_inset
 
@@ -1295,7 +1370,8 @@ Die Extremwerte liegen offensichtlich bei
 
  recht einfach aus Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_poly}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_poly"
 
 \end_inset
 
@@ -1314,7 +1390,7 @@ Die Extremwerte liegen offensichtlich bei
 \end_layout
 
 \begin_layout Standard
-ƒhnlich wie 
+√Ñhnlich wie 
 \begin_inset Formula $\T_{n}$
 \end_inset
 
@@ -1322,7 +1398,7 @@ Die Extremwerte liegen offensichtlich bei
 \begin_inset Formula $\T'_{n}(x)$
 \end_inset
 
- in Abh‰ngigkeit von 
+ in Abh√§ngigkeit von 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1368,9 +1444,10 @@ Die gleiche Differentialgleichung ergibt sich, wenn man
 \end_inset
 
  substituiert.
- Auﬂerdem steckt dieser Ansatz schon implizit in Gleichung\InsetSpace ~
+ Au√üerdem steckt dieser Ansatz schon implizit in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_diff_irrat}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_diff_irrat"
 
 \end_inset
 
@@ -1382,12 +1459,16 @@ Die gleiche Differentialgleichung ergibt sich, wenn man
 
  entwickeln\InsetSpace ~
 
-\begin_inset LatexCommand \cite[45]{Koerner:1988}
+\begin_inset LatexCommand cite
+after "45"
+key "Koerner:1988"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[\S\,4]{Meinardus:1964}
+\begin_inset LatexCommand cite
+after "\\S\\,4"
+key "Meinardus:1964"
 
 \end_inset
 
@@ -1406,11 +1487,16 @@ Die gleiche Differentialgleichung ergibt sich, wenn man
 \end_layout
 
 \begin_layout Standard
-Sie wird durch die Tschebyscheff-Polynome 
+Sie wird durch die 
+\noun on
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
+\noun default
+-Polynome 
 \begin_inset Formula $\T_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}$
 \end_inset
 
- erf¸llt, deren Koeffizienten 
+ erf√ºllt, deren Koeffizienten 
 \begin_inset Formula $a_{k}$
 \end_inset
 
@@ -1420,7 +1506,8 @@ Sie wird durch die Tschebyscheff-Polynome
 \begin_layout Itemize
 rekursiv durch Anwendung von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
@@ -1430,7 +1517,8 @@ rekursiv durch Anwendung von Gleichung\InsetSpace ~
 \begin_layout Itemize
 durch Berechnung der Nullstellen nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_roots}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_roots"
 
 \end_inset
 
@@ -1442,9 +1530,10 @@ durch Berechnung der Nullstellen nach Formel\InsetSpace ~
 \end_layout
 
 \begin_layout Itemize
-oder aber durch Lˆsung des sich aus der Differentialgleichung\InsetSpace ~
+oder aber durch L√∂sung des sich aus der Differentialgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_deqn}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_deqn"
 
 \end_inset
 
@@ -1457,11 +1546,12 @@ Die Bestimmung der Koeffizienten aus der Differentialgleichung ist wohl
  eher ein theoretischer Weg.
  Praktisch wird fast immer die Rekursionsformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_recursiv_def}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_recursiv_def"
 
 \end_inset
 
- oder aber eine geschlossene Lˆsungsformel (die hier nicht abgeleitet wurde,
+ oder aber eine geschlossene L√∂sungsformel (die hier nicht abgeleitet wurde,
  
 \begin_inset ERT
 status inlined
@@ -1477,7 +1567,9 @@ cf
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[\S\,4.2.]{Meinardus:1964}
+\begin_inset LatexCommand cite
+after "\\S\\,4.2."
+key "Meinardus:1964"
 
 \end_inset
 
@@ -1490,23 +1582,30 @@ cf
 \end_layout
 
 \begin_layout Standard
-bestimmt werden kˆnnen.
+bestimmt werden k√∂nnen.
 \end_layout
 
 \begin_layout Section
 
 \noun on
-\begin_inset LatexCommand \index{Tschebyscheff-Funktion@\noun{Tschebyscheff}-Funktion!zweiter Art}
+\begin_inset LatexCommand index
+name "Tschebyscheff-Funktion@\\noun{Tschebyscheff}-Funktion!zweiter Art"
 
 \end_inset
 
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 -Funktionen zweiter Art
 \end_layout
 
 \begin_layout Standard
-Die Tschebyscheff-Funktion zweiter Art ist definiert durch
+Die 
+\noun on
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
+\noun default
+-Funktion zweiter Art ist definiert durch
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1521,11 +1620,12 @@ Die Tschebyscheff-Funktion zweiter Art ist definiert durch
 \begin_layout Standard
 Vergleich mit Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:chebyt_diff_trigo}
+\begin_inset LatexCommand ref
+reference "eq:chebyt_diff_trigo"
 
 \end_inset
 
- zeigt, daﬂ es sich bei 
+ zeigt, da√ü es sich bei 
 \begin_inset Formula $\U_{n}(x)$
 \end_inset
 
@@ -1547,7 +1647,7 @@ Vergleich mit Formel\InsetSpace ~
 
 \begin_layout Standard
 Es handelt sich bei diesen Funktionen ebenfalls um orthogonale Polynome,
- die nach folgender Formel auch rekursiv beschrieben werden kˆnnen.
+ die nach folgender Formel auch rekursiv beschrieben werden k√∂nnen.
 \end_layout
 
 \begin_layout Standard
@@ -1562,7 +1662,8 @@ Es handelt sich bei diesen Funktionen ebenfalls um orthogonale Polynome,
 \begin_layout Standard
 In Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:chebyu_plot}
+\begin_inset LatexCommand ref
+reference "fig:chebyu_plot"
 
 \end_inset
 
@@ -1570,7 +1671,7 @@ In Abbildung\InsetSpace ~
 \begin_inset Formula $\U_{n}(x)$
 \end_inset
 
- f¸r unterschiedlichen Grad 
+ f√ºr unterschiedlichen Grad 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1594,13 +1695,27 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:chebyu_plot}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:chebyu_plot"
 
 \end_inset
 
-Tschebyscheff-Funktionen 
+
+\noun on
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
+\noun default
+-Funktionen 
 \begin_inset Formula $\U_{n}(x)$
+\end_inset
+
+
+\end_layout
+
 \end_inset
 
 
@@ -1632,18 +1747,21 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Abramowitz:1972}
+\begin_inset LatexCommand cite
+key "Abramowitz:1972"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite{Haemmerlin:1992}
+\begin_inset LatexCommand cite
+key "Haemmerlin:1992"
 
 \end_inset
 
  oder\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Meinardus:1964}
+\begin_inset LatexCommand cite
+key "Meinardus:1964"
 
 \end_inset
 

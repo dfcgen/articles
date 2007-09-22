@@ -1,11 +1,18 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrartcl
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !bh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -25,7 +33,8 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
 \end_header
 
 \begin_body
@@ -39,7 +48,7 @@ Properties of algebraic polynomials
 \end_layout
 
 \begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.13 2006-06-18 10:00:24 ralf Exp $
+Version: $Id: polynomials.lyx,v 1.14 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \end_inset
@@ -53,11 +62,12 @@ Algebraische Funktionen
 
 \begin_layout Standard
 Algebraische Funktionen
-\begin_inset LatexCommand \index{Funktion!algebraische}
+\begin_inset LatexCommand index
+name "Funktion!algebraische"
 
 \end_inset
 
- verknüpfen ein Argument 
+ verknÃ¼pfen ein Argument 
 \begin_inset Formula $x$
 \end_inset
 
@@ -65,16 +75,16 @@ Algebraische Funktionen
 \begin_inset Formula $y$
 \end_inset
 
- so, daß sie einer algebraischen Gleichung der Form 
+ so, daÃŸ sie einer algebraischen Gleichung der Form 
 \begin_inset Formula $g(x,y)=0$
 \end_inset
 
- genügen.
+ genÃ¼gen.
  
 \begin_inset Formula $g(x,y)$
 \end_inset
 
- enthält dabei Verknüpfungen von 
+ enthÃ¤lt dabei VerknÃ¼pfungen von 
 \begin_inset Formula $x$
 \end_inset
 
@@ -104,11 +114,11 @@ wobei
 \end_inset
 
  sind.
- Für 
+ FÃ¼r 
 \begin_inset Formula $g(x,y)=0$
 \end_inset
 
- kann in einfachen Spezialfällen (
+ kann in einfachen SpezialfÃ¤llen (
 \begin_inset ERT
 status collapsed
 
@@ -125,7 +135,7 @@ eg
 \begin_inset Formula $m=1$
 \end_inset
 
-) eine explizite Lösungsformel 
+) eine explizite LÃ¶sungsformel 
 \begin_inset Formula $y=f(x)$
 \end_inset
 
@@ -134,7 +144,8 @@ eg
 
 \begin_layout Itemize
 ein Polynom (ganzrationale Funktion
-\begin_inset LatexCommand \index{Funktion!ganzrationale}
+\begin_inset LatexCommand index
+name "Funktion!ganzrationale"
 
 \end_inset
 
@@ -143,7 +154,8 @@ ein Polynom (ganzrationale Funktion
 
 \begin_layout Itemize
 eine gebrochen rationale Funktion
-\begin_inset LatexCommand \index{Funktion!gebrochen rationale}
+\begin_inset LatexCommand index
+name "Funktion!gebrochen rationale"
 
 \end_inset
 
@@ -152,7 +164,8 @@ eine gebrochen rationale Funktion
 
 \begin_layout Itemize
 oder eine irrationale Funktion ist
-\begin_inset LatexCommand \index{Funktion!irrationale}
+\begin_inset LatexCommand index
+name "Funktion!irrationale"
 
 \end_inset
 
@@ -160,18 +173,20 @@ oder eine irrationale Funktion ist
 \end_layout
 
 \begin_layout Standard
-Die beiden ersten Fälle werden deshalb rational genannt, weil ein Ergebnis
+Die beiden ersten FÃ¤lle werden deshalb rational genannt, weil ein Ergebnis
  nach Anwendung endlich vieler (rationaler) Rechenoperationen (Addition,
- Subtraktion, Multiplikation, Division) zur Verfügung steht.
+ Subtraktion, Multiplikation, Division) zur VerfÃ¼gung steht.
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:poly}
+\begin_inset LatexCommand label
+name "sec:poly"
 
 \end_inset
 
 Ganzrationale Funktionen (Polynome
-\begin_inset LatexCommand \index{Polynome|(}
+\begin_inset LatexCommand index
+name "Polynome|("
 
 \end_inset
 
@@ -184,7 +199,8 @@ Definition
 
 \begin_layout Standard
 Polynome sind ganzrationale Funktionen
-\begin_inset LatexCommand \index{Funktion!ganzrationale}
+\begin_inset LatexCommand index
+name "Funktion!ganzrationale"
 
 \end_inset
 
@@ -211,8 +227,9 @@ mit (hier reellen) Koeffizienten
 \end_inset
 
  ist.
- Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors
-\begin_inset LatexCommand \index{Vorfaktor}
+ Eine nachtrÃ¤gliche Normierung ist durch EinfÃ¼hrung eines Vorfaktors
+\begin_inset LatexCommand index
+name "Vorfaktor"
 
 \end_inset
 
@@ -220,7 +237,7 @@ mit (hier reellen) Koeffizienten
 \begin_inset Formula $C=a_{n}$
 \end_inset
 
- immer möglich.
+ immer mÃ¶glich.
 \end_layout
 
 \begin_layout Standard
@@ -235,7 +252,8 @@ p(x)=C\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^
 \begin_layout Standard
 Die letzte Form ist vor allem dann von Bedeutung, wenn die Linearfaktordarstellu
 ng
-\begin_inset LatexCommand \index{Linearfaktoren}
+\begin_inset LatexCommand index
+name "Linearfaktoren"
 
 \end_inset
 
@@ -248,7 +266,8 @@ ng
 \end_inset
 
  Anwendung finden soll (Hauptsatz der Algebra
-\begin_inset LatexCommand \index{Algebra!Hauptsatz der}
+\begin_inset LatexCommand index
+name "Algebra!Hauptsatz der"
 
 \end_inset
 
@@ -294,11 +313,12 @@ Interessant ist jedoch die Gewinnung der ersten Ableitung von
 .
  Dazu geht man von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_prd}
+\begin_inset LatexCommand ref
+reference "eq:poly_prd"
 
 \end_inset
 
- aus und verwendet (wegen der störenden Produkte) logarithmische Differentiation
+ aus und verwendet (wegen der stÃ¶renden Produkte) logarithmische Differentiation
  in Verbindung mit der Regel 
 \begin_inset Formula $\left[\ln x\right]'=x^{-1}$
 \end_inset
@@ -324,14 +344,15 @@ Dieses Ergebnis
 status open
 
 \begin_layout Standard
-Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
+Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation fÃ¼r
  
 \begin_inset Formula $n$
 \end_inset
 
  Faktoren (von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_prd}
+\begin_inset LatexCommand ref
+reference "eq:poly_prd"
 
 \end_inset
 
@@ -340,12 +361,12 @@ Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
 
 \end_inset
 
- gibt uns die Möglichkeit die Ableitung eines Polynoms an Stelle 
+ gibt uns die MÃ¶glichkeit die Ableitung eines Polynoms an Stelle 
 \begin_inset Formula $x\neq\zn{x}{i}$
 \end_inset
 
  mittels der Nullstellen zu bestimmen.
- Für die Berechnung der Ableitung an einer der Nullstellen 
+ FÃ¼r die Berechnung der Ableitung an einer der Nullstellen 
 \begin_inset Formula $\zn{x}{k}$
 \end_inset
 
@@ -354,7 +375,7 @@ Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
 \end_inset
 
  zuerst ungeeignet.
- Schreibt man die ganze Formel aber ausführlich und setzt 
+ Schreibt man die ganze Formel aber ausfÃ¼hrlich und setzt 
 \begin_inset Formula $x=\zn{x}{k}$
 \end_inset
 
@@ -371,7 +392,7 @@ p'(\zn{x}{k})=\frac{p(\zn{x}{k})}{\zn{x}{k}-\zn{x}{1}}+\frac{p(\zn{x}{k})}{\zn{x
 \end_layout
 
 \begin_layout Standard
-dann ist zu erkennen, daß
+dann ist zu erkennen, daÃŸ
 \end_layout
 
 \begin_layout Enumerate
@@ -387,7 +408,7 @@ wegen
 \end_layout
 
 \begin_layout Enumerate
-für 
+fÃ¼r 
 \begin_inset Formula $i=k$
 \end_inset
 
@@ -412,7 +433,7 @@ resp
 \begin_inset Formula $x-\zn{x}{k}$
 \end_inset
 
-, welcher in Zähler und Nenner vorhanden ist, gekürzt werden kann.
+, welcher in ZÃ¤hler und Nenner vorhanden ist, gekÃ¼rzt werden kann.
 \end_layout
 
 \begin_layout Standard
@@ -439,18 +460,21 @@ Nullstellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Nullstellen!von Polynomen}
+\begin_inset LatexCommand index
+name "Nullstellen!von Polynomen"
 
 \end_inset
 
 Bei der Linearfaktordarstellung
-\begin_inset LatexCommand \index{Linearfaktoren}
+\begin_inset LatexCommand index
+name "Linearfaktoren"
 
 \end_inset
 
  nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_prd}
+\begin_inset LatexCommand ref
+reference "eq:poly_prd"
 
 \end_inset
 
@@ -462,7 +486,8 @@ F.
 \noun default
  in seiner Dissertation\InsetSpace ~
 1799 erstmals bewiesenen Hauptsatz der Algebra
-\begin_inset LatexCommand \index{Algebra!Hauptsatz der}
+\begin_inset LatexCommand index
+name "Algebra!Hauptsatz der"
 
 \end_inset
 
@@ -478,9 +503,10 @@ Jedes algebraische Polynom
 \begin_inset Formula $n$
 \end_inset
 
- komplexe Lösungen\InsetSpace ~
+ komplexe LÃ¶sungen\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Gauss:1799}
+\begin_inset LatexCommand cite
+key "Gauss:1799"
 
 \end_inset
 
@@ -492,18 +518,20 @@ Bei Polynomen mit reellen Koeffizienten
 \begin_inset Formula $a_{i}$
 \end_inset
 
- müssen diese Nullstellen entweder konjugiert komplex (als Spezialfall imaginär)
+ mÃ¼ssen diese Nullstellen entweder konjugiert komplex (als Spezialfall imaginÃ¤r)
  auftreten oder aber reell sein.
- Wäre diese Bedingung nicht erfüllt, dann würde Ausmultiplizieren der Produktdar
+ WÃ¤re diese Bedingung nicht erfÃ¼llt, dann wÃ¼rde Ausmultiplizieren der Produktdar
 stellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_prd}
+\begin_inset LatexCommand ref
+reference "eq:poly_prd"
 
 \end_inset
 
  (zur Gewinnung der Summenformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_sum}
+\begin_inset LatexCommand ref
+reference "eq:poly_sum"
 
 \end_inset
 
@@ -511,11 +539,11 @@ stellung\InsetSpace ~
 \begin_inset Formula $a_{i}$
 \end_inset
 
- führen.
+ fÃ¼hren.
 \end_layout
 
 \begin_layout Standard
-Nullstellen eines Polynoms müssen nicht notwendigerweise alle verschieden
+Nullstellen eines Polynoms mÃ¼ssen nicht notwendigerweise alle verschieden
  sein, oftmals sind 
 \begin_inset Quotes eld
 \end_inset
@@ -525,7 +553,7 @@ mehrfache
 \end_inset
 
  Nullstellen vorhanden.
- Dieser Umstand spiegelt sich dann in der Darstellungsmöglichkeit als Linearfakt
+ Dieser Umstand spiegelt sich dann in der DarstellungsmÃ¶glichkeit als Linearfakt
 or der Form 
 \begin_inset Formula $(x-\zn{x}{k})^{m}$
 \end_inset
@@ -544,7 +572,7 @@ or der Form
 \end_inset
 
  an dieser Stelle zu tun.
- Um diesen Zusammenhang herzustellen gehen wir davon aus, daß 
+ Um diesen Zusammenhang herzustellen gehen wir davon aus, daÃŸ 
 \begin_inset Formula $p(x)$
 \end_inset
 
@@ -574,11 +602,11 @@ vorliegt.
 \begin_inset Formula $\zn{x}{i}\neq\zn{x}{},\msp i=1,\ldots,n-m$
 \end_inset
 
- (ansonsten wäre 
+ (ansonsten wÃ¤re 
 \begin_inset Formula $m$
 \end_inset
 
- zu erhöhen).
+ zu erhÃ¶hen).
  Die Ableitung von 
 \begin_inset Formula $p(x)$
 \end_inset
@@ -605,8 +633,8 @@ Der rechte Faktor hat aber
 \begin_inset Formula $q_{1}(x)$
 \end_inset
 
- abgekürzt werden.
- Die höheren Ableitungen ergeben sich so rekursiv zu
+ abgekÃ¼rzt werden.
+ Die hÃ¶heren Ableitungen ergeben sich so rekursiv zu
 \end_layout
 
 \begin_layout Standard
@@ -649,7 +677,8 @@ ie
 
 -te jedoch nicht.
  Diese Aussage stellt eine Verallgemeinerung des Begriffes der Vielfachheit
-\begin_inset LatexCommand \index{Nullstellen!Vielfachheit}
+\begin_inset LatexCommand index
+name "Nullstellen!Vielfachheit"
 
 \end_inset
 
@@ -658,8 +687,9 @@ ie
 status open
 
 \begin_layout Standard
-Außerdem wird eine Funktion
-\begin_inset LatexCommand \index{Funktion!maximal flache}
+AuÃŸerdem wird eine Funktion
+\begin_inset LatexCommand index
+name "Funktion!maximal flache"
 
 \end_inset
 
@@ -679,12 +709,14 @@ Außerdem wird eine Funktion
 Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
  von den Koeffizienten in Summenformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_sum}
+\begin_inset LatexCommand ref
+reference "eq:poly_sum"
 
 \end_inset
 
  Aussagen zu deren Lage machen
-\begin_inset LatexCommand \index{Nullstellen!Lage}
+\begin_inset LatexCommand index
+name "Nullstellen!Lage"
 
 \end_inset
 
@@ -693,7 +725,7 @@ Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
 \noun on
 Cauchy
 \noun default
- erwähnt, weitere findet man 
+ erwÃ¤hnt, weitere findet man 
 \begin_inset ERT
 status collapsed
 
@@ -708,7 +740,9 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.2.2.]{Kaiser:1980}
+\begin_inset LatexCommand cite
+after "6.2.2."
+key "Kaiser:1980"
 
 \end_inset
 
@@ -720,7 +754,7 @@ Ist
 \begin_inset Formula $A$
 \end_inset
 
- der Maximalwert der Beträge aller Koeffizienten 
+ der Maximalwert der BetrÃ¤ge aller Koeffizienten 
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -732,7 +766,7 @@ Ist
 \begin_inset Formula $A=\max\left(\left|a_{0}\right|,\left|a_{1}\right|,\left|a_{2}\right|\ldots\left|a_{n-1}\right|\right)$
 \end_inset
 
-, dann sind die Beträge sämtlicher Nullstellen kleiner als
+, dann sind die BetrÃ¤ge sÃ¤mtlicher Nullstellen kleiner als
 \end_layout
 
 \begin_deeper
@@ -747,7 +781,7 @@ Ist
 
 \end_deeper
 \begin_layout Standard
-An einer Nullstelle gilt bekanntermaßen 
+An einer Nullstelle gilt bekanntermaÃŸen 
 \begin_inset Formula $p(x)=0$
 \end_inset
 
@@ -782,7 +816,7 @@ und betrachten den Wert von
 \end_inset
 
 .
- Er ist sicherlich dann am größten, wenn alle Koeffizienten positiv und
+ Er ist sicherlich dann am grÃ¶ÃŸten, wenn alle Koeffizienten positiv und
  nahezu dem Wert 
 \begin_inset Formula $A$
 \end_inset
@@ -806,8 +840,8 @@ und gleichbedeutend
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-\left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\cdots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
-\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\cdots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\mperiod\end{align*}
+\left|r(\zn{x}{})\right| & \leq A\left(\left|\zn[n-1]{x}{}\right|+\ldots+\left|\zn[2]{x}{}\right|+\left|\zn{x}{}\right|+1\right)\\
+\left|a_{n}\zn[n]{x}{}\right| & \leq A\left(\left|\zn{x}{}\right|^{n-1}+\ldots+\left|\zn{x}{}\right|^{2}+\left|\zn{x}{}\right|+1\right)\mperiod\end{align*}
 
 \end_inset
 
@@ -846,7 +880,7 @@ Ausklammern von
 \begin_inset Formula $\left|\zn{x}{}\right|^{n}$
 \end_inset
 
- führt zu
+ fÃ¼hrt zu
 \end_layout
 
 \begin_layout Standard
@@ -863,7 +897,7 @@ und damit zu
 \noun on
 Cauchy
 \noun default
-'s oberer Grenze für den Betrag der Nullstellen.
+'s oberer Grenze fÃ¼r den Betrag der Nullstellen.
 \end_layout
 
 \begin_layout Standard
@@ -876,7 +910,8 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Polynome|)}
+\begin_inset LatexCommand index
+name "Polynome|)"
 
 \end_inset
 
@@ -892,17 +927,18 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Funktion!gebrochen rationale}
+\begin_inset LatexCommand index
+name "Funktion!gebrochen rationale"
 
 \end_inset
 
 Dieser Typ der algebraischen Funktionen ist als Quotient zweier Polynome
- erklärbar, wobei das Nennerpolynom nicht konstant sein darf
+ erklÃ¤rbar, wobei das Nennerpolynom nicht konstant sein darf
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Sonst würde es sich um eine ganzrationale Funktion handeln.
+Sonst wÃ¼rde es sich um eine ganzrationale Funktion handeln.
 \end_layout
 
 \end_inset
@@ -922,12 +958,13 @@ r(x)=\frac{u(x)}{v(x)}=\frac{\poly{a}{x}{m}}{\poly{b}{x}{n}}=\frac{\sum\limits _
 \begin_layout Standard
 Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:poly}
+\begin_inset LatexCommand ref
+reference "sec:poly"
 
 \end_inset
 
- lassen sich hierbei auf Nenner- und Zähler anwenden, was zu weiteren Darstellun
-gsmöglichkeiten führt
+ lassen sich hierbei auf Nenner- und ZÃ¤hler anwenden, was zu weiteren Darstellun
+gsmÃ¶glichkeiten fÃ¼hrt
 \begin_inset Foot
 status open
 
@@ -938,20 +975,23 @@ Den Spezialfall
 
  bezeichnet man als gebrochen-lineare Funktion, im Komplexen auch als 
 \noun on
-Möbius
+MÃ¶bius
 \noun default
 -Transformation
-\begin_inset LatexCommand \index{Moebius-Transformation@\noun{Möbius}-Transformation}
+\begin_inset LatexCommand index
+name "Moebius-Transformation@\\noun{MÃ¶bius}-Transformation"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Moebius-@\noun{Möbius}-}
+\begin_inset LatexCommand index
+name "Transformation!Moebius-@\\noun{MÃ¶bius}-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!gebrochen-lineare}
+\begin_inset LatexCommand index
+name "Transformation!gebrochen-lineare"
 
 \end_inset
 
@@ -968,8 +1008,8 @@ Asymptotisches Verhalten
 \end_layout
 
 \begin_layout Standard
-Abhängig von der Differenz zwischen dem Grad von Nenner- und Zählerpolynom
- lassen sich drei Fälle in Bezug auf das asymptotischen Verhalten von 
+AbhÃ¤ngig von der Differenz zwischen dem Grad von Nenner- und ZÃ¤hlerpolynom
+ lassen sich drei FÃ¤lle in Bezug auf das asymptotischen Verhalten von 
 \begin_inset Formula $r(x)$
 \end_inset
 
@@ -977,7 +1017,7 @@ Abhängig von der Differenz zwischen dem Grad von Nenner- und Zählerpolynom
 \end_layout
 
 \begin_layout Enumerate
-Für 
+FÃ¼r 
 \begin_inset Formula $n>m$
 \end_inset
 
@@ -990,7 +1030,7 @@ Für
 \end_inset
 
 .
- Solche Funktionen können mit Hilfe ihrer 
+ Solche Funktionen kÃ¶nnen mit Hilfe ihrer 
 \begin_inset Formula $n$
 \end_inset
 
@@ -1026,7 +1066,8 @@ Im Fall
 \end_inset
 
  fachen Pol im Unendlichen
-\begin_inset LatexCommand \index{Pol!im Unendlichen}
+\begin_inset LatexCommand index
+name "Pol!im Unendlichen"
 
 \end_inset
 
@@ -1038,7 +1079,7 @@ Sollte jedoch
 \begin_inset Formula $n=m$
 \end_inset
 
- gelten, dann nähert sich 
+ gelten, dann nÃ¤hert sich 
 \begin_inset Formula $r(x)$
 \end_inset
 
@@ -1047,8 +1088,8 @@ Sollte jedoch
 \end_inset
 
 .
- Eine Partialbruchzerlegung ist in diesem Fall ebenfalls möglich, allerdings
- muß vorher die Konstante 
+ Eine Partialbruchzerlegung ist in diesem Fall ebenfalls mÃ¶glich, allerdings
+ muÃŸ vorher die Konstante 
 \begin_inset Formula $a_{n}/b_{n}$
 \end_inset
 
@@ -1066,7 +1107,7 @@ r(x)=\frac{u(x)}{v(x)}=\frac{u_{1}(x)}{v(x)}+\frac{a_{n}}{b_{n}}=\frac{u_{1}(x)+
 \end_layout
 
 \begin_layout Standard
-Dadurch erhält man ein Zählerpolynom 
+Dadurch erhÃ¤lt man ein ZÃ¤hlerpolynom 
 \begin_inset Formula $u_{1}(x)$
 \end_inset
 
@@ -1074,7 +1115,7 @@ Dadurch erhält man ein Zählerpolynom
 \begin_inset Formula $n-1$
 \end_inset
 
-, dessen höchstwertiger Koeffizient also verschwindet.
+, dessen hÃ¶chstwertiger Koeffizient also verschwindet.
 \end_layout
 
 \begin_layout Standard
@@ -1105,7 +1146,7 @@ r'(x)=\frac{u'(x)v(x)-u(x)v'(x)}{v^{2}(x)},\label{eq:rational_func_deriv_base}\e
 \end_layout
 
 \begin_layout Standard
-gefolgt von Einsetzen der Ableitungsformeln für Polynome, ermittelt werden.
+gefolgt von Einsetzen der Ableitungsformeln fÃ¼r Polynome, ermittelt werden.
 \end_layout
 
 \begin_layout Standard
@@ -1134,21 +1175,23 @@ u(x) & =a_{m}\prod_{i=1}^{m}(x-\zn{x}{i}) & v(x) & =b_{n}\prod_{l=1}^{n}(x-\pn{x
 \begin_layout Standard
 Einsetzen der Ableitungsformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:poly_prd_deriv}
+\begin_inset LatexCommand ref
+reference "eq:poly_prd_deriv"
 
 \end_inset
 
- für Polynome in die Quotientenregel\InsetSpace ~
+ fÃ¼r Polynome in die Quotientenregel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:rational_func_deriv_base}
+\begin_inset LatexCommand ref
+reference "eq:rational_func_deriv_base"
 
 \end_inset
 
-, sowie nachfolgendes Kürzen von 
+, sowie nachfolgendes KÃ¼rzen von 
 \begin_inset Formula $v(x)$
 \end_inset
 
-, führt zu
+, fÃ¼hrt zu
 \end_layout
 
 \begin_layout Standard

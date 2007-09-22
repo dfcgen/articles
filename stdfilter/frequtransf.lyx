@@ -1,11 +1,18 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
-\textclass scrartcl
+\textclass scrbookams
 \language german
 \inputencoding auto
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !tbh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize a4paper
 \use_geometry false
 \use_amsmath 1
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -26,6 +34,7 @@
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
+\author "" 
 \end_header
 
 \begin_body
@@ -35,7 +44,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: frequtransf.lyx,v 1.4 2006-06-18 10:00:24 ralf Exp $
+Version: $Id: frequtransf.lyx,v 1.5 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \end_inset
@@ -48,31 +57,39 @@ Einleitung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Frequenztransformationen|(}
+\begin_inset LatexCommand index
+name "Frequenztransformationen|("
 
 \end_inset
 
-Aus den Tiefpaﬂapproximationen kann man durch Transformation der logarithmischen
+Aus den Tiefpa√üapproximationen kann man durch Transformation der logarithmischen
  Frequenz\SpecialChar \-
-achse relativ leicht Filtertypen wie Hochpaﬂ, Bandpaﬂ oder Bandsperre
+achse relativ leicht Filtertypen wie Hochpa√ü, Bandpa√ü oder Bandsperre
  gewinnen\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Papoulis:1956}
+\begin_inset LatexCommand cite
+key "Papoulis:1956"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[5.4~ff.]{Zverev:1967}
+\begin_inset LatexCommand cite
+after "5.4~ff."
+key "Zverev:1967"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[4]{Fritzsche:1979a}
+\begin_inset LatexCommand cite
+after "4"
+key "Fritzsche:1979a"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[66.1]{Chen:1995}
+\begin_inset LatexCommand cite
+after "66.1"
+key "Chen:1995"
 
 \end_inset
 
@@ -90,7 +107,7 @@ achse relativ leicht Filtertypen wie Hochpaﬂ, Bandpaﬂ oder Bandsperre
 status open
 
 \begin_layout Standard
-Die Transformation in einen Tiefpaﬂ dient nur der Skalierung 
+Die Transformation in einen Tiefpa√ü dient nur der Skalierung 
 \begin_inset ERT
 status inlined
 
@@ -118,12 +135,21 @@ wide false
 sideways false
 status open
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{tab:frqtf_overview}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab:frqtf_overview"
 
 \end_inset
 
 Frequenztransformationen
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -187,7 +213,7 @@ Zieltyp
 \begin_inset Text
 
 \begin_layout Standard
-Tiefpaﬂ
+Tiefpa√ü
 \end_layout
 
 \end_inset
@@ -234,7 +260,7 @@ Tiefpaﬂ
 \begin_inset Text
 
 \begin_layout Standard
-Hochpaﬂ
+Hochpa√ü
 \end_layout
 
 \end_inset
@@ -281,7 +307,7 @@ Hochpaﬂ
 \begin_inset Text
 
 \begin_layout Standard
-Bandpaﬂ
+Bandpa√ü
 \end_layout
 
 \end_inset
@@ -383,7 +409,7 @@ Bandsperre
 \end_layout
 
 \begin_layout Standard
-Die Grˆﬂe 
+Die Gr√∂√üe 
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
@@ -394,13 +420,14 @@ Die Grˆﬂe
 \begin_inset Formula $\lps$
 \end_inset
 
- bei der Tiefpaﬂapproximation als normiert oder entnormiert angenommen wird.
+ bei der Tiefpa√üapproximation als normiert oder entnormiert angenommen wird.
 \end_layout
 
 \begin_layout Standard
 Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:frqtf_overview}
+\begin_inset LatexCommand ref
+reference "fig:frqtf_overview"
 
 \end_inset
 
@@ -444,8 +471,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:frqtf_overview}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:frqtf_overview"
 
 \end_inset
 
@@ -457,26 +488,34 @@ Frequenztransformationen
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Section
-Hochpaﬂ
+Hochpa√ü
 \end_layout
 
 \begin_layout Subsection
-‹bertragungsfunktion
+√úbertragungsfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Hochpass@Hochpaﬂ|(}
+\begin_inset LatexCommand index
+name "Hochpass@Hochpa√ü|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ|(}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Hochpa√ü|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!Hochpass@Hochpaﬂ|(}
+\begin_inset LatexCommand index
+name "Filter!Hochpass@Hochpa√ü|("
 
 \end_inset
 
@@ -486,7 +525,8 @@ Die spezielle konforme Abbildung
 
  nach Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \ref{tab:frqtf_overview}
+\begin_inset LatexCommand ref
+reference "tab:frqtf_overview"
 
 \end_inset
 
@@ -497,15 +537,17 @@ status collapsed
 \begin_layout Standard
 Ein Spezialfall der 
 \noun on
-Mˆbius
+M√∂bius
 \noun default
 -Transformation
-\begin_inset LatexCommand \index{Moebius-Transformation@\noun{Mˆbius}-Transformation}
+\begin_inset LatexCommand index
+name "Moebius-Transformation@\\noun{M√∂bius}-Transformation"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Moebius-@\noun{Mˆbius}-}
+\begin_inset LatexCommand index
+name "Transformation!Moebius-@\\noun{M√∂bius}-"
 
 \end_inset
 
@@ -513,7 +555,7 @@ Mˆbius
 \begin_inset Formula $\frac{az+b}{cz+d}$
 \end_inset
 
-, welche zu den konformen Abbildungen gehˆrt.
+, welche zu den konformen Abbildungen geh√∂rt.
 \end_layout
 
 \end_inset
@@ -524,7 +566,8 @@ Mˆbius
 
 , wenn man von einer logarithmischen Frequenzachse ausgeht (siehe auch Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:frqtf_hp}
+\begin_inset LatexCommand ref
+reference "fig:frqtf_hp"
 
 \end_inset
 
@@ -547,12 +590,16 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:frqtf_hp}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:frqtf_hp"
 
 \end_inset
 
-Hochpaﬂ-Toleranzschema (logarithmisch, 
+Hochpa√ü-Toleranzschema (logarithmisch, 
 \begin_inset Formula $\omega_{0}=\omega_{g}$
 \end_inset
 
@@ -564,21 +611,27 @@ Hochpaﬂ-Toleranzschema (logarithmisch,
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
 Da bei den Standardapproximationen die normierte Grenzfrequenz
-\begin_inset LatexCommand \index{Grenzfrequenz}
+\begin_inset LatexCommand index
+name "Grenzfrequenz"
 
 \end_inset
 
- ¸blicherweise zu 
+ √ºblicherweise zu 
 \begin_inset Formula $\omega_{g}=1$
 \end_inset
 
- gew‰hlt wird, kann man 
+ gew√§hlt wird, kann man 
 \begin_inset Formula $\omega_{0}=1$
 \end_inset
 
- setzen und f¸r die ‹bertragungsfunktion in der 
+ setzen und f√ºr die √úbertragungsfunktion in der 
 \begin_inset Formula $\lt$
 \end_inset
 
@@ -599,11 +652,11 @@ Multipliziert man noch den Nenner mit
 \begin_inset Formula $\lps^{n}$
 \end_inset
 
- und den Z‰hler mit 
+ und den Z√§hler mit 
 \begin_inset Formula $\lps^{m}$
 \end_inset
 
-, so f¸hrt dies zu einer Umordnung der Koeffizienten.
+, so f√ºhrt dies zu einer Umordnung der Koeffizienten.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -620,20 +673,21 @@ Pole und Nullstellen
 \end_layout
 
 \begin_layout Standard
-Die Wirkung der Transformation auf die rationale ‹bertragungsfunktion nach
+Die Wirkung der Transformation auf die rationale √úbertragungsfunktion nach
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_hp_rational}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_hp_rational"
 
 \end_inset
 
  korrespondiert mit einer bestimmten Verschiebung der Pol- und Nullstellen
  in der komplexen Ebene.
- Sehen wir uns dazu die ‹bertragungsfunktion 
+ Sehen wir uns dazu die √úbertragungsfunktion 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
- eines Tiefpaﬂ' in Linearfaktordarstellung an.
+ eines Tiefpa√ü' in Linearfaktordarstellung an.
 \end_layout
 
 \begin_layout Standard
@@ -650,7 +704,7 @@ Einsetzen der Substitution
 \begin_inset Formula $\lps:=\lps^{-1}$
 \end_inset
 
- l‰ﬂt daraus
+ l√§√üt daraus
 \end_layout
 
 \begin_layout Standard
@@ -683,16 +737,18 @@ ie
 
 \begin_layout Itemize
 Pole
-\begin_inset LatexCommand \index{Pol!der ‹bertragungsfunktion}
+\begin_inset LatexCommand index
+name "Pol!der √úbertragungsfunktion"
 
 \end_inset
 
  und Nullstellen
-\begin_inset LatexCommand \index{Nullstellen!der ‹bertragungsfunktion}
+\begin_inset LatexCommand index
+name "Nullstellen!der √úbertragungsfunktion"
 
 \end_inset
 
- des Tiefpaﬂ' werden invertiert;
+ des Tiefpa√ü' werden invertiert;
 \end_layout
 
 \begin_deeper
@@ -720,7 +776,8 @@ es entsteht eine neue Nullstelle bei
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset LatexCommand \index{Vorfaktor}
+\begin_inset LatexCommand index
+name "Vorfaktor"
 
 \end_inset
 
@@ -752,17 +809,20 @@ resp
 
 \end_deeper
 \begin_layout Standard
-\begin_inset LatexCommand \index{Filter!Hochpass@Hochpaﬂ|)}
+\begin_inset LatexCommand index
+name "Filter!Hochpass@Hochpa√ü|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Hochpaﬂ|)}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Hochpa√ü|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Hochpass@Hochpaﬂ|)}
+\begin_inset LatexCommand index
+name "Hochpass@Hochpa√ü|)"
 
 \end_inset
 
@@ -770,29 +830,32 @@ resp
 \end_layout
 
 \begin_layout Section
-Bandpaﬂ
+Bandpa√ü
 \end_layout
 
 \begin_layout Subsection
-‹bertragungsfunktion
+√úbertragungsfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandpaﬂ|(}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Bandpa√ü|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|(}
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!Bandpass@Bandpaﬂ|(}
+\begin_inset LatexCommand index
+name "Filter!Bandpass@Bandpa√ü|("
 
 \end_inset
 
-Ein Bandpaﬂsystem hat typischerweise einen Durchlaﬂbereich, welcher sich
+Ein Bandpa√üsystem hat typischerweise einen Durchla√übereich, welcher sich
  von 
 \begin_inset Formula $\omega_{g_{1}}$
 \end_inset
@@ -803,7 +866,8 @@ Ein Bandpaﬂsystem hat typischerweise einen Durchlaﬂbereich, welcher sich
 
  erstreckt (siehe Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:frqtf_bp}
+\begin_inset LatexCommand ref
+reference "fig:frqtf_bp"
 
 \end_inset
 
@@ -826,12 +890,16 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:frqtf_bp}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:frqtf_bp"
 
 \end_inset
 
-Bandpaﬂ-Toleranzschema (logarithmisch, 
+Bandpa√ü-Toleranzschema (logarithmisch, 
 \begin_inset Formula $\omega_{0}=1$
 \end_inset
 
@@ -843,11 +911,17 @@ Bandpaﬂ-Toleranzschema (logarithmisch,
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Aus dem Tiefpaﬂ-Amplitudengang l‰ﬂt sich eine solche Charakteristik ableiten,
+Aus dem Tiefpa√ü-Amplitudengang l√§√üt sich eine solche Charakteristik ableiten,
  wenn man die Transformationsbeziehung (nach Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \ref{tab:frqtf_overview}
+\begin_inset LatexCommand ref
+reference "tab:frqtf_overview"
 
 \end_inset
 
@@ -870,7 +944,8 @@ anwendet.
 \end_inset
 
  nimmt in diesem Fall die Bedeutung einer Mittenfrequenz
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Mittenfrequenz}
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü!Mittenfrequenz"
 
 \end_inset
 
@@ -878,8 +953,9 @@ anwendet.
 \begin_inset Formula $Q$
 \end_inset
 
- bezeichnet man als G¸te
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Guete@G¸te}
+ bezeichnet man als G√ºte
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü!Guete@G√ºte"
 
 \end_inset
 
@@ -890,11 +966,12 @@ anwendet.
 
  wird einsichtig, wenn man Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_bp_map}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_bp_map"
 
 \end_inset
 
- folgendermaﬂen umformt (
+ folgenderma√üen umformt (
 \begin_inset ERT
 status inlined
 
@@ -909,7 +986,9 @@ cf
 
  auch\InsetSpace ~
 
-\begin_inset LatexCommand \cite[7-1]{Papoulis:1962}
+\begin_inset LatexCommand cite
+after "7-1"
+key "Papoulis:1962"
 
 \end_inset
 
@@ -926,11 +1005,11 @@ cf
 \end_layout
 
 \begin_layout Standard
-Um auch f¸r die G¸te 
+Um auch f√ºr die G√ºte 
 \begin_inset Formula $Q$
 \end_inset
 
- eine anschauliche Aussage zu erhalten, wenden wir (nach Vereinfachung f¸r
+ eine anschauliche Aussage zu erhalten, wenden wir (nach Vereinfachung f√ºr
  
 \begin_inset Formula $\omega_{0}=1$
 \end_inset
@@ -948,7 +1027,7 @@ Um auch f¸r die G¸te
 \end_layout
 
 \begin_layout Standard
-die quadratische Lˆsungsformel (vorerst formal) an:
+die quadratische L√∂sungsformel (vorerst formal) an:
 \end_layout
 
 \begin_layout Standard
@@ -974,27 +1053,28 @@ An Hand der mehr anschaulichen Umformung
 \end_layout
 
 \begin_layout Standard
-wird deutlich, daﬂ 
+wird deutlich, da√ü 
 \begin_inset Formula $Q$
 \end_inset
 
- insbesondere auf die Skalierung der Tiefpaﬂfrequenz 
+ insbesondere auf die Skalierung der Tiefpa√üfrequenz 
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
- und in Folge auf die Breite des Durchlaﬂbereichs wirkt.
+ und in Folge auf die Breite des Durchla√übereichs wirkt.
 \end_layout
 
 \begin_layout Standard
-Was wir bez¸glich Formel\InsetSpace ~
+Was wir bez√ºglich Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_bp_mapinv_helper}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_bp_mapinv_helper"
 
 \end_inset
 
- noch ber¸cksichtigen m¸ssen ist die Tatsache, daﬂ sich Frequenztransformationen
+ noch ber√ºcksichtigen m√ºssen ist die Tatsache, da√ü sich Frequenztransformationen
  sowohl auf positive als auch negative Kreisfrequenzen beziehen.
- Hinzu kommt, daﬂ wegen
+ Hinzu kommt, da√ü wegen
 \end_layout
 
 \begin_layout Standard
@@ -1011,14 +1091,14 @@ eine der beiden Frequenzen
 \begin_inset Formula $\omega_{\textup{BP}}$
 \end_inset
 
- in der gewonnenen Lˆsungsformel immer negativ wird.
- Man darf sich nun insofern nicht t‰uschen lassen, als das die andere zugehˆrige
+ in der gewonnenen L√∂sungsformel immer negativ wird.
+ Man darf sich nun insofern nicht t√§uschen lassen, als das die andere zugeh√∂rige
  Frequenz (mit gleichem Vorzeichen) durch Einsetzen von 
 \begin_inset Formula $-\omega_{\textup{LP}}$
 \end_inset
 
  erzeugt wird.
- F¸r den (normierten) Zusammenhang zwischen 
+ F√ºr den (normierten) Zusammenhang zwischen 
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
@@ -1045,7 +1125,7 @@ Jede Frequenz des Tiefpasses wird demzufolge auf zwei neue Frequenzen abgebildet
 \end_inset
 
  liegen.
- F¸r die Abbildung der Grenzfrequenz 
+ F√ºr die Abbildung der Grenzfrequenz 
 \begin_inset Formula $\omega_{g}=1$
 \end_inset
 
@@ -1062,7 +1142,7 @@ Jede Frequenz des Tiefpasses wird demzufolge auf zwei neue Frequenzen abgebildet
 \end_layout
 
 \begin_layout Standard
-und deshalb f¸r die geometrische Mittenfrequenz des Bandpaﬂ'
+und deshalb f√ºr die geometrische Mittenfrequenz des Bandpa√ü'
 \begin_inset Foot
 status open
 
@@ -1084,7 +1164,7 @@ ie
 
 \end_inset
 
- f¸r 
+ f√ºr 
 \begin_inset Formula $\sqrt{\smash[b]{\omega_{g_{1}}\omega_{g_{2}}}}$
 \end_inset
 
@@ -1111,12 +1191,12 @@ ie
 \end_inset
 
 .
- Allerdings wird f¸r G¸ten 
+ Allerdings wird f√ºr G√ºten 
 \begin_inset Formula $Q\gg1/2$
 \end_inset
 
-, welche aus technischer Sicht den Sinn eines Bandpaﬂ' darstellen, diese
- Abweichung vernachl‰ssigbar und dadurch 
+, welche aus technischer Sicht den Sinn eines Bandpa√ü' darstellen, diese
+ Abweichung vernachl√§ssigbar und dadurch 
 \begin_inset Formula $(\omega_{g_{1}}+\omega_{g_{2}})/2\approx1$
 \end_inset
 
@@ -1142,13 +1222,15 @@ Den Sinn,
 \begin_inset Formula $Q$
 \end_inset
 
- als G¸tedefinition
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Guete@G¸te}
+ als G√ºtedefinition
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü!Guete@G√ºte"
 
 \end_inset
 
- herzunehmen, unterstreicht folgende Formel f¸r die absolute Bandbreite
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ!Bandbreite}
+ herzunehmen, unterstreicht folgende Formel f√ºr die absolute Bandbreite
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü!Bandbreite"
 
 \end_inset
 
@@ -1173,19 +1255,20 @@ Pole und Nullstellen
 \end_layout
 
 \begin_layout Standard
-Was die Transformation der Pol- und Nullstellen angeht, so gilt daf¸r ebenfalls
+Was die Transformation der Pol- und Nullstellen angeht, so gilt daf√ºr ebenfalls
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_bp_mapinv}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_bp_mapinv"
 
 \end_inset
 
 .
- Um eine gewisse Geradlinigkeit zu wahren, w‰hlen wir jedoch den 
+ Um eine gewisse Geradlinigkeit zu wahren, w√§hlen wir jedoch den 
 \begin_inset Quotes eld
 \end_inset
 
-umst‰ndlichen
+umst√§ndlichen
 \begin_inset Quotes erd
 \end_inset
 
@@ -1245,14 +1328,14 @@ zuerst die
 \end_layout
 
 \begin_layout Standard
-Aus jedem Linearfaktor der Tiefpaﬂ-‹bertragungsfunktion entspringen (wegen
+Aus jedem Linearfaktor der Tiefpa√ü-√úbertragungsfunktion entspringen (wegen
  des quadratischen Auftretens von 
 \begin_inset Formula $\lps$
 \end_inset
 
  in letzter Gleichung) also zwei neue Wurzeln.
  Die Evaluation erfolgt durch Nullsetzen eines Faktors (hier beispielhaft
- an einer Nullstelle) und Anwendung der quadratischen Lˆsungsformel.
+ an einer Nullstelle) und Anwendung der quadratischen L√∂sungsformel.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1265,21 +1348,23 @@ Aus jedem Linearfaktor der Tiefpaﬂ-‹bertragungsfunktion entspringen (wegen
 \end_layout
 
 \begin_layout Standard
-Zusammenfassend kann festgestellt werden, daﬂ:
+Zusammenfassend kann festgestellt werden, da√ü:
 \end_layout
 
 \begin_layout Itemize
 jede Nullstelle
-\begin_inset LatexCommand \index{Nullstellen!der ‹bertragungsfunktion}
+\begin_inset LatexCommand index
+name "Nullstellen!der √úbertragungsfunktion"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Pol!der ‹bertragungsfunktion}
+\begin_inset LatexCommand index
+name "Pol!der √úbertragungsfunktion"
 
 \end_inset
 
- (und sinngem‰ﬂ jeder Pol) nach
+ (und sinngem√§√ü jeder Pol) nach
 \end_layout
 
 \begin_deeper
@@ -1305,11 +1390,11 @@ wieder zwei neue Nullstellen hervorbringt, wobei reelle Nullstellen nur
 
 \end_deeper
 \begin_layout Itemize
-aus einem Tiefpaﬂ vom Grad 
+aus einem Tiefpa√ü vom Grad 
 \begin_inset Formula $n$
 \end_inset
 
- ein Bandpaﬂ vom Grad 
+ ein Bandpa√ü vom Grad 
 \begin_inset Formula $2n$
 \end_inset
 
@@ -1325,12 +1410,13 @@ die Transformation zu einer neuen Nullstelle
 \begin_inset Formula $n-m$
 \end_inset
 
- f¸hrt;
+ f√ºhrt;
 \end_layout
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset LatexCommand \index{Vorfaktor}
+\begin_inset LatexCommand index
+name "Vorfaktor"
 
 \end_inset
 
@@ -1353,17 +1439,20 @@ wirkt.
 
 \end_deeper
 \begin_layout Standard
-\begin_inset LatexCommand \index{Filter!Bandpass@Bandpaﬂ|)}
+\begin_inset LatexCommand index
+name "Filter!Bandpass@Bandpa√ü|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Bandpass@Bandpaﬂ|)}
+\begin_inset LatexCommand index
+name "Bandpass@Bandpa√ü|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandpaﬂ|)}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Bandpa√ü|)"
 
 \end_inset
 
@@ -1375,17 +1464,20 @@ Bandsperre
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Bandsperre|(}
+\begin_inset LatexCommand index
+name "Bandsperre|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandsperre|(}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Bandsperre|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!Bandsperre|(}
+\begin_inset LatexCommand index
+name "Filter!Bandsperre|("
 
 \end_inset
 
@@ -1403,10 +1495,11 @@ Zur Bandsperre bleibt nicht soviel zu sagen -- vor allem weil sich diese
 \end_layout
 
 \begin_layout Standard
-als Kombination von Bandpaﬂ- und Hochpaﬂ-Transformation erweist (Reihenfolge
+als Kombination von Bandpa√ü- und Hochpa√ü-Transformation erweist (Reihenfolge
  beliebig, siehe auch anschauliche Darstellung in Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:frqtf_bs}
+\begin_inset LatexCommand ref
+reference "fig:frqtf_bs"
 
 \end_inset
 
@@ -1438,8 +1531,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:frqtf_bs}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:frqtf_bs"
 
 \end_inset
 
@@ -1455,33 +1552,40 @@ Bandsperre-Toleranzschema (logarithmisch,
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Vergleicht man die Substitutionsvorschrift f¸r 
+Vergleicht man die Substitutionsvorschrift f√ºr 
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
- mit der f¸r die Tiefpaﬂ-Bandpaﬂ-Transformation (nach\InsetSpace ~
+ mit der f√ºr die Tiefpa√ü-Bandpa√ü-Transformation (nach\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_bp_map}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_bp_map"
 
 \end_inset
 
-), so stellt man als ƒquivalenz 
+), so stellt man als √Ñquivalenz 
 \begin_inset Formula $\omega_{\textup{LP}}:=\omega_{\textup{LP}}^{-1}$
 \end_inset
 
  fest.
- Inversion der Tiefpaﬂfrequenz 
+ Inversion der Tiefpa√üfrequenz 
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
  in Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:frqtf_bp_mapinv}
+\begin_inset LatexCommand ref
+reference "eq:frqtf_bp_mapinv"
 
 \end_inset
 
- ergibt aus diesem Grunde f¸r die Bandsperre:
+ ergibt aus diesem Grunde f√ºr die Bandsperre:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1494,7 +1598,7 @@ Vergleicht man die Substitutionsvorschrift f¸r
 \end_layout
 
 \begin_layout Standard
-F¸r die aus der Tiefpaﬂ-Frequenz 
+F√ºr die aus der Tiefpa√ü-Frequenz 
 \begin_inset Formula $\omega_{\textup{LP}}=1$
 \end_inset
 
@@ -1511,17 +1615,20 @@ F¸r die aus der Tiefpaﬂ-Frequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Filter!Bandsperre|)}
+\begin_inset LatexCommand index
+name "Filter!Bandsperre|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Transformation!Tiefpaﬂ-Bandsperre|)}
+\begin_inset LatexCommand index
+name "Transformation!Tiefpa√ü-Bandsperre|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Bandsperre|)}
+\begin_inset LatexCommand index
+name "Bandsperre|)"
 
 \end_inset
 
@@ -1529,7 +1636,8 @@ F¸r die aus der Tiefpaﬂ-Frequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Frequenztransformationen|)}
+\begin_inset LatexCommand index
+name "Frequenztransformationen|)"
 
 \end_inset
 

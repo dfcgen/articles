@@ -1,11 +1,18 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
-\textclass scrartcl
+\textclass scrbookams
 \language german
 \inputencoding latin1
-\fontscheme default
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !bh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -25,7 +33,9 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -35,7 +45,24 @@
 status open
 
 \begin_layout Standard
-Version: $Id: notation.lyx,v 1.11 2006-04-19 20:59:54 ralf Exp $
+Version: $Id: notation.lyx,v 1.12 2007-09-22 17:44:46 ralf Exp $
+\end_layout
+
+\begin_layout Standard
+TODO: Use 
+\emph on
+nomeclature
+\emph default
+ from LyX menu, e.g.
+ 
+\begin_inset LatexCommand nomenclature
+prefix "A"
+symbol "$\\ang z$"
+description "Winkel von z"
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -44,12 +71,14 @@ Version: $Id: notation.lyx,v 1.11 2006-04-19 20:59:54 ralf Exp $
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Notation}
+\begin_inset LatexCommand index
+name "Notation"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Symbole}
+\begin_inset LatexCommand index
+name "Symbole"
 
 \end_inset
 
@@ -58,7 +87,7 @@ Version: $Id: notation.lyx,v 1.11 2006-04-19 20:59:54 ralf Exp $
 
 \begin_layout Standard
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Standard
 
@@ -183,7 +212,8 @@ Cauchy
 Heaviside
 \noun default
 
-\begin_inset LatexCommand \index{Heaviside@\noun{Heaviside}-Funktion}
+\begin_inset LatexCommand index
+name "Heaviside@\\noun{Heaviside}-Funktion"
 
 \end_inset
 
@@ -223,7 +253,8 @@ Heaviside
 \end_inset
 
  Exponentialfunktion
-\begin_inset LatexCommand \index{Exponentialfunktion}
+\begin_inset LatexCommand index
+name "Exponentialfunktion"
 
 \end_inset
 
@@ -235,7 +266,8 @@ Heaviside
 \end_inset
 
  Exponentialfunktion
-\begin_inset LatexCommand \index{Exponentialfunktion}
+\begin_inset LatexCommand index
+name "Exponentialfunktion"
 
 \end_inset
 
@@ -243,7 +275,7 @@ Heaviside
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $\ft\{ f\}$
+\begin_inset Formula $\ft\{f\}$
 \end_inset
 
  
@@ -254,14 +286,14 @@ Fourier
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $\ft^{-1}\{ F\}$
+\begin_inset Formula $\ft^{-1}\{F\}$
 \end_inset
 
  
 \noun on
 Fourier
 \noun default
--R¸cktransformierte (Originalfunktion)
+-R√ºcktransformierte (Originalfunktion)
 \end_layout
 
 \begin_layout Description
@@ -280,7 +312,7 @@ Gudermann
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $\mathcal{H}\{ f\}$
+\begin_inset Formula $\mathcal{H}\{f\}$
 \end_inset
 
  
@@ -298,7 +330,7 @@ Hilbert
 \begin_inset Formula $\imop(z)$
 \end_inset
 
- Imagin‰rteil von 
+ Imagin√§rteil von 
 \begin_inset Formula $z$
 \end_inset
 
@@ -320,7 +352,7 @@ Hilbert
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $\lt\{ f\}$
+\begin_inset Formula $\lt\{f\}$
 \end_inset
 
  
@@ -331,14 +363,14 @@ Laplace
 \end_layout
 
 \begin_layout Description
-\begin_inset Formula $\lt^{-1}\{ F\}$
+\begin_inset Formula $\lt^{-1}\{F\}$
 \end_inset
 
  
 \noun on
 Laplace
 \noun default
--R¸cktransformierte (Originalfunktion)
+-R√ºcktransformierte (Originalfunktion)
 \end_layout
 
 \begin_layout Description
@@ -360,7 +392,7 @@ Laplace
 \begin_inset Formula $\mathbb{N}$
 \end_inset
 
- Nat¸rliche Zahlen
+ Nat√ºrliche Zahlen
 \end_layout
 
 \begin_layout Description
@@ -523,7 +555,7 @@ status open
 \begin_inset Formula $\trf(\ji\omega)$
 \end_inset
 
- (Komplexe) ‹bertragungsfunktion im 
+ (Komplexe) √úbertragungsfunktion im 
 \begin_inset Formula $\ft$
 \end_inset
 
@@ -534,7 +566,7 @@ status open
 \begin_inset Formula $\trf(\omega)$
 \end_inset
 
- Betrag der ‹bertragungsfunktion im 
+ Betrag der √úbertragungsfunktion im 
 \begin_inset Formula $\ft$
 \end_inset
 
@@ -545,7 +577,7 @@ status open
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
- (Komplexe) ‹bertragungsfunktion im 
+ (Komplexe) √úbertragungsfunktion im 
 \begin_inset Formula $\lt$
 \end_inset
 
@@ -556,7 +588,7 @@ status open
 \begin_inset Formula $\ePi{\varphi}{k}{n}$
 \end_inset
 
- Unvollst‰ndiges ell.
+ Unvollst√§ndiges ell.
 \begin_inset ERT
 status inlined
 
@@ -580,7 +612,7 @@ Legendre
 \begin_inset Formula $\eF{\varphi}{k}$
 \end_inset
 
- Unvollst‰ndiges ell.
+ Unvollst√§ndiges ell.
 \begin_inset ERT
 status inlined
 
@@ -604,7 +636,7 @@ Legendre
 \begin_inset Formula $\exF{x}{k}$
 \end_inset
 
- Unvollst‰ndiges ell.
+ Unvollst√§ndiges ell.
 \begin_inset ERT
 status inlined
 
@@ -628,7 +660,7 @@ Form)
 \begin_inset Formula $\eE{\varphi}{k}$
 \end_inset
 
- Unvollst‰ndiges ell.
+ Unvollst√§ndiges ell.
 \begin_inset ERT
 status inlined
 
@@ -666,7 +698,7 @@ Legendre
 \begin_inset Formula $\eK{k}$
 \end_inset
 
- Vollst‰ndiges ell.
+ Vollst√§ndiges ell.
 \begin_inset ERT
 status inlined
 

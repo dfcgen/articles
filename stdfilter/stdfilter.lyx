@@ -1,29 +1,36 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrbookams
 \begin_preamble
-\input{text-inc}
-\input{math-inc}
-\input{electr-inc}
-\input{pdf-inc}
+\input{all-inc}
 
 %% \usepackage{showlabels}
 %% \usepackage{showidx}
 %% \usepackage{bibcheck}
 %% \usepackage{refcheck}
+
+\docsubj{Konventionelle Filter und ihre Approximationsfunktionen}{Filter}{Tschebyscheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische}
 \end_preamble
 \options reqno
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \paperfontsize default
 \spacing onehalf
 \papersize a4paper
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -31,22 +38,24 @@
 \tocdepth 3
 \paragraph_separation skip
 \defskip medskip
-\quotes_language english
+\quotes_language german
 \papercolumns 1
 \papersides 2
 \paperpagestyle headings
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Standard
-Version: $Id: stdfilter.lyx,v 1.12 2006-05-26 09:44:13 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.13 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \begin_layout Itemize
@@ -119,11 +128,7 @@ svmono
 \emph on
 Springer
 \emph default
-)
-\emph on
- 
-\emph default
-and 
+) and 
 \emph on
 koma-script w/ amsmath, amsthm
 \emph default
@@ -137,25 +142,7 @@ koma-script w/ amsmath, amsthm
 
 \begin_layout Standard
 \begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-pdfsubj{Konventionelle Filter und ihre Approximationsfunktionen}{Filter}{Tscheby
-scheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -176,7 +163,7 @@ Systeme, Filter, Approximationsfunktionen
 \begin_layout Author
 Copyright 
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -201,7 +188,7 @@ year
 \begin_layout Standard
 Vorliegendes Werk soll dem Ingenieur 
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -214,15 +201,15 @@ eg
 
  der Elektrotechnik, Nachrichtentechnik oder Signalverarbeitung die Grundlagen
  der konventionellen (analogen) Filterapproximationen nahebringen.
- Mit etwas mehr Ausf¸hrlichkeit als bei anderen Publikationen zu dieser
- Thematik wird versucht, auch die mathematischen Hintergr¸nde zu vermitteln
- und dadurch etwas mehr Verst‰ndnis f¸r die Zusammenh‰nge zu erreichen
+ Mit etwas mehr Ausf√ºhrlichkeit als bei anderen Publikationen zu dieser
+ Thematik wird versucht, auch die mathematischen Hintergr√ºnde zu vermitteln
+ und dadurch etwas mehr Verst√§ndnis f√ºr die Zusammenh√§nge zu erreichen
 \begin_inset Foot
 status collapsed
 
 \begin_layout Standard
-Wobei der Lesende selbst dar¸ber entscheiden kann, wie stark er sich von
- der Thematik einfangen l‰ﬂt.
+Wobei der Lesende selbst dar√ºber entscheiden kann, wie stark er sich von
+ der Thematik einfangen l√§√üt.
 \end_layout
 
 \end_inset
@@ -238,13 +225,13 @@ Jacobi
 \noun default
 's elliptischen Funktionen geschenkt.
  Ausgehend von den Eigenschaften zeit- sowie wertkontinuierlicher LTI-Systeme
- werden die bekanntesten (realisierbaren) Standard-Tiefpaﬂfilter erˆrtert.
+ werden die bekanntesten (realisierbaren) Standard-Tiefpa√üfilter er√∂rtert.
  Dabei sind es insbesondere Forderungen an den Amplitudengang, welche im
  Mittelpunkt der Betrachtungen stehen.
- Abschlieﬂend wird die Transformation der ‹bertragungsfunktion in andere
+ Abschlie√üend wird die Transformation der √úbertragungsfunktion in andere
  Frequenzbereiche 
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -255,22 +242,22 @@ resp
 
 \end_inset
 
- Filtertypen, wie Hochpaﬂ, Bandpaﬂ oder Bandsperre behandelt.
- Zahlreiche Anh‰nge sind von ihrer Ausf¸hrlichkeit so gestaltet, daﬂ eine
- Einarbeitung in die mathematischen Grundlagen ermˆglicht wird.
+ Filtertypen, wie Hochpa√ü, Bandpa√ü oder Bandsperre behandelt.
+ Zahlreiche Anh√§nge sind von ihrer Ausf√ºhrlichkeit so gestaltet, da√ü eine
+ Einarbeitung in die mathematischen Grundlagen erm√∂glicht wird.
 \end_layout
 
 \begin_layout Standard
 Approximationsvorschriften im Zeitbereich, numerische Verfahren sowie die
- N‰herung von anderen charakteristischen Grˆﬂen, wie der Gruppenlaufzeit
- oder des Phasengangs, werden bei den Betrachtungen fast vollst‰ndig ausgespart
+ N√§herung von anderen charakteristischen Gr√∂√üen, wie der Gruppenlaufzeit
+ oder des Phasengangs, werden bei den Betrachtungen fast vollst√§ndig ausgespart
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Approximationen im Zeitbereich (
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -281,9 +268,9 @@ resp
 
 \end_inset
 
- das dortige Verhalten der Standard-Tiefpaﬂfilter) werden 
+ das dortige Verhalten der Standard-Tiefpa√üfilter) werden 
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -296,7 +283,8 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Guillemin:1952,Hli:1954,Kautz:1954,Guillemin:1957,Gumowski:1958,Zverev:1967}
+\begin_inset LatexCommand cite
+key "Guillemin:1952,Hli:1954,Kautz:1954,Guillemin:1957,Gumowski:1958,Zverev:1967"
 
 \end_inset
 
@@ -306,14 +294,15 @@ eg
 \end_inset
 
 .
- Ebenfalls nicht behandelt (und auﬂerdem vorausgesetzt) werden die Grundlagen
+ Ebenfalls nicht behandelt (und au√üerdem vorausgesetzt) werden die Grundlagen
  der 
 \noun on
 Fourier
 \noun default
--Analyse, f¸r welche es sehr gute Literatur gibt\InsetSpace ~
+-Analyse, f√ºr welche es sehr gute Literatur gibt\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Marko:1995,Bracewell:2003}
+\begin_inset LatexCommand cite
+key "Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Marko:1995,Bracewell:2003"
 
 \end_inset
 
@@ -321,7 +310,7 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \tableofcontents{}
+\begin_inset LatexCommand tableofcontents
 
 \end_inset
 
@@ -346,7 +335,7 @@ Fourier
 
 \begin_layout Standard
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -374,7 +363,7 @@ preview false
 \end_layout
 
 \begin_layout Chapter
-Tiefpaﬂfilter
+Tiefpa√üfilter
 \end_layout
 
 \begin_layout Standard
@@ -476,7 +465,8 @@ preview false
 \end_layout
 
 \begin_layout Chapter
-\begin_inset LatexCommand \label{sec:elliptic}
+\begin_inset LatexCommand label
+name "sec:elliptic"
 
 \end_inset
 
@@ -541,7 +531,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \bibtex[geralpha]{adsp,computers,crypto,math}
+\begin_inset LatexCommand bibtex
+options "geralpha"
+bibfiles "adsp,computers,crypto,math"
 
 \end_inset
 
@@ -549,7 +541,7 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \printindex{}
+\begin_inset LatexCommand printindex
 
 \end_inset
 

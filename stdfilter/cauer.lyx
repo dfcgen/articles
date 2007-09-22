@@ -1,11 +1,18 @@
-#LyX 1.4.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
-\textclass scrartcl
+\textclass scrbookams
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement !tbh
 \paperfontsize default
@@ -13,6 +20,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 2
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -25,7 +33,8 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
 \end_header
 
 \begin_body
@@ -35,7 +44,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cauer.lyx,v 1.12 2006-11-18 08:17:52 ralf Exp $
+Version: $Id: cauer.lyx,v 1.13 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \end_inset
@@ -46,22 +55,25 @@ Version: $Id: cauer.lyx,v 1.12 2006-11-18 08:17:52 ralf Exp $
 \begin_layout Section
 
 \noun on
-\begin_inset LatexCommand \label{sec:filter_cauer}
+\begin_inset LatexCommand label
+name "sec:filter_cauer"
 
 \end_inset
 
 Cauer
 \noun default
--Tiefpaﬂ
+-Tiefpa√ü
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Cauer-Tiefpaﬂ@\noun{Cauer}-Tiefpaﬂ|(}
+\begin_inset LatexCommand index
+name "Cauer-Tiefpa√ü@\\noun{Cauer}-Tiefpa√ü|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!elliptisches}
+\begin_inset LatexCommand index
+name "Filter!elliptisches"
 
 \end_inset
 
@@ -79,16 +91,18 @@ W.
  Cauer
 \noun default
 
-\begin_inset LatexCommand \index{Tiefpaﬂ!Cauer@\noun{Cauer}-}
+\begin_inset LatexCommand index
+name "Tiefpa√ü!Cauer@\\noun{Cauer}-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Filter!Cauer@\noun{Cauer}-}
+\begin_inset LatexCommand index
+name "Filter!Cauer@\\noun{Cauer}-"
 
 \end_inset
 
- hat unter anderem das Problem der Bestapproximation des idealen Tiefpaﬂ-Amplitu
+ hat unter anderem das Problem der Bestapproximation des idealen Tiefpa√ü-Amplitu
 dengangs 
 \begin_inset ERT
 status collapsed
@@ -104,15 +118,16 @@ resp
 
  der charakteristischen Funktion (Drosselung) in seinen Arbeiten untersucht\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Cauer:1954}
+\begin_inset LatexCommand cite
+key "Cauer:1954"
 
 \end_inset
 
 .
  Dabei ist er in wissenschaftlicher Art und Weise von der elektrotechnischen
- Problemstellung zur mathematischen Lˆsung gelangt.
- Wir wollen hier (der K¸rze halber) auf die Erkenntnisse zu den elliptischen
- Haupt-Transformationen hˆherer Ordnung zur¸ckgreifen
+ Problemstellung zur mathematischen L√∂sung gelangt.
+ Wir wollen hier (der K√ºrze halber) auf die Erkenntnisse zu den elliptischen
+ Haupt-Transformationen h√∂herer Ordnung zur√ºckgreifen
 \begin_inset Foot
 status open
 
@@ -126,7 +141,8 @@ Jahrhundert etabliert war.
 
 , welche im Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:elltr}
+\begin_inset LatexCommand ref
+reference "sec:elltr"
 
 \end_inset
 
@@ -134,27 +150,30 @@ Jahrhundert etabliert war.
 \end_layout
 
 \begin_layout Standard
-F¸r die Drosselungsfunktion 
+F√ºr die Drosselungsfunktion 
 \begin_inset Formula $\drf(\omega)$
 \end_inset
 
  gibt es in der Literatur die verschiedensten Darstellungen\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979a,Chen:1995}
+\begin_inset LatexCommand cite
+key "Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979a,Chen:1995"
 
 \end_inset
 
 , welche sich aber immer nur in der Skalierung von Amplituden- und Frequenzachse
  unterscheiden.
- Im Folgenden werden die Lˆsungsformeln\InsetSpace ~
+ Im Folgenden werden die L√∂sungsformeln\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
+\begin_inset LatexCommand ref
+reference "eq:elltr1_odd_poly"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr1_even_poly}
+\begin_inset LatexCommand ref
+reference "eq:elltr1_even_poly"
 
 \end_inset
 
@@ -165,29 +184,32 @@ G.\InsetSpace ~
 J.
  Jacobi
 \noun default
- als Ausgangspunkt dienen, die grunds‰tzliche Argumentation sich aber auf
+ als Ausgangspunkt dienen, die grunds√§tzliche Argumentation sich aber auf
  
 \noun on
 E.\InsetSpace ~
 I.
- Solotareff
+ Solotaref\SpecialChar \textcompwordmark{}
+f
 \noun default
- und dessen drittes Approximationsproblem st¸tzen
+ und dessen drittes Approximationsproblem st√ºtzen
 \begin_inset Foot
 status open
 
 \begin_layout Standard
 
 \noun on
-Solotareff
+Solotaref\SpecialChar \textcompwordmark{}
+f
 \noun default
-'s Problemstellung sowie dessen Lˆsungsformel\InsetSpace ~
+'s Problemstellung sowie dessen L√∂sungsformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:zolotar_solution}
+\begin_inset LatexCommand ref
+reference "eq:zolotar_solution"
 
 \end_inset
 
- haben den kleinen Nachteil, daﬂ der Durchlaﬂbereich nicht wie ¸blich am
+ haben den kleinen Nachteil, da√ü der Durchla√übereich nicht wie √ºblich am
  typischen Normierungswert 
 \begin_inset Formula $\omega_{g}=1$
 \end_inset
@@ -196,16 +218,18 @@ Solotareff
 \begin_inset Formula $\omega_{g}=\sqrt{k}$
 \end_inset
 
- enden w¸rde.
- Etwas eleganter w¸rden daf¸r die Reziprozit‰tsbeziehungen\InsetSpace ~
+ enden w√ºrde.
+ Etwas eleganter w√ºrden daf√ºr die Reziprozit√§tsbeziehungen\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+\begin_inset LatexCommand ref
+reference "eq:filter_cauer_reciprocal"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_cauer_poles_per_zeroes}
+\begin_inset LatexCommand ref
+reference "eq:filter_cauer_poles_per_zeroes"
 
 \end_inset
 
@@ -220,13 +244,15 @@ Solotareff
 \begin_layout Standard
 Wir gehen also von den genannten Gleichungen\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr1_odd_poly}
+\begin_inset LatexCommand ref
+reference "eq:elltr1_odd_poly"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr1_even_poly}
+\begin_inset LatexCommand ref
+reference "eq:elltr1_even_poly"
 
 \end_inset
 
@@ -281,7 +307,7 @@ Der Parameter
 \begin_inset Formula $k$
 \end_inset
 
- wird das (elliptische) Modul genannt, welches auch h‰ufig als Modulwinkel
+ wird das (elliptische) Modul genannt, welches auch h√§ufig als Modulwinkel
  
 \begin_inset Formula $k=\sin\Theta$
 \end_inset
@@ -293,18 +319,20 @@ Der Parameter
 
  ist ein nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr1_odd_M}
+\begin_inset LatexCommand ref
+reference "eq:elltr1_odd_M"
 
 \end_inset
 
  (Seite\InsetSpace ~
 
-\begin_inset LatexCommand \pageref{eq:elltr1_odd_M}
+\begin_inset LatexCommand pageref
+reference "eq:elltr1_odd_M"
 
 \end_inset
 
 ) berechneter Vorfaktor.
- Die zur Berechnung der Koeffizienten benˆtigte Grˆﬂe 
+ Die zur Berechnung der Koeffizienten ben√∂tigte Gr√∂√üe 
 \begin_inset Formula $K$
 \end_inset
 
@@ -314,7 +342,8 @@ Der Parameter
 
  nach Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:elliptic_integral_K}
+\begin_inset LatexCommand ref
+reference "sec:elliptic_integral_K"
 
 \end_inset
 
@@ -338,11 +367,12 @@ cf
 
  Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:elliptic_func}
+\begin_inset LatexCommand ref
+reference "sec:elliptic_func"
 
 \end_inset
 
-) abgek¸rzt.
+) abgek√ºrzt.
 \end_layout
 
 \begin_layout Standard
@@ -351,23 +381,26 @@ Der Verlauf von
 \end_inset
 
  ist in den Abbildungen 
-\begin_inset LatexCommand \ref{fig:elltr1_odd_function}
+\begin_inset LatexCommand ref
+reference "fig:elltr1_odd_function"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:elltr1_even_function}
+\begin_inset LatexCommand ref
+reference "fig:elltr1_even_function"
 
 \end_inset
 
  von Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:elltr}
+\begin_inset LatexCommand ref
+reference "sec:elltr"
 
 \end_inset
 
-, welcher sich schwerpunktm‰ﬂig mit den Eigenschaften genau dieser elliptischen
+, welcher sich schwerpunktm√§√üig mit den Eigenschaften genau dieser elliptischen
  Transformationsfunktion(en) auseinandersetzt, dargestellt.
  
 \begin_inset Formula $\efunc{\textup{C}}{x}{k}$
@@ -378,7 +411,7 @@ orschrift eines
 \noun on
 Cauer
 \noun default
--Tiefpaﬂ', n‰mlich der gleichm‰ﬂigen Approximation des D‰mpfungs- 
+-Tiefpa√ü', n√§mlich der gleichm√§√üigen Approximation des D√§mpfungs- 
 \begin_inset ERT
 status collapsed
 
@@ -414,20 +447,22 @@ cf
 
  
 \noun on
-Solotareff
+Solotaref\SpecialChar \textcompwordmark{}
+f
 \noun default
 's drittes Problem in Anhang\InsetSpace ~
 
 \noun on
 
-\begin_inset LatexCommand \ref{sec:zolotarev}
+\begin_inset LatexCommand ref
+reference "sec:zolotarev"
 
 \end_inset
 
 
 \noun default
 ).
- Wir setzen aus vorgenannten Gr¸nden die skalierte Funktion 
+ Wir setzen aus vorgenannten Gr√ºnden die skalierte Funktion 
 \begin_inset Formula $\efunc{\textup{C}}{\omega}{k}$
 \end_inset
 
@@ -446,7 +481,7 @@ Solotareff
 \end_layout
 
 \begin_layout Standard
-und erhalten f¸r die Amplitudencharakteristik
+und erhalten f√ºr die Amplitudencharakteristik
 \end_layout
 
 \begin_layout Emph(asized)
@@ -461,7 +496,8 @@ und erhalten f¸r die Amplitudencharakteristik
 \begin_layout Standard
 Mit den ebenfalls aus Anhang\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:elltr}
+\begin_inset LatexCommand ref
+reference "sec:elltr"
 
 \end_inset
 
@@ -478,7 +514,7 @@ Mit den ebenfalls aus Anhang\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-lassen sich die D‰mpfungswerte 
+lassen sich die D√§mpfungswerte 
 \begin_inset Formula $A_{\textup{max}}$
 \end_inset
 
@@ -486,9 +522,10 @@ lassen sich die D‰mpfungswerte
 \begin_inset Formula $A_{\textup{min}}$
 \end_inset
 
- aus dem Tiefpaﬂ-Toleranzschema von Abbildung\InsetSpace ~
+ aus dem Tiefpa√ü-Toleranzschema von Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \vref{fig:lp_tol_scheme}
+\begin_inset LatexCommand vref
+reference "fig:lp_tol_scheme"
 
 \end_inset
 
@@ -500,7 +537,7 @@ lassen sich die D‰mpfungswerte
 A_{\textup{max}} & =-20\log\trf(1)=10\log\left[1+\edrf{\omega_{g}}{k}\right]=10\log\left(1+\sigma^{2}\right)\\
 A_{\textup{min}} & =-20\log\trf\left(\frac{1}{k}\right)=10\log\left[1+\edrf{\omega_{s}}{k}\right]=10\log\left(1+\frac{\sigma^{2}}{\lambda^{2}}\right)\\
 \textrm{mit}\\
-\lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
+\lambda & =k^{n}\prod_{\nu=1,3,5,\ldots}^{{n-1\textrm{ (n gerade)}\atop n-2\textrm{ (n ungerade)}}}\esn[4]{\nu\frac{K}{n}}{k}\end{align*}
 
 \end_inset
 
@@ -512,11 +549,11 @@ Variation des Parameters
 \begin_inset Formula $k$
 \end_inset
 
- zeigt, daﬂ er die Steilheit im ‹bergangsbereich 
+ zeigt, da√ü er die Steilheit im √úbergangsbereich 
 \begin_inset Formula $1<\omega<\omega_{s}$
 \end_inset
 
-, aber auch die Welligkeit im Durchlaﬂbereich 
+, aber auch die Welligkeit im Durchla√übereich 
 \begin_inset ERT
 status collapsed
 
@@ -529,18 +566,19 @@ resp
 
 \end_inset
 
- Mindestd‰mpfung im Sperrbereich wesentlich beeinfluﬂt.
+ Mindestd√§mpfung im Sperrbereich wesentlich beeinflu√üt.
  In Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:cauer_attenuation}
+\begin_inset LatexCommand ref
+reference "fig:cauer_attenuation"
 
 \end_inset
 
- ist der D‰mpfungsverlauf eines 
+ ist der D√§mpfungsverlauf eines 
 \noun on
 Cauer
 \noun default
--Tiefpaﬂ f¸r geraden und ungeraden Grad 
+-Tiefpa√ü f√ºr geraden und ungeraden Grad 
 \begin_inset Formula $n$
 \end_inset
 
@@ -576,16 +614,25 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:cauer_attenuation}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:cauer_attenuation"
 
 \end_inset
 
-D‰mpfungsverlauf des
+D√§mpfungsverlauf des
 \noun on
  Cauer
 \noun default
--Tiefpaﬂ
+-Tiefpa√ü
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -596,7 +643,8 @@ D‰mpfungsverlauf des
 \begin_layout Standard
 Bemerkenswert ist in diesem Zusammenhang eine Eigenschaft von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_cauer_rational}
+\begin_inset LatexCommand ref
+reference "eq:filter_cauer_rational"
 
 \end_inset
 
@@ -615,7 +663,8 @@ cf
 
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:elltr_reciprocal}
+\begin_inset LatexCommand ref
+reference "eq:elltr_reciprocal"
 
 \end_inset
 
@@ -654,9 +703,10 @@ Null- und Polstellen
 \end_layout
 
 \begin_layout Standard
-Zun‰chst sei auf eine Konsequenz von Gleichung\InsetSpace ~
+Zun√§chst sei auf eine Konsequenz von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+\begin_inset LatexCommand ref
+reference "eq:filter_cauer_reciprocal"
 
 \end_inset
 
@@ -679,9 +729,9 @@ Nicht aber der von
 \end_inset
 
  eingegangen.
- Sie f¸hrt sofort zu der Schluﬂfolgerung, daﬂ diese nicht unabh‰ngig voneinander
+ Sie f√ºhrt sofort zu der Schlu√üfolgerung, da√ü diese nicht unabh√§ngig voneinander
  sind.
- Setzt man in die Beziehung n‰mlich beispielhaft eine Nullstelle 
+ Setzt man in die Beziehung n√§mlich beispielhaft eine Nullstelle 
 \begin_inset Formula $\zn[{\scriptscriptstyle (\drf)}]{\omega}{\nu}$
 \end_inset
 
@@ -702,9 +752,10 @@ Nicht aber der von
 \end_layout
 
 \begin_layout Standard
-Folglich muﬂ die linke Seite in Gleichung\InsetSpace ~
+Folglich mu√ü die linke Seite in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:filter_cauer_reciprocal}
+\begin_inset LatexCommand ref
+reference "eq:filter_cauer_reciprocal"
 
 \end_inset
 
@@ -717,7 +768,7 @@ Folglich muﬂ die linke Seite in Gleichung\InsetSpace ~
 \end_inset
 
  besitzen.
- Der Zusammenhang zwischen den Null- und Polstellen der D‰mpfung ist demzufolge
+ Der Zusammenhang zwischen den Null- und Polstellen der D√§mpfung ist demzufolge
  durch folgende Beziehung charakterisiert.
 \end_layout
 
@@ -731,7 +782,8 @@ Folglich muﬂ die linke Seite in Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Cauer-Tiefpaﬂ@\noun{Cauer}-Tiefpaﬂ|)}
+\begin_inset LatexCommand index
+name "Cauer-Tiefpa√ü@\\noun{Cauer}-Tiefpa√ü|)"
 
 \end_inset
 
