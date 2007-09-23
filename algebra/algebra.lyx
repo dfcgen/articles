@@ -1,5 +1,5 @@
-#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -8,7 +8,14 @@
 \end_preamble
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \float_placement tbph
 \paperfontsize default
@@ -16,6 +23,7 @@
 \papersize default
 \use_geometry false
 \use_amsmath 1
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -28,13 +36,16 @@
 \papersides 1
 \paperpagestyle default
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_group}
+\begin_inset LatexCommand label
+name "sec:algebra_group"
 
 \end_inset
 
@@ -42,7 +53,8 @@ Gruppen
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:algebra_group_def}
+\begin_inset LatexCommand label
+name "sec:algebra_group_def"
 
 \end_inset
 
@@ -50,18 +62,20 @@ Allgemeine Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Algebra}
+\begin_inset LatexCommand index
+name "Algebra"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe}
+\begin_inset LatexCommand index
+name "Gruppe"
 
 \end_inset
 
 Eine Gruppe
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Der Begriff wurde zuerst von 
@@ -77,23 +91,43 @@ Galois
 \begin_inset Formula $(G,\diamond)$
 \end_inset
 
- ist ein algebraisches System, daß aus einer nicht-leeren Menge von Elementen
+
+\begin_inset LatexCommand nomenclature
+prefix "(G,"
+symbol "$(G,\\diamond)$"
+description "Gruppe $G$ mit Operation $\\diamond$"
+
+\end_inset
+
+ ist ein algebraisches System, daÃŸ aus einer nicht-leeren Menge von Elementen
  
 \begin_inset Formula $G$
 \end_inset
 
- besteht, für die eine Operation 
+ besteht, fÃ¼r die eine Operation 
 \begin_inset Formula $\diamond$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "#"
+symbol "$\\diamond$"
+description "Operation $\\diamond$"
+
 \end_inset
 
  mit folgenden Eigenschaften definiert ist\InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.1]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "2.1"
+key "Peterson:1972"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[101~ff.]{Koerner:1988}
+\begin_inset LatexCommand cite
+after "101~ff."
+key "Koerner:1988"
 
 \end_inset
 
@@ -105,12 +139,13 @@ die Anwendung der Operation
 \begin_inset Formula $\diamond$
 \end_inset
 
- auf zwei Elemente muß wieder zu einem Element in 
+ auf zwei Elemente muÃŸ wieder zu einem Element in 
 \begin_inset Formula $G$
 \end_inset
 
- führen (Abgeschlossenheit
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+ fÃ¼hren (Abgeschlossenheit
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
@@ -122,16 +157,17 @@ die Anwendung der Operation
 \end_layout
 
 \begin_layout Enumerate
-für alle 
+fÃ¼r alle 
 \begin_inset Formula $a,b,c\in G$
 \end_inset
 
- muß gelten: 
+ muÃŸ gelten: 
 \begin_inset Formula $a\diamond(b\diamond c)=(a\diamond b)\diamond c$
 \end_inset
 
- (Assoziativität
-\begin_inset LatexCommand \index{Assoziativität}
+ (AssoziativitÃ¤t
+\begin_inset LatexCommand index
+name "AssoziativitÃ¤t"
 
 \end_inset
 
@@ -140,7 +176,8 @@ für alle
 
 \begin_layout Enumerate
 ein neutrales Element
-\begin_inset LatexCommand \index{Element!neutrales}
+\begin_inset LatexCommand index
+name "Element!neutrales"
 
 \end_inset
 
@@ -148,7 +185,7 @@ ein neutrales Element
 \begin_inset Formula $e\in G$
 \end_inset
 
- muß existieren, so daß gilt: 
+ muÃŸ existieren, so daÃŸ gilt: 
 \begin_inset Formula $x\diamond e=x$
 \end_inset
 
@@ -156,8 +193,9 @@ ein neutrales Element
 \begin_inset Formula $x\in G$
 \end_inset
 
- (Identität
-\begin_inset LatexCommand \index{Identität}
+ (IdentitÃ¤t
+\begin_inset LatexCommand index
+name "IdentitÃ¤t"
 
 \end_inset
 
@@ -165,12 +203,13 @@ ein neutrales Element
 \end_layout
 
 \begin_layout Enumerate
-für jedes Element 
+fÃ¼r jedes Element 
 \begin_inset Formula $a\in G$
 \end_inset
 
- muß ein inverses Element
-\begin_inset LatexCommand \index{Element!inverses}
+ muÃŸ ein inverses Element
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -178,7 +217,7 @@ für jedes Element
 \begin_inset Formula $b\in G$
 \end_inset
 
- existieren, so daß 
+ existieren, so daÃŸ 
 \begin_inset Formula $a\diamond b=e$
 \end_inset
 
@@ -190,16 +229,47 @@ Die Menge
 \begin_inset Formula $G$
 \end_inset
 
- kann aus einer endlichen oder unendlichen Anzahl von Elementen bestehen.
+ kann aus einer endlichen oder unendlichen Anzahl von Elementen 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ bestehen.
+ Bei einer AufzÃ¤hlung der Elemente werden diese in geschweifte Klammern
+ eingeschlossen, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ so: 
+\begin_inset Formula $\{a_{1},a_{2},\ldots\}$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\{a_1,a_2,\\ldots\\}$"
+description "Menge von Elementen $a_i$"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Standard
-Ist außerdem die Zusatzbedingung 
+Ist auÃŸerdem die Zusatzbedingung 
 \begin_inset Formula $a\diamond b=b\diamond a$
 \end_inset
 
- erfüllt, wird die Gruppe kommutativ
-\begin_inset LatexCommand \index{Gruppe!kommutative}
+ erfÃ¼llt, wird die Gruppe kommutativ
+\begin_inset LatexCommand index
+name "Gruppe!kommutative"
 
 \end_inset
 
@@ -221,28 +291,33 @@ resp
 Abel
 \noun default
 'sch
-\begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
+\begin_inset LatexCommand index
+name "Gruppe!Abel'sche@\\noun{Abel}'sche"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Abel'sche@\noun{Abel}'sche Gruppe}
+\begin_inset LatexCommand index
+name "Abel'sche@\\noun{Abel}'sche Gruppe"
 
 \end_inset
 
  bezeichnet.
  Die Ordnung
-\begin_inset LatexCommand \index{Ordnung}
+\begin_inset LatexCommand index
+name "Ordnung"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe!Ordnung}
+\begin_inset LatexCommand index
+name "Gruppe!Ordnung"
 
 \end_inset
 
- (auch Mächtigkeit
-\begin_inset LatexCommand \index{Mächtigkeit}
+ (auch MÃ¤chtigkeit
+\begin_inset LatexCommand index
+name "MÃ¤chtigkeit"
 
 \end_inset
 
@@ -254,15 +329,39 @@ Abel
 \begin_inset Formula $\ord(G)$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "ord(G)"
+symbol "$\\ord(G)$"
+description "Ordnung der Gruppe $G$"
+
+\end_inset
+
 , 
 \begin_inset Formula $\left|G\right|$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "\"|G\"|"
+symbol "$\\left\"|G\\right\"|$"
+description "Ordnung der Gruppe $G$"
+
+\end_inset
+
  oder auch 
-\begin_inset Formula $\# G$
+\begin_inset Formula $\#G$
 \end_inset
 
 .
+\begin_inset LatexCommand nomenclature
+prefix "\"#"
+symbol "$\\#G$"
+description "Ordnung der Gruppe $G$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -296,7 +395,8 @@ ie
 \end_inset
 
  als Untergruppe
-\begin_inset LatexCommand \index{Gruppe!Unter-}
+\begin_inset LatexCommand index
+name "Gruppe!Unter-"
 
 \end_inset
 
@@ -312,14 +412,18 @@ ie
 \begin_inset Formula $U$
 \end_inset
 
- alle Eigenschaften einer Gruppe erfüllt\InsetSpace ~
+ alle Eigenschaften einer Gruppe erfÃ¼llt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[1.]{Bosch:1996}
+\begin_inset LatexCommand cite
+after "1."
+key "Bosch:1996"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[2.4]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "2.4"
+key "Peterson:1972"
 
 \end_inset
 
@@ -335,7 +439,8 @@ ie
  wird durch den Satz von 
 \noun on
 Lagrange
-\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+\begin_inset LatexCommand index
+name "Lagrange@\\noun{Lagrange}!Satz von"
 
 \end_inset
 
@@ -343,15 +448,15 @@ Lagrange
 \noun default
  beschrieben
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Interessant ist in diesem Zusammenhang die Erkenntnis, daß die Ordnung der
+Interessant ist in diesem Zusammenhang die Erkenntnis, daÃŸ die Ordnung der
  Untergruppe 
 \begin_inset Formula $U$
 \end_inset
 
- höchstens halb so groß sein kann, wie die der Gruppe 
+ hÃ¶chstens halb so groÃŸ sein kann, wie die der Gruppe 
 \begin_inset Formula $G$
 \end_inset
 
@@ -386,7 +491,8 @@ Die Ordnung
 \end_inset
 
  der sogenannte Index
-\begin_inset LatexCommand \index{Index}
+\begin_inset LatexCommand index
+name "Index"
 
 \end_inset
 
@@ -394,7 +500,7 @@ Die Ordnung
 \begin_inset Formula $G$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $U$
 \end_inset
 
@@ -423,9 +529,17 @@ resp
 \begin_inset Formula $i=\left|G:U\right|$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "\"|"
+symbol "$\\left\"|G:H\\right\"|$"
+description "Index der Gruppe $G$ Ã¼ber $H$"
+
+\end_inset
+
  geschrieben wird
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die Bezeichnungsweise des Index in der Form 
@@ -449,7 +563,8 @@ Additive Gruppen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gruppe!additive}
+\begin_inset LatexCommand index
+name "Gruppe!additive"
 
 \end_inset
 
@@ -461,7 +576,7 @@ Entsprechend der allgemeinen Definition wird eine Menge
 \begin_inset Formula $(G,+)$
 \end_inset
 
- genannt, wenn für sie
+ genannt, wenn fÃ¼r sie
 \end_layout
 
 \begin_layout Enumerate
@@ -485,7 +600,7 @@ ein neutrales (Null-) Element
 \begin_inset Formula $a+0=0+a=a$
 \end_inset
 
- für alle 
+ fÃ¼r alle 
 \begin_inset Formula $a\in G$
 \end_inset
 
@@ -493,8 +608,9 @@ ein neutrales (Null-) Element
 \end_layout
 
 \begin_layout Enumerate
-und für sie außerdem ein inverses Element
-\begin_inset LatexCommand \index{Element!inverses}
+und fÃ¼r sie auÃŸerdem ein inverses Element
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -515,12 +631,21 @@ und für sie außerdem ein inverses Element
 
 \begin_layout Standard
 Das bekannteste Beispiel einer solchen Gruppe ist die der ganzen Zahlen
-\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+\begin_inset LatexCommand index
+name "Zahlen!ganze $\\mathbb{Z}$"
 
 \end_inset
 
  
 \begin_inset Formula $(\mathbb{Z},+)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Z"
+symbol "$\\mathbb{Z}$"
+description "Menge der ganzen Zahlen"
+
 \end_inset
 
 .
@@ -531,15 +656,16 @@ Multiplikative Gruppen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
-Für die multiplikative Gruppe 
+FÃ¼r die multiplikative Gruppe 
 \begin_inset Formula $(G,\cdot)$
 \end_inset
 
- gilt äquivalent:
+ gilt Ã¤quivalent:
 \end_layout
 
 \begin_layout Itemize
@@ -556,7 +682,8 @@ eine assoziative Operation
 
 \begin_layout Itemize
 ein neutrales (Eins-) Element
-\begin_inset LatexCommand \index{Einselement}
+\begin_inset LatexCommand index
+name "Einselement"
 
 \end_inset
 
@@ -564,11 +691,11 @@ ein neutrales (Eins-) Element
 \begin_inset Formula $e_{(\cdot)}=1\in G$
 \end_inset
 
- mit der Identität 
+ mit der IdentitÃ¤t 
 \begin_inset Formula $a\cdot1=1\cdot a=a$
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $a\in G$
 \end_inset
 
@@ -577,7 +704,8 @@ ein neutrales (Eins-) Element
 
 \begin_layout Itemize
 und ein inverses Element
-\begin_inset LatexCommand \index{Element!inverses}
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -601,7 +729,8 @@ sind definiert.
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_ring}
+\begin_inset LatexCommand label
+name "sec:algebra_ring"
 
 \end_inset
 
@@ -609,7 +738,8 @@ Ringe
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Ring}
+\begin_inset LatexCommand index
+name "Ring"
 
 \end_inset
 
@@ -621,22 +751,32 @@ Eine Menge
 \begin_inset Formula $(R,+,\cdot)$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "(R"
+symbol "$(R,+,\\cdot)$"
+description "Ring"
+
+\end_inset
+
 , wenn auf ihr sowohl Addition als auch Multiplikation mit 
 \begin_inset Formula $R\times R\rightarrow R$
 \end_inset
 
- erklärt sind\InsetSpace ~
+ erklÃ¤rt sind\InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.2]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "2.2"
+key "Peterson:1972"
 
 \end_inset
 
 .
- Speziell müssen folgende Axiome gelten:
+ Speziell mÃ¼ssen folgende Axiome gelten:
 \end_layout
 
 \begin_layout Enumerate
-Bezüglich der Addition bildet 
+BezÃ¼glich der Addition bildet 
 \begin_inset Formula $R$
 \end_inset
 
@@ -656,18 +796,20 @@ Abel
 \end_inset
 
  ist eine sogenannte Halbgruppe
-\begin_inset LatexCommand \index{Halbgruppe}
+\begin_inset LatexCommand index
+name "Halbgruppe"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe!Halb-}
+\begin_inset LatexCommand index
+name "Gruppe!Halb-"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Ein inverses Element wird dabei 
@@ -678,7 +820,7 @@ nicht
 \begin_inset Formula $R$
 \end_inset
 
- ein Inverses besitzen können.
+ ein Inverses besitzen kÃ¶nnen.
 \end_layout
 
 \end_inset
@@ -716,7 +858,7 @@ und es gilt das Assoziativgesetz
 \begin_inset Formula $a\cdot(b\cdot c)=(a\cdot b)\cdot c$
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $a,b,c\in R$
 \end_inset
 
@@ -725,12 +867,13 @@ und es gilt das Assoziativgesetz
 
 \end_deeper
 \begin_layout Enumerate
-Außerdem muß für 
+AuÃŸerdem muÃŸ fÃ¼r 
 \begin_inset Formula $a,b,c\in R$
 \end_inset
 
  das Distributivgesetz
-\begin_inset LatexCommand \index{Distributivgesetz}
+\begin_inset LatexCommand index
+name "Distributivgesetz"
 
 \end_inset
 
@@ -742,7 +885,7 @@ Außerdem muß für
 \end_layout
 
 \begin_layout Standard
-Existiert zusätzlich noch die Identität 
+Existiert zusÃ¤tzlich noch die IdentitÃ¤t 
 \begin_inset Formula $e_{(\cdot)}=1\in R$
 \end_inset
 
@@ -750,7 +893,7 @@ Existiert zusätzlich noch die Identität
 \begin_inset Formula $a\cdot1=1\cdot a=a$
 \end_inset
 
- für alle 
+ fÃ¼r alle 
 \begin_inset Formula $a\in R$
 \end_inset
 
@@ -759,12 +902,14 @@ Existiert zusätzlich noch die Identität
 \end_inset
 
  Monoid
-\begin_inset LatexCommand \index{Monoid}
+\begin_inset LatexCommand index
+name "Monoid"
 
 \end_inset
 
  oder Ring
-\begin_inset LatexCommand \index{Ring!mit Eins}
+\begin_inset LatexCommand index
+name "Ring!mit Eins"
 
 \end_inset
 
@@ -776,8 +921,9 @@ Eins
 \end_layout
 
 \begin_layout Standard
-Zur Multiplikation ist zu bemerken, daß nicht-negative Potenzen
-\begin_inset LatexCommand \index{Element!Potenzierung}
+Zur Multiplikation ist zu bemerken, daÃŸ nicht-negative Potenzen
+\begin_inset LatexCommand index
+name "Element!Potenzierung"
 
 \end_inset
 
@@ -811,17 +957,19 @@ a^{n}=\underbrace{a\cdot a\cdots a}_{n\text{{-mal}}}\]
 \end_layout
 
 \begin_layout Standard
-Ein Ring wird außerdem als 
+Ein Ring wird auÃŸerdem als 
 \emph on
 
-\begin_inset LatexCommand \index{Ring!kommutativer}
+\begin_inset LatexCommand index
+name "Ring!kommutativer"
 
 \end_inset
 
 kommutativ
 \emph default
- bezeichnet, wenn auch für die Multiplikation das Kommutativgesetz
-\begin_inset LatexCommand \index{Kommutativgesetz}
+ bezeichnet, wenn auch fÃ¼r die Multiplikation das Kommutativgesetz
+\begin_inset LatexCommand index
+name "Kommutativgesetz"
 
 \end_inset
 
@@ -830,8 +978,9 @@ kommutativ
 \end_inset
 
 .
- Ein typisches Beispiel hierfür ist der Ring
-\begin_inset LatexCommand \index{Ring!$\mathbb{Z}$}
+ Ein typisches Beispiel hierfÃ¼r ist der Ring
+\begin_inset LatexCommand index
+name "Ring!$\\mathbb{Z}$"
 
 \end_inset
 
@@ -840,57 +989,71 @@ kommutativ
 \end_inset
 
  der ganzen Zahlen
-\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+\begin_inset LatexCommand index
+name "Zahlen!ganze $\\mathbb{Z}$"
 
 \end_inset
 
-, denn er erfüllt offensichtlich alle Axiome.
+, denn er erfÃ¼llt offensichtlich alle Axiome.
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_field}
+\begin_inset LatexCommand label
+name "sec:algebra_field"
 
 \end_inset
 
-Körper\InsetSpace ~
+KÃ¶rper\InsetSpace ~
 (Field)
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Körper}
+\begin_inset LatexCommand index
+name "KÃ¶rper"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Field|see{K{\"o}rper}}
+\begin_inset LatexCommand index
+name "Field|see{KÃ¶rper}"
 
 \end_inset
 
-Ein Körper 
+Ein KÃ¶rper 
 \begin_inset Formula $K$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "K"
+symbol "$K$"
+description "KÃ¶rper"
+
 \end_inset
 
  wird durch ein System von Elementen (endlich oder unendlich) gebildet,
  die sich durch die definierten Operationen Addition, Subtraktion, Multiplikatio
-n und Division verknüpfen lassen
+n und Division verknÃ¼pfen lassen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Jede dieser Operationen muß wieder zu einem Element dieses Körpers führen
+Jede dieser Operationen muÃŸ wieder zu einem Element dieses KÃ¶rpers fÃ¼hren
  (Abgeschlossenheit).
 \end_layout
 
 \end_inset
 
- und für die das Distributivgesetz gilt\InsetSpace ~
+ und fÃ¼r die das Distributivgesetz gilt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.3]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "2.3"
+key "Peterson:1972"
 
 \end_inset
 
 .
- Präzise heißt das:
+ PrÃ¤zise heiÃŸt das:
 \end_layout
 
 \begin_layout Enumerate
@@ -912,7 +1075,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_ring}
+\begin_inset LatexCommand ref
+reference "sec:algebra_ring"
 
 \end_inset
 
@@ -948,16 +1112,17 @@ ie
 \begin_inset Formula $K^{*}=K\setminus\{0\}$
 \end_inset
 
-), müssen ein inverses Element besitzen.
+), mÃ¼ssen ein inverses Element besitzen.
 \end_layout
 
 \begin_layout Standard
-Die bekanntesten Körper sind die der 
+Die bekanntesten KÃ¶rper sind die der 
 \end_layout
 
 \begin_layout Itemize
 reellen Zahlen
-\begin_inset LatexCommand \index{Zahlen!reelle $\mathbb{R}$}
+\begin_inset LatexCommand index
+name "Zahlen!reelle $\\mathbb{R}$"
 
 \end_inset
 
@@ -966,11 +1131,19 @@ reellen Zahlen
 \end_inset
 
 ,
+\begin_inset LatexCommand nomenclature
+prefix "R"
+symbol "$\\mathbb{R}$"
+description "KÃ¶rper der reellen Zahlen"
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
 \begin_layout Standard
-mathbb{} ist für sogenannte double-line capitals
+mathbb{} ist fÃ¼r sogenannte double-line capitals
 \end_layout
 
 \begin_layout Standard
@@ -984,7 +1157,8 @@ in Font "Blackboard-Bold"
 
 \begin_layout Itemize
 komplexen Zahlen
-\begin_inset LatexCommand \index{Zahlen!komplexe $\mathbb{C}$}
+\begin_inset LatexCommand index
+name "Zahlen!komplexe $\\mathbb{C}$"
 
 \end_inset
 
@@ -993,11 +1167,20 @@ komplexen Zahlen
 \end_inset
 
 ,
+\begin_inset LatexCommand nomenclature
+prefix "C"
+symbol "$\\mathbb{C}$"
+description "KÃ¶rper der komplexen Zahlen"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
 rationalen Zahlen
-\begin_inset LatexCommand \index{Zahlen!rationale $\mathbb{Q}$}
+\begin_inset LatexCommand index
+name "Zahlen!rationale $\\mathbb{Q}$"
 
 \end_inset
 
@@ -1006,11 +1189,19 @@ rationalen Zahlen
 \end_inset
 
 
+\begin_inset LatexCommand nomenclature
+prefix "Q"
+symbol "$\\mathbb{Q}$"
+description "KÃ¶rper der rationalen Zahlen"
+
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
 \begin_layout Standard
-Umfaßt nicht die transzendent entwickelten Zahlen wie Pi, e etc.
+UmfaÃŸt nicht die transzendent entwickelten Zahlen wie Pi, e etc.
 \end_layout
 
 \end_inset
@@ -1019,13 +1210,15 @@ Umfaßt nicht die transzendent entwickelten Zahlen wie Pi, e etc.
 \end_layout
 
 \begin_layout Itemize
-sowie der endliche Körper
-\begin_inset LatexCommand \index{Körper!endlicher}
+sowie der endliche KÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!endlicher"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
+\begin_inset LatexCommand index
+name "KÃ¶rper!$\\mathbb{Z}_2$"
 
 \end_inset
 
@@ -1037,11 +1230,11 @@ sowie der endliche Körper
 \end_layout
 
 \begin_layout Standard
-Eine Menge von Funktionen über einem Körper 
+Eine Menge von Funktionen Ã¼ber einem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
- kann selbst auch wieder ein Körper sein, 
+ kann selbst auch wieder ein KÃ¶rper sein, 
 \begin_inset ERT
 status collapsed
 
@@ -1058,7 +1251,7 @@ eg
 \begin_inset Formula $\mathbb{R}(x)$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
@@ -1070,7 +1263,8 @@ eg
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_vector_space}
+\begin_inset LatexCommand label
+name "sec:algebra_vector_space"
 
 \end_inset
 
@@ -1078,17 +1272,35 @@ Vektorraum
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Vektor!-raum}
+\begin_inset LatexCommand index
+name "Vektor!-raum"
 
 \end_inset
 
 Eine Menge von Vektoren
-\begin_inset LatexCommand \index{Vektor}
+\begin_inset LatexCommand index
+name "Vektor"
 
 \end_inset
 
  
 \begin_inset Formula $V:=\{\mvec v_{1},\mvec v_{2},\mvec v_{3},\ldots\}$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "V"
+symbol "$V$"
+description "Vektorraum"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "v"
+symbol "$\\mvec{v}$"
+description "Vektor $v$"
+
 \end_inset
 
 , jeder bestehend aus einem geordneten 
@@ -1099,11 +1311,11 @@ Eine Menge von Vektoren
 \begin_inset Formula $a$
 \end_inset
 
- aus einem Körper 
+ aus einem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
-, wird Vektorraum über dem Körper 
+, wird Vektorraum Ã¼ber dem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
@@ -1122,7 +1334,9 @@ cf
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.5]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "2.5"
+key "Peterson:1972"
 
 \end_inset
 
@@ -1136,7 +1350,7 @@ die additive Gruppe
 
  existiert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Entscheidend in Bezug auf den Begriff des Vektorraumes (in Relation zu einer
@@ -1155,11 +1369,12 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_algebra}
+\begin_inset LatexCommand ref
+reference "sec:algebra_algebra"
 
 \end_inset
 
-) ist, daß nur die Addition zwischen Vektoren (
+) ist, daÃŸ nur die Addition zwischen Vektoren (
 \noun on
 Abel
 \noun default
@@ -1184,28 +1399,28 @@ abel
 \end_layout
 
 \begin_layout Enumerate
-für jeden Vektor 
+fÃ¼r jeden Vektor 
 \begin_inset Formula $\mvec{v}\in V$
 \end_inset
 
- die Multiplikation mit einem Körperelement (Skalar) 
+ die Multiplikation mit einem KÃ¶rperelement (Skalar) 
 \begin_inset Formula $a$
 \end_inset
 
  definiert ist
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die mit 
 \begin_inset Formula $\cdot$
 \end_inset
 
- gekennzeichnete Operation nennt man auch die äußere,
+ gekennzeichnete Operation nennt man auch die Ã¤uÃŸere,
 \begin_inset Formula $+$
 \end_inset
 
- die innere Verknüpfung.
+ die innere VerknÃ¼pfung.
 \end_layout
 
 \end_inset
@@ -1214,8 +1429,9 @@ Die mit
 \begin_inset Formula $\mvec{u}=a\mvec{v}\in V$
 \end_inset
 
- führt (Abgeschlossenheit
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+ fÃ¼hrt (Abgeschlossenheit
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
@@ -1227,7 +1443,7 @@ Die mit
 \end_layout
 
 \begin_layout Enumerate
-bezüglich zweier Skalare 
+bezÃ¼glich zweier Skalare 
 \begin_inset Formula $a,b$
 \end_inset
 
@@ -1236,7 +1452,8 @@ bezüglich zweier Skalare
 \end_inset
 
  die folgenden Distributivgesetze
-\begin_inset LatexCommand \index{Distributivgesetz}
+\begin_inset LatexCommand index
+name "Distributivgesetz"
 
 \end_inset
 
@@ -1254,7 +1471,8 @@ a(\mvec{u}+\mvec{v}) & =a\mvec{u}+a\mvec{v}\\
 
 \begin_layout Enumerate
 das Assoziativgesetz
-\begin_inset LatexCommand \index{Assoziativgesetz}
+\begin_inset LatexCommand index
+name "Assoziativgesetz"
 
 \end_inset
 
@@ -1267,7 +1485,8 @@ das Assoziativgesetz
 
 \begin_layout Enumerate
 und es ein multiplikativ neutrales Element
-\begin_inset LatexCommand \index{Element!neutrales}
+\begin_inset LatexCommand index
+name "Element!neutrales"
 
 \end_inset
 
@@ -1287,12 +1506,12 @@ Wenn mit
 \begin_inset Formula $\mvec{v}$
 \end_inset
 
- bezeichnet wird, dann nennt man den zugehörigen Vektorraum (über dem Körper
+ bezeichnet wird, dann nennt man den zugehÃ¶rigen Vektorraum (Ã¼ber dem KÃ¶rper
  
 \begin_inset Formula $K$
 \end_inset
 
-) üblicherweise 
+) Ã¼blicherweise 
 \begin_inset Formula $V_{n}(K)$
 \end_inset
 
@@ -1323,7 +1542,8 @@ eg
 
 .
  Entsprechend ist auch das neutrale Element
-\begin_inset LatexCommand \index{Element!neutrales}
+\begin_inset LatexCommand index
+name "Element!neutrales"
 
 \end_inset
 
@@ -1344,11 +1564,12 @@ Kann man jeden Vektor von
 \end_inset
 
  als Linearkombination
-\begin_inset LatexCommand \index{Linearkombination}
+\begin_inset LatexCommand index
+name "Linearkombination"
 
 \end_inset
 
- von unabhängigen Vektoren 
+ von unabhÃ¤ngigen Vektoren 
 \begin_inset Formula $\mvec u_{1},\mvec u_{2},\ldots,\mvec u_{n}\in U\subseteq V$
 \end_inset
 
@@ -1370,7 +1591,8 @@ so nennt man
 \end_inset
 
  die Basis
-\begin_inset LatexCommand \index{Vektor!-raum!Basis}
+\begin_inset LatexCommand index
+name "Vektor!-raum!Basis"
 
 \end_inset
 
@@ -1383,7 +1605,8 @@ so nennt man
 \end_inset
 
  die Dimension
-\begin_inset LatexCommand \index{Vektor!-raum!Dimension}
+\begin_inset LatexCommand index
+name "Vektor!-raum!Dimension"
 
 \end_inset
 
@@ -1392,6 +1615,14 @@ so nennt man
 \end_inset
 
 .
+\begin_inset LatexCommand nomenclature
+prefix "dim"
+symbol "$\\dim(V)$"
+description "Dimension des Vektorraums $V$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1404,7 +1635,8 @@ n=\dim(V)=\left|V\right|\]
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_algebra}
+\begin_inset LatexCommand label
+name "sec:algebra_algebra"
 
 \end_inset
 
@@ -1412,31 +1644,34 @@ Algebra (Verband)
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Verband|see{Algebra}}
+\begin_inset LatexCommand index
+name "Verband|see{Algebra}"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Algebra}
+\begin_inset LatexCommand index
+name "Algebra"
 
 \end_inset
 
-Eine Algebra über einem Körper 
+Eine Algebra Ã¼ber einem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
  ist eine Erweiterung des Begriffs Vektorraum in Bezug auf die Vektormultiplikat
 ion
-\begin_inset LatexCommand \index{Vektor!-multiplikation}
+\begin_inset LatexCommand index
+name "Vektor!-multiplikation"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ohne für jeden Vektor ein multiplikativ inverses Element zu fordern.
+Ohne fÃ¼r jeden Vektor ein multiplikativ inverses Element zu fordern.
  Man spricht deshalb auch manchmal von einem assoziativen Vektorring.
 \end_layout
 
@@ -1451,7 +1686,7 @@ die Menge
 \begin_inset Formula $V$
 \end_inset
 
- ist ein Vektorraum über einem Körper 
+ ist ein Vektorraum Ã¼ber einem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
@@ -1470,7 +1705,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+\begin_inset LatexCommand ref
+reference "sec:algebra_vector_space"
 
 \end_inset
 
@@ -1478,12 +1714,13 @@ cf
 \end_layout
 
 \begin_layout Enumerate
-für zwei Vektoren 
+fÃ¼r zwei Vektoren 
 \begin_inset Formula $\mvec{u},\mvec{v}\in V$
 \end_inset
 
  ist ein Produkt
-\begin_inset LatexCommand \index{Vektor!-produkt}
+\begin_inset LatexCommand index
+name "Vektor!-produkt"
 
 \end_inset
 
@@ -1496,7 +1733,8 @@ für zwei Vektoren
 \end_inset
 
  abgeschlossen
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
@@ -1509,24 +1747,26 @@ für zwei Vektoren
 
 \begin_layout Enumerate
 das Assoziativgesetz
-\begin_inset LatexCommand \index{Assoziativgesetz}
+\begin_inset LatexCommand index
+name "Assoziativgesetz"
 
 \end_inset
 
- für Vektoren 
+ fÃ¼r Vektoren 
 \begin_inset Formula $(\mvec{u}\mvec{v})\mvec{w}=\mvec{u}(\mvec{v}\mvec{w})$
 \end_inset
 
- ist erfüllt;
+ ist erfÃ¼llt;
 \end_layout
 
 \begin_layout Enumerate
 auch das Distributivgesetz
-\begin_inset LatexCommand \index{Distributivgesetz}
+\begin_inset LatexCommand index
+name "Distributivgesetz"
 
 \end_inset
 
- läßt sich auf Vektoren anwenden: 
+ lÃ¤ÃŸt sich auf Vektoren anwenden: 
 \begin_inset Formula $(\mvec{u}+\mvec{v})\mvec{w}=\mvec{u}\mvec{w}+\mvec{v}\mvec{w}$
 \end_inset
 
@@ -1534,12 +1774,14 @@ auch das Distributivgesetz
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:algebra_residue_classes}
+\begin_inset LatexCommand label
+name "sec:algebra_residue_classes"
 
 \end_inset
 
 Restklassen
-\begin_inset LatexCommand \index{Restklassen|(}
+\begin_inset LatexCommand index
+name "Restklassen|("
 
 \end_inset
 
@@ -1547,12 +1789,13 @@ Restklassen
 \end_layout
 
 \begin_layout Subsection
-Einführung
+EinfÃ¼hrung
 \end_layout
 
 \begin_layout Standard
 Restklassen sind Kongruenzen
-\begin_inset LatexCommand \index{Kongruenz}
+\begin_inset LatexCommand index
+name "Kongruenz"
 
 \end_inset
 
@@ -1563,12 +1806,14 @@ Restklassen sind Kongruenzen
 
 .
  Das Rechnen mit solchen Elementen wird als modulare
-\begin_inset LatexCommand \index{Arithmetik!modulare}
+\begin_inset LatexCommand index
+name "Arithmetik!modulare"
 
 \end_inset
 
  oder Modulo-Arithmetik
-\begin_inset LatexCommand \index{Arithmetik!Modulo-}
+\begin_inset LatexCommand index
+name "Arithmetik!Modulo-"
 
 \end_inset
 
@@ -1577,7 +1822,8 @@ Restklassen sind Kongruenzen
 \end_inset
 
  als das Modul
-\begin_inset LatexCommand \index{Modul}
+\begin_inset LatexCommand index
+name "Modul"
 
 \end_inset
 
@@ -1624,8 +1870,9 @@ Division
 \end_inset
 
 .
- Im Umkehrschluß sind die Restklassenelemente
-\begin_inset LatexCommand \index{Element!Restklassen-}
+ Im UmkehrschluÃŸ sind die Restklassenelemente
+\begin_inset LatexCommand index
+name "Element!Restklassen-"
 
 \end_inset
 
@@ -1643,7 +1890,7 @@ a=qm+r,\qquad0\leq r<m\label{eq:algebra_mod_reverse}\end{equation}
 
 \begin_layout Standard
 bestimmt.
- Die Äquivalenzrelation 
+ Die Ã„quivalenzrelation 
 \begin_inset Formula $r\equiv a\bmod m$
 \end_inset
 
@@ -1661,7 +1908,8 @@ eg
 \end_inset
 
  im Ring der ganzen Zahlen
-\begin_inset LatexCommand \index{Zahlen!ganze $\mathbb{Z}$}
+\begin_inset LatexCommand index
+name "Zahlen!ganze $\\mathbb{Z}$"
 
 \end_inset
 
@@ -1669,12 +1917,12 @@ eg
 \begin_inset Formula $\mathbb{Z}$
 \end_inset
 
- definieren, ist aber nicht auf diesen beschränkt.
+ definieren, ist aber nicht auf diesen beschrÃ¤nkt.
  Im allgemeinen Fall 
 \begin_inset Formula $a\in R$
 \end_inset
 
- schreibt man für die Restklasse
+ schreibt man fÃ¼r die Restklasse
 \end_layout
 
 \begin_layout Standard
@@ -1703,6 +1951,14 @@ ie
 \begin_inset Formula $\rcls{r}{m}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "\"["
+symbol "$\\rcls{r}{m}$"
+description "Restklasse zum Modul $m$"
+
+\end_inset
+
  ist die Menge aller Elemente 
 \begin_inset Formula $a\in R$
 \end_inset
@@ -1716,7 +1972,7 @@ ie
 \end_inset
 
  ergeben.
- Ein Beispiel für 
+ Ein Beispiel fÃ¼r 
 \begin_inset Formula $a\in\mathbb{Z}$
 \end_inset
 
@@ -1738,7 +1994,7 @@ ie
 \end_layout
 
 \begin_layout Standard
-Üblicherweise bezeichnet man die Menge aller Restklassen mit
+Ãœblicherweise bezeichnet man die Menge aller Restklassen mit
 \end_layout
 
 \begin_layout Standard
@@ -1756,7 +2012,8 @@ und mit
 \end_inset
 
  deren Anzahl (Ordnung
-\begin_inset LatexCommand \index{Ordnung}
+\begin_inset LatexCommand index
+name "Ordnung"
 
 \end_inset
 
@@ -1775,20 +2032,28 @@ und mit
 
  gilt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Auch eine Einschränkung auf 
+Auch eine EinschrÃ¤nkung auf 
 \begin_inset Formula $n<m$
 \end_inset
 
- ist möglich, nur darf man dann (von vornherein) nicht alle Elemente aus
+ ist mÃ¶glich, nur darf man dann (von vornherein) nicht alle Elemente aus
  
 \begin_inset Formula $\mathbb{Z}_{m}$
 \end_inset
 
  zulassen.
 \end_layout
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Zm"
+symbol "$\\mathbb{Z}_m$"
+description "Restklassenring der ganzen Zahlen\\footnote{Die ganzen Zahlen von $0$ bis $m-1$, \\ie modulo $m$} $\\mod m$"
 
 \end_inset
 
@@ -1805,13 +2070,13 @@ Auch eine Einschränkung auf
 \end_layout
 
 \begin_layout Standard
-Im Allgemeinen werden Verknüpfungsoperationen (Addition, Multiplikation
- usw.) zwischen zwei Restklassen dadurch definiert, daß man jeweils einen
- Vertreter aus den Restklassen auswählt und dann die Operation mit diesem
- Repräsentanten durchführt.
+Im Allgemeinen werden VerknÃ¼pfungsoperationen (Addition, Multiplikation
+ usw.) zwischen zwei Restklassen dadurch definiert, daÃŸ man jeweils einen
+ Vertreter aus den Restklassen auswÃ¤hlt und dann die Operation mit diesem
+ ReprÃ¤sentanten durchfÃ¼hrt.
  Kann man die eine oder andere Art solcher Operationen auf der Menge aller
  Restklassen definieren, dann lassen sich Restklassenringe, -gruppen oder
- sogar -körper angeben.
+ sogar -kÃ¶rper angeben.
 \end_layout
 
 \begin_layout Subsection
@@ -1819,12 +2084,14 @@ Restklassenringe
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Ring!Restklassen-}
+\begin_inset LatexCommand index
+name "Ring!Restklassen-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Restklassen!-ring}
+\begin_inset LatexCommand index
+name "Restklassen!-ring"
 
 \end_inset
 
@@ -1832,9 +2099,17 @@ Um von einem Restklassenring
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset
 
- sprechen zu können ist der Nachweis (
+
+\begin_inset LatexCommand nomenclature
+prefix "(Rm"
+symbol "$(R_{m},+,\\cdot)$"
+description "Restklassenring"
+
+\end_inset
+
+ sprechen zu kÃ¶nnen ist der Nachweis (
 \begin_inset ERT
-status open
+status collapsed
 
 \begin_layout Standard
 
@@ -1847,7 +2122,8 @@ resp
 
  die Definition) aller Ringaxiome von Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_ring}
+\begin_inset LatexCommand ref
+reference "sec:algebra_ring"
 
 \end_inset
 
@@ -1857,28 +2133,32 @@ resp
 
  notwendig\InsetSpace ~
 
-\begin_inset LatexCommand \cite[5.]{Welschenbach:2001}
+\begin_inset LatexCommand cite
+after "5."
+key "Welschenbach:2001"
 
 \end_inset
 
 .
  Dazu geht man von der Modulo-Arithmetik entsprechend Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_def_mod}
+\begin_inset LatexCommand ref
+reference "eq:algebra_def_mod"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_mod_reverse}
+\begin_inset LatexCommand ref
+reference "eq:algebra_mod_reverse"
 
 \end_inset
 
- aus und prüft jeden Punkt durch Einzelbetrachtung:
+ aus und prÃ¼ft jeden Punkt durch Einzelbetrachtung:
 \end_layout
 
 \begin_layout Enumerate
-Bezüglich der Addition muß 
+BezÃ¼glich der Addition muÃŸ 
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset
 
@@ -1887,7 +2167,8 @@ Bezüglich der Addition muß
 Abel
 \noun default
 'sche Gruppe
-\begin_inset LatexCommand \index{Gruppe!Abel'sche@\noun{Abel}'sche}
+\begin_inset LatexCommand index
+name "Gruppe!Abel'sche@\\noun{Abel}'sche"
 
 \end_inset
 
@@ -1910,16 +2191,17 @@ ie
 \begin_deeper
 \begin_layout Enumerate
 die Addition existiert und ist abgeschlossen
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Die Operation führt immer wieder auf ein Element in 
+Die Operation fÃ¼hrt immer wieder auf ein Element in 
 \begin_inset Formula $R_{m}$
 \end_inset
 
@@ -1940,7 +2222,7 @@ Die Operation führt immer wieder auf ein Element in
 \end_layout
 
 \begin_layout Enumerate
-sie ist außerdem sowohl assoziativ als auch kommutativ (
+sie ist auÃŸerdem sowohl assoziativ als auch kommutativ (
 \noun on
 Abel
 \noun default
@@ -1955,7 +2237,8 @@ Abel
 
 \begin_layout Enumerate
 das neutrale Element
-\begin_inset LatexCommand \index{Element!neutrales}
+\begin_inset LatexCommand index
+name "Element!neutrales"
 
 \end_inset
 
@@ -1974,7 +2257,8 @@ das neutrale Element
 
 \begin_layout Enumerate
 jedes Element besitzt ein inverses Element
-\begin_inset LatexCommand \index{Element!inverses}
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -1993,12 +2277,13 @@ jedes Element besitzt ein inverses Element
 
 \end_deeper
 \begin_layout Enumerate
-Für die Multiplikation muß 
+FÃ¼r die Multiplikation muÃŸ 
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset
 
  eine Halbgruppe
-\begin_inset LatexCommand \index{Halbgruppe}
+\begin_inset LatexCommand index
+name "Halbgruppe"
 
 \end_inset
 
@@ -2008,7 +2293,8 @@ Für die Multiplikation muß
 \begin_deeper
 \begin_layout Enumerate
 ebenfalls abgeschlossen
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
@@ -2025,15 +2311,16 @@ ebenfalls abgeschlossen
 
 \begin_layout Enumerate
 und das Assoziativgesetz
-\begin_inset LatexCommand \index{Assoziativgesetz}
+\begin_inset LatexCommand index
+name "Assoziativgesetz"
 
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
 \end_inset
 
- erfüllen;
+ erfÃ¼llen;
 \begin_inset Formula \[
 \rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}\cdot\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m})\cdot\rcls{r_{3}}{m}\]
 
@@ -2044,16 +2331,17 @@ und das Assoziativgesetz
 
 \end_deeper
 \begin_layout Enumerate
-Außerdem muß für alle 
+AuÃŸerdem muÃŸ fÃ¼r alle 
 \begin_inset Formula $\rcls{r_{i}}{m}\in R_{m}$
 \end_inset
 
  das Distributivgesetz
-\begin_inset LatexCommand \index{Distributivgesetz}
+\begin_inset LatexCommand index
+name "Distributivgesetz"
 
 \end_inset
 
- erfüllt sein.
+ erfÃ¼llt sein.
 \newline
 
 \begin_inset Formula \begin{alignat*}{1}
@@ -2072,7 +2360,8 @@ Da
 \end_inset
 
  ein neutrales Element
-\begin_inset LatexCommand \index{Element!neutrales}
+\begin_inset LatexCommand index
+name "Element!neutrales"
 
 \end_inset
 
@@ -2085,7 +2374,8 @@ Da
 \end_inset
 
  besitzt, handelt es sich sogar um einen
-\begin_inset LatexCommand \index{Ring!mit Eins}
+\begin_inset LatexCommand index
+name "Ring!mit Eins"
 
 \end_inset
 
@@ -2103,8 +2393,9 @@ Ring mit Eins
 \end_layout
 
 \begin_layout Standard
-Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
-\begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_m$}
+Aus Anwendungssicht ist sofort zu erkennen, daÃŸ insbesondere die Restklassen
+\begin_inset LatexCommand index
+name "Restklassen!$\\mathbb{Z}_m$"
 
 \end_inset
 
@@ -2112,19 +2403,20 @@ Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
 \begin_inset Formula $R_{m}=\mathbb{Z}_{m}$
 \end_inset
 
- alle diese Bedingungen für 
+ alle diese Bedingungen fÃ¼r 
 \begin_inset Formula $m\geq2$
 \end_inset
 
- erfüllen und somit einen kommutativen Ring mit Einselement bilden.
+ erfÃ¼llen und somit einen kommutativen Ring mit Einselement bilden.
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:algebra_residue_field}
+\begin_inset LatexCommand label
+name "sec:algebra_residue_field"
 
 \end_inset
 
-Restklassenkörper
+RestklassenkÃ¶rper
 \end_layout
 
 \begin_layout Subsubsection
@@ -2132,36 +2424,41 @@ Restklassenkörper
 \noun on
 Galois
 \noun default
--Körper
+-KÃ¶rper
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Restklassen!-körper}
+\begin_inset LatexCommand index
+name "Restklassen!-kÃ¶rper"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Körper!Restklassen-}
+\begin_inset LatexCommand index
+name "KÃ¶rper!Restklassen-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Galois-Körper@\noun{Galois}-Körper}
+\begin_inset LatexCommand index
+name "Galois-KÃ¶rper@\\noun{Galois}-KÃ¶rper"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Körper!Galois-@\noun{Galois}-}
+\begin_inset LatexCommand index
+name "KÃ¶rper!Galois-@\\noun{Galois}-"
 
 \end_inset
 
-Für den Übergang zu einem endlichen Körper ist es notwendig, daß zu den
+FÃ¼r den Ãœbergang zu einem endlichen KÃ¶rper ist es notwendig, daÃŸ zu den
  Eigenschaften eines Ringes 
 \begin_inset Formula $\left(R_{m},+,\cdot\right)$
 \end_inset
 
  noch die einer multiplikativen Gruppe
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
@@ -2180,20 +2477,23 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_group}
+\begin_inset LatexCommand ref
+reference "sec:algebra_group"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_field}
+\begin_inset LatexCommand ref
+reference "sec:algebra_field"
 
 \end_inset
 
 ).
- Einziges zusätzliches Kriterium ist danach die Existenz eines multiplikativ
+ Einziges zusÃ¤tzliches Kriterium ist danach die Existenz eines multiplikativ
  inversen Elements
-\begin_inset LatexCommand \index{Element!inverses}
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -2205,13 +2505,14 @@ cf
 \begin_inset Formula $r\in R_{m}\setminus\{0\}$
 \end_inset
 
-, so daß 
+, so daÃŸ 
 \begin_inset Formula $r\cdot r^{-1}=e_{(\cdot)}=1$
 \end_inset
 
  gilt.
- Endliche Körper
-\begin_inset LatexCommand \index{Körper!endlicher}
+ Endliche KÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!endlicher"
 
 \end_inset
 
@@ -2219,12 +2520,28 @@ cf
 \noun on
 Galois
 \noun default
--Körper und bezeichnet sie mit 
+-KÃ¶rper und bezeichnet sie mit 
 \begin_inset Formula $\GF(q)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "GF(q)"
+symbol "$\\GF(q)$"
+description "\\noun{Galois}-KÃ¶rper mit $q$ Elementen"
+
 \end_inset
 
  oder 
 \begin_inset Formula $\mathbb{F}_{q}$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Fq"
+symbol "$\\mathbb{F}_q$"
+description "Endlicher KÃ¶rper mit $q$ Elementen"
+
 \end_inset
 
 , wobei der Parameter 
@@ -2232,7 +2549,8 @@ Galois
 \end_inset
 
  die Ordnung
-\begin_inset LatexCommand \index{Ordnung}
+\begin_inset LatexCommand index
+name "Ordnung"
 
 \end_inset
 
@@ -2240,21 +2558,23 @@ Galois
 \begin_inset Formula $r$
 \end_inset
 
-) des Körpers ist
+) des KÃ¶rpers ist
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Unerheblich ist dabei, ob die Menge der Körperelemente 
+Unerheblich ist dabei, ob die Menge der KÃ¶rperelemente 
 \begin_inset Formula $r$
 \end_inset
 
  durch eine Restklassenoperation oder irgendeine andere Methode definiert
  wird.
- Bei gleicher Anzahl von Elementen kann man solche Mengen nämlich immer
+ Bei gleicher Anzahl von Elementen kann man solche Mengen nÃ¤mlich immer
  (Struktur erhaltend, ein-eindeutig) aufeinander abbilden\InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "6.5"
+key "Peterson:1972"
 
 \end_inset
 
@@ -2265,7 +2585,9 @@ Unerheblich ist dabei, ob die Menge der Körperelemente
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.2]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "6.2"
+key "Peterson:1972"
 
 \end_inset
 
@@ -2273,7 +2595,7 @@ Unerheblich ist dabei, ob die Menge der Körperelemente
 \end_layout
 
 \begin_layout Standard
-In einem Restklassenkörper muß man für das inverse Element 
+In einem RestklassenkÃ¶rper muÃŸ man fÃ¼r das inverse Element 
 \begin_inset Formula $\rcls{r}{m}\cdot{\rcls{r}{m}}^{-1}=\rcls{1}{m}$
 \end_inset
 
@@ -2291,12 +2613,14 @@ ie
 \end_inset
 
  die Frage nach der Division im Restklassenring
-\begin_inset LatexCommand \index{Restklassen!-ring}
+\begin_inset LatexCommand index
+name "Restklassen!-ring"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Ring!Restklassen-}
+\begin_inset LatexCommand index
+name "Ring!Restklassen-"
 
 \end_inset
 
@@ -2304,13 +2628,14 @@ ie
 \begin_inset Formula $(R_{m},+,\cdot)$
 \end_inset
 
- klären.
- Ausgangspunkt soll deshalb das Auffinden einer Lösung 
+ klÃ¤ren.
+ Ausgangspunkt soll deshalb das Auffinden einer LÃ¶sung 
 \begin_inset Formula $x$
 \end_inset
 
  in der Kongruenz
-\begin_inset LatexCommand \index{Kongruenz}
+\begin_inset LatexCommand index
+name "Kongruenz"
 
 \end_inset
 
@@ -2328,8 +2653,9 @@ rx\equiv a\pmod m,\qquad a,m\in\mathbb{F}\]
 
 \begin_layout Standard
 sein.
- Es ist sofort erkennbar, daß mit Hilfe des inversen Vertreterelements
-\begin_inset LatexCommand \index{Element!Vertreter-}
+ Es ist sofort erkennbar, daÃŸ mit Hilfe des inversen Vertreterelements
+\begin_inset LatexCommand index
+name "Element!Vertreter-"
 
 \end_inset
 
@@ -2352,7 +2678,8 @@ x & \equiv & r^{-1}a\pmod m\end{eqnarray*}
 
 \begin_layout Standard
 Die Existenz eines inversen Elements
-\begin_inset LatexCommand \index{Element!inverses}
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -2370,7 +2697,9 @@ Die Existenz eines inversen Elements
 
  gilt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "Satz~6.4"
+key "Peterson:1972"
 
 \end_inset
 
@@ -2392,7 +2721,7 @@ eg
 \begin_inset Formula $\mathbb{Z}_{m}\setminus\{0\}$
 \end_inset
 
-, dann müssen (wenn keine weiteren Forderungen an 
+, dann mÃ¼ssen (wenn keine weiteren Forderungen an 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2400,12 +2729,13 @@ eg
 \begin_inset Formula $r$
 \end_inset
 
-, für die 
+, fÃ¼r die 
 \begin_inset Formula $\gcd(r,m)=1$
 \end_inset
 
- nicht erfüllt werden kann, aus dem Ring
-\begin_inset LatexCommand \index{Ring!$\mathbb{Z}_m$}
+ nicht erfÃ¼llt werden kann, aus dem Ring
+\begin_inset LatexCommand index
+name "Ring!$\\mathbb{Z}_m$"
 
 \end_inset
 
@@ -2418,22 +2748,25 @@ eg
 \begin_inset Formula $\mathbb{Z}_{m}^{*}=\mathbb{Z}_{m}\setminus\{0\}=\{1,2,3,\ldots,m-1\}$
 \end_inset
 
- ist diese Bedingung grundsätzlich hinfällig, wenn 
+ ist diese Bedingung grundsÃ¤tzlich hinfÃ¤llig, wenn 
 \begin_inset Formula $m$
 \end_inset
 
  ein Primelement
-\begin_inset LatexCommand \index{Primelement}
+\begin_inset LatexCommand index
+name "Primelement"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Element!Prim-}
+\begin_inset LatexCommand index
+name "Element!Prim-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Primzahlenkörper}
+\begin_inset LatexCommand index
+name "PrimzahlenkÃ¶rper"
 
 \end_inset
 
@@ -2450,6 +2783,22 @@ Also in Bezug auf den Ring
 \begin_inset Formula $p\in\mathbb{P}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "p"
+symbol "$p$"
+description "Primzahl (\\resp Primelement)"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "P"
+symbol "$\\mathbb{P}$"
+description "Menge der Primzahlen"
+
+\end_inset
+
 .
 \end_layout
 
@@ -2457,7 +2806,9 @@ Also in Bezug auf den Ring
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[Satz~6.4]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "Satz~6.4"
+key "Peterson:1972"
 
 \end_inset
 
@@ -2465,11 +2816,11 @@ Also in Bezug auf den Ring
 \end_layout
 
 \begin_layout Standard
-Ist nämlich 
+Ist nÃ¤mlich 
 \begin_inset Formula $m$
 \end_inset
 
- kein primes Element, dann läßt es sich mindestens in zwei Faktoren 
+ kein primes Element, dann lÃ¤ÃŸt es sich mindestens in zwei Faktoren 
 \begin_inset Formula $r,s\in R_{m}$
 \end_inset
 
@@ -2486,7 +2837,7 @@ Ist nämlich
 \begin_inset Formula $m\bmod m=0$
 \end_inset
 
- ist, gilt für die Restklassenmultiplikation 
+ ist, gilt fÃ¼r die Restklassenmultiplikation 
 \begin_inset Formula $\rcls{r}{m}\cdot\rcls{s}{m}=\rcls{m}{m}=0$
 \end_inset
 
@@ -2527,15 +2878,15 @@ Ist nämlich
 \begin_inset Formula $\rcls{r}{m}$
 \end_inset
 
- für den Fall dieser Zerlegung nicht existieren.
+ fÃ¼r den Fall dieser Zerlegung nicht existieren.
 \end_layout
 
 \begin_layout Standard
-Im Gegenzug bleibt noch nachzuweisen, daß, wenn 
+Im Gegenzug bleibt noch nachzuweisen, daÃŸ, wenn 
 \begin_inset Formula $m$
 \end_inset
 
- ein Primelement ist, für jede Restklasse 
+ ein Primelement ist, fÃ¼r jede Restklasse 
 \begin_inset Formula $\rcls{r}{m}$
 \end_inset
 
@@ -2571,7 +2922,7 @@ Im Gegenzug bleibt noch nachzuweisen, daß, wenn
 \end_inset
 
  sein und nicht umgekehrt.
- Aber auch dies ist nicht möglich, wenn nach Voraussetzung 
+ Aber auch dies ist nicht mÃ¶glich, wenn nach Voraussetzung 
 \begin_inset Formula $m$
 \end_inset
 
@@ -2580,7 +2931,7 @@ Im Gegenzug bleibt noch nachzuweisen, daß, wenn
 \end_inset
 
  ist.
- Deshalb kann der größte gemeinsame Teiler von 
+ Deshalb kann der grÃ¶ÃŸte gemeinsame Teiler von 
 \begin_inset Formula $r$
 \end_inset
 
@@ -2589,12 +2940,13 @@ Im Gegenzug bleibt noch nachzuweisen, daß, wenn
 \end_inset
 
  nur das Einselement sein.
- Berücksichtigt man jetzt noch die aus dem euklidischen Algorithmus
-\begin_inset LatexCommand \index{Euklidischer Algorithmus}
+ BerÃ¼cksichtigt man jetzt noch die aus dem euklidischen Algorithmus
+\begin_inset LatexCommand index
+name "Euklidischer Algorithmus"
 
 \end_inset
 
- stammende Erkenntnis, daß der größte gemeinsame Teiler 
+ stammende Erkenntnis, daÃŸ der grÃ¶ÃŸte gemeinsame Teiler 
 \begin_inset Formula $d$
 \end_inset
 
@@ -2617,7 +2969,7 @@ d=\gcd(r,s)=ar+bs\label{eq:algebra_gcd_general}\end{equation}
 \begin_layout Standard
 darstellbar ist
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Lemma von B
@@ -2640,7 +2992,9 @@ zout.
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.4]{Bosch:1996}
+\begin_inset LatexCommand cite
+after "2.4"
+key "Bosch:1996"
 
 \end_inset
 
@@ -2664,16 +3018,17 @@ Das inverse Element von
 
  ist demzufolge
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Auf der Grundlage von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_gcd_general}
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_general"
 
 \end_inset
 
- ergibt sich damit die Möglichkeit der Ermittlung von 
+ ergibt sich damit die MÃ¶glichkeit der Ermittlung von 
 \begin_inset Formula $r^{-1}$
 \end_inset
 
@@ -2712,13 +3067,15 @@ Berlekamp
 \end_layout
 
 \begin_layout Standard
-Von praktischer Bedeutung ist insbesondere der Körper
-\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2$}
+Von praktischer Bedeutung ist insbesondere der KÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!$\\mathbb{Z}_2$"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Restklassen!$\mathbb{Z}_2$}
+\begin_inset LatexCommand index
+name "Restklassen!$\\mathbb{Z}_2$"
 
 \end_inset
 
@@ -2726,7 +3083,7 @@ Von praktischer Bedeutung ist insbesondere der Körper
 \begin_inset Formula $\GF(2):=\mathbb{Z}_{2}$
 \end_inset
 
-, denn er bildet häufig die Grundlage technischer Realisierungen.
+, denn er bildet hÃ¤ufig die Grundlage technischer Realisierungen.
  Die beiden Elemente von 
 \begin_inset Formula $\mathbb{Z}_{2}$
 \end_inset
@@ -2735,7 +3092,7 @@ Von praktischer Bedeutung ist insbesondere der Körper
 \begin_inset Formula $\{\rcls{0}{2},\rcls{1}{2}\}$
 \end_inset
 
- oder kürzer mit 
+ oder kÃ¼rzer mit 
 \begin_inset Formula $0,1$
 \end_inset
 
@@ -2748,7 +3105,8 @@ Von praktischer Bedeutung ist insbesondere der Körper
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand \label{enum:algebra_mod2_operations}
+\begin_inset LatexCommand label
+name "enum:algebra_mod2_operations"
 
 \end_inset
 
@@ -2768,13 +3126,14 @@ Die Addition (modulo
  geradezu primitiv und entspricht dem logischen 
 \emph on
 Exklusiv-Oder
-\begin_inset LatexCommand \index{Exklusiv-Oder}
+\begin_inset LatexCommand index
+name "Exklusiv-Oder"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Oftmals auch mit 
@@ -2799,7 +3158,8 @@ XOR
 
  und wegen Beziehung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_mod2_add_inv}
+\begin_inset LatexCommand ref
+reference "eq:algebra_mod2_add_inv"
 
 \end_inset
 
@@ -2835,7 +3195,7 @@ Und
 \end_layout
 
 \begin_layout Enumerate
-Die Division erklärt sich mit Hilfe des inversen Elements in 
+Die Division erklÃ¤rt sich mit Hilfe des inversen Elements in 
 \begin_inset Formula $\mathbb{Z}_{2}^{*}=\mathbb{Z}_{2}\setminus\{0\}=\{1\}$
 \end_inset
 
@@ -2843,8 +3203,8 @@ Die Division erklärt sich mit Hilfe des inversen Elements in
 \begin_inset Formula $1\cdot1^{-1}=e_{(\cdot)}=1$
 \end_inset
 
- erfüllen muß.
- Einzig mögliche Schlußfolgerung ist die, daß es sich bei dem inversen Element
+ erfÃ¼llen muÃŸ.
+ Einzig mÃ¶gliche SchluÃŸfolgerung ist die, daÃŸ es sich bei dem inversen Element
  
 \begin_inset Formula $1^{-1}$
 \end_inset
@@ -2857,7 +3217,8 @@ Die Division erklärt sich mit Hilfe des inversen Elements in
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:algebra_galois_multgrp}
+\begin_inset LatexCommand label
+name "sec:algebra_galois_multgrp"
 
 \end_inset
 
@@ -2865,7 +3226,8 @@ Multiplikative Gruppe
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
@@ -2873,33 +3235,42 @@ Die multiplikative Gruppe
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "Fq*"
+symbol "$\\mathbb{F}_q^*$"
+description "Multiplikative Gruppe des endlichen KÃ¶rpers $\\mathbb{F}_q$"
+
+\end_inset
+
  eines 
 \noun on
 Galois
 \noun default
--Körpers 
+-KÃ¶rpers 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- ist wegen ihrer Eigenschaften bezüglich des Potenzierens von Gruppenelementen
+ ist wegen ihrer Eigenschaften bezÃ¼glich des Potenzierens von Gruppenelementen
  sehr interessant
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
- Aussagen auf endliche Körper 
+An dieser Stelle sei nocheinmal darauf hingewiesen, daÃŸ fast alle der folgenden
+ Aussagen auf endliche KÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- im Allgemeinen zutreffen und nicht auf Restklassen beschränkt sind.
+ im Allgemeinen zutreffen und nicht auf Restklassen beschrÃ¤nkt sind.
 \end_layout
 
 \end_inset
 
 .
  Dazu soll die Folge aller Potenzen
-\begin_inset LatexCommand \index{Element!Potenzierung}
+\begin_inset LatexCommand index
+name "Element!Potenzierung"
 
 \end_inset
 
@@ -2913,7 +3284,8 @@ An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
 
  betrachtet werden.
  Nach dem Prinzip der Abgeschlossenheit
-\begin_inset LatexCommand \index{Abgeschlossenheit}
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
 
 \end_inset
 
@@ -2930,20 +3302,20 @@ An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
-, muß sich deshalb ab irgendeiner Potenz 
+, muÃŸ sich deshalb ab irgendeiner Potenz 
 \begin_inset Formula $l$
 \end_inset
 
  die Folge wiederholen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß 
+Ohne weitere EinschrÃ¤nkungen muÃŸ man zur Kenntnis nehmen, daÃŸ 
 \begin_inset Formula $l$
 \end_inset
 
- für jedes Element 
+ fÃ¼r jedes Element 
 \begin_inset Formula $r$
 \end_inset
 
@@ -2961,7 +3333,7 @@ Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß
 \begin_inset Formula $l$
 \end_inset
 
- läßt den Ansatz 
+ lÃ¤ÃŸt den Ansatz 
 \begin_inset Formula $r^{i}=r^{l}$
 \end_inset
 
@@ -2978,7 +3350,7 @@ Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß
 \begin_inset Formula $l>i$
 \end_inset
 
- wiederum die Schlußfolgerung zuläßt, das es immer ein Element
+ wiederum die SchluÃŸfolgerung zulÃ¤ÃŸt, das es immer ein Element
 \end_layout
 
 \begin_layout Standard
@@ -2994,7 +3366,7 @@ r^{k}-1 & = & 0\mperiod\label{eq:algebra_ord_elem_root}\end{eqnarray}
 \begin_layout Standard
 gibt.
  Die Folge 
-\begin_inset Formula $\{ r,r^{2},r^{3},\ldots,r^{k-1},r^{k}=1=r^{0}\}$
+\begin_inset Formula $\{r,r^{2},r^{3},\ldots,r^{k-1},r^{k}=1=r^{0}\}$
 \end_inset
 
  nennt man die vom Element 
@@ -3002,16 +3374,25 @@ gibt.
 \end_inset
 
  erzeugte Untergruppe
-\begin_inset LatexCommand \index{Gruppe!Unter-}
+\begin_inset LatexCommand index
+name "Gruppe!Unter-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Untergruppe}
+\begin_inset LatexCommand index
+name "Untergruppe"
 
 \end_inset
 
  und kennzeichnet sie mit
+\begin_inset LatexCommand nomenclature
+symbol "$\\left\\langle a\\right\\rangle $"
+description "Vom Element $a$ erzeugte Untergruppe"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3029,7 +3410,8 @@ Das Element
 \end_inset
 
  wird als erzeugendes Element
-\begin_inset LatexCommand \index{Element!erzeugendes}
+\begin_inset LatexCommand index
+name "Element!erzeugendes"
 
 \end_inset
 
@@ -3047,7 +3429,8 @@ resp
 \end_inset
 
  Generator
-\begin_inset LatexCommand \index{Generator!-element}
+\begin_inset LatexCommand index
+name "Generator!-element"
 
 \end_inset
 
@@ -3064,17 +3447,19 @@ resp
 \begin_inset Formula $r^{k}=1$
 \end_inset
 
- führt, dann wird 
+ fÃ¼hrt, dann wird 
 \begin_inset Formula $k=\left|\left\langle r\right\rangle \right|$
 \end_inset
 
  die Ordnung
-\begin_inset LatexCommand \index{Ordnung}
+\begin_inset LatexCommand index
+name "Ordnung"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Element!Ordnung}
+\begin_inset LatexCommand index
+name "Element!Ordnung"
 
 \end_inset
 
@@ -3086,7 +3471,7 @@ resp
 \end_layout
 
 \begin_layout Standard
-Eine Ausdrucksmöglichkeit für die Potenzen 
+Eine AusdrucksmÃ¶glichkeit fÃ¼r die Potenzen 
 \begin_inset Formula $r^{\nu}$
 \end_inset
 
@@ -3101,10 +3486,10 @@ Eine Ausdrucksmöglichkeit für die Potenzen
 
  folgt, kann man sie wiefolgt definieren
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ohne dabei zu vergessen, daß jede Potenz 
+Ohne dabei zu vergessen, daÃŸ jede Potenz 
 \begin_inset Formula $r^{\nu}$
 \end_inset
 
@@ -3118,6 +3503,14 @@ Ohne dabei zu vergessen, daß jede Potenz
 
  abgebildet wird.
 \end_layout
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "N"
+symbol "$\\mathbb{N}$"
+description "Menge der natÃ¼rlichen Zahlen"
 
 \end_inset
 
@@ -3138,7 +3531,7 @@ Betrachtet man jedes
 \begin_inset Formula $r^{\nu}$
 \end_inset
 
- für jeden Exponenten 
+ fÃ¼r jeden Exponenten 
 \begin_inset Formula $\nu$
 \end_inset
 
@@ -3165,9 +3558,10 @@ r^{k}\bmod(r^{k}-1) & =1=r^{0}\\
 \end_layout
 
 \begin_layout Standard
-Nun erhält man aus Gleichung\InsetSpace ~
+Nun erhÃ¤lt man aus Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_elem"
 
 \end_inset
 
@@ -3175,8 +3569,9 @@ Nun erhält man aus Gleichung\InsetSpace ~
 \begin_inset Formula $r^{-1}$
 \end_inset
 
- auch die Berechnungsvorschrift für das inverse Element
-\begin_inset LatexCommand \index{Element!inverses}
+ auch die Berechnungsvorschrift fÃ¼r das inverse Element
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -3196,7 +3591,8 @@ r^{-1}=r^{k-1}\]
 Nach dem Satz von 
 \noun on
 Lagrange
-\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+\begin_inset LatexCommand index
+name "Lagrange@\\noun{Lagrange}!Satz von"
 
 \end_inset
 
@@ -3217,7 +3613,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_group_def}
+\begin_inset LatexCommand ref
+reference "sec:algebra_group_def"
 
 \end_inset
 
@@ -3238,9 +3635,11 @@ cf
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- deshalb auch folgendermaßen ausdrücken\InsetSpace ~
+ deshalb auch folgendermaÃŸen ausdrÃ¼cken\InsetSpace ~
 
-\begin_inset LatexCommand \cite[1.2, Satz~3]{Bosch:1996}
+\begin_inset LatexCommand cite
+after "1.2, Satz~3"
+key "Bosch:1996"
 
 \end_inset
 
@@ -3267,7 +3666,8 @@ Das die Ordnung von
 
  ist, kann auch mit Hilfe von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_elem"
 
 \end_inset
 
@@ -3285,7 +3685,7 @@ r^{q} & =r\label{eq:algebra_ord_cyclic}\end{align}
 \end_layout
 
 \begin_layout Standard
-Anschaulich bedeutet dies, daß sich die Potenzen 
+Anschaulich bedeutet dies, daÃŸ sich die Potenzen 
 \begin_inset Formula $r^{\nu}$
 \end_inset
 
@@ -3310,7 +3710,7 @@ Anschaulich bedeutet dies, daß sich die Potenzen
 \end_layout
 
 \begin_layout Standard
-Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
+Zur gleichen SchluÃŸfolgerung kommt man Ã¼brigens auch unter Verwendung der
  Zerlegung 
 \end_layout
 
@@ -3325,7 +3725,7 @@ r^{q-1}-1=r^{i\cdot k}-1 & =\left(r^{k}-1\right)\,\left[r^{(i-1)k}+r^{(i-2)k}+\c
 \end_layout
 
 \begin_layout Standard
-welche außerdem zeigt, daß 
+welche auÃŸerdem zeigt, daÃŸ 
 \begin_inset Formula $r^{k}-1$
 \end_inset
 
@@ -3333,7 +3733,7 @@ welche außerdem zeigt, daß
 \begin_inset Formula $r^{q-1}-1$
 \end_inset
 
- ist (gegebene Voraussetzung war, daß 
+ ist (gegebene Voraussetzung war, daÃŸ 
 \begin_inset Formula $k$
 \end_inset
 
@@ -3345,10 +3745,11 @@ welche außerdem zeigt, daß
 \end_layout
 
 \begin_layout Standard
-Eine für die praktische Anwendung von Restklassenkörpern sehr wichtige Schlußfol
+Eine fÃ¼r die praktische Anwendung von RestklassenkÃ¶rpern sehr wichtige SchluÃŸfol
 gerung aus Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_divider}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_divider"
 
 \end_inset
 
@@ -3356,7 +3757,7 @@ gerung aus Gleichung\InsetSpace ~
 \begin_inset Formula $r^{q-1}\equiv1\pmod{m}$
 \end_inset
 
- ist die, daß wegen 
+ ist die, daÃŸ wegen 
 \begin_inset Formula $0\equiv m\pmod m$
 \end_inset
 
@@ -3368,7 +3769,7 @@ gerung aus Gleichung\InsetSpace ~
 \begin_inset Formula $r^{q-1}-1$
 \end_inset
 
- sein muß.
+ sein muÃŸ.
 \end_layout
 
 \begin_layout Standard
@@ -3381,8 +3782,9 @@ r^{q-1}-1=h\, m\mperiod\label{eq:algebra_ord_mod_factor}\end{equation}
 \end_layout
 
 \begin_layout Standard
-Für den Körper
-\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_5$}
+FÃ¼r den KÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!$\\mathbb{Z}_5$"
 
 \end_inset
 
@@ -3414,12 +3816,14 @@ Zyklische Gruppe
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gruppe!zyklische}
+\begin_inset LatexCommand index
+name "Gruppe!zyklische"
 
 \end_inset
 
 Eine multiplikative Gruppe
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
@@ -3428,7 +3832,8 @@ Eine multiplikative Gruppe
 \end_inset
 
 , bei der alle Potenzen
-\begin_inset LatexCommand \index{Element!Potenzierung}
+\begin_inset LatexCommand index
+name "Element!Potenzierung"
 
 \end_inset
 
@@ -3437,7 +3842,8 @@ Eine multiplikative Gruppe
 \end_inset
 
  eines bestimmten Generatorelements
-\begin_inset LatexCommand \index{Element!Generator-}
+\begin_inset LatexCommand index
+name "Element!Generator-"
 
 \end_inset
 
@@ -3449,7 +3855,7 @@ Eine multiplikative Gruppe
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
 \end_inset
 
- in irgendeiner Abfolge durchläuft,
+ in irgendeiner Abfolge durchlÃ¤uft,
 \end_layout
 
 \begin_layout Standard
@@ -3464,33 +3870,35 @@ Eine multiplikative Gruppe
 \begin_layout Standard
 bezeichnet man als zyklische Gruppe.
  Die Ordnung dieses sogenannten primitiven
-\begin_inset LatexCommand \index{Element!primitives}
+\begin_inset LatexCommand index
+name "Element!primitives"
 
 \end_inset
 
 
-\begin_inset LatexCommand \label{page:algebra_cyclic_primitive}
+\begin_inset LatexCommand label
+name "page:algebra_cyclic_primitive"
 
 \end_inset
 
- (Generator-) Elements muß demzufolge gleich der Ordnung der Gruppe 
+ (Generator-) Elements muÃŸ demzufolge gleich der Ordnung der Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
  sein
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Man kann mit Hilfe von 
 \noun on
 Euler
 \noun default
-'s Totient-Funktion nachweisen, daß es in einem 
+'s Totient-Funktion nachweisen, daÃŸ es in einem 
 \noun on
 Galois
 \noun default
--Körper immer mindestens ein erzeugendes (primitives) Element 
+-KÃ¶rper immer mindestens ein erzeugendes (primitives) Element 
 \begin_inset Formula $g$
 \end_inset
 
@@ -3513,7 +3921,8 @@ resp
 \end_inset
 
  der Index
-\begin_inset LatexCommand \index{Index}
+\begin_inset LatexCommand index
+name "Index"
 
 \end_inset
 
@@ -3521,13 +3930,13 @@ resp
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $\left\langle g\right\rangle $
 \end_inset
 
  genau Eins
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Man spricht auch von einer maximalen Periode und meint damit 
@@ -3558,11 +3967,12 @@ Da auch das Generatorelement
 
  Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_elem"
 
 \end_inset
 
- erfüllt, gilt äquivalent:
+ erfÃ¼llt, gilt Ã¤quivalent:
 \end_layout
 
 \begin_layout Standard
@@ -3575,17 +3985,18 @@ g^{q-1}=1\mperiod\label{eq:algebra_generator_cond}\end{equation}
 \end_layout
 
 \begin_layout Standard
-Ähnliches trifft auf die Darstellung von 
+Ã„hnliches trifft auf die Darstellung von 
 \begin_inset Formula $\left\langle g\right\rangle $
 \end_inset
 
  entsprechend Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_subgroup_elem_mod}
+\begin_inset LatexCommand ref
+reference "eq:algebra_subgroup_elem_mod"
 
 \end_inset
 
- zu, welche sich folgendermaßen konkretisieren läßt:
+ zu, welche sich folgendermaÃŸen konkretisieren lÃ¤ÃŸt:
 \end_layout
 
 \begin_layout Standard
@@ -3598,8 +4009,9 @@ g^{q-1}=1\mperiod\label{eq:algebra_generator_cond}\end{equation}
 \end_layout
 
 \begin_layout Standard
-Wie schon früher festgestellt, beschränken sich für einen Körper
-\begin_inset LatexCommand \index{Körper!endlicher}
+Wie schon frÃ¼her festgestellt, beschrÃ¤nken sich fÃ¼r einen KÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!endlicher"
 
 \end_inset
 
@@ -3607,7 +4019,7 @@ Wie schon früher festgestellt, beschränken sich für einen Körper
 \begin_inset Formula $m$
 \end_inset
 
- auf Primelemente, speziell wieder im Restklassenkörper 
+ auf Primelemente, speziell wieder im RestklassenkÃ¶rper 
 \begin_inset Formula $\mathbb{Z}_{m}^{*}$
 \end_inset
 
@@ -3616,13 +4028,22 @@ Wie schon früher festgestellt, beschränken sich für einen Körper
 \begin_inset Formula $\mathbb{Z}_{p}^{*}=\mathbb{Z}_{p}\setminus\{0\}=\{1,2,3,\ldots,p-1\}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "Zp"
+symbol "$\\mathbb{Z}_p$"
+description "PrimzahlenkÃ¶rper"
+
+\end_inset
+
  genau 
 \begin_inset Formula $p-1$
 \end_inset
 
  ist, kann man mit Hilfe von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_generator_cond}
+\begin_inset LatexCommand ref
+reference "eq:algebra_generator_cond"
 
 \end_inset
 
@@ -3631,7 +4052,8 @@ Wie schon früher festgestellt, beschränken sich für einen Körper
 Fermat
 \noun default
 
-\begin_inset LatexCommand \index{Fermat@\noun{Fermat}!kleiner Satz}
+\begin_inset LatexCommand index
+name "Fermat@\\noun{Fermat}!kleiner Satz"
 
 \end_inset
 
@@ -3648,30 +4070,33 @@ g^{p-1}\equiv1\pmod p,\qquad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fer
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:algebra_zeroes_split}
+\begin_inset LatexCommand label
+name "sec:algebra_zeroes_split"
 
 \end_inset
 
-Körperelemente als Nullstellen
+KÃ¶rperelemente als Nullstellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Nullstellen}
+\begin_inset LatexCommand index
+name "Nullstellen"
 
 \end_inset
 
 In Vorbereitung des Abschnittes\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_extfield}
+\begin_inset LatexCommand ref
+reference "sec:algebra_extfield"
 
 \end_inset
 
- zu den Erweiterungskörpern wenden wir uns jetzt einer etwas anderen Sichtweise
- auf die Elemente des endlichen Körpers 
+ zu den ErweiterungskÃ¶rpern wenden wir uns jetzt einer etwas anderen Sichtweise
+ auf die Elemente des endlichen KÃ¶rpers 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- zu, nämlich der Betrachtung über Nullstellen.
+ zu, nÃ¤mlich der Betrachtung Ã¼ber Nullstellen.
  Dazu gehen wir von dem speziellen Polynom 
 \begin_inset Formula $\varphi(x)=x^{q-1}-1$
 \end_inset
@@ -3694,7 +4119,8 @@ resp
 \end_inset
 
  Einheitswurzeln
-\begin_inset LatexCommand \index{Einheitswurzeln}
+\begin_inset LatexCommand index
+name "Einheitswurzeln"
 
 \end_inset
 
@@ -3715,7 +4141,7 @@ resp
 \end_layout
 
 \begin_layout Standard
-Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
+Wir stellen nun fest, daÃŸ entsprechend des Fundamentalsatzes der Algebra
  
 \begin_inset Formula $\varphi(x)$
 \end_inset
@@ -3724,10 +4150,11 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 \begin_inset Formula $q-1$
 \end_inset
 
- Nullstellen haben muß.
+ Nullstellen haben muÃŸ.
  Nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_divider}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_divider"
 
 \end_inset
 
@@ -3735,8 +4162,8 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- erfüllt.
- Da deren Anzahl genau mit der Anzahl der Nullstellen übereinstimmt, kann
+ erfÃ¼llt.
+ Da deren Anzahl genau mit der Anzahl der Nullstellen Ã¼bereinstimmt, kann
  es sich bei den Elementen 
 \begin_inset Formula $r\in\mathbb{F}_{q}^{*},\msp q>1$
 \end_inset
@@ -3751,7 +4178,9 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 
  handeln\InsetSpace ~
 
-\begin_inset LatexCommand \cite[Satz~6.18]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "Satz~6.18"
+key "Peterson:1972"
 
 \end_inset
 
@@ -3759,7 +4188,8 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
  Das mehrfache Nullstellen nicht vorhanden sind, kann man (in Verbindung
  mit Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_zeroes_poly}
+\begin_inset LatexCommand ref
+reference "eq:algebra_zeroes_poly"
 
 \end_inset
 
@@ -3771,7 +4201,7 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 \begin_inset Formula $\alpha$
 \end_inset
 
- nachprüfen.
+ nachprÃ¼fen.
 \end_layout
 
 \begin_layout Standard
@@ -3784,12 +4214,13 @@ Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
 \end_layout
 
 \begin_layout Standard
-Mit diesen Erkenntnissen läßt sich für 
+Mit diesen Erkenntnissen lÃ¤ÃŸt sich fÃ¼r 
 \begin_inset Formula $\varphi(x)$
 \end_inset
 
  eine Linearfaktordarstellung
-\begin_inset LatexCommand \index{Linearfaktoren}
+\begin_inset LatexCommand index
+name "Linearfaktoren"
 
 \end_inset
 
@@ -3818,11 +4249,11 @@ Nimmt man jetzt noch das Nullelement
 \begin_inset Formula $\mathbb{F}_{q}^{*}=\mathbb{F}_{q}\setminus\{0\}$
 \end_inset
 
- auf alle Elemente des Körpers 
+ auf alle Elemente des KÃ¶rpers 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- aus, dann muß man das Element 
+ aus, dann muÃŸ man das Element 
 \begin_inset Formula $r=0$
 \end_inset
 
@@ -3845,14 +4276,14 @@ resp
 
  mit einbeziehen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Somit bilden die Nullstellen von 
 \begin_inset Formula $\psi(x)=x^{q}-x$
 \end_inset
 
- einen endlichen Körper 
+ einen endlichen KÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
@@ -3875,11 +4306,11 @@ Somit bilden die Nullstellen von
 
 \begin_layout Standard
 Ausmultiplizieren der rechten Seite, gefolgt von einem Koeffizientenvergleich
- für 
+ fÃ¼r 
 \begin_inset Formula $x^{0}$
 \end_inset
 
-, führt noch zu der interessanten Äquivalenz
+, fÃ¼hrt noch zu der interessanten Ã„quivalenz
 \end_layout
 
 \begin_layout Standard
@@ -3892,7 +4323,7 @@ Ausmultiplizieren der rechten Seite, gefolgt von einem Koeffizientenvergleich
 \end_layout
 
 \begin_layout Standard
-Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
+Betrachtet man (beispielhaft) die multiplikative Gruppe des RestklassenkÃ¶rpers
  
 \begin_inset Formula $\mathbb{Z}_{p>2}$
 \end_inset
@@ -3916,7 +4347,8 @@ Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
 .
  Anwendung von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_product_elements}
+\begin_inset LatexCommand ref
+reference "eq:algebra_product_elements"
 
 \end_inset
 
@@ -3924,21 +4356,22 @@ Betrachtet man (beispielhaft) die multiplikative Gruppe des Restklassenkörpers
 \begin_inset Formula $\mathbb{Z}_{p}^{*}$
 \end_inset
 
- führt folgerichtig zum Satz von 
+ fÃ¼hrt folgerichtig zum Satz von 
 \noun on
 Wilson
 \noun default
 
-\begin_inset LatexCommand \index{Wilson@\noun{Wilson}!Satz von}
+\begin_inset LatexCommand index
+name "Wilson@\\noun{Wilson}!Satz von"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
+Er ist sowohl notwendige als auch hinreichende Bedingung dafÃ¼r, daÃŸ es sich
  bei 
 \begin_inset Formula $p$
 \end_inset
@@ -3950,7 +4383,9 @@ Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[II]{Pollard:1975}
+\begin_inset LatexCommand cite
+after "II"
+key "Pollard:1975"
 
 \end_inset
 
@@ -3967,11 +4402,12 @@ Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:algebra_extfield}
+\begin_inset LatexCommand label
+name "sec:algebra_extfield"
 
 \end_inset
 
-Erweiterungskörper
+ErweiterungskÃ¶rper
 \end_layout
 
 \begin_layout Subsubsection
@@ -3979,46 +4415,53 @@ Vorbetrachtungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Körper!Erweiterungs-}
+\begin_inset LatexCommand index
+name "KÃ¶rper!Erweiterungs-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Erweiterungskörper}
+\begin_inset LatexCommand index
+name "ErweiterungskÃ¶rper"
 
 \end_inset
 
-Ein Erweiterungskörper 
+Ein ErweiterungskÃ¶rper 
 \begin_inset Formula $M/K$
 \end_inset
 
- ist ein Körper 
+ ist ein KÃ¶rper 
 \begin_inset Formula $(M,+,\cdot)$
 \end_inset
 
-, der einen anderen Körper 
+, der einen anderen KÃ¶rper 
 \begin_inset Formula $(K,+,\cdot)$
 \end_inset
 
- als Teilkörper
-\begin_inset LatexCommand \index{Körper!Teil-}
+ als TeilkÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!Teil-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Teilkörper}
+\begin_inset LatexCommand index
+name "TeilkÃ¶rper"
 
 \end_inset
 
- enthält\InsetSpace ~
+ enthÃ¤lt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "6.5"
+key "Peterson:1972"
 
 \end_inset
 
 .
- Der Grad der Körpererweiterung
-\begin_inset LatexCommand \index{Körper!-erweiterung}
+ Der Grad der KÃ¶rpererweiterung
+\begin_inset LatexCommand index
+name "KÃ¶rper!-erweiterung"
 
 \end_inset
 
@@ -4026,7 +4469,7 @@ Ein Erweiterungskörper
 \begin_inset Formula $M$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $K$
 \end_inset
 
@@ -4040,6 +4483,14 @@ Ein Erweiterungskörper
 
 -Vektorraum und wird als 
 \begin_inset Formula $[M:K]$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "[M"
+symbol "$[M:K]$"
+description "Grad der KÃ¶rpererweiterung $M$ Ã¼ber $K$"
+
 \end_inset
 
  
@@ -4060,7 +4511,8 @@ resp
 \end_inset
 
  geschrieben
-\begin_inset LatexCommand \index{Dimension}
+\begin_inset LatexCommand index
+name "Dimension"
 
 \end_inset
 
@@ -4070,7 +4522,8 @@ resp
 \end_inset
 
  besteht entsprechend der Definition des Vektorraumes
-\begin_inset LatexCommand \index{Vektor!-raum}
+\begin_inset LatexCommand index
+name "Vektor!-raum"
 
 \end_inset
 
@@ -4089,7 +4542,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+\begin_inset LatexCommand ref
+reference "sec:algebra_vector_space"
 
 \end_inset
 
@@ -4102,13 +4556,13 @@ cf
 \end_inset
 
 .
- Bekannte Beispiele für Körpererweiterungen sind:
+ Bekannte Beispiele fÃ¼r KÃ¶rpererweiterungen sind:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{eqnarray*}
-{[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension um eine imaginäre Komponente;}\\
-{[\mathbb{R}:\mathbb{Q}]} & = & \infty,\textrm{ hier sind die rationalen Zahlen noch abzählbar.}\end{eqnarray*}
+{[\mathbb{C}:\mathbb{R}]} & = & 2,\textrm{ die Erweiterung der Dimension um eine imaginÃ¤re Komponente;}\\
+{[\mathbb{R}:\mathbb{Q}]} & = & \infty,\textrm{ hier sind die rationalen Zahlen noch abzÃ¤hlbar.}\end{eqnarray*}
 
 \end_inset
 
@@ -4122,12 +4576,14 @@ Polynomringe
 \begin_layout Standard
 Ausgehend von den Vorbetrachtungen konstruieren wir jetzt einen endlichen
  Polynomring
-\begin_inset LatexCommand \index{Ring!Polynom-}
+\begin_inset LatexCommand index
+name "Ring!Polynom-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Polynom!-ring}
+\begin_inset LatexCommand index
+name "Polynom!-ring"
 
 \end_inset
 
@@ -4135,14 +4591,22 @@ Ausgehend von den Vorbetrachtungen konstruieren wir jetzt einen endlichen
 \begin_inset Formula $(K[x],+,\cdot)$
 \end_inset
 
- auf dem Körper 
+
+\begin_inset LatexCommand nomenclature
+prefix "(R(x)"
+symbol "$(R[x],+,\\cdot)$"
+description "Polynomring"
+
+\end_inset
+
+ auf dem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
 .
  
 \begin_inset Formula \begin{align}
-K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{ f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
+K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\cdots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
 f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{align}
 
 \end_inset
@@ -4151,13 +4615,13 @@ f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{
 \end_layout
 
 \begin_layout Standard
-Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
- gültig, weshalb man auch von einem Vektorraum der Polynome in der Unbestimmten
+Darin seien die Ã¼blichen Polynomoperationen, wie Addition und Multiplikation
+ gÃ¼ltig, weshalb man auch von einem Vektorraum der Polynome in der Unbestimmten
  
 \begin_inset Formula $x$
 \end_inset
 
- mit Koeffizienten aus dem Körper 
+ mit Koeffizienten aus dem KÃ¶rper 
 \begin_inset Formula $K$
 \end_inset
 
@@ -4167,7 +4631,8 @@ Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
 \end_inset
 
 , dann wird das Polynom
-\begin_inset LatexCommand \index{Polynom!monisches}
+\begin_inset LatexCommand index
+name "Polynom!monisches"
 
 \end_inset
 
@@ -4176,7 +4641,8 @@ Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
 \end_inset
 
  das sogenannte Leitmonom
-\begin_inset LatexCommand \index{Leitmonom}
+\begin_inset LatexCommand index
+name "Leitmonom"
 
 \end_inset
 
@@ -4184,8 +4650,9 @@ Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
 \end_layout
 
 \begin_layout Standard
-Wird anschließend eine Restklassendivision
-\begin_inset LatexCommand \index{Restklassen!-division}
+Wird anschlieÃŸend eine Restklassendivision
+\begin_inset LatexCommand index
+name "Restklassen!-division"
 
 \end_inset
 
@@ -4194,7 +4661,8 @@ Wird anschließend eine Restklassendivision
 \end_inset
 
  durch ein Polynom
-\begin_inset LatexCommand \index{Generator!-polynom}
+\begin_inset LatexCommand index
+name "Generator!-polynom"
 
 \end_inset
 
@@ -4214,36 +4682,69 @@ Wird anschließend eine Restklassendivision
 \begin_inset Formula $r(x)\in K[x]/m(x)$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "Zp(x)/m(x)"
+symbol "$\\mathbb{Z}_{p}[x]/m(x)$"
+description "Polynom-Restklassenring auf dem GrundkÃ¶rper $\\mathbb{Z}_p$"
+
+\end_inset
+
 , dann bildet die Menge der darin enthaltenen Restklassen wieder einen Restklass
 enring
-\begin_inset LatexCommand \index{Restklassen!-ring}
+\begin_inset LatexCommand index
+name "Restklassen!-ring"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Ring!Restklassen-}
+\begin_inset LatexCommand index
+name "Ring!Restklassen-"
 
 \end_inset
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "6."
+key "Peterson:1972"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[2.5.4]{Menezes:1992}
+\begin_inset LatexCommand cite
+after "2.5.4"
+key "Menezes:1992"
 
 \end_inset
 
 :
 \end_layout
 
+\begin_layout Description
+\begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
+\end_inset
+
+ Polynom-Restklassenring auf dem GrundkÃ¶rper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Enumerate
-Da bei einer Polynomaddition die einzelnen Koeffizienten unabhängig voneinander
- (und jeder für sich) addiert werden und außerdem nach Voraussetzung immer
+Da bei einer Polynomaddition die einzelnen Koeffizienten unabhÃ¤ngig voneinander
+ (und jeder fÃ¼r sich) addiert werden und auÃŸerdem nach Voraussetzung immer
  
 \begin_inset Formula $\deg r(x)<\deg m(x)=n$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "deg"
+symbol "$\\deg[h(x)]$"
+description "Grad des Polynoms $h(x)$"
+
 \end_inset
 
  gilt, bildet 
@@ -4284,7 +4785,8 @@ Das neutrale Element
 
 \begin_layout Enumerate
 Ein additiv inverses Element
-\begin_inset LatexCommand \index{Element!inverses}
+\begin_inset LatexCommand index
+name "Element!inverses"
 
 \end_inset
 
@@ -4314,12 +4816,14 @@ Ein additiv inverses Element
 \end_inset
 
  ist eine multiplikative Halbgruppe
-\begin_inset LatexCommand \index{Halbgruppe}
+\begin_inset LatexCommand index
+name "Halbgruppe"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe!Halb-}
+\begin_inset LatexCommand index
+name "Gruppe!Halb-"
 
 \end_inset
 
@@ -4349,7 +4853,7 @@ ie
 \begin_inset Formula $r(x),g(x)\in K[x]/m(x)$
 \end_inset
 
- angenommen wird, dann gilt für die Multiplikation 
+ angenommen wird, dann gilt fÃ¼r die Multiplikation 
 \begin_inset Formula $r(x)\, g(x)\equiv h(x)\pmod{m(x)}$
 \end_inset
 
@@ -4365,14 +4869,15 @@ Auch das Assoziativgesetz
 \begin_inset Formula $r(x)\left[g(x)\, h(x)\right]=\left[r(x)\, g(x)\right]h(x)$
 \end_inset
 
- ist in einem Restklassenring von Polynomen erfüllt.
+ ist in einem Restklassenring von Polynomen erfÃ¼llt.
 \end_layout
 
 \end_deeper
 \begin_layout Enumerate
 Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
- mit Polynomoperationen zu schlußfolgern, daß das Distributivgesetz
-\begin_inset LatexCommand \index{Distributivgesetz}
+ mit Polynomoperationen zu schluÃŸfolgern, daÃŸ das Distributivgesetz
+\begin_inset LatexCommand index
+name "Distributivgesetz"
 
 \end_inset
 
@@ -4384,16 +4889,17 @@ Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
 \end_layout
 
 \begin_layout Subsubsection
-Endlicher Erweiterungskörper
+Endlicher ErweiterungskÃ¶rper
 \end_layout
 
 \begin_layout Standard
-Der Übergang zu einem Körper wird möglich, wenn 
+Der Ãœbergang zu einem KÃ¶rper wird mÃ¶glich, wenn 
 \begin_inset Formula $m(x)$
 \end_inset
 
  ein Primelement
-\begin_inset LatexCommand \index{Element!Prim-}
+\begin_inset LatexCommand index
+name "Element!Prim-"
 
 \end_inset
 
@@ -4402,22 +4908,23 @@ Der Übergang zu einem Körper wird möglich, wenn
 \end_inset
 
  ist, es sich also um ein (sogenanntes) irreduzibles
-\begin_inset LatexCommand \index{Polynom!irreduzibles}
+\begin_inset LatexCommand index
+name "Polynom!irreduzibles"
 
 \end_inset
 
  Polynom handelt.
- Ein solches Polynom ist dadurch gekennzeichnet, daß es nicht weiter in
+ Ein solches Polynom ist dadurch gekennzeichnet, daÃŸ es nicht weiter in
  Teilpolynome mit Koeffizienten aus 
 \begin_inset Formula $K$
 \end_inset
 
  reduzierbar ist
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ausführliche Betrachtungen zu irreduziblen und primitiven Polynomen sind
+AusfÃ¼hrliche Betrachtungen zu irreduziblen und primitiven Polynomen sind
  
 \begin_inset ERT
 status collapsed
@@ -4433,13 +4940,17 @@ eg
 
  in\InsetSpace ~
 
-\begin_inset LatexCommand \cite[4.5]{Menezes:1992}
+\begin_inset LatexCommand cite
+after "4.5"
+key "Menezes:1992"
 
 \end_inset
 
 , Tabellen irreduzibler Polynome in\InsetSpace ~
 
-\begin_inset LatexCommand \cite[Anhang~C]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "Anhang~C"
+key "Peterson:1972"
 
 \end_inset
 
@@ -4460,7 +4971,7 @@ Es sei nun
 \begin_inset Formula $a$
 \end_inset
 
- aus dem endlichen Grundkörper 
+ aus dem endlichen GrundkÃ¶rper 
 \begin_inset Formula $K:=\mathbb{F}_{p}$
 \end_inset
 
@@ -4477,19 +4988,22 @@ Es sei nun
 \begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
 \end_inset
 
- um einen endlichen Körper mit 
+ um einen endlichen KÃ¶rper mit 
 \begin_inset Formula $q=p^{n}$
 \end_inset
 
  Elementen\InsetSpace ~
 
-\begin_inset LatexCommand \cite[3.8]{Bosch:1996}
+\begin_inset LatexCommand cite
+after "3.8"
+key "Bosch:1996"
 
 \end_inset
 
 .
  Man spricht auch von einem Vektorraum
-\begin_inset LatexCommand \index{Vektor!-raum}
+\begin_inset LatexCommand index
+name "Vektor!-raum"
 
 \end_inset
 
@@ -4501,13 +5015,14 @@ Es sei nun
 \begin_inset Formula $n$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
 , denn auf diese Weise wird (im Sinne von Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_vector_space}
+\begin_inset LatexCommand ref
+reference "sec:algebra_vector_space"
 
 \end_inset
 
@@ -4542,7 +5057,8 @@ Es sei nun
 \end_inset
 
  bilden die (Polynom-) Basis
-\begin_inset LatexCommand \index{Polynom!-basis}
+\begin_inset LatexCommand index
+name "Polynom!-basis"
 
 \end_inset
 
@@ -4550,21 +5066,22 @@ Es sei nun
 \begin_inset Formula $V$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
 .
  Entsprechend ist die Dimension
-\begin_inset LatexCommand \index{Vektor!-raum!Dimension}
+\begin_inset LatexCommand index
+name "Vektor!-raum!Dimension"
 
 \end_inset
 
- des Erweiterungskörpers 
+ des ErweiterungskÃ¶rpers 
 \begin_inset Formula $\mathbb{F}_{q}$
 \end_inset
 
- über dem Grundkörper 
+ Ã¼ber dem GrundkÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -4573,11 +5090,19 @@ Es sei nun
 \end_inset
 
 .
- Als Notation für einen solchen Körper wird deshalb auch 
+ Als Notation fÃ¼r einen solchen KÃ¶rper wird deshalb auch 
 \begin_inset Formula $\mathbb{F}_{p}^{n}$
 \end_inset
 
- verwendet, häufiger allerdings 
+
+\begin_inset LatexCommand nomenclature
+prefix "Fpn"
+symbol "$\\mathbb{F}_p^n$"
+description "ErweiterungskÃ¶rper der Dimension $n$ Ã¼ber $p$"
+
+\end_inset
+
+ verwendet, hÃ¤ufiger allerdings 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
@@ -4589,14 +5114,15 @@ Es sei nun
 \end_layout
 
 \begin_layout Standard
-Mit diesen Vorbemerkungen lassen sich alle Aussagen zu Restklassenkörpern,
+Mit diesen Vorbemerkungen lassen sich alle Aussagen zu RestklassenkÃ¶rpern,
  wie sie in Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_residue_field}
+\begin_inset LatexCommand ref
+reference "sec:algebra_residue_field"
 
 \end_inset
 
- allgemein formuliert wurden, auf den Erweiterungskörper 
+ allgemein formuliert wurden, auf den ErweiterungskÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{q=p^{n}}$
 \end_inset
 
@@ -4605,7 +5131,8 @@ Mit diesen Vorbemerkungen lassen sich alle Aussagen zu Restklassenkörpern,
 
 \begin_layout Enumerate
 Das Modul
-\begin_inset LatexCommand \index{Modul}
+\begin_inset LatexCommand index
+name "Modul"
 
 \end_inset
 
@@ -4622,7 +5149,8 @@ Das Modul
 
 \begin_layout Enumerate
 Die Restklassendivision
-\begin_inset LatexCommand \index{Restklassen!-division}
+\begin_inset LatexCommand index
+name "Restklassen!-division"
 
 \end_inset
 
@@ -4630,24 +5158,24 @@ Die Restklassendivision
 \begin_inset Formula $r(x)\equiv f(x)\bmod{m(x)}$
 \end_inset
 
-, was grundsätzlich immer zu einem Grad kleiner als 
+, was grundsÃ¤tzlich immer zu einem Grad kleiner als 
 \begin_inset Formula $n$
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $r(x)$
 \end_inset
 
- führt
+ fÃ¼hrt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die Menge der Elemente 
 \begin_inset Formula $r$
 \end_inset
 
- umfaßt alle Polynome mit einem Grad kleiner als 
+ umfaÃŸt alle Polynome mit einem Grad kleiner als 
 \begin_inset Formula $n$
 \end_inset
 
@@ -4661,8 +5189,9 @@ Die Menge der Elemente
 \begin_inset Formula $r(x)$
 \end_inset
 
- gehörenden Restklasse
-\begin_inset LatexCommand \index{Restklassen}
+ gehÃ¶renden Restklasse
+\begin_inset LatexCommand index
+name "Restklassen"
 
 \end_inset
 
@@ -4687,12 +5216,13 @@ Die Menge der Elemente
 \begin_inset Formula $\deg r(x)<\deg m(x)$
 \end_inset
 
- erfüllen.
+ erfÃ¼llen.
 \end_layout
 
 \begin_layout Enumerate
 Das Nullelement ist das Nullpolynom
-\begin_inset LatexCommand \index{Polynom!Null-}
+\begin_inset LatexCommand index
+name "Polynom!Null-"
 
 \end_inset
 
@@ -4718,7 +5248,8 @@ resp
 \end_inset
 
 , das Einselement das Einheitspolynom
-\begin_inset LatexCommand \index{Polynom!Einheits-}
+\begin_inset LatexCommand index
+name "Polynom!Einheits-"
 
 \end_inset
 
@@ -4750,11 +5281,11 @@ Die Anzahl der Elemente
 \begin_inset Formula $r(x)$
 \end_inset
 
- im Restklassenkörper 
+ im RestklassenkÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{p}[x]/m(x)$
 \end_inset
 
- ist aufgrund der Anzahl von möglichen Koeffizientenkombinationen 
+ ist aufgrund der Anzahl von mÃ¶glichen Koeffizientenkombinationen 
 \begin_inset Formula $p^{n}$
 \end_inset
 
@@ -4767,13 +5298,13 @@ Die Anzahl der Elemente
 \noun on
 Galois
 \noun default
--Körper
+-KÃ¶rper
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
- von Primelementen noch als Körperordnung zulässig sind.
+Ein ErweiterungskÃ¶rper schafft dadurch die MÃ¶glichkeit, daÃŸ auch Potenzen
+ von Primelementen noch als KÃ¶rperordnung zulÃ¤ssig sind.
 \end_layout
 
 \end_inset
@@ -4788,13 +5319,14 @@ Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
 \end_inset
 
  hat dessen multiplikative Gruppe
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Welche das Nullelement 
@@ -4818,7 +5350,7 @@ resp
 \begin_inset Formula $r(x)=0$
 \end_inset
 
- ausschließt.
+ ausschlieÃŸt.
 \end_layout
 
 \end_inset
@@ -4835,7 +5367,8 @@ resp
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand \label{enum:algebra_extfield_gen}
+\begin_inset LatexCommand label
+name "enum:algebra_extfield_gen"
 
 \end_inset
 
@@ -4844,7 +5377,8 @@ Jedes Element
 \end_inset
 
  hat eine Ordnung
-\begin_inset LatexCommand \index{Ordnung}
+\begin_inset LatexCommand index
+name "Ordnung"
 
 \end_inset
 
@@ -4862,7 +5396,8 @@ resp
 \end_inset
 
  Periode
-\begin_inset LatexCommand \index{Periode}
+\begin_inset LatexCommand index
+name "Periode"
 
 \end_inset
 
@@ -4872,7 +5407,8 @@ resp
 
 , welche sich aus Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_elem}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_elem"
 
 \end_inset
 
@@ -4887,7 +5423,8 @@ resp
 Nach dem Satz von 
 \noun on
 Lagrange
-\begin_inset LatexCommand \index{Lagrange@\noun{Lagrange}!Satz von}
+\begin_inset LatexCommand index
+name "Lagrange@\\noun{Lagrange}!Satz von"
 
 \end_inset
 
@@ -4898,7 +5435,8 @@ Lagrange
 \end_inset
 
  des Elements die der multiplikativen Gruppe
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
@@ -4936,12 +5474,14 @@ ie
 
 \begin_layout Enumerate
 Jedes erzeugende (primitive) Element
-\begin_inset LatexCommand \index{Element!primitives}
+\begin_inset LatexCommand index
+name "Element!primitives"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Element!Generator-}
+\begin_inset LatexCommand index
+name "Element!Generator-"
 
 \end_inset
 
@@ -4953,13 +5493,15 @@ Jedes erzeugende (primitive) Element
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- erfüllt die Bedingung der maximalen Zykluslänge
-\begin_inset LatexCommand \index{Periode!maximale}
+ erfÃ¼llt die Bedingung der maximalen ZykluslÃ¤nge
+\begin_inset LatexCommand index
+name "Periode!maximale"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zykluslänge}
+\begin_inset LatexCommand index
+name "ZykluslÃ¤nge"
 
 \end_inset
 
@@ -4972,14 +5514,15 @@ Jedes erzeugende (primitive) Element
 \end_inset
 
 .
- Es ist damit geeignet, als Basiselement für die Erzeugung aller anderen
+ Es ist damit geeignet, als Basiselement fÃ¼r die Erzeugung aller anderen
  Elemente 
 \begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
 \end_inset
 
  verwendet zu werden.
  Nimmt man das Nullelement
-\begin_inset LatexCommand \index{Element!Null-}
+\begin_inset LatexCommand index
+name "Element!Null-"
 
 \end_inset
 
@@ -4988,7 +5531,8 @@ Jedes erzeugende (primitive) Element
 \end_inset
 
  sowie das Einselement
-\begin_inset LatexCommand \index{Element!Eins-}
+\begin_inset LatexCommand index
+name "Element!Eins-"
 
 \end_inset
 
@@ -4996,7 +5540,7 @@ Jedes erzeugende (primitive) Element
 \begin_inset Formula $1=g^{q-1}$
 \end_inset
 
- hinzu, so gilt für die Menge der Elemente 
+ hinzu, so gilt fÃ¼r die Menge der Elemente 
 \begin_inset Formula $\mathbb{F}_{q}=\{0,1,g^{1},g^{2},g^{3},\ldots,g^{p^{n}-3},g^{p^{n}-2}\}$
 \end_inset
 
@@ -5006,17 +5550,19 @@ Jedes erzeugende (primitive) Element
 \begin_layout Enumerate
 Aus Punkt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{enum:algebra_extfield_gen}
+\begin_inset LatexCommand ref
+reference "enum:algebra_extfield_gen"
 
 \end_inset
 
- läßt sich (in Übereinstimmung mit Gleichung\InsetSpace ~
+ lÃ¤ÃŸt sich (in Ãœbereinstimmung mit Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_ord_mod_factor}
+\begin_inset LatexCommand ref
+reference "eq:algebra_ord_mod_factor"
 
 \end_inset
 
-) schlußfolgern, daß für jedes Element 
+) schluÃŸfolgern, daÃŸ fÃ¼r jedes Element 
 \begin_inset Formula $r(x)\in\mathbb{F}_{q}^{*}$
 \end_inset
 
@@ -5037,7 +5583,7 @@ Aus Punkt\InsetSpace ~
 \begin_inset Formula $r(x)=x$
 \end_inset
 
- als das kleinste Element (mit einem Grad größer als 
+ als das kleinste Element (mit einem Grad grÃ¶ÃŸer als 
 \begin_inset Formula $0$
 \end_inset
 
@@ -5045,7 +5591,7 @@ Aus Punkt\InsetSpace ~
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
-, so erhält man die Beziehungen:
+, so erhÃ¤lt man die Beziehungen:
 \newline
 
 \begin_inset Formula \begin{eqnarray*}
@@ -5065,18 +5611,20 @@ welche auch die Kongruenz
 \end_layout
 
 \begin_layout Subsubsection
-Zerfällungskörper
+ZerfÃ¤llungskÃ¶rper
 \end_layout
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Standard
 Siehe 
 \noun on
 
-\begin_inset LatexCommand \htmlurl[Diskrete Mathematik]{file://~ralf/archiv/math/algebra/discrete_math_schnorr.pdf}
+\begin_inset LatexCommand htmlurl
+name "Diskrete Mathematik"
+target "file://~ralf/archiv/math/algebra/discrete_math_schnorr.pdf"
 
 \end_inset
 
@@ -5097,16 +5645,18 @@ Schnorr
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Körper!Zerfällungs-}
+\begin_inset LatexCommand index
+name "KÃ¶rper!ZerfÃ¤llungs-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zerfällungskörper}
+\begin_inset LatexCommand index
+name "ZerfÃ¤llungskÃ¶rper"
 
 \end_inset
 
-Nach dem Hauptsatz der elementaren Zahlentheorie kann man für jede natürliche
+Nach dem Hauptsatz der elementaren Zahlentheorie kann man fÃ¼r jede natÃ¼rliche
  Zahl eine eindeutigen Primfaktorzerlegung der Form
 \end_layout
 
@@ -5121,11 +5671,11 @@ m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\cdots\]
 
 \begin_layout Standard
 finden.
- Gleiches trifft auch für Polynome in 
+ Gleiches trifft auch fÃ¼r Polynome in 
 \begin_inset Formula $\mathbb{F}_{p}[x]$
 \end_inset
 
- zu, nur daß es sich um irreduzible Polynome anstatt Primzahlen handelt.
+ zu, nur daÃŸ es sich um irreduzible Polynome anstatt Primzahlen handelt.
 \end_layout
 
 \begin_layout Standard
@@ -5140,7 +5690,7 @@ f(x)=\left[m_{1}(x)\right]^{e_{1}}\,\left[m_{2}(x)\right]^{e_{2}}\left[m_{3}(x)\
 \begin_layout Standard
 Jedes der irreduziblen Polynome
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Die Indizierung mit 
@@ -5152,8 +5702,8 @@ Die Indizierung mit
 \begin_inset Formula $m(x):=m_{i}(x)$
 \end_inset
 
- beschränken.
- Man sollte sich aber immer bewußt sein, daß die Variablen 
+ beschrÃ¤nken.
+ Man sollte sich aber immer bewuÃŸt sein, daÃŸ die Variablen 
 \begin_inset Formula $n$
 \end_inset
 
@@ -5161,7 +5711,7 @@ Die Indizierung mit
 \begin_inset Formula $q$
 \end_inset
 
- sowie die abgeleiteten Größen 
+ sowie die abgeleiteten GrÃ¶ÃŸen 
 \begin_inset ERT
 status collapsed
 
@@ -5178,7 +5728,7 @@ resp
 \begin_inset Formula $\psi(x)$
 \end_inset
 
- abhängig von 
+ abhÃ¤ngig von 
 \begin_inset Formula $m(x)$
 \end_inset
 
@@ -5195,20 +5745,20 @@ resp
 \begin_inset Formula $n$
 \end_inset
 
- abhängige Anzahl von Nullstellen 
+ abhÃ¤ngige Anzahl von Nullstellen 
 \begin_inset Formula $\alpha$
 \end_inset
 
-, die entweder im Grundkörper 
+, die entweder im GrundkÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
- oder (sämtlich) in einem zugehörigen Erweiterungskörper 
+ oder (sÃ¤mtlich) in einem zugehÃ¶rigen ErweiterungskÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
  liegen.
- Nullstellen im Grundkörper, von denen 
+ Nullstellen im GrundkÃ¶rper, von denen 
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -5243,7 +5793,8 @@ cf
 
  in Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_extfield_example}
+\begin_inset LatexCommand ref
+reference "sec:algebra_extfield_example"
 
 \end_inset
 
@@ -5256,23 +5807,23 @@ cf
 \begin_inset Formula $m(x)$
 \end_inset
 
- in einem Erweiterungskörper, dann muß es sich um ein irreduzibles Polynom
- (höheren Grades) handeln
+ in einem ErweiterungskÃ¶rper, dann muÃŸ es sich um ein irreduzibles Polynom
+ (hÃ¶heren Grades) handeln
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Und umgekehrt, denn 
 \begin_inset Formula $m(x)$
 \end_inset
 
- ist ja im Grundkörper nicht weiter faktorisierbar.
+ ist ja im GrundkÃ¶rper nicht weiter faktorisierbar.
 \end_layout
 
 \end_inset
 
 .
- Ein solcher Körper besteht aus 
+ Ein solcher KÃ¶rper besteht aus 
 \begin_inset Formula $p^{n}$
 \end_inset
 
@@ -5299,7 +5850,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_zeroes_split}
+\begin_inset LatexCommand ref
+reference "sec:algebra_zeroes_split"
 
 \end_inset
 
@@ -5308,13 +5860,15 @@ cf
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
- nennt man deshalb auch den kleinsten Körper über den 
+ nennt man deshalb auch den kleinsten KÃ¶rper Ã¼ber den 
 \begin_inset Formula $\psi(x)\in\mathbb{F}_{p}[x]$
 \end_inset
 
- vollständig in Linearfaktoren zerfällt\InsetSpace ~
+ vollstÃ¤ndig in Linearfaktoren zerfÃ¤llt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[4.5]{Bosch:1996}
+\begin_inset LatexCommand cite
+after "4.5"
+key "Bosch:1996"
 
 \end_inset
 
@@ -5331,11 +5885,11 @@ resp
 
 \end_inset
 
- kürzer: 
+ kÃ¼rzer: 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
- sei der Zerfällungskörper von 
+ sei der ZerfÃ¤llungskÃ¶rper von 
 \begin_inset Formula $x^{q}-x$
 \end_inset
 
@@ -5352,12 +5906,13 @@ resp
 \end_layout
 
 \begin_layout Standard
-Ein weiteres Charakteristikum des Zerfällungskörpers 
+Ein weiteres Charakteristikum des ZerfÃ¤llungskÃ¶rpers 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
  sind die konjugierten
-\begin_inset LatexCommand \index{Nullstellen!konjugierte}
+\begin_inset LatexCommand index
+name "Nullstellen!konjugierte"
 
 \end_inset
 
@@ -5395,7 +5950,7 @@ ie
 \begin_inset Formula $m(x)$
 \end_inset
 
- zerfällt also bei Kenntnis nur 
+ zerfÃ¤llt also bei Kenntnis nur 
 \emph on
 einer
 \emph default
@@ -5403,7 +5958,7 @@ einer
 \begin_inset Formula $\alpha$
 \end_inset
 
- vollständig in seine 
+ vollstÃ¤ndig in seine 
 \begin_inset Formula $n$
 \end_inset
 
@@ -5421,7 +5976,7 @@ einer
 \end_layout
 
 \begin_layout Standard
-aus, welche berücksichtigt, daß:
+aus, welche berÃ¼cksichtigt, daÃŸ:
 \end_layout
 
 \begin_layout Itemize
@@ -5433,7 +5988,7 @@ mit
 \begin_inset Formula $\binom{p}{k}=\frac{p!}{k!(p-k)!}$
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $k\neq0$
 \end_inset
 
@@ -5453,7 +6008,7 @@ mit
 \end_layout
 
 \begin_layout Itemize
-im Grundkörper 
+im GrundkÃ¶rper 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -5465,7 +6020,7 @@ im Grundkörper
 \begin_inset Formula $a^{p}=a$
 \end_inset
 
- erfüllt (
+ erfÃ¼llt (
 \begin_inset ERT
 status collapsed
 
@@ -5480,7 +6035,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:algebra_galois_multgrp}
+\begin_inset LatexCommand ref
+reference "sec:algebra_galois_multgrp"
 
 \end_inset
 
@@ -5497,13 +6053,13 @@ m\left(\alpha^{p}\right)=\sum_{i=0}^{n}a_{i}\alpha^{ip}=\sum_{i=0}^{n}a_{i}^{p}\
 \end_layout
 
 \begin_layout Standard
-Aus diesem Grund läßt sich für jedes der irreduziblen Polynome 
+Aus diesem Grund lÃ¤ÃŸt sich fÃ¼r jedes der irreduziblen Polynome 
 \begin_inset Formula $m(x)$
 \end_inset
 
  die folgende Linearfaktordarstellung angeben
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Das irreduzible Polynom 
@@ -5511,17 +6067,20 @@ Das irreduzible Polynom
 \end_inset
 
  wird auch Minimalpolynom
-\begin_inset LatexCommand \index{Minimalpolynom}
+\begin_inset LatexCommand index
+name "Minimalpolynom"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Polynom!Minimal-}
+\begin_inset LatexCommand index
+name "Polynom!Minimal-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Minimalfunktion}
+\begin_inset LatexCommand index
+name "Minimalfunktion"
 
 \end_inset
 
@@ -5529,7 +6088,7 @@ Das irreduzible Polynom
 \begin_inset Formula $\alpha$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -5551,9 +6110,11 @@ kleinsten
 \begin_inset Formula $m(\alpha)=0$
 \end_inset
 
- erfüllt\InsetSpace ~
+ erfÃ¼llt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[6.5]{Peterson:1972}
+\begin_inset LatexCommand cite
+after "6.5"
+key "Peterson:1972"
 
 \end_inset
 
@@ -5579,14 +6140,16 @@ Die Nullstellen
 \begin_inset Formula $\alpha^{p^{\nu}}$
 \end_inset
 
- kann man (wegen ihrer linearen Unabhängigkeit) verwenden, um statt einer
+ kann man (wegen ihrer linearen UnabhÃ¤ngigkeit) verwenden, um statt einer
  Polynombasis
-\begin_inset LatexCommand \index{Vektor!-raum!Basis}
+\begin_inset LatexCommand index
+name "Vektor!-raum!Basis"
 
 \end_inset
 
  eine sogenannte Normalbasis
-\begin_inset LatexCommand \index{Normalbasis}
+\begin_inset LatexCommand index
+name "Normalbasis"
 
 \end_inset
 
@@ -5594,7 +6157,7 @@ Die Nullstellen
 \begin_inset Formula $n$
 \end_inset
 
-) über 
+) Ã¼ber 
 \begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
@@ -5602,13 +6165,14 @@ Die Nullstellen
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:algebra_extfield_example}
+\begin_inset LatexCommand label
+name "sec:algebra_extfield_example"
 
 \end_inset
 
-Erweiterungskörper 
+ErweiterungskÃ¶rper 
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -5625,7 +6189,7 @@ mathbb{Z}_2^n}{Z(2**n)}
 \end_layout
 
 \begin_layout Standard
-Für eine Erweiterung des Primkörpers 
+FÃ¼r eine Erweiterung des PrimkÃ¶rpers 
 \begin_inset Formula $\mathbb{Z}_{2}$
 \end_inset
 
@@ -5642,7 +6206,7 @@ Für eine Erweiterung des Primkörpers
 \end_inset
 
  notwendig.
- Der dadurch entstehende Körper 
+ Der dadurch entstehende KÃ¶rper 
 \begin_inset Formula $\mathbb{Z}_{2}^{n}$
 \end_inset
 
@@ -5669,23 +6233,26 @@ cf
 
  Seite\InsetSpace ~
 
-\begin_inset LatexCommand \pageref{enum:algebra_mod2_operations}
+\begin_inset LatexCommand pageref
+reference "enum:algebra_mod2_operations"
 
 \end_inset
 
 ) jetzt kurz betrachtet werden.
  Nach Darstellung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_residue_poly}
+\begin_inset LatexCommand ref
+reference "eq:algebra_residue_poly"
 
 \end_inset
 
- gehören genau 
+ gehÃ¶ren genau 
 \begin_inset Formula $q=p^{n}=4$
 \end_inset
 
- Polynome zum Erweiterungskörper
-\begin_inset LatexCommand \index{Körper!$\mathbb{Z}_2^2$}
+ Polynome zum ErweiterungskÃ¶rper
+\begin_inset LatexCommand index
+name "KÃ¶rper!$\\mathbb{Z}_2^2$"
 
 \end_inset
 
@@ -5697,7 +6264,7 @@ cf
 \begin_inset Formula $n=2$
 \end_inset
 
-), nämlich:
+), nÃ¤mlich:
 \end_layout
 
 \begin_layout Standard
@@ -5711,12 +6278,13 @@ r_{2}(x) & =x & r_{3}(x) & =x+1\mperiod\end{xalignat*}
 \end_layout
 
 \begin_layout Standard
-Wie sich leicht feststellen läßt, ist 
+Wie sich leicht feststellen lÃ¤ÃŸt, ist 
 \begin_inset Formula $r_{3}(x)$
 \end_inset
 
  das erzeugende Element
-\begin_inset LatexCommand \index{Element!erzeugendes}
+\begin_inset LatexCommand index
+name "Element!erzeugendes"
 
 \end_inset
 
@@ -5743,7 +6311,7 @@ Wie sich leicht feststellen läßt, ist
 \end_layout
 
 \begin_layout Standard
-Außerdem sind alle Elemente (abgesehen von 
+AuÃŸerdem sind alle Elemente (abgesehen von 
 \begin_inset Formula $r_{0}(x)$
 \end_inset
 
@@ -5752,11 +6320,11 @@ Außerdem sind alle Elemente (abgesehen von
 \end_inset
 
 .
- Auch gut erkennen läßt sich, daß 
+ Auch gut erkennen lÃ¤ÃŸt sich, daÃŸ 
 \begin_inset Formula $m(x)$
 \end_inset
 
- für jedes Element 
+ fÃ¼r jedes Element 
 \begin_inset Formula $r(x)$
 \end_inset
 
@@ -5779,9 +6347,10 @@ Außerdem sind alle Elemente (abgesehen von
 \end_layout
 
 \begin_layout Standard
-Äquivalent dazu ist das Produkt aller Elemente (konform zu Formel\InsetSpace ~
+Ã„quivalent dazu ist das Produkt aller Elemente (konform zu Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:algebra_product_elements}
+\begin_inset LatexCommand ref
+reference "eq:algebra_product_elements"
 
 \end_inset
 
@@ -5791,7 +6360,7 @@ Außerdem sind alle Elemente (abgesehen von
 
  der multiplikativen Gruppe
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Welches in der additiven Gruppe 
@@ -5837,7 +6406,8 @@ r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Restklassen|)}
+\begin_inset LatexCommand index
+name "Restklassen|)"
 
 \end_inset
 
@@ -5845,7 +6415,8 @@ r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:abstract}
+\begin_inset LatexCommand label
+name "sec:abstract"
 
 \end_inset
 
@@ -5853,37 +6424,44 @@ Zusammenfassung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gruppe!additive}
+\begin_inset LatexCommand index
+name "Gruppe!additive"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe!multiplikative}
+\begin_inset LatexCommand index
+name "Gruppe!multiplikative"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gruppe!Halb-}
+\begin_inset LatexCommand index
+name "Gruppe!Halb-"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Monoid}
+\begin_inset LatexCommand index
+name "Monoid"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Ring}
+\begin_inset LatexCommand index
+name "Ring"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Körper}
+\begin_inset LatexCommand index
+name "KÃ¶rper"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Körper!Schief-}
+\begin_inset LatexCommand index
+name "KÃ¶rper!Schief-"
 
 \end_inset
 
@@ -5893,11 +6471,12 @@ Zusammenfassung
 \begin_layout Standard
 Tabelle\InsetSpace ~
 
-\begin_inset LatexCommand \ref{tab:algebraic_structures}
+\begin_inset LatexCommand ref
+reference "tab:algebraic_structures"
 
 \end_inset
 
- gibt einen Überblick zu den verschiedenen algebraischen Grundstrukturen
+ gibt einen Ãœberblick zu den verschiedenen algebraischen Grundstrukturen
  und ihren Existenzbedingungen.
 \end_layout
 
@@ -5908,12 +6487,21 @@ wide false
 sideways false
 status open
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{tab:algebraic_structures}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab:algebraic_structures"
 
 \end_inset
 
 Eigenschaften algebraischer Strukturen
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6736,7 +7324,7 @@ Ring
 \begin_inset Text
 
 \begin_layout Standard
-Schiefkörper
+SchiefkÃ¶rper
 \end_layout
 
 \end_inset
@@ -6852,7 +7440,7 @@ Schiefkörper
 \begin_inset Text
 
 \begin_layout Standard
-Körper
+KÃ¶rper
 \end_layout
 
 \end_inset
@@ -6978,471 +7566,8 @@ Körper
 
 \end_layout
 
-\begin_layout Section
-Notation
-\end_layout
-
-\begin_layout Standard
-\begin_inset LatexCommand \index{Notation}
-
-\end_inset
-
-
-\begin_inset LatexCommand \index{Symbole}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
 \begin_layout Standard
 
-%% Description environment: modify label font and indentation
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-renewcommand{
-\backslash
-descriptionlabel}[1]{
-\backslash
-hspace{
-\backslash
-labelsep}
-\backslash
-makebox[1in][l]{
-\backslash
-textsf{#1}}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\forall$
-\end_inset
-
- Für alle 
-\begin_inset Formula $\ldots$
-\end_inset
-
- (Allquantor)
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\left\langle a\right\rangle $
-\end_inset
-
- Vom Element 
-\begin_inset Formula $a$
-\end_inset
-
- erzeugte Untergruppe
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\left|a\right|$
-\end_inset
-
- Ordnung des Elements 
-\begin_inset Formula $a$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\{ a_{1},a_{2},a_{3},\ldots\}$
-\end_inset
-
- Menge von Elementen 
-\begin_inset Formula $a_{i}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{C}$
-\end_inset
-
- Körper der komplexen Zahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\deg{\left[h(x)\right]}$
-\end_inset
-
- Grad des Polynoms 
-\begin_inset Formula $h(x)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\dim(V)$
-\end_inset
-
- Dimension des Vektorraums 
-\begin_inset Formula $V$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $(G,\diamond)$
-\end_inset
-
- Gruppe mit Operation 
-\begin_inset Formula $\diamond$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\left|G\right|$
-\end_inset
-
- Ordnung der Gruppe 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula ${\# G}$
-\end_inset
-
- Ordnung der Gruppe 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\GF(q)$
-\end_inset
-
- 
-\noun on
-Galois
-\noun default
--Körper mit 
-\begin_inset Formula $q$
-\end_inset
-
- Elementen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\left|G:H\right|$
-\end_inset
-
- Index der Gruppe 
-\begin_inset Formula $G$
-\end_inset
-
- über 
-\begin_inset Formula $H$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula ${[M:K]}$
-\end_inset
-
- Grad der Körpererweiterung 
-\begin_inset Formula $M$
-\end_inset
-
- über 
-\begin_inset Formula $K$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- Multiplikative Gruppe des endlichen Körpers 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
- Endlicher Körper mit 
-\begin_inset Formula $q$
-\end_inset
-
- Elementen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $K$
-\end_inset
-
- Körper
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{N}$
-\end_inset
-
- Menge der natürlichen Zahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\ord(G)$
-\end_inset
-
- Ordnung der Gruppe 
-\begin_inset Formula $G$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $p$
-\end_inset
-
- Primzahl (
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- Primelement)
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{P}$
-\end_inset
-
- Menge der Primzahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Q}$
-\end_inset
-
- Körper der rationalen Zahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\rcls{r}{m}$
-\end_inset
-
- Restklasse zum Modul 
-\begin_inset Formula $m$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{R}$
-\end_inset
-
- Körper der reellen Zahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $R(+,\cdot)$
-\end_inset
-
- Ring
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $R^{*}$
-\end_inset
-
- Multiplikative Gruppe des Ringes 
-\begin_inset Formula $R(+,\cdot)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $(R_{m},+,\cdot)$
-\end_inset
-
- Restklassenring
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $R{[x]}$
-\end_inset
-
- Polynomring in der Variablen 
-\begin_inset Formula $x$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}$
-\end_inset
-
- Ring der ganzen Zahlen
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}_{m}$
-\end_inset
-
- Restklassenring der ganzen Zahlen
-\begin_inset Foot
-status collapsed
-
-\begin_layout Standard
-Die ganzen Zahlen von 
-\begin_inset Formula $0$
-\end_inset
-
- bis 
-\begin_inset Formula $m-1$
-\end_inset
-
-, 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- modulo 
-\begin_inset Formula $m$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\mod m$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset
-
- Primzahlenkörper 
-\begin_inset Formula $\mathbb{Z}/p\mathbb{Z}$
-\end_inset
-
-, 
-\begin_inset Formula $p\in\mathbb{P}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}_{p}^{*}$
-\end_inset
-
- Multiplikative Gruppe des Körpers 
-\begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}/m\mathbb{Z}$
-\end_inset
-
- Restklassenring der ganzen Zahlen 
-\begin_inset Formula $\mod m$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
-\end_inset
-
- Polynom-Restklassenring auf dem Grundkörper 
-\begin_inset Formula $\mathbb{Z}_{p}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $V$
-\end_inset
-
- Vektorraum
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mvec{v}$
-\end_inset
-
- Vektor
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mvec v^{T}$
-\end_inset
-
- Transponierter Vektor
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\diamond$
-\end_inset
-
- Operation
 \end_layout
 
 \end_body
