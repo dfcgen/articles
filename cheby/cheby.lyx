@@ -3,6 +3,12 @@
 \begin_document
 \begin_header
 \textclass scrartcl
+\begin_preamble
+\input{all-inc}
+
+\docsubj{Tschebyscheff-Funktionen}{Tschebyscheff Funktionen}{Tschebyscheff, Chebyshev}
+\end_preamble
+\options reqno
 \language german
 \inputencoding latin1
 \font_roman times
@@ -14,10 +20,9 @@
 \font_sf_scale 100
 \font_tt_scale 100
 \graphics default
-\float_placement !tbh
 \paperfontsize default
 \spacing single
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
@@ -30,7 +35,7 @@
 \defskip medskip
 \quotes_language german
 \papercolumns 1
-\papersides 1
+\papersides 2
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
@@ -45,7 +50,83 @@
 status open
 
 \begin_layout Standard
-Version: $Id: cheby.lyx,v 1.11 2007-09-22 17:44:45 ralf Exp $
+Version: $Id: cheby.lyx,v 1.12 2007-09-30 12:53:34 ralf Exp $
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+if
+\backslash
+thisjob{cheby}% isn't included from another job?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+
+\noun on
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
+\noun default
+-Funktionen
+\end_layout
+
+\begin_layout Author
+Copyright 
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+textcopyright
+\backslash
+  
+\backslash
+number
+\backslash
+year
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ Ralf Hoppe
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+fi%
 \end_layout
 
 \end_inset
@@ -185,6 +266,14 @@ f
 \end_inset
 
  ist definiert als
+\begin_inset LatexCommand nomenclature
+prefix "Tn"
+symbol "$\\T_n$"
+description "\\noun{Tschebyscheff}-Funktion erster Art der Ordnung $n$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1680,6 +1769,7 @@ reference "fig:chebyu_plot"
 
 \begin_layout Standard
 \begin_inset Float figure
+placement H
 wide false
 sideways false
 status open
@@ -1766,6 +1856,58 @@ key "Meinardus:1964"
 \end_inset
 
  nachlesen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+if
+\backslash
+thisjob{cheby}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand bibtex
+options "geralpha"
+bibfiles "adsp,computers,math"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand printindex
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+fi%
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_body

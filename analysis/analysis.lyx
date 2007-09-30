@@ -3,6 +3,12 @@
 \begin_document
 \begin_header
 \textclass scrartcl
+\begin_preamble
+\input{all-inc.tex}
+
+\docsubj{Funktionentheorie -- Analytische Funktionen}{Grundlagen der Funktionentheorie}{Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen}
+\end_preamble
+\options reqno
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,11 +19,10 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-\graphics dvips
-\float_placement !tbh
+\graphics default
 \paperfontsize default
 \spacing onehalf
-\papersize default
+\papersize a4paper
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
@@ -45,7 +50,138 @@
 status open
 
 \begin_layout Standard
-Version: $Id: analysis.lyx,v 1.21 2007-09-22 17:44:45 ralf Exp $
+Version: $Id: analysis.lyx,v 1.22 2007-09-30 12:53:38 ralf Exp $
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+if
+\backslash
+thisjob{analysis}% isn't included from another job?
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Funktionentheorie -- Analytische Funktionen
+\end_layout
+
+\begin_layout Author
+Copyright 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Standard
+
+
+\backslash
+textcopyright
+\backslash
+  
+\backslash
+number
+\backslash
+year
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ Ralf Hoppe
+\end_layout
+
+\begin_layout Abstract
+Das vorliegende Papier richtet sich an Studenten und Ingenieure der Elektrotechn
+ik, Signalverarbeitung oder Nachrichtentechnik, die ihr Wissen zur Funktionenthe
+orie auffrischen wollen.
+ Vorausgesetzt werden dabei Grundkenntnisse der höheren Mathematik, insbesondere
+ der Differential- und Integralrechnung.
+ Empfehlenswert für einen tieferen Einstieg halte ich besonders\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Brown:1996"
+
+\end_inset
+
+, 
+\begin_inset LatexCommand cite
+key "Freitag:2000"
+
+\end_inset
+
+ und wegen der permanenten Anschaulichkeit\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Needham:1998"
+
+\end_inset
+
+, außerdem den Klassiker\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Whittaker:1927"
+
+\end_inset
+
+ sowie die kurzen anwendungsbezogenen Einführungen in\InsetSpace ~
+
+\begin_inset LatexCommand cite
+after "jeweils Anhang~II"
+key "Cauer:1954,Papoulis:1962"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+fi%
 \end_layout
 
 \end_inset
@@ -2884,6 +3020,14 @@ name "Residuum"
 \begin_inset Formula $\res{z_{0}}{f(z)}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "Res"
+symbol "$\\res{z_0}{f(z)}$"
+description "Residuum von $f(z)$ an der Stelle $z_{0}$"
+
+\end_inset
+
  ab.
 \end_layout
 
@@ -3685,6 +3829,14 @@ Laurent
 
  
 \begin_inset Formula $f(z)=\sin z/z$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "sinc(x)"
+symbol "$\\sinc(z)$"
+description "Spaltfunktion (Sinus Cardinalis)"
+
 \end_inset
 
 .
@@ -9113,6 +9265,58 @@ name "Integral!uneigentliches|)"
 \begin_layout Standard
 \begin_inset LatexCommand index
 name "Funktionentheorie|)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+if
+\backslash
+thisjob{analysis}%
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand bibtex
+options "geralpha"
+bibfiles "adsp,math"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand printindex
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+fi%
+\end_layout
 
 \end_inset
 
