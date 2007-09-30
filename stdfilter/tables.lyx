@@ -35,16 +35,17 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
 
 \begin_layout Standard
 \begin_inset Note Note
-status open
+status collapsed
 
 \begin_layout Standard
-Version: $Id: tables.lyx,v 1.6 2007-09-22 17:44:46 ralf Exp $
+Version: $Id: tables.lyx,v 1.7 2007-09-30 13:57:32 ralf Exp $
 \end_layout
 
 \end_inset
@@ -159,7 +160,7 @@ ie
  Die Konvergenz des uneigentlichen Integrals bestimmt dabei über die Existenz
  der jeweiligen Transformierten
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Im ungünstigsten Fall unter Hinzunahme von 
@@ -201,7 +202,7 @@ existiert
 
  jedoch grundsätzlich
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Wegen 
@@ -271,10 +272,10 @@ name "Transformation!Fourier@\\noun{Fourier}-!Regeln"
 \begin_inset Tabular
 <lyxtabular version="3" rows="12" columns="4">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="block" valignment="top" leftline="true" width="3cm">
-<column alignment="block" valignment="top" leftline="true" width="3.5cm">
-<column alignment="block" valignment="top" leftline="true" width="3.5cm">
-<column alignment="block" valignment="top" leftline="true" rightline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" width="3cm">
+<column alignment="center" valignment="top" leftline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="3.5cm">
 <row topline="true" bottomline="true" endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -830,10 +831,10 @@ name "Transformation!Fourier@\\noun{Fourier}-!Korrespondenzen"
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="4">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="block" valignment="top" leftline="true" width="3cm">
-<column alignment="block" valignment="top" leftline="true" width="3.5cm">
-<column alignment="block" valignment="top" leftline="true" width="3.5cm">
-<column alignment="block" valignment="top" leftline="true" rightline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" width="3cm">
+<column alignment="center" valignment="top" leftline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" width="3.5cm">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="3.5cm">
 <row topline="true" bottomline="true" endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1065,7 +1066,17 @@ Rechteckimpuls
 \begin_inset Text
 
 \begin_layout Standard
-\begin_inset Formula $\rect(t)$
+\begin_inset Formula $\rect(t)=\allowbreak\begin{cases}
+0 & \quad(|t|>T/2)\\
+1 & \quad(|t|\leq T/2)\end{cases}$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "rect(t)"
+symbol "$\\rect(t)$"
+description "Rechteckfunktion"
+
 \end_inset
 
 
@@ -1696,8 +1707,8 @@ Systembeziehungen
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="block" valignment="top" leftline="true" width="8cm">
-<column alignment="block" valignment="top" leftline="true" rightline="true" width="6cm">
+<column alignment="center" valignment="top" leftline="true" width="8cm">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="6cm">
 <row topline="true" bottomline="true" endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1788,7 +1799,7 @@ Bemerkungen
 
 \begin_layout Standard
 \begin_inset ERT
-status inlined
+status collapsed
 
 \begin_layout Standard
 
@@ -1916,9 +1927,9 @@ Uneigentliche Integrale
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="block" valignment="top" leftline="true" width="5cm">
-<column alignment="block" valignment="top" leftline="true" width="5cm">
-<column alignment="block" valignment="top" leftline="true" rightline="true" width="4cm">
+<column alignment="center" valignment="top" leftline="true" width="5cm">
+<column alignment="center" valignment="top" leftline="true" width="5cm">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="4cm">
 <row topline="true" bottomline="true" endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text

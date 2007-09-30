@@ -35,6 +35,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -44,7 +45,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: goal.lyx,v 1.14 2007-09-22 17:44:46 ralf Exp $
+Version: $Id: goal.lyx,v 1.15 2007-09-30 13:56:55 ralf Exp $
 \end_layout
 
 \end_inset
@@ -68,12 +69,54 @@ name "sec:approx_ampl"
 
 \begin_layout Standard
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
- zwei systemtheoretische Größen interessant: die Dämpfung 
+ zwei systemtheoretische Größen interessant: die Dämpfung
+\begin_inset LatexCommand index
+name "Dämpfung"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "A(omega)"
+symbol "$\\atf(\\omega)$"
+description "Dämpfung"
+
+\end_inset
+
+ 
 \begin_inset Formula $\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|$
 \end_inset
 
- sowie der Phasengang 
+
+\begin_inset LatexCommand nomenclature
+symbol "$\"| \\lps \"|$"
+description "Betrag von $\\lps$"
+
+\end_inset
+
+ sowie der Phasengang
+\begin_inset LatexCommand index
+name "Phase"
+
+\end_inset
+
+ 
 \begin_inset Formula $\phf(\omega)=-\ang\trf(\ji\omega)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\ang\\lps$"
+description "Winkel von $\\lps$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "B(omega)"
+symbol "$\\phf(\\omega)$"
+description "Phase"
+
 \end_inset
 
 .
@@ -113,8 +156,22 @@ key "Henderson:1958"
 
 \end_inset
 
+
+\begin_inset LatexCommand index
+name "Amplitudengang"
+
+\end_inset
+
  
 \begin_inset Formula $\trf(\omega)=\left|\trf(\ji\omega)\right|$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "H(omega)"
+symbol "$\\trf(\\omega)$"
+description "Betrag der Übertragungsfunktion im $\\ft$-Bildbereich"
+
 \end_inset
 
 , 
@@ -138,15 +195,35 @@ key "Guillemin:1952,Guillemin:1957,Winkler:1954,Zverev:1967,Fritzsche:1979a,Mild
 \end_inset
 
 .
- Dazu wird üblicherweise statt der Amplitudencharakteristik 
+ Dazu wird üblicherweise statt der Amplitudencharakteristik
+\begin_inset LatexCommand index
+name "Amplitudencharakteristik"
+
+\end_inset
+
+ 
 \begin_inset Formula $\trf(\omega)$
 \end_inset
 
- die charakteristische Funktion 
+ die charakteristische Funktion
+\begin_inset LatexCommand nomenclature
+prefix "D(omega)"
+symbol "$\\drf(\\omega)$"
+description "Drosselung"
+
+\end_inset
+
+ 
 \begin_inset Formula $\drf(\omega)=\left|\drf(\ji\omega)\right|$
 \end_inset
 
-, welche auch Drosselung genannt wird, herangezogen.
+, welche auch Drosselung
+\begin_inset LatexCommand index
+name "Drosselung"
+
+\end_inset
+
+ genannt wird, herangezogen.
  Als Zusammenhang zwischen beiden Größen gilt bekanntlich:
 \end_layout
 
