@@ -34,6 +34,10 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\branch NO_HTML
+\selected 0
+\color #faf0e6
+\end_branch
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -52,10 +56,10 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Standard
-Version: $Id: stdfilter.lyx,v 1.13 2007-09-22 17:44:46 ralf Exp $
+Version: $Id: stdfilter.lyx,v 1.14 2007-09-30 13:58:22 ralf Exp $
 \end_layout
 
 \begin_layout Itemize
@@ -102,10 +106,6 @@ babel
 , 
 \emph on
 bibgerm
-\emph default
-, 
-\emph on
-varioref
 \emph default
 , 
 \emph on
@@ -335,6 +335,179 @@ key "Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Ma
 
 \begin_layout Standard
 \begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+nomlabelwidth}{1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand nomenclature
+prefix "sin"
+symbol "$\\sin(x)$"
+description "Sinus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "cos"
+symbol "$\\cos(x)$"
+description "Cosinus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "tan"
+symbol "$\\tan(x)$"
+description "Tangens"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "cosh"
+symbol "$\\cosh(x)$"
+description "Cosinus Hyperbolicus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "arcos"
+symbol "$\\arccos(x)$"
+description "Arcus Cosinus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "arcosh"
+symbol "$\\arcosh(x)$"
+description "Area Cosinus Hyperbolicus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "VP"
+symbol "$\\vp$"
+description "\\noun{Cauchy}-Hauptwert (Valor Principalis)"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "sn(u,k)"
+symbol "$\\esn{u}{k}$"
+description "Elliptischer Sinus"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "arcosh"
+symbol "$\\exp(x)$"
+description "Exponentialfunktion"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "arcosh"
+symbol "$\\arctan(x)$"
+description "Arcus Tangens"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "cosec"
+symbol "$\\cosec(x)$"
+description "Cosekans ($\\cosec x=\\sin^{-1}x$)"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "sec"
+symbol "$\\sec(x)$"
+description "Sekans ($\\sec x=\\cos^{-1}x$)"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "s0"
+symbol "$\\zn{\\lps}{}$"
+description "Nullstelle einer Funktion von $\\lps$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "sx"
+symbol "$\\pn{\\lps}{}$"
+description "Pol einer Funktion von $\\lps$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "omega0D"
+symbol "$\\zn[(\\drf)]{\\omega}{}$"
+description "Nullstelle von $\\drf(\\omega)$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "omegaxD"
+symbol "$\\pn[(\\drf)]{\\omega}{}$"
+description "Pol von $\\drf(\\omega)$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Im(z)"
+symbol "$\\imop(z)$"
+description "Imaginärteil von $z$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Re(z)"
+symbol "$\\reop(z)$"
+description "Realteil von $z$"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand printnomenclature
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
 status collapsed
 
 \begin_layout Standard
@@ -433,8 +606,12 @@ preview false
 
 \end_layout
 
-\begin_layout Chapter
+\begin_layout Standard
 \start_of_appendix
+\begin_inset Branch NO_HTML
+status collapsed
+
+\begin_layout Chapter
 Algebraische Funktionen
 \end_layout
 
@@ -450,7 +627,8 @@ preview false
 \begin_layout Chapter
 
 \noun on
-Tschebyscheff
+Tschebyschef\SpecialChar \textcompwordmark{}
+f
 \noun default
 -Funktionen
 \end_layout
@@ -482,15 +660,6 @@ preview false
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Include \include{../elliptic/zolotarev.lyx}
-preview false
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Chapter
 Funktionentheorie -- Analytische Funktionen
 \end_layout
@@ -504,25 +673,17 @@ preview false
 
 \end_layout
 
-\begin_layout Chapter
-Tabellen
-\end_layout
-
-\begin_layout Standard
-\begin_inset Include \include{tables.lyx}
-preview false
-
 \end_inset
 
 
 \end_layout
 
 \begin_layout Chapter
-Notation
+Tabellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{notation.lyx}
+\begin_inset Include \include{tables.lyx}
 preview false
 
 \end_inset
