@@ -50,7 +50,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.12 2007-09-22 17:44:46 ralf Exp $
+Version: $Id: ltisys.lyx,v 1.13 2007-09-30 13:57:21 ralf Exp $
 \end_layout
 
 \end_inset
@@ -178,6 +178,14 @@ name "LTI-System!Impulsantwort"
 
  
 \begin_inset Formula $\irf(t)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "h(t)"
+symbol "$\\irf(t)$"
+description "Impulsantwort"
+
 \end_inset
 
  mit dem Eingangssignal
@@ -356,6 +364,30 @@ Fourier
 \begin_inset Formula $\trf(\ji\omega)=\ft\{\irf(t)\}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "H(jomega)"
+symbol "$\\trf(\\ji\\omega)$"
+description "(Komplexe) Übertragungsfunktion im $\\ft$-Bildbereich"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "FT"
+symbol "$\\ft$"
+description "\\noun{Fourier}-Transformation"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "FT-1"
+symbol "$\\ft^{-1}$"
+description "\\noun{Fourier}-Rücktransformation"
+
+\end_inset
+
  sichert\InsetSpace ~
 
 \begin_inset LatexCommand cite
@@ -446,6 +478,38 @@ name "Uebertragungsfunktion@Übertragungsfunktion|see{LTI-System}"
 
 \begin_inset LatexCommand index
 name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "H(s)"
+symbol "$\\trf(\\lps)$"
+description "(Komplexe) Übertragungsfunktion im $\\lt$-Bildbereich"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "s"
+symbol "$\\lps$"
+description "\\noun{Laplace}-Variable $\\lps=\\alpha+\\ji\\omega$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "LT"
+symbol "$\\lt$"
+description "\\noun{Laplace}-Transformation"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "LT-1"
+symbol "$\\lt^{-1}$"
+description "\\noun{Laplace}-Rücktransformation"
 
 \end_inset
 
@@ -1584,8 +1648,22 @@ y(t)=2\lt^{-1}\left\{ \frac{1}{\lps}\right\} \,\lt^{-1}\left\{ F_{1}(\lps)\right
 
 \begin_layout Standard
 Diese Beziehung enthält das wesentliche Resultat: wegen der Multiplikation
- mit dem Einheitssprung 
+ mit dem Einheitssprung
+\begin_inset LatexCommand index
+name "Heaviside-Funktion@\\noun{Heaviside}-Funktion"
+
+\end_inset
+
+ 
 \begin_inset Formula $\usf(t)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "s(t)"
+symbol "$\\usf(t)$"
+description "Einheitssprung (\\noun{Heaviside}-Funktion)"
+
 \end_inset
 
  verschwindet das Signal 
@@ -4175,6 +4253,14 @@ name "LTI-System!stabiles"
 \begin_inset Formula $\atf(\lps)=-\ln\trf(\lps)\in\mathbb{C}$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "C"
+symbol "$\\mathbb{C}$"
+description "Komplexe Zahlen"
+
+\end_inset
+
  in der rechten Halbebene, 
 \begin_inset ERT
 status collapsed
@@ -4199,6 +4285,14 @@ ie
 \begin_layout Standard
 \begin_inset Formula \[
 \atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi,\qquad k\in\mathbb{Z}\]
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Z"
+symbol "$\\mathbb{Z}$"
+description "Ganze Zahlen"
 
 \end_inset
 
