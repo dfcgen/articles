@@ -1,23 +1,31 @@
-#LyX 1.4.3 created this file. For more info see http://www.lyx.org/
-\lyxformat 245
+#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 276
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
 \input{all-inc}
 
-\docsubj{Zufallsgrößen und -prozesse}{Wahrscheinlichkeitstheorie}{Zufallsgrößen, Zufallsprozesse, Wahrscheinlichkeit}
+\docsubj{ZufallsgrÃ¶ÃŸen und -prozesse}{Wahrscheinlichkeitstheorie}{ZufallsgrÃ¶ÃŸen, Zufallsprozesse, Wahrscheinlichkeit}
 \end_preamble
 \options reqno
 \language german
 \inputencoding latin1
-\fontscheme times
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
 \graphics default
 \paperfontsize default
 \spacing onehalf
 \papersize a4paper
 \use_geometry false
 \use_amsmath 1
+\use_esint 0
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
@@ -30,7 +38,9 @@
 \papersides 2
 \paperpagestyle headings
 \tracking_changes false
-\output_changes true
+\output_changes false
+\author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -40,7 +50,7 @@
 status open
 
 \begin_layout Standard
-Version: $Id: probabil.lyx,v 1.16 2007-09-09 16:58:33 ralf Exp $
+Version: $Id: probabil.lyx,v 1.17 2007-10-01 17:53:27 ralf Exp $
 \end_layout
 
 \end_inset
@@ -49,7 +59,7 @@ Version: $Id: probabil.lyx,v 1.16 2007-09-09 16:58:33 ralf Exp $
 \end_layout
 
 \begin_layout Title
-Zufallsgrößen und -prozesse
+ZufallsgrÃ¶ÃŸen und -prozesse
 \end_layout
 
 \begin_layout Author
@@ -79,13 +89,13 @@ year
 
 \begin_layout Abstract
 Das vorliegende Papier richtet sich in erster Linie an Ingenieure und Studenten
- technischer Fachrichtungen, die gelegentlich mit Zufallsgrößen und -prozessen
- in Berührung kommen und ihr Wissen in diesem Zusammenhang auffrischen wollen
- (oder auch müssen).
- Dabei werden mit Schwerpunkt die kontinuierlichen Zufallsgrößen und -prozesse
- betrachtet sowie (am Schluß) einige Anwendungen gegeben, mit denen ich
- selbst Berührung hatte.
- Möglicherweise besteht inhaltlich eine gewisse Tendenz zu Fachrichtungen
+ technischer Fachrichtungen, die gelegentlich mit ZufallsgrÃ¶ÃŸen und -prozessen
+ in BerÃ¼hrung kommen und ihr Wissen in diesem Zusammenhang auffrischen wollen
+ (oder auch mÃ¼ssen).
+ Dabei werden mit Schwerpunkt die kontinuierlichen ZufallsgrÃ¶ÃŸen und -prozesse
+ betrachtet sowie (am SchluÃŸ) einige Anwendungen gegeben, mit denen ich
+ selbst BerÃ¼hrung hatte.
+ MÃ¶glicherweise besteht inhaltlich eine gewisse Tendenz zu Fachrichtungen
  wie der Nachrichtentechnik, Signalverarbeitung oder der theoretischen Elektrote
 chnik, die dann meinen Interessen 
 \begin_inset ERT
@@ -100,11 +110,11 @@ resp
 
 \end_inset
 
- Ausbildung zugeschrieben werden muß.
+ Ausbildung zugeschrieben werden muÃŸ.
 \end_layout
 
 \begin_layout Abstract
-Prinzipiell vorausgesetzt werden die Grundkenntnisse der höheren Mathematik,
+Prinzipiell vorausgesetzt werden die Grundkenntnisse der hÃ¶heren Mathematik,
  insbesondere der Analysis, Differential- und Integralrechnung, der 
 \noun on
 Fourier
@@ -112,11 +122,45 @@ Fourier
 -Transformation sowie etwas Systemtheorie.
  Um jedoch die praktische Anwendbarkeit nicht aus den Augen zu verlieren,
  bleiben Beweise und manchmal auch Notationen auf einer Ebene, die nicht
- unbedingt von mathematischer Exaktheit geprägt ist.
+ unbedingt von mathematischer Exaktheit geprÃ¤gt ist.
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \tableofcontents{}
+\begin_inset LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+setlength{
+\backslash
+nomlabelwidth}{1in}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand printnomenclature
 
 \end_inset
 
@@ -124,19 +168,20 @@ Fourier
 \end_layout
 
 \begin_layout Section
-Eindimensionale Zufallsgrößen
+Eindimensionale ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsection
-Diskrete Zufallsgrößen
+Diskrete ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!diskrete|(}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!diskrete|("
 
 \end_inset
 
-Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
+Bei den diskreten ZufallsgrÃ¶ÃŸen geht man davon aus, daÃŸ es eine ZufallsgrÃ¶ÃŸe
  
 \begin_inset Formula $X$
 \end_inset
@@ -150,7 +195,7 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \end_inset
 
  annehmen kann.
- Die Wahrscheinlichkeit, daß der Wert 
+ Die Wahrscheinlichkeit, daÃŸ der Wert 
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -158,13 +203,22 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 \begin_inset Formula $p_{i}=\pr(X=x_{i})$
 \end_inset
 
- betragen.
- Die Wahrscheinlichkeit
-\begin_inset LatexCommand \index{Wahrscheinlichkeit}
+
+\begin_inset LatexCommand nomenclature
+prefix "Pr"
+symbol "$\\pr$"
+description "Wahrscheinlichkeit"
 
 \end_inset
 
- dafür, daß 
+ betragen.
+ Die Wahrscheinlichkeit
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeit"
+
+\end_inset
+
+ dafÃ¼r, daÃŸ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -186,12 +240,21 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröße
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset LatexCommand \index{Erwartungswert}
+\begin_inset LatexCommand index
+name "Erwartungswert"
 
 \end_inset
 
  
 \begin_inset Formula $\mean(X)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "E(X)"
+symbol "$\\mean(X)$"
+description "Erwartungswert der ZufallsgrÃ¶ÃŸe $X$"
+
 \end_inset
 
  ergibt sich aus der Wichtung aller Werte 
@@ -200,7 +263,7 @@ Der Erwartungswert
 
  mit der Wahrscheinlichkeit ihres Auftretens
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Oftmals auch geschrieben als typischer Operator 
@@ -230,7 +293,8 @@ Oftmals auch geschrieben als typischer Operator
 
 \begin_layout Standard
 Die Varianz
-\begin_inset LatexCommand \index{Varianz}
+\begin_inset LatexCommand index
+name "Varianz"
 
 \end_inset
 
@@ -238,9 +302,18 @@ Die Varianz
 \begin_inset Formula $\var(X)$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "Var(X)"
+symbol "$\\var(X)$"
+description "Varianz der ZufallsgrÃ¶ÃŸe $X$"
+
+\end_inset
+
  ist der Erwartungswert der quadratischen Abweichung vom Erwartungswert.
- Sie ist dadurch ein gutes Maß für die Streuung
-\begin_inset LatexCommand \index{Streuung}
+ Sie ist dadurch ein gutes MaÃŸ fÃ¼r die Streuung
+\begin_inset LatexCommand index
+name "Streuung"
 
 \end_inset
 
@@ -249,7 +322,7 @@ Die Varianz
 status collapsed
 
 \begin_layout Standard
-Auch häufig anzutreffen als 
+Auch hÃ¤ufig anzutreffen als 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
 
@@ -262,12 +335,13 @@ Auch häufig anzutreffen als
 \end_inset
 
 .
- Ebenso oft wird auch die Größe 
+ Ebenso oft wird auch die GrÃ¶ÃŸe 
 \begin_inset Formula $\sigma=\sqrt{\smash[b]{\var(X)}}$
 \end_inset
 
  angegeben, welche Standardabweichung
-\begin_inset LatexCommand \index{Standardabweichung}
+\begin_inset LatexCommand index
+name "Standardabweichung"
 
 \end_inset
 
@@ -285,7 +359,8 @@ resp
 \end_inset
 
  Streuung
-\begin_inset LatexCommand \index{Streuung}
+\begin_inset LatexCommand index
+name "Streuung"
 
 \end_inset
 
@@ -294,7 +369,7 @@ resp
 
 \end_inset
 
- der Zufallsgröße 
+ der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -311,7 +386,7 @@ resp
 \end_layout
 
 \begin_layout Standard
-Speziell für den Fall diskreter Zufallsgrößen hat sie die folgende Berechnungsvo
+Speziell fÃ¼r den Fall diskreter ZufallsgrÃ¶ÃŸen hat sie die folgende Berechnungsvo
 rschrift:
 \end_layout
 
@@ -325,8 +400,9 @@ rschrift:
 \end_layout
 
 \begin_layout Standard
-Für mittelwertfreie Zufallsgrößen
-\begin_inset LatexCommand \index{Zufallsgrößen!mittelwertfreie}
+FÃ¼r mittelwertfreie ZufallsgrÃ¶ÃŸen
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!mittelwertfreie"
 
 \end_inset
 
@@ -343,7 +419,7 @@ ie
 
 \end_inset
 
- Zufallsgrößen für die 
+ ZufallsgrÃ¶ÃŸen fÃ¼r die 
 \begin_inset Formula $\mean(X)=0$
 \end_inset
 
@@ -368,13 +444,13 @@ Kann
 \begin_inset Formula $x$
 \end_inset
 
- annehmen, dann kommt man zu kontinuierlichen Zufallsgrößen
+ annehmen, dann kommt man zu kontinuierlichen ZufallsgrÃ¶ÃŸen
 \begin_inset Foot
 status open
 
 \begin_layout Standard
 Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
- Aussagen auch wieder auf diskrete Zufallsgrößen anwendbar.
+ Aussagen auch wieder auf diskrete ZufallsgrÃ¶ÃŸen anwendbar.
 \end_layout
 
 \end_inset
@@ -383,7 +459,8 @@ Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!diskrete|)}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!diskrete|)"
 
 \end_inset
 
@@ -391,15 +468,16 @@ Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
 \end_layout
 
 \begin_layout Subsection
-Kontinuierliche Zufallsgrößen
+Kontinuierliche ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche|(}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!kontinuierliche|("
 
 \end_inset
 
-Die Zufallsgröße 
+Die ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -409,7 +487,7 @@ Die Zufallsgröße
 
  aus einem endlichen oder unendlichen Intervall annehmen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Wobei streng gesehen ein ganz konkreter Wert 
@@ -439,8 +517,8 @@ resp
 
 \end_inset
 
- infinitesimal große Intervalle, so kann man ausgehend von den diskreten
- Zufallsgrößen den Quantifizierungsbegriff der Wahrscheinlichkeit erweitern.
+ infinitesimal groÃŸe Intervalle, so kann man ausgehend von den diskreten
+ ZufallsgrÃ¶ÃŸen den Quantifizierungsbegriff der Wahrscheinlichkeit erweitern.
 \end_layout
 
 \begin_layout Standard
@@ -453,16 +531,17 @@ p(x)=\pr\left(x-\frac{\tdc x}{2}\leq X\leq x+\frac{\tdc x}{2}\right)\]
 \end_layout
 
 \begin_layout Standard
-Die (jetzt) kontinuierliche Größe 
+Die (jetzt) kontinuierliche GrÃ¶ÃŸe 
 \begin_inset Formula $p$
 \end_inset
 
  gibt die Wahrscheinlichkeit
-\begin_inset LatexCommand \index{Wahrscheinlichkeit}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeit"
 
 \end_inset
 
- an, mit der die Zufallsgröße 
+ an, mit der die ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -475,7 +554,7 @@ Die (jetzt) kontinuierliche Größe
 \end_inset
 
  annimmt.
- Dadurch erhält 
+ Dadurch erhÃ¤lt 
 \begin_inset Formula $p$
 \end_inset
 
@@ -484,12 +563,14 @@ Die (jetzt) kontinuierliche Größe
 \end_inset
 
  auch als Dichtefunktion
-\begin_inset LatexCommand \index{Dichtefunktion}
+\begin_inset LatexCommand index
+name "Dichtefunktion"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeitsdichte"
 
 \end_inset
 
@@ -498,7 +579,7 @@ Die (jetzt) kontinuierliche Größe
 \begin_inset Formula $\pr$
 \end_inset
 
-, daß 
+, daÃŸ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -506,7 +587,7 @@ Die (jetzt) kontinuierliche Größe
 \begin_inset Formula $\left[a,b\right]$
 \end_inset
 
- annimmt, muß nun durch Integration bestimmt werden.
+ annimmt, muÃŸ nun durch Integration bestimmt werden.
 \end_layout
 
 \begin_layout Standard
@@ -519,7 +600,7 @@ Die (jetzt) kontinuierliche Größe
 \end_layout
 
 \begin_layout Standard
-Wie bei den diskreten Zufallsgrößen muß die Wahrscheinlichkeit, daß 
+Wie bei den diskreten ZufallsgrÃ¶ÃŸen muÃŸ die Wahrscheinlichkeit, daÃŸ 
 \begin_inset Formula $X$
 \end_inset
 
@@ -542,20 +623,30 @@ Wie bei den diskreten Zufallsgrößen muß die Wahrscheinlichkeit, daß
 \begin_layout Standard
 Wegen der Notwendigkeit in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous"
 
 \end_inset
 
  zu integrieren, wird oft die sogenannte Verteilungsfunktion
-\begin_inset LatexCommand \index{Verteilungsfunktion}
+\begin_inset LatexCommand index
+name "Verteilungsfunktion"
 
 \end_inset
 
- einer kontinuierlichen Zufallsgröße 
+ einer kontinuierlichen ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
  angegeben.
+\begin_inset LatexCommand nomenclature
+prefix "F(x)"
+symbol "$F(x)$"
+description "Verteilungsfunktion der ZufallsgrÃ¶ÃŸe $X$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -611,13 +702,22 @@ Summe
 \end_layout
 
 \begin_layout Standard
-Nach dem Hauptsatz der Differential- und Integralrechnung gilt für die Wahrschei
+Nach dem Hauptsatz der Differential- und Integralrechnung gilt fÃ¼r die Wahrschei
 nlichkeitsdichte
-\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeitsdichte"
 
 \end_inset
 
- im Umkehrschluß:
+ im UmkehrschluÃŸ:
+\begin_inset LatexCommand nomenclature
+prefix "p(x)"
+symbol "$p(x)$"
+description "Wahrscheinlichkeitsdichte der ZufallsgrÃ¶ÃŸe $X$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -632,7 +732,8 @@ p(x)=\tdiff{F(x)}{x}\label{eq:prob_continuous_differential}\end{equation}
 \begin_layout Standard
 Die Existenz des uneigentlichen Integrals in Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_distribution}
+\begin_inset LatexCommand ref
+reference "eq:prob_distribution"
 
 \end_inset
 
@@ -656,11 +757,12 @@ Die Existenz des uneigentlichen Integrals in Definitionsgleichung\InsetSpace ~
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset LatexCommand \index{Erwartungswert}
+\begin_inset LatexCommand index
+name "Erwartungswert"
 
 \end_inset
 
- ergibt sich wie bei den diskreten Zufallsgrößen -- jetzt wird aber jeder
+ ergibt sich wie bei den diskreten ZufallsgrÃ¶ÃŸen -- jetzt wird aber jeder
  Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert
 \begin_inset Foot
 status open
@@ -668,7 +770,8 @@ status open
 \begin_layout Standard
 Mit Hilfe von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_differential}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_differential"
 
 \end_inset
 
@@ -678,7 +781,9 @@ Stieltjes
 \noun default
 -Integral darstellen\InsetSpace ~
 
-\begin_inset LatexCommand \cite[\S\,25]{Gnedenko:1958}
+\begin_inset LatexCommand cite
+after "\\S\\,25"
+key "Gnedenko:1958"
 
 \end_inset
 
@@ -704,7 +809,7 @@ Stieltjes
 \end_layout
 
 \begin_layout Standard
-In ähnlicher Art und Weise
+In Ã¤hnlicher Art und Weise
 \begin_inset Foot
 status open
 
@@ -717,7 +822,7 @@ Erwartungswert, Varianz und alle weiteren Integrale der Form
 \begin_inset Formula $i=1,2,\ldots$
 \end_inset
 
-) Momente der Zufallsgröße 
+) Momente der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -726,14 +831,16 @@ Erwartungswert, Varianz und alle weiteren Integrale der Form
 
 \end_inset
 
- (und unter Berücksichtigung von Formel\InsetSpace ~
+ (und unter BerÃ¼cksichtigung von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_unity}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_unity"
 
 \end_inset
 
-) ergibt sich für die Varianz
-\begin_inset LatexCommand \index{Varianz}
+) ergibt sich fÃ¼r die Varianz
+\begin_inset LatexCommand index
+name "Varianz"
 
 \end_inset
 
@@ -765,8 +872,8 @@ und im weiteren
 \end_layout
 
 \begin_layout Standard
-Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
- des Erwartungswertes der Zufallsgröße.
+Die Varianz ist also der quadratische Erwartungswert abzÃ¼glich des Quadrats
+ des Erwartungswertes der ZufallsgrÃ¶ÃŸe.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -792,19 +899,36 @@ Umgekehrt gilt:
 \end_layout
 
 \begin_layout Standard
-Für Zufallsgrößen mit verschwindendem Mittelwert ist die Varianz gleich
+FÃ¼r ZufallsgrÃ¶ÃŸen mit verschwindendem Mittelwert ist die Varianz gleich
  dem Quadrat des Effektivwertes
-\begin_inset LatexCommand \index{Effektivwert}
+\begin_inset LatexCommand index
+name "Effektivwert"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "X"
+symbol "$\\tilde{X}$"
+description "Effektivwert der ZufallsgrÃ¶ÃŸe $X$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "X2"
+symbol "$\\mean(X^{2})$"
+description "Quadratischer Effektivwert der ZufallsgrÃ¶ÃŸe $X$"
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
- Erwartungswert des Quadrats der Zufallsgröße 
+Der Effektivwert einer (oftmals elektrischen) GrÃ¶ÃŸe ist als Wurzel aus dem
+ Erwartungswert des Quadrats der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -834,13 +958,15 @@ Gleichverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gleichverteilung}
+\begin_inset LatexCommand index
+name "Gleichverteilung"
 
 \end_inset
 
 Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
  Gleichverteilung
-\begin_inset LatexCommand \index{Gleichverteilung}
+\begin_inset LatexCommand index
+name "Gleichverteilung"
 
 \end_inset
 
@@ -853,7 +979,7 @@ Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
 \begin_inset Formula $p(x)$
 \end_inset
 
- und ist außerhalb dessen Null.
+ und ist auÃŸerhalb dessen Null.
  Wegen der Bedingung
 \end_layout
 
@@ -867,7 +993,7 @@ Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
 \end_layout
 
 \begin_layout Standard
-muß sie folgender Gleichung für die Dichtefunktion genügen:
+muÃŸ sie folgender Gleichung fÃ¼r die Dichtefunktion genÃ¼gen:
 \end_layout
 
 \begin_layout Standard
@@ -884,7 +1010,8 @@ p(x)=\left\{ \begin{array}{ll}
 \begin_layout Standard
 Der Erwartungswert nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_mean"
 
 \end_inset
 
@@ -903,7 +1030,8 @@ Der Erwartungswert nach Formel\InsetSpace ~
 \begin_layout Standard
 Die Varianz ermittelt sich nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_var"
 
 \end_inset
 
@@ -922,7 +1050,8 @@ Die Varianz ermittelt sich nach Formel\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!kontinuierliche|)}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!kontinuierliche|)"
 
 \end_inset
 
@@ -930,7 +1059,7 @@ Die Varianz ermittelt sich nach Formel\InsetSpace ~
 \end_layout
 
 \begin_layout Section
-Mehrdimensionale Zufallsgrößen
+Mehrdimensionale ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsection
@@ -938,7 +1067,8 @@ Definition und Eigenschaften
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale|(}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!mehrdimensionale|("
 
 \end_inset
 
@@ -950,13 +1080,13 @@ Ein Vektor
 \begin_inset Formula $n$
 \end_inset
 
--dimensionale Zufallsgröße genannt, wenn jede der Einzelgrößen 
+-dimensionale ZufallsgrÃ¶ÃŸe genannt, wenn jede der EinzelgrÃ¶ÃŸen 
 \begin_inset Formula $X_{k}$
 \end_inset
 
- eine Zufallsgröße (über der gleichen Ereignisalgebra
+ eine ZufallsgrÃ¶ÃŸe (Ã¼ber der gleichen Ereignisalgebra
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Eine Ereignisalgebra beschreibt die zu einem Vorgang 
@@ -972,8 +1102,8 @@ resp
 
 \end_inset
 
- System (mit zufälligem Ergebnis) gehörigen Einzelereignisse, denen man
- eine Wahrscheinlichkeit zuordnen möchte.
+ System (mit zufÃ¤lligem Ergebnis) gehÃ¶rigen Einzelereignisse, denen man
+ eine Wahrscheinlichkeit zuordnen mÃ¶chte.
 \end_layout
 
 \end_inset
@@ -993,12 +1123,21 @@ resp
 \end_inset
 
  gemeinsame Verteilungsfunktion
-\begin_inset LatexCommand \index{Verteilungsfunktion}
+\begin_inset LatexCommand index
+name "Verteilungsfunktion"
 
 \end_inset
 
  des Zufallsvektors 
 \begin_inset Formula $\mvec{X}$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "FX(x)"
+symbol "$F_{X}(\\mvec{x})$"
+description "Verteilungsfunktion des Zufallsvektors $\\mvec{X}$"
+
 \end_inset
 
 
@@ -1026,15 +1165,23 @@ liefert zu jedem Tupel
 \end_layout
 
 \begin_layout Standard
-Der Zusammenhang zwischen Dichte- und Verteilungsfunktion hat auch für den
- Fall einer mehrdimensionalen Zufallsgröße Bestand, nur daß die Wahrscheinlichke
+Der Zusammenhang zwischen Dichte- und Verteilungsfunktion hat auch fÃ¼r den
+ Fall einer mehrdimensionalen ZufallsgrÃ¶ÃŸe Bestand, nur daÃŸ die Wahrscheinlichke
 itsdichte 
 \begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
 \end_inset
 
+
+\begin_inset LatexCommand nomenclature
+prefix "pX(x)"
+symbol "$p_{X}(\\mvec{x})$"
+description "Wahrscheinlichkeitsdichte des Zufallsvektors $\\mvec{X}$"
+
+\end_inset
+
  ebenfalls mehrdimensional ist.
- Für kontinuierliche Zufallsgrößen gibt sie die Wahrscheinlichkeit dafür,
- daß 
+ FÃ¼r kontinuierliche ZufallsgrÃ¶ÃŸen gibt sie die Wahrscheinlichkeit dafÃ¼r,
+ daÃŸ 
 \begin_inset Formula $\mvec{X}$
 \end_inset
 
@@ -1068,7 +1215,7 @@ F_{X}(x_{1},x_{2},\ldots,x_{n})=\int_{-\infty}^{x_{1}}\int_{-\infty}^{x_{2}}\cdo
 \end_layout
 
 \begin_layout Standard
-Umgekehrt läßt sich durch partielle Differentiation nach allen 
+Umgekehrt lÃ¤ÃŸt sich durch partielle Differentiation nach allen 
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -1085,7 +1232,7 @@ p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\
 \end_layout
 
 \begin_layout Standard
-Ähnlich zum eindimensionalen Fall lassen sich deshalb die folgenden Eigenschafte
+Ã„hnlich zum eindimensionalen Fall lassen sich deshalb die folgenden Eigenschafte
 n von 
 \begin_inset Formula $F_{X}(x_{1},x_{2},\ldots,x_{n})$
 \end_inset
@@ -1094,7 +1241,7 @@ n von
 \end_layout
 
 \begin_layout Itemize
-Für alle 
+FÃ¼r alle 
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -1118,7 +1265,7 @@ Es existiert der Grenzwert
 \end_layout
 
 \begin_layout Itemize
-Für 
+FÃ¼r 
 \begin_inset Formula $x_{1},x_{2},\ldots,x_{i-1},x_{i+1},\ldots,x_{n}\rightarrow\infty$
 \end_inset
 
@@ -1135,7 +1282,7 @@ ie
 
 \end_inset
 
- alle, außer 
+ alle, auÃŸer 
 \begin_inset Formula $x_{i}$
 \end_inset
 
@@ -1144,7 +1291,8 @@ ie
 \end_inset
 
  zu einer eindimensionalen Randverteilung
-\begin_inset LatexCommand \index{Randverteilung}
+\begin_inset LatexCommand index
+name "Randverteilung"
 
 \end_inset
 
@@ -1156,11 +1304,11 @@ ie
 \begin_inset Formula $x_{i}$
 \end_inset
 
- abhängt und die Wahrscheinlichkeit 
+ abhÃ¤ngt und die Wahrscheinlichkeit 
 \begin_inset Formula $\pr(X_{i}<x_{i})$
 \end_inset
 
- ausdrückt
+ ausdrÃ¼ckt
 \begin_inset Foot
 status open
 
@@ -1197,8 +1345,9 @@ Partielle Differentiation der Randverteilung
 \begin_inset Formula $x_{i}$
 \end_inset
 
- führt zur (Rand-) Wahrscheinlichkeitsdichte
-\begin_inset LatexCommand \index{Randdichte}
+ fÃ¼hrt zur (Rand-) Wahrscheinlichkeitsdichte
+\begin_inset LatexCommand index
+name "Randdichte"
 
 \end_inset
 
@@ -1215,11 +1364,11 @@ p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int_{-\infty}^{\infty}\cdots\int_{-\in
 \end_layout
 
 \begin_layout Standard
-Für den zweidimensionalen Fall (
+FÃ¼r den zweidimensionalen Fall (
 \begin_inset Formula $n=2$
 \end_inset
 
-) lassen sich die Gleichungen folgendermaßen konkretisieren:
+) lassen sich die Gleichungen folgendermaÃŸen konkretisieren:
 \end_layout
 
 \begin_layout Standard
@@ -1234,12 +1383,12 @@ p_{1}(x_{1}) & =\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\mperiod\labe
 
 \end_deeper
 \begin_layout Subsection
-Unabhängigkeit
+UnabhÃ¤ngigkeit
 \end_layout
 
 \begin_layout Standard
-Als (vollständig) unabhängig werden Zufallsgrößen bezeichnet, wenn deren
- Verteilungsfunktion vollständig faktorisierbar ist.
+Als (vollstÃ¤ndig) unabhÃ¤ngig werden ZufallsgrÃ¶ÃŸen bezeichnet, wenn deren
+ Verteilungsfunktion vollstÃ¤ndig faktorisierbar ist.
 \end_layout
 
 \begin_layout Standard
@@ -1253,9 +1402,10 @@ F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})\e
 \end_layout
 
 \begin_layout Standard
-Grundvoraussetzung für diese Äquivalenz ist die Definition der bedingten
+Grundvoraussetzung fÃ¼r diese Ã„quivalenz ist die Definition der bedingten
  Wahrscheinlichkeit
-\begin_inset LatexCommand \index{Wahrscheinlichkeit!bedingte}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeit!bedingte"
 
 \end_inset
 
@@ -1284,7 +1434,7 @@ Dabei ist
 \begin_inset Formula $\pr(B\mid A)$
 \end_inset
 
- die (bedingte) Wahrscheinlichkeit daß Ereignis 
+ die (bedingte) Wahrscheinlichkeit daÃŸ Ereignis 
 \begin_inset Formula $B$
 \end_inset
 
@@ -1297,7 +1447,7 @@ Dabei ist
 \begin_inset Formula $\pr(A\cap B)$
 \end_inset
 
- ist die Wahrscheinlichkeit, daß 
+ ist die Wahrscheinlichkeit, daÃŸ 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1313,7 +1463,7 @@ UND
 \begin_inset Formula $\pr(A)$
 \end_inset
 
- die Wahrscheinlichkeit für das (bedingungslose) Eintreten von Ereignis
+ die Wahrscheinlichkeit fÃ¼r das (bedingungslose) Eintreten von Ereignis
  
 \begin_inset Formula $A$
 \end_inset
@@ -1342,7 +1492,8 @@ Umgestellt nach
 Mit dieser Formel wird auch anschaulich klar, weshalb die bedingte Wahrscheinlic
 hkeit genau so wie in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_dependent_events}
+\begin_inset LatexCommand ref
+reference "eq:prob_dependent_events"
 
 \end_inset
 
@@ -1351,7 +1502,7 @@ hkeit genau so wie in Gleichung\InsetSpace ~
 \begin_inset Formula $A\mbox{ UND }B$
 \end_inset
 
- unter der Voraussetzung, daß 
+ unter der Voraussetzung, daÃŸ 
 \begin_inset Formula $A$
 \end_inset
 
@@ -1363,7 +1514,7 @@ hkeit genau so wie in Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Besteht eine solche Abhängigkeit nicht, dann gilt 
+Besteht eine solche AbhÃ¤ngigkeit nicht, dann gilt 
 \begin_inset Formula $\pr(A\mid B)=\pr(A)$
 \end_inset
 
@@ -1393,7 +1544,7 @@ Grundlagen der Kombinatorik,
 \noun on
 Bool
 \noun default
-'sche Algebra sowie die Rechenregeln für Wahrscheinlichkeiten (Produkt:
+'sche Algebra sowie die Rechenregeln fÃ¼r Wahrscheinlichkeiten (Produkt:
  
 \begin_inset Formula $\pr(A\cap B)=\pr(A)\pr(B)$
 \end_inset
@@ -1424,7 +1575,7 @@ Bool
 \end_layout
 
 \begin_layout Subsection
-Kenngrößen
+KenngrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsubsection
@@ -1433,7 +1584,8 @@ Erwartungswert
 
 \begin_layout Standard
 Konsequent kann man auch die Definition des Erwartungswertes
-\begin_inset LatexCommand \index{Erwartungswert}
+\begin_inset LatexCommand index
+name "Erwartungswert"
 
 \end_inset
 
@@ -1441,10 +1593,11 @@ Konsequent kann man auch die Definition des Erwartungswertes
 \begin_inset Formula $n$
 \end_inset
 
--dimensionalen Zufallsgröße aus dem der eindimensionalen Größe ableiten,
- wenn man außerdem Gleichung\InsetSpace ~
+-dimensionalen ZufallsgrÃ¶ÃŸe aus dem der eindimensionalen GrÃ¶ÃŸe ableiten,
+ wenn man auÃŸerdem Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+\begin_inset LatexCommand ref
+reference "eq:prob_distribution_multi"
 
 \end_inset
 
@@ -1461,9 +1614,11 @@ resp
 
 \end_inset
 
- den Ideenkreis um sie herum, berücksichtigt\InsetSpace ~
+ den Ideenkreis um sie herum, berÃ¼cksichtigt\InsetSpace ~
 
-\begin_inset LatexCommand \cite[\S\,25~ff.]{Gnedenko:1958}
+\begin_inset LatexCommand cite
+after "\\S\\,25~ff."
+key "Gnedenko:1958"
 
 \end_inset
 
@@ -1480,13 +1635,14 @@ resp
 \end_layout
 
 \begin_layout Standard
-Man muß allerdings hinzufügen, daß es sich um den Erwartungswert der Randverteil
+Man muÃŸ allerdings hinzufÃ¼gen, daÃŸ es sich um den Erwartungswert der Randverteil
 ung
-\begin_inset LatexCommand \index{Randverteilung}
+\begin_inset LatexCommand index
+name "Randverteilung"
 
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -1518,9 +1674,10 @@ Die Varianz(en) einer
 \begin_inset Formula $n$
 \end_inset
 
--dimensionalen Zufallsgröße können aus der allgemeinen Definitionsgleichung\InsetSpace ~
+-dimensionalen ZufallsgrÃ¶ÃŸe kÃ¶nnen aus der allgemeinen Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_generic_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_generic_var"
 
 \end_inset
 
@@ -1537,12 +1694,13 @@ Die Varianz(en) einer
 \end_layout
 
 \begin_layout Standard
-Auch hier muß man hinzufügen, daß es sich um die Varianz einer Randverteilung
+Auch hier muÃŸ man hinzufÃ¼gen, daÃŸ es sich um die Varianz einer Randverteilung
  handelt.
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:prob_covariance_dependent}
+\begin_inset LatexCommand label
+name "sec:prob_covariance_dependent"
 
 \end_inset
 
@@ -1558,9 +1716,10 @@ Sind
 \begin_inset Formula $X_{2}$
 \end_inset
 
- zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
- die folgende Größe Kovarianz
-\begin_inset LatexCommand \index{Kovarianz}
+ zwei (nicht notwendigerweise unabhÃ¤ngige) ZufallsgrÃ¶ÃŸen, dann nennt man
+ die folgende GrÃ¶ÃŸe Kovarianz
+\begin_inset LatexCommand index
+name "Kovarianz"
 
 \end_inset
 
@@ -1573,6 +1732,14 @@ und
 \end_inset
 
 .
+\begin_inset LatexCommand nomenclature
+prefix "Cov()"
+symbol "$\\cov(X_{1},X_{2})$"
+description "Kovarianz der ZufallsgrÃ¶ÃŸen $X_{1},X_{2}$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1589,23 +1756,25 @@ Die Kovarianz
 \begin_inset Formula $\cov(X_{1},X_{2})$
 \end_inset
 
- kann auch noch anders ausgedrückt werden (Verschiebungssatz), wenn man
+ kann auch noch anders ausgedrÃ¼ckt werden (Verschiebungssatz), wenn man
 \end_layout
 
 \begin_layout Itemize
 die Formeln\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_sum_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_sum_mean"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_prd_mean"
 
 \end_inset
 
- für den Erwartungswert von Produkten 
+ fÃ¼r den Erwartungswert von Produkten 
 \begin_inset ERT
 status collapsed
 
@@ -1618,11 +1787,11 @@ resp
 
 \end_inset
 
- Summen von Zufallsgrößen berücksichtigt;
+ Summen von ZufallsgrÃ¶ÃŸen berÃ¼cksichtigt;
 \end_layout
 
 \begin_layout Itemize
-bedenkt, daß 
+bedenkt, daÃŸ 
 \begin_inset Formula $\mean(X_{1})$
 \end_inset
 
@@ -1634,7 +1803,7 @@ bedenkt, daß
 \end_layout
 
 \begin_layout Itemize
-die Trivialität 
+die TrivialitÃ¤t 
 \begin_inset Formula $\mean(1)=1$
 \end_inset
 
@@ -1654,8 +1823,8 @@ die Trivialität
 
 \end_deeper
 \begin_layout Standard
-Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarianz
- dem Erwartungswert des Produktes der beiden Größen.
+Ist eine der beiden ZufallsgrÃ¶ÃŸen mittelwertfrei, dann entspricht die Kovarianz
+ dem Erwartungswert des Produktes der beiden GrÃ¶ÃŸen.
 \end_layout
 
 \begin_layout Standard
@@ -1669,11 +1838,12 @@ Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarianz
 
 \begin_layout Standard
 Unter diesen Bedingungen spricht man auch von der Korrelation
-\begin_inset LatexCommand \index{Korrelation}
+\begin_inset LatexCommand index
+name "Korrelation"
 
 \end_inset
 
- beider Zufallsgrößen (
+ beider ZufallsgrÃ¶ÃŸen (
 \begin_inset ERT
 status collapsed
 
@@ -1688,13 +1858,15 @@ cf
 
  Abschnitte\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_prd}
+\begin_inset LatexCommand ref
+reference "sec:prob_prd"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_process}
+\begin_inset LatexCommand ref
+reference "sec:prob_process"
 
 \end_inset
 
@@ -1708,7 +1880,8 @@ Im Fall
 
  entartet die Kovarianz zur Varianz (siehe Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_var_rms"
 
 \end_inset
 
@@ -1725,7 +1898,7 @@ Im Fall
 \end_layout
 
 \begin_layout Standard
-Für kontinuierliche Zufallsgrößen kann die Kovarianz wiefolgt konkretisiert
+FÃ¼r kontinuierliche ZufallsgrÃ¶ÃŸen kann die Kovarianz wiefolgt konkretisiert
  werden:
 \end_layout
 
@@ -1739,16 +1912,16 @@ Für kontinuierliche Zufallsgrößen kann die Kovarianz wiefolgt konkretisiert
 \end_layout
 
 \begin_layout Standard
-Dabei geht man davon aus, daß der Vektor 
+Dabei geht man davon aus, daÃŸ der Vektor 
 \begin_inset Formula $\mvec{X}=(X_{1},X_{2})$
 \end_inset
 
- eine zweidimensionale Zufallsgröße mit der Dichtefunktion 
+ eine zweidimensionale ZufallsgrÃ¶ÃŸe mit der Dichtefunktion 
 \begin_inset Formula $p(x_{1},x_{2})$
 \end_inset
 
  ist.
- Sind die Zufallsgrößen 
+ Sind die ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -1756,7 +1929,7 @@ Dabei geht man davon aus, daß der Vektor
 \begin_inset Formula $X_{2}$
 \end_inset
 
- stochastisch unabhängig, dann ist die Wahrscheinlichkeitsdichte faktorisierbar
+ stochastisch unabhÃ¤ngig, dann ist die Wahrscheinlichkeitsdichte faktorisierbar
  in
 \end_layout
 
@@ -1772,7 +1945,8 @@ p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})\]
 \begin_layout Standard
 und deshalb auch das Doppelintegral von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_cov_continuous}
+\begin_inset LatexCommand ref
+reference "eq:prob_cov_continuous"
 
 \end_inset
 
@@ -1791,7 +1965,7 @@ und deshalb auch das Doppelintegral von Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Wegen der allgemeingültigen Beziehung
+Wegen der allgemeingÃ¼ltigen Beziehung
 \end_layout
 
 \begin_layout Standard
@@ -1818,11 +1992,12 @@ ie
 
 \end_inset
 
- die Kovarianz (und der Korrelationskoeffizient) unabhängiger Zufallsgrößen
- ist grundsätzlich Null.
+ die Kovarianz (und der Korrelationskoeffizient) unabhÃ¤ngiger ZufallsgrÃ¶ÃŸen
+ ist grundsÃ¤tzlich Null.
  Aus Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_cov_shift}
+\begin_inset LatexCommand ref
+reference "eq:prob_cov_shift"
 
 \end_inset
 
@@ -1839,7 +2014,7 @@ ie
 \end_layout
 
 \begin_layout Standard
-was als Kriterium unkorrelierter Zufallsgrößen in seiner Umkehrung ebenfalls
+was als Kriterium unkorrelierter ZufallsgrÃ¶ÃŸen in seiner Umkehrung ebenfalls
  verwendbar ist.
 \end_layout
 
@@ -1848,17 +2023,19 @@ Varianz-Kovarianz-Matrix
 \end_layout
 
 \begin_layout Standard
-Für einen mehrdimensionalen Zufallsvektor 
+FÃ¼r einen mehrdimensionalen Zufallsvektor 
 \begin_inset Formula $\mvec{X}=(X_{1},X_{2},\ldots,X_{n})$
 \end_inset
 
  kann man eine sogenannte Varianz-Kovarianz-Matrix
-\begin_inset LatexCommand \index{Kovarianz}
+\begin_inset LatexCommand index
+name "Kovarianz"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Varianz}
+\begin_inset LatexCommand index
+name "Varianz"
 
 \end_inset
 
@@ -1883,7 +2060,7 @@ deren Elemente
 \begin_inset Formula $c_{i,k}$
 \end_inset
 
- die Kovarianz zwischen der Zufallsgröße 
+ die Kovarianz zwischen der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X_{i}$
 \end_inset
 
@@ -1891,7 +2068,7 @@ deren Elemente
 \begin_inset Formula $X_{k}$
 \end_inset
 
- repräsentieren.
+ reprÃ¤sentieren.
 \end_layout
 
 \begin_layout Standard
@@ -1936,7 +2113,8 @@ und hat die Hauptdiagonalwerte
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:prob_corr}
+\begin_inset LatexCommand label
+name "sec:prob_corr"
 
 \end_inset
 
@@ -1945,13 +2123,14 @@ Korrelationskoeffizient
 
 \begin_layout Standard
 Der Korrelationskoeffizient
-\begin_inset LatexCommand \index{Korrelationskoeffizient}
+\begin_inset LatexCommand index
+name "Korrelationskoeffizient"
 
 \end_inset
 
- ist ein Maß für die Abhängigkeit zweier Zufallsgrößen
+ ist ein MaÃŸ fÃ¼r die AbhÃ¤ngigkeit zweier ZufallsgrÃ¶ÃŸen
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 In dieser Form wird 
@@ -1968,6 +2147,14 @@ Pearson
 \end_inset
 
 .
+\begin_inset LatexCommand nomenclature
+prefix "Corr()"
+symbol "$\\corr(X_{1},X_{2})$"
+description "Korrelationskoeffizient der ZufallsgrÃ¶ÃŸen $X_{1},X_{2}$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -1996,11 +2183,11 @@ Wegen der Ungleichung
 \end_layout
 
 \begin_layout Enumerate
-Linear abhängige Zufallsgrößen (
+Linear abhÃ¤ngige ZufallsgrÃ¶ÃŸen (
 \begin_inset Formula $X_{2}=aX_{1}+b)$
 \end_inset
 
- führen immer zu: 
+ fÃ¼hren immer zu: 
 \begin_inset Formula $\corr(X_{1},X_{2})=\pm1$
 \end_inset
 
@@ -2008,14 +2195,14 @@ Linear abhängige Zufallsgrößen (
 \end_layout
 
 \begin_layout Enumerate
-Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
+Von unkorrelierten ZufallsgrÃ¶ÃŸen spricht man, wenn der Korrelationskoeffizient
  identisch Null ist
 \begin_inset Foot
 status collapsed
 
 \begin_layout Standard
-Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
- umgekehrt ist die Aussage jedoch gültig.
+Unkorrelierte ZufallsgrÃ¶ÃŸen sind nicht notwendigerweise stochastisch unabhÃ¤ngig,
+ umgekehrt ist die Aussage jedoch gÃ¼ltig.
 \end_layout
 
 \end_inset
@@ -2028,16 +2215,18 @@ Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
 \end_layout
 
 \begin_layout Standard
-Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
+FÃ¼r mittelwertfreie ZufallsgrÃ¶ÃŸen reduzieren sich Kovarianz und Varianz
  entsprechend der Formeln\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_cov_zero_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_cov_zero_mean"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_mean_zero}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_var_mean_zero"
 
 \end_inset
 
@@ -2062,7 +2251,8 @@ Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsgrößen!mehrdimensionale|)}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!mehrdimensionale|)"
 
 \end_inset
 
@@ -2070,27 +2260,28 @@ Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
 \end_layout
 
 \begin_layout Section
-Funktionen von Zufallsgrößen
+Funktionen von ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:prob_transform_single}
+\begin_inset LatexCommand label
+name "sec:prob_transform_single"
 
 \end_inset
 
-Funktion einer eindimensionalen Zufallsgröße
+Funktion einer eindimensionalen ZufallsgrÃ¶ÃŸe
 \end_layout
 
 \begin_layout Standard
-Die Transformation der Verteilung einer kontinuierlichen Zufallsgröße 
+Die Transformation der Verteilung einer kontinuierlichen ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
- in eine andere Verteilung, die der Zufallsgröße 
+ in eine andere Verteilung, die der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $Y$
 \end_inset
 
- zugeordnet sein soll, wird in der Praxis häufig verlangt.
+ zugeordnet sein soll, wird in der Praxis hÃ¤ufig verlangt.
  Anwendungen in der Nachrichtentechnik und Signalverarbeitung sind unter
  anderem:
 \end_layout
@@ -2126,7 +2317,7 @@ Transformation von Zufallszahlen-Verteilungen;
 \end_layout
 
 \begin_layout Itemize
-Transformation von Rauschverteilungen (Weiß
+Transformation von Rauschverteilungen (WeiÃŸ
 \begin_inset Formula $\Rightarrow$
 \end_inset
 
@@ -2136,7 +2327,9 @@ Rosa);
 \begin_layout Itemize
 oder die Bestimmung der Amplitudenverteilung analytischer Funktionen\InsetSpace ~
 
-\begin_inset LatexCommand \cite[2.5]{Schruefer:1990}
+\begin_inset LatexCommand cite
+after "2.5"
+key "Schruefer:1990"
 
 \end_inset
 
@@ -2144,15 +2337,15 @@ oder die Bestimmung der Amplitudenverteilung analytischer Funktionen\InsetSpace 
 \end_layout
 
 \begin_layout Standard
-Als Modell soll die Transformation der Eingangsgröße 
+Als Modell soll die Transformation der EingangsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
- in die Ausgangsgröße 
+ in die AusgangsgrÃ¶ÃŸe 
 \begin_inset Formula $Y$
 \end_inset
 
- durch ein System mit der Übertragungsfunktion 
+ durch ein System mit der Ãœbertragungsfunktion 
 \begin_inset Formula $y=f(x)$
 \end_inset
 
@@ -2171,7 +2364,8 @@ cf
 
  Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_system_transform}
+\begin_inset LatexCommand ref
+reference "fig:prob_system_transform"
 
 \end_inset
 
@@ -2194,8 +2388,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:prob_system_transform}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:prob_system_transform"
 
 \end_inset
 
@@ -2207,8 +2405,13 @@ Systemmodell
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Die Wahrscheinlichkeitsdichte für 
+Die Wahrscheinlichkeitsdichte fÃ¼r 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2216,7 +2419,7 @@ Die Wahrscheinlichkeitsdichte für
 \begin_inset Formula $p_{X}(x)$
 \end_inset
 
-, die für 
+, die fÃ¼r 
 \begin_inset Formula $Y$
 \end_inset
 
@@ -2225,7 +2428,7 @@ Die Wahrscheinlichkeitsdichte für
 \end_inset
 
  sein.
- Außerdem wird vorausgesetzt, daß 
+ AuÃŸerdem wird vorausgesetzt, daÃŸ 
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -2233,12 +2436,12 @@ Die Wahrscheinlichkeitsdichte für
 \begin_inset Formula $X$
 \end_inset
 
- annehmen kann, monoton verläuft
+ annehmen kann, monoton verlÃ¤uft
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
+Wenn die Transformationsfunktion nicht monoton verlÃ¤uft, ist die ein-eindeutige
  Zuordnung von 
 \begin_inset Formula $X$
 \end_inset
@@ -2247,8 +2450,8 @@ Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
 \begin_inset Formula $Y$
 \end_inset
 
- unmöglich.
- In solchen Fällen muß man die Mehrdeutigkeit in die Wahrscheinlichkeitsbetracht
+ unmÃ¶glich.
+ In solchen FÃ¤llen muÃŸ man die Mehrdeutigkeit in die Wahrscheinlichkeitsbetracht
 ungen mit einbeziehen (siehe 
 \begin_inset ERT
 status collapsed
@@ -2264,11 +2467,12 @@ ie
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_prd}
+\begin_inset LatexCommand ref
+reference "sec:prob_prd"
 
 \end_inset
 
-, was das Produkt von Zufallsgrößen angeht).
+, was das Produkt von ZufallsgrÃ¶ÃŸen angeht).
 \end_layout
 
 \end_inset
@@ -2286,7 +2490,7 @@ ie
 \begin_inset Formula $x$
 \end_inset
 
- zugeordnet, der von der Zufallsgröße 
+ zugeordnet, der von der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2310,7 +2514,8 @@ ie
 
  (nach Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_function_transform}
+\begin_inset LatexCommand ref
+reference "fig:prob_function_transform"
 
 \end_inset
 
@@ -2336,7 +2541,7 @@ Durch die Streckung (Stauchung) des Intervalls
 \begin_inset Formula $\tdc x$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $f(x)$
 \end_inset
 
@@ -2344,12 +2549,12 @@ Durch die Streckung (Stauchung) des Intervalls
 \begin_inset Formula $\tdc y$
 \end_inset
 
- muß auch die Wahrscheinlichkeitsdichte im entsprechenden Streckungsverhältnis
+ muÃŸ auch die Wahrscheinlichkeitsdichte im entsprechenden StreckungsverhÃ¤ltnis
  
 \begin_inset Formula $\left|\tdc x/\tdc y\right|$
 \end_inset
 
- gegenüber 
+ gegenÃ¼ber 
 \begin_inset Formula $p_{X}(x)$
 \end_inset
 
@@ -2385,12 +2590,21 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:prob_function_transform}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:prob_function_transform"
 
 \end_inset
 
 Transformationsfunktion
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2467,7 +2681,8 @@ resp
 
  Anwendung von Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_distribution}
+\begin_inset LatexCommand ref
+reference "eq:prob_distribution"
 
 \end_inset
 
@@ -2511,7 +2726,7 @@ resp
 
 \end_inset
 
- ist das Transformationsintervall eingeschränkt auf 
+ ist das Transformationsintervall eingeschrÃ¤nkt auf 
 \begin_inset Formula $a\leq x\leq b$
 \end_inset
 
@@ -2537,28 +2752,34 @@ F_{Y}(y)=F_{X}\left[h(y)\right]\end{equation}
 \end_layout
 
 \begin_layout Standard
-Die wesentliche Erkenntnis daraus ist, daß die Verteilungsfunktion direkt
- über die Kennlinie 
+Die wesentliche Erkenntnis daraus ist, daÃŸ die Verteilungsfunktion direkt
+ Ã¼ber die Kennlinie 
 \begin_inset Formula $f(x)$
 \end_inset
 
-, die Wahrscheinlichkeitsdichte jedoch über 
+, die Wahrscheinlichkeitsdichte jedoch Ã¼ber 
 \begin_inset Formula $\left|f'(x)\right|$
 \end_inset
 
  transformiert wird\InsetSpace ~
 
-\begin_inset LatexCommand \cite[A.2.1.7.5]{Birolini:1997}
+\begin_inset LatexCommand cite
+after "A.2.1.7.5"
+key "Birolini:1997"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[5]{Papoulis:2002}
+\begin_inset LatexCommand cite
+after "5"
+key "Papoulis:2002"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[2.7.1]{Spataru:1973}
+\begin_inset LatexCommand cite
+after "2.7.1"
+key "Spataru:1973"
 
 \end_inset
 
@@ -2566,15 +2787,16 @@ Die wesentliche Erkenntnis daraus ist, daß die Verteilungsfunktion direkt
 \end_layout
 
 \begin_layout Subsection*
-Trigonometrische Übertragungsfunktion (bei Gleichverteilung)
+Trigonometrische Ãœbertragungsfunktion (bei Gleichverteilung)
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Gleichverteilung}
+\begin_inset LatexCommand index
+name "Gleichverteilung"
 
 \end_inset
 
-Die Eingangsgröße 
+Die EingangsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2592,7 +2814,7 @@ Die Eingangsgröße
 \end_inset
 
 .
- Die Wahrscheinlichkeitsdichte für 
+ Die Wahrscheinlichkeitsdichte fÃ¼r 
 \begin_inset Formula $-1\leq Y\leq1$
 \end_inset
 
@@ -2609,11 +2831,11 @@ p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=
 \end_layout
 
 \begin_layout Subsection*
-Lineare Übertragungsfunktion
+Lineare Ãœbertragungsfunktion
 \end_layout
 
 \begin_layout Standard
-Die Eingangsgröße 
+Die EingangsgrÃ¶ÃŸe 
 \begin_inset Formula $X$
 \end_inset
 
@@ -2627,7 +2849,7 @@ Die Eingangsgröße
 \end_inset
 
 .
- Dann gilt für die Dichtefunktion: 
+ Dann gilt fÃ¼r die Dichtefunktion: 
 \end_layout
 
 \begin_layout Standard
@@ -2640,17 +2862,18 @@ p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{p_{X}(y/A)}{\left|A\right|}\mperiod\end{eq
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:prob_transform_multiple}
+\begin_inset LatexCommand label
+name "sec:prob_transform_multiple"
 
 \end_inset
 
-Funktionen mehrdimensionaler Zufallsgrößen
+Funktionen mehrdimensionaler ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Standard
-Ausgehend von der eindimensionalen Transformation einer Zufallsgröße (im
- vorigen Abschnitt) läßt sich das Problem von Funktionen mehrdimensionaler
- Zufallsgrößen wiefolgt formulieren:
+Ausgehend von der eindimensionalen Transformation einer ZufallsgrÃ¶ÃŸe (im
+ vorigen Abschnitt) lÃ¤ÃŸt sich das Problem von Funktionen mehrdimensionaler
+ ZufallsgrÃ¶ÃŸen wiefolgt formulieren:
 \end_layout
 
 \begin_layout Quotation
@@ -2694,8 +2917,16 @@ ergibt.
 \end_layout
 
 \begin_layout Standard
-Setzen wir (der Kürze halber) sowohl bei Variablen als auch Funktionen Vektorsch
+Setzen wir (der KÃ¼rze halber) sowohl bei Variablen als auch Funktionen Vektorsch
 reibweisen der Art
+\begin_inset LatexCommand nomenclature
+prefix "f-1(x)"
+symbol "$f^{(-1)}(x)$"
+description "Umkehrfunktion von $f(x)$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -2708,11 +2939,12 @@ reibweisen der Art
 \end_layout
 
 \begin_layout Standard
-ein, dann wird schon auf Symbolebene die Ähnlichkeit zum eindimensionalen
+ein, dann wird schon auf Symbolebene die Ã„hnlichkeit zum eindimensionalen
  Fall erkennbar.
  Aus diesem Grund wird hier der Ansatz der formalen Erweiterung von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_single_differential}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_single_differential"
 
 \end_inset
 
@@ -2727,7 +2959,8 @@ status open
 \begin_layout Standard
 Auch Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_single}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_single"
 
 \end_inset
 
@@ -2756,12 +2989,13 @@ p_{X}(\mvec{x})\tic x_{1}\tic x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\tic y_{1}\ti
 \begin_layout Standard
 Dabei kann man sich weiterhin von der anschaulichen Darstellung in Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_function_transform}
+\begin_inset LatexCommand ref
+reference "fig:prob_function_transform"
 
 \end_inset
 
- leiten lassen, muß die Transformation von eindimensionalen, differentiellen
- Größen (
+ leiten lassen, muÃŸ die Transformation von eindimensionalen, differentiellen
+ GrÃ¶ÃŸen (
 \begin_inset Formula $\tdc x\overset{f(x)}{\rightarrow}\tdc y$
 \end_inset
 
@@ -2795,7 +3029,7 @@ eg
 
 \end_inset
 
- Flächenmomente (
+ FlÃ¤chenmomente (
 \begin_inset Formula $\tdc F=\tdc x\,\tdc y$
 \end_inset
 
@@ -2821,7 +3055,7 @@ eg
 status open
 
 \begin_layout Standard
-Substitutionssatz für Mehrfach-Integrale: 
+Substitutionssatz fÃ¼r Mehrfach-Integrale: 
 \begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec J_{h}\right|\tic\mvec{z}$
 \end_inset
 
@@ -2848,12 +3082,14 @@ resp
 Jacobi
 \noun default
 -Determinante
-\begin_inset LatexCommand \index{Funktionaldeterminante}
+\begin_inset LatexCommand index
+name "Funktionaldeterminante"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Jacobi-Determinante@\noun{Jacobi}-Determinante}
+\begin_inset LatexCommand index
+name "Jacobi-Determinante@\\noun{Jacobi}-Determinante"
 
 \end_inset
 
@@ -2890,8 +3126,8 @@ Jacobi
 \begin_inset Formula $y_{i}$
 \end_inset
 
- enthält.
- Für den Funktionsvektor 
+ enthÃ¤lt.
+ FÃ¼r den Funktionsvektor 
 \begin_inset Formula $\mvec{h}$
 \end_inset
 
@@ -2944,17 +3180,19 @@ tabvnormal
 \end_layout
 
 \begin_layout Standard
-wobei wir die Betragszeichen sowohl als Kennzeichnung für eine Determinante
+wobei wir die Betragszeichen sowohl als Kennzeichnung fÃ¼r eine Determinante
  als auch den echten Betrag des Ergebnisses werten wollen.
  Vergleicht man nun Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_density_differential"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_jacobian_det}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_jacobian_det"
 
 \end_inset
 
@@ -2999,13 +3237,15 @@ eg
 
  aus Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_distribution_multi}
+\begin_inset LatexCommand ref
+reference "eq:prob_distribution_multi"
 
 \end_inset
 
  durch Einsetzen von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_density_differential"
 
 \end_inset
 
@@ -3019,11 +3259,11 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 \begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
 \end_inset
 
- über das gesamte Gebiet 
+ Ã¼ber das gesamte Gebiet 
 \begin_inset Formula $B$
 \end_inset
 
-, für welches 
+, fÃ¼r welches 
 \begin_inset Formula $f_{k}(x_{1},x_{2},\ldots,x_{n})<y_{k}$
 \end_inset
 
@@ -3034,7 +3274,9 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 
 \InsetSpace ~
 
-\begin_inset LatexCommand \cite[\S\,23]{Gnedenko:1958}
+\begin_inset LatexCommand cite
+after "\\S\\,23"
+key "Gnedenko:1958"
 
 \end_inset
 
@@ -3056,7 +3298,7 @@ Die Integrationsgrenzen ergeben sich dabei aus der Bedingung
 \begin_inset Formula $f_{k}(x_{1},x_{2},\ldots,x_{n})<y_{k}$
 \end_inset
 
- für das Integrationsgebiet 
+ fÃ¼r das Integrationsgebiet 
 \begin_inset Formula $B$
 \end_inset
 
@@ -3083,7 +3325,8 @@ cf
 \begin_layout Standard
 Auf der Grundlage von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_density_differential}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_density_differential"
 
 \end_inset
 
@@ -3105,7 +3348,7 @@ Auf der Grundlage von Formel\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Für den zweidimensionalen Spezialfall 
+FÃ¼r den zweidimensionalen Spezialfall 
 \begin_inset Formula $Y=f(X_{1},X_{2})$
 \end_inset
 
@@ -3122,11 +3365,12 @@ Für den zweidimensionalen Spezialfall
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:prob_sum}
+\begin_inset LatexCommand label
+name "sec:prob_sum"
 
 \end_inset
 
-Summe von Zufallsgrößen
+Summe von ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsubsection
@@ -3134,21 +3378,24 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Summe von Zufallsgrößen|(}
+\begin_inset LatexCommand index
+name "Summe von ZufallsgrÃ¶ÃŸen|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Summe von|(}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!Summe von|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte!einer Summe}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeitsdichte!einer Summe"
 
 \end_inset
 
-Um die Wahrscheinlichkeitsdichte einer Summe von zwei Zufallsgrößen 
+Um die Wahrscheinlichkeitsdichte einer Summe von zwei ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $Y=X_{1}+X_{2}$
 \end_inset
 
@@ -3161,13 +3408,14 @@ Um die Wahrscheinlichkeitsdichte einer Summe von zwei Zufallsgrößen
 \emph on
 eine
 \emph default
- Ergebnisgröße, nämlich 
+ ErgebnisgrÃ¶ÃŸe, nÃ¤mlich 
 \begin_inset Formula $Y$
 \end_inset
 
- haben, müssen wir die (nach Gleichung\InsetSpace ~
+ haben, mÃ¼ssen wir die (nach Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_func_vectors}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_func_vectors"
 
 \end_inset
 
@@ -3175,7 +3423,7 @@ eine
 \begin_inset Formula $n=2$
 \end_inset
 
- für 
+ fÃ¼r 
 \begin_inset Formula $\mvec{Y}=\mvec{f}(\mvec{X})$
 \end_inset
 
@@ -3183,7 +3431,7 @@ eine
 \begin_inset Quotes eld
 \end_inset
 
-künstlich
+kÃ¼nstlich
 \begin_inset Quotes erd
 \end_inset
 
@@ -3205,8 +3453,8 @@ künstlich
 \begin_inset Formula $f_{2}$
 \end_inset
 
- soll nur Bedingung sein, daß diese Funktion differenzierbar, umkehrbar
- und nicht linear abhängig von 
+ soll nur Bedingung sein, daÃŸ diese Funktion differenzierbar, umkehrbar
+ und nicht linear abhÃ¤ngig von 
 \begin_inset Formula $f_{1}$
 \end_inset
 
@@ -3215,7 +3463,7 @@ künstlich
 status open
 
 \begin_layout Standard
-Hilfreich ist natürlich die Wahl einer möglichst einfachen Funktion.
+Hilfreich ist natÃ¼rlich die Wahl einer mÃ¶glichst einfachen Funktion.
 \end_layout
 
 \end_inset
@@ -3299,13 +3547,15 @@ Da in diesem Fall nur lineare Funktionen beteiligt sind, ist die Determinante
  eine Konstante.
  Wir reduzieren sie (konform zu Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_transform_multiple}
+\begin_inset LatexCommand ref
+reference "sec:prob_transform_multiple"
 
 \end_inset
 
 ) auf ihren Absolutwert um dann Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_density_multi}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_density_multi"
 
 \end_inset
 
@@ -3322,11 +3572,11 @@ p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{
 \end_layout
 
 \begin_layout Standard
-Da die Hilfsgröße 
+Da die HilfsgrÃ¶ÃŸe 
 \begin_inset Formula $Y_{2}$
 \end_inset
 
- nicht von Interesse ist, müssen wir sie als Zufallsgröße 
+ nicht von Interesse ist, mÃ¼ssen wir sie als ZufallsgrÃ¶ÃŸe 
 \begin_inset Quotes eld
 \end_inset
 
@@ -3357,12 +3607,13 @@ ie
 
  (nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_density_dual}
+\begin_inset LatexCommand ref
+reference "eq:prob_density_dual"
 
 \end_inset
 
 ) berechnen.
- Bei diesem Schritt können wir auch gleich wieder 
+ Bei diesem Schritt kÃ¶nnen wir auch gleich wieder 
 \begin_inset Formula $Y_{1}$
 \end_inset
 
@@ -3370,7 +3621,7 @@ ie
 \begin_inset Formula $Y$
 \end_inset
 
- umbenennen, denn auf diese Größe kam es uns ja an.
+ umbenennen, denn auf diese GrÃ¶ÃŸe kam es uns ja an.
 \end_layout
 
 \begin_layout Standard
@@ -3383,7 +3634,7 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=-\frac{1}{2}\int_{-\inf
 \end_layout
 
 \begin_layout Standard
-Die abschließende Substitution 
+Die abschlieÃŸende Substitution 
 \begin_inset Formula $z=(y+y_{2})/2$
 \end_inset
 
@@ -3408,7 +3659,7 @@ ie
 \begin_inset Formula $\tdc y_{2}=2\tdc z$
 \end_inset
 
- führt zum Ergebnis.
+ fÃ¼hrt zum Ergebnis.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -3447,11 +3698,11 @@ p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\l
 \end_layout
 
 \begin_layout Standard
-Wählt man nun willkürlich einen Wert 
+WÃ¤hlt man nun willkÃ¼rlich einen Wert 
 \begin_inset Formula $x_{1}$
 \end_inset
 
-, dann muß für diesen Fall 
+, dann muÃŸ fÃ¼r diesen Fall 
 \begin_inset Formula $X_{2}$
 \end_inset
 
@@ -3472,7 +3723,7 @@ Wählt man nun willkürlich einen Wert
 \begin_inset Formula $x_{1}$
 \end_inset
 
- gibt, die man hier ansetzen kann, müssen für alle diese Werte die differentiell
+ gibt, die man hier ansetzen kann, mÃ¼ssen fÃ¼r alle diese Werte die differentiell
 en Wahrscheinlichkeiten summiert (integriert) werden.
 \end_layout
 
@@ -3490,7 +3741,7 @@ Sind
 \begin_inset Formula $X_{2}$
 \end_inset
 
- sogar stochastisch unabhängig, 
+ sogar stochastisch unabhÃ¤ngig, 
 \begin_inset ERT
 status collapsed
 
@@ -3509,7 +3760,8 @@ ie
 
 , so vereinfacht sich Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_add_dep}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_add_dep"
 
 \end_inset
 
@@ -3526,10 +3778,10 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_contin
 \end_layout
 
 \begin_layout Standard
-Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
-er Zufallsgrößen also genau die Faltung
+Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhÃ¤ngig
+er ZufallsgrÃ¶ÃŸen also genau die Faltung
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Faltung zweier Funktionen: 
@@ -3542,11 +3794,20 @@ Faltung zweier Funktionen:
 \end_inset
 
 
-\begin_inset LatexCommand \index{Faltung}
+\begin_inset LatexCommand index
+name "Faltung"
 
 \end_inset
 
  der einzelnen Dichtefunktionen.
+\begin_inset LatexCommand nomenclature
+prefix "*"
+symbol "$*$"
+description "Faltungs-Operator"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -3559,11 +3820,11 @@ p_{Y}(y)=(p_{1}*p_{2})\,(y)\end{equation}
 \end_layout
 
 \begin_layout Standard
-Für die Summe von 
+FÃ¼r die Summe von 
 \begin_inset Formula $n$
 \end_inset
 
- unabhängigen Zufallsgrößen gilt demzufolge:
+ unabhÃ¤ngigen ZufallsgrÃ¶ÃŸen gilt demzufolge:
 \end_layout
 
 \begin_layout Standard
@@ -3576,7 +3837,8 @@ p_{Y}(y)=(p_{1}*p_{2}*p_{3}*\cdots*p_{n-1}*p_{n})\,(y)\mperiod\]
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand \label{sec:prob_sum_mean}
+\begin_inset LatexCommand label
+name "sec:prob_sum_mean"
 
 \end_inset
 
@@ -3584,17 +3846,19 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Erwartungswert}
+\begin_inset LatexCommand index
+name "Erwartungswert"
 
 \end_inset
 
-Ausgangspunkt zur Bestimmung des Erwartungswertes der Zufallsgröße 
+Ausgangspunkt zur Bestimmung des Erwartungswertes der ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $Y=X_{1}+X_{2}$
 \end_inset
 
  ist dessen Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_mean"
 
 \end_inset
 
@@ -3617,7 +3881,8 @@ Einsetzen der Wahrscheinlichkeitsdichte von
 
  entsprechend Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_add_dep}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_add_dep"
 
 \end_inset
 
@@ -3639,12 +3904,14 @@ Einsetzen der Wahrscheinlichkeitsdichte von
 \begin_layout Standard
 Die inneren Integrale in beiden Summanden stellen nach Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_density_dual}
+\begin_inset LatexCommand ref
+reference "eq:prob_density_dual"
 
 \end_inset
 
  aber genau die Randdichten
-\begin_inset LatexCommand \index{Randdichte}
+\begin_inset LatexCommand index
+name "Randdichte"
 
 \end_inset
 
@@ -3656,7 +3923,7 @@ Die inneren Integrale in beiden Summanden stellen nach Gleichung\InsetSpace ~
 \begin_inset Formula $p_{2}(x_{2})$
 \end_inset
 
- der jeweils anderen Zufallsgröße dar.
+ der jeweils anderen ZufallsgrÃ¶ÃŸe dar.
 \end_layout
 
 \begin_layout Standard
@@ -3669,20 +3936,22 @@ Die inneren Integrale in beiden Summanden stellen nach Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Demzufolge ist der Erwartungswert der Summe zweier Zufallsgrößen unabhängig
+Demzufolge ist der Erwartungswert der Summe zweier ZufallsgrÃ¶ÃŸen unabhÃ¤ngig
  von der (verbundenen) Wahrscheinlichkeitsdichte
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
+GleichgÃ¼ltig ob beide ZufallsgrÃ¶ÃŸen abhÃ¤ngig oder unabhÃ¤ngig sind.
 \end_layout
 
 \end_inset
 
  einfach die Summe der einzelnen Erwartungswerte\InsetSpace ~
 
-\begin_inset LatexCommand \cite[\S\,27]{Gnedenko:1958}
+\begin_inset LatexCommand cite
+after "\\S\\,27"
+key "Gnedenko:1958"
 
 \end_inset
 
@@ -3703,14 +3972,16 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Varianz}
+\begin_inset LatexCommand index
+name "Varianz"
 
 \end_inset
 
-Die Varianz der Summe zweier (möglicherweise abhängiger) Zufallsgrößen kann
+Die Varianz der Summe zweier (mÃ¶glicherweise abhÃ¤ngiger) ZufallsgrÃ¶ÃŸen kann
  nun ausgehend von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_var_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_var_rms"
 
 \end_inset
 
@@ -3731,13 +4002,14 @@ Die Varianz der Summe zweier (möglicherweise abhängiger) Zufallsgrößen kann
 \end_layout
 
 \begin_layout Standard
-Mit einem kleinen Rückgriff auf Abschnitt\InsetSpace ~
+Mit einem kleinen RÃ¼ckgriff auf Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+\begin_inset LatexCommand ref
+reference "sec:prob_covariance_dependent"
 
 \end_inset
 
- kann man die letzte Formel auch folgendermaßen schreiben:
+ kann man die letzte Formel auch folgendermaÃŸen schreiben:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -3750,7 +4022,7 @@ Mit einem kleinen Rückgriff auf Abschnitt\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Sind die Zufallsgrößen 
+Sind die ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -3758,7 +4030,7 @@ Sind die Zufallsgrößen
 \begin_inset Formula $X_{2}$
 \end_inset
 
- unabhängig, dann gilt 
+ unabhÃ¤ngig, dann gilt 
 \begin_inset Formula $\cov(X_{1},X_{2})=0$
 \end_inset
 
@@ -3777,11 +4049,12 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+\begin_inset LatexCommand ref
+reference "sec:prob_covariance_dependent"
 
 \end_inset
 
-) und deshalb für die Varianz:
+) und deshalb fÃ¼r die Varianz:
 \end_layout
 
 \begin_layout Standard
@@ -3798,19 +4071,22 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Effektivwert}
+\begin_inset LatexCommand index
+name "Effektivwert"
 
 \end_inset
 
 Ausgehend von der Definition des Effektivwertes nach Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_rms"
 
 \end_inset
 
  kann man hier Zwischenformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_sum_var_ext}
+\begin_inset LatexCommand ref
+reference "eq:prob_sum_var_ext"
 
 \end_inset
 
@@ -3829,7 +4105,7 @@ Ausgehend von der Definition des Effektivwertes nach Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Sind beide Zufallsgrößen sowohl unabhängig
+Sind beide ZufallsgrÃ¶ÃŸen sowohl unabhÃ¤ngig
 \begin_inset Foot
 status open
 
@@ -3849,11 +4125,12 @@ ie
 
  Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_cov_zero_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_cov_zero_mean"
 
 \end_inset
 
- hat Gültigkeit: 
+ hat GÃ¼ltigkeit: 
 \begin_inset Formula $\mean(X_{1}X_{2})=\mean(X_{1})\mean(X_{2})$
 \end_inset
 
@@ -3863,7 +4140,7 @@ ie
 \end_inset
 
  als auch (zumindest eine) mittelwertfrei, dann berechnet sich der Effektivwert
- der Summengröße wiefolgt:
+ der SummengrÃ¶ÃŸe wiefolgt:
 \end_layout
 
 \begin_layout Standard
@@ -3876,11 +4153,11 @@ ie
 \end_layout
 
 \begin_layout Standard
-Induktive Fortsetzung ergibt für den Effektivwert der Summe 
+Induktive Fortsetzung ergibt fÃ¼r den Effektivwert der Summe 
 \begin_inset Formula $n$
 \end_inset
 
- unabhängiger, mittelwertfreier Zufallsgrößen in diesem Spezialfall:
+ unabhÃ¤ngiger, mittelwertfreier ZufallsgrÃ¶ÃŸen in diesem Spezialfall:
 \end_layout
 
 \begin_layout Standard
@@ -3897,16 +4174,18 @@ Superposition bei Normalverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Normalverteilung}
+\begin_inset LatexCommand index
+name "Normalverteilung"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Gauss-Verteilung@\noun{Gau\ss}-Verteilung}
+\begin_inset LatexCommand index
+name "Gauss-Verteilung@\\noun{Gau\\ss}-Verteilung"
 
 \end_inset
 
-Zwei unabhängige Zufallsgrößen 
+Zwei unabhÃ¤ngige ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -3916,12 +4195,12 @@ Zwei unabhängige Zufallsgrößen
 
  seien normalverteilt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 
 \noun on
-Gauß
+GauÃŸ
 \noun default
 -Verteilung 
 \begin_inset ERT
@@ -3937,7 +4216,8 @@ resp
 \end_inset
 
  Glockenkurve
-\begin_inset LatexCommand \index{Glockenkurve}
+\begin_inset LatexCommand index
+name "Glockenkurve"
 
 \end_inset
 
@@ -3955,6 +4235,27 @@ resp
 \end_inset
 
 
+\begin_inset LatexCommand nomenclature
+symbol "$\\mu$"
+description "Erwartungswert der Normalverteilung"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\cnorm(x)$"
+description "Standard-Normalverteilung"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\sigma^{2}$"
+description "Varianz der Normalverteilung"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3967,19 +4268,20 @@ p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\m
 \end_layout
 
 \begin_layout Standard
-und additiv überlagert.
+und additiv Ã¼berlagert.
  Die Berechnung der resultierenden Dichtefunktion 
 \begin_inset Formula $p_{Y}(y)$
 \end_inset
 
  kann dann durch Anwendung der Faltungsformel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_convolution}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_convolution"
 
 \end_inset
 
  erfolgen.
- Relativ einfach läßt sich eine Faltung mit Hilfe der 
+ Relativ einfach lÃ¤ÃŸt sich eine Faltung mit Hilfe der 
 \noun on
 Fourier
 \noun default
@@ -3989,6 +4291,13 @@ Fourier
 \end_inset
 
  in den Bildbereich transformiert
+\begin_inset LatexCommand nomenclature
+symbol "$\\expf$"
+description "\\noun{Euler}'sche Zahl"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -4014,11 +4323,11 @@ und dann einfach multipliziert (Faltungssatz).
 \end_layout
 
 \begin_layout Standard
-Die Rücktransformation von 
+Die RÃ¼cktransformation von 
 \begin_inset Formula $\ft\left\{ p_{Y}(y)\right\} $
 \end_inset
 
- liefert sofort die Lösung.
+ liefert sofort die LÃ¶sung.
 \end_layout
 
 \begin_layout Standard
@@ -4031,7 +4340,7 @@ p_{Y}(y)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\
 \end_layout
 
 \begin_layout Standard
-Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
+Die Summe zweier normalverteilter ZufallsgrÃ¶ÃŸen mit den Erwartungswerten
  
 \begin_inset Formula $\mu_{i}$
 \end_inset
@@ -4045,16 +4354,18 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 status open
 
 \begin_layout Standard
-Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
- allgemeingültigen Gleichungen\InsetSpace ~
+Die Ergebnisse fÃ¼r den Erwartungswert und die Varianz bestÃ¤tigen nur die
+ allgemeingÃ¼ltigen Gleichungen\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_sum_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_sum_mean"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_sum_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_sum_var"
 
 \end_inset
 
@@ -4075,12 +4386,14 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Summe von Zufallsgrößen|)}
+\begin_inset LatexCommand index
+name "Summe von ZufallsgrÃ¶ÃŸen|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Summe von|)}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!Summe von|)"
 
 \end_inset
 
@@ -4088,11 +4401,12 @@ Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:prob_prd}
+\begin_inset LatexCommand label
+name "sec:prob_prd"
 
 \end_inset
 
-Produkt von Zufallsgrößen
+Produkt von ZufallsgrÃ¶ÃŸen
 \end_layout
 
 \begin_layout Subsubsection
@@ -4100,21 +4414,24 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Wahrscheinlichkeitsdichte!eines Produkts}
+\begin_inset LatexCommand index
+name "Wahrscheinlichkeitsdichte!eines Produkts"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von|(}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!Produkt von|("
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Produkt von Zufallsgrößen|(}
+\begin_inset LatexCommand index
+name "Produkt von ZufallsgrÃ¶ÃŸen|("
 
 \end_inset
 
-Um die Wahrscheinlichkeitsdichte eines Produkts von zwei Zufallsgrößen 
+Um die Wahrscheinlichkeitsdichte eines Produkts von zwei ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $Y=X_{1}X_{2}$
 \end_inset
 
@@ -4127,11 +4444,11 @@ Um die Wahrscheinlichkeitsdichte eines Produkts von zwei Zufallsgrößen
 \emph on
 eine
 \emph default
- Ergebnisgröße, nämlich 
+ ErgebnisgrÃ¶ÃŸe, nÃ¤mlich 
 \begin_inset Formula $Y$
 \end_inset
 
-, haben, müssen wir die Darstellung 
+, haben, mÃ¼ssen wir die Darstellung 
 \begin_inset Formula $\mvec{Y}=\mvec{f}(\mvec{X})$
 \end_inset
 
@@ -4139,7 +4456,7 @@ eine
 \begin_inset Quotes eld
 \end_inset
 
-künstlich
+kÃ¼nstlich
 \begin_inset Quotes erd
 \end_inset
 
@@ -4164,7 +4481,7 @@ Auch diesmal ermitteln wir zuerst die Umkehrfunktionen
 \begin_inset Formula $\mvec{h}(\mvec{Y})$
 \end_inset
 
-, beschränken uns aber auf die positiven Werte von 
+, beschrÃ¤nken uns aber auf die positiven Werte von 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -4185,7 +4502,7 @@ Vorzeichen-Mehrdeutigkeit
 \begin_inset Quotes erd
 \end_inset
 
- gleichen wir später wieder aus.
+ gleichen wir spÃ¤ter wieder aus.
 \end_layout
 
 \end_inset
@@ -4204,7 +4521,7 @@ X_{2} & =h_{2}(Y_{1},Y_{2})=\sqrt{Y_{1}/Y_{2}}\end{align*}
 \end_layout
 
 \begin_layout Standard
-Den Absolutwert der zugehörigen Funktionaldeterminante
+Den Absolutwert der zugehÃ¶rigen Funktionaldeterminante
 \end_layout
 
 \begin_layout Standard
@@ -4255,17 +4572,18 @@ tabvnormal
 \begin_layout Standard
 wenden wir wieder auf Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_transform_density_multi}
+\begin_inset LatexCommand ref
+reference "eq:prob_transform_density_multi"
 
 \end_inset
 
- an, berücksichtigen aber, daß die differentielle Wahrscheinlichkeit doppelt
- so groß ausfällt
+ an, berÃ¼cksichtigen aber, daÃŸ die differentielle Wahrscheinlichkeit doppelt
+ so groÃŸ ausfÃ¤llt
 \begin_inset Note Note
 status open
 
 \begin_layout Standard
-Einleuchtende Erklärung notwendig
+Einleuchtende ErklÃ¤rung notwendig
 \end_layout
 
 \end_inset
@@ -4283,11 +4601,11 @@ p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\le
 \end_layout
 
 \begin_layout Standard
-Da die Zufallsgröße 
+Da die ZufallsgrÃ¶ÃŸe 
 \begin_inset Formula $Y_{2}$
 \end_inset
 
- auch hier nicht von Interesse ist, müssen wir sie wieder 
+ auch hier nicht von Interesse ist, mÃ¼ssen wir sie wieder 
 \begin_inset Quotes eld
 \end_inset
 
@@ -4338,7 +4656,7 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\inft
 \end_layout
 
 \begin_layout Standard
-Die abschließende Substitution 
+Die abschlieÃŸende Substitution 
 \begin_inset Formula $z=\sqrt{\smash[b]{y\, y_{2}}}$
 \end_inset
 
@@ -4391,8 +4709,8 @@ on (
 \begin_inset Formula $v'=p_{X}(z,y/z)$
 \end_inset
 
- zeigen läßt.
- Dabei ist zu berücksichtigen, daß mit den Integrationsgrenzen 
+ zeigen lÃ¤ÃŸt.
+ Dabei ist zu berÃ¼cksichtigen, daÃŸ mit den Integrationsgrenzen 
 \begin_inset Formula $\pm\infty$
 \end_inset
 
@@ -4417,7 +4735,7 @@ ie
 
 \end_inset
 
- bezüglich der Integration nach 
+ bezÃ¼glich der Integration nach 
 \begin_inset Formula $\tdc z$
 \end_inset
 
@@ -4434,7 +4752,7 @@ ie
 \end_layout
 
 \begin_layout Standard
-Für die Wahrscheinlichkeitsdichte des Produktes zweier (abhängiger) Zufallsgröße
+FÃ¼r die Wahrscheinlichkeitsdichte des Produktes zweier (abhÃ¤ngiger) ZufallsgrÃ¶ÃŸe
 n gilt also:
 \end_layout
 
@@ -4452,17 +4770,18 @@ p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\tic z\mperiod\label{eq:pr
 status open
 
 \begin_layout Standard
-Ähnlich wie in Abschnitt\InsetSpace ~
+Ã„hnlich wie in Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_sum}
+\begin_inset LatexCommand ref
+reference "sec:prob_sum"
 
 \end_inset
 
- wird wieder von der Definition der Dichtefunktion für 
+ wird wieder von der Definition der Dichtefunktion fÃ¼r 
 \begin_inset Formula $Y$
 \end_inset
 
- sowie für die Faktoren 
+ sowie fÃ¼r die Faktoren 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -4483,7 +4802,7 @@ p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\l
 \end_layout
 
 \begin_layout Standard
-Für einen willkürlich gewählten Wert 
+FÃ¼r einen willkÃ¼rlich gewÃ¤hlten Wert 
 \begin_inset Formula $x_{1}$
 \end_inset
 
@@ -4491,7 +4810,7 @@ Für einen willkürlich gewählten Wert
 \begin_inset Formula $X_{1}$
 \end_inset
 
- annimmt, muß 
+ annimmt, muÃŸ 
 \begin_inset Formula $X_{2}$
 \end_inset
 
@@ -4512,9 +4831,9 @@ Für einen willkürlich gewählten Wert
 \begin_inset Formula $x_{1}$
 \end_inset
 
- gibt, müssen wieder die differentiellen Wahrscheinlichkeiten für alle diese
+ gibt, mÃ¼ssen wieder die differentiellen Wahrscheinlichkeiten fÃ¼r alle diese
  Werte summiert (integriert) werden.
- Als Dichtefunktion für das Produkt ergibt sich damit:
+ Als Dichtefunktion fÃ¼r das Produkt ergibt sich damit:
 \end_layout
 
 \begin_layout Standard
@@ -4540,7 +4859,7 @@ Sind
 \begin_inset Formula $X_{2}$
 \end_inset
 
- stochastisch unabhängig, 
+ stochastisch unabhÃ¤ngig, 
 \begin_inset ERT
 status collapsed
 
@@ -4559,7 +4878,8 @@ ie
 
 , so vereinfacht sich Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_prd"
 
 \end_inset
 
@@ -4580,7 +4900,8 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Erwartungswert}
+\begin_inset LatexCommand index
+name "Erwartungswert"
 
 \end_inset
 
@@ -4590,16 +4911,17 @@ Den Erwartungswert von
 
  kann man nach der Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_mean_func_dual}
+\begin_inset LatexCommand ref
+reference "eq:prob_mean_func_dual"
 
 \end_inset
 
- für die Funktion einer zweidimensionalen Zufallsgröße bestimmen.
+ fÃ¼r die Funktion einer zweidimensionalen ZufallsgrÃ¶ÃŸe bestimmen.
  Dazu setzt man als Funktion 
 \begin_inset Formula $f(X_{1},X_{2})=X_{1}X_{2}$
 \end_inset
 
- und erhält für den allgemeinen Fall abhängiger Zufallsgrößen:
+ und erhÃ¤lt fÃ¼r den allgemeinen Fall abhÃ¤ngiger ZufallsgrÃ¶ÃŸen:
 \end_layout
 
 \begin_layout Standard
@@ -4622,7 +4944,7 @@ Sind
 
  stochastisch 
 \emph on
-unabhängig
+unabhÃ¤ngig
 \emph default
 , 
 \begin_inset ERT
@@ -4655,7 +4977,7 @@ ie
 \end_layout
 
 \begin_layout Standard
-und erhält als Ergebnis:
+und erhÃ¤lt als Ergebnis:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -4668,12 +4990,13 @@ und erhält als Ergebnis:
 \end_layout
 
 \begin_layout Standard
-Verschwindet der Erwartungswert des Produkts sogar überall, also gilt 
+Verschwindet der Erwartungswert des Produkts sogar Ã¼berall, also gilt 
 \begin_inset Formula $\mean(X_{1}X_{2})=0$
 \end_inset
 
-, dann werden die beiden Zufallsgrößen als orthogonal
-\begin_inset LatexCommand \index{Zufallsgrößen!orthogonale}
+, dann werden die beiden ZufallsgrÃ¶ÃŸen als orthogonal
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!orthogonale"
 
 \end_inset
 
@@ -4685,26 +5008,30 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Varianz}
+\begin_inset LatexCommand index
+name "Varianz"
 
 \end_inset
 
 Einsetzen von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_prd}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_prd"
 
 \end_inset
 
  in die Definitionsgleichung der Varianz (Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_var"
 
 \end_inset
 
-) führt auch hier schnell zum Ergebnis.
- Außerdem wird die im vorigen Abschnitt abgeleitete Gleichung\InsetSpace ~
+) fÃ¼hrt auch hier schnell zum Ergebnis.
+ AuÃŸerdem wird die im vorigen Abschnitt abgeleitete Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_prd_mean"
 
 \end_inset
 
@@ -4731,8 +5058,9 @@ Einsetzen von Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
-\begin_inset LatexCommand \index{Zufallsgrößen!mittelwertfreie}
+Bemerkenswert ist hierbei, daÃŸ abgesehen von mittelwertfreien ZufallsgrÃ¶ÃŸen
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!mittelwertfreie"
 
 \end_inset
 
@@ -4753,25 +5081,29 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Effektivwert}
+\begin_inset LatexCommand index
+name "Effektivwert"
 
 \end_inset
 
 Ausgehend von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_rms"
 
 \end_inset
 
  kann der Effektivwert sofort angegeben werden, wenn man die Formeln\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_prd_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_prd_mean"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_prd_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_prd_var"
 
 \end_inset
 
@@ -4789,11 +5121,11 @@ Ausgehend von Gleichung\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Für den Effektivwert des Produkts 
+FÃ¼r den Effektivwert des Produkts 
 \begin_inset Formula $n$
 \end_inset
 
- unabhängiger Zufallsgrößen gilt dann:
+ unabhÃ¤ngiger ZufallsgrÃ¶ÃŸen gilt dann:
 \end_layout
 
 \begin_layout Standard
@@ -4806,12 +5138,14 @@ Für den Effektivwert des Produkts
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Produkt von Zufallsgrößen|)}
+\begin_inset LatexCommand index
+name "Produkt von ZufallsgrÃ¶ÃŸen|)"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Zufallsgrößen!Produkt von|)}
+\begin_inset LatexCommand index
+name "ZufallsgrÃ¶ÃŸen!Produkt von|)"
 
 \end_inset
 
@@ -4819,7 +5153,8 @@ Für den Effektivwert des Produkts
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand \label{sec:prob_process}
+\begin_inset LatexCommand label
+name "sec:prob_process"
 
 \end_inset
 
@@ -4827,34 +5162,35 @@ Zufallsprozesse
 \end_layout
 
 \begin_layout Subsection
-Einführung
+EinfÃ¼hrung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsprozesse|(}
+\begin_inset LatexCommand index
+name "Zufallsprozesse|("
 
 \end_inset
 
-Das Modell des Zufallsprozesses geht davon aus, daß beliebig viele stochastische
- Vorgänge 
+Das Modell des Zufallsprozesses geht davon aus, daÃŸ beliebig viele stochastische
+ VorgÃ¤nge 
 \begin_inset Formula $\mvec{X}(t)$
 \end_inset
 
  in der Zeit gleichzeitig ablaufen.
- Für 
+ FÃ¼r 
 \emph on
-stationäre
+stationÃ¤re
 \emph default
  und 
 \emph on
 ergodische
 \emph default
- Prozesse gilt einschränkend, daß die beschreibenden Prozeßparameter vom
+ Prozesse gilt einschrÃ¤nkend, daÃŸ die beschreibenden ProzeÃŸparameter vom
  Betrachtungszeitpunkt 
 \begin_inset Formula $t$
 \end_inset
 
- unabhängig sind (Stationarität) und eine ausgewählte Realisierung 
+ unabhÃ¤ngig sind (StationaritÃ¤t) und eine ausgewÃ¤hlte Realisierung 
 \begin_inset Formula $X(t)$
 \end_inset
 
@@ -4862,14 +5198,14 @@ ergodische
 \begin_inset Formula $\mvec{X}(t)$
 \end_inset
 
- zur Bestimmung seiner statistischen Parameter ausreicht (Ergodizität).
- Dies bedeutet unter anderem, daß alle statistischen Kenngrößen (Momente,
+ zur Bestimmung seiner statistischen Parameter ausreicht (ErgodizitÃ¤t).
+ Dies bedeutet unter anderem, daÃŸ alle statistischen KenngrÃ¶ÃŸen (Momente,
  wie Erwartungswert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
+Man sagt auch, daÃŸ Scharmittelwerte und Zeitmittelwerte Ã¤quivalent sind.
 \end_layout
 
 \end_inset
@@ -4891,7 +5227,7 @@ etc
 \begin_inset Formula $t_{0}$
 \end_inset
 
- mit denselben Größen 
+ mit denselben GrÃ¶ÃŸen 
 \emph on
 einer
 \emph default
@@ -4899,9 +5235,10 @@ einer
 \begin_inset Formula $X(t)$
 \end_inset
 
-, über die Zeit betrachtet, übereinstimmen müssen\InsetSpace ~
+, Ã¼ber die Zeit betrachtet, Ã¼bereinstimmen mÃ¼ssen\InsetSpace ~
 
-\begin_inset LatexCommand \cite{Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958}
+\begin_inset LatexCommand cite
+key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958"
 
 \end_inset
 
@@ -4920,7 +5257,8 @@ einer
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand \label{sec:prob_acf}
+\begin_inset LatexCommand label
+name "sec:prob_acf"
 
 \end_inset
 
@@ -4941,12 +5279,12 @@ Nehmen wir nun an, wir betrachten eine Realisierung
 \end_inset
 
 .
- Obwohl für stationäre Zufallsprozesse der Zeitpunkt 
+ Obwohl fÃ¼r stationÃ¤re Zufallsprozesse der Zeitpunkt 
 \begin_inset Formula $t$
 \end_inset
 
  keine Rolle spielt, wird trotzdem (zumindest unter dem Blickwinkel der
- Allgemeinheit) eine stochastische Abhängigkeitsbeziehung zwischen 
+ Allgemeinheit) eine stochastische AbhÃ¤ngigkeitsbeziehung zwischen 
 \begin_inset Formula $X(t_{0})$
 \end_inset
 
@@ -4968,7 +5306,7 @@ ktors
 \begin_inset Formula $(X_{1},X_{2})$
 \end_inset
 
- -- nämlich der Abhängigkeit (
+ -- nÃ¤mlich der AbhÃ¤ngigkeit (
 \begin_inset ERT
 status collapsed
 
@@ -4981,7 +5319,7 @@ resp
 
 \end_inset
 
- Unabhängigkeit) von 
+ UnabhÃ¤ngigkeit) von 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -4990,9 +5328,9 @@ resp
 \end_inset
 
 .
- Dazu haben wir schon geeignete Maße kennengelernt, nämlich die Kovarianz
+ Dazu haben wir schon geeignete MaÃŸe kennengelernt, nÃ¤mlich die Kovarianz
  und den Korrelationskoeffizienten.
- Um ausgehend von deren Definition jedoch fortfahren zu können, müssen wir
+ Um ausgehend von deren Definition jedoch fortfahren zu kÃ¶nnen, mÃ¼ssen wir
  noch Existenz und Kenntnis der verbundenen Wahrscheinlichkeitsdichte des
  zweidimensionalen Vektors 
 \begin_inset Formula $p_{X}(X_{1},X_{2})$
@@ -5007,21 +5345,23 @@ resp
 \begin_inset Formula $\cov(\cdot)$
 \end_inset
 
- eng verwandte) Größe
+ eng verwandte) GrÃ¶ÃŸe
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
+Und uns im Zusammenhang mit dem Erwartungswert des Produktes von ZufallsgrÃ¶ÃŸen
  (Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_prd}
+\begin_inset LatexCommand ref
+reference "sec:prob_prd"
 
 \end_inset
 
-) sowie der Kovarianz mittelwertfreier Zufallsgrößen (Abschnitt\InsetSpace ~
+) sowie der Kovarianz mittelwertfreier ZufallsgrÃ¶ÃŸen (Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_covariance_dependent}
+\begin_inset LatexCommand ref
+reference "sec:prob_covariance_dependent"
 
 \end_inset
 
@@ -5031,7 +5371,8 @@ Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
 \end_inset
 
  und bezeichnen sie als Korrelation
-\begin_inset LatexCommand \index{Korrelation}
+\begin_inset LatexCommand index
+name "Korrelation"
 
 \end_inset
 
@@ -5039,7 +5380,7 @@ Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
 \begin_inset Formula $r(X_{1},X_{2})$
 \end_inset
 
- zweier Zufallsgrößen:
+ zweier ZufallsgrÃ¶ÃŸen:
 \end_layout
 
 \begin_layout Standard
@@ -5054,11 +5395,12 @@ r(X_{1},X_{2})=\mean(X_{1}X_{2})\]
 \begin_layout Standard
 Gleichbedeutend ist auch der folgende Ausdruck, wenn man Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_cov_shift}
+\begin_inset LatexCommand ref
+reference "eq:prob_cov_shift"
 
 \end_inset
 
- berücksichtigt.
+ berÃ¼cksichtigt.
 \end_layout
 
 \begin_layout Standard
@@ -5072,7 +5414,7 @@ r(X_{1},X_{2})=\cov(X_{1},X_{2})+\mean(X_{1})\,\mean(X_{2})\]
 
 \begin_layout Standard
 Erinnern wir uns an den Ausgangspunkt und ersetzen die (zur besseren Anschauung
- eingeführten) Zufallsgrößen 
+ eingefÃ¼hrten) ZufallsgrÃ¶ÃŸen 
 \begin_inset Formula $X_{1}$
 \end_inset
 
@@ -5097,18 +5439,26 @@ r\left[X(t_{0}),X(t_{0}+\tau)\right]=\mean\left[X(t_{0})X(t_{0}+\tau)\right]\]
 \end_layout
 
 \begin_layout Standard
-Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
+Ferner berÃ¼cksichtigen wir, daÃŸ fÃ¼r stationÃ¤re Zufallsprozesse der Zeitpunkt
  
 \begin_inset Formula $t_{0}$
 \end_inset
 
  keine Bedeutung hat -- und definieren die sogenannte Autokorrelationsfunktion
-\begin_inset LatexCommand \index{Autokorrelationsunktion}
+\begin_inset LatexCommand index
+name "Autokorrelationsunktion"
 
 \end_inset
 
  von 
 \begin_inset Formula $X(t)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\acf_{xx}$"
+description "Autokorrelationsfunktion des Zufallsprozesses $\\mvec{X}(t)$"
+
 \end_inset
 
 .
@@ -5124,7 +5474,7 @@ Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
 \end_layout
 
 \begin_layout Standard
-Für eine kontinuierliche Realisierung 
+FÃ¼r eine kontinuierliche Realisierung 
 \begin_inset Formula $X(t)$
 \end_inset
 
@@ -5147,7 +5497,8 @@ cf
 
  Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_prd}
+\begin_inset LatexCommand ref
+reference "sec:prob_prd"
 
 \end_inset
 
@@ -5164,7 +5515,7 @@ cf
 \end_layout
 
 \begin_layout Standard
-Für ergodische Prozesse nimmt man nun zusätzlich noch an, daß der Erwartungswert
+FÃ¼r ergodische Prozesse nimmt man nun zusÃ¤tzlich noch an, daÃŸ der Erwartungswert
  
 \begin_inset Formula $\mean\left[X(t)X(t+\tau)\right]$
 \end_inset
@@ -5173,7 +5524,15 @@ Für ergodische Prozesse nimmt man nun zusätzlich noch an, daß der Erwartungswert
 \begin_inset Formula $x(t)$
 \end_inset
 
- als (Selbst-) Ähnlichkeitsmaß folgendermaßen bestimmt werden kann.
+ als (Selbst-) Ã„hnlichkeitsmaÃŸ folgendermaÃŸen bestimmt werden kann.
+\begin_inset LatexCommand nomenclature
+prefix "x(t)"
+symbol "$\\avg{x(t)}$"
+description "Zeit-Mittelwert des Zufallssignals $x(t)$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5191,11 +5550,12 @@ Die dadurch definierte Autokorrelationsfunktion (AKF) hat folgende Eigenschaften
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand \label{enu:prob_acf_even}
+\begin_inset LatexCommand label
+name "enu:prob_acf_even"
 
 \end_inset
 
-Die AKF ist bezüglich 
+Die AKF ist bezÃ¼glich 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -5232,11 +5592,12 @@ ie
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset LatexCommand \label{enu:prob_acf_zero}
+\begin_inset LatexCommand label
+name "enu:prob_acf_zero"
 
 \end_inset
 
-Für 
+FÃ¼r 
 \begin_inset Formula $\tau\rightarrow0$
 \end_inset
 
@@ -5262,7 +5623,7 @@ resp
 \end_inset
 
  ist keine aperiodische oder determinierte Funktion, sondern ein echter
- Zufallsprozeß.
+ ZufallsprozeÃŸ.
 \end_layout
 
 \begin_deeper
@@ -5284,7 +5645,7 @@ In der Umgebung von
 \begin_inset Formula $\acf_{xx}(\tau)$
 \end_inset
 
- ein Maß für die Regellosigkeit des Prozesses.
+ ein MaÃŸ fÃ¼r die Regellosigkeit des Prozesses.
 \end_layout
 
 \begin_layout Standard
@@ -5293,7 +5654,8 @@ Ist
 \end_inset
 
  aber ein determiniertes Energiesignal
-\begin_inset LatexCommand \index{Energiesignale}
+\begin_inset LatexCommand index
+name "Energiesignale"
 
 \end_inset
 
@@ -5301,13 +5663,13 @@ Ist
 \begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic t<\infty$
 \end_inset
 
-), dann wird üblicherweise die Definition der AKF (sowie aller daraus abgeleitet
-en Größen) geringfügig modifiziert
+), dann wird Ã¼blicherweise die Definition der AKF (sowie aller daraus abgeleitet
+en GrÃ¶ÃŸen) geringfÃ¼gig modifiziert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Ansonsten würde wegen der Division durch 
+Ansonsten wÃ¼rde wegen der Division durch 
 \begin_inset Formula $T$
 \end_inset
 
@@ -5317,6 +5679,13 @@ Ansonsten würde wegen der Division durch
 
  gehen.
 \end_layout
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\acf^{(E)}_{xx}$"
+description "Autokorrelationsfunktion des Energiesignals $x(t)$"
 
 \end_inset
 
@@ -5334,11 +5703,11 @@ Ansonsten würde wegen der Division durch
 
 \end_deeper
 \begin_layout Enumerate
-Für 
+FÃ¼r 
 \begin_inset Formula $\tau\rightarrow\pm\infty$
 \end_inset
 
- kann man annehmen, daß 
+ kann man annehmen, daÃŸ 
 \begin_inset Formula $x(t)$
 \end_inset
 
@@ -5346,7 +5715,7 @@ Für
 \begin_inset Formula $x(t+\tau)$
 \end_inset
 
- vollständig unabhängig sind, weshalb dann
+ vollstÃ¤ndig unabhÃ¤ngig sind, weshalb dann
 \end_layout
 
 \begin_deeper
@@ -5361,8 +5730,8 @@ Für
 
 \begin_layout Standard
 gilt.
- Hat der Zufallsprozeß keine systematischen (oder determinierte) Anteile
- und außerdem einen zeitlichen Mittelwert 
+ Hat der ZufallsprozeÃŸ keine systematischen (oder determinierte) Anteile
+ und auÃŸerdem einen zeitlichen Mittelwert 
 \begin_inset Formula $\avg{x(t)}=0$
 \end_inset
 
@@ -5377,7 +5746,8 @@ gilt.
 \begin_layout Enumerate
 Wegen Punkt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{enu:prob_acf_zero}
+\begin_inset LatexCommand ref
+reference "enu:prob_acf_zero"
 
 \end_inset
 
@@ -5391,7 +5761,8 @@ Hintergrund ist die
 Cauchy-Schwarz
 \noun default
 'sche Ungleichung
-\begin_inset LatexCommand \index{Cauchy-Schwarz Ungleichung@\noun{Cauchy-Schwarz}'sche Ungleichung}
+\begin_inset LatexCommand index
+name "Cauchy-Schwarz Ungleichung@\\noun{Cauchy-Schwarz}'sche Ungleichung"
 
 \end_inset
 
@@ -5430,12 +5801,14 @@ status open
 \begin_layout Enumerate
 Aus Eigenschaft\InsetSpace ~
 
-\begin_inset LatexCommand \ref{enu:prob_acf_even}
+\begin_inset LatexCommand ref
+reference "enu:prob_acf_even"
 
 \end_inset
 
- ergibt sich die Ausdrucksmöglichkeit der AKF als Faltung
-\begin_inset LatexCommand \index{Faltung}
+ ergibt sich die AusdrucksmÃ¶glichkeit der AKF als Faltung
+\begin_inset LatexCommand index
+name "Faltung"
 
 \end_inset
 
@@ -5464,7 +5837,7 @@ Aus Eigenschaft\InsetSpace ~
 \end_layout
 
 \begin_layout Standard
-Für (determinierte) Energiesignale entfällt der Limes, 
+FÃ¼r (determinierte) Energiesignale entfÃ¤llt der Limes, 
 \begin_inset ERT
 status collapsed
 
@@ -5486,6 +5859,14 @@ Energie-AKF
 \end_inset
 
  ist ganz einfach die Faltung
+\begin_inset LatexCommand nomenclature
+prefix "x(-t)"
+symbol "$\\cjgt[x]{t}$"
+description "Konjugierte Funktion $x(-t)$ im Zeitbereich"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5503,7 +5884,7 @@ Kreuzkorrelationsfunktion
 \end_layout
 
 \begin_layout Standard
-Mit ähnlichem Hintergrund wie bei der Autokorrelationsfunktion kann man
+Mit Ã¤hnlichem Hintergrund wie bei der Autokorrelationsfunktion kann man
  auch den Zusammenhang zwischen 
 \emph on
 zwei
@@ -5516,8 +5897,9 @@ zwei
 \begin_inset Formula $\mvec{Y}(t)$
 \end_inset
 
- durch ein Ähnlichkeitsmaß erklären, welches Kreuzkorrelationsfunktion
-\begin_inset LatexCommand \index{Kreuzkorrelationsfunktion}
+ durch ein Ã„hnlichkeitsmaÃŸ erklÃ¤ren, welches Kreuzkorrelationsfunktion
+\begin_inset LatexCommand index
+name "Kreuzkorrelationsfunktion"
 
 \end_inset
 
@@ -5526,6 +5908,13 @@ zwei
 \end_inset
 
  genannt wird.
+\begin_inset LatexCommand nomenclature
+symbol "$\\acf_{xy}$"
+description "Kreuzkorrelationsfunktion der Zufallsprozesse $\\mvec{X}(t),\\mvec{Y}(t)$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5538,7 +5927,7 @@ zwei
 \end_layout
 
 \begin_layout Standard
-Verschwindet die Kreuzkorrelationsfunktion für jedes 
+Verschwindet die Kreuzkorrelationsfunktion fÃ¼r jedes 
 \begin_inset Formula $\tau$
 \end_inset
 
@@ -5555,19 +5944,21 @@ Verschwindet die Kreuzkorrelationsfunktion für jedes
 \begin_inset Formula $\tau$
 \end_inset
 
-, für daß die Kreuzkorrelationsfunktion maximal wird.
+, fÃ¼r daÃŸ die Kreuzkorrelationsfunktion maximal wird.
 \end_layout
 
 \begin_layout Standard
-Für Energiesignale existiert wieder eine abgewandelte Form (ohne Limes)
+FÃ¼r Energiesignale existiert wieder eine abgewandelte Form (ohne Limes)
  von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_ccf_def}
+\begin_inset LatexCommand ref
+reference "eq:prob_ccf_def"
 
 \end_inset
 
 , die auch als Faltung
-\begin_inset LatexCommand \index{Faltung}
+\begin_inset LatexCommand index
+name "Faltung"
 
 \end_inset
 
@@ -5588,27 +5979,28 @@ Spektrale Leistungsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Leistungsdichte!Spektrale}
+\begin_inset LatexCommand index
+name "Leistungsdichte!Spektrale"
 
 \end_inset
 
 Machen wir nun einen weiteren Schritt von den Zufallsprozessen zu Zufallssignale
 n, der allerdings eher eine Notationsfrage
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 
 \noun on
 Fourier
 \noun default
--Transformierte werden, wie Zufallsgrößen auch, mit Großbuchstaben bezeichnet.
+-Transformierte werden, wie ZufallsgrÃ¶ÃŸen auch, mit GroÃŸbuchstaben bezeichnet.
 \end_layout
 
 \end_inset
 
- als etwas Grundsätzliches ist.
- Dabei stellen wir die Frage nach der spektralen Leistungsdichte eines stationär
+ als etwas GrundsÃ¤tzliches ist.
+ Dabei stellen wir die Frage nach der spektralen Leistungsdichte eines stationÃ¤r
 en, ergodischen Zufallsprozesses, also nach infinitesimalen Leistungsanteilen
  in einem Frequenzbereich 
 \begin_inset Formula $\tdc f$
@@ -5638,11 +6030,12 @@ resp
  zugeordnet ist.
  Von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_zero}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_zero"
 
 \end_inset
 
- wissen wir, daß für die Gesamtleistung 
+ wissen wir, daÃŸ fÃ¼r die Gesamtleistung 
 \begin_inset Formula $P$
 \end_inset
 
@@ -5664,7 +6057,7 @@ P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x^{2}(t)\tic t\]
 
 \begin_layout Standard
 gilt.
- Aus dem Gebiet der Harmonischen Analyse ist außerdem bekannt, daß die spektrale
+ Aus dem Gebiet der Harmonischen Analyse ist auÃŸerdem bekannt, daÃŸ die spektrale
  
 \begin_inset Quotes eld
 \end_inset
@@ -5678,7 +6071,7 @@ Leistungsamplitude
 \end_inset
 
  durch 
-\begin_inset Formula $\left|X(\ji\omega)\right|^{2}=\left|\ft\{ x(t)\}\right|^{2}$
+\begin_inset Formula $\left|X(\ji\omega)\right|^{2}=\left|\ft\{x(t)\}\right|^{2}$
 \end_inset
 
  gekennzeichnet ist.
@@ -5699,7 +6092,7 @@ X(\omega)=\int_{-\infty}^{\infty}x(t)\expf^{-\ji\omega t}\tic t\]
 \end_layout
 
 \begin_layout Standard
-muß für die Existenz von 
+muÃŸ fÃ¼r die Existenz von 
 \begin_inset Formula $X(\omega)$
 \end_inset
 
@@ -5707,17 +6100,18 @@ muß für die Existenz von
 \begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic x(t)\Rightarrow\infty$
 \end_inset
 
- normalerweise nicht gewährleisten kann.
- Trotzdem kann man für diesen Fall (mitunter durch Einsatz der 
+ normalerweise nicht gewÃ¤hrleisten kann.
+ Trotzdem kann man fÃ¼r diesen Fall (mitunter durch Einsatz der 
 \noun on
 Dirac
 \noun default
 -Funktion
-\begin_inset LatexCommand \index{Dirac-Funktion@\noun{Dirac}-Funktion}
+\begin_inset LatexCommand index
+name "Dirac-Funktion@\\noun{Dirac}-Funktion"
 
 \end_inset
 
-) eine Größe entwickeln, die spektrale Leistungsdichte 
+) eine GrÃ¶ÃŸe entwickeln, die spektrale Leistungsdichte 
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset
 
@@ -5745,7 +6139,8 @@ Fourier
 \begin_layout Standard
 und ersetzen mit Hilfe von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_def}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_def"
 
 \end_inset
 
@@ -5773,7 +6168,7 @@ Nun wird die Integrationsreihenfolge vertauscht und danach
 
  substituiert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Wobei die Integrationsgrenzen 
@@ -5841,10 +6236,10 @@ resp
 
  endlich
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Man kann sich auch vorstellen, daß 
+Man kann sich auch vorstellen, daÃŸ 
 \begin_inset Formula $\left|X(\ji\omega)\right|^{2}$
 \end_inset
 
@@ -5852,11 +6247,11 @@ Man kann sich auch vorstellen, daß
 \begin_inset Formula $\iint x(t)x(t+\tau)\expf^{-\ji\omega\tau}\tic t\tic\tau$
 \end_inset
 
- über 
+ Ã¼ber 
 \begin_inset Formula $T$
 \end_inset
 
- repräsentiert.
+ reprÃ¤sentiert.
 \end_layout
 
 \end_inset
@@ -5876,6 +6271,14 @@ Man kann sich auch vorstellen, daß
 \begin_layout Standard
 Man nennt den so gewonnen Ausdruck die spektrale Leistungsdichte 
 \begin_inset Formula $\spd_{xx}(\omega)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "Sxx"
+symbol "$\\spd_{xx}$"
+description "Spektrale Leistungsdichte des Zufallsprozesses $\\mvec{X}(t)$"
+
 \end_inset
 
  des Zufallsprozesses 
@@ -5900,14 +6303,16 @@ Wiener
 Chintchin
 \noun default
 -Theorem
-\begin_inset LatexCommand \index{Wiener-Chintchin-Theorem@\noun{Wiener-Chintchin}-Theorem}
+\begin_inset LatexCommand index
+name "Wiener-Chintchin-Theorem@\\noun{Wiener-Chintchin}-Theorem"
 
 \end_inset
 
 .
- Interessant ist auch, daß sich diese Gleichung\InsetSpace ~
+ Interessant ist auch, daÃŸ sich diese Gleichung\InsetSpace ~
 (
-\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+\begin_inset LatexCommand ref
+reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
 
@@ -5925,14 +6330,16 @@ status open
 \end_inset
 
 
-\begin_inset LatexCommand \index{Faltungssatz}
+\begin_inset LatexCommand index
+name "Faltungssatz"
 
 \end_inset
 
  der Fourier-Transformation auf die Form der Autokorrelationsfunktion von
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_conv}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_conv"
 
 \end_inset
 
@@ -5957,12 +6364,12 @@ Wiener
 \noun on
 Chintchin
 \noun default
-, nämlich das die spektrale Leistungsdichte mit der Autokorrelationsfunktion
- über die 
+, nÃ¤mlich das die spektrale Leistungsdichte mit der Autokorrelationsfunktion
+ Ã¼ber die 
 \noun on
 Fourier
 \noun default
--Transformation verbunden ist, rechtfertigt natürlich auch die Umkehrformel:
+-Transformation verbunden ist, rechtfertigt natÃ¼rlich auch die Umkehrformel:
 \end_layout
 
 \begin_layout Standard
@@ -6009,7 +6416,7 @@ Die spektrale Leistungsdichte eines Zufallsprozesses hat einige interessante
 \end_layout
 
 \begin_layout Enumerate
-Da (schon) die Autokorrelationsfunktion eine gerade Funktion ist, muß die
+Da (schon) die Autokorrelationsfunktion eine gerade Funktion ist, muÃŸ die
  spektrale Leistungsdichte 
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset
@@ -6040,7 +6447,8 @@ verloren
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand \label{enu:prob_psd_power}
+\begin_inset LatexCommand label
+name "enu:prob_psd_power"
 
 \end_inset
 
@@ -6048,7 +6456,7 @@ Die mittlere Leistung
 \begin_inset Formula $P$
 \end_inset
 
- des stochastischen Prozesses kann durch Integration über die gesamte spektrale
+ des stochastischen Prozesses kann durch Integration Ã¼ber die gesamte spektrale
  Leistungsdichte 
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset
@@ -6067,7 +6475,7 @@ P=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega\]
 \end_layout
 
 \begin_layout Standard
-Für diesen Nachweis geht man am Besten von der bekannten Beziehung 
+FÃ¼r diesen Nachweis geht man am Besten von der bekannten Beziehung 
 \begin_inset Formula $P=\acf_{xx}(0)$
 \end_inset
 
@@ -6087,7 +6495,8 @@ P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\
 \begin_layout Enumerate
 Nach Punkt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{enu:prob_psd_power}
+\begin_inset LatexCommand ref
+reference "enu:prob_psd_power"
 
 \end_inset
 
@@ -6124,19 +6533,20 @@ status collapsed
 
 \end_deeper
 \begin_layout Subsection*
-Weißes Rauschen
+WeiÃŸes Rauschen
 \end_layout
 
 \begin_layout Standard
-Weißes Rauschen
-\begin_inset LatexCommand \index{Rauschen!Weißes}
+WeiÃŸes Rauschen
+\begin_inset LatexCommand index
+name "Rauschen!WeiÃŸes"
 
 \end_inset
 
- hat sowohl für die Theorie als auch in praktischen Anwendungen eine große
+ hat sowohl fÃ¼r die Theorie als auch in praktischen Anwendungen eine groÃŸe
  Bedeutung.
- Diese liegt vor allem in der gleichmäßigen spektralen Verteilung, die sich
- über das gesamte (theoretische) Frequenzband mit konstanter Leistungsdichte
+ Diese liegt vor allem in der gleichmÃ¤ÃŸigen spektralen Verteilung, die sich
+ Ã¼ber das gesamte (theoretische) Frequenzband mit konstanter Leistungsdichte
  (die mit 
 \begin_inset Formula $\spd_{0}$
 \end_inset
@@ -6148,9 +6558,9 @@ status open
 \begin_layout Standard
 Deshalb auch 
 \emph on
-weißes
+weiÃŸes
 \emph default
- Rauschen -- wie weißes Licht, also Licht in dem alle Frequenzen gleichermaßen
+ Rauschen -- wie weiÃŸes Licht, also Licht in dem alle Frequenzen gleichermaÃŸen
  enthalten sind.
 \end_layout
 
@@ -6173,7 +6583,7 @@ weißes
 \noun on
 Fourier
 \noun default
--Rücktransformation der spektralen Leistungsdichte ergibt nach dem 
+-RÃ¼cktransformation der spektralen Leistungsdichte ergibt nach dem 
 \noun on
 Wiener-Chintchin
 \noun default
@@ -6197,19 +6607,30 @@ Spektrale Energiedichte
 \begin_layout Standard
 Bei Anwendung der modifizierten Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_energy_signals}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_energy_signals"
 
 \end_inset
 
- für die Autokorrelationsfunktion von Energiesignalen entfällt der Limes
+ fÃ¼r die Autokorrelationsfunktion von Energiesignalen entfÃ¤llt der Limes
  in Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+\begin_inset LatexCommand ref
+reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
 
- und man erhält für die spektrale Energiedichte
-\begin_inset LatexCommand \index{Energiedichte}
+ und man erhÃ¤lt fÃ¼r die spektrale Energiedichte
+\begin_inset LatexCommand index
+name "Energiedichte"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "SxxE"
+symbol "$\\spd_{xx}^{(E)}$"
+description "Spektrale Energiedichte des Signals $x(t)$"
 
 \end_inset
 
@@ -6230,7 +6651,7 @@ Wenn nach dem
 \noun on
 Parseval
 \noun default
-'schen Theorem für die Gesamt-Signalenergie 
+'schen Theorem fÃ¼r die Gesamt-Signalenergie 
 \begin_inset Formula $E$
 \end_inset
 
@@ -6247,7 +6668,7 @@ E=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left|X(\ji\omega)\right|^{2}\tdc\omega=\
 \end_layout
 
 \begin_layout Standard
-dann bestätigt uns das Differential
+dann bestÃ¤tigt uns das Differential
 \end_layout
 
 \begin_layout Standard
@@ -6270,7 +6691,8 @@ Kreuzleistungs- und Energiedichten
 \begin_layout Standard
 Eine Verallgemeinerung zur spektralen Leistungsdichte (eines Zufallssignals)
  stellt die Kreuzleistungsdichte
-\begin_inset LatexCommand \index{Leistungsdichte!Kreuz-}
+\begin_inset LatexCommand index
+name "Leistungsdichte!Kreuz-"
 
 \end_inset
 
@@ -6288,6 +6710,22 @@ Eine Verallgemeinerung zur spektralen Leistungsdichte (eines Zufallssignals)
 \end_inset
 
  im Frequenzbereich und ist als
+\begin_inset LatexCommand nomenclature
+prefix "Sxy"
+symbol "$\\spd_{xy}$"
+description "Spektrale Kreuzleistungsdichte der Zufallsprozesse $\\mvec{X}(t),\\mvec{Y}(t)$"
+
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "X(-jomega)"
+symbol "$\\cjgt[X]{\\ji\\omega}$"
+description "Konjugiert komplexe Funktion $X(-\\ji\\omega)$ im Bildbereich"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -6313,7 +6751,7 @@ Auto
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset
 
- ist sie eine komplexe Größe.
+ ist sie eine komplexe GrÃ¶ÃŸe.
 \end_layout
 
 \begin_layout Standard
@@ -6335,13 +6773,14 @@ Wiener
 \noun on
 Chintchin
 \noun default
--Theorem für die Kreuzkorrelation.
+-Theorem fÃ¼r die Kreuzkorrelation.
 \end_layout
 
 \end_inset
 
-, nämlich der Kreuzkorrelationsfunktion
-\begin_inset LatexCommand \index{Kreuzkorrelationsfunktion}
+, nÃ¤mlich der Kreuzkorrelationsfunktion
+\begin_inset LatexCommand index
+name "Kreuzkorrelationsfunktion"
 
 \end_inset
 
@@ -6368,7 +6807,8 @@ cf
 
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_ccf_def}
+\begin_inset LatexCommand ref
+reference "eq:prob_ccf_def"
 
 \end_inset
 
@@ -6385,16 +6825,17 @@ cf
 \end_layout
 
 \begin_layout Standard
-Für Energiesignale (
+FÃ¼r Energiesignale (
 \begin_inset Formula $\int_{-\infty}^{\infty}x^{2}(t)\tic t\,<\infty$
 \end_inset
 
 ) ist die Kreuzenergiedichte
-\begin_inset LatexCommand \index{Kreuzenergiedichte}
+\begin_inset LatexCommand index
+name "Kreuzenergiedichte"
 
 \end_inset
 
-, in ähnlicher Art und Weise wie auch schon die Kreuzkorrelationsfunktion,
+, in Ã¤hnlicher Art und Weise wie auch schon die Kreuzkorrelationsfunktion,
  in einer modifizierten Form definiert.
 \end_layout
 
@@ -6408,7 +6849,8 @@ Für Energiesignale (
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Zufallsprozesse|)}
+\begin_inset LatexCommand index
+name "Zufallsprozesse|)"
 
 \end_inset
 
@@ -6424,18 +6866,20 @@ LTI-Systeme
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{LTI-Systeme}
+\begin_inset LatexCommand index
+name "LTI-Systeme"
 
 \end_inset
 
 Bei den aus der Systemtheorie her bekannten linearen zeitinvarianten (LTI)
  Systemen (der Art von Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_system_transform}
+\begin_inset LatexCommand ref
+reference "fig:prob_system_transform"
 
 \end_inset
 
-) kann man die Frage stellen, wie ein Zufallsprozeß 
+) kann man die Frage stellen, wie ein ZufallsprozeÃŸ 
 \begin_inset Formula $\mvec{X}(t)$
 \end_inset
 
@@ -6443,7 +6887,7 @@ Bei den aus der Systemtheorie her bekannten linearen zeitinvarianten (LTI)
 \begin_inset Formula $\mvec{Y}(t)$
 \end_inset
 
- am Ausgang übertragen wird.
+ am Ausgang Ã¼bertragen wird.
  Aus Sicht des Ein- und Ausgangssignals 
 \begin_inset Formula $X(\ji\omega)$
 \end_inset
@@ -6465,7 +6909,7 @@ resp
 \begin_inset Formula $Y(\ji\omega)$
 \end_inset
 
- im Bildbereich wissen wir, daß ein solches System durch die Gleichung
+ im Bildbereich wissen wir, daÃŸ ein solches System durch die Gleichung
 \end_layout
 
 \begin_layout Standard
@@ -6483,7 +6927,7 @@ beschrieben werden kann.
 \begin_inset Formula $\trf(\ji\omega)$
 \end_inset
 
- die komplexe Übertragungsfunktion des Systems im Bildbereich der 
+ die komplexe Ãœbertragungsfunktion des Systems im Bildbereich der 
 \noun on
 Fourier
 \noun default
@@ -6493,12 +6937,12 @@ tution entstehenden Ausdruck
 \begin_inset Formula $Y(-\ji\omega)=\trf(-\ji\omega)X(-\ji\omega)$
 \end_inset
 
- oder äquivalent 
+ oder Ã¤quivalent 
 \begin_inset Formula $\cjgt[Y]{\ji\omega}=\cjgt[\trf]{\ji\omega}\,\cjgt[X]{\ji\omega}$
 \end_inset
 
 .
- Multipliziert man jetzt die Gleichungen für 
+ Multipliziert man jetzt die Gleichungen fÃ¼r 
 \begin_inset Formula $Y(\ji\omega)$
 \end_inset
 
@@ -6506,7 +6950,7 @@ tution entstehenden Ausdruck
 \begin_inset Formula $\cjgt[Y]{\ji\omega}$
 \end_inset
 
- miteinander, dann erhält man den quadratischen Amplitudengang des Systems.
+ miteinander, dann erhÃ¤lt man den quadratischen Amplitudengang des Systems.
 \end_layout
 
 \begin_layout Standard
@@ -6520,11 +6964,11 @@ Y(\ji\omega)\cjgt[Y]{\ji\omega} & = & \trf(\ji\omega)\cjgt[\trf]{\ji\omega}\, X(
 \end_layout
 
 \begin_layout Standard
-Berücksichtigt man außerdem, daß
+BerÃ¼cksichtigt man auÃŸerdem, daÃŸ
 \end_layout
 
 \begin_layout Itemize
-für stabile Systeme das 
+fÃ¼r stabile Systeme das 
 \noun on
 Fourier
 \noun default
@@ -6536,7 +6980,7 @@ Fourier
 \end_layout
 
 \begin_layout Itemize
-für Leistungssignale die Fourier-Transformierten 
+fÃ¼r Leistungssignale die Fourier-Transformierten 
 \begin_inset Formula $X(\ji\omega)$
 \end_inset
 
@@ -6589,13 +7033,14 @@ und bildet sowohl links- als auch rechtsseitig mit
 \end_layout
 
 \begin_layout Standard
-so erhält man auf der Grundlage des 
+so erhÃ¤lt man auf der Grundlage des 
 \noun on
 Wiener-Chintchin
 \noun default
 -Theorems (Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_psd_wiener_chintchin}
+\begin_inset LatexCommand ref
+reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
 
@@ -6630,7 +7075,7 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-und so für die (zeitinvarianten) Autokorrelationsfunktionen:
+und so fÃ¼r die (zeitinvarianten) Autokorrelationsfunktionen:
 \end_layout
 
 \begin_layout Standard
@@ -6643,9 +7088,17 @@ und so für die (zeitinvarianten) Autokorrelationsfunktionen:
 \end_layout
 
 \begin_layout Standard
-Bedenkt man noch, daß die Übertragungsfunktion eines LTI-Systems gleichzeitig
+Bedenkt man noch, daÃŸ die Ãœbertragungsfunktion eines LTI-Systems gleichzeitig
  die Fourier-Transformierte der Impulsantwort 
 \begin_inset Formula $\irf(t)$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+prefix "h(t)"
+symbol "$\\irf(t)$"
+description "Impulsantwort"
+
 \end_inset
 
  ist,
@@ -6671,12 +7124,14 @@ Fourier
 \noun default
 -Transformation) Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_lti_time_domain}
+\begin_inset LatexCommand ref
+reference "eq:prob_lti_time_domain"
 
 \end_inset
 
  als zweifache Faltung
-\begin_inset LatexCommand \index{Faltung}
+\begin_inset LatexCommand index
+name "Faltung"
 
 \end_inset
 
@@ -6693,7 +7148,7 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-Faßt man der Übersichtlichkeit halber noch 
+FaÃŸt man der Ãœbersichtlichkeit halber noch 
 \begin_inset Formula $(\irf*\cjgt{\irf})(\tau)$
 \end_inset
 
@@ -6703,7 +7158,8 @@ Faßt man der Übersichtlichkeit halber noch
 
  eines stabilen LTI-Systems nach Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_energy_signals}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_energy_signals"
 
 \end_inset
 
@@ -6720,16 +7176,17 @@ Faßt man der Übersichtlichkeit halber noch
 \end_layout
 
 \begin_layout Standard
-so erhält man die 
+so erhÃ¤lt man die 
 \noun on
 Wiener-Lee
 \noun default
 -Beziehung
-\begin_inset LatexCommand \index{Wiener-Lee-Beziehung@\noun{Wiener-Lee}-Beziehung}
+\begin_inset LatexCommand index
+name "Wiener-Lee-Beziehung@\\noun{Wiener-Lee}-Beziehung"
 
 \end_inset
 
- in ihrer geläufigen Form.
+ in ihrer gelÃ¤ufigen Form.
 \end_layout
 
 \begin_layout Standard
@@ -6751,15 +7208,16 @@ Sind
 \end_inset
 
  Signale mit endlicher Energie
-\begin_inset LatexCommand \index{Energiesignale}
+\begin_inset LatexCommand index
+name "Energiesignale"
 
 \end_inset
 
-, dann muß man (wie gewohnt) nur die Division durch 
+, dann muÃŸ man (wie gewohnt) nur die Division durch 
 \begin_inset Formula $\lim_{T\rightarrow\infty}T$
 \end_inset
 
- überall weglassen, was 
+ Ã¼berall weglassen, was 
 \begin_inset ERT
 status collapsed
 
@@ -6774,7 +7232,8 @@ eg
 
  aus Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_lti_frequency_domain}
+\begin_inset LatexCommand ref
+reference "eq:prob_lti_frequency_domain"
 
 \end_inset
 
@@ -6800,25 +7259,29 @@ Optimalfilter
 
 \begin_layout Standard
 Optimalfilter
-\begin_inset LatexCommand \index{Optimalfilter}
+\begin_inset LatexCommand index
+name "Optimalfilter"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Matched Filter}
+\begin_inset LatexCommand index
+name "Matched Filter"
 
 \end_inset
 
  sind (LTI-) Systeme
-\begin_inset LatexCommand \index{LTI-Systeme}
+\begin_inset LatexCommand index
+name "LTI-Systeme"
 
 \end_inset
 
-, die eine (angepaßte) Übertragungsfunktion derart besitzen, daß ein additiv
- gestörtes Nutzsignal möglichst sicher zu detektieren ist.
+, die eine (angepaÃŸte) Ãœbertragungsfunktion derart besitzen, daÃŸ ein additiv
+ gestÃ¶rtes Nutzsignal mÃ¶glichst sicher zu detektieren ist.
  Nach dem Modell in Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_optimal_filter}
+\begin_inset LatexCommand ref
+reference "fig:prob_optimal_filter"
 
 \end_inset
 
@@ -6834,8 +7297,9 @@ Optimalfilter
 \begin_inset Formula $n(t)$
 \end_inset
 
- weißes Rauschen
-\begin_inset LatexCommand \index{Rauschen!Weißes}
+ weiÃŸes Rauschen
+\begin_inset LatexCommand index
+name "Rauschen!WeiÃŸes"
 
 \end_inset
 
@@ -6843,7 +7307,7 @@ Optimalfilter
 \begin_inset Formula $\spd_{xx}(\omega)=\spd_{0}$
 \end_inset
 
-, welches auf dem Übertragungskanal induziert wird.
+, welches auf dem Ãœbertragungskanal induziert wird.
 \end_layout
 
 \begin_layout Standard
@@ -6864,12 +7328,21 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:prob_optimal_filter}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:prob_optimal_filter"
 
 \end_inset
 
-Übertragungskanal mit Optimalfilter
+Ãœbertragungskanal mit Optimalfilter
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -6882,24 +7355,26 @@ Das Optimierungsproblem besteht nun darin, zum Abtastzeitpunkt
 \begin_inset Formula $t_{0}$
 \end_inset
 
- das Verhältnis von Momentan-Nutzleistung 
+ das VerhÃ¤ltnis von Momentan-Nutzleistung 
 \begin_inset Formula $y^{2}(t_{0})$
 \end_inset
 
  zur Rauschleisung am Ausgang zu maximieren.
  Dabei ist (nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_zero}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_zero"
 
 \end_inset
 
 , Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_acf}
+\begin_inset LatexCommand ref
+reference "sec:prob_acf"
 
 \end_inset
 
-) die Störleistung genau die Autokorrelationsfunktion 
+) die StÃ¶rleistung genau die Autokorrelationsfunktion 
 \begin_inset Formula $\acf_{yy}(0)$
 \end_inset
 
@@ -6921,7 +7396,7 @@ Zuerst
 status open
 
 \begin_layout Standard
-Bei LTI-Systemen kann man vom Superpositionsprinzip von Nutz- und Störsignal
+Bei LTI-Systemen kann man vom Superpositionsprinzip von Nutz- und StÃ¶rsignal
  ausgehen, 
 \begin_inset ERT
 status collapsed
@@ -6935,17 +7410,18 @@ ie
 
 \end_inset
 
- wir können beide Anteile an jeder Stelle des Modells separat betrachten.
+ wir kÃ¶nnen beide Anteile an jeder Stelle des Modells separat betrachten.
 \end_layout
 
 \end_inset
 
- drücken wir 
+ drÃ¼cken wir 
 \begin_inset Formula $y(t_{0})$
 \end_inset
 
- durch die (für LTI-Systeme typische) Faltung
-\begin_inset LatexCommand \index{Faltung}
+ durch die (fÃ¼r LTI-Systeme typische) Faltung
+\begin_inset LatexCommand index
+name "Faltung"
 
 \end_inset
 
@@ -6985,7 +7461,8 @@ eg
 
  ermittelt werden, indem man ausgehend von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_lti_time_conv}
+\begin_inset LatexCommand ref
+reference "eq:prob_lti_time_conv"
 
 \end_inset
 
@@ -6996,13 +7473,14 @@ ff.
 \end_inset
 
  bestimmt.
- Führt man die gesamte Berechnung im Zeitbereich durch, dann ist in Verbindung
- mit der Autokorrelationsfunktion des weißen Rauschens 
+ FÃ¼hrt man die gesamte Berechnung im Zeitbereich durch, dann ist in Verbindung
+ mit der Autokorrelationsfunktion des weiÃŸen Rauschens 
 \begin_inset Formula $\acf_{xx}(\tau)=\spd_{0}\dirac(t)$
 \end_inset
 
  das Ausblendtheorem
-\begin_inset LatexCommand \index{Ausblendtheorem}
+\begin_inset LatexCommand index
+name "Ausblendtheorem"
 
 \end_inset
 
@@ -7011,12 +7489,20 @@ ff.
 Dirac
 \noun default
 -Funktion
-\begin_inset LatexCommand \index{Dirac-Funktion@\noun{Dirac}-Funktion}
+\begin_inset LatexCommand index
+name "Dirac-Funktion@\\noun{Dirac}-Funktion"
 
 \end_inset
 
  
 \begin_inset Formula $f(t)*\dirac(t-t_{0})=f(t_{0})$
+\end_inset
+
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\dirac(t)$"
+description "\\noun{Dirac}-Funktion"
+
 \end_inset
 
  hilfreich einzusetzen.
@@ -7057,7 +7543,7 @@ und erweitern den Bruch noch um
 \begin_inset Formula $E=\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t$
 \end_inset
 
- übergeht.
+ Ã¼bergeht.
 \end_layout
 
 \begin_layout Standard
@@ -7070,20 +7556,23 @@ und erweitern den Bruch noch um
 \end_layout
 
 \begin_layout Standard
-Etwas umsortiert (und gesichtet) ist festzustellen, daß hier der Korrelationskoe
+Etwas umsortiert (und gesichtet) ist festzustellen, daÃŸ hier der Korrelationskoe
 ffizient
-\begin_inset LatexCommand \index{Korrelationskoeffizient}
+\begin_inset LatexCommand index
+name "Korrelationskoeffizient"
 
 \end_inset
 
  nach Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_corr_mean_zero}
+\begin_inset LatexCommand ref
+reference "eq:prob_corr_mean_zero"
 
 \end_inset
 
- in der zeitlichen Form für Energiesignale
-\begin_inset LatexCommand \index{Energiesignale}
+ in der zeitlichen Form fÃ¼r Energiesignale
+\begin_inset LatexCommand index
+name "Energiesignale"
 
 \end_inset
 
@@ -7123,16 +7612,18 @@ zwischen
 \begin_layout Standard
 Wie wir aus Abschnitt\InsetSpace ~
 
-\begin_inset LatexCommand \ref{sec:prob_corr}
+\begin_inset LatexCommand ref
+reference "sec:prob_corr"
 
 \end_inset
 
  wissen, ist der Korrelationskoeffizient
-\begin_inset LatexCommand \index{Korrelationskoeffizient}
+\begin_inset LatexCommand index
+name "Korrelationskoeffizient"
 
 \end_inset
 
- dann am größten, wenn beide Funktionen linear abhängig sind, also 
+ dann am grÃ¶ÃŸten, wenn beide Funktionen linear abhÃ¤ngig sind, also 
 \begin_inset Formula $\irf(t)=k\, x(t_{0}-t)$
 \end_inset
 
@@ -7141,7 +7632,7 @@ Wie wir aus Abschnitt\InsetSpace ~
 \noun on
 Fourier
 \noun default
--Transformation dieser Beziehung gelangt man zur Übertragungsfunktion des
+-Transformation dieser Beziehung gelangt man zur Ãœbertragungsfunktion des
  Optimalfilters im Bildbereich.
 \end_layout
 
@@ -7155,7 +7646,7 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-Für das Nutzsignal ergeben sich folgerichtig die Beziehungen
+FÃ¼r das Nutzsignal ergeben sich folgerichtig die Beziehungen
 \begin_inset Foot
 status open
 
@@ -7166,7 +7657,8 @@ Das Nutzsignal
 
  stellt im Sinne von Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_acf_conv}
+\begin_inset LatexCommand ref
+reference "eq:prob_acf_conv"
 
 \end_inset
 
@@ -7201,11 +7693,11 @@ Die Leistungsbilanz zum Zeitpunkt
 \begin_inset Formula $t_{0}$
 \end_inset
 
- fällt mit 
+ fÃ¤llt mit 
 \begin_inset Formula $\corr(\cdot)=1$
 \end_inset
 
- folgendermaßen aus:
+ folgendermaÃŸen aus:
 \end_layout
 
 \begin_layout Standard
@@ -7226,12 +7718,14 @@ Quantisierungsrauschen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Quantisierungsrauschen}
+\begin_inset LatexCommand index
+name "Quantisierungsrauschen"
 
 \end_inset
 
 
-\begin_inset LatexCommand \index{Quantisierung!Rauschen}
+\begin_inset LatexCommand index
+name "Quantisierung!Rauschen"
 
 \end_inset
 
@@ -7243,20 +7737,25 @@ Die Wandlung eines zeitkontinuierlichen Eingangssignals
 \begin_inset Formula $q(kT)$
 \end_inset
 
- ist ein Vorgang, der üblicherweise aus den Schritten: Abtasten und Quantisierun
+ ist ein Vorgang, der Ã¼blicherweise aus den Schritten: Abtasten und Quantisierun
 g
-\begin_inset LatexCommand \index{Quantisierung}
+\begin_inset LatexCommand index
+name "Quantisierung"
 
 \end_inset
 
  besteht\InsetSpace ~
 
-\begin_inset LatexCommand \cite[3.7]{Azizi:1990}
+\begin_inset LatexCommand cite
+after "3.7"
+key "Azizi:1990"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand \cite[1.7.4]{Embree:1991}
+\begin_inset LatexCommand cite
+after "1.7.4"
+key "Embree:1991"
 
 \end_inset
 
@@ -7268,7 +7767,7 @@ g
 \begin_inset Formula $n(t)$
 \end_inset
 
- repräsentiert (
+ reprÃ¤sentiert (
 \begin_inset ERT
 status collapsed
 
@@ -7283,7 +7782,8 @@ cf
 
  Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_quant_linear}
+\begin_inset LatexCommand ref
+reference "fig:prob_quant_linear"
 
 \end_inset
 
@@ -7306,8 +7806,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:prob_quant_linear}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:prob_quant_linear"
 
 \end_inset
 
@@ -7319,8 +7823,13 @@ Lineare Quantisierung
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Für stationäre ergodische Prozesse ist die Betrachtung von 
+FÃ¼r stationÃ¤re ergodische Prozesse ist die Betrachtung von 
 \begin_inset Formula $q(t)$
 \end_inset
 
@@ -7368,7 +7877,7 @@ resp
 \begin_inset Formula $\Delta$
 \end_inset
 
- die Höhe einer Quantisierungsstufe
+ die HÃ¶he einer Quantisierungsstufe
 \begin_inset Foot
 status open
 
@@ -7386,7 +7895,7 @@ ie
 
 \end_inset
 
- alle Quantisierungsstufen sind äquidistant.
+ alle Quantisierungsstufen sind Ã¤quidistant.
 \end_layout
 
 \end_inset
@@ -7409,7 +7918,8 @@ ie
 
  -- und zwar mit gleicher Wahrscheinlichkeit -- quantisiert.
  Dadurch ist der Fehler
-\begin_inset LatexCommand \index{Quantisierung!Fehler}
+\begin_inset LatexCommand index
+name "Quantisierung!Fehler"
 
 \end_inset
 
@@ -7422,7 +7932,8 @@ ie
 \end_inset
 
  gleichverteilt
-\begin_inset LatexCommand \index{Gleichverteilung}
+\begin_inset LatexCommand index
+name "Gleichverteilung"
 
 \end_inset
 
@@ -7445,31 +7956,35 @@ cf
 
  Formel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_equal_distribution}
+\begin_inset LatexCommand ref
+reference "eq:prob_equal_distribution"
 
 \end_inset
 
 ).
  Der Effektivwert des Quantisierungsrauschens kann nun ausgehend von Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_rms"
 
 \end_inset
 
-, mit Hilfe der für die Gleichverteilung gültigen Formeln\InsetSpace ~
+, mit Hilfe der fÃ¼r die Gleichverteilung gÃ¼ltigen Formeln\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_equal_mean}
+\begin_inset LatexCommand ref
+reference "eq:prob_equal_mean"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_equal_var}
+\begin_inset LatexCommand ref
+reference "eq:prob_equal_var"
 
 \end_inset
 
 , gewonnen werden.
- Beim Einsetzen der konkreten Werte für die Intervallgrenzen (
+ Beim Einsetzen der konkreten Werte fÃ¼r die Intervallgrenzen (
 \begin_inset Formula $a=-\Delta/2$
 \end_inset
 
@@ -7477,10 +7992,11 @@ cf
 \begin_inset Formula $b=+\Delta/2$
 \end_inset
 
-) fällt sofort auf, daß der Mittelwert verschwindet und sich die Effektivwertfor
+) fÃ¤llt sofort auf, daÃŸ der Mittelwert verschwindet und sich die Effektivwertfor
 mel\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_continuous_rms}
+\begin_inset LatexCommand ref
+reference "eq:prob_continuous_rms"
 
 \end_inset
 
@@ -7499,7 +8015,7 @@ mel\InsetSpace ~
 
 \begin_layout Standard
 In der Theorie ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
- des Quantisierungsrauschens aus den zugehörigen technischen Daten ermittelbar.
+ des Quantisierungsrauschens aus den zugehÃ¶rigen technischen Daten ermittelbar.
  Dazu bestimmt man aus der Anzahl von Bit 
 \begin_inset Formula $B$
 \end_inset
@@ -7518,7 +8034,7 @@ Wobei in
 
 \end_inset
 
-) und der maximal erlaubten Größe des Eingangssignals (üblicherweise die
+) und der maximal erlaubten GrÃ¶ÃŸe des Eingangssignals (Ã¼blicherweise die
  Referenzspannung 
 \begin_inset Formula $U_{0}$
 \end_inset
@@ -7528,7 +8044,7 @@ Wobei in
 \end_inset
 
 .
- Bei linearer Quantisierung ergibt sich als Effektivwert für das dadurch
+ Bei linearer Quantisierung ergibt sich als Effektivwert fÃ¼r das dadurch
  hervorgerufene Rauschen
 \end_layout
 
@@ -7542,15 +8058,24 @@ Wobei in
 \end_layout
 
 \begin_layout Subsubsection
-Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR)
-\end_layout
-
-\begin_layout Standard
-\begin_inset LatexCommand \index{Signal-Rausch-Abstand (SNR)}
+Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR
+\begin_inset LatexCommand nomenclature
+prefix "SNR"
+symbol "SNR"
+description "Signal-Noise-Ratio (Signal-Rausch-Abstand)"
 
 \end_inset
 
-Die SNR ist als logarithmisches Verhältnis von Signalleistung zur Rauschleistung
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand index
+name "Signal-Rausch-Abstand (SNR)"
+
+\end_inset
+
+Die SNR ist als logarithmisches VerhÃ¤ltnis von Signalleistung zur Rauschleistung
  definiert.
 \end_layout
 
@@ -7570,7 +8095,8 @@ Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
 \end_inset
 
  und des Quantisierungsrauschens
-\begin_inset LatexCommand \index{Quantisierungsrauschen}
+\begin_inset LatexCommand index
+name "Quantisierungsrauschen"
 
 \end_inset
 
@@ -7578,7 +8104,7 @@ Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
 \begin_inset Formula $\tilde{n}$
 \end_inset
 
- ausgedrückt werden.
+ ausgedrÃ¼ckt werden.
 \end_layout
 
 \begin_layout Standard
@@ -7591,13 +8117,13 @@ Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
 \end_layout
 
 \begin_layout Standard
-Bei einem sinusförmigen Nutzsignal 
+Bei einem sinusfÃ¶rmigen Nutzsignal 
 \begin_inset Formula $\tilde{s}$
 \end_inset
 
- maximaler Aussteuerung ist als größter Spitzenwert
+ maximaler Aussteuerung ist als grÃ¶ÃŸter Spitzenwert
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Der durch den A/D-Wandler verzerrungsfrei, 
@@ -7625,11 +8151,12 @@ ie
  anzusetzen.
  Durch Anwendung der Gleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_noise_magnitude_bits}
+\begin_inset LatexCommand ref
+reference "eq:prob_noise_magnitude_bits"
 
 \end_inset
 
- für die effektive Rauschamplitude kann der maximal erreichbare Signal-Rausch-Ab
+ fÃ¼r die effektive Rauschamplitude kann der maximal erreichbare Signal-Rausch-Ab
 stand bestimmt werden.
 \end_layout
 
@@ -7645,17 +8172,17 @@ stand bestimmt werden.
 \end_layout
 
 \begin_layout Standard
-Wesentlich ist die Erkenntnis, daß bei einer Erhöhung der Auflösung des
+Wesentlich ist die Erkenntnis, daÃŸ bei einer ErhÃ¶hung der AuflÃ¶sung des
  A/D-Wandlers um ein Bit der Signal-Rausch-Abstand linear um 
 \begin_inset Formula $6,02\textrm{dB}$
 \end_inset
 
  zunimmt
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
-Selbst wenn man andere Signalformen zugrunde legt, ändert sich dieser Fakt
+Selbst wenn man andere Signalformen zugrunde legt, Ã¤ndert sich dieser Fakt
  nicht.
 \end_layout
 
@@ -7669,7 +8196,8 @@ Pulsbreitendiskriminierung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \index{Pulsbreitendiskriminierung}
+\begin_inset LatexCommand index
+name "Pulsbreitendiskriminierung"
 
 \end_inset
 
@@ -7682,8 +8210,8 @@ Oft besteht die Forderung zwischen zwei Impulsen verschiedener Breite
 \end_inset
 
  zu unterscheiden.
- Die einfachste Möglichkeit besteht darin, auf den Impulsanfang zu triggern
- und zu einem günstig gewählten Zeitpunkt 
+ Die einfachste MÃ¶glichkeit besteht darin, auf den Impulsanfang zu triggern
+ und zu einem gÃ¼nstig gewÃ¤hlten Zeitpunkt 
 \begin_inset Formula $T$
 \end_inset
 
@@ -7702,23 +8230,24 @@ cf
 
  Abbildung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{fig:prob_pulse_discrimination}
+\begin_inset LatexCommand ref
+reference "fig:prob_pulse_discrimination"
 
 \end_inset
 
 ).
- Wird kein gültiger Pegel mehr erkannt, gilt der Impuls als beendet, was
- mit einer bestimmten Wahrscheinlichkeit darauf hindeutet, daß der Impuls
+ Wird kein gÃ¼ltiger Pegel mehr erkannt, gilt der Impuls als beendet, was
+ mit einer bestimmten Wahrscheinlichkeit darauf hindeutet, daÃŸ der Impuls
  mit der Breite 
 \begin_inset Formula $T_{1}$
 \end_inset
 
  empfangen wurde.
- Die Wahrscheinlichkeit, daß es sich um den Impuls der Breite 
+ Die Wahrscheinlichkeit, daÃŸ es sich um den Impuls der Breite 
 \begin_inset Formula $T_{2}$
 \end_inset
 
- handelt, ist dann das komplementäre Ereignis.
+ handelt, ist dann das komplementÃ¤re Ereignis.
 \end_layout
 
 \begin_layout Standard
@@ -7737,8 +8266,12 @@ status open
 
 \end_layout
 
-\begin_layout Caption
-\begin_inset LatexCommand \label{fig:prob_pulse_discrimination}
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "fig:prob_pulse_discrimination"
 
 \end_inset
 
@@ -7750,9 +8283,15 @@ Pulsbreitendiskriminierung
 
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Geht man davon aus, daß die Impulsbreiten normalverteilt
-\begin_inset LatexCommand \index{Normalverteilung}
+Geht man davon aus, daÃŸ die Impulsbreiten normalverteilt
+\begin_inset LatexCommand index
+name "Normalverteilung"
 
 \end_inset
 
@@ -7761,9 +8300,11 @@ Geht man davon aus, daß die Impulsbreiten normalverteilt
 status open
 
 \begin_layout Standard
-Zentraler Grenzwertsatz für Summen von unabhängigen Zufallsvariablen\InsetSpace ~
+Zentraler Grenzwertsatz fÃ¼r Summen von unabhÃ¤ngigen Zufallsvariablen\InsetSpace ~
 
-\begin_inset LatexCommand \cite[70]{Koerner:1988}
+\begin_inset LatexCommand cite
+after "70"
+key "Koerner:1988"
 
 \end_inset
 
@@ -7780,7 +8321,7 @@ Zentraler Grenzwertsatz für Summen von unabhängigen Zufallsvariablen\InsetSpace 
 \begin_inset Formula $\mu_{i}$
 \end_inset
 
- der Erwartungswert des jeweiligen Impulses sind, dann gilt für die Wahrscheinli
+ der Erwartungswert des jeweiligen Impulses sind, dann gilt fÃ¼r die Wahrscheinli
 chkeitsdichten
 \end_layout
 
@@ -7794,7 +8335,7 @@ p_{i}(t)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\m
 \end_layout
 
 \begin_layout Standard
-Die zugehörige Verteilungsfunktion (
+Die zugehÃ¶rige Verteilungsfunktion (
 \begin_inset ERT
 status collapsed
 
@@ -7809,15 +8350,16 @@ cf
 
  Definitionsgleichung\InsetSpace ~
 
-\begin_inset LatexCommand \ref{eq:prob_distribution}
+\begin_inset LatexCommand ref
+reference "eq:prob_distribution"
 
 \end_inset
 
-), also die Wahrscheinlichkeit, daß der jeweilige Impuls (also 
+), also die Wahrscheinlichkeit, daÃŸ der jeweilige Impuls (also 
 \begin_inset Formula $T_{i}$
 \end_inset
 
-) kürzer als der Wert 
+) kÃ¼rzer als der Wert 
 \begin_inset Formula $t$
 \end_inset
 
@@ -7875,11 +8417,11 @@ F_{i}(t) & = & \int_{-\infty}^{(t-\mu_{i})/\sigma_{i}}\frac{1}{\sqrt{2\pi}}\exp\
 \end_layout
 
 \begin_layout Standard
-Die Wahrscheinlichkeit, daß der Impuls mit der Länge 
+Die Wahrscheinlichkeit, daÃŸ der Impuls mit der LÃ¤nge 
 \begin_inset Formula $T_{1}$
 \end_inset
 
- kürzer als 
+ kÃ¼rzer als 
 \begin_inset Formula $T$
 \end_inset
 
@@ -7896,7 +8438,7 @@ Die Wahrscheinlichkeit, daß der Impuls mit der Länge
 \end_layout
 
 \begin_layout Standard
-Entsprechend gilt für die Wahrscheinlichkeit den Impuls mit der Breite 
+Entsprechend gilt fÃ¼r die Wahrscheinlichkeit den Impuls mit der Breite 
 \begin_inset Formula $T_{2}$
 \end_inset
 
@@ -7936,7 +8478,7 @@ Bei gleicher Streuung
 \begin_inset Formula $\sigma=\sigma_{1}=\sigma_{2}$
 \end_inset
 
- für die Pulsbreiten 
+ fÃ¼r die Pulsbreiten 
 \begin_inset Formula $T_{i}$
 \end_inset
 
@@ -7963,7 +8505,7 @@ Die Wahrscheinlichkeit, einen der Impulse dabei falsch zu erkennen, liegt
 status open
 
 \begin_layout Standard
-Bei Berücksichtigung der Beziehung 
+Bei BerÃ¼cksichtigung der Beziehung 
 \begin_inset Formula $\cnorm(-x)=1-\cnorm(x)$
 \end_inset
 
@@ -7989,7 +8531,7 @@ Geht man dagegen vom gleichen relativen Fehler
 \begin_inset Formula $\varepsilon$
 \end_inset
 
- für beide Pulsbreiten aus, so ergibt sich mit
+ fÃ¼r beide Pulsbreiten aus, so ergibt sich mit
 \end_layout
 
 \begin_layout Standard
@@ -8017,7 +8559,7 @@ T & =2\frac{\mu_{1}\,\mu_{2}}{\mu_{1}+\mu_{2}}\mperiod\end{align*}
 \end_layout
 
 \begin_layout Standard
-Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
+Der gÃ¼nstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
  geometrischem und einfachem arithmetischen Mittelwert der beiden Pulsbreiten.
  Bei dieser Wahl ist die Wahrscheinlichkeit einen der Impulse falsch zu
  erkennen
@@ -8032,350 +8574,10 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 
 \end_layout
 
-\begin_layout Section
-\start_of_appendix
-Notation
-\end_layout
-
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-%% Description environment: modify label font and indentation
-\end_layout
-
-\begin_layout Standard
-
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-renewcommand{
-\backslash
-descriptionlabel}[1]{
-\backslash
-hspace{
-\backslash
-labelsep}
-\backslash
-makebox[1in][l]{
-\backslash
-textsf{#1}}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\acf_{xx}$
-\end_inset
-
- Autokorrelationsfunktion des Zufallsprozesses 
-\begin_inset Formula $\mvec{X}(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\acf_{xx}^{(E)}$
-\end_inset
-
- Autokorrelationsfunktion des Energiesignals 
-\begin_inset Formula $x(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\log$
-\end_inset
-
- Dekadischer Logarithmus
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\dirac(t)$
-\end_inset
-
- 
-\noun on
-Dirac
-\noun default
--Funktion
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\tilde{X}$
-\end_inset
-
- Effektivwert der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mu$
-\end_inset
-
- Erwartungswert der Normalverteilung
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mean(X)$
-\end_inset
-
- Erwartungswert der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\exp(x)$
-\end_inset
-
- Exponentialfunktion
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\expf$
-\end_inset
-
- 
-\noun on
-Euler
-\noun default
-'sche Zahl
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $*$
-\end_inset
-
- Faltungs-Operator
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\irf(t)$
-\end_inset
-
- Impulsantwort
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\cjgt[x]{t}$
-\end_inset
-
- Konjugierte Funktion 
-\begin_inset Formula $x(-t)$
-\end_inset
-
- im Zeitbereich
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\cjgt[X]{\ji\omega}$
-\end_inset
-
- Konjugiert komplexe Funktion 
-\begin_inset Formula $X(-\ji\omega)$
-\end_inset
-
- im Bildbereich
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\cov(X_{1},X_{2})$
-\end_inset
-
- Kovarianz der Zufallsgrößen 
-\begin_inset Formula $X_{1},X_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\corr(X_{1},X_{2})$
-\end_inset
-
- Korrelationskoeffizient der Zufallsgrößen 
-\begin_inset Formula $X_{1},X_{2}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\acf_{xy}$
-\end_inset
-
- Kreuzkorrelationsfunktion der Zufallsprozesse 
-\begin_inset Formula $\mvec{X}(t),\mvec{Y}(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\mean(X^{2})$
-\end_inset
-
- Quadratischer Effektivwert der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-SNR Signal-Rausch-Abstand
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\spd_{xx}$
-\end_inset
-
- Spektrale Leistungsdichte des Zufallsprozesses 
-\begin_inset Formula $\mvec{X}(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\spd_{xy}$
-\end_inset
-
- Spektrale Kreuzleistungsdichte der Zufallsprozesse 
-\begin_inset Formula $\mvec{X}(t),\mvec{Y}(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\spd_{xx}^{(E)}$
-\end_inset
-
- Spektrale Energiedichte des Signals 
-\begin_inset Formula $x(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\cnorm(x)$
-\end_inset
-
- Standard-Normalverteilung
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $f^{(-1)}(x)$
-\end_inset
-
- Umkehrfunktion von 
-\begin_inset Formula $f(x)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\sigma^{2}$
-\end_inset
-
- Varianz der Normalverteilung
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\var(X)$
-\end_inset
-
- Varianz der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $F(x)$
-\end_inset
-
- Verteilungsfunktion der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $F_{X}(\mvec{x})$
-\end_inset
-
- Verteilungsfunktion des Zufallsvektors 
-\begin_inset Formula $\mvec{X}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\pr$
-\end_inset
-
- Wahrscheinlichkeit
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $p(x)$
-\end_inset
-
- Wahrscheinlichkeitsdichte der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $p_{X}(\mvec{x})$
-\end_inset
-
- Wahrscheinlichkeitsdichte des Zufallsvektors 
-\begin_inset Formula $\mvec{X}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
-\begin_inset Formula $\avg{x(t)}$
-\end_inset
-
- Zeit-Mittelwert des Zufallssignals 
-\begin_inset Formula $x(t)$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset LatexCommand \bibtex[geralpha]{adsp,math}
+\begin_inset LatexCommand bibtex
+options "geralpha"
+bibfiles "adsp,math"
 
 \end_inset
 
@@ -8383,7 +8585,7 @@ SNR Signal-Rausch-Abstand
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand \printindex{}
+\begin_inset LatexCommand printindex
 
 \end_inset
 
