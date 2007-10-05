@@ -5,9 +5,7 @@
 \textclass scrartcl
 \begin_preamble
 \input{all-inc}
-
 \DeclareMathOperator{\crc}{CRC}
-\docsubj{CRC}{CRC}{CRC, Algebra}
 \end_preamble
 \options reqno
 \language german
@@ -30,6 +28,10 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
+\branch WITH_APPENDIX
+\selected 0
+\color #faf0e6
+\end_branch
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -47,11 +49,19 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status inlined
 
 \begin_layout Standard
-$Id: crc.lyx,v 1.7 2007-09-30 12:54:20 ralf Exp $
+
+%% $Id: crc.lyx,v 1.8 2007-10-05 08:01:26 ralf Exp $
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+docsubj{CRC}{CRC}{CRC, Algebra}
 \end_layout
 
 \end_inset
@@ -1511,9 +1521,18 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest
 \end_layout
 
 \begin_layout Standard
+\begin_inset Branch WITH_APPENDIX
+status collapsed
+
+\begin_layout Standard
 \start_of_appendix
 \begin_inset Include \include{../algebra/algebra.lyx}
 preview false
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 

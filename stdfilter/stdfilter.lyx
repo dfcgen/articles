@@ -10,8 +10,6 @@
 %% \usepackage{showidx}
 %% \usepackage{bibcheck}
 %% \usepackage{refcheck}
-
-\docsubj{Konventionelle Filter und ihre Approximationsfunktionen}{Filter}{Tschebyscheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische}
 \end_preamble
 \options reqno
 \language german
@@ -55,84 +53,26 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
+\begin_inset ERT
+status inlined
 
 \begin_layout Standard
-Version: $Id: stdfilter.lyx,v 1.14 2007-09-30 13:58:22 ralf Exp $
+
+%% $Id: stdfilter.lyx,v 1.15 2007-10-05 08:01:26 ralf Exp $
 \end_layout
 
-\begin_layout Itemize
-Needs the following packages: 
-\emph on
-pifont
-\emph default
-, 
-\emph on
-txfonts
-\emph default
-, 
-\emph on
-trfsigns
-\emph default
-, 
-\emph on
-amsopn
-\emph default
-, 
-\emph on
-amsfonts
-\emph default
-, 
-\emph on
-algorithm
-\emph default
-, 
-\emph on
-algorithmic
-\emph default
-, 
-\emph on
-html
-\emph default
-, 
-\emph on
-ifthen
-\emph default
-, 
-\emph on
-babel
-\emph default
-, 
-\emph on
-bibgerm
-\emph default
-, 
-\emph on
-newclude
-\emph default
- (Frankenstein), \SpecialChar \ldots{}
+\begin_layout Standard
 
+%%
 \end_layout
 
-\begin_layout Itemize
-Compatible with book-styles: 
-\emph on
-ams
-\emph default
-, 
-\emph on
-svmono
-\emph default
- (
-\emph on
-Springer
-\emph default
-) and 
-\emph on
-koma-script w/ amsmath, amsthm
-\emph default
- (my own LyX extension)
+\begin_layout Standard
+
+
+\backslash
+docsubj{Konventionelle Filter und ihre Approximationsfunktionen}{Filter}{Tscheby
+scheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische
+}
 \end_layout
 
 \end_inset
@@ -425,7 +365,7 @@ description "Exponentialfunktion"
 
 
 \begin_inset LatexCommand nomenclature
-prefix "arcosh"
+prefix "arctan"
 symbol "$\\arctan(x)$"
 description "Arcus Tangens"
 
@@ -465,7 +405,6 @@ description "Pol einer Funktion von $\\lps$"
 
 
 \begin_inset LatexCommand nomenclature
-prefix "omega0D"
 symbol "$\\zn[(\\drf)]{\\omega}{}$"
 description "Nullstelle von $\\drf(\\omega)$"
 
@@ -473,7 +412,6 @@ description "Nullstelle von $\\drf(\\omega)$"
 
 
 \begin_inset LatexCommand nomenclature
-prefix "omegaxD"
 symbol "$\\pn[(\\drf)]{\\omega}{}$"
 description "Pol von $\\drf(\\omega)$"
 
