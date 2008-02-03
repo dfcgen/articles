@@ -49,7 +49,7 @@ status inlined
 
 \begin_layout Standard
 
-%% $Id: elliptic.lyx,v 1.14 2007-10-05 08:01:26 ralf Exp $
+%% $Id: elliptic.lyx,v 1.15 2008-02-03 13:42:46 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -125,6 +125,30 @@ Jacobi
 
 \begin_layout Standard
 \begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+%% If file pdf-inc.tex is included in the preamble you should not use 
+\backslash
+listof{algorithm}{Liste der Algorithmen} from LyX menu.
+ Instead use the following:
+\end_layout
+
+\begin_layout Standard
+
+
+\backslash
+listof{Xalgorithm}{Liste der Algorithmen}
+\end_layout
 
 \end_inset
 
@@ -17708,7 +17732,7 @@ t_{0} & =b_{0}\tan\theta\nonumber \\
 \end_layout
 
 \begin_layout Standard
-Zurück zum eigentlichen Algorithmus läßt sich nun die folgende Rekursion
+Zurück zum eigentlichen Algorithmus läßt sich nun die folgende Iteration
  durchführen,
 \end_layout
 
@@ -17844,7 +17868,7 @@ ie
 
 \begin_layout Standard
 Nimmt man das rechtsseitige Integral als Ausgangspunkt für den nächsten
- Rekursionsschritt
+ Iterationsschritt
 \begin_inset Foot
 status open
 
@@ -18033,7 +18057,14 @@ eg
 \end_layout
 
 \begin_layout Standard
-was der zugehörige Algorithmus wiederspiegelt.
+was der zugehörige Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:ellk_calc"
+
+\end_inset
+
+ wiederspiegelt.
 \end_layout
 
 \begin_layout Standard
@@ -18868,7 +18899,7 @@ Da die Werte
 \begin_inset Formula $k_{i}$
 \end_inset
 
- eigentlich schon von der absteigenden Rekursion bekannt sind, kann auf
+ eigentlich schon von der absteigenden Iteration bekannt sind, kann auf
  die Neuberechnung verzichtet werden, wenn man den zusätzlich nötigen Speicherpl
 atz akzeptiert.
 \end_layout
