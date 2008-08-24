@@ -48,7 +48,7 @@ status inlined
 
 \begin_layout Standard
 
-%% $Id: algebra.lyx,v 1.14 2008-04-20 14:47:06 ralf Exp $
+%% $Id: algebra.lyx,v 1.15 2008-08-24 14:46:41 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -588,7 +588,7 @@ name "Lagrange, Satz von@\\noun{Lagrange}, Satz von"
 
 
 \noun default
- beschrieben
+ beschrieben.
 \begin_inset Foot
 status collapsed
 
@@ -607,7 +607,7 @@ Interessant ist in diesem Zusammenhang die Erkenntnis, daß die Ordnung der
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -679,7 +679,7 @@ description "Index der Gruppe $G$ über $H$"
 
 \end_inset
 
- geschrieben wird
+ geschrieben wird.
 \begin_inset Foot
 status collapsed
 
@@ -697,7 +697,7 @@ Die Bezeichnungsweise des Index in der Form
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Subsubsection
@@ -949,7 +949,7 @@ name "Gruppe!Halb-"
 
 \end_inset
 
-
+,
 \begin_inset Foot
 status collapsed
 
@@ -967,7 +967,7 @@ nicht
 
 \end_inset
 
-, 
+ 
 \begin_inset ERT
 status collapsed
 
@@ -1486,7 +1486,15 @@ die additive Gruppe
 \begin_inset Formula $(V,+)$
 \end_inset
 
- existiert
+ existiert und vom 
+\noun on
+abel
+\noun default
+'schen Typ ist (
+\begin_inset Formula $+:V\times V\rightarrow V$
+\end_inset
+
+);
 \begin_inset Foot
 status collapsed
 
@@ -1525,15 +1533,7 @@ Abel
 
 \end_inset
 
- und vom 
-\noun on
-abel
-\noun default
-'schen Typ ist (
-\begin_inset Formula $+:V\times V\rightarrow V$
-\end_inset
 
-);
 \end_layout
 
 \begin_layout Enumerate
@@ -1545,7 +1545,21 @@ für jeden Vektor
 \begin_inset Formula $a$
 \end_inset
 
- definiert ist
+ definiert ist und wieder zu einem Vektor 
+\begin_inset Formula $\mvec{u}=a\mvec{v}\in V$
+\end_inset
+
+ führt (Abgeschlossenheit
+\begin_inset LatexCommand index
+name "Abgeschlossenheit"
+
+\end_inset
+
+ der Abbildung 
+\begin_inset Formula $\cdot:K\times V\rightarrow V$
+\end_inset
+
+);
 \begin_inset Foot
 status collapsed
 
@@ -1563,21 +1577,7 @@ Die mit
 
 \end_inset
 
- und wieder zu einem Vektor 
-\begin_inset Formula $\mvec{u}=a\mvec{v}\in V$
-\end_inset
 
- führt (Abgeschlossenheit
-\begin_inset LatexCommand index
-name "Abgeschlossenheit"
-
-\end_inset
-
- der Abbildung 
-\begin_inset Formula $\cdot:K\times V\rightarrow V$
-\end_inset
-
-);
 \end_layout
 
 \begin_layout Enumerate
@@ -1795,7 +1795,7 @@ name "Vektor!-multiplikation"
 
 \end_inset
 
-
+.
 \begin_inset Foot
 status collapsed
 
@@ -1806,7 +1806,6 @@ Ohne für jeden Vektor ein multiplikativ inverses Element zu fordern.
 
 \end_inset
 
-.
  Speziell sind es folgende Axiome, die eine Algebra auszeichnen:
 \end_layout
 
@@ -3312,6 +3311,14 @@ name "Ordnung"
 \end_inset
 
  gilt
+\begin_inset LatexCommand nomenclature
+prefix "Zm"
+symbol "$\\mathbb{Z}_m$"
+description "Restklassenring der ganzen Zahlen\\footnote{Die ganzen Zahlen von $0$ bis $m-1$, \\ie modulo $m$} $\\mod m$"
+
+\end_inset
+
+:
 \begin_inset Foot
 status collapsed
 
@@ -3331,14 +3338,6 @@ Auch eine Einschränkung auf
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
-prefix "Zm"
-symbol "$\\mathbb{Z}_m$"
-description "Restklassenring der ganzen Zahlen\\footnote{Die ganzen Zahlen von $0$ bis $m-1$, \\ie modulo $m$} $\\mod m$"
-
-\end_inset
-
-:
 \end_layout
 
 \begin_layout Standard
@@ -3464,7 +3463,7 @@ name "Abgeschlossenheit"
 
 \end_inset
 
-
+;
 \begin_inset Foot
 status collapsed
 
@@ -3478,7 +3477,7 @@ Die Operation führt immer wieder auf ein Element in
 
 \end_inset
 
-; 
+ 
 \begin_inset Formula \begin{eqnarray*}
 \rcls{r}{m} & = & \rcls{r_{1}}{m}+\rcls{r_{2}}{m}=(a_{1}-mq_{1}+a_{2}-mq_{2})\bmod m\\
  & = & (a_{1}+a_{2})\bmod m-\left[m(q_{1}+q_{2})\right]\bmod m=(r_{1}+r_{2})\bmod m\\
@@ -3690,6 +3689,11 @@ Restklassenkörper
 \begin_layout Subsubsection
 
 \noun on
+\begin_inset LatexCommand label
+name "sec:algebra_galois_field"
+
+\end_inset
+
 Galois
 \noun default
 -Körper
@@ -3894,7 +3898,7 @@ name "Primzahlenkörper"
 
 \end_inset
 
- handelt
+ handelt.
 \begin_inset Foot
 status collapsed
 
@@ -3928,7 +3932,7 @@ description "Menge der Primzahlen"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Paragraph*
@@ -4070,28 +4074,7 @@ name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus"
 
 \end_inset
 
- stammende Erkenntnis, daß der größte gemeinsame Teiler 
-\begin_inset Formula $d=\gcd(r,s)$
-\end_inset
-
- zweier Elemente 
-\begin_inset Formula $r,s$
-\end_inset
-
- in der Form 
-\begin_inset Formula $d=xr+ys$
-\end_inset
-
- mit 
-\begin_inset Formula $x,y\in\mathbb{Z}$
-\end_inset
-
- darstellbar ist
-\begin_inset Foot
-status collapsed
-
-\begin_layout Standard
-Satz von 
+ stammende Erkenntnis (Satz von 
 \noun on
 B
 \begin_inset ERT
@@ -4108,12 +4091,29 @@ status inlined
 
 zout
 \noun default
-.
-\end_layout
+
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
 \end_inset
 
+), daß der größte gemeinsame Teiler 
+\begin_inset Formula $d=\gcd(r,s)$
+\end_inset
 
+ zweier Elemente 
+\begin_inset Formula $r,s$
+\end_inset
+
+ in der Form 
+\begin_inset Formula $d=\alpha r+\beta s$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
+\end_inset
+
+ darstellbar ist
 \begin_inset LatexCommand index
 name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
@@ -4135,14 +4135,7 @@ cf
  Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand ref
-reference "sub:algebra_euclid_generic"
-
-\end_inset
-
- auf Seite\InsetSpace ~
-
-\begin_inset LatexCommand pageref
-reference "sub:algebra_euclid_generic"
+reference "sec:algebra_euclid_generic"
 
 \end_inset
 
@@ -4151,8 +4144,8 @@ reference "sub:algebra_euclid_generic"
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{alignat*}{1}
-\gcd(r,m)=1 & =xr+ym\equiv xr\bmod m\\
-\rcls{1}{m} & =\rcls{x}{m}\cdot\rcls{r}{m}\mperiod\end{alignat*}
+\gcd(r,m)=1 & =\alpha r+\beta m\equiv\alpha r\bmod m\\
+\rcls{1}{m} & =\rcls{\alpha}{m}\cdot\rcls{r}{m}\mperiod\end{alignat*}
 
 \end_inset
 
@@ -4169,7 +4162,7 @@ Das inverse Element von
 
 \begin_layout Standard
 \begin_inset Formula \[
-{\rcls{r}{m}}^{-1}=\rcls{x}{m}\]
+{\rcls{r}{m}}^{-1}=\rcls{\alpha}{m}\]
 
 \end_inset
 
@@ -4187,9 +4180,9 @@ name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus!erweiterter"
 
 \end_inset
 
- berechnet werden
+ berechnet werden.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Diese Rechnung kann man natürlich auch in einem Ring ausführen, dann muß
@@ -4198,7 +4191,7 @@ Diese Rechnung kann man natürlich auch in einem Ring ausführen, dann muß
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Paragraph
@@ -4254,7 +4247,15 @@ name "Ordnung"
 
 \end_inset
 
- (Anzahl der Elemente) des Körpers darstellt
+ (Anzahl der Elemente) des Körpers darstellt\InsetSpace ~
+
+\begin_inset LatexCommand cite
+after "6.2"
+key "Peterson:1972"
+
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -4279,15 +4280,6 @@ key "Peterson:1972"
 
 \end_inset
 
-\InsetSpace ~
-
-\begin_inset LatexCommand cite
-after "6.2"
-key "Peterson:1972"
-
-\end_inset
-
-.
  Von praktischer Bedeutung ist insbesondere der Körper
 \begin_inset LatexCommand index
 name "Körper!$\\mathbb{Z}_2$"
@@ -4353,6 +4345,10 @@ name "Exklusiv-Oder"
 \end_inset
 
 
+\emph default
+.
+\emph on
+
 \begin_inset Foot
 status collapsed
 
@@ -4372,7 +4368,6 @@ XOR
 
 
 \emph default
-.
  Wie man sofort sieht ist das neutrale Element die 
 \begin_inset Formula $0$
 \end_inset
@@ -4473,7 +4468,7 @@ Galois
 \end_inset
 
  ist wegen ihrer Eigenschaften bezüglich des Potenzierens von Gruppenelementen
- sehr interessant
+ sehr interessant.
 \begin_inset Foot
 status collapsed
 
@@ -4488,7 +4483,6 @@ An dieser Stelle sei nocheinmal darauf hingewiesen, daß fast alle der folgenden
 
 \end_inset
 
-.
  Dazu soll die Folge aller Potenzen
 \begin_inset LatexCommand index
 name "Element!Potenzierung"
@@ -4527,7 +4521,7 @@ name "Abgeschlossenheit"
 \begin_inset Formula $l$
 \end_inset
 
- die Folge wiederholen
+ die Folge wiederholen.
 \begin_inset Foot
 status collapsed
 
@@ -4549,7 +4543,6 @@ Ohne weitere Einschränkungen muß man zur Kenntnis nehmen, daß
 
 \end_inset
 
-.
  Die Wiederholung der Folge ab einem bestimmten 
 \begin_inset Formula $l$
 \end_inset
@@ -4706,6 +4699,14 @@ Eine Ausdrucksmöglichkeit für die Potenzen
 \end_inset
 
  folgt, kann man sie wiefolgt definieren
+\begin_inset LatexCommand nomenclature
+prefix "N"
+symbol "$\\mathbb{N}$"
+description "Menge der natürlichen Zahlen"
+
+\end_inset
+
+:
 \begin_inset Foot
 status collapsed
 
@@ -4728,14 +4729,6 @@ Ohne dabei zu vergessen, daß jede Potenz
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
-prefix "N"
-symbol "$\\mathbb{N}$"
-description "Menge der natürlichen Zahlen"
-
-\end_inset
-
-:
 \end_layout
 
 \begin_layout Standard
@@ -5155,7 +5148,7 @@ name "Index"
 \begin_inset Formula $\left\langle g\right\rangle $
 \end_inset
 
- genau Eins
+ genau Eins.
 \begin_inset Foot
 status collapsed
 
@@ -5169,7 +5162,7 @@ Man spricht auch von einer maximalen Periode und meint damit
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -5495,7 +5488,7 @@ resp
 \begin_inset Formula $x-0$
 \end_inset
 
- mit einbeziehen
+ mit einbeziehen.
 \begin_inset Foot
 status collapsed
 
@@ -5513,7 +5506,7 @@ Somit bilden die Nullstellen von
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -5587,7 +5580,15 @@ name "Wilson, Satz von@\\noun{Wilson}, Satz von"
 
 \end_inset
 
+\InsetSpace ~
 
+\begin_inset LatexCommand cite
+after "II"
+key "Pollard:1975"
+
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -5602,15 +5603,7 @@ Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
-after "II"
-key "Pollard:1975"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -6140,7 +6133,7 @@ name "Polynom!irreduzibles"
 \begin_inset Formula $K$
 \end_inset
 
- reduzierbar ist
+ reduzierbar ist.
 \begin_inset Foot
 status collapsed
 
@@ -6180,7 +6173,7 @@ key "Peterson:1972"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -6387,7 +6380,7 @@ name "Restklassen!-division"
 \begin_inset Formula $r(x)$
 \end_inset
 
- führt
+ führt.
 \begin_inset Foot
 status collapsed
 
@@ -6405,7 +6398,6 @@ Die Menge der Elemente
 
 \end_inset
 
-.
  Die Kennzeichnung der zu 
 \begin_inset Formula $r(x)$
 \end_inset
@@ -6519,7 +6511,11 @@ Die Anzahl der Elemente
 \noun on
 Galois
 \noun default
--Körper
+-Körper 
+\begin_inset Formula $\GF\left(p^{n}\right)$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -6530,11 +6526,6 @@ Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
 
 \end_inset
 
- 
-\begin_inset Formula $\GF\left(p^{n}\right)$
-\end_inset
-
-.
  Wegen 
 \begin_inset Formula $\left|\mathbb{F}_{q}\right|=q=p^{n}$
 \end_inset
@@ -6545,7 +6536,15 @@ name "Gruppe!multiplikative"
 
 \end_inset
 
+ 
+\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\end_inset
 
+ die Ordnung 
+\begin_inset Formula $p^{n}-1$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -6576,15 +6575,7 @@ resp
 
 \end_inset
 
- 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
 
- die Ordnung 
-\begin_inset Formula $p^{n}-1$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Enumerate
@@ -7029,7 +7020,7 @@ reference "sec:algebra_extfield_example"
 \end_inset
 
  in einem Erweiterungskörper, dann muß es sich um ein irreduzibles Polynom
- (höheren Grades) handeln
+ (höheren Grades) handeln.
 \begin_inset Foot
 status collapsed
 
@@ -7043,7 +7034,6 @@ Und umgekehrt, denn
 
 \end_inset
 
-.
  Ein solcher Körper besteht aus 
 \begin_inset Formula $p^{n}$
 \end_inset
@@ -7278,7 +7268,7 @@ Aus diesem Grund läßt sich für jedes der irreduziblen Polynome
 \begin_inset Formula $m(x)$
 \end_inset
 
- die folgende Linearfaktordarstellung angeben
+ die folgende Linearfaktordarstellung angeben:
 \begin_inset Foot
 status collapsed
 
@@ -7344,7 +7334,7 @@ key "Peterson:1972"
 
 \end_inset
 
-:
+
 \end_layout
 
 \begin_layout Standard
@@ -7579,7 +7569,7 @@ reference "eq:algebra_product_elements"
 \begin_inset Formula $e_{(\cdot)}$
 \end_inset
 
- der multiplikativen Gruppe
+ der multiplikativen Gruppe.
 \begin_inset Foot
 status collapsed
 
@@ -7614,7 +7604,7 @@ ie
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -7640,10 +7630,14 @@ Funktionen und Algorithmen
 \end_layout
 
 \begin_layout Subsection
+GCD-Algorithmen
+\end_layout
+
+\begin_layout Subsubsection
 
 \noun on
 \begin_inset LatexCommand label
-name "sub:algebra_euclid_generic"
+name "sec:algebra_euclid_generic"
 
 \end_inset
 
@@ -7654,7 +7648,7 @@ Euklid
 
 \begin_layout Standard
 \begin_inset LatexCommand index
-name "größter gemeinsamer Teiler"
+name "größter gemeinsamer Teiler|("
 
 \end_inset
 
@@ -7668,13 +7662,13 @@ Der Algorithmus von
 \noun on
 Euklid
 \noun default
- 
+
 \begin_inset LatexCommand index
 name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus"
 
 \end_inset
 
-berechnet den größten gemeinsamen Teiler 
+ berechnet den größten gemeinsamen Teiler 
 \begin_inset Formula $d=\gcd(a,b)$
 \end_inset
 
@@ -7691,7 +7685,8 @@ description "Greatest Common Divisor (größter gemeinsamer Teiler)"
 \end_inset
 
 .
- Die grundlegende, iterativ
+ Die grundlegende, iterativ angewendete Rechenoperation dabei ist modulare
+ Division.
 \begin_inset Foot
 status collapsed
 
@@ -7705,15 +7700,23 @@ key "Menezes:1992"
 \end_inset
 
  mit 
-\begin_inset Formula $\mathcal{O}((\lg n)^{2})$
+\begin_inset Formula $\mathcal{O}(\lg^{2}n)$
 \end_inset
 
- angegeben.
+ angegeben, was in starkem Maße durch die fortlaufenden Divisionen bestimmt
+ wird.
+ Zur Komplexität verschiedener Varianten des GCD-Algorithmus' siehe auch\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Hars:2006"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
 
- angewendete Rechenoperation dabei ist, modulare Division.
  Algorithmus\InsetSpace ~
 
 \begin_inset LatexCommand ref
@@ -7727,20 +7730,20 @@ reference "alg:algebra_euclid_generic"
 \end_inset
 
  mit einer Modulo-Division 
-\begin_inset Formula $r_{2}=a\bmod b$
+\begin_inset Formula $c_{2}=a\bmod b$
 \end_inset
 
 .
  Im nächsten Schritt wird 
-\begin_inset Formula $r_{2}$
+\begin_inset Formula $c_{2}$
 \end_inset
 
  als Modul verwendet und 
-\begin_inset Formula $r_{3}=b\bmod r_{2}$
+\begin_inset Formula $c_{3}=b\bmod c_{2}$
 \end_inset
 
  berechnet, wonach 
-\begin_inset Formula $r_{4}=r_{2}\bmod r_{3}$
+\begin_inset Formula $c_{4}=c_{2}\bmod c_{3}$
 \end_inset
 
  folgt 
@@ -7758,16 +7761,16 @@ etc
 
 \InsetSpace \space{}
 Diese (wegen 
-\begin_inset Formula $r_{k+1}<r_{k}$
+\begin_inset Formula $c_{k+1}<c_{k}$
 \end_inset
 
 ) absteigende Sequenz endet wenn 
-\begin_inset Formula $r_{k+1}=0$
+\begin_inset Formula $c_{k+1}=0$
 \end_inset
 
  wird
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Das diese stetig absteigende Sequenz mit dem Wert 
@@ -7784,7 +7787,7 @@ Das diese stetig absteigende Sequenz mit dem Wert
 \end_inset
 
  befindet sich dann in 
-\begin_inset Formula $r_{k}$
+\begin_inset Formula $c_{k}$
 \end_inset
 
 .
@@ -7872,27 +7875,11 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $r_{0}\Leftarrow a$
+\begin_inset Formula $c_{0}\Leftarrow a$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-STATE
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r_{1}\Leftarrow b$
+, 
+\begin_inset Formula $c_{1}\Leftarrow b$
 \end_inset
 
 
@@ -7968,7 +7955,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $r_{k+1}=r_{k-1}\bmod r_{k}$
+\begin_inset Formula $c_{k+1}\Leftarrow c_{k-1}\bmod c_{k}$
 \end_inset
 
 
@@ -7988,7 +7975,7 @@ UNTIL{
 \end_inset
 
  
-\begin_inset Formula $r_{k+1}=0$
+\begin_inset Formula $c_{k+1}=0$
 \end_inset
 
 
@@ -8019,7 +8006,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $d\Leftarrow r_{k}$
+\begin_inset Formula $\gcd(a,b)\Leftarrow c_{k}$
 \end_inset
 
 
@@ -8049,7 +8036,7 @@ end{algorithmic}
 \begin_layout Paragraph*
 Beweis
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Standard
 Siehe auch\InsetSpace ~
@@ -8077,20 +8064,11 @@ key "Welschenbach:2001"
 \end_layout
 
 \begin_layout Standard
-Jeder Iterationsschritt
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-r_{i+1}=r_{i-1}\bmod r_{i}\]
-
+Jeder Iterationsschritt 
+\begin_inset Formula $c_{i+1}=c_{i-1}\bmod c_{i}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-kann in der Umkehrung (
+ kann in der Umkehrung (
 \begin_inset ERT
 status open
 
@@ -8122,7 +8100,7 @@ reference "sec:algebra_residue_classes"
 
 \begin_layout Standard
 \begin_inset Formula \[
-r_{i-1}=q_{i+1}r_{i}+r_{i+1},\qquad0\leq r_{i+1}<r_{i}\]
+c_{i-1}=q_{i+1}c_{i}+c_{i+1},\qquad0\leq c_{i+1}<c_{i}\]
 
 \end_inset
 
@@ -8136,13 +8114,13 @@ geschrieben werden.
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
-a=r_{0} & =q_{2}r_{1}+r_{2} & \qquad(r_{2}<r_{1})\\
-b=r_{1} & =q_{3}r_{2}+r_{3} & \qquad(r_{3}<r_{2})\\
-r_{2} & =q_{4}r_{3}+r_{4} & \qquad(r_{4}<r_{3})\\
+a=c_{0} & =q_{2}c_{1}+c_{2} & \qquad(c_{2}<c_{1})\\
+b=c_{1} & =q_{3}c_{2}+c_{3} & \qquad(c_{3}<c_{2})\\
+c_{2} & =q_{4}c_{3}+c_{4} & \qquad(c_{4}<c_{3})\\
  & \;\vdots\\
-r_{k-3} & =q_{k-1}r_{k-2}+r_{k-1} & \qquad(r_{k-1}<r_{k-2})\\
-r_{k-2} & =q_{k}r_{k-1}+r_{k} & \qquad(r_{k}<r_{k-1})\\
-r_{k-1} & =q_{k+1}r_{k}+0 & \qquad(r_{k+1}=0)\end{alignat*}
+c_{k-3} & =q_{k-1}c_{k-2}+c_{k-1} & \qquad(c_{k-1}<c_{k-2})\\
+c_{k-2} & =q_{k}c_{k-1}+c_{k} & \qquad(c_{k}<c_{k-1})\\
+c_{k-1} & =q_{k+1}c_{k}+0 & \qquad(c_{k+1}=0)\end{alignat*}
 
 \end_inset
 
@@ -8151,12 +8129,12 @@ r_{k-1} & =q_{k+1}r_{k}+0 & \qquad(r_{k+1}=0)\end{alignat*}
 
 \begin_layout Standard
 bis 
-\begin_inset Formula $r_{k+1}$
+\begin_inset Formula $c_{k+1}$
 \end_inset
 
  verschwindet.
  Warum 
-\begin_inset Formula $d=r_{k}$
+\begin_inset Formula $d=c_{k}$
 \end_inset
 
  ein gemeinsamer Faktor von 
@@ -8169,7 +8147,7 @@ bis
 
  ist, wird klar wenn man die Folge rückwärts betrachtet.
  In der letzten Zeile steht 
-\begin_inset Formula $r_{k-1}=q_{k+1}d$
+\begin_inset Formula $c_{k-1}=q_{k+1}d$
 \end_inset
 
 , also teilt 
@@ -8177,11 +8155,11 @@ bis
 \end_inset
 
  den Rest 
-\begin_inset Formula $r_{k-1}$
+\begin_inset Formula $c_{k-1}$
 \end_inset
 
  (oder kürzer 
-\begin_inset Formula $d\mid r_{k-1}$
+\begin_inset Formula $d\mid c_{k-1}$
 \end_inset
 
 
@@ -8198,7 +8176,7 @@ description "$a$ teilt $b$"
 \end_inset
 
  aber als Faktor in 
-\begin_inset Formula $r_{k-1}$
+\begin_inset Formula $c_{k-1}$
 \end_inset
 
  enthalten ist, dann kann man 
@@ -8207,29 +8185,29 @@ description "$a$ teilt $b$"
 
  auf der rechten Seite der vorletzten Gleichung ausklammern, weshalb es
  auch als Faktor in 
-\begin_inset Formula $r_{k-2}$
+\begin_inset Formula $c_{k-2}$
 \end_inset
 
  vorkommen muß.
  Dies setzt sich bis in die erste Gleichung fort (sämtliche Divisionsreste
  
-\begin_inset Formula $r_{0},r_{1},\ldots,r_{k}$
+\begin_inset Formula $c_{0},c_{1},\ldots,c_{k}$
 \end_inset
 
  enthalten folglich 
 \begin_inset Formula $d$
 \end_inset
 
- als Faktor), in der die Startbedingung 
-\begin_inset Formula $r_{0}=a$
+ als Teiler), in der die Startbedingung 
+\begin_inset Formula $c_{0}=a$
 \end_inset
 
  und 
-\begin_inset Formula $r_{1}=b$
+\begin_inset Formula $c_{1}=b$
 \end_inset
 
  verankert ist.
- Folglich ist der gemeinsame Teiler 
+ Deshalb ist der gemeinsame Teiler 
 \begin_inset Formula $d$
 \end_inset
 
@@ -8242,6 +8220,92 @@ description "$a$ teilt $b$"
 \end_inset
 
  enthalten.
+ 
+\end_layout
+
+\begin_layout Standard
+Viel kürzer kann man auch damit argumentieren, daß die Modulo-Division 
+\begin_inset Formula $c_{i+1}=c_{i-1}\bmod c_{i}$
+\end_inset
+
+ eine gcd-erhaltende Operation ist.
+ Denn mit der Faktorisierung 
+\begin_inset Formula $c_{i}=\bar{c}_{i}d$
+\end_inset
+
+ gilt (ausgehend von 
+\begin_inset Formula $c_{0}=a$
+\end_inset
+
+, 
+\begin_inset Formula $c_{1}=b$
+\end_inset
+
+) folgende Beziehung:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+c_{i+1}=c_{i-1}\bmod c_{i}=c_{i-1}-q_{i}c_{i}=\bar{c}_{i-1}d-q_{i}\bar{c}_{i}d=d(\bar{c}_{i-1}-q_{i}\bar{c}_{i})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ der gemeinsame Teiler 
+\begin_inset Formula $d$
+\end_inset
+
+ in 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ ist auch in 
+\begin_inset Formula $c_{i+1}$
+\end_inset
+
+ wieder enthalten.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Standard
+So gilt allgemein: 
+\begin_inset Formula $\gcd(a,b)=\gcd(a\bmod b,b)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+\gcd(c_{i-1},c_{i})=\gcd(c_{i+1},c_{i})=\gcd(c_{i-1}\bmod c_{i},c_{i})\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8251,31 +8315,31 @@ Damit
 
  wirklich den größten gemeinsamen Teiler stellt, muß es überhaupt alle gemeinsam
 en Teiler enthalten.
- Mit dem Zeil dies nachzuweisen betrachten wir nochmals die Folge beginnend
+ Mit dem Ziel dies nachzuweisen betrachten wir nochmals die Folge beginnend
  mit der vorletzten Gleichung, welche nach 
-\begin_inset Formula $r_{k}=d$
+\begin_inset Formula $c_{k}=d$
 \end_inset
 
  umgestellt wird.
  Ersetzt man darin 
-\begin_inset Formula $r_{k-1}$
+\begin_inset Formula $c_{k-1}$
 \end_inset
 
  mit Hilfe der vorvorletzten Gleichung und fährt aufsteigend fort, so erhält
  man eine lineare Darstellung für 
-\begin_inset Formula $d$
+\begin_inset Formula $d=\gcd(a,b)$
 \end_inset
 
-, welche auf natürlichen Zahlen 
-\begin_inset Formula $s,t\in\mathbb{N}$
+, welche auf ganzen Zahlen 
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
 \end_inset
 
  sowie 
-\begin_inset Formula $a$
+\begin_inset Formula $c_{0}=a$
 \end_inset
 
  und 
-\begin_inset Formula $b$
+\begin_inset Formula $c_{1}=b$
 \end_inset
 
  beruht.
@@ -8283,11 +8347,11 @@ en Teiler enthalten.
 
 \begin_layout Standard
 \begin_inset Formula \begin{align}
-d & =r_{k-2}-q_{k}r_{k-1}\nonumber \\
- & =r_{k-2}-q_{k}(r_{k-3}-q_{k-1}r_{k-2})=r_{k-2}(1+q_{k}q_{k-1})-r_{k-3}q_{k}\nonumber \\
- & =(r_{k-4}-q_{k-2}r_{k-3})(1+q_{k}q_{k-1})-r_{k-3}q_{k}=r_{k-4}(1+q_{k}q_{k-1})-r_{k-3}\left[q_{k-2}(1+q_{k}q_{k-1})+q_{k}\right]\nonumber \\
+d & =c_{k-2}-q_{k}c_{k-1}\nonumber \\
+ & =c_{k-2}-q_{k}(c_{k-3}-q_{k-1}c_{k-2})=c_{k-2}(1+q_{k}q_{k-1})-c_{k-3}q_{k}\nonumber \\
+ & =(c_{k-4}-q_{k-2}c_{k-3})(1+q_{k}q_{k-1})-c_{k-3}q_{k}=c_{k-4}(1+q_{k}q_{k-1})-c_{k-3}\left[q_{k-2}(1+q_{k}q_{k-1})+q_{k}\right]\nonumber \\
  & \;\vdots\nonumber \\
-(-1)^{k}d & =sr_{0}-tr_{1}=sa-tb\label{eq:algebra_euclid_bezout}\end{align}
+ & =\alpha c_{0}+\beta c_{1}=\alpha a+\beta b\label{eq:algebra_euclid_bezout}\end{align}
 
 \end_inset
 
@@ -8325,7 +8389,49 @@ name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
 \end_inset
 
- genannt wird, kann jetzt relativ einfach bewiesen werden, daß 
+ genannt wird,
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Identität nach Formel\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_euclid_bezout"
+
+\end_inset
+
+ kann man für 
+\begin_inset Formula $\alpha,\beta\in\mathbb{N}$
+\end_inset
+
+ auch als 
+\begin_inset Formula $d=\pm\alpha a\mp\beta b$
+\end_inset
+
+ schreiben.
+\end_layout
+
+\end_inset
+
+ kann jetzt relativ einfach bewiesen werden, daß 
 \begin_inset Formula $d$
 \end_inset
 
@@ -8355,7 +8461,212 @@ reference "eq:algebra_euclid_bezout"
 , weshalb nur dieser der größte gemeinsame Teiler sein kann.
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Paragraph*
+\begin_inset LatexCommand label
+name "sec:algebra_euclid_hint"
+
+\end_inset
+
+Hinweis
+\end_layout
+
+\begin_layout Standard
+An dieser Stelle muß unbedingt erwähnt werden, daß es unendlich viele lineare
+ Darstellungen für 
+\begin_inset Formula $d$
+\end_inset
+
+, als Funktion von 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+, gibt (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ auch die kurze Betrachtung zu diophantischen Gleichungen auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "sec:algebra_gcd_diophant"
+
+\end_inset
+
+).
+ Jede Substitution der Art
+\begin_inset LatexCommand nomenclature
+prefix "a"
+symbol "$\\bar{a}$"
+description "teilerfremder Teil von $a$ bezüglich einer anderen Zahl"
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha:=\alpha+n\bar{b}$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta:=\beta-n\bar{a}$
+\end_inset
+
+, wobei 
+\begin_inset Formula $a=d\bar{a}$
+\end_inset
+
+, 
+\begin_inset Formula $b=d\bar{b}$
+\end_inset
+
+ und 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+ gelten soll, erfüllt 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+'s Identität\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_euclid_bezout"
+
+\end_inset
+
+ genauso.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+d & =(\alpha+n\bar{b})a+(\beta-n\bar{a})b\\
+ & =\alpha a+\beta b+n(\bar{b}a-\bar{a}b)\\
+ & =\alpha a+\beta b+n(\bar{b}\bar{a}d-\bar{a}\bar{b}d)\\
+ & =\alpha a+\beta b\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die kleinsten Werte für 
+\begin_inset Formula $|\alpha|$
+\end_inset
+
+ und 
+\begin_inset Formula $|\beta|$
+\end_inset
+
+ zeichnen sich folglich durch die Relationen 
+\begin_inset Formula $|\alpha|<\bar{b}$
+\end_inset
+
+ und 
+\begin_inset Formula $|\beta|<\bar{a}$
+\end_inset
+
+ aus.
+ Um sie zu ermitteln kann man entweder 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ sukzessive von 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ subtrahieren/addieren oder man reduziert die Kofaktoren mit Hilfe von 
+\begin_inset Formula $q=\left\lfloor |\alpha|/\bar{b}\right\rfloor $
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $q=\left\lfloor |\beta|/\bar{a}\right\rfloor $
+\end_inset
+
+ und folgender Formeln:
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Sollte man nur an einem Kofaktor (beispielhaft 
+\begin_inset Formula $\alpha$
+\end_inset
+
+) interessiert sein, dann kann auf die Berechnung von 
+\begin_inset Formula $q$
+\end_inset
+
+ ganz verzichtet und statt dessen 
+\begin_inset Formula $\alpha:=\alpha\bmod\bar{b}$
+\end_inset
+
+ gerechnet werden.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\alpha & :=\alpha\mp q\bar{b} & \qquad\beta & :=\beta\pm q\bar{a}\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset LatexCommand label
+name "sec:algebra_euclid_extended"
+
+\end_inset
+
 Erweiterter 
 \noun on
 Euklid
@@ -8373,22 +8684,35 @@ Der erweiterte
 \noun on
 Euklid
 \noun default
-'ische Algorithmus, auch 
+'ische Algorithmus erlaubt eine effiziente Berechnung der 
 \noun on
-Berlekamp
-\noun default
--Algorithmus
-\begin_inset LatexCommand index
-name "Berlekamp-Algorithmus@\\noun{Berlekamp}-Algorithmus"
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
 
 \end_inset
 
- genannt, erlaubt die effiziente Berechnung der Linearfaktoren 
-\begin_inset Formula $s$
+zout
+\noun default
+
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
+-Kofaktoren 
+\begin_inset Formula $\alpha$
 \end_inset
 
  und 
-\begin_inset Formula $t$
+\begin_inset Formula $\beta$
 \end_inset
 
  zusammen (und gleichzeitig) mit dem größten gemeinsamen Teiler 
@@ -8397,7 +8721,7 @@ name "Berlekamp-Algorithmus@\\noun{Berlekamp}-Algorithmus"
 
 .
  Dazu berücksichtigt er einige Erkenntnisse aus dem vorigen Abschnitt, insbesond
-ere daß
+ere daß:
 \end_layout
 
 \begin_layout Itemize
@@ -8405,16 +8729,12 @@ der größte gemeinsame Teiler
 \begin_inset Formula $d=\gcd(a,b)$
 \end_inset
 
- und jedes Zwischenergebnis 
-\begin_inset Formula $r_{i}$
-\end_inset
-
  für 
-\begin_inset Formula $s,t\in\mathbb{Z}$
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
 \end_inset
 
  als Linearkombination 
-\begin_inset Formula $d=sa+tb$
+\begin_inset Formula $\alpha a+\beta b$
 \end_inset
 
  darstellbar ist;
@@ -8429,11 +8749,11 @@ der größte gemeinsame Teiler
 \end_inset
 
  jeden Rest 
-\begin_inset Formula $r_{i}$
+\begin_inset Formula $c_{i}$
 \end_inset
 
  teilt und damit die Darstellung 
-\begin_inset Formula $r_{i}=c_{i}d=s_{i}a+t_{i}b$
+\begin_inset Formula $c_{i}=de_{i}=\alpha_{i}a+\beta_{i}b$
 \end_inset
 
  rechtfertigt;
@@ -8441,11 +8761,11 @@ der größte gemeinsame Teiler
 
 \begin_layout Itemize
 die Berechnung von 
-\begin_inset Formula $r_{i+1}$
+\begin_inset Formula $c_{i+1}$
 \end_inset
 
- mittels 
-\begin_inset Formula $q_{i+1}=\left\lfloor r_{i-1}/r_{i}\right\rfloor $
+ mit Hilfe von 
+\begin_inset Formula $q_{i+1}=\left\lfloor c_{i-1}/c_{i}\right\rfloor $
 \end_inset
 
 
@@ -8463,7 +8783,7 @@ description "Kleinste ganze Zahl größer als $x$ (ceil)"
 \end_inset
 
  und 
-\begin_inset Formula $r_{i+1}=r_{i-1}-q_{i+1}r_{i}$
+\begin_inset Formula $c_{i+1}=c_{i-1}-q_{i+1}c_{i}$
 \end_inset
 
  erfolgen kann.
@@ -8475,7 +8795,7 @@ Durch Induktion ergibt sich aus
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-r_{i}=r_{i-2}-q_{i}r_{i-1}=c_{i}d=s_{i}a+t_{i}b\label{eq:algebra_euclid_ext}\end{equation}
+c_{i}=c_{i-2}-q_{i}c_{i-1}=de_{i}=\alpha_{i}a+\beta_{i}b\label{eq:algebra_euclid_ext}\end{equation}
 
 \end_inset
 
@@ -8484,11 +8804,11 @@ r_{i}=r_{i-2}-q_{i}r_{i-1}=c_{i}d=s_{i}a+t_{i}b\label{eq:algebra_euclid_ext}\end
 
 \begin_layout Standard
 durch Einsetzen von 
-\begin_inset Formula $r_{i-1}=s_{i-1}a+t_{i-1}b$
+\begin_inset Formula $c_{i-1}=\alpha_{i-1}a+\beta_{i-1}b$
 \end_inset
 
  und 
-\begin_inset Formula $r_{i}=s_{i}a+t_{i}b$
+\begin_inset Formula $c_{i}=\alpha_{i}a+\beta_{i}b$
 \end_inset
 
 :
@@ -8496,9 +8816,9 @@ durch Einsetzen von
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-r_{i+1} & =r_{i-1}-q_{i+1}r_{i}=s_{i+1}a+t_{i+1}b\\
- & =s_{i-1}a+t_{i-1}b-q_{i+1}(s_{i}a+t_{i}b)\\
- & =(s_{i-1}-q_{i+1}s_{i})a+(t_{i-1}-q_{i+1}t_{i})b\mperiod\end{align*}
+c_{i+1} & =c_{i-1}-q_{i+1}c_{i}=\alpha_{i+1}a+\beta_{i+1}b\\
+ & =\alpha_{i-1}a+\beta_{i-1}b-q_{i+1}(\alpha_{i}a+\beta_{i}b)\\
+ & =(\alpha_{i-1}-q_{i+1}\alpha_{i})a+(\beta_{i-1}-q_{i+1}\beta_{i})b\mperiod\end{align*}
 
 \end_inset
 
@@ -8506,27 +8826,27 @@ r_{i+1} & =r_{i-1}-q_{i+1}r_{i}=s_{i+1}a+t_{i+1}b\\
 \end_layout
 
 \begin_layout Standard
-Einfacher Vergleich mit Ausgangsformel\InsetSpace ~
+Vergleich mit Ausgangsformel\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "eq:algebra_euclid_ext"
 
 \end_inset
 
- erlaubt die Bestimmung der Werte für 
-\begin_inset Formula $s_{i+1}$
+ erlaubt die Bestimmung von 
+\begin_inset Formula $\alpha_{i+1}$
 \end_inset
 
  und 
-\begin_inset Formula $t_{i+1}$
+\begin_inset Formula $\beta_{i+1}$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Standard
+\begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat*}{2}
-s_{i+1} & =s_{i-1}-q_{i+1}s_{i} & t_{i+1} & =t_{i-1}-q_{i+1}t_{i}\end{xalignat*}
+\alpha_{i+1} & =\alpha_{i-1}-q_{i+1}\alpha_{i} & \beta_{i+1} & =\beta_{i-1}-q_{i+1}\beta_{i}\end{xalignat*}
 
 \end_inset
 
@@ -8535,15 +8855,15 @@ s_{i+1} & =s_{i-1}-q_{i+1}s_{i} & t_{i+1} & =t_{i-1}-q_{i+1}t_{i}\end{xalignat*}
 
 \begin_layout Standard
 Mit den Startwerten 
-\begin_inset Formula $s_{0}=1$
+\begin_inset Formula $\alpha_{0}=1$
 \end_inset
 
  und 
-\begin_inset Formula $t_{0}=0$
+\begin_inset Formula $\beta_{0}=0$
 \end_inset
 
  (gewährleistet 
-\begin_inset Formula $r_{0}=a$
+\begin_inset Formula $c_{0}=a$
 \end_inset
 
 ) 
@@ -8560,18 +8880,18 @@ resp
 \end_inset
 
  
-\begin_inset Formula $s_{1}=0$
+\begin_inset Formula $\alpha_{1}=0$
 \end_inset
 
  und 
-\begin_inset Formula $t_{1}=1$
+\begin_inset Formula $\beta_{1}=1$
 \end_inset
 
-(ebenso für 
-\begin_inset Formula $r_{1}=b$
+ (ebenso für 
+\begin_inset Formula $c_{1}=b$
 \end_inset
 
-) kann man nun Algorithmus\InsetSpace ~
+) kann man nun den entsprechenden Algorithmus\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "alg:algebra_euclid_extended"
@@ -8583,6 +8903,7 @@ reference "alg:algebra_euclid_extended"
 
 \begin_layout Standard
 \begin_inset Float algorithm
+placement H
 wide false
 sideways false
 status open
@@ -8658,27 +8979,27 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $r_{0}\Leftarrow a$
+\begin_inset Formula $c_{0}\Leftarrow a$
 \end_inset
 
 , 
-\begin_inset Formula $r_{1}\Leftarrow b$
+\begin_inset Formula $c_{1}\Leftarrow b$
 \end_inset
 
 , 
-\begin_inset Formula $s_{0}\Leftarrow1$
+\begin_inset Formula $\alpha_{0}\Leftarrow1$
 \end_inset
 
 , 
-\begin_inset Formula $s_{1}\Leftarrow0$
+\begin_inset Formula $\alpha_{1}\Leftarrow0$
 \end_inset
 
 , 
-\begin_inset Formula $t_{0}\Leftarrow0$
+\begin_inset Formula $\beta_{0}\Leftarrow0$
 \end_inset
 
 , 
-\begin_inset Formula $t_{1}\Leftarrow1$
+\begin_inset Formula $\beta_{1}\Leftarrow1$
 \end_inset
 
 
@@ -8754,7 +9075,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $q_{k+1}=\left\lfloor r_{k-1}/r_{k}\right\rfloor $
+\begin_inset Formula $q\Leftarrow\left\lfloor c_{k-1}/c_{k}\right\rfloor $
 \end_inset
 
  
@@ -8800,7 +9121,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $r_{k+1}=r_{k-1}-q_{k+1}r_{k}$
+\begin_inset Formula $c_{k+1}\Leftarrow c_{k-1}-qc_{k}$
 \end_inset
 
  
@@ -8819,7 +9140,7 @@ COMMENT{
 \end_inset
 
 Modulo-Division 
-\begin_inset Formula $r_{k+1}=r_{k-1}\bmod r_{k}$
+\begin_inset Formula $c_{k+1}=c_{k-1}\bmod c_{k}$
 \end_inset
 
 
@@ -8850,7 +9171,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $s_{k+1}=s_{k-1}-q_{k+1}s_{k}$
+\begin_inset Formula $\alpha_{k+1}\Leftarrow\alpha_{k-1}-q\alpha_{k}$
 \end_inset
 
 
@@ -8870,7 +9191,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $t_{k+1}=t_{k-1}-q_{k+1}t_{k}$
+\begin_inset Formula $\beta_{k+1}\Leftarrow\beta_{k-1}-q\beta_{k}$
 \end_inset
 
 
@@ -8890,7 +9211,7 @@ UNTIL{
 \end_inset
 
  
-\begin_inset Formula $r_{k+1}=0$
+\begin_inset Formula $c_{k+1}=0$
 \end_inset
 
 
@@ -8921,15 +9242,15 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $d\Leftarrow r_{k}$
+\begin_inset Formula $d\Leftarrow c_{k}$
 \end_inset
 
 , 
-\begin_inset Formula $s\Leftarrow s_{k}$
+\begin_inset Formula $\alpha\Leftarrow\alpha_{k}$
 \end_inset
 
 , 
-\begin_inset Formula $t\Leftarrow t_{k}$
+\begin_inset Formula $\beta\Leftarrow\beta_{k}$
 \end_inset
 
 
@@ -8956,21 +9277,114 @@ end{algorithmic}
 
 \end_layout
 
-\begin_layout Subsection
+\begin_layout Subsubsection
+\begin_inset LatexCommand label
+name "sec:algebra_gcd_extended"
 
-\noun on
-Montgomery
-\noun default
--Potenzierung
+\end_inset
+
+Binärer GCD-Algorithmus
 \end_layout
 
 \begin_layout Standard
-Schnelle Methode zum Exponenzieren, bei der die fortlaufende Modulo-Reduktion
- der Multiplikations-Zwischenergebnisse ohne echte Langzahldivision vorgenommen
- werden kann\InsetSpace ~
+\begin_inset LatexCommand index
+name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus!binärer"
+
+\end_inset
+
+Der binäre GCD-Algorithmus kommt im Gegensatz zum klassischen 
+\noun on
+Euklid
+\noun default
+'ischen Algorithmus ohne Divisionen aus\InsetSpace ~
 
 \begin_inset LatexCommand cite
-key "Montgomery:1985"
+key "Stein:1967,Knuth:TAOCP2:1998"
+
+\end_inset
+
+.
+ Statt dessen wird (beginnend mit 
+\begin_inset Formula $a_{0}=a$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}=b$
+\end_inset
+
+) durch Subtraktion und Halbierung eine stetige Reduktion der Argumente
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+ vorgenomen, welche letztlich zum größten gemeinsamen Teiler 
+\begin_inset Formula $d=\gcd(a,b)$
+\end_inset
+
+ führt.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Im Grundsatz unterscheidet er sich nicht vom 
+\noun on
+Euklid
+\noun default
+'ischen Algorithmus, der in ähnlicher Art und Weise die Argumente stetig
+ reduziert und dabei den größten gemeinsamen Teiler 
+\begin_inset Formula $d$
+\end_inset
+
+ bewahrt.
+ Die Halbierung eines der Argumente ist allerdings in Software (durch Verschiebu
+ng um ein Bit) effizient zu realisieren.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+d & =\gcd(a_{0},b_{0})\\
+ & =\gcd(a_{1},b_{1})\\
+ & \vdots\\
+ & =\gcd(a_{i},b_{i})\\
+ & \vdots\\
+ & =\gcd(a_{k},0)=a_{k}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Algorithmus endet spätestens dann, wenn im Schritt 
+\begin_inset Formula $i=k$
+\end_inset
+
+ eines der beiden Argumente 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ verschwindet (im obigen Fall beispielhaft für 
+\begin_inset Formula $b_{k}=0$
+\end_inset
+
+).
+ Das Reduktionsschema zeigt Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_binary_reduction"
 
 \end_inset
 
@@ -8978,28 +9392,647 @@ key "Montgomery:1985"
 \end_layout
 
 \begin_layout Standard
-Voraussetzung 
-\begin_inset Formula $\gcd(r,n)=1$
-\end_inset
-
- und 
-\begin_inset Formula $r>n$
-\end_inset
-
-, 
-\begin_inset ERT
+\begin_inset Float table
+wide true
+sideways false
 status open
 
 \begin_layout Standard
+\begin_inset Caption
 
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab:algebra_gcd_binary_reduction"
 
-\backslash
-ie
+\end_inset
+
+Reduktionsschema des binären GCD-Algorithmus
 \end_layout
 
 \end_inset
 
- nach dem Satz von 
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="8" columns="4">
+<features headTopDL="true" headBottomDL="true">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="left" valignment="top" leftline="true" rightline="true" width="3in">
+<row topline="true" bottomline="true" endhead="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\gcd(a_{i+1},b_{i+1})=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+Begründung
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{2\gcd\left(\frac{a_{i}}{2},\frac{b_{i}}{2}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gemeinsamer Teiler ist 2
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\gcd\left(\frac{a_{i}}{2},b_{i}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2 ist kein gemeinsamer Teiler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\gcd\left(a_{i},\frac{b_{i}}{2}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+2 ist kein gemeinsamer Teiler
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $a_{i}>b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\gcd\left(\frac{a_{i}-b_{i}}{2},b_{i}\right)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}-b_{i}$
+\end_inset
+
+, wie auch 
+\begin_inset Formula $a_{i}+b_{i}$
+\end_inset
+
+, enthalten den Teiler 
+\begin_inset Formula $\gcd(a_{i},b_{i})=d$
+\end_inset
+
+, denn 
+\begin_inset Formula $a_{i}=\bar{a}_{i}d$
+\end_inset
+
+, 
+\begin_inset Formula $b_{i}=\bar{b}_{i}d$
+\end_inset
+
+ führt zu 
+\begin_inset Formula $\gcd(a_{i}-b_{i},b_{i})=\gcd[d(\bar{a}_{i}-\bar{b}_{i}),\bar{b}_{i}d]$
+\end_inset
+
+.
+\newline
+Außerdem sind sowohl Summe als auch Differenz gerade Zahlen (
+\begin_inset Formula $a_{i}=2\nu+1$
+\end_inset
+
+, 
+\begin_inset Formula $b_{i}=2\mu+1$
+\end_inset
+
+ ergibt 
+\begin_inset Formula $a_{i}-b_{i}=2(\nu-\mu)$
+\end_inset
+
+), weshalb 2 als gemeinsamer Teiler wieder ausgeschlossen werden kann.
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $b_{i}>a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\gcd(a_{i},\frac{b_{i}-a_{i}}{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+siehe Fall 
+\begin_inset Formula $a_{i}>b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ ist größter gemeinsamer Teiler mit 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}>0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ist größter gemeinsamer Teiler mit 
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+\begin_inset LatexCommand label
+name "sec:algebra_gcd_binary_notes"
+
+\end_inset
+
+Anmerkungen
+\end_layout
+
+\begin_layout Enumerate
+In jedem Schritt wird entweder 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ um mindestens ein Bit reduziert.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Wodurch zwar mehr Schritte als beim 
+\noun on
+Euklid
+\noun default
+'ischen Algorithmus nötig sind, sich die Ausführungszeit (durch Vermeidung
+ von Langzahldivisionen) aber typischerweise verringert.
+ Die Komplexität des Algorithmus' bleibt unverändert quadratisch, kann aber
+ durch eine systolische Implementierung nach 
+\begin_inset LatexCommand cite
+key "Brent:1983,Jebelean:1993b,Bojanczyk:1987"
+
+\end_inset
+
+ sogar bis auf 
+\begin_inset Formula $\mathcal{O}(n)$
+\end_inset
+
+ reduziert werden.
+\end_layout
+
+\end_inset
+
+ Konkret gilt für die Anzahl der Iterationsschritte 
+\begin_inset Formula $k$
+\end_inset
+
+, wenn 
+\begin_inset Formula $m$
+\end_inset
+
+ die Größe von 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ in Bits darstellt\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
+
+\end_inset
+
+: 
+\begin_inset Formula $m-1\leq k-1\leq2m-1$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Halbierung des Arguments für den Fall, daß 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade sind, muß man nicht unbedingt im Iterationsschritt 
+\begin_inset Formula $i$
+\end_inset
+
+ ausführen.
+ Es ist durchaus legitim, falls beispielsweise 
+\begin_inset Formula $a_{i}\geq b_{i}$
+\end_inset
+
+ gilt, einfach nur 
+\begin_inset Formula $a_{i+1}=a_{i}-b_{i}$
+\end_inset
+
+ zu berechnen.
+ Die Differenz ergibt ja bekanntlich wieder eine gerade Zahl (dann ist 
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+ gerade, 
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+ ungerade) und es kommt im nächsten Iterationsschritt zu der gewünschten
+ Halbierung.
+\end_layout
+
+\begin_layout Enumerate
+Den Fall, daß sowohl 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ als auch 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ gerade sind, kann man grundsätzlich aus der Haupt-Iterations\SpecialChar \-
+schleife herauszieh
+en.
+ Denn wird einmal eines der beiden Argumente ungerade, dann kann dieser
+ Fall niemals wieder eintreten (genau das ungerade Argument ist in allen
+ anderen Reduktionsfällen unveränderlich).
+ Solange beide Argumente gerade sind, kann man sie also kontinuierlich reduziere
+n, bis nach 
+\begin_inset Formula $n$
+\end_inset
+
+ Schritten entweder 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade geworden ist.
+ Danach kann auf 
+\begin_inset Formula $a_{n}=a/2^{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{n}=b/2^{n}$
+\end_inset
+
+ irgendein binärer (erweiterter) GCD-Algorithmus angewendet werden, der
+ 
+\begin_inset Formula $\gcd(a_{n},b_{n})=\alpha_{n}a_{n}+\beta_{n}b_{n}$
+\end_inset
+
+ ermittelt.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+d & =2^{n}\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
+ & =2^{n}(\alpha_{n}a_{n}+\beta_{n}b_{n})=\alpha_{n}a+\beta_{n}b\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der so ermittelte größte gemeinsame Teiler muß am Schluß nur noch mit 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ multipliziert werden (also um 
+\begin_inset Formula $n$
+\end_inset
+
+ Bit verschoben), was auch Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_even_args"
+
+\end_inset
+
+ entsprechend wiedergibt.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die 
 \noun on
 B
 \begin_inset ERT
@@ -9016,28 +10049,5433 @@ status inlined
 
 zout
 \noun default
- 
-\begin_inset Formula $(-1)^{k}=sr-tn$
+-Koeffizienten 
+\begin_inset Formula $\alpha$
 \end_inset
 
- mit 
-\begin_inset Formula $s,t\in\mathbb{N}$
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ müssen übrigens nicht korrigiert werden.
+\end_layout
+
+\end_inset
+
+ Wir können deshalb in den Betrachtungen zum erweiterten binären GCD-Algorithmus
+ (siehe nächste Abschnitte) immer voraussetzen, daß 
+\begin_inset Formula $a$
+\end_inset
+
+ oder 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "alg:algebra_gcd_even_args"
+
+\end_inset
+
+Reduktion gerader Argumente
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
 \begin_layout Standard
-Wie betrachten eine einzelne Multiplikation 
-\begin_inset Formula $c=ab\pmod{n}$
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
 \end_inset
 
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $n\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a$
+\end_inset
+
+ gerade 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $a\Leftarrow a/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $b\Leftarrow b/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $n\Leftarrow n+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $d\Leftarrow2^{n}\gcd(a,b)$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+GCD-Algorithmus mit Voraussetzung: 
+\begin_inset Formula $a$
+\end_inset
+
+ oder 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Subsubsection
+Erweiterter binärer GCD-Algorithmus
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset LatexCommand label
+name "sec:algebra_gcd_kaliski"
+
+\end_inset
+
+Algorithmus nach 
+\noun on
+Kaliski
+\noun default
+\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Betrachtet man das Reduktionsschema des binären GCD-Algorithmus, so kann
+ man verschiedenste lineare Transformationen der Art
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+a_{i} & =u_{i+1}^{\prime}a_{i+1}+v_{i+1}^{\prime}b_{i+1} & a_{i+1} & =u_{i}^{\prime\prime}a_{i}+v_{i}^{\prime\prime}b_{i}\\
+b_{i} & =s_{i+1}^{\prime}a_{i+1}+t_{i+1}^{\prime}b_{i+1} & b_{i+1} & =s_{i}^{\prime\prime}a_{i}+t_{i}^{\prime\prime}b_{i},\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+definieren, wobei sich die einzelnen Betrachtungsweisen durch unterschiedliche
+ Werte in den Koeffizienten unterscheiden.
+ Bei jedem Schritt sind so 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ als lineare Funktion von 
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+ darstellbar, die Ausgangsgrößen 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ deshalb als lineare Funktionen von 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{alignat}{3}
+a_{0} & =u_{i}a_{i}+v_{i}b_{i} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_kaliski_a0}\\
+b_{0} & =s_{i}a_{i}+t_{i}b_{i} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_kaliski_b0}\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch Einsetzen von 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ in folgende Gleichung,
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+u_{i}a_{i}+v_{i}b_{i} & =u_{i+1}a_{i+1}+v_{i+1}b_{i+1}\\
+s_{i}a_{i}+t_{i}b_{i} & =s_{i+1}a_{i+1}+t_{i+1}b_{i+1}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gefolgt von einem Koeffizientenvergleich, kann man für die konkreten Reduktionsf
+älle die jeweilige Transformationen der Linearfaktoren ableiten (siehe Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_kaliski"
+
+\end_inset
+
+).
+ Am Beispiel 
+\begin_inset Formula $a_{i+1}=(a_{i}-b_{i})/2$
+\end_inset
+
+, 
+\begin_inset Formula $b_{i+1}=b_{i}$
+\end_inset
+
+ soll das Vorgehen exemplarisch verdeutlicht werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+s_{i}a_{i}+t_{i}b_{i} & =s_{i+1}\frac{a_{i}-b_{i}}{2}+t_{i+1}b_{i}\\
+ & =\frac{s_{i+1}}{2}a_{i}+\left(t_{i+1}-\frac{s_{i+1}}{2}\right)b_{i}\\
+ & =\underbrace{\frac{s_{i+1}}{2}}_{s_{i}}a_{i}+\underbrace{\left(t_{i+1}-s_{i}\right)}_{t_{i}}b_{i}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus den Transformationen nach Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_kaliski"
+
+\end_inset
+
+ kann man außerdem die Determinante
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\mdet{D_{i}}=u_{i}t_{i}-s_{i}v_{i}=\left|\begin{array}{cc}
+u_{i} & v_{i}\\
+s_{i} & t_{i}\end{array}\right|\mbox{ , mit }\mdet{D_{0}}=1\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+bestimmen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab:algebra_gcd_kaliski"
+
+\end_inset
+
+Linearfaktoren beim binären GCD-Algorithmus nach 
+\noun on
+Kaliski
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="6" columns="9">
+<features>
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $v_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $t_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mdet{D_{i+1}}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{a_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{b_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $4\mdet{D_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{a_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2\mdet{D_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{b_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2\mdet{D_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $a_{i}\geq b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{a_{i}-b_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}+v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}+t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2\mdet{D_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $b_{i}>a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{b_{i}-a_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}+v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}+t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $2\mdet{D_{i}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um den Zusammenhang mit den 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Koeffizienten 
+\begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
+\end_inset
+
+ in 
+\begin_inset Formula $\gcd(a,b)=\alpha a_{0}+\beta b_{0}$
+\end_inset
+
+ herzustellen, stellen wir die Formeln\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_a0"
+
+\end_inset
+
+ und\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_b0"
+
+\end_inset
+
+ nach 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ um.
+ Dazu werden beide Gleichungen mit den Linearfaktoren der jeweils anderen
+ multipliziert und dann wechselweise voneinander subtrahiert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xxalignat}{2}
+s_{i}a_{0}-u_{i}b_{0} & =s_{i}(u_{i}a_{i}+v_{i}b_{i})-u_{i}(s_{i}a_{i}+t_{i}b_{i}) & t_{i}a_{0}-v_{i}b_{0} & =t_{i}(u_{i}a_{i}+v_{i}b_{i})-v_{i}(s_{i}a_{i}+t_{i}b_{i})\\
+ & =(s_{i}v_{i}-u_{i}t_{i})b_{i} &  & =(u_{i}t_{i}-s_{i}v_{i})a_{i}\\
+ & =-\mdet{D_{i}}\, b_{i} &  & =\mdet{D_{i}}\, a_{i}\end{xxalignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Schließt man den Fall aus, daß 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ gerade sind (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Anmerkungen in Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "sec:algebra_gcd_extended"
+
+\end_inset
+
+), dann kann für den letzten Iterationsschritt 
+\begin_inset Formula $i=k$
+\end_inset
+
+ folgendermaßen konkretisiert werden (in Abhängigkeit davon, ob 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ zuerst verschwindet):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+s_{k}a_{0}-u_{k}b_{0} & =0 & s_{k}a_{0}-u_{k}b_{0} & =-2^{k}b_{k}\\
+t_{k}a_{0}-v_{k}b_{0} & =2^{k}a_{k} & t_{k}a_{0}-v_{k}b_{0} & =0\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An diesem Punkt stellen wir jedoch fest, daß es sich bei den Größen 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ nicht um die Kofaktoren von 
+\begin_inset Formula $\gcd(a,b)$
+\end_inset
+
+, sondern um eine Linearfaktordarstellung von 
+\begin_inset Formula $2^{k}\gcd(a,b)$
+\end_inset
+
+ handelt.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Für Anwendungen, die im weiteren eine 
+\noun on
+Montgomery
+\noun default
+-Reduktion vornehmen, kann dies sogar von Vorteil sein\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+a_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0} & b_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0}\\
+2^{k}\gcd(a,b) & =t_{k}a_{0}-v_{k}b_{0} & 2^{k}\gcd(a,b) & =-s_{k}a_{0}+u_{k}b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um aus 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+ die 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Koeffizienten 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ zu bestimmen, sind zusätzliche Reduktionsschritte nötig.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+In\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
+
+\end_inset
+
+ Korrekturphase (oder Phase\InsetSpace ~
+II) genannt.
+\end_layout
+
+\end_inset
+
+ Ziel ist es dabei, die rechte Seite der letzten Gleichung durch 
+\begin_inset Formula $2^{k}$
+\end_inset
+
+ zu dividieren (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ in 
+\begin_inset Formula $k$
+\end_inset
+
+ Schritten wiederholt durch 2).
+ Da die linke Seite immer eine gerade Zahl ist, können folgende Schlußfolgerunge
+n im Falle 
+\begin_inset Formula $b_{k}=0$
+\end_inset
+
+ gezogen werden (falls 
+\begin_inset Formula $a_{k}=0$
+\end_inset
+
+ war, äquivalent für 
+\begin_inset Formula $t_{k}\rightarrow s_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $v_{k}\rightarrow u_{k}$
+\end_inset
+
+), wobei der Einfachheit halber die Indizierung jetzt weggelassen wird:
+\begin_inset LatexCommand label
+name "page:algebra_gcd_kaliski_parity"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sind 
+\begin_inset Formula $v$
+\end_inset
+
+ und 
+\begin_inset Formula $t$
+\end_inset
+
+ gerade, dann ist eine ganzzahlige Halbierung 
+\begin_inset Formula $v:=v/2$
+\end_inset
+
+, 
+\begin_inset Formula $t:=t/2$
+\end_inset
+
+ möglich (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ führt wieder zu einer ganzen Zahl).
+\end_layout
+
+\begin_layout Itemize
+In allen anderen Fällen (
+\begin_inset Formula $t$
+\end_inset
+
+ und/oder 
+\begin_inset Formula $v$
+\end_inset
+
+ sind ungerade) kann man wegen
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+2^{i}\gcd(a,b)=(t+b)a-(v+a)b\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die Reduktion 
+\begin_inset Formula $t:=(t+b)/2$
+\end_inset
+
+, 
+\begin_inset Formula $v:=(v+a)/2$
+\end_inset
+
+ vornehmen, denn:
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Die Verwendung von mehreren Absätzen oder anderen Umgebungen in Fußnoten
+ ergibt bei der Umwandlung nach HTML oftmals Fehler.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+\noindent
+Grundlage bilden folgende Gesetzmäßigkeiten:
+\newline
+1.\InsetSpace ~
+Die Summe/Differenz zweier
+ ungerader Zahlen oder zweier gerader Zahlen ist eine gerade Zahl.
+\newline
+2.\InsetSpace ~
+Die Summe/Diff
+erenz einer ungeraden und einer geraden Zahlen ist eine ungerade Zahl.
+\newline
+3.\InsetSpace ~
+Das
+ Produkt zweier ungerader Zahlen ist eine ungerade Zahl.
+ Alle anderen Kombinationen ergeben bei der Multiplikation eine gerade Zahl.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+Sollte 
+\begin_inset Formula $v$
+\end_inset
+
+ ungerade sein, dann müssen es 
+\begin_inset Formula $t$
+\end_inset
+
+ und 
+\begin_inset Formula $a$
+\end_inset
+
+ auch, damit 
+\begin_inset Formula $ta-vb$
+\end_inset
+
+ eine gerade Zahl ist (
+\begin_inset Formula $b$
+\end_inset
+
+ soll nach Voraussetzung sowieso ungerade sein).
+ Die Subtraktion von 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ ändert einerseits obige Gleichung nicht, andererseits ist das Ergebnis
+ wieder eine gerade Zahl.
+\end_layout
+
+\begin_layout Itemize
+Ist 
+\begin_inset Formula $v$
+\end_inset
+
+ gerade und 
+\begin_inset Formula $t$
+\end_inset
+
+ ungerade (letzter möglicher Fall), so muß 
+\begin_inset Formula $a$
+\end_inset
+
+ gerade sein.
+ Die Subtraktion 
+\begin_inset Formula $v-a$
+\end_inset
+
+ führt damit zu einer geraden Zahl, das Ergebnis von 
+\begin_inset Formula $t-b$
+\end_inset
+
+ ist als Differenz zweier ungerader Zahlen ebenfalls gerade.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Als Ergebnis der Ausführungen kann man nun Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_kaliski"
+
+\end_inset
+
+ formulieren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "alg:algebra_gcd_kaliski"
+
+\end_inset
+
+Algorithmus 
+\begin_inset Formula $d=\gcd(a,b)=\alpha a+\beta b$
+\end_inset
+
+ nach 
+\noun on
+Kaliski
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+REQUIRE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade
+\end_layout
+
+\begin_layout Standard
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Phase\InsetSpace ~
+I
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(a_{0},u_{0},s_{0})\Leftarrow(a,1,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(b_{0},v_{0},t_{0})\Leftarrow(b,0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $f\Leftarrow0$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Flag, daß anzeigt, ob schlußendlich 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ oder 
+\begin_inset Formula $\beta$
+\end_inset
+
+ negativ ist
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}>0$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $b_{k}>a_{k}$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(b_{k},v_{k},t_{k})\Longleftrightarrow(a_{k},u_{k},s_{k})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+gewährleistet 
+\begin_inset Formula $a_{k}\geq b_{k}$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $f\Leftarrow\overline{f}$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+invertiere 
+\begin_inset Formula $\mbox{flag}$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ ungerade 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(a_{k},v_{k},t_{k})\Longleftarrow(a_{k}-b_{k},v_{k}+u_{k},t_{k}+s_{k})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ ist jetzt gerade, 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ weiterhin ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(a_{k+1},u_{k+1},s_{k+1})\Longleftarrow(a_{k}/2,2u_{k},2s_{k})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ gerade, 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(b_{k+1},v_{k+1},t_{k+1})\Longleftarrow(b_{k}/2,2v_{k},2t_{k})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ ungerade, 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $k\Leftarrow k+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\gcd(a,b)\Leftarrow b_{k}$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Teilergebnis 
+\begin_inset Formula $d=\gcd(a,b)$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Phase\InsetSpace ~
+II
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\Longleftarrow s_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\beta\Longleftarrow u_{k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $f=1$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\beta\Longleftrightarrow\alpha$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Tausche 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $k>0$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ ungerade 
+\begin_inset Formula $\vee$
+\end_inset
+
+ 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\Longleftarrow\alpha+b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\beta\Longleftarrow\beta+a$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ sind jetzt gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\beta\Longleftarrow\beta/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha\Longleftarrow\alpha/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $k\Leftarrow k-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Wenn 
+\begin_inset Formula $f=0$
+\end_inset
+
+, dann 
+\begin_inset Formula $\alpha<0$
+\end_inset
+
+, sonst 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Noch einige abschließende Bemerkungen:
+\end_layout
+
+\begin_layout Enumerate
+Aus den Gleichungen\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_a0"
+
+\end_inset
+
+ und\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_b0"
+
+\end_inset
+
+ läßt sich im letzten Iterationsschritt
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+a_{0} & =u_{k}a_{k}=\bar{a}_{0}d & a_{0} & =v_{k}b_{k}=\bar{a}_{0}d\\
+b_{0} & =s_{k}a_{k}=\bar{b}_{0}d & b_{0} & =t_{k}b_{k}=\bar{b}_{0}d\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+schlußfolgern.
+ Bei 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ handelt es sich im Fall 
+\begin_inset Formula $b_{k}=0$
+\end_inset
+
+ (gleichermaßen für 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ im Fall 
+\begin_inset Formula $a_{k}=0$
+\end_inset
+
+) demzufolge um die teilerfremden Faktoren 
+\begin_inset Formula $\bar{a}_{0}=a_{0}/d$
+\end_inset
+
+ und 
+\begin_inset Formula $\bar{b}_{0}=b_{0}/d$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Wegen der stetigen Reduktion von 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ müssen die Linearfaktoren schrittweise anwachsen, denn nur so können 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ nach Gleichung\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_a0"
+
+\end_inset
+
+ und\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_gcd_kaliski_b0"
+
+\end_inset
+
+ invariant sein.
+ Eine obere Schranke für 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ ergibt sich direkt aus vorangegangenem Punkt.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+\bar{a}_{0}=u_{k} & \leq\gcd(a,b)\leq a_{0} & \bar{a}_{0}=v_{k} & \leq\gcd(a,b)\leq a_{0}\\
+\bar{b}_{0}=s_{k} & \leq\gcd(a,b)\leq b_{0} & \bar{b}_{0}=t_{k} & \leq\gcd(a,b)\leq b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_kaliski"
+
+\end_inset
+
+ findet nur dann die kleinsten Kofaktoren 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+, wenn 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+ relativ prim sind (
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+).
+ Sollte als Resultat des Algorithmus' jedoch 
+\begin_inset Formula $|\alpha|\geq\bar{b}_{0}$
+\end_inset
+
+ oder 
+\begin_inset Formula $|\beta|\geq\bar{a}_{0}$
+\end_inset
+
+ gelten, so können die Kofaktoren, wie im Hinweis auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "sec:algebra_euclid_hint"
+
+\end_inset
+
+ erläutert, sukzessive weiter reduziert werden.
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset LatexCommand label
+name "sec:algebra_gcd_penk"
+
+\end_inset
+
+Algorithmus nach 
+\noun on
+Penk
+\noun default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+\InsetSpace ~
+
+\begin_inset LatexCommand cite
+after "Exercise~4.5.2.39"
+key "Knuth:TAOCP2:1998"
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Dieser Algorithmus stellt 
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+ als lineare Funktion von 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ dar, letztlich wird also von 
+\begin_inset Formula $(a_{0},b_{0})$
+\end_inset
+
+ auf 
+\begin_inset Formula $(a_{i},b_{i})$
+\end_inset
+
+ geschlossen.
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Eine andere erlaubte Anfangsbedingung wäre: 
+\begin_inset Formula $s_{0}=b,\; t_{0}=1-a$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{alignat}{3}
+a_{i} & =u_{i}a_{0}+v_{i}b_{0} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_penk_a0}\\
+b_{i} & =s_{i}a_{0}+t_{i}b_{0} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_penk_b0}\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vorteilhaft wirkt sich aus, daß im letzten Reduktionsschritt (wenn 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ oder 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+ verschwindet) 
+\begin_inset Formula $u_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $v_{k}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $s_{k}$
+\end_inset
+
+ und 
+\begin_inset Formula $t_{k}$
+\end_inset
+
+ direkt die gesuchten Kofaktoren 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ darstellen.
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+a_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0} & b_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0}\\
+ & =u_{k}a_{0}+v_{k}b_{0} &  & =s_{k}a_{0}+t_{k}b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Durch Einsetzen von 
+\begin_inset Formula $a_{i+1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+ (entsprechend Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_binary_reduction"
+
+\end_inset
+
+) in die Gleichungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+a_{i+1} & =u_{i+1}a_{0}+v_{i+1}b_{0}\\
+b_{i+1} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kann man für den jeweiligen Reduktionsfall die zugehörige Transformationen
+ der Linearfaktoren ableiten.
+ Wieder am Beispiel 
+\begin_inset Formula $a_{i+1}=(a_{i}-b_{i})/2$
+\end_inset
+
+, 
+\begin_inset Formula $b_{i+1}=b_{i}$
+\end_inset
+
+ soll das Vorgehen veranschaulicht werden (
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ sind ungerade, 
+\begin_inset Formula $a_{i}\geq b_{i}$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+a_{i+1}=\frac{a_{i}-b_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=b_{i} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
+(u_{i}-s_{i})a_{0}+(v_{i}-t_{i})b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vergleich von linker und rechter Seite läßt den Schluß zu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+u_{i+1} & =\frac{u_{i}-s_{i}}{2} & \qquad s_{i+1} & =s_{i}\\
+v_{i+1} & =\frac{v_{i}-t_{i}}{2} & \qquad t_{i+1} & =t_{i}\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die anderen Kombinationen können genau nach demselben Schema abgeleitet
+ werden.
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ ist gerade, 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+a_{i+1}=\frac{a_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=b_{i} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
+u_{i}a_{0}+v_{i}b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ sind gerade, 
+\begin_inset Formula $a_{i}<b_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+a_{i+1}=\frac{a_{i}-b_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=\frac{b_{i}-a_{i}}{2} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
+u_{i}a_{0}+v_{i}b_{0} & =u_{i+1}a_{0}+v_{i+1}b_{0} & (s_{i}-u_{i})a_{0}+(t_{i}-v_{i})b_{0} & =2s_{i+1}a_{0}+2t_{i+1}b_{0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_penk"
+
+\end_inset
+
+ faßt die Ergebnisse in übersichtlicher Form zusammen.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Der Fall, daß 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ gerade sind, kann ausgeschlossen werden, wenn dies auch für 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ vorausgesetzt wird (was man ohne Einschränkung kann, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Anmerkungen zum binären GCD-Algorithmus auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "sec:algebra_gcd_binary_notes"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset Float table
+wide true
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "tab:algebra_gcd_penk"
+
+\end_inset
+
+Linearfaktoren beim Algorithmus nach 
+\noun on
+Penk
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\align center
+\begin_inset Tabular
+<lyxtabular version="3" rows="5" columns="8">
+<features>
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" width="0">
+<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<column alignment="center" valignment="top" rightline="true" width="0">
+<row topline="true" bottomline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $v_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $t_{i+1}=$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{a_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i+1}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{u_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{v_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+gerade
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{b_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{s_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{t_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $a_{i}>b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{a_{i}-b_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $b_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{u_{i}-s_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{v_{i}-t_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $s_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $t_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row topline="true" bottomline="true">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+ungerade, 
+\begin_inset Formula $b_{i}>a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $a_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{b_{i}-a_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $u_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $v_{i}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{s_{i}-u_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Standard
+\begin_inset Formula $\mtab{\frac{t_{i}-v_{i}}{2}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+</lyxtabular>
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei tritt allerdings wieder das bekannte Problem auf: Wie kann man die
+ Ganzzahligkeit des jeweiligen Linearfaktoren bei der Halbierung wahren?
+ Die Antwort haben wir schon beim vorangegangenen Algorithmus geliefert
+ -- indem die Ausgangsgleichungen\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "eq:algebra_gcd_penk_a0"
+
+\end_inset
+
+ und\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "eq:algebra_gcd_penk_b0"
+
+\end_inset
+
+ folgendermaßen erweitert:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{alignat*}{1}
+a_{i} & =(u_{i}\pm b_{0})a_{0}+(v_{i}\mp a_{0})b_{0}\\
+b_{i} & =(s_{i}\pm b_{0})a_{0}+(t_{i}\mp a_{0})b_{0}\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und dadurch ungerade Zahlen 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ in gerade umwandelt.
+\end_layout
+
+\begin_layout Standard
+Beschränken wir uns auf die Kombinationen nach Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_penk"
+
+\end_inset
+
+, in denen 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ verändert werden (äquivalent für 
+\begin_inset Formula $u_{i}\rightarrow s_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $v_{i}\rightarrow t_{i}$
+\end_inset
+
+).
+ Für den Fall, daß 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ gerade und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade ist (zweite Zeile in 
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_penk"
+
+\end_inset
+
+), können wir auf die Argumentation von Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "page:algebra_gcd_kaliski_parity"
+
+\end_inset
+
+ zurückgreifen (Phase\InsetSpace ~
+II der Methode nach 
+\noun on
+Kaliski
+\noun default
+).
+ Sie erlaubt uns die Subtraktion/Addition von 
+\begin_inset Formula $a_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{0}$
+\end_inset
+
+ für den Fall, daß 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ oder 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ ungerade ist.
+ Die Situation, daß 
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade sind (vorletzte Zeile in 
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_penk"
+
+\end_inset
+
+), kann man durch gedankliche Verzögerung der Halbierung in den nächsten
+ Iterationsschritt erklären.
+ Wählt man als modifizierten Einzelschritt 
+\begin_inset Formula $a_{i+1}=a_{i}-b_{i}$
+\end_inset
+
+ (und entsprechend 
+\begin_inset Formula $u_{i+1}=u_{i}-s_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{i+1}=v_{i}-t_{i}$
+\end_inset
+
+), so reduziert sich die Fragestellung wieder auf eine gerade Zahl 
+\begin_inset Formula $a_{i+1}=u_{i+1}a_{0}+v_{i+1}b_{0}$
+\end_inset
+
+, also auf den vorangegangenen Fall.
+\end_layout
+
+\begin_layout Standard
+Als Ergebnis der Ausführungen kann man Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_penk"
+
+\end_inset
+
+ formulieren.
+ Die abschließenden Bemerkungen zur Methode nach 
+\noun on
+Kaliski
+\noun default
+ gelten in ähnlicher Art und Weise auch hier.
+ Der Vorteil des Algorithmus' liegt vor allem darin, daß keine Korrekturphase
+ nötig ist.
+ Nachteilig für eine praktische Umsetzung ist die notwendige Vorzeichen-Arithmet
+ik.
+ Außerdem entsprechen die teilerfremden Faktoren 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+, 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ nicht genau den jeweils anderen Linearfaktoren (welche nicht 
+\begin_inset Formula $\alpha$
+\end_inset
+
+, 
+\begin_inset Formula $\beta$
+\end_inset
+
+ darstellen), sondern nur ihr Verhältnis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =s_{k}a_{0}+t_{k}b_{0}=0 & \mbox{Fall: }a_{k} & =u_{k}a_{0}+v_{k}b_{0}=0\\
+\frac{\bar{a}_{0}}{\bar{b}_{0}} & =-\frac{t_{k}}{s_{k}} & \frac{\bar{a}_{0}}{\bar{b}_{0}} & =-\frac{v_{k}}{u_{k}}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Standard
+\begin_inset Caption
+
+\begin_layout Standard
+\begin_inset LatexCommand label
+name "alg:algebra_gcd_penk"
+
+\end_inset
+
+Algorithmus 
+\begin_inset Formula $d=\gcd(a,b)=\alpha a+\beta b$
+\end_inset
+
+ nach 
+\noun on
+Penk
+\noun default
+
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Bei geschickter Wahl der Anfangsbedingung kann man negative Vorzeichen mglw.
+ durch ein (einziges) Flag umgehen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+REQUIRE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(a_{0},u_{0},v_{0})\Leftarrow(a,1,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(b_{0},s_{0},t_{0})\Leftarrow(b,0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $i\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+WHILE{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}>0$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $b_{i}>a_{i}$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(b_{i},s_{i},t_{i})\Longleftrightarrow(a_{i},u_{i},v_{i})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+gewährleistet 
+\begin_inset Formula $a_{i}\geq b_{i}$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ ungerade 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(a_{i},u_{i},v_{i})\Longleftarrow(a_{i}-b_{i},u_{i}-s_{i},v_{i}-t_{i})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ ist jetzt gerade, 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ weiterhin ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i+1}\Longleftarrow a_{i}/2$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ gerade, 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ ungerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $u_{i}$
+\end_inset
+
+ gerade 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $u_{i+1}\Longleftarrow u_{i}/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $v_{i+1}\Longleftarrow v_{i}/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $u_{i+1}\Longleftarrow(u_{i}+b)/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $v_{i+1}\Longleftarrow(v_{i}-a)/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $b_{i+1}\Longleftarrow b_{i}/2$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $a_{i}$
+\end_inset
+
+ ungerade, 
+\begin_inset Formula $b_{i}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $s_{i}$
+\end_inset
+
+ gerade 
+\begin_inset Formula $\wedge$
+\end_inset
+
+ 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ gerade
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $s_{i+1}\Longleftarrow s_{i}/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t_{i+1}\Longleftarrow t_{i}/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $s_{i+1}\Longleftarrow(s_{i}+b)/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t_{i+1}\Longleftarrow(t_{i}-a)/2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $i\Leftarrow i+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(d,\alpha,\beta)\Leftarrow(b_{i},s_{i},t_{i})$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $d=\gcd(a,b)=\alpha a+\beta b$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+\begin_inset LatexCommand label
+name "sec:algebra_gcd_diophant"
+
+\end_inset
+
+Lineare diophantische Gleichungen
+\end_layout
+
+\begin_layout Standard
+Gleichungen mit ausschließlich ganzzahligen Lösungen 
+\begin_inset Formula $x,y,\ldots\in\mathbb{Z}$
+\end_inset
+
+ nennt man diophantisch, wobei sie im linearen Fall (für zwei Variablen)
+ die folgende Form haben:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+ax+by=c,\qquad\mbox{mit }a,b,c\in\mathbb{N}\mperiod\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Solche Gleichungen haben genau dann eine Lösung, wenn der größte gemeinsame
+ Teiler 
+\begin_inset Formula $d=\gcd(a,b)$
+\end_inset
+
+ den Wert 
+\begin_inset Formula $c$
+\end_inset
+
+ teilt.
+ Im Zusammenhang mit 
+\noun on
+Euklid
+\noun default
+'s Algorithmus wurde dies praktisch schon nachgewiesen --- auch daß es unendlich
+ viele solcher Lösungen gibt, kam in Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "sec:algebra_euclid_generic"
+
+\end_inset
+
+ zur Sprache.
+\end_layout
+
+\begin_layout Standard
+Zuerst bemerken wir, daß die Differenz zweier Lösungen 
+\begin_inset Formula $(x_{1},y_{1})$
+\end_inset
+
+ und 
+\begin_inset Formula $(x_{2},y_{2})$
+\end_inset
+
+ die homogene Gleichung 
+\begin_inset Formula $ax+by=0$
+\end_inset
+
+ erfüllt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+(ax_{1}+by_{1})-(ax_{2}+by_{2}) & =a(\underbrace{x_{1}-x_{2}}_{x})+b(\underbrace{y_{1}-y_{2}}_{y})=0\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit 
+\begin_inset Formula $a=d\bar{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $b=d\bar{b}$
+\end_inset
+
+ läßt sich sogar schreiben
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\bar{a}x+\bar{b}y=0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und es liegen die Lösungen 
+\begin_inset Formula $(x,y)=(n\bar{b},-n\bar{a})$
+\end_inset
+
+, 
+\begin_inset Formula $n\in\mathbb{Z}$
+\end_inset
+
+ auf der Hand (Einsetzen ergibt 
+\begin_inset Formula $\bar{a}x+\bar{b}y=\bar{a}n\bar{b}-\bar{b}n\bar{a}=0$
+\end_inset
+
+).
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Eine Untermenge der Lösungen stellt für 
+\begin_inset Formula $n=ld$
+\end_inset
+
+, 
+\begin_inset Formula $l\in\mathbb{Z}$
+\end_inset
+
+ natürlich 
+\begin_inset Formula $(x,y)=(lb,-la)$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Findet man jetzt noch eine partikuläre Lösung 
+\begin_inset Formula $(x_{2},y_{2})$
+\end_inset
+
+, dann ergeben sich alle weiteren zu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+x_{1} & =x_{2}+x=x_{2}+n\bar{b} & y_{1} & =y_{2}+y=y_{2}-n\bar{a}\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Partikuläre Lösungen 
+\begin_inset Formula $(x_{2},y_{2})$
+\end_inset
+
+ für 
+\begin_inset Formula $ax_{2}+by_{2}=c$
+\end_inset
+
+ haben wir aber schon mittels der erweiterten GCD-Algorithmen zur Verfügung,
+ denn (den Index 
+\begin_inset Formula $2$
+\end_inset
+
+ jetzt weggelassen) mit 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+'s Identität
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\gcd(a,b)=d & =\alpha a+\beta b\\
+d\bar{c} & =\alpha\bar{c}a+\beta\bar{c}b\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gilt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+ax+by=c=d\bar{c}=\alpha\bar{c}a+\beta\bar{c}b\mperiod\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine partikuläre Lösung (
+\begin_inset Formula $x_{2}\mequiv x$
+\end_inset
+
+, 
+\begin_inset Formula $y_{2}\mequiv y$
+\end_inset
+
+) kann deshalb mit Hilfe der Kofaktoren 
+\begin_inset Formula $\alpha,\beta$
+\end_inset
+
+ gegeben werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+x_{2}=\alpha\bar{c} & =\alpha\frac{c}{d} & y_{2} & =\beta\bar{c}=\beta\frac{c}{d}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Vielfalt aller Lösungen stellt sich dadurch wiefolgt dar:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat*}{2}
+x_{n} & =\alpha\frac{c}{d}+n\frac{b}{d} & y_{n} & =\beta\frac{c}{d}-n\frac{a}{d}\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset LatexCommand index
+name "größter gemeinsamer Teiler|)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\noun on
+\begin_inset LatexCommand label
+name "sec:algebra_montgomery"
+
+\end_inset
+
+Montgomery
+\noun default
+-Potenzierung
+\end_layout
+
+\begin_layout Standard
+Bei der Methode nach 
+\noun on
+Montgomery
+\noun default
+ handelt es sich eigentlich um eine Modulo-Multipli\SpecialChar \-
+kations\SpecialChar \-
+methode, bei der
+ die Reduktion des (Zwischen-) Ergebnisses ohne echte Langzahl\SpecialChar \-
+division erfolgen
+ kann\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Montgomery:1985"
+
+\end_inset
+
+.
+ Da allerdings zuerst eine Transformation in den 
+\noun on
+Montgomery
+\noun default
+-
+\begin_inset Quotes grd
+\end_inset
+
+Raum
+\begin_inset Quotes grd
+\end_inset
+
+ vorgenommen werden muß, welche selbst zwei Modulo-Division erfordert, kommen
+ die Geschwindigkeitsvorteile nur bei der Potenzierung wirklich zum tragen.
+\end_layout
+
+\begin_layout Standard
+Um einen leicht verständlichen Zugang zu finden, soll zuerst nur eine einzelne
+ Multiplikation 
+\begin_inset Formula $c=ab\pmod{n}$
+\end_inset
+
+ betrachtet werden.
+ Dazu setzen wir eine Zahl 
+\begin_inset Formula $r$
+\end_inset
+
+ voraus, welche keinen gemeinsamen Teiler mit dem Modul 
+\begin_inset Formula $n$
+\end_inset
+
+ hat und für die 
+\begin_inset Formula $r>n$
+\end_inset
+
+ gewährleistet ist.
+ Die 
+\noun on
+Montgomery
+\noun default
+-Potenzierung kann man nun ausgehend von 
+\begin_inset Formula $\gcd(r,n)=1$
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(-1)^{k}=\alpha r-\beta n$
+\end_inset
+
+ mit 
+\begin_inset Formula $\alpha,\beta\in\mathbb{N}$
+\end_inset
+
+ (Satz von 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+), in folgenden Einzelschritten darstellen:
+\end_layout
+
 \begin_layout Enumerate
 Berechnung von 
-\begin_inset Formula $s,t$
+\begin_inset Formula $\alpha,\beta$
 \end_inset
 
  mit Hilfe des erweiterten 
@@ -9048,12 +15486,20 @@ Euklid
 \end_layout
 
 \begin_layout Enumerate
-Eingangstransformation 
-\begin_inset Formula $\overline{a}=ar\pmod{n}$
+Eingangstransformation der Faktoren 
+\begin_inset Formula $a$
 \end_inset
 
  und 
-\begin_inset Formula $\overline{b}=br\pmod{n}$
+\begin_inset Formula $b$
+\end_inset
+
+ zu 
+\begin_inset Formula $\overline{a}=ar\bmod{n}$
+\end_inset
+
+ und 
+\begin_inset Formula $\overline{b}=br\bmod{n}$
 \end_inset
 
 
@@ -9070,10 +15516,10 @@ Montgomery
 \begin_deeper
 \begin_layout Enumerate
 Berechnung des Produkts 
-\begin_inset Formula $\overline{a}\cdot\overline{b}$
+\begin_inset Formula $x=\overline{a}\cdot\overline{b}$
 \end_inset
 
- (keine Modulo-Reduktion)
+ (man beachte: keine Modulo-Reduktion).
 \end_layout
 
 \begin_layout Enumerate
@@ -9082,11 +15528,11 @@ Berechnung des Produkts
 Montgomery
 \noun default
 -Reduktion von 
-\begin_inset Formula $\overline{a}\cdot\overline{b}=abr^{2}=\overline{c}r$
+\begin_inset Formula $x=abr^{2}$
 \end_inset
 
  zu 
-\begin_inset Formula $\overline{c}=cr\bmod{n}$
+\begin_inset Formula $\overline{c}=cr\bmod{n}=abr\bmod{n}$
 \end_inset
 
 , 
@@ -9102,12 +15548,53 @@ ie
 
 \end_inset
 
- Multiplikation mit 
-\begin_inset Formula $r^{-1}$
+ zu 
+\begin_inset Formula $\overline{c}=M(x,r)=xr^{-1}\bmod{n}$
 \end_inset
 
- und (effiziente) Reduktion modulo 
-\begin_inset Formula $n$
+.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Die 
+\noun on
+Montgomery
+\noun default
+-Reduktion 
+\begin_inset Formula $M(x,r)$
+\end_inset
+
+ ist eigentlich nur deshalb vonnöten, weil für die Multiplikation (leider)
+ gilt: 
+\begin_inset Formula $\overline{a}\cdot\overline{b}\neq\overline{c}\pmod{n}$
+\end_inset
+
+.
+ Sie überführt das Ergebnis 
+\begin_inset Formula $x=\overline{a}\cdot\overline{b}$
+\end_inset
+
+ in eine Darstellung 
+\begin_inset Formula $\overline{c}=cr\bmod{n}$
+\end_inset
+
+, die genau der von 
+\begin_inset Formula $\overline{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $\overline{b}$
+\end_inset
+
+ entspricht und so Ausgangspunkt der nächsten Multiplikation sein kann.
+ Einfacher verhält sich dagegen die Addition, denn sie ist, wegen 
+\begin_inset Formula $\overline{a}+\overline{b}=ar+br=(a+b)r$
+\end_inset
+
+, relativ invariant.
+\end_layout
+
 \end_inset
 
 
@@ -9115,26 +15602,11 @@ ie
 
 \end_deeper
 \begin_layout Enumerate
-Rücktransformation 
-\begin_inset Formula $c=r^{-1}\overline{c}\pmod{n}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Schritt 4 ist der entscheidende Punkt, denn für die Multiplikation gilt
- (leider) 
-\begin_inset Formula $\overline{a}\cdot\overline{b}\neq\overline{c}$
+Rücktransformation des Ergebnisses 
+\begin_inset Formula $c=r^{-1}\overline{c}\bmod{n}$
 \end_inset
 
 .
- Im Gegensatz dazu ist die Addition im Bildbereich unproblematisch, da wegen
- 
-\begin_inset Formula $\overline{a}+\overline{b}=ar+br=cr=\overline{c}$
-\end_inset
-
- gleichwertig der Addition im Originalbereich.
 \end_layout
 
 \begin_layout Paragraph
@@ -9146,21 +15618,21 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
-sogenannte Montgomery-Reduktion einer Zahl 
-\begin_inset Formula $x\in\mathbb{N}$
+Zur Herleitung von 
+\noun on
+Montgomery
+\noun default
+'s effizienter Berechnungsmethode für 
+\begin_inset Formula $M(x,r)=xr^{-1}\bmod{n}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Ausgangspunkt:
+ wählen wir als Ausgangspunkt:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
-n(xt\bmod r) & =n(xt-ur), & \quad u & =\left\lfloor xt/r\right\rfloor \\
-r(xs\bmod n) & =r(xs-vn), & \quad v & =\left\lfloor xs/n\right\rfloor \end{alignat*}
+n(\beta x\bmod r) & =n(\beta x-ur), & \quad\mbox{mit }u & =\left\lfloor \beta x/r\right\rfloor \\
+r(\alpha x\bmod n) & =r(\alpha x-vn), & \quad\mbox{mit }v & =\left\lfloor \alpha x/n\right\rfloor \end{alignat*}
 
 \end_inset
 
@@ -9168,7 +15640,28 @@ r(xs\bmod n) & =r(xs-vn), & \quad v & =\left\lfloor xs/n\right\rfloor \end{align
 \end_layout
 
 \begin_layout Standard
-Subtraktion beider Gleichungen führt mit dem Satz von 
+Subtraktion beider Gleichungen ergibt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+n(\beta x\bmod r)-r(\alpha x\bmod n) & =n(\beta x-ur)-r(\alpha x-vn)\\
+ & =rn(v-u)-x(\alpha r-\beta n)\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und bei Anwendung von Formel\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_euclid_bezout"
+
+\end_inset
+
+ (Satz von 
 \noun on
 B
 \begin_inset ERT
@@ -9183,16 +15676,12 @@ status inlined
 
 \end_inset
 
-zout
-\noun default
- zu
+zout):
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-n(xt\bmod r)-r(xs\bmod n) & =n(xt-ur)-r(xs-vn)\\
- & =rn(v-u)-x(sr-tn)\\
- & =rn(v-u)+(-1)^{k+1}x\end{align*}
+\begin_inset Formula \[
+n(\beta x\bmod r)-r(\alpha x\bmod n)=rn(v-u)+(-1)^{k+1}x\]
 
 \end_inset
 
@@ -9201,15 +15690,15 @@ n(xt\bmod r)-r(xs\bmod n) & =n(xt-ur)-r(xs-vn)\\
 
 \begin_layout Standard
 Umstellen nach 
-\begin_inset Formula $xs\bmod n$
+\begin_inset Formula $\alpha x\bmod n$
 \end_inset
 
- führt zu
+ führt uns fast zum Ergebnis.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-xs\bmod n=\frac{n(xt\bmod r)-rn(v-u)+(-1)^{k}x}{r}=\frac{n(xt\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
+\alpha x\bmod n=\frac{n(\beta x\bmod r)-rn(v-u)+(-1)^{k}x}{r}=\frac{n(\beta x\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
 
 \end_inset
 
@@ -9217,16 +15706,16 @@ xs\bmod n=\frac{n(xt\bmod r)-rn(v-u)+(-1)^{k}x}{r}=\frac{n(xt\bmod r)+(-1)^{k}x}
 \end_layout
 
 \begin_layout Standard
-Mit 
-\begin_inset Formula $s=r^{-1}$
+Da 
+\begin_inset Formula $\alpha=r^{-1}$
 \end_inset
 
-, da Inverses in multiplikativer Gruppe
+Inverses in multiplikativer Gruppe
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-xr^{-1}\bmod n=\frac{n(xt\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
+xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
 
 \end_inset
 
@@ -9352,7 +15841,7 @@ Speziell für alle Primzahlen
 \begin_inset Formula $p\in\mathbb{P}$
 \end_inset
 
-, entspringt daraus mit 
+ entspringt daraus mit 
 \begin_inset Formula $\phi(p)=p-1$
 \end_inset
 
@@ -9366,20 +15855,7 @@ name "Fermat, kleiner Satz@\\noun{Fermat}, kleiner Satz"
 
 \end_inset
 
- (
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt\InsetSpace ~
+ (siehe Abschnitt\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "sec:algebra_residue_field"
@@ -9401,7 +15877,7 @@ Für einen weiteren Sonderfall, nämlich das Produkt zweier Primzahlen
 \begin_inset Formula $n=pq$
 \end_inset
 
- ist es sehr wünschenswert die Totient-Funktion zu kennen
+ ist es sehr wünschenswert die Totient-Funktion zu kennen.
 \begin_inset Foot
 status collapsed
 
@@ -9439,7 +15915,6 @@ key "RSA:1978"
 
 \end_inset
 
-.
  Da 
 \begin_inset Formula $p$
 \end_inset
