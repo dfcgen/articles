@@ -48,7 +48,7 @@ status inlined
 
 \begin_layout Standard
 
-%% $Id: algebra.lyx,v 1.15 2008-08-24 14:46:41 ralf Exp $
+%% $Id: algebra.lyx,v 1.16 2008-09-20 15:42:19 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -130,7 +130,7 @@ status inlined
 
 \begin_layout Standard
 
-%% If file pdf-inc.tex is included in the preamble you should not use 
+%% If file pdf-inc.tex is included in the preamble do not use 
 \backslash
 listof{algorithm}{Liste der Algorithmen} from LyX menu.
  Instead use the following, which corresponds to pdf-inc.tex:
@@ -4097,6 +4097,26 @@ name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
 \end_inset
 
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "sec:algebra_gcd"
+
+\end_inset
+
 ), daß der größte gemeinsame Teiler 
 \begin_inset Formula $d=\gcd(r,s)$
 \end_inset
@@ -4119,27 +4139,7 @@ name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
 \end_inset
 
- (
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt\InsetSpace ~
-
-\begin_inset LatexCommand ref
-reference "sec:algebra_euclid_generic"
-
-\end_inset
-
-), dann gilt:
+, dann gilt:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -4186,7 +4186,27 @@ status open
 
 \begin_layout Standard
 Diese Rechnung kann man natürlich auch in einem Ring ausführen, dann muß
- das Ergebnis jedoch nicht eindeutig sein.
+ das Ergebnis jedoch nicht eindeutig sein (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ auch Bemerkungen auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "page:algebra_gcd_kaliski_notes"
+
+\end_inset
+
+).
 \end_layout
 
 \end_inset
@@ -7630,6 +7650,11 @@ Funktionen und Algorithmen
 \end_layout
 
 \begin_layout Subsection
+\begin_inset LatexCommand label
+name "sec:algebra_gcd"
+
+\end_inset
+
 GCD-Algorithmen
 \end_layout
 
@@ -8036,7 +8061,7 @@ end{algorithmic}
 \begin_layout Paragraph*
 Beweis
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Siehe auch\InsetSpace ~
@@ -8047,8 +8072,14 @@ key "Menezes:1992"
 
 \end_inset
 
- oder\InsetSpace ~
+, 
+\begin_inset LatexCommand cite
+after "2.1"
+key "Berlekamp:1984"
 
+\end_inset
+
+, 
 \begin_inset LatexCommand cite
 after "10.1"
 key "Welschenbach:2001"
@@ -8471,12 +8502,11 @@ Hinweis
 \end_layout
 
 \begin_layout Standard
-An dieser Stelle muß unbedingt erwähnt werden, daß es unendlich viele lineare
- Darstellungen für 
+Es existieren unendlich viele lineare Darstellungen für 
 \begin_inset Formula $d$
 \end_inset
 
-, als Funktion von 
+ als Funktion von 
 \begin_inset Formula $a$
 \end_inset
 
@@ -8484,7 +8514,7 @@ An dieser Stelle muß unbedingt erwähnt werden, daß es unendlich viele lineare
 \begin_inset Formula $b$
 \end_inset
 
-, gibt (
+ (
 \begin_inset ERT
 status open
 
@@ -8521,19 +8551,20 @@ description "teilerfremder Teil von $a$ bezüglich einer anderen Zahl"
 \begin_inset Formula $\beta:=\beta-n\bar{a}$
 \end_inset
 
-, wobei 
-\begin_inset Formula $a=d\bar{a}$
+, mit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+a=d\bar{a},\qquad b=d\bar{b},\label{eq:algebra_euclid_factors}\end{equation}
+
 \end_inset
 
-, 
-\begin_inset Formula $b=d\bar{b}$
-\end_inset
 
- und 
-\begin_inset Formula $n\in\mathbb{Z}$
-\end_inset
+\end_layout
 
- gelten soll, erfüllt 
+\begin_layout Standard
+erfüllt 
 \noun on
 B
 \begin_inset ERT
@@ -8557,7 +8588,7 @@ reference "eq:algebra_euclid_bezout"
 
 \end_inset
 
- genauso.
+:
 \end_layout
 
 \begin_layout Standard
@@ -8565,7 +8596,7 @@ reference "eq:algebra_euclid_bezout"
 d & =(\alpha+n\bar{b})a+(\beta-n\bar{a})b\\
  & =\alpha a+\beta b+n(\bar{b}a-\bar{a}b)\\
  & =\alpha a+\beta b+n(\bar{b}\bar{a}d-\bar{a}\bar{b}d)\\
- & =\alpha a+\beta b\end{align*}
+ & =\alpha a+\beta b\mperiod\end{align*}
 
 \end_inset
 
@@ -8715,8 +8746,11 @@ name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 \begin_inset Formula $\beta$
 \end_inset
 
- zusammen (und gleichzeitig) mit dem größten gemeinsamen Teiler 
-\begin_inset Formula $d$
+ zusammen (und gleichzeitig) mit dem größten gemeinsamen Teiler\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Knuth:TAOCP2:1998,Crandall:2005,Berlekamp:1984"
+
 \end_inset
 
 .
@@ -8753,7 +8787,7 @@ der größte gemeinsame Teiler
 \end_inset
 
  teilt und damit die Darstellung 
-\begin_inset Formula $c_{i}=de_{i}=\alpha_{i}a+\beta_{i}b$
+\begin_inset Formula $c_{i}=d\bar{c}_{i}=\alpha_{i}a+\beta_{i}b$
 \end_inset
 
  rechtfertigt;
@@ -8795,7 +8829,7 @@ Durch Induktion ergibt sich aus
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-c_{i}=c_{i-2}-q_{i}c_{i-1}=de_{i}=\alpha_{i}a+\beta_{i}b\label{eq:algebra_euclid_ext}\end{equation}
+c_{i}=c_{i-2}-q_{i}c_{i-1}=d\bar{c}_{i}=\alpha_{i}a+\beta_{i}b\label{eq:algebra_euclid_ext}\end{equation}
 
 \end_inset
 
@@ -9340,8 +9374,8 @@ Euklid
 \end_inset
 
  bewahrt.
- Die Halbierung eines der Argumente ist allerdings in Software (durch Verschiebu
-ng um ein Bit) effizient zu realisieren.
+ Die Halbierung eines der Argumente ist allerdings (durch Verschiebung um
+ ein Bit) effizient zu realisieren.
 \end_layout
 
 \end_inset
@@ -10325,6 +10359,77 @@ end{algorithmic}
 \end_layout
 
 \end_deeper
+\begin_layout Enumerate
+\noindent
+\begin_inset LatexCommand label
+name "enum:algebra_gcd_binary_note_parity"
+
+\end_inset
+
+Für den Fall, daß entweder 
+\begin_inset Formula $a$
+\end_inset
+
+ oder 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade ist (oder beide), kann man ausgehend von 
+\begin_inset Formula $a=d\bar{a}$
+\end_inset
+
+ und 
+\begin_inset Formula $b=d\bar{b}$
+\end_inset
+
+ feststellen:
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Grundlage bildet die Tatsache, daß das Produkt zweier ganzer Zahlen nur
+ dann ungerade ist, wenn beide Faktoren ungerade sind.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Der größte gemeinsame Teiler 
+\begin_inset Formula $d$
+\end_inset
+
+ ist ungerade.
+\end_layout
+
+\begin_layout Itemize
+Sollte 
+\begin_inset Formula $a$
+\end_inset
+
+ ungerade sein, dann ist es dessen teilerfremde Anteil 
+\begin_inset Formula $\bar{a}$
+\end_inset
+
+ ebenfalls.
+\end_layout
+
+\begin_layout Itemize
+Sollte 
+\begin_inset Formula $b$
+\end_inset
+
+ ungerade sein, dann ist es dessen teilerfremde Anteil 
+\begin_inset Formula $\bar{b}$
+\end_inset
+
+ ebenfalls.
+\end_layout
+
+\end_deeper
 \begin_layout Subsubsection
 Erweiterter binärer GCD-Algorithmus
 \end_layout
@@ -10343,6 +10448,27 @@ Kaliski
 
 \begin_inset LatexCommand cite
 key "Kaliski:1995"
+
+\end_inset
+
+
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Auch 
+\emph on
+Right Shift Delayed Halfing
+\emph default
+ (RSDH) Algorithmus genannt\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Hars:2006"
+
+\end_inset
+
+.
+\end_layout
 
 \end_inset
 
@@ -11251,7 +11377,11 @@ Schließt man den Fall aus, daß
 \begin_inset Formula $a_{0}$
 \end_inset
 
- und 
+ 
+\emph on
+und
+\emph default
+ 
 \begin_inset Formula $b_{0}$
 \end_inset
 
@@ -11403,42 +11533,20 @@ zout
 \begin_inset Formula $\beta$
 \end_inset
 
- zu bestimmen, sind zusätzliche Reduktionsschritte nötig.
-\begin_inset Foot
-status open
-
-\begin_layout Standard
-In\InsetSpace ~
+ zu bestimmen, sind zusätzliche Korrekturschritte nötig, welche in\InsetSpace ~
 
 \begin_inset LatexCommand cite
 key "Kaliski:1995"
 
 \end_inset
 
- Korrekturphase (oder Phase\InsetSpace ~
-II) genannt.
-\end_layout
-
-\end_inset
-
+ auch Korrekturphase (oder Phase\InsetSpace ~
+II) genannt werden.
  Ziel ist es dabei, die rechte Seite der letzten Gleichung durch 
 \begin_inset Formula $2^{k}$
 \end_inset
 
- zu dividieren (
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- in 
+ zu dividieren (oder in 
 \begin_inset Formula $k$
 \end_inset
 
@@ -11460,7 +11568,26 @@ n im Falle
 \begin_inset Formula $v_{k}\rightarrow u_{k}$
 \end_inset
 
-), wobei der Einfachheit halber die Indizierung jetzt weggelassen wird:
+):
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Der Übersichtlichkeit halber wird auf die Indizierung jetzt verzichtet und
+ statt dessen gerade Variablen/Terme mit 
+\begin_inset Formula $(\mbox{g})$
+\end_inset
+
+ und ungerade mit 
+\begin_inset Formula $(\mbox{u})$
+\end_inset
+
+ gekennzeichnet.
+\end_layout
+
+\end_inset
+
+
 \begin_inset LatexCommand label
 name "page:algebra_gcd_kaliski_parity"
 
@@ -11479,11 +11606,11 @@ Sind
 \end_inset
 
  gerade, dann ist eine ganzzahlige Halbierung 
-\begin_inset Formula $v:=v/2$
+\begin_inset Formula $v:=v^{(\mbox{g})}/2$
 \end_inset
 
 , 
-\begin_inset Formula $t:=t/2$
+\begin_inset Formula $t:=t^{(\mbox{g})}/2$
 \end_inset
 
  möglich (
@@ -11507,17 +11634,30 @@ In allen anderen Fällen (
 \begin_inset Formula $t$
 \end_inset
 
- und/oder 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $v$
 \end_inset
 
- sind ungerade) kann man wegen
+ ungerade) kann man wegen
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula \[
-2^{i}\gcd(a,b)=(t+b)a-(v+a)b\]
+2^{i}\gcd(a,b)=ta-vb=(t+b)a-(v+a)b\]
 
 \end_inset
 
@@ -11527,74 +11667,6 @@ In allen anderen Fällen (
 \begin_layout Standard
 die Reduktion 
 \begin_inset Formula $t:=(t+b)/2$
-\end_inset
-
-, 
-\begin_inset Formula $v:=(v+a)/2$
-\end_inset
-
- vornehmen, denn:
-\begin_inset Note Note
-status open
-
-\begin_layout Standard
-Die Verwendung von mehreren Absätzen oder anderen Umgebungen in Fußnoten
- ergibt bei der Umwandlung nach HTML oftmals Fehler.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Foot
-status open
-
-\begin_layout Standard
-\noindent
-Grundlage bilden folgende Gesetzmäßigkeiten:
-\newline
-1.\InsetSpace ~
-Die Summe/Differenz zweier
- ungerader Zahlen oder zweier gerader Zahlen ist eine gerade Zahl.
-\newline
-2.\InsetSpace ~
-Die Summe/Diff
-erenz einer ungeraden und einer geraden Zahlen ist eine ungerade Zahl.
-\newline
-3.\InsetSpace ~
-Das
- Produkt zweier ungerader Zahlen ist eine ungerade Zahl.
- Alle anderen Kombinationen ergeben bei der Multiplikation eine gerade Zahl.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Itemize
-Sollte 
-\begin_inset Formula $v$
-\end_inset
-
- ungerade sein, dann müssen es 
-\begin_inset Formula $t$
-\end_inset
-
- und 
-\begin_inset Formula $a$
-\end_inset
-
- auch, damit 
-\begin_inset Formula $ta-vb$
-\end_inset
-
- eine gerade Zahl ist (
-\begin_inset Formula $b$
-\end_inset
-
- soll nach Voraussetzung sowieso ungerade sein).
- Die Subtraktion von 
-\begin_inset Formula $a$
 \end_inset
 
  
@@ -11611,41 +11683,132 @@ resp
 \end_inset
 
  
-\begin_inset Formula $b$
+\begin_inset Formula $v:=(v+a)/2$
 \end_inset
 
- ändert einerseits obige Gleichung nicht, andererseits ist das Ergebnis
- wieder eine gerade Zahl.
-\end_layout
-
-\begin_layout Itemize
-Ist 
-\begin_inset Formula $v$
-\end_inset
-
- gerade und 
+ vornehmen, ohne daß sich die Gleichung ändert.
+ Man wandelt jedoch die ungerade Zahl 
 \begin_inset Formula $t$
 \end_inset
 
- ungerade (letzter möglicher Fall), so muß 
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $v$
+\end_inset
+
+ in eine gerade Zahl, die dann (wie gewünscht) durch 
+\begin_inset Formula $2$
+\end_inset
+
+ teilbar ist.
+ Die Ursache liegt einerseits darin begründet, daß die linke (und demzufolge
+ auch rechte) Seite der Gleichung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+2^{i}\gcd(a,b)=ta-vb\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+immer eine gerade Zahl repräsentiert und andererseits, entweder 
 \begin_inset Formula $a$
 \end_inset
 
- gerade sein.
- Die Subtraktion 
-\begin_inset Formula $v-a$
+ oder/und 
+\begin_inset Formula $b$
 \end_inset
 
- führt damit zu einer geraden Zahl, das Ergebnis von 
-\begin_inset Formula $t-b$
+ als ungerade vorausgesetzt wurden.
+ Berücksichtigt man die folgenden Gesetzmäßigkeiten:
+\end_layout
+
+\begin_layout Enumerate
+die Summe zweier ungerader oder zweier gerader Zahlen ist eine gerade Zahl;
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+die Summe einer ungeraden und einer geraden Zahl ist eine ungerade Zahl;
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+das Produkt zweier ungerader Zahlen ist eine ungerade Zahl;
+\end_layout
+
+\begin_layout Enumerate
+\noindent
+alle anderen Kombinationen ergeben bei der Multiplikation eine gerade Zahl;
+\end_layout
+
+\begin_layout Standard
+dann sind genau drei Fälle konstruierbar, in denen 
+\begin_inset Formula $t$
 \end_inset
 
- ist als Differenz zweier ungerader Zahlen ebenfalls gerade.
+ oder 
+\begin_inset Formula $v$
+\end_inset
+
+ ungerade ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{u})}a^{(\mbox{u})}\right]^{(\mbox{u})}-\left[v^{(\mbox{u})}b^{(\mbox{u})}\right]^{(\mbox{u})}\\
+\left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{u})}a^{(\mbox{g})}\right]^{(\mbox{g})}-\left[v^{(\mbox{g})}b^{(\mbox{u})}\right]^{(\mbox{g})}\\
+\left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{g})}a^{(\mbox{u})}\right]^{(\mbox{g})}-\left[v^{(\mbox{u})}b^{(\mbox{g})}\right]^{(\mbox{g})}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In allen diesen Varianten führt aber die Addition 
+\begin_inset Formula $t+b$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $v+a$
+\end_inset
+
+ zu einer geraden Zahl, womit sich das Korekturverfahren bestätigt.
 \end_layout
 
 \end_deeper
 \begin_layout Standard
-Als Ergebnis der Ausführungen kann man nun Algorithmus\InsetSpace ~
+Als Ergebnis der Ausführungen kann man Algorithmus\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "alg:algebra_gcd_kaliski"
@@ -11711,6 +11874,14 @@ status inlined
 REQUIRE
 \end_layout
 
+\end_inset
+
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ ungerade 
+\begin_inset Formula $\vee$
 \end_inset
 
  
@@ -11991,7 +12162,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $f\Leftarrow\overline{f}$
+\begin_inset Formula $f\Leftarrow\bar{f}$
 \end_inset
 
 
@@ -12009,11 +12180,7 @@ COMMENT{
 
 \end_inset
 
-invertiere 
-\begin_inset Formula $\mbox{flag}$
-\end_inset
-
-
+invertiere Flag
 \begin_inset ERT
 status inlined
 
@@ -12453,129 +12620,8 @@ STATE
 
 \end_inset
 
-
-\begin_inset Formula $\alpha\Longleftarrow s_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-STATE
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\beta\Longleftarrow u_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-IF{
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $f=1$
-\end_inset
-
-
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-STATE
-\end_layout
-
-\end_inset
-
-
-\begin_inset Formula $\beta\Longleftrightarrow\alpha$
-\end_inset
-
-
-\hfill
-
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-COMMENT{
-\end_layout
-
-\end_inset
-
-Tausche 
-\begin_inset Formula $\alpha$
-\end_inset
-
- und 
-\begin_inset Formula $\beta$
-\end_inset
-
-
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-ENDIF
-\end_layout
-
+ 
+\begin_inset Formula $i\Leftarrow k$
 \end_inset
 
 
@@ -12595,7 +12641,7 @@ WHILE{
 \end_inset
 
 
-\begin_inset Formula $k>0$
+\begin_inset Formula $i>0$
 \end_inset
 
 
@@ -12626,7 +12672,7 @@ IF{
 \end_inset
 
 
-\begin_inset Formula $\alpha$
+\begin_inset Formula $s_{k}$
 \end_inset
 
  ungerade 
@@ -12634,7 +12680,7 @@ IF{
 \end_inset
 
  
-\begin_inset Formula $\beta$
+\begin_inset Formula $u_{k}$
 \end_inset
 
  ungerade
@@ -12665,7 +12711,57 @@ STATE
 \end_inset
 
 
-\begin_inset Formula $\alpha\Longleftarrow\alpha+b$
+\begin_inset Formula $s_{k}\Longleftarrow s_{k}+t_{k}$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Addition von 
+\begin_inset Formula $t_{k}=\bar{b}$
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Bemerkung\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "enum:algebra_gcd_kaliski_note_corrprime"
+
+\end_inset
+
+)
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
 \end_inset
 
 
@@ -12685,7 +12781,7 @@ STATE
 \end_inset
 
 
-\begin_inset Formula $\beta\Longleftarrow\beta+a$
+\begin_inset Formula $u_{k}\Longleftarrow u_{k}+v_{k}$
 \end_inset
 
 
@@ -12703,15 +12799,31 @@ COMMENT{
 
 \end_inset
 
-
-\begin_inset Formula $\alpha$
+Addition von 
+\begin_inset Formula $v_{k}=\bar{a}$
 \end_inset
 
- und 
-\begin_inset Formula $\beta$
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
 \end_inset
 
- sind jetzt gerade
+ Bemerkung\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "enum:algebra_gcd_kaliski_note_corrprime"
+
+\end_inset
+
+)
 \begin_inset ERT
 status inlined
 
@@ -12755,7 +12867,37 @@ STATE
 \end_inset
 
 
-\begin_inset Formula $\beta\Longleftarrow\beta/2$
+\begin_inset Formula $s_{k}\Longleftarrow s_{k}/2$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Korrektur 
+\begin_inset Formula $\alpha$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
 \end_inset
 
 
@@ -12775,7 +12917,37 @@ STATE
 \end_inset
 
 
-\begin_inset Formula $\alpha\Longleftarrow\alpha/2$
+\begin_inset Formula $u_{k}\Longleftarrow u_{k}/2$
+\end_inset
+
+
+\hfill
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Korrektur 
+\begin_inset Formula $\beta$
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}
+\end_layout
+
 \end_inset
 
 
@@ -12795,7 +12967,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $k\Leftarrow k-1$
+\begin_inset Formula $i\Leftarrow i-1$
 \end_inset
 
 
@@ -12812,6 +12984,26 @@ status inlined
 ENDWHILE
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $(\alpha,\beta)\Longleftarrow(s_{k},u_{k})$
 \end_inset
 
 
@@ -12877,6 +13069,11 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand label
+name "page:algebra_gcd_kaliski_notes"
+
+\end_inset
+
 Noch einige abschließende Bemerkungen:
 \end_layout
 
@@ -12911,8 +13108,20 @@ b_{0} & =s_{k}a_{k}=\bar{b}_{0}d & b_{0} & =t_{k}b_{k}=\bar{b}_{0}d\end{xalignat
 \end_layout
 
 \begin_layout Standard
-schlußfolgern.
- Bei 
+schlußfolgern, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ bei 
 \begin_inset Formula $u_{k}$
 \end_inset
 
@@ -12936,7 +13145,7 @@ schlußfolgern.
 \begin_inset Formula $a_{k}=0$
 \end_inset
 
-) demzufolge um die teilerfremden Faktoren 
+) um die teilerfremden Faktoren 
 \begin_inset Formula $\bar{a}_{0}=a_{0}/d$
 \end_inset
 
@@ -12979,7 +13188,7 @@ reference "eq:algebra_gcd_kaliski_b0"
 
 \end_inset
 
- invariant sein.
+ konstant sein.
  Eine obere Schranke für 
 \begin_inset Formula $u_{k}$
 \end_inset
@@ -13049,7 +13258,20 @@ reference "alg:algebra_gcd_kaliski"
 \begin_inset Formula $b$
 \end_inset
 
- relativ prim sind (
+ teilerfremd sind (relativ prim, 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $\gcd(a,b)=1$
 \end_inset
 
@@ -13072,6 +13294,107 @@ reference "sec:algebra_euclid_hint"
  erläutert, sukzessive weiter reduziert werden.
 \end_layout
 
+\begin_layout Enumerate
+\begin_inset LatexCommand label
+name "enum:algebra_gcd_kaliski_note_corrprime"
+
+\end_inset
+
+Die in der Korrekturphase vorzunehmende Addition von 
+\begin_inset Formula $a$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $b$
+\end_inset
+
+ kann (entsprechend Anmerkung\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "enum:algebra_gcd_binary_note_parity"
+
+\end_inset
+
+ auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "enum:algebra_gcd_binary_note_parity"
+
+\end_inset
+
+) ersetzt werden durch eine Addition von 
+\begin_inset Formula $\bar{a}_{0}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\bar{b}_{0}$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Und das nicht nur für den speziellen Fall 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+, für welchen 
+\begin_inset Formula $a_{0}=\bar{a}_{0}$
+\end_inset
+
+, 
+\begin_inset Formula $b_{0}=\bar{b}_{0}$
+\end_inset
+
+ gilt.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+2^{i}\gcd(a,b) & =(t+\bar{b})a-(v+\bar{a})b\\
+ & =ta+\bar{b}a-vb+\bar{a}b\\
+ & =ta+\bar{b}\bar{a}d-vb-\bar{a}\bar{b}d\\
+ & =ta-vb\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Paragraph
 \begin_inset LatexCommand label
 name "sec:algebra_gcd_penk"
@@ -13939,14 +14262,14 @@ Dabei tritt allerdings wieder das bekannte Problem auf: Wie kann man die
  Die Antwort haben wir schon beim vorangegangenen Algorithmus geliefert
  -- indem die Ausgangsgleichungen\InsetSpace ~
 
-\begin_inset LatexCommand pageref
+\begin_inset LatexCommand ref
 reference "eq:algebra_gcd_penk_a0"
 
 \end_inset
 
  und\InsetSpace ~
 
-\begin_inset LatexCommand pageref
+\begin_inset LatexCommand ref
 reference "eq:algebra_gcd_penk_b0"
 
 \end_inset
