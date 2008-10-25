@@ -27,7 +27,7 @@
 \use_bibtopic false
 \paperorientation portrait
 \secnumdepth 3
-\tocdepth 3
+\tocdepth 4
 \paragraph_separation skip
 \defskip medskip
 \quotes_language german
@@ -48,7 +48,7 @@ status inlined
 
 \begin_layout Standard
 
-%% $Id: algebra.lyx,v 1.16 2008-09-20 15:42:19 ralf Exp $
+%% $Id: algebra.lyx,v 1.17 2008-10-25 17:22:23 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -7409,7 +7409,7 @@ status inlined
 
 
 \backslash
-mhead{
+headingmath{
 \backslash
 mathbb{Z}_2^n}{Z(2**n)}
 \end_layout
@@ -7673,13 +7673,19 @@ Euklid
 
 \begin_layout Standard
 \begin_inset LatexCommand index
-name "größter gemeinsamer Teiler|("
+name "Größter Gemeinsamer Teiler|("
 
 \end_inset
 
 
 \begin_inset LatexCommand index
-name "gcd|see{größter gemeinsamer Teiler}"
+name "GCD|see{Größter Gemeinsamer Teiler}"
+
+\end_inset
+
+
+\begin_inset LatexCommand index
+name "Größter Gemeinsamer Teiler!Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus"
 
 \end_inset
 
@@ -8581,7 +8587,13 @@ status inlined
 
 zout
 \noun default
-'s Identität\InsetSpace ~
+'s
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
+ Identität\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "eq:algebra_euclid_bezout"
@@ -8707,7 +8719,7 @@ Euklid
 
 \begin_layout Standard
 \begin_inset LatexCommand index
-name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus!erweiterter"
+name "Größter Gemeinsamer Teiler!Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus!Erweiterter"
 
 \end_inset
 
@@ -8806,13 +8818,6 @@ die Berechnung von
 \begin_inset LatexCommand nomenclature
 symbol "$\\lfloor x \\rfloor$"
 description "Größte ganze Zahl kleiner als $x$ (floor)"
-
-\end_inset
-
-
-\begin_inset LatexCommand nomenclature
-symbol "$\\lceil x \\rceil$"
-description "Kleinste ganze Zahl größer als $x$ (ceil)"
 
 \end_inset
 
@@ -9322,7 +9327,7 @@ Binärer GCD-Algorithmus
 
 \begin_layout Standard
 \begin_inset LatexCommand index
-name "Euklidischer Algorithmus@\\noun{Euklid}'ischer Algorithmus!binärer"
+name "Größter Gemeinsamer Teiler!Binärer GCD Algorithmus"
 
 \end_inset
 
@@ -9634,7 +9639,7 @@ gerade
 
 \begin_layout Standard
 ungerade, 
-\begin_inset Formula $a_{i}>b_{i}$
+\begin_inset Formula $a_{i}\geq b_{i}$
 \end_inset
 
 
@@ -9716,7 +9721,7 @@ Außerdem sind sowohl Summe als auch Differenz gerade Zahlen (
 
 \begin_layout Standard
 ungerade, 
-\begin_inset Formula $b_{i}>a_{i}$
+\begin_inset Formula $b_{i}\geq a_{i}$
 \end_inset
 
 
@@ -9889,7 +9894,138 @@ Anmerkungen
 \end_layout
 
 \begin_layout Enumerate
-In jedem Schritt wird entweder 
+Bezüglich 
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ gibt es genau eine Situation, die das Verschwinden von 
+\begin_inset Formula $a_{k}$
+\end_inset
+
+ hervorruft (genauso bezüglich 
+\begin_inset Formula $b_{k-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{k}$
+\end_inset
+
+) .
+ Betrachtet man dazu Tabelle\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "tab:algebra_gcd_binary_reduction"
+
+\end_inset
+
+, so wird 
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ in folgenden Fällen reduziert:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{k-1}$
+\end_inset
+
+ sind gerade: Halbierung von 
+\begin_inset Formula $a_{k-1}=1$
+\end_inset
+
+ ergibt 
+\begin_inset Formula $0$
+\end_inset
+
+, bedeuetet aber ungerades 
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ (Widerspruch).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ gerade, 
+\begin_inset Formula $b_{k-1}$
+\end_inset
+
+ ungerade: Halbierung von 
+\begin_inset Formula $a_{k-1}=1$
+\end_inset
+
+ ergibt 
+\begin_inset Formula $0$
+\end_inset
+
+, was ebenfalls ungerades 
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ bedeutet (Widerspruch).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{k-1}$
+\end_inset
+
+ sind ungerade: Halbierung von 
+\begin_inset Formula $b_{k-1}-a_{k-1}=1$
+\end_inset
+
+ ergibt 
+\begin_inset Formula $0$
+\end_inset
+
+, aber unter der Voraussetzung 
+\begin_inset Formula $b_{k-1}=a_{k-1}+1$
+\end_inset
+
+ können niemals beide ungerade sein (Widerspruch).
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $a_{k-1}$
+\end_inset
+
+ und 
+\begin_inset Formula $b_{k-1}$
+\end_inset
+
+ sind ungerade: Halbierung von 
+\begin_inset Formula $b_{k-1}=a_{k-1}$
+\end_inset
+
+ führt zu 
+\begin_inset Formula $a_{k}=0$
+\end_inset
+
+ und stellt damit den einzig möglichen Fall im Schritt 
+\begin_inset Formula $k-1$
+\end_inset
+
+ dar.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset LatexCommand label
+name "enum:algebra_gcd_binary_note_steps"
+
+\end_inset
+
+In jedem Iterationszyklus wird entweder 
 \begin_inset Formula $a_{i}$
 \end_inset
 
@@ -9899,7 +10035,7 @@ In jedem Schritt wird entweder
 
  um mindestens ein Bit reduziert.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Wodurch zwar mehr Schritte als beim 
@@ -9924,34 +10060,43 @@ key "Brent:1983,Jebelean:1993b,Bojanczyk:1987"
 
 \end_inset
 
- Konkret gilt für die Anzahl der Iterationsschritte 
-\begin_inset Formula $k$
+ Aus diesem Umstand läßt sich (im Fall 
+\begin_inset Formula $a_{0}>b_{0}$
 \end_inset
 
-, wenn 
-\begin_inset Formula $m$
+) für die Anzahl der Iterationsschritte 
+\begin_inset Formula $\left\lceil \ld a_{0}\right\rceil \leq k\leq2\left\lceil \ld a_{0}\right\rceil $
 \end_inset
 
- die Größe von 
-\begin_inset Formula $a_{0}$
+
+\begin_inset LatexCommand nomenclature
+symbol "$\\lceil x \\rceil$"
+description "Kleinste ganze Zahl größer als $x$ (ceil)"
+
 \end_inset
 
-, 
-\begin_inset Formula $b_{0}$
+ schlußfolgern (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+cf
+\end_layout
+
 \end_inset
 
- in Bits darstellt\InsetSpace ~
+ auch\InsetSpace ~
 
 \begin_inset LatexCommand cite
+after "Theorem~2"
 key "Kaliski:1995"
 
 \end_inset
 
-: 
-\begin_inset Formula $m-1\leq k-1\leq2m-1$
-\end_inset
-
-.
+).
 \end_layout
 
 \begin_layout Enumerate
@@ -10092,6 +10237,23 @@ zout
 \end_inset
 
  müssen übrigens nicht korrigiert werden.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+d & =\alpha a+\beta b=\gcd(a,b)=2^{n}d'=2^{n}\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
+d' & =\alpha'a'+\beta'b'=\gcd(a',b')=\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
+d & =2^{n}d'=2^{n}(\alpha'a'+\beta'b')=2^{n}\left(\alpha'\frac{a}{2^{n}}+\beta'\frac{b}{2^{n}}\right)=\alpha'a+\beta'b\end{align*}
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -10444,23 +10606,33 @@ Algorithmus nach
 \noun on
 Kaliski
 \noun default
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
-key "Kaliski:1995"
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+headingspecial{
+\end_layout
 
 \end_inset
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Standard
 Auch 
 \emph on
 Right Shift Delayed Halfing
 \emph default
- (RSDH) Algorithmus genannt\InsetSpace ~
+ (RSDH) oder 
+\emph on
+Almost Montgomery Inverse
+\emph default
+ Algorithmus genannt\InsetSpace ~
 
 \begin_inset LatexCommand cite
 key "Hars:2006"
@@ -10472,10 +10644,39 @@ key "Hars:2006"
 
 \end_inset
 
+\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
+
+\end_inset
+
+
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+}{}
+\end_layout
+
+\end_inset
+
 
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand index
+name "Größter Gemeinsamer Teiler!Binärer GCD Algorithmus!Erweiterter"
+
+\end_inset
+
+
+\begin_inset LatexCommand index
+name "Kaliski GCD-Algorithmus@\\noun{Kaliski}'s GCD-Algorithmus"
+
+\end_inset
+
 Betrachtet man das Reduktionsschema des binären GCD-Algorithmus, so kann
  man verschiedenste lineare Transformationen der Art
 \end_layout
@@ -10526,6 +10727,54 @@ definieren, wobei sich die einzelnen Betrachtungsweisen durch unterschiedliche
 \end_inset
 
 .
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Andere mögliche Anfangsbedingung wären: 
+\begin_inset Formula $s_{0}=b$
+\end_inset
+
+, 
+\begin_inset Formula $t_{0}=1-a$
+\end_inset
+
+ oder/und 
+\begin_inset Formula $u_{0}=1-b$
+\end_inset
+
+, 
+\begin_inset Formula $v_{0}=a$
+\end_inset
+
+.
+ Da 
+\begin_inset Formula $u,v,s,t$
+\end_inset
+
+ aber sowieso monoton ansteigen, ist ein Vorteil nicht erkennbar.
+ Statt dessen würden 
+\begin_inset Formula $s$
+\end_inset
+
+, 
+\begin_inset Formula $t$
+\end_inset
+
+ oder/und 
+\begin_inset Formula $u$
+\end_inset
+
+, 
+\begin_inset Formula $v$
+\end_inset
+
+ nur noch größer werden.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -10551,9 +10800,9 @@ Durch Einsetzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-u_{i}a_{i}+v_{i}b_{i} & =u_{i+1}a_{i+1}+v_{i+1}b_{i+1}\\
-s_{i}a_{i}+t_{i}b_{i} & =s_{i+1}a_{i+1}+t_{i+1}b_{i+1}\end{align*}
+\begin_inset Formula \begin{alignat*}{2}
+a_{0} & =u_{i}a_{i}+v_{i}b_{i} &  & =u_{i+1}a_{i+1}+v_{i+1}b_{i+1}\\
+b_{0} & =s_{i}a_{i}+t_{i}b_{i} &  & =s_{i+1}a_{i+1}+t_{i+1}b_{i+1}\end{alignat*}
 
 \end_inset
 
@@ -10907,7 +11156,7 @@ ungerade
 \begin_inset Text
 
 \begin_layout Standard
-\begin_inset Formula $b_{i+1}$
+\begin_inset Formula $b_{i}$
 \end_inset
 
 
@@ -10999,7 +11248,7 @@ gerade
 \begin_inset Text
 
 \begin_layout Standard
-\begin_inset Formula $a_{i+1}$
+\begin_inset Formula $a_{i}$
 \end_inset
 
 
@@ -11119,7 +11368,7 @@ ungerade,
 \begin_inset Text
 
 \begin_layout Standard
-\begin_inset Formula $b_{i+1}$
+\begin_inset Formula $b_{i}$
 \end_inset
 
 
@@ -11194,7 +11443,7 @@ ungerade,
 
 \begin_layout Standard
 ungerade, 
-\begin_inset Formula $b_{i}>a_{i}$
+\begin_inset Formula $b_{i}\geq a_{i}$
 \end_inset
 
 
@@ -11215,7 +11464,7 @@ ungerade,
 \begin_inset Text
 
 \begin_layout Standard
-\begin_inset Formula $a_{i+1}$
+\begin_inset Formula $a_{i}$
 \end_inset
 
 
@@ -11326,7 +11575,13 @@ status inlined
 
 zout
 \noun default
--Koeffizienten 
+-Koeffizienten
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
+ 
 \begin_inset Formula $\alpha,\beta\in\mathbb{Z}$
 \end_inset
 
@@ -11386,6 +11641,10 @@ und
 \end_inset
 
  gerade sind (
+\begin_inset Formula $\mdet{D_{i}}=2^{i}$
+\end_inset
+
+, 
 \begin_inset ERT
 status open
 
@@ -11398,10 +11657,10 @@ cf
 
 \end_inset
 
- Anmerkungen in Abschnitt\InsetSpace ~
+ Anmerkungen auf Seite\InsetSpace ~
 
-\begin_inset LatexCommand ref
-reference "sec:algebra_gcd_extended"
+\begin_inset LatexCommand pageref
+reference "sec:algebra_gcd_binary_notes"
 
 \end_inset
 
@@ -11409,7 +11668,7 @@ reference "sec:algebra_gcd_extended"
 \begin_inset Formula $i=k$
 \end_inset
 
- folgendermaßen konkretisiert werden (in Abhängigkeit davon, ob 
+, in Abhängigkeit davon ob 
 \begin_inset Formula $a_{k}$
 \end_inset
 
@@ -11417,7 +11676,7 @@ reference "sec:algebra_gcd_extended"
 \begin_inset Formula $b_{k}$
 \end_inset
 
- zuerst verschwindet):
+ zuerst verschwindet, folgendermaßen konkretisiert werden:
 \end_layout
 
 \begin_layout Standard
@@ -11808,21 +12067,10 @@ resp
 
 \end_deeper
 \begin_layout Standard
-Als Ergebnis der Ausführungen kann man Algorithmus\InsetSpace ~
-
-\begin_inset LatexCommand ref
-reference "alg:algebra_gcd_kaliski"
-
-\end_inset
-
- formulieren.
-\end_layout
-
-\begin_layout Standard
 \begin_inset Float algorithm
 wide false
 sideways false
-status open
+status collapsed
 
 \begin_layout Standard
 \begin_inset Caption
@@ -13074,7 +13322,14 @@ name "page:algebra_gcd_kaliski_notes"
 
 \end_inset
 
-Noch einige abschließende Bemerkungen:
+Als Ergebnis kann man Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_kaliski"
+
+\end_inset
+
+ formulieren, wobei außerdem folgende Anmerkungen berücksichtigt wurden:
 \end_layout
 
 \begin_layout Enumerate
@@ -13092,15 +13347,16 @@ reference "eq:algebra_gcd_kaliski_b0"
 
 \end_inset
 
- läßt sich im letzten Iterationsschritt
+ läßt sich im letzten Iterationsschritt (von Phase\InsetSpace \thinspace{}
+I)
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
-a_{0} & =u_{k}a_{k}=\bar{a}_{0}d & a_{0} & =v_{k}b_{k}=\bar{a}_{0}d\\
-b_{0} & =s_{k}a_{k}=\bar{b}_{0}d & b_{0} & =t_{k}b_{k}=\bar{b}_{0}d\end{xalignat*}
+a_{0} & =u_{k}a_{k}=u_{k}d & a_{0} & =v_{k}b_{k}=v_{k}d\\
+b_{0} & =s_{k}a_{k}=s_{k}d & b_{0} & =t_{k}b_{k}=t_{k}d\end{xalignat*}
 
 \end_inset
 
@@ -13145,15 +13401,18 @@ ie
 \begin_inset Formula $a_{k}=0$
 \end_inset
 
-) um die teilerfremden Faktoren 
-\begin_inset Formula $\bar{a}_{0}=a_{0}/d$
+) um die teilerfremden Faktoren
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
+\bar{a}_{0}=u_{k} & \leq\gcd(a,b)\leq a_{0} & \bar{a}_{0}=v_{k} & \leq\gcd(a,b)\leq a_{0}\\
+\bar{b}_{0}=s_{k} & \leq\gcd(a,b)\leq b_{0} & \bar{b}_{0}=t_{k} & \leq\gcd(a,b)\leq b_{0}\mperiod\end{xalignat*}
+
 \end_inset
 
- und 
-\begin_inset Formula $\bar{b}_{0}=b_{0}/d$
-\end_inset
 
-.
 \end_layout
 
 \end_deeper
@@ -13166,7 +13425,24 @@ Wegen der stetigen Reduktion von
 \begin_inset Formula $b_{i}$
 \end_inset
 
- müssen die Linearfaktoren schrittweise anwachsen, denn nur so können 
+ müssen die Linearfaktoren 
+\begin_inset Formula $u_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $s_{i}$
+\end_inset
+
+, 
+\begin_inset Formula $v_{i}$
+\end_inset
+
+ und 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ in Phase\InsetSpace \thinspace{}
+I schrittweise anwachsen, denn nur so können 
 \begin_inset Formula $a_{0}$
 \end_inset
 
@@ -13188,61 +13464,107 @@ reference "eq:algebra_gcd_kaliski_b0"
 
 \end_inset
 
- konstant sein.
- Eine obere Schranke für 
-\begin_inset Formula $u_{k}$
+ konstant bleiben.
+ In\InsetSpace ~
+
+\begin_inset LatexCommand cite
+after "Theorem~1"
+key "Kaliski:1995"
+
 \end_inset
 
-, 
-\begin_inset Formula $s_{k}$
+ wird bewiesen, daß keine dieser Größen während der Ausführung des Algorithmus'
+ den Maximalwert 
+\begin_inset Formula $2a_{0}-1$
 \end_inset
 
- 
-\begin_inset ERT
+ überschreitet (für 
+\begin_inset Formula $a_{0}>b_{0}$
+\end_inset
+
+).
+\begin_inset Foot
 status open
+
+\begin_layout Standard
+Im Hinweis auf 
+\begin_inset LatexCommand pageref
+reference "sec:algebra_euclid_hint"
+
+\end_inset
+
+ wurde zwar für die kleinsten Werte der 
+\noun on
+B
+\begin_inset ERT
+status inlined
 
 \begin_layout Standard
 
 
 \backslash
-resp
+'{e}
 \end_layout
 
 \end_inset
 
- 
-\begin_inset Formula $v_{k}$
+zout
+\noun default
+-Koeffizienten 
+\begin_inset Formula $|\alpha|<\bar{b}$
 \end_inset
 
-, 
-\begin_inset Formula $t_{k}$
+ und 
+\begin_inset Formula $|\beta|<\bar{a}$
 \end_inset
 
- ergibt sich direkt aus vorangegangenem Punkt.
-\end_layout
+ geschlußfolgert, was jedoch nicht für die Zwischenwerte eines bestimmten
+ Algorithmus' gelten muß (hier anwendbar auf das Ende von Phase\InsetSpace ~
+II).
+ Theorem\InsetSpace ~
+1 in\InsetSpace ~
 
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
-\bar{a}_{0}=u_{k} & \leq\gcd(a,b)\leq a_{0} & \bar{a}_{0}=v_{k} & \leq\gcd(a,b)\leq a_{0}\\
-\bar{b}_{0}=s_{k} & \leq\gcd(a,b)\leq b_{0} & \bar{b}_{0}=t_{k} & \leq\gcd(a,b)\leq b_{0}\end{xalignat*}
+\begin_inset LatexCommand cite
+key "Kaliski:1995"
 
 \end_inset
 
-
-\end_layout
-
-\end_deeper
-\begin_layout Enumerate
-Algorithmus\InsetSpace ~
+ läßt sich aber auch nachvollziehen, wenn man mit Blick Algorithmus\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "alg:algebra_gcd_kaliski"
 
 \end_inset
 
- findet nur dann die kleinsten Kofaktoren 
+ die Anmerkung\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "enum:algebra_gcd_binary_note_steps"
+
+\end_inset
+
+ (auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "enum:algebra_gcd_binary_note_steps"
+
+\end_inset
+
+) zur Anzahl der Iterationsschritte berücksichtigt.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Ein weiterer Vorteil von 
+\noun on
+Kaliski
+\noun default
+'s Algorithmus ist, daß er immer die kleinsten Kofaktoren 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -13250,7 +13572,7 @@ reference "alg:algebra_gcd_kaliski"
 \begin_inset Formula $\beta$
 \end_inset
 
-, wenn 
+ findet, auch dann wenn 
 \begin_inset Formula $a$
 \end_inset
 
@@ -13258,40 +13580,31 @@ reference "alg:algebra_gcd_kaliski"
 \begin_inset Formula $b$
 \end_inset
 
- teilerfremd sind (relativ prim, 
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\gcd(a,b)=1$
-\end_inset
-
-).
- Sollte als Resultat des Algorithmus' jedoch 
-\begin_inset Formula $|\alpha|\geq\bar{b}_{0}$
-\end_inset
-
- oder 
-\begin_inset Formula $|\beta|\geq\bar{a}_{0}$
-\end_inset
-
- gelten, so können die Kofaktoren, wie im Hinweis auf Seite\InsetSpace ~
+ nicht teilerfremd sind (siehe dazu auch Hinweis auf Seite\InsetSpace ~
 
 \begin_inset LatexCommand pageref
 reference "sec:algebra_euclid_hint"
 
 \end_inset
 
- erläutert, sukzessive weiter reduziert werden.
+).
+ Die Ursache ist darin zu finden, daß nach Phase\InsetSpace ~
+I die teilerfremden Faktoren
+ 
+\begin_inset Formula $\bar{a}_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $\bar{b}_{0}$
+\end_inset
+
+ zur Verfügung stehen, und dann in Phase\InsetSpace ~
+II eine geeignete Reduktion ermöglichen.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Enumerate
@@ -13300,7 +13613,8 @@ name "enum:algebra_gcd_kaliski_note_corrprime"
 
 \end_inset
 
-Die in der Korrekturphase vorzunehmende Addition von 
+Die in Phase\InsetSpace \thinspace{}
+II vorzunehmende Addition von 
 \begin_inset Formula $a$
 \end_inset
 
@@ -13405,15 +13719,15 @@ Algorithmus nach
 \noun on
 Penk
 \noun default
- (
+
 \begin_inset ERT
-status open
+status inlined
 
 \begin_layout Standard
 
 
 \backslash
-cf
+headingspecial{
 \end_layout
 
 \end_inset
@@ -13426,10 +13740,34 @@ key "Knuth:TAOCP2:1998"
 
 \end_inset
 
-)
+,\InsetSpace ~
+
+\begin_inset LatexCommand cite
+after "14.4.3"
+key "Menezes:1992"
+
+\end_inset
+
+
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+}{}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand index
+name "Penk GCD-Algorithmus@\\noun{Penk}'s GCD-Algorithmus"
+
+\end_inset
+
 Dieser Algorithmus stellt 
 \begin_inset Formula $a_{i+1}$
 \end_inset
@@ -13459,11 +13797,23 @@ Dieser Algorithmus stellt
 status open
 
 \begin_layout Standard
-Eine andere erlaubte Anfangsbedingung wäre: 
-\begin_inset Formula $s_{0}=b,\; t_{0}=1-a$
+Andere mögliche Anfangsbedingung wären: 
+\begin_inset Formula $s_{0}=b$
 \end_inset
 
+, 
+\begin_inset Formula $t_{0}=1-a$
+\end_inset
 
+ oder/und 
+\begin_inset Formula $u_{0}=1-b$
+\end_inset
+
+, 
+\begin_inset Formula $v_{0}=a$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -14058,7 +14408,7 @@ gerade
 
 \begin_layout Standard
 ungerade, 
-\begin_inset Formula $a_{i}>b_{i}$
+\begin_inset Formula $a_{i}\geq b_{i}$
 \end_inset
 
 
@@ -14154,7 +14504,7 @@ ungerade,
 
 \begin_layout Standard
 ungerade, 
-\begin_inset Formula $b_{i}>a_{i}$
+\begin_inset Formula $b_{i}\geq a_{i}$
 \end_inset
 
 
@@ -14433,38 +14783,79 @@ reference "alg:algebra_gcd_penk"
 \end_inset
 
  formulieren.
- Die abschließenden Bemerkungen zur Methode nach 
+ Der Vorteil des Algorithmus' (gegenüber 
 \noun on
 Kaliski
 \noun default
- gelten in ähnlicher Art und Weise auch hier.
- Der Vorteil des Algorithmus' liegt vor allem darin, daß keine Korrekturphase
- nötig ist.
+'s) liegt vor allem darin, daß keine Korrekturphase nötig ist.
  Nachteilig für eine praktische Umsetzung ist die notwendige Vorzeichen-Arithmet
 ik.
- Außerdem entsprechen die teilerfremden Faktoren 
-\begin_inset Formula $\bar{a}$
+\begin_inset Note Note
+status open
+
+\begin_layout Standard
+Im Gegensatz zu 
+\noun on
+Kaliski
+\noun default
+'s Algorithmus findet Algorithmus\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "alg:algebra_gcd_penk"
+
 \end_inset
 
-, 
-\begin_inset Formula $\bar{b}$
-\end_inset
-
- nicht genau den jeweils anderen Linearfaktoren (welche nicht 
+ nur dann die kleinsten Kofaktoren 
 \begin_inset Formula $\alpha$
 \end_inset
 
-, 
+ und 
 \begin_inset Formula $\beta$
 \end_inset
 
- darstellen), sondern nur ihr Verhältnis.
-\end_layout
+, wenn 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+ teilerfremd sind (relativ prim, 
+\begin_inset ERT
+status open
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\mbox{Fall: }b_{k} & =s_{k}a_{0}+t_{k}b_{0}=0 & \mbox{Fall: }a_{k} & =u_{k}a_{0}+v_{k}b_{0}=0\\
-\frac{\bar{a}_{0}}{\bar{b}_{0}} & =-\frac{t_{k}}{s_{k}} & \frac{\bar{a}_{0}}{\bar{b}_{0}} & =-\frac{v_{k}}{u_{k}}\end{xalignat*}
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\gcd(a,b)=1$
+\end_inset
+
+).
+ Sollte als Resultat des Algorithmus' jedoch 
+\begin_inset Formula $|\alpha|\geq\bar{b}_{0}$
+\end_inset
+
+ oder 
+\begin_inset Formula $|\beta|\geq\bar{a}_{0}$
+\end_inset
+
+ gelten, so können die Kofaktoren, wie im Hinweis auf Seite\InsetSpace ~
+
+\begin_inset LatexCommand pageref
+reference "sec:algebra_euclid_hint"
+
+\end_inset
+
+ erläutert, sukzessive weiter reduziert werden.
+\end_layout
 
 \end_inset
 
@@ -14499,8 +14890,9 @@ Penk
 status open
 
 \begin_layout Standard
-Bei geschickter Wahl der Anfangsbedingung kann man negative Vorzeichen mglw.
- durch ein (einziges) Flag umgehen.
+Bei geschickter Wahl der Anfangsbedingung kann man negative Vorzeichen (oder
+ den Wechsel des Vorzeichens) mglw.
+ umgehen!
 \end_layout
 
 \end_inset
@@ -15607,7 +15999,13 @@ status inlined
 
 zout
 \noun default
-'s Identität
+'s
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
+ Identität
 \end_layout
 
 \begin_layout Standard
@@ -15673,7 +16071,7 @@ x_{n} & =\alpha\frac{c}{d}+n\frac{b}{d} & y_{n} & =\beta\frac{c}{d}-n\frac{a}{d}
 
 \begin_layout Standard
 \begin_inset LatexCommand index
-name "größter gemeinsamer Teiler|)"
+name "Größter Gemeinsamer Teiler|)"
 
 \end_inset
 
@@ -15694,16 +16092,21 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand index
+name "Montgomery@\\noun{Montgomery}!Potenzierung"
+
+\end_inset
+
 Bei der Methode nach 
 \noun on
 Montgomery
 \noun default
- handelt es sich eigentlich um eine Modulo-Multipli\SpecialChar \-
+ handelt es sich eigentlich um eine Multipli\SpecialChar \-
 kations\SpecialChar \-
-methode, bei der
- die Reduktion des (Zwischen-) Ergebnisses ohne echte Langzahl\SpecialChar \-
-division erfolgen
- kann\InsetSpace ~
+methode, bei der die
+ Modulo-Reduktion des (Zwischen-) Ergebnisses ohne echte Langzahl\SpecialChar \-
+division
+ erfolgen kann\InsetSpace ~
 
 \begin_inset LatexCommand cite
 key "Montgomery:1985"
@@ -15711,7 +16114,7 @@ key "Montgomery:1985"
 \end_inset
 
 .
- Da allerdings zuerst eine Transformation in den 
+ Da allerdings zuerst eine Transformation beider Faktoren in den 
 \noun on
 Montgomery
 \noun default
@@ -15723,14 +16126,15 @@ Raum
 \begin_inset Quotes grd
 \end_inset
 
- vorgenommen werden muß, welche selbst zwei Modulo-Division erfordert, kommen
- die Geschwindigkeitsvorteile nur bei der Potenzierung wirklich zum tragen.
+ vorgenommen werden muß (welche zwei Modulo-Division erfordert) und außerdem
+ einmal der erweiterte GCD-Algorithmus bemüht werden muß, kommen die Geschwindig
+keitsvorteile nur bei der Potenzierung wirklich zum tragen.
 \end_layout
 
 \begin_layout Standard
-Um einen leicht verständlichen Zugang zu finden, soll zuerst nur eine einzelne
- Multiplikation 
-\begin_inset Formula $c=ab\pmod{n}$
+Um einen leicht verständlichen Zugang zu finden, soll an dieser Stelle nur
+ eine einzelne Multiplikation 
+\begin_inset Formula $c=ab\pmod n$
 \end_inset
 
  betrachtet werden.
@@ -15755,7 +16159,7 @@ Montgomery
 \begin_inset Formula $\gcd(r,n)=1$
 \end_inset
 
-, 
+ 
 \begin_inset ERT
 status open
 
@@ -15763,20 +16167,20 @@ status open
 
 
 \backslash
-ie
+resp
 \end_layout
 
 \end_inset
 
  
-\begin_inset Formula $(-1)^{k}=\alpha r-\beta n$
+\begin_inset Formula $\alpha r-\beta n=1$
 \end_inset
 
- mit 
+ (mit 
 \begin_inset Formula $\alpha,\beta\in\mathbb{N}$
 \end_inset
 
- (Satz von 
+, Satz von 
 \noun on
 B
 \begin_inset ERT
@@ -15793,6 +16197,12 @@ status inlined
 
 zout
 \noun default
+
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
 ), in folgenden Einzelschritten darstellen:
 \end_layout
 
@@ -15805,7 +16215,7 @@ Berechnung von
 \noun on
 Euklid
 \noun default
-'ischen Algorithmus
+'ischen Algorithmus;
 \end_layout
 
 \begin_layout Enumerate
@@ -15818,14 +16228,14 @@ Eingangstransformation der Faktoren
 \end_inset
 
  zu 
-\begin_inset Formula $\overline{a}=ar\bmod{n}$
+\begin_inset Formula $\hat{a}=ar\bmod n$
 \end_inset
 
  und 
-\begin_inset Formula $\overline{b}=br\bmod{n}$
+\begin_inset Formula $\hat{b}=br\bmod n$
 \end_inset
 
-
+, mittels einfacher Modulo-Division;
 \end_layout
 
 \begin_layout Enumerate
@@ -15833,29 +16243,75 @@ Eingangstransformation der Faktoren
 \noun on
 Montgomery
 \noun default
--Bereich
+-Bereich:
 \end_layout
 
 \begin_deeper
 \begin_layout Enumerate
 Berechnung des Produkts 
-\begin_inset Formula $x=\overline{a}\cdot\overline{b}$
+\begin_inset Formula $x=\hat{a}\cdot\hat{b}$
 \end_inset
 
- (man beachte: keine Modulo-Reduktion).
+;
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Man beachte, daß hierbei keine Modulo-Reduktion vorgenommen wird.
+ Für das Ergebnis gilt: 
+\begin_inset Formula $x=(ar\bmod n)\cdot(br\bmod n)$
+\end_inset
+
+ und deshalb 
+\begin_inset Formula $x\neq cr\bmod n$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\hat{a}\cdot\hat{b}\neq\hat{c}\pmod n$
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Einfacher verhält sich dagegen die Addition, denn sie ist wegen 
+\begin_inset Formula $\hat{a}+\hat{b}=ar+br=(a+b)r$
+\end_inset
+
+ invariant.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \begin_layout Enumerate
 
 \noun on
 Montgomery
 \noun default
 -Reduktion von 
-\begin_inset Formula $x=abr^{2}$
+\begin_inset Formula $x$
 \end_inset
 
  zu 
-\begin_inset Formula $\overline{c}=cr\bmod{n}=abr\bmod{n}$
+\begin_inset Formula $\hat{c}=cr\bmod n=abr\bmod n$
 \end_inset
 
 , 
@@ -15871,52 +16327,39 @@ ie
 
 \end_inset
 
- zu 
-\begin_inset Formula $\overline{c}=M(x,r)=xr^{-1}\bmod{n}$
+ Multiplikation mit 
+\begin_inset Formula $r^{-1}$
 \end_inset
 
-.
+ und anschließende Modulo-Reduktion;
 \begin_inset Foot
 status open
 
 \begin_layout Standard
-Die 
-\noun on
-Montgomery
-\noun default
--Reduktion 
-\begin_inset Formula $M(x,r)$
+Der Ausdruck 
+\begin_inset Formula $\hat{a}\hat{b}r^{-1}\bmod{n}$
 \end_inset
 
- ist eigentlich nur deshalb vonnöten, weil für die Multiplikation (leider)
- gilt: 
-\begin_inset Formula $\overline{a}\cdot\overline{b}\neq\overline{c}\pmod{n}$
-\end_inset
-
-.
- Sie überführt das Ergebnis 
-\begin_inset Formula $x=\overline{a}\cdot\overline{b}$
-\end_inset
-
- in eine Darstellung 
-\begin_inset Formula $\overline{c}=cr\bmod{n}$
-\end_inset
-
-, die genau der von 
-\begin_inset Formula $\overline{a}$
+ wird auch als Montgomery-Produkt von 
+\begin_inset Formula $\hat{a}$
 \end_inset
 
  und 
-\begin_inset Formula $\overline{b}$
+\begin_inset Formula $\hat{b}$
 \end_inset
 
- entspricht und so Ausgangspunkt der nächsten Multiplikation sein kann.
- Einfacher verhält sich dagegen die Addition, denn sie ist, wegen 
-\begin_inset Formula $\overline{a}+\overline{b}=ar+br=(a+b)r$
-\end_inset
-
-, relativ invariant.
+ bezeichnet.
 \end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+\hat{c}=\MONTG(x,r)=xr^{-1}\bmod n\]
 
 \end_inset
 
@@ -15925,14 +16368,60 @@ Montgomery
 
 \end_deeper
 \begin_layout Enumerate
+Weitere Multiplikationen im 
+\noun on
+Montgomery
+\noun default
+-
+\begin_inset Quotes grd
+\end_inset
+
+Raum
+\begin_inset Quotes grd
+\end_inset
+
+, die 
+\begin_inset Formula $\hat{c}$
+\end_inset
+
+ als Faktor verwenden (
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ bei der Potenzierung);
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Rücktransformation des Ergebnisses 
-\begin_inset Formula $c=r^{-1}\overline{c}\bmod{n}$
+\begin_inset Formula $\hat{c}$
+\end_inset
+
+ zu 
+\begin_inset Formula $c=\hat{c}r^{-1}\bmod n$
+\end_inset
+
+, ebenfalls eine 
+\noun on
+Montgomery
+\noun default
+-Reduktion: 
+\begin_inset Formula $c=\MONTG(\hat{c},r)$
 \end_inset
 
 .
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Paragraph*
 
 \noun on
 Montgomery
@@ -15941,12 +16430,17 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
+\begin_inset LatexCommand index
+name "Montgomery@\\noun{Montgomery}!Reduktion"
+
+\end_inset
+
 Zur Herleitung von 
 \noun on
 Montgomery
 \noun default
 's effizienter Berechnungsmethode für 
-\begin_inset Formula $M(x,r)=xr^{-1}\bmod{n}$
+\begin_inset Formula $\MONTG(x,r)=xr^{-1}\bmod n$
 \end_inset
 
  wählen wir als Ausgangspunkt:
@@ -15977,34 +16471,18 @@ n(\beta x\bmod r)-r(\alpha x\bmod n) & =n(\beta x-ur)-r(\alpha x-vn)\\
 \end_layout
 
 \begin_layout Standard
-und bei Anwendung von Formel\InsetSpace ~
-
-\begin_inset LatexCommand ref
-reference "eq:algebra_euclid_bezout"
-
+und mit 
+\begin_inset Formula $\alpha r-\beta n=1$
 \end_inset
 
- (Satz von 
+
 \noun on
-B
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-
-\backslash
-'{e}
-\end_layout
-
-\end_inset
-
-zout):
+:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-n(\beta x\bmod r)-r(\alpha x\bmod n)=rn(v-u)+(-1)^{k+1}x\]
+n(\beta x\bmod r)-r(\alpha x\bmod n)=(v-u)rn-x\]
 
 \end_inset
 
@@ -16012,16 +16490,12 @@ n(\beta x\bmod r)-r(\alpha x\bmod n)=rn(v-u)+(-1)^{k+1}x\]
 \end_layout
 
 \begin_layout Standard
-Umstellen nach 
-\begin_inset Formula $\alpha x\bmod n$
-\end_inset
-
- führt uns fast zum Ergebnis.
+Umstellen nach
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-\alpha x\bmod n=\frac{n(\beta x\bmod r)-rn(v-u)+(-1)^{k}x}{r}=\frac{n(\beta x\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
+\alpha x\bmod n=\frac{n(\beta x\bmod r)-(v-u)rn+x}{r}\]
 
 \end_inset
 
@@ -16029,31 +16503,43 @@ Umstellen nach
 \end_layout
 
 \begin_layout Standard
-Da 
-\begin_inset Formula $\alpha=r^{-1}$
+sowie die Erkenntnis, daß es sich bei 
+\begin_inset Formula $\alpha$
 \end_inset
 
-Inverses in multiplikativer Gruppe
+ um das multiplikativ inverse Element von 
+\begin_inset Formula $r$
+\end_inset
+
+ im Restklassensystem modulo 
+\begin_inset Formula $n$
+\end_inset
+
+ handelt (
+\begin_inset Formula $\alpha=r^{-1}\pmod n$
+\end_inset
+
+), führt uns zum Ergebnis.
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+\MONTG(x,r)=xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+x}{r}-(v-u)n\end{equation}
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+(-1)^{k}x}{r}-n(v-u)\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und bei geschickter Wahl von 
+Bei geschickter Wahl von 
 \begin_inset Formula $r=2^{j}$
 \end_inset
 
- sind nur Schiebeoperationen nötig.
+ sind für alle Divisionen nur Schiebeoperationen nötig.
  Sollte das Ergebnis kleiner als Null werden, so ist wegen des letzten Terms
  
-\begin_inset Formula $n(v-u)$
+\begin_inset Formula $(v-u)n$
 \end_inset
 
  höchstens einmal 
@@ -16066,7 +16552,7 @@ und bei geschickter Wahl von
 \end_inset
 
  ist die einfachste Bedingung 
-\begin_inset Formula $\gcd(r,n)=1$
+\begin_inset Formula $\gcd(2^{j},n)=1$
 \end_inset
 
  zu garantieren die, 
@@ -16074,6 +16560,37 @@ und bei geschickter Wahl von
 \end_inset
 
  als ungerade vorauszusetzen.
+\begin_inset Foot
+status open
+
+\begin_layout Standard
+Oftmals kann eine solche Einschränkung hingenommen werden, falls nicht siehe
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Standard
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in\InsetSpace ~
+
+\begin_inset LatexCommand cite
+key "Koc:1994"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -16092,7 +16609,7 @@ name "Eulers Totient-Funktion@\\noun{Euler}'s Totient-Funktion"
 
 
 \begin_inset LatexCommand index
-name "Totient-Funktion|\\see \\noun{Euler}"
+name "Totient-Funktion|see{\\noun{Euler}}"
 
 \end_inset
 
@@ -16185,7 +16702,7 @@ reference "sec:algebra_residue_field"
 
 \end_inset
 
-, Gleichung\InsetSpace ~
+, Formel\InsetSpace ~
 
 \begin_inset LatexCommand ref
 reference "eq:algebra_theorem_fermat"
