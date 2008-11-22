@@ -48,7 +48,7 @@ status inlined
 
 \begin_layout Standard
 
-%% $Id: algebra.lyx,v 1.17 2008-10-25 17:22:23 ralf Exp $
+%% $Id: algebra.lyx,v 1.18 2008-11-22 16:37:13 ralf Exp $
 \end_layout
 
 \begin_layout Standard
@@ -4992,7 +4992,7 @@ reference "eq:algebra_ord_divider"
 \end_inset
 
  ist die, daß wegen 
-\begin_inset Formula $0\equiv m\pmod m$
+\begin_inset Formula $0\equiv m\pmod{m}$
 \end_inset
 
  das Modul 
@@ -5296,7 +5296,7 @@ name "Fermat, kleiner Satz@\\noun{Fermat}, kleiner Satz"
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-g^{p-1}\equiv1\pmod p,\qquad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
+g^{p-1}\equiv1\pmod{p},\qquad g\in\mathbb{Z}_{p}^{*}\label{eq:algebra_theorem_fermat}\end{equation}
 
 \end_inset
 
@@ -6389,7 +6389,7 @@ name "Restklassen!-division"
 \end_inset
 
  ist definiert als 
-\begin_inset Formula $r(x)\equiv f(x)\bmod{m(x)}$
+\begin_inset Formula $r(x)\equiv f(x)\bmod m(x)$
 \end_inset
 
 , was grundsätzlich immer zu einem Grad kleiner als 
@@ -8536,7 +8536,7 @@ cf
  auch die kurze Betrachtung zu diophantischen Gleichungen auf Seite\InsetSpace ~
 
 \begin_inset LatexCommand pageref
-reference "sec:algebra_gcd_diophant"
+reference "sec:algebra_diophantine_eqn"
 
 \end_inset
 
@@ -15818,9 +15818,9 @@ end{algorithmic}
 
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsection
 \begin_inset LatexCommand label
-name "sec:algebra_gcd_diophant"
+name "sec:algebra_diophantine_eqn"
 
 \end_inset
 
@@ -16103,8 +16103,10 @@ Montgomery
 \noun default
  handelt es sich eigentlich um eine Multipli\SpecialChar \-
 kations\SpecialChar \-
-methode, bei der die
- Modulo-Reduktion des (Zwischen-) Ergebnisses ohne echte Langzahl\SpecialChar \-
+metho\SpecialChar \-
+de, bei der die
+ Modulo-Reduktion des (Zwischen-) Ergebnisses ohne echte Lang\SpecialChar \-
+zahl\SpecialChar \-
 division
  erfolgen kann\InsetSpace ~
 
@@ -16132,17 +16134,17 @@ keitsvorteile nur bei der Potenzierung wirklich zum tragen.
 \end_layout
 
 \begin_layout Standard
-Um einen leicht verständlichen Zugang zu finden, soll an dieser Stelle nur
+Um einen leicht verständlichen Zugang zu finden, konzentrieren wir uns auf
  eine einzelne Multiplikation 
-\begin_inset Formula $c=ab\pmod n$
+\begin_inset Formula $c=ab\pmod{n}$
 \end_inset
 
- betrachtet werden.
- Dazu setzen wir eine Zahl 
+.
+ Dazu soll eine Zahl 
 \begin_inset Formula $r$
 \end_inset
 
- voraus, welche keinen gemeinsamen Teiler mit dem Modul 
+ vorausgesetzt werden, die keinen gemeinsamen Teiler mit dem Modul 
 \begin_inset Formula $n$
 \end_inset
 
@@ -16155,11 +16157,11 @@ Um einen leicht verständlichen Zugang zu finden, soll an dieser Stelle nur
 \noun on
 Montgomery
 \noun default
--Potenzierung kann man nun ausgehend von 
+-Multiplikation kann man nun, unter der Voraussetzung 
 \begin_inset Formula $\gcd(r,n)=1$
 \end_inset
 
- 
+ (
 \begin_inset ERT
 status open
 
@@ -16172,15 +16174,7 @@ resp
 
 \end_inset
 
- 
-\begin_inset Formula $\alpha r-\beta n=1$
-\end_inset
-
- (mit 
-\begin_inset Formula $\alpha,\beta\in\mathbb{N}$
-\end_inset
-
-, Satz von 
+ mit dem Satz von 
 \noun on
 B
 \begin_inset ERT
@@ -16203,11 +16197,38 @@ name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
 
 \end_inset
 
+ 
+\begin_inset Formula $\alpha r-\beta n=1$
+\end_inset
+
 ), in folgenden Einzelschritten darstellen:
 \end_layout
 
 \begin_layout Enumerate
-Berechnung von 
+Berechnung der 
+\noun on
+B
+\begin_inset ERT
+status inlined
+
+\begin_layout Standard
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+
+\begin_inset LatexCommand index
+name "Bezout, Satz von@\\noun{B\\'{e}zout}, Satz von"
+
+\end_inset
+
+-Koeffizienten 
 \begin_inset Formula $\alpha,\beta$
 \end_inset
 
@@ -16235,7 +16256,7 @@ Eingangstransformation der Faktoren
 \begin_inset Formula $\hat{b}=br\bmod n$
 \end_inset
 
-, mittels einfacher Modulo-Division;
+ (eine normale Modulo-Division);
 \end_layout
 
 \begin_layout Enumerate
@@ -16252,95 +16273,53 @@ Berechnung des Produkts
 \begin_inset Formula $x=\hat{a}\cdot\hat{b}$
 \end_inset
 
-;
+ (man beachte, daß hierbei keine Modulo-Reduktion vorgenommen wird);
 \end_layout
 
-\begin_deeper
-\begin_layout Standard
-Man beachte, daß hierbei keine Modulo-Reduktion vorgenommen wird.
- Für das Ergebnis gilt: 
-\begin_inset Formula $x=(ar\bmod n)\cdot(br\bmod n)$
-\end_inset
-
- und deshalb 
-\begin_inset Formula $x\neq cr\bmod n$
-\end_inset
-
- 
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\hat{a}\cdot\hat{b}\neq\hat{c}\pmod n$
-\end_inset
-
-.
-\begin_inset Foot
-status open
-
-\begin_layout Standard
-Einfacher verhält sich dagegen die Addition, denn sie ist wegen 
-\begin_inset Formula $\hat{a}+\hat{b}=ar+br=(a+b)r$
-\end_inset
-
- invariant.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_deeper
 \begin_layout Enumerate
 
 \noun on
 Montgomery
 \noun default
 -Reduktion von 
-\begin_inset Formula $x$
+\begin_inset Formula $x=(ar\bmod n)\cdot(br\bmod n)$
 \end_inset
 
  zu 
-\begin_inset Formula $\hat{c}=cr\bmod n=abr\bmod n$
+\begin_inset Formula $\hat{c}=abr\bmod n=cr\bmod n$
 \end_inset
 
-, 
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-ie
+;
 \end_layout
 
+\begin_deeper
+\begin_layout Standard
+Die nötige Korrektur 
+\begin_inset Formula $\hat{c}=\MONTG(x,r)=xr^{-1}\bmod n$
 \end_inset
 
- Multiplikation mit 
-\begin_inset Formula $r^{-1}$
+ führt zu einer 
+\noun on
+Montgomery
+\noun default
+-Darstellung für 
+\begin_inset Formula $c$
 \end_inset
 
- und anschließende Modulo-Reduktion;
+ (als Voraussetzung für den nächsten Teilschritt).
 \begin_inset Foot
 status open
 
 \begin_layout Standard
 Der Ausdruck 
-\begin_inset Formula $\hat{a}\hat{b}r^{-1}\bmod{n}$
+\begin_inset Formula $xr^{-1}\bmod n=\hat{a}\hat{b}r^{-1}\bmod n$
 \end_inset
 
- wird auch als Montgomery-Produkt von 
+ wird auch als 
+\noun on
+Montgomery
+\noun default
+-Produkt von 
 \begin_inset Formula $\hat{a}$
 \end_inset
 
@@ -16351,15 +16330,17 @@ Der Ausdruck
  bezeichnet.
 \end_layout
 
+\begin_layout Standard
+Im Gegensatz zur Multiplikation, für welche 
+\begin_inset Formula $\hat{a}\cdot\hat{b}\neq\hat{c}\pmod{n}$
 \end_inset
 
+ gilt, verhält sich die Addition regulär: 
+\begin_inset Formula $\hat{a}+\hat{b}=ar+br=(a+b)r$
+\end_inset
 
+.
 \end_layout
-
-\begin_deeper
-\begin_layout Standard
-\begin_inset Formula \[
-\hat{c}=\MONTG(x,r)=xr^{-1}\bmod n\]
 
 \end_inset
 
@@ -16368,7 +16349,7 @@ Der Ausdruck
 
 \end_deeper
 \begin_layout Enumerate
-Weitere Multiplikationen im 
+Eine weitere (optionale) Multiplikationen im 
 \noun on
 Montgomery
 \noun default
@@ -16384,20 +16365,7 @@ Raum
 \begin_inset Formula $\hat{c}$
 \end_inset
 
- als Faktor verwenden (
-\begin_inset ERT
-status open
-
-\begin_layout Standard
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- bei der Potenzierung);
+ als einen der Faktoren verwendet;
 \end_layout
 
 \end_deeper
@@ -16449,7 +16417,7 @@ Montgomery
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
 n(\beta x\bmod r) & =n(\beta x-ur), & \quad\mbox{mit }u & =\left\lfloor \beta x/r\right\rfloor \\
-r(\alpha x\bmod n) & =r(\alpha x-vn), & \quad\mbox{mit }v & =\left\lfloor \alpha x/n\right\rfloor \end{alignat*}
+r(\alpha x\bmod n) & =r(\alpha x-vn), & \quad\mbox{mit }v & =\left\lfloor \alpha x/n\right\rfloor \mperiod\end{alignat*}
 
 \end_inset
 
@@ -16516,7 +16484,7 @@ sowie die Erkenntnis, daß es sich bei
 \end_inset
 
  handelt (
-\begin_inset Formula $\alpha=r^{-1}\pmod n$
+\begin_inset Formula $\alpha=r^{-1}\pmod{n}$
 \end_inset
 
 ), führt uns zum Ergebnis.
@@ -16524,7 +16492,7 @@ sowie die Erkenntnis, daß es sich bei
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\MONTG(x,r)=xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+x}{r}-(v-u)n\end{equation}
+\MONTG(x,r)=xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+x}{r}-(v-u)n\label{eq:algebra_montgomery_reduction}\end{equation}
 
 \end_inset
 
@@ -16532,30 +16500,55 @@ sowie die Erkenntnis, daß es sich bei
 \end_layout
 
 \begin_layout Standard
+Praktisch benötigt man 
+\begin_inset Formula $u$
+\end_inset
+
+ und 
+\begin_inset Formula $v$
+\end_inset
+
+ nicht, sondern geht meist so vor:
+\end_layout
+
+\begin_layout Enumerate
+Berechne den Ausdruck 
+\begin_inset Formula $t=[n(\beta x\bmod r)+x]/r$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Gilt 
+\begin_inset Formula $t\geq n$
+\end_inset
+
+, dann kann einmal 
+\begin_inset Formula $n$
+\end_inset
+
+ subtrahiert werden.
+\end_layout
+
+\begin_layout Standard
 Bei geschickter Wahl von 
 \begin_inset Formula $r=2^{j}$
 \end_inset
 
- sind für alle Divisionen nur Schiebeoperationen nötig.
- Sollte das Ergebnis kleiner als Null werden, so ist wegen des letzten Terms
- 
-\begin_inset Formula $(v-u)n$
+ sind für alle (Modulo-) Divisionen in Formel\InsetSpace ~
+
+\begin_inset LatexCommand ref
+reference "eq:algebra_montgomery_reduction"
+
 \end_inset
 
- höchstens einmal 
-\begin_inset Formula $n$
-\end_inset
-
- zu addieren.
- Bei der Wahl für 
-\begin_inset Formula $r$
-\end_inset
-
- ist die einfachste Bedingung 
+ nur logische oder Schiebeoperationen nötig.
+ Um 
 \begin_inset Formula $\gcd(2^{j},n)=1$
 \end_inset
 
- zu garantieren die, 
+ zu garantieren ist die einfachste Bedingung die, 
 \begin_inset Formula $n$
 \end_inset
 
@@ -16578,7 +16571,7 @@ eg
 
 \end_inset
 
- in\InsetSpace ~
+\InsetSpace ~
 
 \begin_inset LatexCommand cite
 key "Koc:1994"
@@ -16591,6 +16584,10 @@ key "Koc:1994"
 \end_inset
 
 
+\end_layout
+
+\begin_layout Subsection
+Der Chinesische Restsatz
 \end_layout
 
 \begin_layout Subsection
