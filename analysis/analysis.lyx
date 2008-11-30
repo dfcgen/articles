@@ -1,14 +1,16 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
 \input{all-inc.tex}
-
-\docsubj{Funktionentheorie -- Analytische Funktionen}{Grundlagen der Funktionentheorie}{Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen}
 \end_preamble
 \options reqno
+\use_default_options false
+\begin_modules
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -19,9 +21,22 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize default
 \spacing onehalf
+\use_hyperref true
+\pdf_subject "Grundlagen der Funktionentheorie"
+\pdf_keywords "Mathematik, Analysis, Funktionentheorie, Cauchy, Laurent, Taylor, Liouville, Jordan, Residuen"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
 \use_amsmath 2
@@ -49,8 +64,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: analysis.lyx,v 1.24 2008-10-25 17:21:15 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: analysis.lyx,v 1.25 2008-11-30 14:10:48 ralf Exp $
 \end_layout
 
 \end_inset
@@ -62,7 +77,7 @@ Version: $Id: analysis.lyx,v 1.24 2008-10-25 17:21:15 ralf Exp $
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -83,9 +98,9 @@ Funktionentheorie -- Analytische Funktionen
 \begin_layout Author
 Copyright 
 \begin_inset ERT
-status collapsed
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -111,36 +126,53 @@ ik, Signalverarbeitung oder Nachrichtentechnik, die ihr Wissen zur Funktionenthe
 orie auffrischen wollen.
  Vorausgesetzt werden dabei Grundkenntnisse der höheren Mathematik, insbesondere
  der Differential- und Integralrechnung.
- Empfehlenswert für einen tieferen Einstieg halte ich besonders\InsetSpace ~
+ Empfehlenswert für einen tieferen Einstieg halte ich besonders
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Brown:1996"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Freitag:2000"
 
 \end_inset
 
- und wegen der permanenten Anschaulichkeit\InsetSpace ~
+ und wegen der permanenten Anschaulichkeit
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Needham:1998"
 
 \end_inset
 
-, außerdem den Klassiker\InsetSpace ~
+, außerdem den Klassiker
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Whittaker:1927"
 
 \end_inset
 
- sowie die kurzen anwendungsbezogenen Einführungen in\InsetSpace ~
+ sowie die kurzen anwendungsbezogenen Einführungen in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "jeweils Anhang~II"
 key "Cauer:1954,Papoulis:1962"
 
@@ -150,7 +182,8 @@ key "Cauer:1954,Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand tableofcontents
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
 
 \end_inset
 
@@ -177,7 +210,7 @@ key "Cauer:1954,Papoulis:1962"
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -190,8 +223,12 @@ fi%
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktionentheorie|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktionentheorie|(
+\end_layout
 
 \end_inset
 
@@ -212,14 +249,22 @@ Cauchy-Riemann
 
 \begin_layout Standard
 Holomorphe
-\begin_inset LatexCommand index
-name "Holomorphie"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Holomorphie
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Funktion!analytische!Holomorphie"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Funktion!analytische!Holomorphie
+\end_layout
 
 \end_inset
 
@@ -227,7 +272,7 @@ name "Funktion!analytische!Holomorphie"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -240,11 +285,15 @@ resp
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In der komplexen Analysis nennt man eine Funktion analytisch, wenn sie durch
  eine Potenzreihe
-\begin_inset LatexCommand index
-name "Potenzreihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Potenzreihe
+\end_layout
 
 \end_inset
 
@@ -252,9 +301,13 @@ name "Potenzreihe"
 \begin_inset Formula $f(z)=\sum_{k=0}^{\infty}c_{k}(z-z_{0})^{k}$
 \end_inset
 
- dargestellt werden kann\InsetSpace ~
+ dargestellt werden kann
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II-3"
 key "Hurwitz:1922"
 
@@ -302,7 +355,7 @@ alle
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Eine Funktion 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -316,14 +369,22 @@ Eine Funktion
 ganze
 \emph default
  Funktion
-\begin_inset LatexCommand index
-name "Funktion!ganze"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!ganze
+\end_layout
 
 \end_inset
 
- (typische Vertreter sind Kreis-, Exponential- und Hyperbelfunktionen)\InsetSpace ~
+ (typische Vertreter sind Kreis-, Exponential- und Hyperbelfunktionen)
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "I-3, \\S\\,8"
 key "Hurwitz:1922"
 
@@ -354,7 +415,7 @@ One-Valued
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -394,7 +455,10 @@ eg
 \begin_layout Standard
 Eine Schlußfolgerung von 
 \noun on
-B.\InsetSpace ~
+B.
+\begin_inset space ~
+\end_inset
+
 Riemann
 \noun default
  in Bezug auf die 
@@ -405,9 +469,13 @@ Einwertigkeit
 \begin_inset Quotes erd
 \end_inset
 
- des Differentialquotienten (nach Gleichung\InsetSpace ~
+ des Differentialquotienten (nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_def"
 
 \end_inset
@@ -440,18 +508,26 @@ reference "eq:analysis_derivative_def"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein exakter Beweis wird ausgehend von der Definition des Differentialquotienten
- in\InsetSpace ~
+ in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Brown:1996"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 1$"
 key "Whittaker:1927"
 
@@ -484,7 +560,7 @@ Cauchy-Riemann
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sie sind eine notwendige Bedingung für die Differenzierbarkeit von 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -499,20 +575,57 @@ Sie sind eine notwendige Bedingung für die Differenzierbarkeit von
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Riemannsche Differentialgleichung@\\noun{--Riemann}'sche Differentialgl."
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Riemannsche Differentialgleichung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+noun{--Riemann}
+\end_layout
+
+\end_inset
+
+'sche Differentialgl.
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Differenzierbarkeit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Differenzierbarkeit
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integrabilitätsbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integrabilitätsbedingung
+\end_layout
 
 \end_inset
 
@@ -550,7 +663,7 @@ f'(z)=\pdiff{u(x,y)}{x}+\ji\pdiff{v(x,y)}{x}=\pdiff{v(x,y)}{y}-\ji\pdiff{u(x,y)}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -572,7 +685,8 @@ f'(z)=\tdiff{f(z)}{z}=\pdiff{f(z)}{x}=-\ji\pdiff{f(z)}{y}\mperiod\label{eq:analy
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_harmonic_func"
 
 \end_inset
@@ -585,9 +699,13 @@ Differenziert man beide Teile der
 \noun on
 Cauchy-Riemann
 \noun default
-'schen Differentialgleichungen\InsetSpace ~
+'schen Differentialgleichungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_integrability_cond"
 
 \end_inset
@@ -620,14 +738,50 @@ und addiert/subtrahiert sie daraufhin diagonal, so erhält man (wegen der
 Schwarz
 \noun default
 
-\begin_inset LatexCommand index
-name "Schwarz@\\noun{Schwarz}!Satz von"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Schwarz, Satz von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Schwarz}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Satz von!Schwarz@\\noun{Schwarz}|see{\\noun{Schwarz}}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Satz von!Schwarz
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+@
+\backslash
+noun{Schwarz}|see{
+\backslash
+noun{Schwarz}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -646,8 +800,12 @@ name "Satz von!Schwarz@\\noun{Schwarz}|see{\\noun{Schwarz}}"
 
 \begin_layout Standard
 Real- und Imaginärteil analytischer Funktionen sind harmonische
-\begin_inset LatexCommand index
-name "Funktion!harmonische"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!harmonische
+\end_layout
 
 \end_inset
 
@@ -655,7 +813,7 @@ name "Funktion!harmonische"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -665,14 +823,22 @@ resp
 \end_inset
 
  Potentialfunktion
-\begin_inset LatexCommand index
-name "Potentialfunktionen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Potentialfunktionen
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Funktion!Potential-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!Potential-
+\end_layout
 
 \end_inset
 
@@ -680,7 +846,7 @@ name "Funktion!Potential-"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -694,8 +860,25 @@ ie
 Laplace
 \noun default
 -Gleichungen
-\begin_inset LatexCommand index
-name "Laplace@\\noun{Laplace}!-Gleichung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laplace@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}
+\end_layout
+
+\end_inset
+
+!-Gleichung
+\end_layout
 
 \end_inset
 
@@ -746,8 +929,12 @@ Nimmt man
 \end_inset
 
  wahr, dann ist oftmals die Funktionaldeterminante
-\begin_inset LatexCommand index
-name "Funktionaldeterminante"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktionaldeterminante
+\end_layout
 
 \end_inset
 
@@ -756,8 +943,25 @@ name "Funktionaldeterminante"
 Jacobi
 \noun default
 -Determinante
-\begin_inset LatexCommand index
-name "Jacobi-Determinante@\\noun{Jacobi}-Determinante|see{Funktionaldeterminante}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jacobi-Determinante@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jacobi}-Determinante|see{Funktionaldeterminante}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -765,7 +969,7 @@ name "Jacobi-Determinante@\\noun{Jacobi}-Determinante|see{Funktionaldeterminante
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Beispielsweise bei Koordinatentransformationen, Flächen- und Volumenintegralen,
  also Anwendungen die mit infinitesimalen Flächenelementen der Art 
 \begin_inset Formula $\tdc A=\tdc x\,\tdc y$
@@ -809,7 +1013,7 @@ Eine Schlußfolgerung ist die, daß für alle Punkte
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Eine Funktion 
 \begin_inset Formula $f$
 \end_inset
@@ -817,8 +1021,12 @@ Eine Funktion
  wird auch als 
 \emph on
 regulär
-\begin_inset LatexCommand index
-name "Funktion!reguläre"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!reguläre
+\end_layout
 
 \end_inset
 
@@ -839,8 +1047,12 @@ name "Funktion!reguläre"
 \end_inset
 
  außerdem noch stetig sein, dann existiert eine (eindeutige) Umkehrfunktion
-\begin_inset LatexCommand index
-name "Umkehrfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Umkehrfunktion
+\end_layout
 
 \end_inset
 
@@ -856,7 +1068,8 @@ name "Umkehrfunktion"
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_z_z0_holomorph"
 
 \end_inset
@@ -865,7 +1078,7 @@ Die Funktion
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -896,7 +1109,7 @@ Riemann
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Meist wird dieser ausführliche Weg aus Aufwandsgründen gemieden, obwohl
  er eine gute Übung darstellt.
 \end_layout
@@ -904,9 +1117,13 @@ Meist wird dieser ausführliche Weg aus Aufwandsgründen gemieden, obwohl
 \end_inset
 
 .
- Wir gehen dazu von Gleichung\InsetSpace ~
+ Wir gehen dazu von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_integrability_cond_cplx"
 
 \end_inset
@@ -956,7 +1173,7 @@ Für die Ableitung nach
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1038,7 +1255,7 @@ führt
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei 
 \begin_inset Formula $(z-z_{0})\,\cjgt{(z-z_{0})}=r^{2}$
 \end_inset
@@ -1085,9 +1302,13 @@ Schlußfolgerung:
 \begin_inset Formula $z$
 \end_inset
 
- analytisch, denn es gilt Gleichung\InsetSpace ~
+ analytisch, denn es gilt Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_integrability_cond_cplx"
 
 \end_inset
@@ -1119,9 +1340,13 @@ Für den Fall
 
  analytisch, denn beide Seiten der vorangegangenen Äquivalenz sind sonst
  unbestimmt.
- Ein sich daraus ergebendes Resultat, welches in Abschnitt\InsetSpace ~
+ Ein sich daraus ergebendes Resultat, welches in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_laurent"
 
 \end_inset
@@ -1145,7 +1370,8 @@ Integration
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_cauchy_theorem"
 
 \end_inset
@@ -1160,8 +1386,12 @@ Stammfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Integral!unbestimmtes"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!unbestimmtes
+\end_layout
 
 \end_inset
 
@@ -1170,14 +1400,22 @@ Für eine analytische Funktion
 \end_inset
 
  ist die Existenz einer Stammfunktion
-\begin_inset LatexCommand index
-name "Stammfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Stammfunktion
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integral!Stammfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!Stammfunktion
+\end_layout
 
 \end_inset
 
@@ -1190,14 +1428,22 @@ name "Integral!Stammfunktion"
 \end_inset
 
  dann gegeben, wenn die Integrabilitätsbedingung
-\begin_inset LatexCommand index
-name "Integrabilitätsbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integrabilitätsbedingung
+\end_layout
 
 \end_inset
 
- nach Gleichung\InsetSpace ~
+ nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_integrability_cond"
 
 \end_inset
@@ -1211,9 +1457,13 @@ reference "eq:analysis_integrability_cond"
 \begin_inset Formula $F(z)$
 \end_inset
 
- in Real- und Imaginärteil vornimmt\InsetSpace ~
+ in Real- und Imaginärteil vornimmt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$4 \\sdot 6$"
 key "Whittaker:1927"
 
@@ -1234,17 +1484,25 @@ F(z) & =\int f(z)\tic z\nonumber \\
 \end_layout
 
 \begin_layout Standard
-Erinnern wir uns nun an die Aussage von Abschnitt\InsetSpace ~
+Erinnern wir uns nun an die Aussage von Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_harmonic_func"
 
 \end_inset
 
 , daß die Ableitung einer analytischen Funktion auch wieder analytisch ist,
- so gilt Gleichung\InsetSpace ~
+ so gilt Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_separated"
 
 \end_inset
@@ -1275,9 +1533,13 @@ u(x,y) & =\pdiff{U(x,y)}{x}=\pdiff{V(x,y)}{y} & v(x,y) & =-\pdiff{U(x,y)}{y}=\pd
 \end_layout
 
 \begin_layout Standard
-Mit diesen einfachen Resultaten kann man die Integranden in Formel\InsetSpace ~
+Mit diesen einfachen Resultaten kann man die Integranden in Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_antiderivative"
 
 \end_inset
@@ -1286,7 +1548,7 @@ reference "eq:analysis_cauchy_antiderivative"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Totales Differential, welches für eine infinitesimale Änderung der Variablen
  
 \begin_inset Formula $x,y$
@@ -1300,7 +1562,7 @@ Totales Differential, welches für eine infinitesimale Änderung der Variablen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1353,7 +1615,7 @@ Aus der Differential- und Integralrechnung mehrerer Veränderlicher (sowie
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1380,22 +1642,34 @@ Bestimmtes Integral
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Integral!unbestimmtes"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!unbestimmtes
+\end_layout
 
 \end_inset
 
 Nach dem Hauptsatz der Differential- und Integralrechnung
-\begin_inset LatexCommand index
-name "Integral!rechnung@-rechnung!Hauptsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!rechnung@-rechnung!Hauptsatz der
+\end_layout
 
 \end_inset
 
  existiert eine Verbindung zwischen der Stammfunktion und dem bestimmten
  Integral, welche unter bestimmten Bedingungen auch im komplexen Fall Gültigkeit
- hat\InsetSpace ~
+ hat
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "42"
 key "Brown:1996"
 
@@ -1429,8 +1703,12 @@ Anders als im eindimensionalen Fall muß man berücksichtigen, daß bei der
 \end_inset
 
  für das Kurvenintegral
-\begin_inset LatexCommand index
-name "Integral!Kurven-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!Kurven-
+\end_layout
 
 \end_inset
 
@@ -1459,7 +1737,7 @@ Sollte
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man sagt auch, die Funktion 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -1471,14 +1749,22 @@ Man sagt auch, die Funktion
 \end_inset
 
 , dann ist das Integral wegunabhängig
-\begin_inset LatexCommand index
-name "Wegunabhängigkeit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wegunabhängigkeit
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integral!Wegunabhängigkeit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!Wegunabhängigkeit
+\end_layout
 
 \end_inset
 
@@ -1495,9 +1781,13 @@ name "Integral!Wegunabhängigkeit"
 \end_layout
 
 \begin_layout Standard
-rechnen\InsetSpace ~
+rechnen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "42"
 key "Brown:1996"
 
@@ -1512,7 +1802,7 @@ key "Brown:1996"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1544,7 +1834,7 @@ folge vollkommen unerheblich ist.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1558,14 +1848,18 @@ eg
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein Beweis des Satzes von 
 \noun on
 Cauchy
 \noun default
- mit Mitteln der Vektoranalysis ist in\InsetSpace ~
+ mit Mitteln der Vektoranalysis ist in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II-5"
 key "Cauer:1954"
 
@@ -1593,7 +1887,7 @@ key "Cauer:1954"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1619,9 +1913,13 @@ resp
 \begin_inset Formula $v(x,y)$
 \end_inset
 
- unter Zuhilfenahme von Beziehung\InsetSpace ~
+ unter Zuhilfenahme von Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_equivalence"
 
 \end_inset
@@ -1641,9 +1939,13 @@ reference "eq:analysis_cauchy_equivalence"
 \end_layout
 
 \begin_layout Standard
-Die letzten Ausdrücke stellen genau die Differentialformen in Formel\InsetSpace ~
+Die letzten Ausdrücke stellen genau die Differentialformen in Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_antiderivative"
 
 \end_inset
@@ -1672,7 +1974,7 @@ Ist die Kurve
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1690,8 +1992,12 @@ ie
 \end_inset
 
 , dann kommt man zum Hauptsatz der Funktionentheorie
-\begin_inset LatexCommand index
-name "Funktionentheorie!Hauptsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktionentheorie!Hauptsatz der
+\end_layout
 
 \end_inset
 
@@ -1699,7 +2005,7 @@ name "Funktionentheorie!Hauptsatz der"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1713,50 +2019,103 @@ resp
 Cauchy
 \noun default
 
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Satz von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Satz von
+\end_layout
 
 \end_inset
 
 
 \noun on
 
-\begin_inset LatexCommand index
-name "Satz von!Cauchy@\\noun{Cauchy}|see{\\noun{Cauchy}}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Satz von!Cauchy
+@
+\lang german
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}|see{
+\backslash
+noun{Cauchy}}
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Funktion!analytische!Kurvenintegral"
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Kurvenintegral"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Kurvenintegral
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kurvenintegral
+\end_layout
 
 \end_inset
 
 
 \noun default
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 2$"
 key "Whittaker:1927"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "I-5, \\S\\,6"
 key "Hurwitz:1922"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "44-46"
 key "Brown:1996"
 
@@ -1778,7 +2137,7 @@ Ist
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Voraussetzung ist eigentlich nur, daß 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -1791,7 +2150,7 @@ Voraussetzung ist eigentlich nur, daß
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1800,9 +2159,13 @@ cf
 
 \end_inset
 
- Anmerkungen und Beweis in\InsetSpace ~
+ Anmerkungen und Beweis in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 2$"
 key "Whittaker:1927"
 
@@ -1839,9 +2202,13 @@ Sollte
 \end_inset
 
  nicht überall analytisch sein, dann kann das geschlossene Kurvenintegral
- einen Wert ungleich Null besitzen (siehe dazu Abschnitt\InsetSpace ~
+ einen Wert ungleich Null besitzen (siehe dazu Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_laurent"
 
 \end_inset
@@ -1883,28 +2250,50 @@ Cauchy
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der Beweis der umgekehrten Behauptung, nämlich daß ein Verschwinden des
  Integrals auf eine analytische Funktion schließen läßt, wird Satz von 
 \noun on
 Morera
 \noun default
 
-\begin_inset LatexCommand index
-name "Morera@\\noun{Morera}, Satz von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Morera@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Morera}
+\end_layout
 
 \end_inset
 
- genannt\InsetSpace ~
+, Satz von
+\end_layout
 
-\begin_inset LatexCommand cite
+\end_inset
+
+ genannt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "75"
 key "Koerner:1988"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II-3.5"
 key "Freitag:2000"
 
@@ -1927,8 +2316,12 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktion!analytische!Funktionswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Funktionswert
+\end_layout
 
 \end_inset
 
@@ -1970,9 +2363,13 @@ Cauchy
 \begin_inset Formula $C$
 \end_inset
 
- analytisch sind, umgehen wir diese Widrigkeit wie in Abbildung\InsetSpace ~
+ analytisch sind, umgehen wir diese Widrigkeit wie in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_cauchy"
 
 \end_inset
@@ -1990,9 +2387,13 @@ reference "fig:analysis_cauchy"
 \begin_inset Formula $C_{2}$
 \end_inset
 
- nach Teilbild\InsetSpace ~
+ nach Teilbild
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_cauchy_step1"
 
 \end_inset
@@ -2015,12 +2416,46 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Offene Kurven
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig:analysis_cauchy_step1}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Graphics
 	filename cauchy_step1.eps
-	subcaption
-	subcaptionText "Offene Kurven\label{fig:analysis_cauchy_step1}"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -2028,7 +2463,7 @@ status open
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2038,21 +2473,56 @@ hspace{3cm}
 \end_inset
 
 
-\begin_inset Graphics
-	filename cauchy_step2.eps
-	subcaption
-	subcaptionText "Geschlossene Kurven\label{fig:analysis_cauchy_step2}"
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Geschlossene Kurven
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig:analysis_cauchy_step2}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cauchy_step2.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:analysis_cauchy"
 
 \end_inset
@@ -2083,9 +2553,13 @@ Danach werden
 \begin_inset Formula $C_{2}$
 \end_inset
 
- entsprechend Abbildung\InsetSpace ~
+ entsprechend Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_cauchy_step2"
 
 \end_inset
@@ -2100,7 +2574,7 @@ reference "fig:analysis_cauchy_step2"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2121,7 +2595,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2139,9 +2613,13 @@ resp
 \noun on
 Cauchy
 \noun default
-'s Integralsatz\InsetSpace ~
+'s Integralsatz
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_integral"
 
 \end_inset
@@ -2207,7 +2685,7 @@ schreiben.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2283,8 +2761,12 @@ Der erste Summand stellt für
 \end_inset
 
  eine hebbare Singularität
-\begin_inset LatexCommand index
-name "Singularitäten!hebbare"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten!hebbare
+\end_layout
 
 \end_inset
 
@@ -2292,7 +2774,7 @@ name "Singularitäten!hebbare"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2301,9 +2783,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_residue_theorem"
 
 \end_inset
@@ -2312,7 +2798,7 @@ reference "sec:analysis_residue_theorem"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2356,9 +2842,13 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-Der zweite Summand ist mit der Substitution\InsetSpace ~
+Der zweite Summand ist mit der Substitution
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_substitution"
 
 \end_inset
@@ -2402,24 +2892,67 @@ Benennt man noch die Variablen um (
 Cauchy
 \noun default
 'sche Integralformel
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Integralformel von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy
+@
+\lang german
+
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Integralformel von
+\end_layout
 
 \end_inset
 
 
 \noun on
 
-\begin_inset LatexCommand index
-name "Integral!formel von Cauchy@-formel von \\noun{Cauchy}|see{\\noun{Cauchy}}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!formel von Cauchy@-formel von 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}|see{
+\backslash
+noun{Cauchy}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
 
 \noun default
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "47"
 key "Brown:1996"
 
@@ -2448,8 +2981,12 @@ Bei der Interpretation fällt sofort die bemerkenswerte Eigenschaft einer
 \end_inset
 
  eindeutig durch die Randwerte
-\begin_inset LatexCommand index
-name "Randwerte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randwerte
+\end_layout
 
 \end_inset
 
@@ -2465,15 +3002,23 @@ Integralformel für Ableitungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktion!analytische!Ableitung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Ableitung
+\end_layout
 
 \end_inset
 
 Die (erste) Ableitung einer analytischen Funktion kann man auch durch ein
- Kurvenintegral in der komplexen Ebene ausdrücken\InsetSpace ~
+ Kurvenintegral in der komplexen Ebene ausdrücken
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 22$"
 key "Whittaker:1927"
 
@@ -2484,9 +3029,13 @@ key "Whittaker:1927"
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula"
 
 \end_inset
@@ -2500,7 +3049,8 @@ reference "eq:analysis_cauchy_formula"
 \end_inset
 
  (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_def"
 
 \end_inset
@@ -2523,14 +3073,18 @@ Nun werden die Argumente beider Integrale auf einen gemeinsamen Nenner gebracht,
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein in mathematischer Strenge geführter Beweis, der auch die Kurve 
 \begin_inset Formula $C$
 \end_inset
 
- eingehend berücksichtigt, ist in\InsetSpace ~
+ eingehend berücksichtigt, ist in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 22$"
 key "Whittaker:1927"
 
@@ -2597,9 +3151,13 @@ Durch erneute Anwendung der obigen Formeln kann man zur zweiten Ableitung
 \begin_inset Formula $f^{\prime\prime}(z)$
 \end_inset
 
- gelangen\InsetSpace ~
+ gelangen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 22$"
 key "Whittaker:1927"
 
@@ -2624,8 +3182,26 @@ Für weitere Ableitungen ergibt sich in der Fortsetzung die Verallgemeinerte
 Cauchy
 \noun default
 'sche Integralformel
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Verallg. Integralformel von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Verallg.
+ Integralformel von
+\end_layout
 
 \end_inset
 
@@ -2648,7 +3224,7 @@ welche durch vollständige Induktion beweisbar ist.
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Unter der immer gegebenen Voraussetzung, daß die Integrationskurve 
 \begin_inset Formula $C$
 \end_inset
@@ -2678,9 +3254,13 @@ Für den speziellen Fall, daß
 \begin_inset Formula $z$
 \end_inset
 
- ist, kann man Beziehung\InsetSpace ~
+ ist, kann man Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_integral"
 
 \end_inset
@@ -2711,14 +3291,19 @@ f(z) & =\frac{1}{2\pi}\int_{0}^{2\pi}f\left(z+r\expf^{\ji\theta}\right)\tic\thet
 
 \begin_layout Standard
 In letzter Formel (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_integral_mean"
 
 \end_inset
 
 ) wird die sogenannte Mittelwerteigenschaft
-\begin_inset LatexCommand index
-name "Mittelwerteigenschaft"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Mittelwerteigenschaft
+\end_layout
 
 \end_inset
 
@@ -2730,7 +3315,8 @@ name "Mittelwerteigenschaft"
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_laurent"
 
 \end_inset
@@ -2743,8 +3329,25 @@ Laurent
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe
+\end_layout
 
 \end_inset
 
@@ -2774,16 +3377,21 @@ f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}\label{eq:analysis_laurent_serie
 \end_layout
 
 \begin_layout Standard
-entwickeln läßt\InsetSpace ~
+entwickeln läßt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 6, 6 \\sdot 1$"
 key "Whittaker:1927"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "55"
 key "Brown:1996"
 
@@ -2829,7 +3437,7 @@ dann ergibt sich mit der Darstellung
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Funktion 
 \begin_inset Formula $\Phi(z)$
 \end_inset
@@ -2839,14 +3447,22 @@ Die Funktion
 Taylor
 \noun default
 -Reihenentwicklung (Potenzreihe
-\begin_inset LatexCommand index
-name "Potenzreihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Potenzreihe
+\end_layout
 
 \end_inset
 
-) einer reellen Funktion\InsetSpace ~
+) einer reellen Funktion
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "53"
 key "Brown:1996"
 
@@ -2888,15 +3504,49 @@ Die Funktion
 \end_inset
 
 , der sogenannte Regulärteil
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe!Regulärteil"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe!Regulärteil
+\end_layout
 
 \end_inset
 
 , ist analytisch, weshalb dieses Integral verschwindet.
  Gleiches gilt für das Integral über den Hauptteil
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe!Hauptteil"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe!Hauptteil
+\end_layout
 
 \end_inset
 
@@ -2921,9 +3571,13 @@ Laurent
 \end_layout
 
 \begin_layout Standard
-was sich ausgehend von Substitutionsformel\InsetSpace ~
+was sich ausgehend von Substitutionsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_substitution"
 
 \end_inset
@@ -2951,9 +3605,13 @@ Es bleibt also nur das Integral über
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula_implicit"
 
 \end_inset
@@ -2966,14 +3624,18 @@ reference "eq:analysis_cauchy_formula_implicit"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Funktion 
 \begin_inset Formula $f(z)$
 \end_inset
 
- in der Integralformel\InsetSpace ~
+ in der Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula_implicit"
 
 \end_inset
@@ -2997,14 +3659,35 @@ Cauchy
 \end_inset
 
  nennt man das Residuum
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe!Residuum"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe!Residuum
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Residuum"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Residuum
+\end_layout
 
 \end_inset
 
@@ -3021,7 +3704,8 @@ name "Residuum"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Res"
 symbol "$\\res{z_0}{f(z)}$"
 description "Residuum von $f(z)$ an der Stelle $z_{0}$"
@@ -3045,9 +3729,13 @@ Wie bestimmen sich nun aber die anderen Koeffizienten
 \begin_inset Formula $a_{n}$
 \end_inset
 
-? Zur Beantwortung dividieren wir einfach Gleichung\InsetSpace ~
+? Zur Beantwortung dividieren wir einfach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_series_expanded"
 
 \end_inset
@@ -3082,7 +3770,7 @@ Integration über die neu gebildete Funktion
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3125,26 +3813,39 @@ a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z\label{eq:anal
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "par:analysis_laurent_taylor_association"
 
 \end_inset
 
 Aus vorangegangener Formel ist der Zusammenhang zwischen Holomorphie
-\begin_inset LatexCommand index
-name "Funktion!analytische!Holomorphie"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Holomorphie
+\end_layout
 
 \end_inset
 
  und Analytizität
-\begin_inset LatexCommand index
-name "Analytizität"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Analytizität
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Funktion!analytische"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische
+\end_layout
 
 \end_inset
 
@@ -3173,9 +3874,13 @@ verschwinden alle Koeffizienten
 \noun on
 Cauchy
 \noun default
-, Formel\InsetSpace ~
+, Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_integral"
 
 \end_inset
@@ -3189,8 +3894,25 @@ entsprechen die mit positivem Index genau den Koeffizienten einer
 Taylor
 \noun default
 -Reihe
-\begin_inset LatexCommand index
-name "Taylor-Reihe@\\noun{Taylor}-Reihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Taylor-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Taylor}
+\end_layout
+
+\end_inset
+
+-Reihe
+\end_layout
 
 \end_inset
 
@@ -3198,7 +3920,7 @@ name "Taylor-Reihe@\\noun{Taylor}-Reihe"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3212,8 +3934,25 @@ resp
 MacLaurin
 \noun default
 -Reihe
-\begin_inset LatexCommand index
-name "MacLaurin-Reihe@\\noun{MacLaurin}-Reihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MacLaurin-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{MacLaurin}
+\end_layout
+
+\end_inset
+
+-Reihe
+\end_layout
 
 \end_inset
 
@@ -3221,7 +3960,7 @@ name "MacLaurin-Reihe@\\noun{MacLaurin}-Reihe"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3230,17 +3969,25 @@ cf
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "53"
 key "Brown:1996"
 
 \end_inset
 
-), wenn man Beziehung\InsetSpace ~
+), wenn man Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_integral"
 
 \end_inset
@@ -3249,7 +3996,7 @@ reference "eq:analysis_derivative_integral"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für die Existenz der Reihenentwicklung ist Voraussetzung, daß 
 \begin_inset Formula $f(z)$
 \end_inset
@@ -3279,8 +4026,12 @@ Die
 Laurent
 \noun default
 -Reihe entartet in diesem Sinne zu einer Potenzreihe
-\begin_inset LatexCommand index
-name "Potenzreihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Potenzreihe
+\end_layout
 
 \end_inset
 
@@ -3302,7 +4053,7 @@ name "Potenzreihe"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3325,7 +4076,8 @@ Taylor
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_residue_theorem"
 
 \end_inset
@@ -3334,8 +4086,12 @@ Residuensatz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Residuensatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Residuensatz
+\end_layout
 
 \end_inset
 
@@ -3347,7 +4103,7 @@ Der Residuensatz ist eine logische Fortführung
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3357,9 +4113,13 @@ resp
 \end_inset
 
  Anwendung der Erkenntnisse des vorigen Abschnittes, in welchem der Begriff
- des Residuums erstmalig auftauchte\InsetSpace ~
+ des Residuums erstmalig auftauchte
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "III-6"
 key "Freitag:2000"
 
@@ -3376,10 +4136,14 @@ key "Freitag:2000"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Insbesondere  Gleichung\InsetSpace ~
+\begin_layout Plain Layout
+Insbesondere  Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_residue_integral"
 
 \end_inset
@@ -3407,15 +4171,23 @@ Einleitend müssen wir uns aber mit der Frage befassen, wie sich der Einschluß
 mehrerer
 \emph default
  singulärer Punkte
-\begin_inset LatexCommand index
-name "Singularitäten"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten
+\end_layout
 
 \end_inset
 
  auf den Wert des umlaufenden Integrals auswirkt.
- Dazu soll im Beispiel nach Abbildung\InsetSpace ~
+ Dazu soll im Beispiel nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_curve_step1"
 
 \end_inset
@@ -3424,9 +4196,13 @@ reference "fig:analysis_curve_step1"
 \begin_inset Formula $C$
 \end_inset
 
- integriert werden\InsetSpace ~
+ integriert werden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10.3"
 key "Marko:1995"
 
@@ -3441,43 +4217,150 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename curve_step1.eps
-	subcaption
-	subcaptionText "Ausgangssituation\label{fig:analysis_curve_step1}"
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
-\end_inset
+\begin_layout Plain Layout
+\begin_inset Caption
 
+\begin_layout Plain Layout
+Ausgangssituation
+\begin_inset ERT
+status collapsed
 
-\hfill
-
-\begin_inset Graphics
-	filename curve_step2.eps
-	subcaption
-	subcaptionText "Zwischenschritt\label{fig:analysis_curve_step2}"
-
-\end_inset
+\begin_layout Plain Layout
 
 
-\hfill
-
-\begin_inset Graphics
-	filename curve_step3.eps
-	subcaption
-	subcaptionText "Ergebnis\label{fig:analysis_curve_step3}"
+\backslash
+label{fig:analysis_curve_step1}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename curve_step1.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+Zwischenschritt
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig:analysis_curve_step2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename curve_step2.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Ergebnis
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+label{fig:analysis_curve_step3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename curve_step3.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:analysis_curve"
 
 \end_inset
@@ -3504,9 +4387,13 @@ Ist die Funktion
 \begin_inset Formula $C$
 \end_inset
 
- analytisch, dann kann man den Integrationsweg entsprechend Abbildung\InsetSpace ~
+ analytisch, dann kann man den Integrationsweg entsprechend Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_curve_step2"
 
 \end_inset
@@ -3515,16 +4402,20 @@ reference "fig:analysis_curve_step2"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dieser Fakt ist nur indirekt mit der Wegunabhängigkeit erklärbar (da im
  Inneren von 
 \begin_inset Formula $C$
 \end_inset
 
  Singularitäten liegen), exakter müßte man sich auf den sogenannten Deformations
-satz berufen\InsetSpace ~
+satz berufen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "8-VI"
 key "Needham:1998"
 
@@ -3562,9 +4453,13 @@ key "Needham:1998"
 
 \begin_layout Standard
 gilt.
- Dieser Umstand ist graphisch in Abbildung\InsetSpace ~
+ Dieser Umstand ist graphisch in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_curve_step3"
 
 \end_inset
@@ -3587,8 +4482,12 @@ Umschließt ein Kurvenintegral auf seinem Weg
 \end_inset
 
  Singularitäten
-\begin_inset LatexCommand index
-name "Singularitäten"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten
+\end_layout
 
 \end_inset
 
@@ -3600,14 +4499,18 @@ name "Singularitäten"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein einfach zusammenhängendes Gebiet 
 \begin_inset Formula $G$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_curve"
 
 \end_inset
@@ -3638,9 +4541,13 @@ Entwickelt man jetzt die Funktion
 \noun on
 Laurent
 \noun default
--Reihen, so kann man mit Hilfe von Gleichung\InsetSpace ~
+-Reihen, so kann man mit Hilfe von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_residue_integral"
 
 \end_inset
@@ -3673,8 +4580,25 @@ en
 \end_inset
 
 , welche sich durch die Art des Hauptteils
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe!Hauptteil"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe!Hauptteil
+\end_layout
 
 \end_inset
 
@@ -3690,9 +4614,13 @@ Laurent
 \begin_inset Formula $f(z)$
 \end_inset
 
- unterscheiden\InsetSpace ~
+ unterscheiden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "III-4.10"
 key "Freitag:2000"
 
@@ -3706,8 +4634,12 @@ Hebbare Singularitäten
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Singularitäten!hebbare"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten!hebbare
+\end_layout
 
 \end_inset
 
@@ -3720,8 +4652,12 @@ Hebbare Singularitäten sind solche, für die
 \end_inset
 
  beschränkt
-\begin_inset LatexCommand index
-name "Funktion!analytische!Beschränktheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Beschränktheit
+\end_layout
 
 \end_inset
 
@@ -3729,9 +4665,13 @@ name "Funktion!analytische!Beschränktheit"
 \begin_inset Formula $z_{0}$
 \end_inset
 
- analytisch) ist\InsetSpace ~
+ analytisch) ist
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "III-4.2"
 key "Freitag:2000"
 
@@ -3743,14 +4683,35 @@ key "Freitag:2000"
 Riemann
 \noun default
 'sche Hebbarkeitsatz
-\begin_inset LatexCommand index
-name "Hebbarkeitsatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hebbarkeitsatz
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Riemann'scher Hebbarkeitssatz@\\noun{Riemann}'scher Hebbarkeitssatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Riemann'scher Hebbarkeitssatz@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Riemann}
+\end_layout
+
+\end_inset
+
+'scher Hebbarkeitssatz
+\end_layout
 
 \end_inset
 
@@ -3809,7 +4770,7 @@ Cauchy
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die 
 \noun on
 Taylor
@@ -3832,7 +4793,8 @@ Laurent
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "sinc(x)"
 symbol "$\\sinc(z)$"
 description "Spaltfunktion (Sinus Cardinalis)"
@@ -3848,20 +4810,32 @@ Pole
 
 \begin_layout Standard
 Singularitäten
-\begin_inset LatexCommand index
-name "Singularitäten!Pole"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten!Pole
+\end_layout
 
 \end_inset
 
 , bei denen man von einem Pol
-\begin_inset LatexCommand index
-name "Pol"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol
+\end_layout
 
 \end_inset
 
  der Ordnung
-\begin_inset LatexCommand index
-name "Pol!Ordnung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!Ordnung
+\end_layout
 
 \end_inset
 
@@ -3886,7 +4860,7 @@ gekennzeichnet
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Damit ist gemeint, daß 
 \begin_inset Formula $a_{-n}\neq0$
 \end_inset
@@ -3931,8 +4905,12 @@ Damit ist gemeint, daß
 \end_inset
 
  selbst analytisch, denn alle Pole sind entsprechend ihrer Vielfachheit
-\begin_inset LatexCommand index
-name "Pol!Vielfachheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!Vielfachheit
+\end_layout
 
 \end_inset
 
@@ -3962,14 +4940,35 @@ herausgezogen
 \end_inset
 
  in eine Potenzreihe
-\begin_inset LatexCommand index
-name "Potenzreihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Potenzreihe
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Taylor-Reihe@\\noun{Taylor}-Reihe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Taylor-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Taylor}
+\end_layout
+
+\end_inset
+
+-Reihe
+\end_layout
 
 \end_inset
 
@@ -3977,17 +4976,25 @@ name "Taylor-Reihe@\\noun{Taylor}-Reihe"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Man denke an Formel\InsetSpace ~
+\begin_layout Plain Layout
+Man denke an Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_analytic_taylor"
 
 \end_inset
 
- und die mit ihr verbundenen Ideen auf Seite\InsetSpace ~
+ und die mit ihr verbundenen Ideen auf Seite
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand pageref
+
+\begin_inset CommandInset ref
+LatexCommand pageref
 reference "par:analysis_laurent_taylor_association"
 
 \end_inset
@@ -4036,7 +5043,7 @@ f(z) & =(z-z_{0})^{-n}\phi(z)\nonumber \\
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4046,8 +5053,25 @@ ie
 \end_inset
 
  der Hauptteil
-\begin_inset LatexCommand index
-name "Laurent-Reihe@\\noun{Laurent}-Reihe!Hauptteil"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laurent-Reihe@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laurent}
+\end_layout
+
+\end_inset
+
+-Reihe!Hauptteil
+\end_layout
 
 \end_inset
 
@@ -4061,8 +5085,12 @@ name "Laurent-Reihe@\\noun{Laurent}-Reihe!Hauptteil"
 
 .
  Diese Eigenschaft ermöglicht die Berechnung des Residuums
-\begin_inset LatexCommand index
-name "Residuum!eines Pols"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Residuum!eines Pols
+\end_layout
 
 \end_inset
 
@@ -4083,9 +5111,13 @@ Die dahinter steckende Idee besteht darin,
 \begin_inset Formula $f(z)$
 \end_inset
 
- nach Gleichung\InsetSpace ~
+ nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_pole_laurent"
 
 \end_inset
@@ -4122,9 +5154,13 @@ reference "eq:analysis_residue_pole_laurent"
 
 \begin_layout Standard
 Differentiation der einzelnen Summanden, gefolgt von der Grenzwertbildung
- bestätigt Beziehung\InsetSpace ~
+ bestätigt Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_pole"
 
 \end_inset
@@ -4171,7 +5207,7 @@ Beispiele von Funktionen mit Pol sind
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wie man schon an der Form erkennen kann, entspricht in diesem Fall die Funktion
  ihrer 
 \noun on
@@ -4204,8 +5240,12 @@ Speziell für einfache Pole (
 
 \begin_layout Standard
 was bei gebrochen rationalen Funktionen
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
@@ -4226,7 +5266,7 @@ führt
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Herleitung ist einfach, wenn man 
 \begin_inset Formula $n=1$
 \end_inset
@@ -4244,9 +5284,13 @@ Bernoulli-l'Hospital
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "9-III"
 key "Needham:1998"
 
@@ -4261,21 +5305,30 @@ Wesentliche Singularitäten
 
 \begin_layout Standard
 Wesentliche Singularitäten
-\begin_inset LatexCommand index
-name "Singularitäten!wesentliche"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Singularitäten!wesentliche
+\end_layout
 
 \end_inset
 
- sind solche, die weder hebbar noch ein Pol sind\InsetSpace ~
+ sind solche, die weder hebbar noch ein Pol sind
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "6-VIII"
 key "Needham:1998"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "III-4.3"
 key "Freitag:2000"
 
@@ -4302,7 +5355,7 @@ h(z)=\sum_{k=1}^{\infty}\frac{a_{-k}}{(z-z_{0})^{k}},\]
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4320,9 +5373,13 @@ ie
 \begin_inset Formula $z_{0}$
 \end_inset
 
- ist für diesen Typ von Funktion üblicherweise mittels Integrationsformel\InsetSpace ~
+ ist für diesen Typ von Funktion üblicherweise mittels Integrationsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_residue_integral"
 
 \end_inset
@@ -4331,7 +5388,7 @@ reference "eq:analysis_laurent_residue_integral"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4360,17 +5417,25 @@ Besitzt eine Funktion
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Funktionen, die im Endlichen nur hebbare Singularitäten oder Pole besitzen
  (also keinen wesentlich singulären Punkt), werden meromorph
-\begin_inset LatexCommand index
-name "Funktion!meromorphe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!meromorphe
+\end_layout
 
 \end_inset
 
- genannt\InsetSpace ~
+ genannt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "I-6"
 key "Hurwitz:1922"
 
@@ -4407,9 +5472,13 @@ für irgendeine Zahl
 \begin_inset Formula $n=1$
 \end_inset
 
- genau um Formel\InsetSpace ~
+ genau um Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_removable_singularity"
 
 \end_inset
@@ -4418,9 +5487,13 @@ reference "eq:analysis_residue_removable_singularity"
 \begin_inset Formula $f(z)$
 \end_inset
 
- entsprechend Gleichung\InsetSpace ~
+ entsprechend Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_pole_laurent"
 
 \end_inset
@@ -4437,14 +5510,50 @@ Liouville
 \begin_layout Standard
 
 \noun on
-\begin_inset LatexCommand index
-name "Liouville@\\noun{Liouville}, Satz von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Liouville@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Liouville}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Satz von!Liouville@\\noun{Liouville}|see{\\noun{Liouville}}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Satz von!Liouville@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Liouville}|see{
+\backslash
+noun{Liouville}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -4458,7 +5567,7 @@ Satz soll hier, etwas anders als
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4467,9 +5576,13 @@ eg
 
 \end_inset
 
- in\InsetSpace ~
+ in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 63$"
 key "Whittaker:1927"
 
@@ -4498,8 +5611,12 @@ Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
 \end_inset
 
  beschränkt ist
-\begin_inset LatexCommand index
-name "Funktion!analytische!Beschränktheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Beschränktheit
+\end_layout
 
 \end_inset
 
@@ -4508,9 +5625,13 @@ name "Funktion!analytische!Beschränktheit"
 \begin_inset Formula $C$
 \end_inset
 
- keine Singularitäten, dann gilt folgende Ungleichung\InsetSpace ~
+ keine Singularitäten, dann gilt folgende Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "37"
 key "Brown:1996"
 
@@ -4535,7 +5656,7 @@ arstellung aus,
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4575,16 +5696,21 @@ M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{
 \end_inset
 
  wie vorausgesetzt auf dem gesamten Integrationsweg analytisch und beschränkt,
- dann gilt für den Betragswert des Integrals\InsetSpace ~
+ dann gilt für den Betragswert des Integrals
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$4 \\sdot 62$"
 key "Whittaker:1927"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "41"
 key "Brown:1996"
 
@@ -4609,8 +5735,25 @@ Sei
 Cauchy
 \noun default
 's Ungleichung
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Ungleichung von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Ungleichung von
+\end_layout
 
 \end_inset
 
@@ -4626,18 +5769,26 @@ ten Ableitung von
 \begin_inset Formula $z_{0}$
 \end_inset
 
- von Interesse\InsetSpace ~
+ von Interesse
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 23$"
 key "Whittaker:1927"
 
 \end_inset
 
 .
- Wir gehen dabei von Beziehung\InsetSpace ~
+ Wir gehen dabei von Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_integral_circle"
 
 \end_inset
@@ -4654,7 +5805,7 @@ reference "eq:analysis_derivative_integral_circle"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4677,9 +5828,13 @@ resp
 \end_layout
 
 \begin_layout Standard
-Anwendung von Ungleichung\InsetSpace ~
+Anwendung von Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_integral_abs_limit"
 
 \end_inset
@@ -4706,8 +5861,25 @@ reference "eq:analysis_integral_abs_limit"
 
 \begin_layout Standard
 und damit direkt weiter zur Relation
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Satz von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Satz von
+\end_layout
 
 \end_inset
 
@@ -4729,9 +5901,13 @@ Bleibt nur noch der Satz von
 \noun on
 Liouville 
 \noun default
-selbst, welcher nach\InsetSpace ~
+selbst, welcher nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$5 \\sdot 63$"
 key "Whittaker:1927"
 
@@ -4763,8 +5939,12 @@ Sei
 ganze
 \emph default
  Funktion
-\begin_inset LatexCommand index
-name "Funktion!ganze"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!ganze
+\end_layout
 
 \end_inset
 
@@ -4776,9 +5956,13 @@ name "Funktion!ganze"
 \end_layout
 
 \begin_layout Standard
-Der Beweis steckt in Ungleichung\InsetSpace ~
+Der Beweis steckt in Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_abs_limit"
 
 \end_inset
@@ -4825,7 +6009,7 @@ Läßt man nun
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4858,9 +6042,13 @@ Liouville
 \end_layout
 
 \begin_layout Enumerate
-In Ungleichung\InsetSpace ~
+In Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_abs_limit"
 
 \end_inset
@@ -4870,14 +6058,22 @@ reference "eq:analysis_derivative_abs_limit"
 \end_inset
 
  das sogenannte Maximumprinzip
-\begin_inset LatexCommand index
-name "Maximumprinzip"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Maximumprinzip
+\end_layout
 
 \end_inset
 
- nach\InsetSpace ~
+ nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II-6"
 key "Cauer:1954"
 
@@ -4900,7 +6096,7 @@ key "Cauer:1954"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4931,8 +6127,12 @@ ie
 \end_deeper
 \begin_layout Enumerate
 Der Beweis des Hauptsatzes der Algebra
-\begin_inset LatexCommand index
-name "Algebra!Hauptsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Algebra!Hauptsatz der
+\end_layout
 
 \end_inset
 
@@ -4967,9 +6167,13 @@ Liouville
 \begin_inset Formula $p(z)$
 \end_inset
 
- ein nicht-konstantes Polynom ist\InsetSpace ~
+ ein nicht-konstantes Polynom ist
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II-3"
 key "Freitag:2000"
 
@@ -4979,7 +6183,8 @@ key "Freitag:2000"
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_jordan"
 
 \end_inset
@@ -4988,14 +6193,50 @@ Lemma von Jordan
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Jordan, Lemma von@\\noun{Jordan}, Lemma von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jordan, Lemma von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jordan}
+\end_layout
+
+\end_inset
+
+, Lemma von
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Satz von!Jordan@\\noun{Jordan}|see{\\noun{Jordan}}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Satz von!Jordan@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jordan}|see{
+\backslash
+noun{Jordan}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -5003,7 +6244,10 @@ Der Hilfssatz von
 \noun on
 C.
 \noun default
-\InsetSpace ~
+
+\begin_inset space ~
+\end_inset
+
 
 \noun on
 Jordan
@@ -5022,9 +6266,13 @@ Ist die Funktion
 \begin_inset Formula $C_{\infty}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -5062,9 +6310,13 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Standard
-Für den Beweis gehen wir wie in\InsetSpace ~
+Für den Beweis gehen wir wie in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$6 \\sdot 222$"
 key "Whittaker:1927"
 
@@ -5153,12 +6405,12 @@ Der Integrand des rechtsseitigen Integrals ist bezüglich des Ordinatenwertes
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mit einem Bild des Funktionsverlaufes (wie 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5167,17 +6419,25 @@ eg
 
 \end_inset
 
- in\InsetSpace ~
+ in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "74"
 key "Brown:1996"
 
 \end_inset
 
- oder\InsetSpace ~
+ oder
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10.2"
 key "Marko:1995"
 
@@ -5215,9 +6475,13 @@ ableiten, welche nun bei der Berechnung des (vereinfachten) Integrals verwendet
 \end_layout
 
 \begin_layout Standard
-Einsetzen in Ungleichung\InsetSpace ~
+Einsetzen in Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ1"
 
 \end_inset
@@ -5249,7 +6513,7 @@ was mehrere Fallunterscheidungen notwendig macht.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5274,7 +6538,7 @@ Im einfachsten Fall,
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5292,9 +6556,13 @@ ie
 \end_inset
 
  gelten muß.
- Außerdem ist erwähnenswert, daß Ungleichung\InsetSpace ~
+ Außerdem ist erwähnenswert, daß Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ2"
 
 \end_inset
@@ -5324,9 +6592,13 @@ Werte
 
 \begin_deeper
 \begin_layout Enumerate
-In Ungleichung\InsetSpace ~
+In Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ_sine"
 
 \end_inset
@@ -5339,9 +6611,13 @@ Bildet man den Grenzwert
 \begin_inset Formula $\lim_{r\rightarrow\infty}$
 \end_inset
 
- für Beziehung\InsetSpace ~
+ für Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_integral_sine"
 
 \end_inset
@@ -5354,16 +6630,24 @@ reference "eq:analysis_jordan_integral_sine"
 \end_layout
 
 \begin_layout Enumerate
-Wegen der beiden vorangegangenen Punkte haben die Ungleichungen\InsetSpace ~
+Wegen der beiden vorangegangenen Punkte haben die Ungleichungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ3"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ2"
 
 \end_inset
@@ -5373,9 +6657,13 @@ reference "eq:analysis_jordan_inequ2"
 
 \begin_layout Standard
 Aus diesem Dilemma kann man sich jedoch durch Drehung des Integrationsweges
- in die negativ-imaginäre Halbebene (angedeutet in Abbildung\InsetSpace ~
+ in die negativ-imaginäre Halbebene (angedeutet in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -5389,9 +6677,13 @@ reference "fig:analysis_real_inf_integral"
 \begin_inset Formula $\theta=\phi+\pi$
 \end_inset
 
- ist man in der Lage, den Ausgangspunkt nach Ungleichung\InsetSpace ~
+ ist man in der Lage, den Ausgangspunkt nach Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ1"
 
 \end_inset
@@ -5404,13 +6696,14 @@ reference "eq:analysis_jordan_inequ1"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Das Lemma von 
 \noun on
 Jordan
 \noun default
  (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_lemma"
 
 \end_inset
@@ -5419,7 +6712,7 @@ reference "eq:analysis_jordan_lemma"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5456,9 +6749,13 @@ Sollte der Exponentialfaktor
 \end_inset
 
  jedoch Null sein, dann verschwindet der Nenner auf der rechten Seite von
- Ungleichung\InsetSpace ~
+ Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ2"
 
 \end_inset
@@ -5472,9 +6769,13 @@ reference "eq:analysis_jordan_inequ2"
 \noun on
 Jordan
 \noun default
-'s Lemma\InsetSpace ~
+'s Lemma
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_lemma"
 
 \end_inset
@@ -5506,9 +6807,13 @@ Läßt man (abweichend von der Voraussetzung) ein negativ-imaginäres
 \begin_inset Formula $\alpha=-\ji\,\beta$
 \end_inset
 
- der Betrag des Integrals nach Formel\InsetSpace ~
+ der Betrag des Integrals nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_lemma_abs"
 
 \end_inset
@@ -5546,7 +6851,7 @@ onsweges behoben werden kann.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5568,7 +6873,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5577,16 +6882,24 @@ cf
 
 \end_inset
 
- auch Abbildung\InsetSpace ~
+ auch Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_imag_inf_integral"
 
 \end_inset
 
-) wird die ursprüngliche Form von Ungleichung\InsetSpace ~
+) wird die ursprüngliche Form von Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_inequ1"
 
 \end_inset
@@ -5596,7 +6909,7 @@ reference "eq:analysis_jordan_inequ1"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sollte jedoch 
 \begin_inset Formula $\alpha=\ji\,\beta$
 \end_inset
@@ -5625,7 +6938,8 @@ r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{\beta r\cos\theta}\tic\theta
 
 \end_deeper
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_improper_integrals"
 
 \end_inset
@@ -5634,14 +6948,22 @@ Uneigentliche Integrale
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Uneigentliche Integrale|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Uneigentliche Integrale|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integral!uneigentliches|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!uneigentliches|(
+\end_layout
 
 \end_inset
 
@@ -5657,7 +6979,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5676,8 +6998,25 @@ Stetige Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Jordan, Lemma von@\\noun{Jordan}, Lemma von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jordan, Lemma von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jordan}
+\end_layout
+
+\end_inset
+
+, Lemma von
+\end_layout
 
 \end_inset
 
@@ -5685,9 +7024,13 @@ Das Lemma von
 \noun on
 Jordan
 \noun default
- in seiner allgemeinen Form nach Gleichung\InsetSpace ~
+ in seiner allgemeinen Form nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_lemma"
 
 \end_inset
@@ -5695,9 +7038,13 @@ reference "eq:analysis_jordan_lemma"
  ermöglicht (unter den angezeigten Voraussetzungen) die Berechnung von uneigentl
 ichen Integralen durch komplexe Integration.
  Um das Prinzip zu verdeutlichen befassen wir uns zuerst mit dem (einfachen)
- Spezialfall nach Gleichung\InsetSpace ~
+ Spezialfall nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_jordan_lemma_vanish"
 
 \end_inset
@@ -5724,7 +7071,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename real_int_inf.eps
@@ -5735,11 +7082,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -5766,9 +7114,13 @@ Dazu soll auf dem geschlossenen Weg
 \begin_inset Formula $C=C_{\infty}\rightarrow C_{x}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -5829,7 +7181,8 @@ Das Integral
 \end_layout
 
 \begin_layout Paragraph
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "par:analysis_improper_convcond"
 
 \end_inset
@@ -5838,9 +7191,13 @@ Voraussetzungen für die Anwendbarkeit
 \end_layout
 
 \begin_layout Standard
-Notwendige Bedingungen für die Anwendbarkeit von Formel\InsetSpace ~
+Notwendige Bedingungen für die Anwendbarkeit von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_inf_integral_residue"
 
 \end_inset
@@ -5870,14 +7227,22 @@ Jordan
 
 \begin_layout Itemize
 das uneigentliche Integral konvergiert
-\begin_inset LatexCommand index
-name "Integral!Konvergenz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!Konvergenz
+\end_layout
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$6 \\sdot 22$"
 key "Whittaker:1927"
 
@@ -5888,8 +7253,12 @@ key "Whittaker:1927"
 
 \begin_layout Standard
 Kann man sogar absolute Konvergenz
-\begin_inset LatexCommand index
-name "Konvergenz!absolute"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz!absolute
+\end_layout
 
 \end_inset
 
@@ -5897,7 +7266,7 @@ name "Konvergenz!absolute"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5924,14 +7293,22 @@ ie
 
 \begin_layout Standard
 der letzte Punkt der notwendigen Bedingungen (gewöhnliche Konvergenz
-\begin_inset LatexCommand index
-name "Konvergenz!gewöhnliche"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz!gewöhnliche
+\end_layout
 
 \end_inset
 
-) grundsätzlich erfüllt\InsetSpace ~
+) grundsätzlich erfüllt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$4 \\sdot 43$"
 key "Whittaker:1927"
 
@@ -5946,7 +7323,7 @@ Die Eigenschaft der absoluten Konvergenz kann für ganz bestimmte Klassen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5978,9 +7355,13 @@ ristik
 \end_layout
 
 \begin_layout Standard
-ist\InsetSpace ~
+ist
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "20.2"
 key "Gellert:1979"
 
@@ -6039,7 +7420,7 @@ kann die absolute Konvergenz entlang des positiven Teils der reellen Achse
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der Nachweis läßt sich für das Integral 
 \begin_inset Formula $\int_{-\infty}^{-0}|f(x)|\tic x$
 \end_inset
@@ -6080,8 +7461,12 @@ Jordan
 
 \begin_layout Standard
 In ähnlicher Art und Weise ist bei exponentiell abfallenden Funktionen
-\begin_inset LatexCommand index
-name "Funktion!exponentiell abfallende"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!exponentiell abfallende
+\end_layout
 
 \end_inset
 
@@ -6101,7 +7486,7 @@ name "Funktion!exponentiell abfallende"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der Abfall der Funktionswerte erfolgt hier wegen 
 \begin_inset Formula $\expf^{\sigma x}>x^{\sigma}=\expf^{\sigma\ln x}$
 \end_inset
@@ -6120,9 +7505,13 @@ Der Abfall der Funktionswerte erfolgt hier wegen
 \end_inset
 
 .
- Denn setzt man diese Relation in Ungleichung\InsetSpace ~
+ Denn setzt man diese Relation in Ungleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_improper_int_convabs"
 
 \end_inset
@@ -6154,8 +7543,12 @@ und löst das rechtsseitige Integral auf,
 
 \begin_layout Standard
 so wird die Beschränktheit
-\begin_inset LatexCommand index
-name "Integral!Beschränkheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!Beschränkheit
+\end_layout
 
 \end_inset
 
@@ -6177,22 +7570,34 @@ Gebrochen rationale Funktionen
 
 \begin_layout Standard
 Speziell für gebrochen rationale Funktionen
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
- ist es durch Hinzunahme von Beziehung\InsetSpace ~
+ ist es durch Hinzunahme von Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_pole_rational"
 
 \end_inset
 
  möglich, noch folgende Vereinfachung anzugeben (vorausgesetzt alle Pole
  sind von erster Ordnung
-\begin_inset LatexCommand index
-name "Pol!erster Ordnung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!erster Ordnung
+\end_layout
 
 \end_inset
 
@@ -6226,7 +7631,8 @@ Die Bedingung
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:analysis_improper_integrals_halfplane"
 
 \end_inset
@@ -6235,8 +7641,12 @@ Halb-analytische Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktion!halbanalytische"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!halbanalytische
+\end_layout
 
 \end_inset
 
@@ -6252,7 +7662,7 @@ Für eine in der oberen komplexen Halbebene
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Als 
 \emph on
 halbanalytisch
@@ -6284,9 +7694,13 @@ einer
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula"
 
 \end_inset
@@ -6313,7 +7727,7 @@ definiert sein, für die wir zunächst das Residuum an der (einzigen) Singularit
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6322,9 +7736,13 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_residue_pole_simple"
 
 \end_inset
@@ -6346,16 +7764,24 @@ Einsetzen in den Ausgangspunkt des allgemeinen Falls (
 \begin_inset Formula $\alpha=0$
 \end_inset
 
-) nach Gleichung\InsetSpace ~
+) nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_inf_integral_start"
 
 \end_inset
 
- führt mit dem Integrationsweg laut Abbildung\InsetSpace ~
+ führt mit dem Integrationsweg laut Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -6381,7 +7807,7 @@ Cauchy
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Benennt man 
 \begin_inset Formula $z_{0}$
 \end_inset
@@ -6396,9 +7822,13 @@ Benennt man
 \end_inset
 
 .
- Um jedoch Mehrdeutigkeiten zu vermeiden wird (außer in Tabelle\InsetSpace ~
+ Um jedoch Mehrdeutigkeiten zu vermeiden wird (außer in Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -6413,8 +7843,25 @@ reference "tab:analysis_inf_integrals_poisson"
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Integralformel in der Halbebene"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}
+\end_layout
+
+\end_inset
+
+!Integralformel in der Halbebene
+\end_layout
 
 \end_inset
 
@@ -6422,9 +7869,13 @@ name "Cauchy@\\noun{Cauchy}!Integralformel in der Halbebene"
 \begin_inset Formula $\imop(z_{0})>0$
 \end_inset
 
- nach\InsetSpace ~
+ nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "119"
 key "Brown:1996"
 
@@ -6456,9 +7907,13 @@ Sollte
 \end_inset
 
  analytisch sein, dann integriert man auf einem Halbkreis in der rechten
- Halbebene entsprechend Abbildung\InsetSpace ~
+ Halbebene entsprechend Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_imag_inf_integral"
 
 \end_inset
@@ -6476,16 +7931,24 @@ reference "fig:analysis_imag_inf_integral"
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula_implicit"
 
 \end_inset
 
- sowie Gleichung\InsetSpace ~
+ sowie Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_laurent_residue_integral"
 
 \end_inset
@@ -6494,10 +7957,14 @@ reference "eq:analysis_laurent_residue_integral"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Denn Beziehung\InsetSpace ~
+\begin_layout Plain Layout
+Denn Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_cauchy_formula"
 
 \end_inset
@@ -6506,9 +7973,13 @@ reference "eq:analysis_halfplane_cauchy_formula"
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula"
 
 \end_inset
@@ -6517,9 +7988,13 @@ reference "eq:analysis_cauchy_formula"
 \begin_inset Formula $C=C_{x}\rightarrow C_{\infty}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -6554,7 +8029,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6563,9 +8038,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_jordan"
 
 \end_inset
@@ -6605,9 +8084,13 @@ Nimmt man noch die Ersetzung
 \end_inset
 
  vor, so läßt sich die Integration entlang der imaginären Achse auf eine
- reelle Integrationsvariable abbilden (siehe auch Tabelle\InsetSpace ~
+ reelle Integrationsvariable abbilden (siehe auch Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -6632,7 +8115,7 @@ Abhängigkeit zwischen Real- und Imaginärteil
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die im Folgenden als Notiz eingefügten Anmerkungen und Formeln gelten für
  den Fall, daß 
 \begin_inset Formula $f$
@@ -6655,7 +8138,7 @@ Gehen wir jetzt nocheinmal zum Fall
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6668,14 +8151,18 @@ ie
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Weitere Varianten bezüglich der Halbebenen, in denen 
 \begin_inset Formula $f(z)$
 \end_inset
 
- analytisch ist, sind in Tabelle\InsetSpace ~
+ analytisch ist, sind in Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -6685,9 +8172,13 @@ reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
 
- zurück und betrachten Formel\InsetSpace ~
+ zurück und betrachten Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_cauchy_formula"
 
 \end_inset
@@ -6712,9 +8203,13 @@ t wegen mit
 \begin_inset Formula $C$
 \end_inset
 
- (siehe Abbildung\InsetSpace ~
+ (siehe Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -6746,9 +8241,13 @@ verschwinden.
 \begin_inset Formula $z_{0}$
 \end_inset
 
- nach Formel\InsetSpace ~
+ nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_cauchy_formula"
 
 \end_inset
@@ -6770,7 +8269,7 @@ f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{1})\, f(x)}{(x-z
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{xalignat*}{2}
 f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y & 0 & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{1}}\tic y\\
 f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y & 0 & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{0})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\end{xalignat*}
@@ -6790,7 +8289,7 @@ so läßt sich aus der rechtsseitigen Beziehung
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Welche die Austauschbarkeit von 
 \begin_inset Formula $z_{0}=x_{0}+\ji y_{0}$
 \end_inset
@@ -6828,11 +8327,11 @@ Welche die Austauschbarkeit von
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für die rechte Halbebene
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \int_{-\infty}^{\infty}\frac{\ji y\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y=\int_{-\infty}^{\infty}\frac{z_{0}\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\]
 
@@ -6841,7 +8340,7 @@ Für die rechte Halbebene
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit der Austauschbarkeit 
 \begin_inset Formula $\ji y:=z_{0}=x_{0}+\ji y_{0}$
 \end_inset
@@ -6882,7 +8381,7 @@ f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{x\, f(x)}{(x-z_{0})(x-
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(z_{0}-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\]
 
@@ -6925,14 +8424,18 @@ f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-\cjgt{z_{0}})\, f(
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für den Fall 
 \begin_inset Formula $z_{1}=-x_{0}+\ji y_{0}$
 \end_inset
 
- ergibt sich bei Verwendung von Formel\InsetSpace ~
+ ergibt sich bei Verwendung von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_right_cauchy_imint"
 
 \end_inset
@@ -6940,7 +8443,7 @@ reference "eq:analysis_halfplane_right_cauchy_imint"
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
 f(z_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(\ji y-x_{0}-\ji y_{0})(\ji y+x_{0}-\ji y_{0})}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{[(y-y_{0})+\ji x_{0}][(y-y_{0})-\ji x_{0}]}\tic y\\
  & =\frac{\ji}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{x_{0}\, f(y)}{(y-x_{0}-\ji y_{0})(y+x_{0}-\ji y_{0})}\tic y\end{align*}
@@ -6960,9 +8463,13 @@ was zu folgenden Berechnungsformeln für
 \begin_inset Formula $f(z_{0})$
 \end_inset
 
- führt\InsetSpace ~
+ führt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "119"
 key "Brown:1996"
 
@@ -6984,7 +8491,7 @@ f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|(y-y_{0})+\ji x_{0}|^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y\]
 
@@ -6993,7 +8500,7 @@ f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(y-y_{0})^{
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 und mit der schon erwähnten Ersetzbarkeit 
 \begin_inset Formula $x_{0}:=\ji(y-y_{0})$
 \end_inset
@@ -7001,7 +8508,7 @@ und mit der schon erwähnten Ersetzbarkeit
  bei reellen Grenzen
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 f(z_{0})=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\]
 
@@ -7037,7 +8544,7 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
@@ -7058,14 +8565,48 @@ gewinnen, wobei die Realteil-Beziehung auch
 Poisson
 \noun default
 's Integralformel
-\begin_inset LatexCommand index
-name "Poisson@\\noun{Poisson}!-Formel (für die Halbebene)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Poisson@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Poisson}
+\end_layout
+
+\end_inset
+
+!-Formel (für die Halbebene)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Poisson@\\noun{Poisson}!-Integral"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Poisson@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Poisson}
+\end_layout
+
+\end_inset
+
+!-Integral
+\end_layout
 
 \end_inset
 
@@ -7073,30 +8614,36 @@ name "Poisson@\\noun{Poisson}!-Integral"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die klassische Darstellung des 
 \noun on
 Poisson
 \noun default
 -Integrals wird in der Literatur oft in Polarkoordinaten gegeben, wodurch
  der Integrationsweg entlang der reellen Achse zu einem Kreis um den Koordinaten
-ursprung wird\InsetSpace ~
+ursprung wird
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "116"
 key "Brown:1996"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "$\\textrm{n}^{\\circ}$~59"
 key "Achieser:1954"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Cauer:1932"
 
 \end_inset
@@ -7107,8 +8654,12 @@ key "Cauer:1932"
 \end_inset
 
  und geht durch Bilinear-Transformation
-\begin_inset LatexCommand index
-name "Transformation!Bilinear-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Bilinear-
+\end_layout
 
 \end_inset
 
@@ -7140,7 +8691,7 @@ v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
 u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
 v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
@@ -7156,16 +8707,24 @@ v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{
 \end_layout
 
 \begin_layout Standard
-welche durch Einsetzen in\InsetSpace ~
+welche durch Einsetzen in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_boundary_sep1"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_boundary_sep2"
 
 \end_inset
@@ -7175,8 +8734,12 @@ reference "eq:analysis_halfplane_boundary_sep2"
 \end_inset
 
  aus den Randwerten
-\begin_inset LatexCommand index
-name "Randwerte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randwerte
+\end_layout
 
 \end_inset
 
@@ -7198,7 +8761,7 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}-\ji(x-x_{0})}{|x-z_{
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{xalignat*}{2}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}+\ji(y-y_{0})}{|\ji y-z_{0}|^{2}}u(0,y)\tic y & f(z_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})-\ji x_{0}}{|\ji y-z_{0}|^{2}}v(0,y)\tic y\\
  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-z_{0}}\tic y &  & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{v(0,y)}{\ji y-z_{0}}\tic y\end{xalignat*}
@@ -7214,9 +8777,13 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}+\ji(y-y_{0})}{|\ji y
 \end_layout
 
 \begin_layout Standard
-Letztere Beziehungen eröffnen in Verbindung mit Gleichung\InsetSpace ~
+Letztere Beziehungen eröffnen in Verbindung mit Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_complex_derivative"
 
 \end_inset
@@ -7234,8 +8801,12 @@ reference "eq:analysis_complex_derivative"
 \end_inset
 
  ausgehend von den Randwerten
-\begin_inset LatexCommand index
-name "Randwerte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randwerte
+\end_layout
 
 \end_inset
 
@@ -7243,17 +8814,25 @@ name "Randwerte"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Bei Gleichung\InsetSpace ~
+\begin_layout Plain Layout
+Bei Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_derivative"
 
 \end_inset
 
- handelt es sich offensichtlich um einen Spezialfall von Ableitungsformel\InsetSpace ~
+ handelt es sich offensichtlich um einen Spezialfall von Ableitungsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_derivative_first_integral"
 
 \end_inset
@@ -7282,11 +8861,12 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -7299,20 +8879,20 @@ Berechnungsformeln für halbanalytische Funktionen
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="4">
 <features>
-<column alignment="left" valignment="top" leftline="true" width="0">
-<column alignment="left" valignment="top" leftline="true" width="0">
-<column alignment="left" valignment="top" leftline="true" rightline="true" width="0">
-<column alignment="left" valignment="top" rightline="true" width="0">
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<column alignment="left" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bedingung
 \end_layout
 
@@ -7321,7 +8901,7 @@ Bedingung
 <cell multicolumn="1" alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $f(z)=$
 \end_inset
 
@@ -7333,7 +8913,7 @@ Bedingung
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -7342,18 +8922,18 @@ Bedingung
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -7369,7 +8949,7 @@ Bedingung
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(\xi)}{\xi-z}\tic\xi}$
@@ -7383,7 +8963,7 @@ Bedingung
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
@@ -7394,10 +8974,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop[f(\xi)]}{\xi-z}\tic\xi}$
@@ -7409,20 +8989,20 @@ Bedingung
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{2\pi}\int_{-\ji\infty}^{\ji\infty}\frac{f(\ji\xi)}{\ji\xi-z}\tic\xi}$
@@ -7433,10 +9013,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(\xi-x)\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
@@ -7447,10 +9027,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[f(\xi)]}{\xi-z}\tic\xi}$
@@ -7463,10 +9043,10 @@ Bedingung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -7479,10 +9059,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(\xi)}{\xi-z}\tic\xi}$
@@ -7493,10 +9073,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
@@ -7507,10 +9087,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\reop[f(\xi)]}{\xi-z}\tic\xi}$
@@ -7522,20 +9102,20 @@ Bedingung
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{2\pi}\int_{-\ji\infty}^{\ji\infty}\frac{f(\ji\xi)}{\ji\xi-z}\tic\xi}$
@@ -7546,10 +9126,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(\xi-x)\, f(\xi)}{|\xi-z|^{2}}\tic\xi}$
@@ -7560,10 +9140,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop[f(\xi)]}{\xi-z}\tic\xi}$
@@ -7576,10 +9156,10 @@ Bedingung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -7592,10 +9172,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(\xi)}{\xi-z}\tic\xi}$
@@ -7606,10 +9186,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x\, f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
@@ -7620,10 +9200,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
@@ -7635,20 +9215,20 @@ Bedingung
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{\ji\xi-z}\tic\xi}$
@@ -7659,10 +9239,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(\xi-y)f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
@@ -7673,10 +9253,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
@@ -7689,10 +9269,10 @@ Bedingung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -7705,10 +9285,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(\xi)}{\xi-z}\tic\xi}$
@@ -7719,10 +9299,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x\, f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
@@ -7733,10 +9313,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
@@ -7748,20 +9328,20 @@ Bedingung
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji\xi)}{\ji\xi-z}\tic\xi}$
@@ -7772,10 +9352,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(\xi-y)f(\ji\xi)}{|\ji\xi-z|^{2}}\tic\xi}$
@@ -7786,10 +9366,10 @@ Bedingung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{-\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\imop[f(\ji\xi)]}{\ji\xi-z}\tic\xi}$
@@ -7909,7 +9489,7 @@ Alle Ausführungen zu analytischen Funktionen in der rechten Halbebene haben
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7927,14 +9507,48 @@ Fourier
 Laplace
 \noun default
 -Transformation
-\begin_inset LatexCommand index
-name "Laplace@\\noun{Laplace}!-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laplace@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}
+\end_layout
+
+\end_inset
+
+!-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Laplace@\\noun{Laplace}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Laplace@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
 
 \end_inset
 
@@ -7947,9 +9561,13 @@ name "Transformation!Laplace@\\noun{Laplace}-"
 \begin_inset Formula $f(z)/(z-z_{0})$
 \end_inset
 
- auf dem Integrationsweg entsprechend Abbildung\InsetSpace ~
+ auf dem Integrationsweg entsprechend Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_halfplane_int_singularity"
 
 \end_inset
@@ -7964,7 +9582,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename imag_int_vp.eps
@@ -7974,11 +9592,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:analysis_halfplane_int_singularity"
 
 \end_inset
@@ -8107,7 +9726,8 @@ an.
 Cauchy
 \noun default
 's Integralformel 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_formula_implicit"
 
 \end_inset
@@ -8116,10 +9736,14 @@ reference "eq:analysis_cauchy_formula_implicit"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Formel\InsetSpace ~
+\begin_layout Plain Layout
+Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_indented_path"
 
 \end_inset
@@ -8132,9 +9756,13 @@ reference "eq:analysis_halfplane_indented_path"
 \begin_inset Formula $\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}f(z)\tic z=\ji\pi\res{z_{0}}{f(z)}$
 \end_inset
 
- und entspricht damit dem Ergebnis in\InsetSpace ~
+ und entspricht damit dem Ergebnis in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "75"
 key "Brown:1996"
 
@@ -8146,9 +9774,13 @@ key "Brown:1996"
 \end_inset
 
 .
- Einsetzen in unser Zwischenergebnis\InsetSpace ~
+ Einsetzen in unser Zwischenergebnis
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_right_x0"
 
 \end_inset
@@ -8157,7 +9789,7 @@ reference "eq:analysis_halfplane_right_x0"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sollte 
 \noun on
 Jordan
@@ -8202,16 +9834,24 @@ für Punkte auf der imaginären Achse.
 \begin_inset Formula $\reop(z_{0})>0$
 \end_inset
 
- gültigen Beziehungen (insbesondere dem Äquivalent zu\InsetSpace ~
+ gültigen Beziehungen (insbesondere dem Äquivalent zu
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_boundary1"
 
 \end_inset
 
- in Tabelle\InsetSpace ~
+ in Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -8238,9 +9878,13 @@ genau mit dem Ergebnis für
 
 \end_deeper
 \begin_layout Enumerate
-Auf der Grundlage von Formel\InsetSpace ~
+Auf der Grundlage von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_indented_result"
 
 \end_inset
@@ -8254,25 +9898,34 @@ Hilbert
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Wie in\InsetSpace ~
+\begin_layout Plain Layout
+Wie in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "9"
 key "Papoulis:2002"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1"
 key "Marko:1995"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4"
 key "Fritzsche:1985"
 
@@ -8292,14 +9945,35 @@ Hilbert
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Hilbert@\\noun{Hilbert}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Hilbert@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hilbert}
+\end_layout
 
 \end_inset
 
- verknüpft sind\InsetSpace ~
+-
+\end_layout
 
-\begin_inset LatexCommand cite
+\end_inset
+
+ verknüpft sind
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "13"
 key "Bracewell:2003"
 
@@ -8325,7 +9999,8 @@ u(0,y_{0})+\ji v(0,y_{0})=-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{
 
 \begin_layout Standard
 und beide Seiten der Gleichung betrachtet.
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "HT"
 symbol "$\\mathcal{H}$"
 description "\\noun{Hilbert}-Transformation"
@@ -8356,9 +10031,13 @@ Eine wesentliche Voraussetzung für das Verschwinden des Integrals auf dem
 \begin_inset Formula $C_{\infty}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -8399,7 +10078,7 @@ Zu beachten ist dabei, daß
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8408,9 +10087,13 @@ cf
 
 \end_inset
 
- Tabelle\InsetSpace ~
+ Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_poisson"
 
 \end_inset
@@ -8426,14 +10109,22 @@ Weitere Voraussetzungen für die Anwendbarkeit der Berechnungsformeln bestehen
 
  auf dem jeweiligen Integrationsweg analytisch (sowie beschränkt) und das
  zugeordnete Integral konvergent
-\begin_inset LatexCommand index
-name "Konvergenz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz
+\end_layout
 
 \end_inset
 
- sein muß (siehe auch Abschnitt\InsetSpace ~
+ sein muß (siehe auch Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "par:analysis_improper_convcond"
 
 \end_inset
@@ -8450,7 +10141,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8472,8 +10163,25 @@ Um
 Jordan
 \noun default
 's Lemma
-\begin_inset LatexCommand index
-name "Jordan, Lemma von@\\noun{Jordan}, Lemma von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jordan, Lemma von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jordan}
+\end_layout
+
+\end_inset
+
+, Lemma von
+\end_layout
 
 \end_inset
 
@@ -8491,9 +10199,13 @@ name "Jordan, Lemma von@\\noun{Jordan}, Lemma von"
 \begin_inset Formula $C=C_{\infty}\rightarrow C_{x}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_real_inf_integral"
 
 \end_inset
@@ -8551,9 +10263,13 @@ l separieren.
 \end_layout
 
 \begin_layout Standard
-Was hier als Ergebnis präsentiert wurde, hat (insbesondere Formel\InsetSpace ~
+Was hier als Ergebnis präsentiert wurde, hat (insbesondere Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_inf_integral"
 
 \end_inset
@@ -8563,34 +10279,74 @@ reference "eq:analysis_inf_integral"
 Laplace
 \noun default
 -Transformation
-\begin_inset LatexCommand index
-name "Laplace@\\noun{Laplace}!-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laplace@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}
+\end_layout
+
+\end_inset
+
+!-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Laplace@\\noun{Laplace}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Laplace@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}
+\end_layout
 
 \end_inset
 
-\InsetSpace ~
+-
+\end_layout
 
-\begin_inset LatexCommand cite
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "81"
 key "Brown:1996"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.4.4"
 key "Stopp:1992"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.22"
 key "Wunsch:1962"
 
@@ -8619,7 +10375,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename imag_int_inf.eps
@@ -8630,11 +10386,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:analysis_imag_inf_integral"
 
 \end_inset
@@ -8666,16 +10423,24 @@ Die bis hierher gewonnenen Erkenntnisse bezüglich der Integration entlang
 \begin_inset Formula $y$
 \end_inset
 
--Achse entsprechend Abbildung\InsetSpace ~
+-Achse entsprechend Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_imag_inf_integral"
 
 \end_inset
 
- anwenden\InsetSpace ~
+ anwenden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.32"
 key "Wunsch:1962"
 
@@ -8694,7 +10459,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8703,9 +10468,13 @@ cf
 
 \end_inset
 
- letzter Absatz in Abschnitt\InsetSpace ~
+ letzter Absatz in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_jordan"
 
 \end_inset
@@ -8749,7 +10518,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8758,9 +10527,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_jordan"
 
 \end_inset
@@ -8773,7 +10546,7 @@ reference "sec:analysis_jordan"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8796,9 +10569,13 @@ resp
 \end_layout
 
 \begin_layout Standard
-Tabelle\InsetSpace ~
+Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:analysis_inf_integrals_jordan"
 
 \end_inset
@@ -8818,7 +10595,7 @@ Jordan
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8846,11 +10623,12 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "tab:analysis_inf_integrals_jordan"
 
 \end_inset
@@ -8863,19 +10641,19 @@ Berechnung uneigentlicher Integrale mit Hilfe von Residuen
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
 <features>
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -8884,30 +10662,30 @@ Berechnung uneigentlicher Integrale mit Hilfe von Residuen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Berechnungsvorschrift
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Voraussetzung
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 pos.-reell
 \end_layout
 
@@ -8916,7 +10694,7 @@ pos.-reell
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}}$
@@ -8930,7 +10708,7 @@ pos.-reell
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -8944,11 +10722,11 @@ pos.-reell
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 neg.-reell
 \end_layout
 
@@ -8957,7 +10735,7 @@ neg.-reell
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\expf^{-\ji|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\imop(z_{n})<0}\res{z_{n}}{\left[\expf^{-\ji|\alpha|z}f(z)\right]}}$
@@ -8971,7 +10749,7 @@ neg.-reell
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -8985,11 +10763,11 @@ neg.-reell
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 pos.-imag.
 \end_layout
 
@@ -8998,7 +10776,7 @@ pos.-imag.
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\expf^{-|\alpha|z}f(z)\tic z=-2\pi\ji\sum_{\reop(z_{n})>0}\res{z_{n}}{\left[\expf^{-|\alpha|z}f(z)\right]}}$
@@ -9012,7 +10790,7 @@ pos.-imag.
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9026,20 +10804,20 @@ pos.-imag.
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 neg.-imag.
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}\expf^{|\alpha|z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\expf^{|\alpha|z}f(z)\right]}}$
@@ -9050,10 +10828,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9067,11 +10845,11 @@ neg.-imag.
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -9080,10 +10858,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}}$
@@ -9094,10 +10872,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9111,11 +10889,11 @@ neg.-imag.
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -9124,10 +10902,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(x)\tic x=-2\pi\ji\sum_{\imop(z_{n})<0}\res{z_{n}}{f(z)}}$
@@ -9138,10 +10916,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9155,11 +10933,11 @@ neg.-imag.
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -9168,10 +10946,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}f(y)\tic y=-2\pi\ji\sum_{\reop(z_{n})>0}\res{z_{n}}{f(z)}}$
@@ -9182,10 +10960,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9199,11 +10977,11 @@ neg.-imag.
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -9212,10 +10990,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\int_{-\ji\infty}^{\ji\infty}f(y)\tic y=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{f(z)}}$
@@ -9226,10 +11004,10 @@ neg.-imag.
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
@@ -9256,14 +11034,22 @@ neg.-imag.
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Uneigentliche Integrale|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Uneigentliche Integrale|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integral!uneigentliches|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!uneigentliches|)
+\end_layout
 
 \end_inset
 
@@ -9271,8 +11057,12 @@ name "Integral!uneigentliches|)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktionentheorie|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktionentheorie|)
+\end_layout
 
 \end_inset
 
@@ -9283,7 +11073,7 @@ name "Funktionentheorie|)"
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -9298,9 +11088,10 @@ thisjob{analysis}%
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand bibtex
-options "geralpha"
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
 bibfiles "adsp,math"
+options "geralpha"
 
 \end_inset
 
@@ -9308,7 +11099,8 @@ bibfiles "adsp,math"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand printindex
+\begin_inset CommandInset index_print
+LatexCommand printindex
 
 \end_inset
 
@@ -9319,7 +11111,7 @@ bibfiles "adsp,math"
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash

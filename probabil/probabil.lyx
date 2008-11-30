@@ -1,5 +1,5 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -7,6 +7,10 @@
 \input{all-inc}
 \end_preamble
 \options reqno
+\use_default_options false
+\begin_modules
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -17,9 +21,22 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize default
 \spacing onehalf
+\use_hyperref true
+\pdf_subject "Wahrscheinlichkeitstheorie"
+\pdf_keywords "Zufallsgrößen, Zufallsprozesse, Wahrscheinlichkeit"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
 \use_amsmath 1
@@ -47,9 +64,23 @@
 \begin_inset Note Note
 status open
 
+\begin_layout Plain Layout
+Version $Id: probabil.lyx,v 1.19 2008-11-30 14:11:03 ralf Exp $
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-TODO: 
-\begin_inset LatexCommand cite
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo: 
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Papoulis:2002"
 
 \end_inset
@@ -57,43 +88,16 @@ key "Papoulis:2002"
 
 \end_layout
 
-\begin_layout Standard
-- Examples 9-13, 9-25
+\begin_layout Itemize
+Examples 9-13, 9-25
 \end_layout
 
-\begin_layout Standard
-- Chapter 11
+\begin_layout Itemize
+Chapter 11
 \end_layout
 
-\begin_layout Standard
-- Pages 373, 383-387, 392-397, 401, 408, 418, 423-425, 483
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status inlined
-
-\begin_layout Standard
-
-%% $Id: probabil.lyx,v 1.18 2007-10-05 08:01:26 ralf Exp $
-\end_layout
-
-\begin_layout Standard
-
-%%
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-docsubj{Zufallsgrößen und -prozesse}{Wahrscheinlichkeitstheorie}{Zufallsgrößen,
- Zufallsprozesse, Wahrscheinlichkeit}
+\begin_layout Itemize
+Pages 373, 383-387, 392-397, 401, 408, 418, 423-425, 483
 \end_layout
 
 \end_inset
@@ -110,7 +114,7 @@ Copyright
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -144,7 +148,7 @@ chnik, die dann meinen Interessen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -169,7 +173,8 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand tableofcontents
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
 
 \end_inset
 
@@ -188,7 +193,7 @@ Fourier
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -203,7 +208,8 @@ nomlabelwidth}{1in}
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand printnomenclature
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
 
 \end_inset
 
@@ -219,8 +225,12 @@ Diskrete Zufallsgrößen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!diskrete|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!diskrete|(
+\end_layout
 
 \end_inset
 
@@ -247,7 +257,8 @@ Bei den diskreten Zufallsgrößen geht man davon aus, daß es eine Zufallsgröß
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Pr"
 symbol "$\\pr$"
 description "Wahrscheinlichkeit"
@@ -256,8 +267,12 @@ description "Wahrscheinlichkeit"
 
  betragen.
  Die Wahrscheinlichkeit
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeit
+\end_layout
 
 \end_inset
 
@@ -283,8 +298,12 @@ name "Wahrscheinlichkeit"
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset LatexCommand index
-name "Erwartungswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert
+\end_layout
 
 \end_inset
 
@@ -293,7 +312,8 @@ name "Erwartungswert"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "E(X)"
 symbol "$\\mean(X)$"
 description "Erwartungswert der Zufallsgröße $X$"
@@ -308,7 +328,7 @@ description "Erwartungswert der Zufallsgröße $X$"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Oftmals auch geschrieben als typischer Operator 
 \begin_inset Formula $\mean X$
 \end_inset
@@ -336,8 +356,12 @@ Oftmals auch geschrieben als typischer Operator
 
 \begin_layout Standard
 Die Varianz
-\begin_inset LatexCommand index
-name "Varianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Varianz
+\end_layout
 
 \end_inset
 
@@ -346,7 +370,8 @@ name "Varianz"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Var(X)"
 symbol "$\\var(X)$"
 description "Varianz der Zufallsgröße $X$"
@@ -355,8 +380,12 @@ description "Varianz der Zufallsgröße $X$"
 
  ist der Erwartungswert der quadratischen Abweichung vom Erwartungswert.
  Sie ist dadurch ein gutes Maß für die Streuung
-\begin_inset LatexCommand index
-name "Streuung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Streuung
+\end_layout
 
 \end_inset
 
@@ -364,7 +393,7 @@ name "Streuung"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Auch häufig anzutreffen als 
 \begin_inset Formula $\sigma^{2}$
 \end_inset
@@ -383,8 +412,12 @@ Auch häufig anzutreffen als
 \end_inset
 
  angegeben, welche Standardabweichung
-\begin_inset LatexCommand index
-name "Standardabweichung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Standardabweichung
+\end_layout
 
 \end_inset
 
@@ -392,7 +425,7 @@ name "Standardabweichung"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -402,8 +435,12 @@ resp
 \end_inset
 
  Streuung
-\begin_inset LatexCommand index
-name "Streuung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Streuung
+\end_layout
 
 \end_inset
 
@@ -444,8 +481,12 @@ rschrift:
 
 \begin_layout Standard
 Für mittelwertfreie Zufallsgrößen
-\begin_inset LatexCommand index
-name "Zufallsgrößen!mittelwertfreie"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!mittelwertfreie
+\end_layout
 
 \end_inset
 
@@ -453,7 +494,7 @@ name "Zufallsgrößen!mittelwertfreie"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -491,7 +532,7 @@ Kann
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
  Aussagen auch wieder auf diskrete Zufallsgrößen anwendbar.
 \end_layout
@@ -502,8 +543,12 @@ Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!diskrete|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!diskrete|)
+\end_layout
 
 \end_inset
 
@@ -515,8 +560,12 @@ Kontinuierliche Zufallsgrößen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!kontinuierliche|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!kontinuierliche|(
+\end_layout
 
 \end_inset
 
@@ -532,7 +581,7 @@ Die Zufallsgröße
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei streng gesehen ein ganz konkreter Wert 
 \begin_inset Formula $x$
 \end_inset
@@ -551,7 +600,7 @@ Wobei streng gesehen ein ganz konkreter Wert
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -579,8 +628,12 @@ Die (jetzt) kontinuierliche Größe
 \end_inset
 
  gibt die Wahrscheinlichkeit
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeit
+\end_layout
 
 \end_inset
 
@@ -606,14 +659,22 @@ name "Wahrscheinlichkeit"
 \end_inset
 
  auch als Dichtefunktion
-\begin_inset LatexCommand index
-name "Dichtefunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Dichtefunktion
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeitsdichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeitsdichte
+\end_layout
 
 \end_inset
 
@@ -664,16 +725,24 @@ Wie bei den diskreten Zufallsgrößen muß die Wahrscheinlichkeit, daß
 \end_layout
 
 \begin_layout Standard
-Wegen der Notwendigkeit in Gleichung\InsetSpace ~
+Wegen der Notwendigkeit in Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous"
 
 \end_inset
 
  zu integrieren, wird oft die sogenannte Verteilungsfunktion
-\begin_inset LatexCommand index
-name "Verteilungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Verteilungsfunktion
+\end_layout
 
 \end_inset
 
@@ -682,7 +751,8 @@ name "Verteilungsfunktion"
 \end_inset
 
  angegeben.
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "F(x)"
 symbol "$F(x)$"
 description "Verteilungsfunktion der Zufallsgröße $X$"
@@ -747,13 +817,18 @@ Summe
 \begin_layout Standard
 Nach dem Hauptsatz der Differential- und Integralrechnung gilt für die Wahrschei
 nlichkeitsdichte
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeitsdichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeitsdichte
+\end_layout
 
 \end_inset
 
  im Umkehrschluß:
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "p(x)"
 symbol "$p(x)$"
 description "Wahrscheinlichkeitsdichte der Zufallsgröße $X$"
@@ -773,9 +848,13 @@ p(x)=\tdiff{F(x)}{x}\label{eq:prob_continuous_differential}\end{equation}
 \end_layout
 
 \begin_layout Standard
-Die Existenz des uneigentlichen Integrals in Definitionsgleichung\InsetSpace ~
+Die Existenz des uneigentlichen Integrals in Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_distribution"
 
 \end_inset
@@ -800,8 +879,12 @@ reference "eq:prob_distribution"
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset LatexCommand index
-name "Erwartungswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert
+\end_layout
 
 \end_inset
 
@@ -810,10 +893,14 @@ name "Erwartungswert"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
-Mit Hilfe von Gleichung\InsetSpace ~
+\begin_layout Plain Layout
+Mit Hilfe von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_differential"
 
 \end_inset
@@ -822,9 +909,13 @@ reference "eq:prob_continuous_differential"
 \noun on
 Stieltjes
 \noun default
--Integral darstellen\InsetSpace ~
+-Integral darstellen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,25"
 key "Gnedenko:1958"
 
@@ -856,7 +947,7 @@ In ähnlicher Art und Weise
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Erwartungswert, Varianz und alle weiteren Integrale der Form 
 \begin_inset Formula $\int x^{i}p(x)\tic x$
 \end_inset
@@ -874,16 +965,24 @@ Erwartungswert, Varianz und alle weiteren Integrale der Form
 
 \end_inset
 
- (und unter Berücksichtigung von Formel\InsetSpace ~
+ (und unter Berücksichtigung von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_unity"
 
 \end_inset
 
 ) ergibt sich für die Varianz
-\begin_inset LatexCommand index
-name "Varianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Varianz
+\end_layout
 
 \end_inset
 
@@ -944,13 +1043,18 @@ Umgekehrt gilt:
 \begin_layout Standard
 Für Zufallsgrößen mit verschwindendem Mittelwert ist die Varianz gleich
  dem Quadrat des Effektivwertes
-\begin_inset LatexCommand index
-name "Effektivwert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Effektivwert
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "X"
 symbol "$\\tilde{X}$"
 description "Effektivwert der Zufallsgröße $X$"
@@ -958,7 +1062,8 @@ description "Effektivwert der Zufallsgröße $X$"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "X2"
 symbol "$\\mean(X^{2})$"
 description "Quadratischer Effektivwert der Zufallsgröße $X$"
@@ -969,7 +1074,7 @@ description "Quadratischer Effektivwert der Zufallsgröße $X$"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
  Erwartungswert des Quadrats der Zufallsgröße 
 \begin_inset Formula $X$
@@ -1001,15 +1106,23 @@ Gleichverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Gleichverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Gleichverteilung
+\end_layout
 
 \end_inset
 
 Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
  Gleichverteilung
-\begin_inset LatexCommand index
-name "Gleichverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Gleichverteilung
+\end_layout
 
 \end_inset
 
@@ -1051,9 +1164,13 @@ p(x)=\left\{ \begin{array}{ll}
 \end_layout
 
 \begin_layout Standard
-Der Erwartungswert nach Formel\InsetSpace ~
+Der Erwartungswert nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_mean"
 
 \end_inset
@@ -1071,9 +1188,13 @@ reference "eq:prob_continuous_mean"
 \end_layout
 
 \begin_layout Standard
-Die Varianz ermittelt sich nach Formel\InsetSpace ~
+Die Varianz ermittelt sich nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_var"
 
 \end_inset
@@ -1093,8 +1214,12 @@ reference "eq:prob_continuous_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!kontinuierliche|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!kontinuierliche|)
+\end_layout
 
 \end_inset
 
@@ -1110,8 +1235,12 @@ Definition und Eigenschaften
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!mehrdimensionale|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!mehrdimensionale|(
+\end_layout
 
 \end_inset
 
@@ -1131,12 +1260,12 @@ Ein Vektor
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Eine Ereignisalgebra beschreibt die zu einem Vorgang 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1156,7 +1285,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1166,8 +1295,12 @@ resp
 \end_inset
 
  gemeinsame Verteilungsfunktion
-\begin_inset LatexCommand index
-name "Verteilungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Verteilungsfunktion
+\end_layout
 
 \end_inset
 
@@ -1176,7 +1309,8 @@ name "Verteilungsfunktion"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "FX(x)"
 symbol "$F_{X}(\\mvec{x})$"
 description "Verteilungsfunktion des Zufallsvektors $\\mvec{X}$"
@@ -1215,7 +1349,8 @@ itsdichte
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "pX(x)"
 symbol "$p_{X}(\\mvec{x})$"
 description "Wahrscheinlichkeitsdichte des Zufallsvektors $\\mvec{X}$"
@@ -1316,7 +1451,7 @@ Für
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1334,8 +1469,12 @@ ie
 \end_inset
 
  zu einer eindimensionalen Randverteilung
-\begin_inset LatexCommand index
-name "Randverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randverteilung
+\end_layout
 
 \end_inset
 
@@ -1355,7 +1494,7 @@ name "Randverteilung"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hier wird eine Ergebnis des Satzes von 
 \noun on
 Fubini
@@ -1389,8 +1528,12 @@ Partielle Differentiation der Randverteilung
 \end_inset
 
  führt zur (Rand-) Wahrscheinlichkeitsdichte
-\begin_inset LatexCommand index
-name "Randdichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randdichte
+\end_layout
 
 \end_inset
 
@@ -1447,8 +1590,12 @@ F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})\e
 \begin_layout Standard
 Grundvoraussetzung für diese Äquivalenz ist die Definition der bedingten
  Wahrscheinlichkeit
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeit!bedingte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeit!bedingte
+\end_layout
 
 \end_inset
 
@@ -1533,9 +1680,13 @@ Umgestellt nach
 
 \begin_layout Standard
 Mit dieser Formel wird auch anschaulich klar, weshalb die bedingte Wahrscheinlic
-hkeit genau so wie in Gleichung\InsetSpace ~
+hkeit genau so wie in Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_dependent_events"
 
 \end_inset
@@ -1565,7 +1716,7 @@ Besteht eine solche Abhängigkeit nicht, dann gilt
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1582,7 +1733,7 @@ resp
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Grundlagen der Kombinatorik, 
 \noun on
 Bool
@@ -1627,8 +1778,12 @@ Erwartungswert
 
 \begin_layout Standard
 Konsequent kann man auch die Definition des Erwartungswertes
-\begin_inset LatexCommand index
-name "Erwartungswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert
+\end_layout
 
 \end_inset
 
@@ -1637,9 +1792,13 @@ name "Erwartungswert"
 \end_inset
 
 -dimensionalen Zufallsgröße aus dem der eindimensionalen Größe ableiten,
- wenn man außerdem Gleichung\InsetSpace ~
+ wenn man außerdem Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_distribution_multi"
 
 \end_inset
@@ -1648,7 +1807,7 @@ reference "eq:prob_distribution_multi"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1657,9 +1816,13 @@ resp
 
 \end_inset
 
- den Ideenkreis um sie herum, berücksichtigt\InsetSpace ~
+ den Ideenkreis um sie herum, berücksichtigt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,25~ff."
 key "Gnedenko:1958"
 
@@ -1680,8 +1843,12 @@ key "Gnedenko:1958"
 \begin_layout Standard
 Man muß allerdings hinzufügen, daß es sich um den Erwartungswert der Randverteil
 ung
-\begin_inset LatexCommand index
-name "Randverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randverteilung
+\end_layout
 
 \end_inset
 
@@ -1717,9 +1884,13 @@ Die Varianz(en) einer
 \begin_inset Formula $n$
 \end_inset
 
--dimensionalen Zufallsgröße können aus der allgemeinen Definitionsgleichung\InsetSpace ~
+-dimensionalen Zufallsgröße können aus der allgemeinen Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_generic_var"
 
 \end_inset
@@ -1742,7 +1913,8 @@ Auch hier muß man hinzufügen, daß es sich um die Varianz einer Randverteilung
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_covariance_dependent"
 
 \end_inset
@@ -1761,8 +1933,12 @@ Sind
 
  zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
  die folgende Größe Kovarianz
-\begin_inset LatexCommand index
-name "Kovarianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kovarianz
+\end_layout
 
 \end_inset
 
@@ -1775,7 +1951,8 @@ und
 \end_inset
 
 .
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Cov()"
 symbol "$\\cov(X_{1},X_{2})$"
 description "Kovarianz der Zufallsgrößen $X_{1},X_{2}$"
@@ -1803,16 +1980,24 @@ Die Kovarianz
 \end_layout
 
 \begin_layout Itemize
-die Formeln\InsetSpace ~
+die Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_sum_mean"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_prd_mean"
 
 \end_inset
@@ -1821,7 +2006,7 @@ reference "eq:prob_prd_mean"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1881,8 +2066,12 @@ Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarian
 
 \begin_layout Standard
 Unter diesen Bedingungen spricht man auch von der Korrelation
-\begin_inset LatexCommand index
-name "Korrelation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Korrelation
+\end_layout
 
 \end_inset
 
@@ -1890,7 +2079,7 @@ name "Korrelation"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1899,16 +2088,24 @@ cf
 
 \end_inset
 
- Abschnitte\InsetSpace ~
+ Abschnitte
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_prd"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_process"
 
 \end_inset
@@ -1921,9 +2118,13 @@ Im Fall
 \begin_inset Formula $X=X_{1}=X_{2}$
 \end_inset
 
- entartet die Kovarianz zur Varianz (siehe Formel\InsetSpace ~
+ entartet die Kovarianz zur Varianz (siehe Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_var_rms"
 
 \end_inset
@@ -1986,9 +2187,13 @@ p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})\]
 \end_layout
 
 \begin_layout Standard
-und deshalb auch das Doppelintegral von Gleichung\InsetSpace ~
+und deshalb auch das Doppelintegral von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_cov_continuous"
 
 \end_inset
@@ -2026,7 +2231,7 @@ verschwinden aber beide Faktoren,
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2037,9 +2242,13 @@ ie
 
  die Kovarianz (und der Korrelationskoeffizient) unabhängiger Zufallsgrößen
  ist grundsätzlich Null.
- Aus Gleichung\InsetSpace ~
+ Aus Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_cov_shift"
 
 \end_inset
@@ -2071,14 +2280,22 @@ Für einen mehrdimensionalen Zufallsvektor
 \end_inset
 
  kann man eine sogenannte Varianz-Kovarianz-Matrix
-\begin_inset LatexCommand index
-name "Kovarianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kovarianz
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Varianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Varianz
+\end_layout
 
 \end_inset
 
@@ -2156,7 +2373,8 @@ und hat die Hauptdiagonalwerte
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_corr"
 
 \end_inset
@@ -2166,8 +2384,12 @@ Korrelationskoeffizient
 
 \begin_layout Standard
 Der Korrelationskoeffizient
-\begin_inset LatexCommand index
-name "Korrelationskoeffizient"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Korrelationskoeffizient
+\end_layout
 
 \end_inset
 
@@ -2175,7 +2397,7 @@ name "Korrelationskoeffizient"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In dieser Form wird 
 \begin_inset Formula $\corr(X_{1},X_{2})$
 \end_inset
@@ -2190,7 +2412,8 @@ Pearson
 \end_inset
 
 .
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Corr()"
 symbol "$\\corr(X_{1},X_{2})$"
 description "Korrelationskoeffizient der Zufallsgrößen $X_{1},X_{2}$"
@@ -2243,7 +2466,7 @@ Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhängig,
  umgekehrt ist die Aussage jedoch gültig.
 \end_layout
@@ -2259,16 +2482,24 @@ Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhäng
 
 \begin_layout Standard
 Für mittelwertfreie Zufallsgrößen reduzieren sich Kovarianz und Varianz
- entsprechend der Formeln\InsetSpace ~
+ entsprechend der Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_cov_zero_mean"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_var_mean_zero"
 
 \end_inset
@@ -2294,8 +2525,12 @@ reference "eq:prob_continuous_var_mean_zero"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsgrößen!mehrdimensionale|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!mehrdimensionale|)
+\end_layout
 
 \end_inset
 
@@ -2307,7 +2542,8 @@ Funktionen von Zufallsgrößen
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_transform_single"
 
 \end_inset
@@ -2335,7 +2571,7 @@ n (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2368,9 +2604,13 @@ Rosa);
 \end_layout
 
 \begin_layout Itemize
-oder die Bestimmung der Amplitudenverteilung analytischer Funktionen\InsetSpace ~
+oder die Bestimmung der Amplitudenverteilung analytischer Funktionen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.5"
 key "Schruefer:1990"
 
@@ -2396,7 +2636,7 @@ Als Modell soll die Transformation der Eingangsgröße
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2405,9 +2645,13 @@ cf
 
 \end_inset
 
- Abbildung\InsetSpace ~
+ Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_system_transform"
 
 \end_inset
@@ -2421,7 +2665,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename system.eps
@@ -2431,11 +2675,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:prob_system_transform"
 
 \end_inset
@@ -2483,7 +2728,7 @@ Die Wahrscheinlichkeitsdichte für
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
  Zuordnung von 
 \begin_inset Formula $X$
@@ -2499,7 +2744,7 @@ ungen mit einbeziehen (siehe
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2508,9 +2753,13 @@ ie
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_prd"
 
 \end_inset
@@ -2555,9 +2804,13 @@ reference "sec:prob_prd"
 \begin_inset Formula $Y$
 \end_inset
 
- (nach Abbildung\InsetSpace ~
+ (nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_function_transform"
 
 \end_inset
@@ -2605,7 +2858,7 @@ Durch die Streckung (Stauchung) des Intervalls
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2623,7 +2876,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename transform.eps
@@ -2633,11 +2886,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:prob_function_transform"
 
 \end_inset
@@ -2713,7 +2967,7 @@ ist der Zusammenhang zwischen den Verteilungsfunktionen
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2722,9 +2976,13 @@ resp
 
 \end_inset
 
- Anwendung von Definitionsgleichung\InsetSpace ~
+ Anwendung von Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_distribution"
 
 \end_inset
@@ -2751,7 +3009,7 @@ Da an der unteren Grenze immer
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Existiert 
 \begin_inset Formula $h(-\infty)$
 \end_inset
@@ -2760,7 +3018,7 @@ Existiert
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2804,23 +3062,29 @@ Die wesentliche Erkenntnis daraus ist, daß die Verteilungsfunktion direkt
 \begin_inset Formula $\left|f'(x)\right|$
 \end_inset
 
- transformiert wird\InsetSpace ~
+ transformiert wird
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "A.2.1.7.5"
 key "Birolini:1997"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5"
 key "Papoulis:2002"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.7.1"
 key "Spataru:1973"
 
@@ -2834,8 +3098,12 @@ Trigonometrische Übertragungsfunktion (bei Gleichverteilung)
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Gleichverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Gleichverteilung
+\end_layout
 
 \end_inset
 
@@ -2905,7 +3173,8 @@ p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{p_{X}(y/A)}{\left|A\right|}\mperiod\end{eq
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_transform_multiple"
 
 \end_inset
@@ -2962,7 +3231,8 @@ ergibt.
 \begin_layout Standard
 Setzen wir (der Kürze halber) sowohl bei Variablen als auch Funktionen Vektorsch
 reibweisen der Art
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "f-1(x)"
 symbol "$f^{(-1)}(x)$"
 description "Umkehrfunktion von $f(x)$"
@@ -2984,9 +3254,13 @@ description "Umkehrfunktion von $f(x)$"
 \begin_layout Standard
 ein, dann wird schon auf Symbolebene die Ähnlichkeit zum eindimensionalen
  Fall erkennbar.
- Aus diesem Grund wird hier der Ansatz der formalen Erweiterung von Gleichung\InsetSpace ~
+ Aus diesem Grund wird hier der Ansatz der formalen Erweiterung von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_single_differential"
 
 \end_inset
@@ -2999,10 +3273,14 @@ reference "eq:prob_transform_single_differential"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
-Auch Gleichung\InsetSpace ~
+\begin_layout Plain Layout
+Auch Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_single"
 
 \end_inset
@@ -3030,9 +3308,13 @@ p_{X}(\mvec{x})\tic x_{1}\tic x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\tic y_{1}\ti
 \end_layout
 
 \begin_layout Standard
-Dabei kann man sich weiterhin von der anschaulichen Darstellung in Abbildung\InsetSpace ~
+Dabei kann man sich weiterhin von der anschaulichen Darstellung in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_function_transform"
 
 \end_inset
@@ -3058,12 +3340,12 @@ Den Zusammenhang zwischen den Inhaltsmomenten
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Momente niedriger Ordnung sind 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3097,7 +3379,7 @@ eg
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Substitutionssatz für Mehrfach-Integrale: 
 \begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec J_{h}\right|\tic\mvec{z}$
 \end_inset
@@ -3111,7 +3393,7 @@ Substitutionssatz für Mehrfach-Integrale:
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3125,14 +3407,35 @@ resp
 Jacobi
 \noun default
 -Determinante
-\begin_inset LatexCommand index
-name "Funktionaldeterminante"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktionaldeterminante
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Jacobi-Determinante@\\noun{Jacobi}-Determinante"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jacobi-Determinante@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Jacobi}
+\end_layout
+
+\end_inset
+
+-Determinante
+\end_layout
 
 \end_inset
 
@@ -3181,7 +3484,7 @@ Jacobi
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3210,7 +3513,7 @@ tabvstretch
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3225,16 +3528,24 @@ tabvnormal
 \begin_layout Standard
 wobei wir die Betragszeichen sowohl als Kennzeichnung für eine Determinante
  als auch den echten Betrag des Ergebnisses werten wollen.
- Vergleicht man nun Formel\InsetSpace ~
+ Vergleicht man nun Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_density_differential"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_jacobian_det"
 
 \end_inset
@@ -3269,7 +3580,7 @@ Die ebenfalls interessante Verteilungsfunktion von
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3278,16 +3589,24 @@ eg
 
 \end_inset
 
- aus Definitionsgleichung\InsetSpace ~
+ aus Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_distribution_multi"
 
 \end_inset
 
- durch Einsetzen von Formel\InsetSpace ~
+ durch Einsetzen von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_density_differential"
 
 \end_inset
@@ -3296,7 +3615,7 @@ reference "eq:prob_transform_density_differential"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
  Addition aller Wahrscheinlichkeiten 
 \begin_inset Formula $p_{X}(x_{1},x_{2},\ldots,x_{n})$
@@ -3315,9 +3634,13 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,23"
 key "Gnedenko:1958"
 
@@ -3349,7 +3672,7 @@ Die Integrationsgrenzen ergeben sich dabei aus der Bedingung
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3366,9 +3689,13 @@ cf
 \end_layout
 
 \begin_layout Standard
-Auf der Grundlage von Formel\InsetSpace ~
+Auf der Grundlage von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_density_differential"
 
 \end_inset
@@ -3408,7 +3735,8 @@ Für den zweidimensionalen Spezialfall
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_sum"
 
 \end_inset
@@ -3421,20 +3749,32 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Summe von Zufallsgrößen|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Summe von Zufallsgrößen|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Zufallsgrößen!Summe von|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!Summe von|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeitsdichte!einer Summe"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeitsdichte!einer Summe
+\end_layout
 
 \end_inset
 
@@ -3455,9 +3795,13 @@ eine
 \begin_inset Formula $Y$
 \end_inset
 
- haben, müssen wir die (nach Gleichung\InsetSpace ~
+ haben, müssen wir die (nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_func_vectors"
 
 \end_inset
@@ -3505,7 +3849,7 @@ künstlich
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hilfreich ist natürlich die Wahl einer möglichst einfachen Funktion.
 \end_layout
 
@@ -3540,7 +3884,7 @@ und mit deren Hilfe die Funktionaldeterminante gewonnen.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3569,7 +3913,7 @@ tabvstretch
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3588,16 +3932,24 @@ Da in diesem Fall nur lineare Funktionen beteiligt sind, ist die Determinante
 \end_inset
 
  eine Konstante.
- Wir reduzieren sie (konform zu Abschnitt\InsetSpace ~
+ Wir reduzieren sie (konform zu Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_transform_multiple"
 
 \end_inset
 
-) auf ihren Absolutwert um dann Gleichung\InsetSpace ~
+) auf ihren Absolutwert um dann Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_density_multi"
 
 \end_inset
@@ -3631,7 +3983,7 @@ ausblenden
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3648,9 +4000,13 @@ ie
 \begin_inset Formula $Y_{1}$
 \end_inset
 
- (nach Formel\InsetSpace ~
+ (nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_density_dual"
 
 \end_inset
@@ -3685,7 +4041,7 @@ Die abschließende Substitution
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3718,7 +4074,7 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{X}\left(z,y-z\right)\tic z\label{eq:prob_cont
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dabei gehen wir von der gemeinsamen Dichtefunktion 
 \begin_inset Formula $p_{X}(x_{1},x_{2})$
 \end_inset
@@ -3731,7 +4087,7 @@ Dabei gehen wir von der gemeinsamen Dichtefunktion
 sdichte.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{xalignat*}{2}
 p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
@@ -3740,7 +4096,7 @@ p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\l
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wählt man nun willkürlich einen Wert 
 \begin_inset Formula $x_{1}$
 \end_inset
@@ -3788,7 +4144,7 @@ Sind
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3801,9 +4157,13 @@ ie
 \begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\, p_{2}(x_{2})$
 \end_inset
 
-, so vereinfacht sich Gleichung\InsetSpace ~
+, so vereinfacht sich Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_add_dep"
 
 \end_inset
@@ -3826,7 +4186,7 @@ er Zufallsgrößen also genau die Faltung
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Faltung zweier Funktionen: 
 \begin_inset Formula $(f_{1}*f_{2})(t)=\int_{-\infty}^{\infty}f_{1}(\tau)f_{2}(t-\tau)\tic\tau$
 \end_inset
@@ -3837,13 +4197,18 @@ Faltung zweier Funktionen:
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
  der einzelnen Dichtefunktionen.
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "*"
 symbol "$*$"
 description "Faltungs-Operator"
@@ -3880,7 +4245,8 @@ p_{Y}(y)=(p_{1}*p_{2}*p_{3}*\cdots*p_{n-1}*p_{n})\,(y)\mperiod\]
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_sum_mean"
 
 \end_inset
@@ -3889,8 +4255,12 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Erwartungswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert
+\end_layout
 
 \end_inset
 
@@ -3898,9 +4268,13 @@ Ausgangspunkt zur Bestimmung des Erwartungswertes der Zufallsgröße
 \begin_inset Formula $Y=X_{1}+X_{2}$
 \end_inset
 
- ist dessen Definitionsgleichung\InsetSpace ~
+ ist dessen Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_mean"
 
 \end_inset
@@ -3922,9 +4296,13 @@ Einsetzen der Wahrscheinlichkeitsdichte von
 \begin_inset Formula $Y$
 \end_inset
 
- entsprechend Formel\InsetSpace ~
+ entsprechend Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_add_dep"
 
 \end_inset
@@ -3945,16 +4323,24 @@ reference "eq:prob_continuous_add_dep"
 \end_layout
 
 \begin_layout Standard
-Die inneren Integrale in beiden Summanden stellen nach Gleichung\InsetSpace ~
+Die inneren Integrale in beiden Summanden stellen nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_density_dual"
 
 \end_inset
 
  aber genau die Randdichten
-\begin_inset LatexCommand index
-name "Randdichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Randdichte
+\end_layout
 
 \end_inset
 
@@ -3984,15 +4370,19 @@ Demzufolge ist der Erwartungswert der Summe zweier Zufallsgrößen unabhängig
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
 \end_layout
 
 \end_inset
 
- einfach die Summe der einzelnen Erwartungswerte\InsetSpace ~
+ einfach die Summe der einzelnen Erwartungswerte
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,27"
 key "Gnedenko:1958"
 
@@ -4015,15 +4405,23 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Varianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Varianz
+\end_layout
 
 \end_inset
 
 Die Varianz der Summe zweier (möglicherweise abhängiger) Zufallsgrößen kann
- nun ausgehend von Gleichung\InsetSpace ~
+ nun ausgehend von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_var_rms"
 
 \end_inset
@@ -4045,9 +4443,13 @@ reference "eq:prob_continuous_var_rms"
 \end_layout
 
 \begin_layout Standard
-Mit einem kleinen Rückgriff auf Abschnitt\InsetSpace ~
+Mit einem kleinen Rückgriff auf Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_covariance_dependent"
 
 \end_inset
@@ -4081,7 +4483,7 @@ Sind die Zufallsgrößen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4090,9 +4492,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_covariance_dependent"
 
 \end_inset
@@ -4114,21 +4520,33 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Effektivwert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Effektivwert
+\end_layout
 
 \end_inset
 
-Ausgehend von der Definition des Effektivwertes nach Gleichung\InsetSpace ~
+Ausgehend von der Definition des Effektivwertes nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_rms"
 
 \end_inset
 
- kann man hier Zwischenformel\InsetSpace ~
+ kann man hier Zwischenformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_sum_var_ext"
 
 \end_inset
@@ -4152,12 +4570,12 @@ Sind beide Zufallsgrößen sowohl unabhängig
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Verschwindende Kovarianz, 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4166,9 +4584,13 @@ ie
 
 \end_inset
 
- Gleichung\InsetSpace ~
+ Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_cov_zero_mean"
 
 \end_inset
@@ -4217,14 +4639,37 @@ Superposition bei Normalverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Normalverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Normalverteilung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Gauss-Verteilung@\\noun{Gau\\ss}-Verteilung"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Gauss-Verteilung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Gau{
+\backslash
+ss}}
+\end_layout
+
+\end_inset
+
+-Verteilung
+\end_layout
 
 \end_inset
 
@@ -4240,7 +4685,7 @@ Zwei unabhängige Zufallsgrößen
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Gauß
@@ -4249,7 +4694,7 @@ Gauß
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4259,8 +4704,12 @@ resp
 \end_inset
 
  Glockenkurve
-\begin_inset LatexCommand index
-name "Glockenkurve"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Glockenkurve
+\end_layout
 
 \end_inset
 
@@ -4278,21 +4727,24 @@ name "Glockenkurve"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\mu$"
 description "Erwartungswert der Normalverteilung"
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\cnorm(x)$"
 description "Standard-Normalverteilung"
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\sigma^{2}$"
 description "Varianz der Normalverteilung"
 
@@ -4316,9 +4768,13 @@ und additiv überlagert.
 \begin_inset Formula $p_{Y}(y)$
 \end_inset
 
- kann dann durch Anwendung der Faltungsformel\InsetSpace ~
+ kann dann durch Anwendung der Faltungsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_convolution"
 
 \end_inset
@@ -4334,7 +4790,8 @@ Fourier
 \end_inset
 
  in den Bildbereich transformiert
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\expf$"
 description "\\noun{Euler}'sche Zahl"
 
@@ -4396,18 +4853,26 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
- allgemeingültigen Gleichungen\InsetSpace ~
+ allgemeingültigen Gleichungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_sum_mean"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_sum_var"
 
 \end_inset
@@ -4429,14 +4894,22 @@ reference "eq:prob_sum_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Summe von Zufallsgrößen|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Summe von Zufallsgrößen|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Zufallsgrößen!Summe von|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!Summe von|)
+\end_layout
 
 \end_inset
 
@@ -4444,7 +4917,8 @@ name "Zufallsgrößen!Summe von|)"
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_prd"
 
 \end_inset
@@ -4457,20 +4931,32 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Wahrscheinlichkeitsdichte!eines Produkts"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wahrscheinlichkeitsdichte!eines Produkts
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Zufallsgrößen!Produkt von|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!Produkt von|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Produkt von Zufallsgrößen|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Produkt von Zufallsgrößen|(
+\end_layout
 
 \end_inset
 
@@ -4536,7 +5022,7 @@ Auch diesmal ermitteln wir zuerst die Umkehrfunktionen
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Den Verlust der halben (differentiellen) Wahrscheinlichkeit durch die 
 \begin_inset Quotes eld
 \end_inset
@@ -4571,7 +5057,7 @@ Den Absolutwert der zugehörigen Funktionaldeterminante
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4600,7 +5086,7 @@ tabvstretch
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4613,9 +5099,13 @@ tabvnormal
 \end_layout
 
 \begin_layout Standard
-wenden wir wieder auf Gleichung\InsetSpace ~
+wenden wir wieder auf Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_transform_density_multi"
 
 \end_inset
@@ -4625,7 +5115,7 @@ reference "eq:prob_transform_density_multi"
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Einleuchtende Erklärung notwendig
 \end_layout
 
@@ -4660,7 +5150,7 @@ ausblenden
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4707,7 +5197,7 @@ Die abschließende Substitution
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4769,7 +5259,7 @@ on (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4812,10 +5302,14 @@ p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\tic z\mperiod\label{eq:pr
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Ähnlich wie in Abschnitt\InsetSpace ~
+\begin_layout Plain Layout
+Ähnlich wie in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_sum"
 
 \end_inset
@@ -4835,7 +5329,7 @@ reference "sec:prob_sum"
  ausgegangen.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{xalignat*}{2}
 p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
 
@@ -4844,7 +5338,7 @@ p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\l
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für einen willkürlich gewählten Wert 
 \begin_inset Formula $x_{1}$
 \end_inset
@@ -4879,7 +5373,7 @@ Für einen willkürlich gewählten Wert
  Als Dichtefunktion für das Produkt ergibt sich damit:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 p_{X}(x)\,\tdc x=p_{Y}(y)\,\tdc y\]
 
@@ -4906,7 +5400,7 @@ Sind
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4919,9 +5413,13 @@ ie
 \begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})$
 \end_inset
 
-, so vereinfacht sich Formel\InsetSpace ~
+, so vereinfacht sich Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_prd"
 
 \end_inset
@@ -4943,8 +5441,12 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Erwartungswert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert
+\end_layout
 
 \end_inset
 
@@ -4952,9 +5454,13 @@ Den Erwartungswert von
 \begin_inset Formula $Y$
 \end_inset
 
- kann man nach der Formel\InsetSpace ~
+ kann man nach der Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_mean_func_dual"
 
 \end_inset
@@ -4993,7 +5499,7 @@ unabhängig
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5038,8 +5544,12 @@ Verschwindet der Erwartungswert des Produkts sogar überall, also gilt
 \end_inset
 
 , dann werden die beiden Zufallsgrößen als orthogonal
-\begin_inset LatexCommand index
-name "Zufallsgrößen!orthogonale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!orthogonale
+\end_layout
 
 \end_inset
 
@@ -5051,29 +5561,45 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Varianz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Varianz
+\end_layout
 
 \end_inset
 
-Einsetzen von Gleichung\InsetSpace ~
+Einsetzen von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_prd"
 
 \end_inset
 
- in die Definitionsgleichung der Varianz (Formel\InsetSpace ~
+ in die Definitionsgleichung der Varianz (Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_var"
 
 \end_inset
 
 ) führt auch hier schnell zum Ergebnis.
- Außerdem wird die im vorigen Abschnitt abgeleitete Gleichung\InsetSpace ~
+ Außerdem wird die im vorigen Abschnitt abgeleitete Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_prd_mean"
 
 \end_inset
@@ -5102,8 +5628,12 @@ reference "eq:prob_prd_mean"
 
 \begin_layout Standard
 Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
-\begin_inset LatexCommand index
-name "Zufallsgrößen!mittelwertfreie"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!mittelwertfreie
+\end_layout
 
 \end_inset
 
@@ -5124,28 +5654,44 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Effektivwert"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Effektivwert
+\end_layout
 
 \end_inset
 
-Ausgehend von Gleichung\InsetSpace ~
+Ausgehend von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_rms"
 
 \end_inset
 
- kann der Effektivwert sofort angegeben werden, wenn man die Formeln\InsetSpace ~
+ kann der Effektivwert sofort angegeben werden, wenn man die Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_prd_mean"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_prd_var"
 
 \end_inset
@@ -5181,14 +5727,22 @@ Für den Effektivwert des Produkts
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Produkt von Zufallsgrößen|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Produkt von Zufallsgrößen|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Zufallsgrößen!Produkt von|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsgrößen!Produkt von|)
+\end_layout
 
 \end_inset
 
@@ -5196,7 +5750,8 @@ name "Zufallsgrößen!Produkt von|)"
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_process"
 
 \end_inset
@@ -5209,8 +5764,12 @@ Einführung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsprozesse|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsprozesse|(
+\end_layout
 
 \end_inset
 
@@ -5247,7 +5806,7 @@ ergodische
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
 \end_layout
 
@@ -5257,7 +5816,7 @@ Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5278,9 +5837,13 @@ einer
 \begin_inset Formula $X(t)$
 \end_inset
 
-, über die Zeit betrachtet, übereinstimmen müssen\InsetSpace ~
+, über die Zeit betrachtet, übereinstimmen müssen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958"
 
 \end_inset
@@ -5300,7 +5863,8 @@ key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958"
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:prob_acf"
 
 \end_inset
@@ -5353,7 +5917,7 @@ ktors
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5392,18 +5956,26 @@ resp
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
- (Abschnitt\InsetSpace ~
+ (Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_prd"
 
 \end_inset
 
-) sowie der Kovarianz mittelwertfreier Zufallsgrößen (Abschnitt\InsetSpace ~
+) sowie der Kovarianz mittelwertfreier Zufallsgrößen (Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_covariance_dependent"
 
 \end_inset
@@ -5414,8 +5986,12 @@ reference "sec:prob_covariance_dependent"
 \end_inset
 
  und bezeichnen sie als Korrelation
-\begin_inset LatexCommand index
-name "Korrelation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Korrelation
+\end_layout
 
 \end_inset
 
@@ -5436,9 +6012,13 @@ r(X_{1},X_{2})=\mean(X_{1}X_{2})\]
 \end_layout
 
 \begin_layout Standard
-Gleichbedeutend ist auch der folgende Ausdruck, wenn man Formel\InsetSpace ~
+Gleichbedeutend ist auch der folgende Ausdruck, wenn man Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_cov_shift"
 
 \end_inset
@@ -5488,8 +6068,12 @@ Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
 \end_inset
 
  keine Bedeutung hat -- und definieren die sogenannte Autokorrelationsfunktion
-\begin_inset LatexCommand index
-name "Autokorrelationsunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Autokorrelationsunktion
+\end_layout
 
 \end_inset
 
@@ -5498,7 +6082,8 @@ name "Autokorrelationsunktion"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\acf_{xx}$"
 description "Autokorrelationsfunktion des Zufallsprozesses $\\mvec{X}(t)$"
 
@@ -5529,7 +6114,7 @@ Für eine kontinuierliche Realisierung
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5538,9 +6123,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_prd"
 
 \end_inset
@@ -5568,7 +6157,8 @@ Für ergodische Prozesse nimmt man nun zusätzlich noch an, daß der Erwartungsw
 \end_inset
 
  als (Selbst-) Ähnlichkeitsmaß folgendermaßen bestimmt werden kann.
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "x(t)"
 symbol "$\\avg{x(t)}$"
 description "Zeit-Mittelwert des Zufallssignals $x(t)$"
@@ -5593,7 +6183,8 @@ Die dadurch definierte Autokorrelationsfunktion (AKF) hat folgende Eigenschaften
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "enu:prob_acf_even"
 
 \end_inset
@@ -5606,7 +6197,7 @@ Die AKF ist bezüglich
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5635,7 +6226,8 @@ ie
 
 \end_deeper
 \begin_layout Enumerate
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "enu:prob_acf_zero"
 
 \end_inset
@@ -5648,7 +6240,7 @@ Für
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5697,8 +6289,12 @@ Ist
 \end_inset
 
  aber ein determiniertes Energiesignal
-\begin_inset LatexCommand index
-name "Energiesignale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Energiesignale
+\end_layout
 
 \end_inset
 
@@ -5711,7 +6307,7 @@ en Größen) geringfügig modifiziert
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ansonsten würde wegen der Division durch 
 \begin_inset Formula $T$
 \end_inset
@@ -5726,7 +6322,8 @@ Ansonsten würde wegen der Division durch
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\acf^{(E)}_{xx}$"
 description "Autokorrelationsfunktion des Energiesignals $x(t)$"
 
@@ -5787,9 +6384,13 @@ gilt.
 
 \end_deeper
 \begin_layout Enumerate
-Wegen Punkt\InsetSpace ~
+Wegen Punkt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "enu:prob_acf_zero"
 
 \end_inset
@@ -5798,14 +6399,31 @@ reference "enu:prob_acf_zero"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hintergrund ist die 
 \noun on
 Cauchy-Schwarz
 \noun default
 'sche Ungleichung
-\begin_inset LatexCommand index
-name "Cauchy-Schwarz Ungleichung@\\noun{Cauchy-Schwarz}'sche Ungleichung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy-Schwarz Ungleichung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy-Schwarz}
+\end_layout
+
+\end_inset
+
+'sche Ungleichung
+\end_layout
 
 \end_inset
 
@@ -5826,7 +6444,7 @@ name "Cauchy-Schwarz Ungleichung@\\noun{Cauchy-Schwarz}'sche Ungleichung"
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{eqnarray*}
 \left[\int_{a}^{b}f(x)\, g(x)\tic x\right]^{2} & \leq & \int_{a}^{b}f^{2}(x)\tic x\,\int_{a}^{b}g^{2}(x)\tic x,\qquad x\in\mathbb{R}\\
 \left|\int_{a}^{b}f(z)\,\cjgt[g]{z}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}\end{eqnarray*}
@@ -5842,16 +6460,24 @@ status open
 \end_layout
 
 \begin_layout Enumerate
-Aus Eigenschaft\InsetSpace ~
+Aus Eigenschaft
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "enu:prob_acf_even"
 
 \end_inset
 
  ergibt sich die Ausdrucksmöglichkeit der AKF als Faltung
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
@@ -5884,7 +6510,7 @@ Für (determinierte) Energiesignale entfällt der Limes,
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -5902,7 +6528,8 @@ Energie-AKF
 \end_inset
 
  ist ganz einfach die Faltung
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "x(-t)"
 symbol "$\\cjgt[x]{t}$"
 description "Konjugierte Funktion $x(-t)$ im Zeitbereich"
@@ -5941,8 +6568,12 @@ zwei
 \end_inset
 
  durch ein Ähnlichkeitsmaß erklären, welches Kreuzkorrelationsfunktion
-\begin_inset LatexCommand index
-name "Kreuzkorrelationsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kreuzkorrelationsfunktion
+\end_layout
 
 \end_inset
 
@@ -5951,7 +6582,8 @@ name "Kreuzkorrelationsfunktion"
 \end_inset
 
  genannt wird.
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\acf_{xy}$"
 description "Kreuzkorrelationsfunktion der Zufallsprozesse $\\mvec{X}(t),\\mvec{Y}(t)$"
 
@@ -5992,16 +6624,24 @@ Verschwindet die Kreuzkorrelationsfunktion für jedes
 
 \begin_layout Standard
 Für Energiesignale existiert wieder eine abgewandelte Form (ohne Limes)
- von Gleichung\InsetSpace ~
+ von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_ccf_def"
 
 \end_inset
 
 , die auch als Faltung
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
@@ -6022,8 +6662,12 @@ Spektrale Leistungsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Leistungsdichte!Spektrale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Leistungsdichte!Spektrale
+\end_layout
 
 \end_inset
 
@@ -6032,7 +6676,7 @@ n, der allerdings eher eine Notationsfrage
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Fourier
@@ -6053,7 +6697,7 @@ en, ergodischen Zufallsprozesses, also nach infinitesimalen Leistungsanteilen
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6071,9 +6715,13 @@ resp
 \end_inset
 
  zugeordnet ist.
- Von Gleichung\InsetSpace ~
+ Von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_zero"
 
 \end_inset
@@ -6149,8 +6797,25 @@ muß für die Existenz von
 Dirac
 \noun default
 -Funktion
-\begin_inset LatexCommand index
-name "Dirac-Funktion@\\noun{Dirac}-Funktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Dirac-Funktion@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Dirac}
+\end_layout
+
+\end_inset
+
+-Funktion
+\end_layout
 
 \end_inset
 
@@ -6180,9 +6845,13 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-und ersetzen mit Hilfe von Formel\InsetSpace ~
+und ersetzen mit Hilfe von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_def"
 
 \end_inset
@@ -6213,7 +6882,7 @@ Nun wird die Integrationsreihenfolge vertauscht und danach
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei die Integrationsgrenzen 
 \begin_inset Formula $\pm T$
 \end_inset
@@ -6264,7 +6933,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6281,7 +6950,7 @@ resp
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man kann sich auch vorstellen, daß 
 \begin_inset Formula $\left|X(\ji\omega)\right|^{2}$
 \end_inset
@@ -6317,7 +6986,8 @@ Man nennt den so gewonnen Ausdruck die spektrale Leistungsdichte
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Sxx"
 symbol "$\\spd_{xx}$"
 description "Spektrale Leistungsdichte des Zufallsprozesses $\\mvec{X}(t)$"
@@ -6328,7 +6998,7 @@ description "Spektrale Leistungsdichte des Zufallsprozesses $\\mvec{X}(t)$"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6346,15 +7016,36 @@ Wiener
 Chintchin
 \noun default
 -Theorem
-\begin_inset LatexCommand index
-name "Wiener-Chintchin-Theorem@\\noun{Wiener-Chintchin}-Theorem"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wiener-Chintchin-Theorem@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Wiener-Chintchin}
+\end_layout
+
+\end_inset
+
+-Theorem
+\end_layout
 
 \end_inset
 
 .
- Interessant ist auch, daß sich diese Gleichung\InsetSpace ~
+ Interessant ist auch, daß sich diese Gleichung
+\begin_inset space ~
+\end_inset
+
 (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
@@ -6363,7 +7054,7 @@ reference "eq:prob_psd_wiener_chintchin"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $(f*g)(t)\lft F(\ji\omega)\, G(\ji\omega)$
 \end_inset
 
@@ -6373,15 +7064,23 @@ status open
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Faltungssatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltungssatz
+\end_layout
 
 \end_inset
 
  der Fourier-Transformation auf die Form der Autokorrelationsfunktion von
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_conv"
 
 \end_inset
@@ -6428,7 +7127,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6468,7 +7167,7 @@ Da (schon) die Autokorrelationsfunktion eine gerade Funktion ist, muß die
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Insbesondere gehen alle Phaseninformationen, die in 
 \begin_inset Formula $X(\ji\omega)$
 \end_inset
@@ -6490,7 +7189,8 @@ verloren
 \end_layout
 
 \begin_layout Enumerate
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "enu:prob_psd_power"
 
 \end_inset
@@ -6536,9 +7236,13 @@ P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\
 
 \end_deeper
 \begin_layout Enumerate
-Nach Punkt\InsetSpace ~
+Nach Punkt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "enu:prob_psd_power"
 
 \end_inset
@@ -6552,7 +7256,7 @@ reference "enu:prob_psd_power"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\tdiff{}{x}\int_{a}^{x}f(\xi)\tic\xi=f(x)$
 \end_inset
 
@@ -6581,8 +7285,12 @@ Weißes Rauschen
 
 \begin_layout Standard
 Weißes Rauschen
-\begin_inset LatexCommand index
-name "Rauschen!Weißes"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Rauschen!Weißes
+\end_layout
 
 \end_inset
 
@@ -6598,7 +7306,7 @@ name "Rauschen!Weißes"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Deshalb auch 
 \emph on
 weißes
@@ -6648,29 +7356,42 @@ Spektrale Energiedichte
 \end_layout
 
 \begin_layout Standard
-Bei Anwendung der modifizierten Formel\InsetSpace ~
+Bei Anwendung der modifizierten Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_energy_signals"
 
 \end_inset
 
  für die Autokorrelationsfunktion von Energiesignalen entfällt der Limes
- in Gleichung\InsetSpace ~
+ in Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
 
  und man erhält für die spektrale Energiedichte
-\begin_inset LatexCommand index
-name "Energiedichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Energiedichte
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "SxxE"
 symbol "$\\spd_{xx}^{(E)}$"
 description "Spektrale Energiedichte des Signals $x(t)$"
@@ -6734,8 +7455,12 @@ Kreuzleistungs- und Energiedichten
 \begin_layout Standard
 Eine Verallgemeinerung zur spektralen Leistungsdichte (eines Zufallssignals)
  stellt die Kreuzleistungsdichte
-\begin_inset LatexCommand index
-name "Leistungsdichte!Kreuz-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Leistungsdichte!Kreuz-
+\end_layout
 
 \end_inset
 
@@ -6753,7 +7478,8 @@ name "Leistungsdichte!Kreuz-"
 \end_inset
 
  im Frequenzbereich und ist als
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Sxy"
 symbol "$\\spd_{xy}$"
 description "Spektrale Kreuzleistungsdichte der Zufallsprozesse $\\mvec{X}(t),\\mvec{Y}(t)$"
@@ -6761,7 +7487,8 @@ description "Spektrale Kreuzleistungsdichte der Zufallsprozesse $\\mvec{X}(t),\\
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "X(-jomega)"
 symbol "$\\cjgt[X]{\\ji\\omega}$"
 description "Konjugiert komplexe Funktion $X(-\\ji\\omega)$ im Bildbereich"
@@ -6807,7 +7534,7 @@ Fourier
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Wiener
@@ -6822,8 +7549,12 @@ Chintchin
 \end_inset
 
 , nämlich der Kreuzkorrelationsfunktion
-\begin_inset LatexCommand index
-name "Kreuzkorrelationsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kreuzkorrelationsfunktion
+\end_layout
 
 \end_inset
 
@@ -6839,7 +7570,7 @@ name "Kreuzkorrelationsfunktion"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -6848,9 +7579,13 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_ccf_def"
 
 \end_inset
@@ -6873,8 +7608,12 @@ Für Energiesignale (
 \end_inset
 
 ) ist die Kreuzenergiedichte
-\begin_inset LatexCommand index
-name "Kreuzenergiedichte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kreuzenergiedichte
+\end_layout
 
 \end_inset
 
@@ -6892,8 +7631,12 @@ name "Kreuzenergiedichte"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Zufallsprozesse|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Zufallsprozesse|)
+\end_layout
 
 \end_inset
 
@@ -6909,15 +7652,23 @@ LTI-Systeme
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-Systeme"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-Systeme
+\end_layout
 
 \end_inset
 
 Bei den aus der Systemtheorie her bekannten linearen zeitinvarianten (LTI)
- Systemen (der Art von Abbildung\InsetSpace ~
+ Systemen (der Art von Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_system_transform"
 
 \end_inset
@@ -6939,7 +7690,7 @@ reference "fig:prob_system_transform"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7080,9 +7831,13 @@ so erhält man auf der Grundlage des
 \noun on
 Wiener-Chintchin
 \noun default
--Theorems (Gleichung\InsetSpace ~
+-Theorems (Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_psd_wiener_chintchin"
 
 \end_inset
@@ -7137,7 +7892,8 @@ Bedenkt man noch, daß die Übertragungsfunktion eines LTI-Systems gleichzeitig
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "h(t)"
 symbol "$\\irf(t)$"
 description "Impulsantwort"
@@ -7165,16 +7921,24 @@ und immer die Beziehung
 \noun on
 Fourier
 \noun default
--Transformation) Gleichung\InsetSpace ~
+-Transformation) Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_lti_time_domain"
 
 \end_inset
 
  als zweifache Faltung
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
@@ -7199,9 +7963,13 @@ Faßt man der Übersichtlichkeit halber noch
 \begin_inset Formula $\acf_{\trf}^{(E)}(\tau)$
 \end_inset
 
- eines stabilen LTI-Systems nach Gleichung\InsetSpace ~
+ eines stabilen LTI-Systems nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_energy_signals"
 
 \end_inset
@@ -7224,8 +7992,25 @@ so erhält man die
 Wiener-Lee
 \noun default
 -Beziehung
-\begin_inset LatexCommand index
-name "Wiener-Lee-Beziehung@\\noun{Wiener-Lee}-Beziehung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Wiener-Lee-Beziehung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Wiener-Lee}
+\end_layout
+
+\end_inset
+
+-Beziehung
+\end_layout
 
 \end_inset
 
@@ -7251,8 +8036,12 @@ Sind
 \end_inset
 
  Signale mit endlicher Energie
-\begin_inset LatexCommand index
-name "Energiesignale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Energiesignale
+\end_layout
 
 \end_inset
 
@@ -7264,7 +8053,7 @@ name "Energiesignale"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7273,9 +8062,13 @@ eg
 
 \end_inset
 
- aus Formel\InsetSpace ~
+ aus Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_lti_frequency_domain"
 
 \end_inset
@@ -7302,28 +8095,44 @@ Optimalfilter
 
 \begin_layout Standard
 Optimalfilter
-\begin_inset LatexCommand index
-name "Optimalfilter"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Optimalfilter
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Matched Filter"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Matched Filter
+\end_layout
 
 \end_inset
 
  sind (LTI-) Systeme
-\begin_inset LatexCommand index
-name "LTI-Systeme"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-Systeme
+\end_layout
 
 \end_inset
 
 , die eine (angepaßte) Übertragungsfunktion derart besitzen, daß ein additiv
  gestörtes Nutzsignal möglichst sicher zu detektieren ist.
- Nach dem Modell in Abbildung\InsetSpace ~
+ Nach dem Modell in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_optimal_filter"
 
 \end_inset
@@ -7341,8 +8150,12 @@ reference "fig:prob_optimal_filter"
 \end_inset
 
  weißes Rauschen
-\begin_inset LatexCommand index
-name "Rauschen!Weißes"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Rauschen!Weißes
+\end_layout
 
 \end_inset
 
@@ -7359,7 +8172,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename optimal.eps
@@ -7371,11 +8184,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:prob_optimal_filter"
 
 \end_inset
@@ -7403,16 +8217,24 @@ Das Optimierungsproblem besteht nun darin, zum Abtastzeitpunkt
 \end_inset
 
  zur Rauschleisung am Ausgang zu maximieren.
- Dabei ist (nach Formel\InsetSpace ~
+ Dabei ist (nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_zero"
 
 \end_inset
 
-, Abschnitt\InsetSpace ~
+, Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_acf"
 
 \end_inset
@@ -7438,13 +8260,13 @@ Zuerst
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bei LTI-Systemen kann man vom Superpositionsprinzip von Nutz- und Störsignal
  ausgehen, 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7463,8 +8285,12 @@ ie
 \end_inset
 
  durch die (für LTI-Systeme typische) Faltung
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
@@ -7493,7 +8319,7 @@ Die Rauschleistung kann
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7502,14 +8328,21 @@ eg
 
 \end_inset
 
- ermittelt werden, indem man ausgehend von Formel\InsetSpace ~
+ ermittelt werden, indem man ausgehend von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_lti_time_conv"
 
 \end_inset
 
-\InsetSpace ~
+
+\begin_inset space ~
+\end_inset
+
 ff.
  
 \begin_inset Formula $\acf_{yy}(\tau)$
@@ -7522,8 +8355,12 @@ ff.
 \end_inset
 
  das Ausblendtheorem
-\begin_inset LatexCommand index
-name "Ausblendtheorem"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Ausblendtheorem
+\end_layout
 
 \end_inset
 
@@ -7532,8 +8369,25 @@ name "Ausblendtheorem"
 Dirac
 \noun default
 -Funktion
-\begin_inset LatexCommand index
-name "Dirac-Funktion@\\noun{Dirac}-Funktion"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Dirac-Funktion@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Dirac}
+\end_layout
+
+\end_inset
+
+-Funktion
+\end_layout
 
 \end_inset
 
@@ -7542,7 +8396,8 @@ name "Dirac-Funktion@\\noun{Dirac}-Funktion"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\dirac(t)$"
 description "\\noun{Dirac}-Funktion"
 
@@ -7601,21 +8456,33 @@ und erweitern den Bruch noch um
 \begin_layout Standard
 Etwas umsortiert (und gesichtet) ist festzustellen, daß hier der Korrelationskoe
 ffizient
-\begin_inset LatexCommand index
-name "Korrelationskoeffizient"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Korrelationskoeffizient
+\end_layout
 
 \end_inset
 
- nach Formel\InsetSpace ~
+ nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_corr_mean_zero"
 
 \end_inset
 
  in der zeitlichen Form für Energiesignale
-\begin_inset LatexCommand index
-name "Energiesignale"
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Energiesignale
+\end_layout
 
 \end_inset
 
@@ -7653,16 +8520,24 @@ zwischen
 \end_layout
 
 \begin_layout Standard
-Wie wir aus Abschnitt\InsetSpace ~
+Wie wir aus Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:prob_corr"
 
 \end_inset
 
  wissen, ist der Korrelationskoeffizient
-\begin_inset LatexCommand index
-name "Korrelationskoeffizient"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Korrelationskoeffizient
+\end_layout
 
 \end_inset
 
@@ -7693,14 +8568,18 @@ Für das Nutzsignal ergeben sich folgerichtig die Beziehungen
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Das Nutzsignal 
 \begin_inset Formula $y(t)$
 \end_inset
 
- stellt im Sinne von Formel\InsetSpace ~
+ stellt im Sinne von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_acf_conv"
 
 \end_inset
@@ -7761,14 +8640,22 @@ Quantisierungsrauschen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Quantisierungsrauschen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Quantisierungsrauschen
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Quantisierung!Rauschen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Quantisierung!Rauschen
+\end_layout
 
 \end_inset
 
@@ -7782,21 +8669,30 @@ Die Wandlung eines zeitkontinuierlichen Eingangssignals
 
  ist ein Vorgang, der üblicherweise aus den Schritten: Abtasten und Quantisierun
 g
-\begin_inset LatexCommand index
-name "Quantisierung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Quantisierung
+\end_layout
 
 \end_inset
 
- besteht\InsetSpace ~
+ besteht
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.7"
 key "Azizi:1990"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "1.7.4"
 key "Embree:1991"
 
@@ -7814,7 +8710,7 @@ key "Embree:1991"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7823,9 +8719,13 @@ cf
 
 \end_inset
 
- Abbildung\InsetSpace ~
+ Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_quant_linear"
 
 \end_inset
@@ -7839,7 +8739,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename quantsteps.eps
@@ -7849,11 +8749,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:prob_quant_linear"
 
 \end_inset
@@ -7884,7 +8785,7 @@ Für stationäre ergodische Prozesse ist die Betrachtung von
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Statt 
 \begin_inset Formula $n(t)=f(t)-q(t)$
 \end_inset
@@ -7893,7 +8794,7 @@ Statt
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7924,12 +8825,12 @@ resp
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wir betrachten hier nur linearer Quantisierung, 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7961,8 +8862,12 @@ ie
 
  -- und zwar mit gleicher Wahrscheinlichkeit -- quantisiert.
  Dadurch ist der Fehler
-\begin_inset LatexCommand index
-name "Quantisierung!Fehler"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Quantisierung!Fehler
+\end_layout
 
 \end_inset
 
@@ -7975,8 +8880,12 @@ name "Quantisierung!Fehler"
 \end_inset
 
  gleichverteilt
-\begin_inset LatexCommand index
-name "Gleichverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Gleichverteilung
+\end_layout
 
 \end_inset
 
@@ -7988,7 +8897,7 @@ name "Gleichverteilung"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -7997,31 +8906,47 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_equal_distribution"
 
 \end_inset
 
 ).
- Der Effektivwert des Quantisierungsrauschens kann nun ausgehend von Gleichung\InsetSpace ~
+ Der Effektivwert des Quantisierungsrauschens kann nun ausgehend von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_rms"
 
 \end_inset
 
-, mit Hilfe der für die Gleichverteilung gültigen Formeln\InsetSpace ~
+, mit Hilfe der für die Gleichverteilung gültigen Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_equal_mean"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_equal_var"
 
 \end_inset
@@ -8036,9 +8961,13 @@ reference "eq:prob_equal_var"
 \end_inset
 
 ) fällt sofort auf, daß der Mittelwert verschwindet und sich die Effektivwertfor
-mel\InsetSpace ~
+mel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_continuous_rms"
 
 \end_inset
@@ -8067,7 +8996,7 @@ In der Theorie ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei in 
 \begin_inset Formula $B$
 \end_inset
@@ -8105,13 +9034,18 @@ Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR)
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Signal-Rausch-Abstand (SNR)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signal-Rausch-Abstand (SNR)
+\end_layout
 
 \end_inset
 
 Die SNR
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "SNR"
 symbol "SNR"
 description "Signal-Noise-Ratio (Signal-Rausch-Abstand)"
@@ -8138,8 +9072,12 @@ Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
 \end_inset
 
  und des Quantisierungsrauschens
-\begin_inset LatexCommand index
-name "Quantisierungsrauschen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Quantisierungsrauschen
+\end_layout
 
 \end_inset
 
@@ -8168,12 +9106,12 @@ Bei einem sinusförmigen Nutzsignal
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der durch den A/D-Wandler verzerrungsfrei, 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8192,9 +9130,13 @@ ie
 \end_inset
 
  anzusetzen.
- Durch Anwendung der Gleichung\InsetSpace ~
+ Durch Anwendung der Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_noise_magnitude_bits"
 
 \end_inset
@@ -8224,7 +9166,7 @@ Wesentlich ist die Erkenntnis, daß bei einer Erhöhung der Auflösung des
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Selbst wenn man andere Signalformen zugrunde legt, ändert sich dieser Fakt
  nicht.
 \end_layout
@@ -8239,8 +9181,12 @@ Pulsbreitendiskriminierung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Pulsbreitendiskriminierung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pulsbreitendiskriminierung
+\end_layout
 
 \end_inset
 
@@ -8262,7 +9208,7 @@ Oft besteht die Forderung zwischen zwei Impulsen verschiedener Breite
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8271,9 +9217,13 @@ cf
 
 \end_inset
 
- Abbildung\InsetSpace ~
+ Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:prob_pulse_discrimination"
 
 \end_inset
@@ -8299,7 +9249,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename discrimi.eps
@@ -8309,11 +9259,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:prob_pulse_discrimination"
 
 \end_inset
@@ -8333,8 +9284,12 @@ Pulsbreitendiskriminierung
 
 \begin_layout Standard
 Geht man davon aus, daß die Impulsbreiten normalverteilt
-\begin_inset LatexCommand index
-name "Normalverteilung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Normalverteilung
+\end_layout
 
 \end_inset
 
@@ -8342,10 +9297,14 @@ name "Normalverteilung"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
-Zentraler Grenzwertsatz für Summen von unabhängigen Zufallsvariablen\InsetSpace ~
+\begin_layout Plain Layout
+Zentraler Grenzwertsatz für Summen von unabhängigen Zufallsvariablen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "70"
 key "Koerner:1988"
 
@@ -8382,7 +9341,7 @@ Die zugehörige Verteilungsfunktion (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -8391,9 +9350,13 @@ cf
 
 \end_inset
 
- Definitionsgleichung\InsetSpace ~
+ Definitionsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:prob_distribution"
 
 \end_inset
@@ -8436,7 +9399,7 @@ Substituiert man
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mittelwertfreie Normalverteilung mit 
 \begin_inset Formula $\sigma=1$
 \end_inset
@@ -8547,7 +9510,7 @@ Die Wahrscheinlichkeit, einen der Impulse dabei falsch zu erkennen, liegt
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bei Berücksichtigung der Beziehung 
 \begin_inset Formula $\cnorm(-x)=1-\cnorm(x)$
 \end_inset
@@ -8618,9 +9581,10 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand bibtex
-options "geralpha"
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
 bibfiles "adsp,math"
+options "geralpha"
 
 \end_inset
 
@@ -8628,7 +9592,8 @@ bibfiles "adsp,math"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand printindex
+\begin_inset CommandInset index_print
+LatexCommand printindex
 
 \end_inset
 
