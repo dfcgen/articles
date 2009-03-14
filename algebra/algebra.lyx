@@ -66,7 +66,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: algebra.lyx,v 1.20 2009-03-01 09:07:44 ralf Exp $
+Version $Id: algebra.lyx,v 1.21 2009-03-14 16:43:08 ralf Exp $
 \end_layout
 
 \end_inset
@@ -1910,8 +1910,8 @@ Abel
 status collapsed
 
 \begin_layout Plain Layout
-Entscheidend in Bezug auf den Begriff des Vektorraumes (in Relation zu einer
- Algebra, 
+In Bezug auf den Begriff des Vektorraumes ist entscheidend (Abgrenzung zu
+ einer Algebra, 
 \begin_inset ERT
 status collapsed
 
@@ -1935,11 +1935,8 @@ reference "sec:algebra_algebra"
 
 \end_inset
 
-) ist, daß nur die Addition zwischen Vektoren (
-\noun on
-Abel
-\noun default
-'sche Gruppe) sowie die Multiplikation mit einem Skalar aus 
+), daß nur die Addition zwischen Vektoren sowie die Multiplikation mit einem
+ Skalar aus 
 \begin_inset Formula $K$
 \end_inset
 
@@ -3822,9 +3819,9 @@ ie
 , dann muß für die Ordnung der multiplikativen Gruppe gelten:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula \[
-|\mathbb{F}_{q}^{*}|=q-1\mperiod\]
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+|\mathbb{F}_{q}^{*}|=q-1\mperiod\end{equation}
 
 \end_inset
 
@@ -3929,7 +3926,7 @@ Abgeschlossenheit!Gruppe
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
-r^{k} & =1=e_{(\cdot)},\qquad r\in\mathbb{F}_{q}^{*}\label{eq:algebra_ord_elem}\end{align}
+r^{k} & =e_{(\cdot)}=1,\qquad r\in\mathbb{F}_{q}^{*}\label{eq:algebra_ord_elem}\end{align}
 
 \end_inset
 
@@ -3946,7 +3943,17 @@ gibt.
 \begin_inset Formula $r$
 \end_inset
 
- erzeugte zyklische
+ erzeugte
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!erzeugendes
+\end_layout
+
+\end_inset
+
+ zyklische
 \begin_inset Index
 status collapsed
 
@@ -4003,7 +4010,7 @@ Auch zyklische Permutation der Elemente
 
 \begin_layout Standard
 \begin_inset Formula \begin{align}
-\left\langle r\right\rangle  & =\left\{ \left.r^{\nu}\right|1\leq\nu\leq k\right\} \subseteq\mathbb{F}_{q}^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{align}
+\left\langle r\right\rangle  & =\{\left.r^{n}\,\right|1\leq n\leq k\}\subseteq\mathbb{F}_{q}^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{align}
 
 \end_inset
 
@@ -4011,26 +4018,102 @@ Auch zyklische Permutation der Elemente
 \end_layout
 
 \begin_layout Standard
-Das Element 
-\begin_inset Formula $r$
+Unter Zuhilfenahme von 
+\begin_inset Formula $r^{k}=r^{0}$
 \end_inset
 
- wird erzeugendes Element
+ läßt sich die Menge der Elemente auch so definieren:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\left\langle r\right\rangle  & =\{\left.r^{n\bmod k}\,\right|n\in\mathbb{N}\}\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:algebra_ord_elem"
+
+\end_inset
+
+ stellt die Periodizität der Folge am Beispiel 
+\begin_inset Formula $k=12$
+\end_inset
+
+ als Kreisteilung
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-Element!erzeugendes
+Kreisteilung
 \end_layout
 
 \end_inset
 
- der Untergruppe 
+ dar.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename cyclic.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:algebra_ord_elem"
+
+\end_inset
+
+Zyklische Untergruppe 
 \begin_inset Formula $\left\langle r\right\rangle $
 \end_inset
 
- genannt.
- Die Ordnung (Anzahl der Elemente) der Untergruppe 
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Ordnung (Anzahl der Elemente) der Untergruppe 
 \begin_inset Formula $\left\langle r\right\rangle $
 \end_inset
 
@@ -4087,7 +4170,7 @@ Element!Ordnung
 \begin_inset Formula $e_{(\cdot)}^{k}=e_{(\cdot)}$
 \end_inset
 
- führt ist 
+ führt, ist 
 \begin_inset Formula $1$
 \end_inset
 
@@ -4096,7 +4179,7 @@ Element!Ordnung
 status collapsed
 
 \begin_layout Plain Layout
-Und dies ist das einzige Element der Eigenschaft 
+Und dies ist das einzige Element mit der Eigenschaft 
 \begin_inset Formula $|r|=1$
 \end_inset
 
@@ -4255,7 +4338,79 @@ kleinstes gemeinsames Vielfaches
 \end_inset
 
  zu tun.
- Obwohl mit 
+ Ein Beispiel für 
+\begin_inset Formula $k=6$
+\end_inset
+
+ und 
+\begin_inset Formula $n=4$
+\end_inset
+
+, also 
+\begin_inset Formula $\lcm(k,n)=12=4\cdot3=6\cdot2$
+\end_inset
+
+ zeigt Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:algebra_elem_power"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename elempwr.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:algebra_elem_power"
+
+\end_inset
+
+Potenzen eines Elements
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Obwohl mit 
 \begin_inset Formula $nk=\lcm(n,k)\gcd(n,k)$
 \end_inset
 
@@ -4369,7 +4524,11 @@ description "Teilerfremder Teil von $a$ bezüglich einer anderen Zahl"
 
 \end_inset
 
- zuerst der gemeinsame Teiler eliminiert.
+ zuerst der gemeinsame Teiler 
+\begin_inset Formula $d$
+\end_inset
+
+ eliminiert.
 \begin_inset Formula \begin{equation}
 \overline{n}l=\overline{k}i\label{eq:algebra_ord_lcm}\end{equation}
 
@@ -4410,7 +4569,7 @@ Die Konsequenzen aus dem Ergebnis
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
-|\left\langle s\right\rangle | & =\left|r^{n}\right|=\frac{|r|}{\gcd(|r|,n)}\label{eq:algebra_ord_power}\end{align}
+l & =\left|r^{n}\right|=\frac{|r|}{\gcd(|r|,n)}\label{eq:algebra_ord_power}\end{align}
 
 \end_inset
 
@@ -4452,9 +4611,11 @@ reference "enum:algebra_ord_power_totient"
 \begin_layout Enumerate
 Als Bestätigung für den Satz von 
 \noun on
-Lagrange
+Lagrange 
 \noun default
- 
+(
+\lang german
+
 \begin_inset ERT
 status open
 
@@ -4523,7 +4684,7 @@ Untergruppe!Index
 \end_inset
 
  über 
-\begin_inset Formula $\left\langle r\right\rangle $
+\begin_inset Formula $\left\langle s\right\rangle $
 \end_inset
 
 , gilt deshalb: 
@@ -4827,7 +4988,7 @@ r^{q-1} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}\end{align}
 
 \begin_layout Standard
 Anschaulich bedeutet dies, daß sich die Potenzen 
-\begin_inset Formula $r^{\nu}$
+\begin_inset Formula $r^{n}$
 \end_inset
 
  nach 
@@ -5096,6 +5257,23 @@ Ist die Ordnung der multiplikativen Gruppe ein Vielfaches der Elementeordnung:
 \end_inset
 
  sein.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Genauer gesagt sogar 
+\begin_inset Formula $|\mathbb{F}_{q}^{*}|\pm\delta$
+\end_inset
+
+, mit 
+\begin_inset Formula $\delta<k$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
  Mit anderen Worten: 
 \begin_inset Formula $q=|\mathbb{F}_{q}^{*}|+1$
 \end_inset
@@ -5104,9 +5282,9 @@ Ist die Ordnung der multiplikativen Gruppe ein Vielfaches der Elementeordnung:
 \begin_inset Formula $k$
 \end_inset
 
- eines Elements müssen in jedem Fall teilerfremd sein.
+ eines Elements müssen teilerfremd sein.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Im Umkehrschluß können nur solche Elemente 
@@ -5117,7 +5295,7 @@ Im Umkehrschluß können nur solche Elemente
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- angehören (also ein inverses Element besitzen), deren Ordnung 
+ angehören, deren Ordnung 
 \begin_inset Formula $k$
 \end_inset
 
@@ -5226,7 +5404,7 @@ reference "sec:algebra_euclid_generic"
  und stellt fest:
 \end_layout
 
-\begin_layout Emph(asized)
+\begin_layout Standard
 \begin_inset Formula \begin{alignat*}{3}
 \gcd(q,k) & =1 & \qquad(\alpha & =1, & \;\beta & =-i)\mperiod\end{alignat*}
 
@@ -5440,11 +5618,11 @@ reference "eq:algebra_ord_power"
 
 \begin_layout Standard
 Um die Frage zu beantworten, ob es immer mindestens ein Generatorelement
- gibt, rekapitulieren wir zuerst die folgende Fakten:
+ gibt, rekapitulieren wir folgende Fakten:
 \end_layout
 
 \begin_layout Itemize
-Die Ordnung eines jeden Elements teilt (entsprechend Formel
+Die Ordnung eines jeden Elements teilt die Gruppenordnung (Formel
 \begin_inset space ~
 \end_inset
 
@@ -5455,7 +5633,7 @@ reference "eq:algebra_ord_power"
 
 \end_inset
 
-) die Gruppenordnung: 
+): 
 \begin_inset Formula $|\mathbb{F}_{q}^{*}|=i|r|$
 \end_inset
 
@@ -5463,15 +5641,34 @@ reference "eq:algebra_ord_power"
 \end_layout
 
 \begin_layout Itemize
-Elemente 
-\begin_inset Formula $r$
+Jedes Element 
+\begin_inset Formula $r=g^{n}$
 \end_inset
 
- können durch Potenzieren aus 
+ kann durch Potenzieren aus 
 \begin_inset Formula $g$
 \end_inset
 
- erzeugt werden (ob alle ist noch offen) und für diese gilt dann: 
+ erzeugt werden (ob alle ist noch offen).
+\end_layout
+
+\begin_layout Itemize
+Die Ordnung eines Elements 
+\begin_inset Formula $r$
+\end_inset
+
+ erfüllt Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_power"
+
+\end_inset
+
+ in der Form: 
 \begin_inset Formula $|g|=\left|r\right|\gcd(|g|,n)$
 \end_inset
 
@@ -5479,7 +5676,7 @@ Elemente
 \end_layout
 
 \begin_layout Itemize
-Für ein Generatorelement muß 
+Für die Ordnung eines Generatorelements muß 
 \begin_inset Formula $|g|=|\mathbb{F}_{q}^{*}|$
 \end_inset
 
@@ -5487,13 +5684,13 @@ Für ein Generatorelement muß
 \end_layout
 
 \begin_layout Standard
-Kombination der drei formelmäßigen Voraussetzungen ergibt:
+Kombination der formelmäßigen Voraussetzungen ergibt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-|\mathbb{F}_{q}^{*}| & =|r|\gcd(|\mathbb{F}_{q}^{*}|,n)\\
-i & =\gcd(i|r|,n)\end{align*}
+\begin_inset Formula \begin{align}
+|\mathbb{F}_{q}^{*}| & =|r|\gcd(|\mathbb{F}_{q}^{*}|,n)\nonumber \\
+i & =\gcd(i|r|,n)\label{eq:algebra_generator_index}\end{align}
 
 \end_inset
 
@@ -5501,20 +5698,27 @@ i & =\gcd(i|r|,n)\end{align*}
 \end_layout
 
 \begin_layout Standard
-und diese Bedingung muß für irgendein 
+und diese Bedingung muß für irgendeine Potenz 
 \begin_inset Formula $n=1,2,\ldots,|\mathbb{F}_{q}^{*}|$
 \end_inset
 
- zu erfüllen sein (und zwar für jedes Element 
+ zu gewährleisten sein (und zwar für jedes Element 
 \begin_inset Formula $r$
 \end_inset
 
 ).
- Nimmt man 
-\begin_inset Formula $i$
+ Äquivalenz
+\begin_inset space ~
 \end_inset
 
- als jeweils gegeben an, dann muß 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_generator_index"
+
+\end_inset
+
+ kann aber nur erfüllt werden, wenn man 
 \begin_inset Formula $n=i\overline{n}$
 \end_inset
 
@@ -5522,22 +5726,81 @@ und diese Bedingung muß für irgendein
 \begin_inset Formula $\gcd(|r|,\overline{n})=1$
 \end_inset
 
-, gelten.
- Nun gibt aber 
-\begin_inset Formula $\totient(|r|)$
-\end_inset
-
- Zahlen 
+ setzt.
+ Die Anzahl der teilerfremden Zahlen 
 \begin_inset Formula $\overline{n}$
 \end_inset
 
- für die eine Teilerfremdheit mit 
+ kleiner als 
 \begin_inset Formula $|r|$
 \end_inset
 
- gewährleistet werden kann und deshalb auch immer mindestens ein Generatorelemen
-t.
- Wendet man jetzt noch die Bemerkung
+ liefert mit 
+\begin_inset Formula $\totient(|r|)$
+\end_inset
+
+ 
+\noun on
+Euler
+\noun default
+'s Totient-Funktion
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Totient-Funktion
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_totient"
+
+\end_inset
+
+).
+ Sie ist (zumindest für 
+\begin_inset Formula $|r|>1$
+\end_inset
+
+) immer größer als 
+\begin_inset Formula $0$
+\end_inset
+
+, weshalb auch immer mindestens ein primitives Element existiert.
+ Aus diesem Grund ist jede multiplikative 
+\noun on
+Abel
+\noun default
+'sche Gruppe zyklisch, wobei sie  
+\begin_inset Formula $\totient(|\mathbb{F}_{q}^{*}|)$
+\end_inset
+
+ Generatorelemente besitzt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Zur Anzahl von Elementen mit derselben Ordnung siehe auch Bemerkung
 \begin_inset space ~
 \end_inset
 
@@ -5548,7 +5811,7 @@ reference "enum:algebra_ord_power_totient"
 
 \end_inset
 
- von Seite
+ auf Seite
 \begin_inset space ~
 \end_inset
 
@@ -5559,19 +5822,12 @@ reference "enum:algebra_ord_power_totient"
 
 \end_inset
 
- auf 
-\begin_inset Formula $r:=g$
-\end_inset
-
- an, dann ist die Anzahl der Generatorelemente in einer multiplikativen
- Gruppe durch 
-\begin_inset Formula $\totient(|\mathbb{F}_{q}^{*}|)$
-\end_inset
-
- eindeutig bestimmt.
+.
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
 \begin_inset Note Note
 status open
 
@@ -6042,8 +6298,8 @@ noun{Galois}
 
 \end_inset
 
-Ein endlicher Körper ist durch eine endliche Anzahl von Elementen charakterisier
-t, auf die alle Körperaxiome von Abschnitt
+Jeder endliche Körper ist durch eine endliche Anzahl von Elementen charakterisie
+rt, auf welche die Körperaxiome von Abschnitt
 \begin_inset space ~
 \end_inset
 
@@ -7235,7 +7491,15 @@ Element!Prim-
 
 \end_inset
 
- handelt.
+ handelt (
+\begin_inset Formula $\mathbb{F_{q}}=\mathbb{Z}_{p},$
+\end_inset
+
+ mit 
+\begin_inset Formula $q=p$
+\end_inset
+
+).
 \begin_inset Foot
 status collapsed
 
@@ -7271,17 +7535,33 @@ description "Menge der Primzahlen"
 
 \end_inset
 
-
-\begin_inset Note Note
-status open
+ Im anderen Fall wird die Anzahl der teilerfremden Zahlen durch 
+\noun on
+Euler
+\noun default
+'s Totient-Funktion
+\begin_inset Index
+status collapsed
 
 \begin_layout Plain Layout
-Todo: Ordnung von Elementen?
+Totient-Funktion
 \end_layout
 
 \end_inset
 
+ 
+\begin_inset Formula $\totient(m)$
+\end_inset
 
+ bestimmt und so 
+\begin_inset Formula $\mathbb{F}_{q}=\mathbb{Z}_{m},$
+\end_inset
+
+ mit 
+\begin_inset Formula $q=\totient(m)$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Paragraph*
@@ -7581,8 +7861,8 @@ reference "sec:algebra_gcd_extended"
 status collapsed
 
 \begin_layout Plain Layout
-Diese Rechnung kann man natürlich auch in einem Ring ausführen, dann muß
- das Ergebnis jedoch nicht eindeutig sein (
+Diese Rechnung kann man auch in einem Ring ausführen, dann muß das Ergebnis
+ jedoch nicht eindeutig sein (
 \begin_inset ERT
 status open
 
@@ -7758,11 +8038,26 @@ Ohne dabei zu vergessen, daß jede Potenz
 \end_inset
 
 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo: Verallgemeinerung bzgl.
+ der Ordnung von Elementen in 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset
+
+?
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\left\langle r\right\rangle =\left\{ \left.r^{\nu}\bmod(r^{k}-1)\right|\nu\in\mathbb{N}\right\} \mperiod\label{eq:algebra_subgroup_elem_mod}\end{equation}
+\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N}\}\mperiod\label{eq:algebra_subgroup_elem_mod}\end{equation}
 
 \end_inset
 
@@ -7772,7 +8067,7 @@ Ohne dabei zu vergessen, daß jede Potenz
 \begin_layout Standard
 Einsichtig wird die Schreibweise sofort, wenn man sie für jeden Exponenten
  
-\begin_inset Formula $\nu$
+\begin_inset Formula $n$
 \end_inset
 
  expandiert.
@@ -7878,7 +8173,7 @@ description "Primzahlenkörper"
 \end_inset
 
  genau 
-\begin_inset Formula $p-1=q-1$
+\begin_inset Formula $q-1=p-1$
 \end_inset
 
  ist.
@@ -8079,9 +8374,7 @@ status open
 
 
 \backslash
-noun{Euler}'s Totient-Funktion|see{
-\backslash
-noun{Euler}}
+noun{Euler}'s Totient-Funktion|see{Totient-Funktion}
 \end_layout
 
 \end_inset
@@ -8109,11 +8402,7 @@ L.
 
 Euler
 \noun default
- hat für natürliche Zahlen 
-\begin_inset Formula $m>1$
-\end_inset
-
- die Funktion 
+ hat für natürliche Zahlen die Funktion 
 \begin_inset Formula $\totient(m)$
 \end_inset
 
@@ -8134,7 +8423,11 @@ description "\\noun{Euler}'sche Totient-Funktion"
 \begin_inset Formula $m$
 \end_inset
 
- sind, angibt.
+ sind, angibt (
+\begin_inset Formula $\totient(1)=1$
+\end_inset
+
+ gilt per Definition).
  Mit Hilfe dieser Funktion hat er 
 \noun on
 Fermat
@@ -8457,11 +8750,20 @@ status collapsed
 
 \begin_layout Plain Layout
 Für den allgemeineren Fall zweier teilerfremder Zahlen gilt: 
-\begin_inset Formula $\totient(m)=\totient(p)\totient(q)$
+\begin_inset Formula $\totient(pq)=\totient(p)\totient(q)$
 \end_inset
 
 .
 \end_layout
+
+\end_inset
+
+ In ähnlicher Art und Weise kann man auch die folgende Formel ableiten:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\totient(p^{n}) & =\totient(p\cdot p^{n-1})=(p-1)p^{n-1}\mperiod\end{align*}
 
 \end_inset
 
@@ -9108,7 +9410,7 @@ Polynom!monisches
 status collapsed
 
 \begin_layout Plain Layout
-Leitmonom
+Monom
 \end_layout
 
 \end_inset
@@ -9888,7 +10190,7 @@ Die Anzahl der Elemente
 Galois
 \noun default
 -Körper 
-\begin_inset Formula $\GF\left(p^{n}\right)$
+\begin_inset Formula $\GF(p^{n})$
 \end_inset
 
 .
@@ -9903,7 +10205,7 @@ Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
 \end_inset
 
  Wegen 
-\begin_inset Formula $\left|\mathbb{F}_{q}\right|=q=p^{n}$
+\begin_inset Formula $|\mathbb{F}_{q}|=q=p^{n}$
 \end_inset
 
  hat dessen multiplikative Gruppe
@@ -9925,37 +10227,6 @@ Gruppe!multiplikative
 \end_inset
 
 .
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Welche das Nullelement 
-\begin_inset Formula $\mvec{r}=(0,0,\dots,0)$
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r(x)=0$
-\end_inset
-
- ausschließt.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Enumerate
@@ -9994,7 +10265,7 @@ resp
 
  Periode
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Periode
@@ -10018,15 +10289,20 @@ reference "eq:algebra_ord_elem"
 \end_inset
 
  ableitet:
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula \[
 \left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\mperiod\]
 
 \end_inset
 
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
 Nach dem Satz von 
 \noun on
 Lagrange
@@ -10090,10 +10366,10 @@ ie
 \end_inset
 
  und demzufolge ist
-\begin_inset Newline newline
-\end_inset
+\end_layout
 
-
+\begin_deeper
+\begin_layout Standard
 \begin_inset Formula \begin{equation}
 \left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\mperiod\label{eq:algebra_extfield_zeroes_base}\end{equation}
 
@@ -10102,6 +10378,7 @@ ie
 
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Jedes erzeugende (primitive) Element
 \begin_inset Index
@@ -10331,8 +10608,27 @@ Zerfällungskörper
 
 \end_inset
 
-Nach dem Hauptsatz der elementaren Zahlentheorie kann man für jede natürliche
- Zahl eine eindeutigen Primfaktorzerlegung der Form
+Nach dem Hauptsatz der Zahlentheorie
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hauptsatz der Zahlentheorie
+\end_layout
+
+\end_inset
+
+ kann man für jede natürliche Zahl eine eindeutigen Primfaktorzerlegung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Primfaktorzerlegung
+\end_layout
+
+\end_inset
+
+ der Form
 \end_layout
 
 \begin_layout Standard
