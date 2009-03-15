@@ -65,7 +65,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: analysis.lyx,v 1.25 2008-11-30 14:10:48 ralf Exp $
+Version $Id: analysis.lyx,v 1.26 2009-03-15 14:27:49 ralf Exp $
 \end_layout
 
 \end_inset
@@ -92,7 +92,11 @@ thisjob{analysis}% isn't included from another job?
 \end_layout
 
 \begin_layout Title
-Funktionentheorie -- Analytische Funktionen
+Funktionentheorie
+\end_layout
+
+\begin_layout Subject
+Grundlagen für Ingenieure
 \end_layout
 
 \begin_layout Author
@@ -106,7 +110,7 @@ status open
 \backslash
 textcopyright
 \backslash
-  
+  2005--
 \backslash
 number
 \backslash
@@ -207,6 +211,15 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -250,7 +263,7 @@ Cauchy-Riemann
 \begin_layout Standard
 Holomorphe
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Holomorphie
@@ -260,7 +273,7 @@ Holomorphie
 
 
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Funktion!analytische!Holomorphie
@@ -321,6 +334,15 @@ key "Hurwitz:1922"
 \end_inset
 
  sind solche, deren Grenzwert
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "df(z)"
+symbol "$\\tdiff{f(z)}{z}$"
+description "Ableitung der Funktion $f(z)$ nach $z$"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -598,6 +620,7 @@ status open
 
 \begin_layout Plain Layout
 
+
 \backslash
 noun{--Riemann}
 \end_layout
@@ -765,13 +788,13 @@ noun{Schwarz}
 status collapsed
 
 \begin_layout Plain Layout
-Satz von!Schwarz
+Satz von!Schwarz@
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-@
+
 \backslash
 noun{Schwarz}|see{
 \backslash
@@ -2048,10 +2071,7 @@ noun{Cauchy}
 status collapsed
 
 \begin_layout Plain Layout
-Satz von!Cauchy
-@
-\lang german
-
+Satz von!Cauchy@
 \begin_inset ERT
 status open
 
@@ -2896,10 +2916,7 @@ Cauchy
 status collapsed
 
 \begin_layout Plain Layout
-Cauchy
-@
-\lang german
-
+Cauchy@
 \begin_inset ERT
 status open
 

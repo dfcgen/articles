@@ -70,7 +70,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: crc.lyx,v 1.9 2008-11-30 14:10:48 ralf Exp $
+Version $Id: crc.lyx,v 1.10 2009-03-15 14:25:43 ralf Exp $
 \end_layout
 
 \end_inset
@@ -85,7 +85,7 @@ Zyklische Codes & CRC
 \begin_layout Author
 Copyright 
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -93,7 +93,7 @@ status collapsed
 \backslash
 textcopyright
 \backslash
-  
+  2003--
 \backslash
 number
 \backslash
@@ -110,6 +110,40 @@ year
 \begin_layout Standard
 \begin_inset CommandInset toc
 LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch WITH_APPENDIX
+status open
+
+\begin_layout Standard
+\begin_inset FloatList algorithm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
 
 \end_inset
 
@@ -306,6 +340,14 @@ Erzeugung zyklischer Codes
 \end_layout
 
 \begin_layout Standard
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "CRC"
+symbol "$\\crc(x)$"
+description "Cyclic Redundancy Check (CRC) von $x$"
+
+\end_inset
+
 Der zu sichernde Datenblock mit einer Länge von 
 \begin_inset Formula $n$
 \end_inset
@@ -1629,7 +1671,7 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest vorauszuberechnen und
 
 \begin_layout Standard
 \begin_inset Branch WITH_APPENDIX
-status collapsed
+status open
 
 \begin_layout Standard
 \start_of_appendix
