@@ -1,4 +1,4 @@
-#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -66,7 +66,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: algebra.lyx,v 1.21 2009-03-14 16:43:08 ralf Exp $
+Version $Id: algebra.lyx,v 1.22 2009-04-12 14:15:00 ralf Exp $
 \end_layout
 
 \end_inset
@@ -337,6 +337,15 @@ Element!neutrales
 
 \end_inset
 
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "e"
+symbol "$e$"
+description "neutrales Element"
+
+\end_inset
+
  
 \begin_inset Formula $e\in G$
 \end_inset
@@ -492,7 +501,18 @@ status open
 
 
 \backslash
-noun{Abel}'sche Gruppe|see{Gruppe}
+noun{Abel}
+\end_layout
+
+\end_inset
+
+'sche Gruppe|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Gruppe}
 \end_layout
 
 \end_inset
@@ -532,6 +552,16 @@ status collapsed
 
 \begin_layout Plain Layout
 Mächtigkeit
+\end_layout
+
+\end_inset
+
+ oder Kardinalität
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kardinalität
 \end_layout
 
 \end_inset
@@ -601,6 +631,15 @@ ie
 
  
 \begin_inset Formula $U\subseteq G$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "a\"|b"
+symbol "$a\\subseteq b$"
+description "$a$ ist Teilmenge von $b$"
+
 \end_inset
 
 , dann wird 
@@ -725,13 +764,13 @@ Die Ordnung
 status collapsed
 
 \begin_layout Plain Layout
-Index
+Index|see
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{Untergruppe}
+{Untergruppe}
 \end_layout
 
 \end_inset
@@ -867,11 +906,51 @@ eine assoziative Operation
 \end_layout
 
 \begin_layout Enumerate
-ein neutrales (Null-) Element 
+ein neutrales (Null-) Element
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullelement|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Element}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Null-
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $e_{(+)}=0\in G$
 \end_inset
 
- mit der Beziehung 
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "e(+)"
+symbol "$e_{(+)}$"
+description "Null-Element (neutrales Element der additiven Gruppe)"
+
+\end_inset
+
+mit der Beziehung 
 \begin_inset Formula $a+0=0+a=a$
 \end_inset
 
@@ -978,7 +1057,18 @@ ein neutrales (Eins-) Element
 status collapsed
 
 \begin_layout Plain Layout
-Einselement
+Einselement|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Element}
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -987,7 +1077,16 @@ Einselement
 \begin_inset Formula $e_{(\cdot)}=1\in G$
 \end_inset
 
- mit der Identität 
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "e(.)"
+symbol "$e_{(\\cdot)}$"
+description "Eins-Element (neutrales Element der multiplikativen Gruppe)"
+
+\end_inset
+
+mit der Identität 
 \begin_inset Formula $a\cdot1=1\cdot a=a$
 \end_inset
 
@@ -1066,7 +1165,17 @@ a^{n}=\underbrace{a\cdot a\dotsm a}_{n\text{-mal}}\]
 \end_layout
 
 \begin_layout Standard
-Das Nullelement 
+Das Nullelement
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Null-
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $e_{(+)}$
 \end_inset
 
@@ -1368,13 +1477,13 @@ Element!inverses
 status collapsed
 
 \begin_layout Plain Layout
-Einheitengruppe
+Einheitengruppe|see
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{Ring}
+{Ring}
 \end_layout
 
 \end_inset
@@ -1475,26 +1584,26 @@ Körper
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Körper
+Koerper@Körper
 \end_layout
 
 \end_inset
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Field
+Field|see
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{Körper}
+{Körper}
 \end_layout
 
 \end_inset
@@ -1737,7 +1846,7 @@ sowie der endliche Körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!endlicher
+Koerper@Körper!endlicher
 \end_layout
 
 \end_inset
@@ -1747,7 +1856,7 @@ Körper!endlicher
 status collapsed
 
 \begin_layout Plain Layout
-Körper!
+Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{2}$
 \end_inset
 
@@ -1789,7 +1898,7 @@ eg
 \begin_inset Formula $\mathbb{R}$
 \end_inset
 
-, geschrieben 
+, geschrieben als 
 \begin_inset Formula $(\mathbb{R}(x),+,\cdot)$
 \end_inset
 
@@ -2225,13 +2334,13 @@ Algebra (Verband)
 status collapsed
 
 \begin_layout Plain Layout
-Verband
+Verband|see
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{Algebra}
+{Algebra}
 \end_layout
 
 \end_inset
@@ -2457,7 +2566,7 @@ Ring
 status collapsed
 
 \begin_layout Plain Layout
-Körper
+Koerper@Körper
 \end_layout
 
 \end_inset
@@ -2467,7 +2576,7 @@ Körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!Schief-
+Koerper@Körper!Schief-
 \end_layout
 
 \end_inset
@@ -3597,7 +3706,6 @@ Abel
 \end_layout
 
 \begin_layout Standard
-Wenden wir uns nun endlichen kommutativ-multiplikativen Gruppen zu
 \begin_inset Index
 status collapsed
 
@@ -3620,8 +3728,7 @@ noun{Abel}
 
 \end_inset
 
-.
- Entsprechend Abschnitt
+Entsprechend Abschnitt
 \begin_inset space ~
 \end_inset
 
@@ -3632,7 +3739,12 @@ reference "sec:algebra_group_mul"
 
 \end_inset
 
- sind solche Strukturen 
+ handelt es sich bei endlichen kommutativ-multiplikativen Gruppen um algebraisch
+e Strukturen 
+\begin_inset Formula $G^{*}:=(G,\cdot)$
+\end_inset
+
+, welche 
 \begin_inset ERT
 status open
 
@@ -3645,7 +3757,7 @@ mbox{bzgl.}
 
 \end_inset
 
- der Multiplikation:
+ der Multiplikation
 \end_layout
 
 \begin_layout Itemize
@@ -3658,7 +3770,7 @@ mit einem neutralen Element
 status collapsed
 
 \begin_layout Plain Layout
-Einselement
+Element!Eins-
 \end_layout
 
 \end_inset
@@ -3685,10 +3797,15 @@ Element!inverses
 \end_layout
 
 \begin_layout Itemize
-und (entsprechend der Überschrift) kommutativ.
+und kommutativ
 \end_layout
 
 \begin_layout Standard
+sind.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
 Mit diesen Eigenschaften können sie als Einheitengruppe
 \begin_inset Index
 status collapsed
@@ -3768,60 +3885,7 @@ reference "sec:algebra_field"
 \end_inset
 
 ) aufgefaßt werden.
- Um die Bezeichnungsvielfalt in Grenzen zu halten, wird letztere Betrachtungswei
-se verwendet und die Gruppe (konform zur Notation eines endlichen Körpers
- nach Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_galois_field"
-
-\end_inset
-
-) mit 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "Fq*"
-symbol "$\\mathbb{F}_q^*$"
-description "Multiplikative Gruppe des endlichen Körpers $\\mathbb{F}_q$"
-
-\end_inset
-
-bezeichnet.
- Definiert 
-\begin_inset Formula $q$
-\end_inset
-
- die Anzahl der Elemente im Körper, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ie
 \end_layout
-
-\end_inset
-
- inklusive Nullelement 
-\begin_inset Formula $e_{(+)}$
-\end_inset
-
-, dann muß für die Ordnung der multiplikativen Gruppe gelten:
-\end_layout
-
-\begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-|\mathbb{F}_{q}^{*}|=q-1\mperiod\end{equation}
 
 \end_inset
 
@@ -3848,7 +3912,8 @@ Gruppe!multiplikative
 
 \end_inset
 
-Endliche multiplikative Gruppen sind wegen ihrer Eigenschaften beim Potenzieren
+Endliche multiplikative Gruppen sind insbesondere wegen ihrer Eigenschaften
+ beim Potenzieren
 \begin_inset Index
 status collapsed
 
@@ -3864,7 +3929,7 @@ Element!Potenzierung
 \end_inset
 
  irgendeines Elements 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\begin_inset Formula $r\in G^{*}$
 \end_inset
 
 .
@@ -3883,28 +3948,20 @@ Abgeschlossenheit!Gruppe
 \end_inset
 
  wieder in 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\begin_inset Formula $G^{*}$
 \end_inset
 
  liegen.
  Wegen der endlichen Zahl 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|=q-1$
+\begin_inset Formula $|G^{*}|$
 \end_inset
 
- von Elementen in 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
-, muß sich ab irgendeiner Potenz 
-\begin_inset Formula $l<q$
+ von Elementen, muß sich ab irgendeiner Potenz 
+\begin_inset Formula $l\leq|G^{*}|$
 \end_inset
 
  die Folge wiederholen.
- Die Wiederholung der Folge ab einem bestimmten 
-\begin_inset Formula $l$
-\end_inset
-
- läßt den Ansatz 
+ Eine solche Wiederholung läßt den Ansatz 
 \begin_inset Formula $r^{i}=r^{l}$
 \end_inset
 
@@ -3926,7 +3983,7 @@ Abgeschlossenheit!Gruppe
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
-r^{k} & =e_{(\cdot)}=1,\qquad r\in\mathbb{F}_{q}^{*}\label{eq:algebra_ord_elem}\end{align}
+r^{k} & =e_{(\cdot)}=1,\qquad r\in G^{*}\label{eq:algebra_ord_elem}\end{align}
 
 \end_inset
 
@@ -3997,7 +4054,7 @@ status open
 
 \begin_layout Plain Layout
 Auch zyklische Permutation der Elemente 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\begin_inset Formula $r\in G^{*}$
 \end_inset
 
  genannt.
@@ -4010,7 +4067,7 @@ Auch zyklische Permutation der Elemente
 
 \begin_layout Standard
 \begin_inset Formula \begin{align}
-\left\langle r\right\rangle  & =\{\left.r^{n}\,\right|1\leq n\leq k\}\subseteq\mathbb{F}_{q}^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{align}
+\left\langle r\right\rangle  & =\{\left.r^{n}\,\right|1\leq n\leq k\}\subseteq G^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{align}
 
 \end_inset
 
@@ -4023,11 +4080,20 @@ Unter Zuhilfenahme von
 \end_inset
 
  läßt sich die Menge der Elemente auch so definieren:
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "N"
+symbol "$\\mathbb{N}$"
+description "Menge der natürlichen Zahlen"
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\left\langle r\right\rangle  & =\{\left.r^{n\bmod k}\,\right|n\in\mathbb{N}\}\mperiod\end{align*}
+\begin_inset Formula \begin{align}
+\left\langle r\right\rangle  & =\{\left.r^{n\bmod k}\,\right|n\in\mathbb{N}\}\mperiod\label{eq:algebra_subgroup_mod}\end{align}
 
 \end_inset
 
@@ -4611,11 +4677,32 @@ reference "enum:algebra_ord_power_totient"
 \begin_layout Enumerate
 Als Bestätigung für den Satz von 
 \noun on
-Lagrange 
+Lagrange
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Lagrange, Satz von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Lagrange}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
+
+\end_inset
+
+ 
 \noun default
 (
-\lang german
-
 \begin_inset ERT
 status open
 
@@ -4754,7 +4841,7 @@ Zwei Elemente
 \begin_inset Formula $r\neq s$
 \end_inset
 
- mit derselben Ordnung sind nach Gleichung
+ mit derselben Ordnung sind nach Formel
 \begin_inset space ~
 \end_inset
 
@@ -4787,8 +4874,8 @@ reference "eq:algebra_ord_power"
 \end_inset
 
  wird.
- Aus diesem Grund wird in einer multiplikativen Gruppe die Anzahl von Elementen
- mit gleicher Ordnung 
+ Aus diesem Grund wird in einer multiplikativen Gruppe die Anzahl der Elemente
+ mit jeweils gleicher Ordnung 
 \begin_inset Formula $k$
 \end_inset
 
@@ -4797,33 +4884,8 @@ reference "eq:algebra_ord_power"
 Euler
 \noun default
 's Totient-Funktion
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Totient-Funktion
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\totient(k)$
-\end_inset
-
- bestimmt (siehe dazu auch Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_totient"
-
-\end_inset
-
-).
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -4842,12 +4904,85 @@ Euler
 \begin_inset Formula $k$
 \end_inset
 
- sind.
+ sind (siehe auch Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_totient"
+
+\end_inset
+
+).
 \end_layout
 
 \end_inset
 
 
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Totient-Funktion
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\totient(k)$
+\end_inset
+
+ bestimmt.
+\end_layout
+
+\begin_layout Enumerate
+Bei Kombination der Formeln
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_power"
+
+\end_inset
+
+ und
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_multgrp_inv"
+
+\end_inset
+
+ stellt man fest, daß sich die Ordnung eines Elements 
+\begin_inset Formula $r$
+\end_inset
+
+ beim Übergang zu dessen Inversen
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!inverses
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $r^{-1}$
+\end_inset
+
+ nicht ändert: 
+\begin_inset Formula $|r^{-1}|=|r^{k-1}|=k/\gcd(k,k-1)=k$
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Subsubsection
@@ -4925,7 +5060,7 @@ reference "sec:algebra_group_def"
 \end_inset
 
 ) ein Teiler der Gruppenordnung 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|$
+\begin_inset Formula $|G^{*}|$
 \end_inset
 
 .
@@ -4947,7 +5082,7 @@ key "Bosch:1996"
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-|\mathbb{F}_{q}^{*}|=q-1=ik\mperiod\label{eq:algebra_ord_divider}\end{equation}
+|G^{*}|=ik\mperiod\label{eq:algebra_ord_divider}\end{equation}
 
 \end_inset
 
@@ -4960,7 +5095,7 @@ Daß die Ordnung von
 \end_inset
 
  ein Teiler von 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|$
+\begin_inset Formula $|G^{*}|$
 \end_inset
 
  ist, führt in Verbindung mit Gleichung
@@ -4979,7 +5114,7 @@ reference "eq:algebra_ord_elem"
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{align}
-r^{q-1} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}\end{align}
+r^{|G^{*}|} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}\end{align}
 
 \end_inset
 
@@ -4987,7 +5122,18 @@ r^{q-1} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}\end{align}
 \end_layout
 
 \begin_layout Standard
-Anschaulich bedeutet dies, daß sich die Potenzen 
+Anschaulich (siehe auch Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:algebra_elem_power"
+
+\end_inset
+
+) bedeutet dies, daß sich die Potenzen 
 \begin_inset Formula $r^{n}$
 \end_inset
 
@@ -5014,7 +5160,7 @@ status open
 
 \begin_layout Standard
 \begin_inset Formula \[
-\underbrace{\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\dots,\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}}}_{q-1\text{ Elemente }(i\text{ Perioden})}\]
+\underbrace{\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\dots,\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}}}_{|G^{*}|\text{ Elemente }(i\text{ Perioden})}\]
 
 \end_inset
 
@@ -5032,7 +5178,7 @@ Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
 
 \begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
-r^{q-1}-1=r^{ik}-1 & =(r^{k}-1)\,\left[r^{(i-1)k}+r^{(i-2)k}+\dots+r^{2k}+r^{k}+1\right]\\
+r^{|G^{*}|}-1=r^{ik}-1 & =(r^{k}-1)\,\left[r^{(i-1)k}+r^{(i-2)k}+\dots+r^{2k}+r^{k}+1\right]\\
  & =(r^{k}-1)\,\left[(r^{k})^{i-1}+(r^{k})^{i-2}+\dots+(r^{k})^{2}+(r^{k})^{1}+(r^{k})^{0}\right]\\
  & =(r^{k}-1)\,\underbrace{(1+1+\dots+1+1+1)}_{i\text{-mal}}\\
  & =(r^{k}-1)\, i\end{align*}
@@ -5048,7 +5194,7 @@ welche außerdem zeigt, daß
 \end_inset
 
  ein Teiler von 
-\begin_inset Formula $r^{q-1}-1$
+\begin_inset Formula $r^{|G^{*}|}-1$
 \end_inset
 
  ist.
@@ -5085,11 +5231,11 @@ reference "eq:algebra_ord_divider"
 
  auch der folgende Beweis angeführt werden.
  Multipliziere jedes der 
-\begin_inset Formula $q-1$
+\begin_inset Formula $|G^{*}|$
 \end_inset
 
  Elemente aus 
-\begin_inset Formula $\mathbb{F}_{q}^{*}=\{r_{1},r_{2},r_{3},\dots,r_{q-1}\}$
+\begin_inset Formula $G^{*}=\{r_{1},r_{2},r_{3},\dots,r_{|G^{*}|}\}$
 \end_inset
 
  mit dem Element 
@@ -5097,7 +5243,7 @@ reference "eq:algebra_ord_divider"
 \end_inset
 
 , welches ebenfalls 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\begin_inset Formula $G^{*}$
 \end_inset
 
  entstammt (
@@ -5105,11 +5251,11 @@ reference "eq:algebra_ord_divider"
 \end_inset
 
  ist eines der 
-\begin_inset Formula $r_{\nu}$
+\begin_inset Formula $r_{n}$
 \end_inset
 
 , mit 
-\begin_inset Formula $\nu=1,2,\dots,q-1$
+\begin_inset Formula $n=1,2,\dots,|G^{*}|$
 \end_inset
 
 ).
@@ -5124,11 +5270,11 @@ Abgeschlossenheit!Gruppe
 \end_inset
 
  muß auch jedes Produkt 
-\begin_inset Formula $rr_{\nu}$
+\begin_inset Formula $rr_{n}$
 \end_inset
 
  wieder in 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
+\begin_inset Formula $G^{*}$
 \end_inset
 
  liegen.
@@ -5167,13 +5313,13 @@ Bijektion
 \end_inset
 
 ) angegeben werden: 
-\begin_inset Formula $\{rr_{1},rr_{2},rr_{3},\dots,rr_{q-1}\}\mapsto\{r_{1},r_{2},r_{3},\dots,r_{q-1}\}$
+\begin_inset Formula $\{rr_{1},rr_{2},rr_{3},\dots,rr_{|G^{*}|}\}\mapsto\{r_{1},r_{2},r_{3},\dots,r_{|G^{*}|}\}$
 \end_inset
 
 .
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
-prefix "a-b"
+prefix "a\"|b"
 symbol "$a\\mapsto b$"
 description "Abbildung von $a$ auf $b$"
 
@@ -5184,8 +5330,8 @@ description "Abbildung von $a$ auf $b$"
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-rr_{1}\cdot rr_{2}\cdot rr_{3}\dotsm rr_{q-1} & =r_{1}r_{2}r_{3}\dotsm r_{q-1}\\
-r^{q-1}r_{1}r_{2}r_{3}\dotsm r_{q-1} & =r_{1}r_{2}r_{3}\dotsm r_{q-1}\end{align*}
+rr_{1}\cdot rr_{2}\cdot rr_{3}\dotsm rr_{|G^{*}|} & =r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|}\\
+r^{|G^{*}|}r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|} & =r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|}\end{align*}
 
 \end_inset
 
@@ -5194,16 +5340,16 @@ r^{q-1}r_{1}r_{2}r_{3}\dotsm r_{q-1} & =r_{1}r_{2}r_{3}\dotsm r_{q-1}\end{align*
 
 \begin_layout Standard
 und multipliziert noch mit den Inversen 
-\begin_inset Formula $r_{\nu}^{-1}$
+\begin_inset Formula $r_{n}^{-1}$
 \end_inset
 
 , dann bestätigt sich 
-\begin_inset Formula $r^{q-1}=1$
+\begin_inset Formula $r^{|G^{*}|}=1$
 \end_inset
 
 .
  Einzig mögliche Schlußfolgerung aus 
-\begin_inset Formula $r^{q-1}=1$
+\begin_inset Formula $r^{|G^{*}|}=1$
 \end_inset
 
  und 
@@ -5226,47 +5372,403 @@ reference "eq:algebra_ord_divider"
 \end_inset
 
  genau die Gruppenordnung 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|$
+\begin_inset Formula $|G^{*}|$
 \end_inset
 
  teilt.
 \end_layout
 
-\begin_layout Paragraph
+\begin_layout Subsubsection
 \begin_inset CommandInset label
 LatexCommand label
-name "sec:algebra_multgrp_group_note"
+name "sec:algebra_multgrp_generators"
 
 \end_inset
 
-Anmerkung
+Generatorelemente
 \end_layout
 
 \begin_layout Standard
-Ist die Ordnung der multiplikativen Gruppe ein Vielfaches der Elementeordnung:
- 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|=ik$
+Allgemein nennt man jede, von mindestens einem Element 
+\begin_inset Formula $g$
 \end_inset
 
-, dann kann 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|\pm1$
-\end_inset
-
- niemals auch ein Vielfaches von 
-\begin_inset Formula $k$
-\end_inset
-
- sein.
-\begin_inset Foot
-status open
+ durch Potenzierung erzeugte multiplikative Gruppe, eine zyklische Gruppe
+\begin_inset Index
+status collapsed
 
 \begin_layout Plain Layout
-Genauer gesagt sogar 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|\pm\delta$
+Gruppe!zyklische
+\end_layout
+
+\end_inset
+
+ (siehe Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_elem_order"
+
+\end_inset
+
+).
+ Umfaßt die von 
+\begin_inset Formula $g$
+\end_inset
+
+ erzeugte Untergruppe 
+\begin_inset Formula $\left\langle g\right\rangle $
+\end_inset
+
+ alle Elemente der multiplikativen Gruppe 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ (in irgendeiner Abfolge), dann bezeichnet man 
+\begin_inset Formula $g$
+\end_inset
+
+ als Generatorelement
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Generator!-element
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Generator-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!erzeugendes
+\end_layout
+
+\end_inset
+
+ oder primitives 
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!primitives
+\end_layout
+
+\end_inset
+
+ Element.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+\left\langle g\right\rangle :=\left\{ g^{1},g^{2},g^{3},\dots,g^{|G^{*}|-1},g^{|G^{*}|}=g^{0}=1\right\} =G^{*}\label{eq:algebra_generator_set}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Ordnung eines solchen Elements muß in diesem Sinne der Gruppenordnung
+ entsprechen.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für den Spezialfall, daß es sich bei der Gruppenordnung 
+\begin_inset Formula $|G^{*}|$
+\end_inset
+
+ um eine Primzahl handelt, sind alle Elemente primitiv.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\left|g\right| & =|G^{*}|\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wie alle anderen Elemente muß auch ein Generatorelement Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_elem"
+
+\end_inset
+
+ erfüllen - aber eben nur für Generatorelemente ist 
+\begin_inset Formula $|G^{*}|$
+\end_inset
+
+ der kleinste Exponent, welcher zu 
+\begin_inset Formula $g^{|G^{*}|}=1$
+\end_inset
+
+ führt.
+ Bei Kenntnis eines Generatorelements aus 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ sind so nicht nur alle Elemente der multiplikativen Gruppe bekannt, sondern
+ nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_power"
+
+\end_inset
+
+ auch deren Ordnung.
+\end_layout
+
+\begin_layout Standard
+Um die Frage zu beantworten, ob es immer mindestens ein Generatorelement
+ gibt, rekapitulieren wir folgende Fakten:
+\end_layout
+
+\begin_layout Enumerate
+Die Ordnung 
+\begin_inset Formula $k=|r|$
+\end_inset
+
+ eines jeden Elements teilt die Gruppenordnung (Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_divider"
+
+\end_inset
+
+): 
+\begin_inset Formula $|G^{*}|=ik$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Jedes Element 
+\begin_inset Formula $r$
+\end_inset
+
+ kann durch Potenzieren aus 
+\begin_inset Formula $g$
+\end_inset
+
+ erzeugt werden: 
+\begin_inset Formula $r=g^{n}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Ordnung 
+\begin_inset Formula $|g|$
+\end_inset
+
+ eines Generatorelements erfüllt (wie die eines jeden anderen Elements)
+ Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_power"
+
+\end_inset
+
+: 
+\begin_inset Formula $|g|=|g^{n}|\,\gcd(|g|,n)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Ordnung eines Generatorelements muß der Gruppenordnung entsprechen:
+ 
+\begin_inset Formula $|g|=|G^{*}|$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Kombination der formelmäßigen Voraussetzungen ergibt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+|G^{*}| & =k\gcd(|G^{*}|,n)\nonumber \\
+i & =\gcd(ik,n)\label{eq:algebra_generator_index}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und diese Bedingung muß für irgendeine Potenz 
+\begin_inset Formula $n=1,2,\ldots,|G^{*}|$
+\end_inset
+
+ zu gewährleisten sein (und zwar eindeutig für jedes Element 
+\begin_inset Formula $r$
+\end_inset
+
+).
+ Äquivalenz
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_generator_index"
+
+\end_inset
+
+ kann aber nur erfüllt werden, wenn man 
+\begin_inset Formula $n=i\,\overline{n}$
 \end_inset
 
 , mit 
-\begin_inset Formula $\delta<k$
+\begin_inset Formula $\gcd(k,\overline{n})=1$
+\end_inset
+
+ annimmt.
+ Die Anzahl der teilerfremden Zahlen 
+\begin_inset Formula $\overline{n}$
+\end_inset
+
+ kleiner als 
+\begin_inset Formula $k$
+\end_inset
+
+ liefert mit 
+\begin_inset Formula $\totient(k)$
+\end_inset
+
+ 
+\noun on
+Euler
+\noun default
+'s Totient-Funktion
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Totient-Funktion
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_totient"
+
+\end_inset
+
+).
+ Sie ist (zumindest für 
+\begin_inset Formula $k>1$
+\end_inset
+
+) immer größer als 
+\begin_inset Formula $0$
+\end_inset
+
+, weshalb mindestens 
+\emph on
+ein
+\emph default
+ primitives Element existieren muß.
+ Aus diesem Grund ist jede multiplikative 
+\noun on
+Abel
+\noun default
+'sche Gruppe zyklisch, mit 
+\begin_inset Formula $\totient(|G^{*}|)$
+\end_inset
+
+ Generatorelementen.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Zur Anzahl von Elementen mit derselben Ordnung siehe auch Bemerkung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enum:algebra_ord_power_totient"
+
+\end_inset
+
+ auf Seite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "enum:algebra_ord_power_totient"
+
 \end_inset
 
 .
@@ -5274,7 +5776,706 @@ Genauer gesagt sogar
 
 \end_inset
 
- Mit anderen Worten: 
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_divider"
+
+\end_inset
+
+ teilt die Ordnung eines jeden Elements 
+\begin_inset Formula $r\in G^{*}$
+\end_inset
+
+ die Gruppenordnung.
+ Unter dieser Prämisse können bestimmte Werte für 
+\begin_inset Formula $|r|$
+\end_inset
+
+ nicht auftreten, nämlich genau die zu 
+\begin_inset Formula $|G^{*}|/d$
+\end_inset
+
+, mit 
+\begin_inset Formula $d=\gcd(|G^{*}|,k)$
+\end_inset
+
+, teilerfremden.
+ Wieviele es davon gibt, liefert mit 
+\begin_inset Formula $\totient(|G^{*}|/d)$
+\end_inset
+
+ 
+\noun on
+Euler
+\noun default
+'s Totient-Funktion
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Totient-Funktion
+\end_layout
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_totient"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_zeroes_split"
+
+\end_inset
+
+Elemente als Nullstellen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!als Nullstelle
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!Elemente als 
+\end_layout
+
+\end_inset
+
+Wenden wir uns jetzt einer etwas anderen Sichtweise auf die Elemente der
+ multiplikativen Gruppe 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ zu, nämlich der Betrachtung über Nullstellen.
+ Dazu gehen wir von dem Polynom 
+\begin_inset Formula $\varphi(x)=x^{|G^{*}|}-1$
+\end_inset
+
+ mit 
+\begin_inset Formula $x,\varphi(x)\in G^{*}$
+\end_inset
+
+ aus, welches die Nullstellen 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Einheitswurzeln
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Einheitswurzeln
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ haben soll.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat}{2}
+\alpha^{|G^{*}|}-1 & =0 & \alpha^{|G^{*}|} & =1\qquad(\alpha\in G^{*})\label{eq:algebra_zeroes_poly}\end{xalignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
+ 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ genau 
+\begin_inset Formula $|G^{*}|$
+\end_inset
+
+ Nullstellen haben muß.
+ Nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_divider"
+
+\end_inset
+
+ wird diese Bedingung aber auch durch jedes Element aus 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ erfüllt.
+ Da deren Anzahl genau mit der Anzahl der Nullstellen übereinstimmt, kann
+ es sich bei den Elementen 
+\begin_inset Formula $r\in G^{*}$
+\end_inset
+
+ nur um die 
+\begin_inset Formula $|G^{*}|$
+\end_inset
+
+ Nullstellen von 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ handeln
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Satz~6.18"
+key "Peterson:1972"
+
+\end_inset
+
+.
+ Das mehrfache Nullstellen nicht vorhanden sind, kann man (in Verbindung
+ mit Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_zeroes_poly"
+
+\end_inset
+
+) durch Ableitung von 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ an den Stellen 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ nachprüfen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.|G^{*}|\, x^{|G^{*}|-1}\right|_{x=\alpha}=|G^{*}|\,\alpha^{-1}\alpha^{|G^{*}|}=|G^{*}|\,\alpha^{-1}\neq0\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit diesen Erkenntnissen läßt sich für 
+\begin_inset Formula $\varphi(x)$
+\end_inset
+
+ eine Linearfaktordarstellung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Linearfaktoren
+\end_layout
+
+\end_inset
+
+ auf Basis der Elemente 
+\begin_inset Formula $r$
+\end_inset
+
+ angeben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+\varphi(x) & =x^{|G^{*}|}-1=\prod_{r\in G^{*}}(x-r)\label{eq:algebra_group_factors_split}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ausmultiplizieren der rechten Seite führt mit 
+\begin_inset Formula $\varphi(0)=-1$
+\end_inset
+
+ noch zu der interessanten Äquivalenz:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+1+\prod_{r\in G^{*}}r & =0\mperiod\label{eq:algebra_product_elements}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Da alle Elemente 
+\begin_inset Formula $r$
+\end_inset
+
+ der multiplikativen Gruppe 
+\begin_inset Formula $G^{*}$
+\end_inset
+
+ als Potenzen eines Generatorelements
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Generator!-element
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Generator-
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $g$
+\end_inset
+
+ darstellbar sind, kann man die Linearfaktordarstellung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_group_factors_split"
+
+\end_inset
+
+ auch folgendermaßen schreiben:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\varphi(x) & =\prod_{n=1}^{|G^{*}|}(x-g^{n})=(x-g)(x-g^{2})(x-g^{3})\cdots(x-g^{|G^{*}|-1})(x-1)\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+
+\noun on
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_galois_field"
+
+\end_inset
+
+
+\noun default
+Endliche Körper
+\end_layout
+
+\begin_layout Subsubsection
+Definition
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Koerper@Körper!endlicher
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Galois-Körper@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Galois}
+\end_layout
+
+\end_inset
+
+-Körper|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Körper}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Koerper@Körper!Galois-@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Galois}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\end_inset
+
+Jeder endliche Körper ist durch eine beschränkte Anzahl von Elementen gekennzeic
+hnet, auf welche die Körperaxiome von Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_field"
+
+\end_inset
+
+ zutreffen.
+ Man nennt solche algebraischen Strukturen auch 
+\noun on
+Galois
+\noun default
+-Körper
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Koerper@Körper!Galois-@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Galois}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\end_inset
+
+ und bezeichnet sie mit 
+\begin_inset Formula $\mathbb{F}_{q}$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "Fq"
+symbol "$\\mathbb{F}_q$"
+description "Endlicher Körper mit $q$ Elementen"
+
+\end_inset
+
+ oder 
+\begin_inset Formula $\GF(q)$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "GF(q)"
+symbol "$\\GF(q)$"
+description "\\noun{Galois}-Körper mit $q$ Elementen"
+
+\end_inset
+
+, wobei 
+\begin_inset Formula $q$
+\end_inset
+
+ die Ordnung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Ordnung
+\end_layout
+
+\end_inset
+
+ (Anzahl der Elemente) des Körpers angibt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Unerheblich ist dabei, ob die Menge der Körperelemente 
+\begin_inset Formula $r$
+\end_inset
+
+ durch eine Restklassenoperation oder irgendeine andere Methode definiert
+ wird.
+ Bei gleicher Anzahl von Elementen kann man solche Mengen nämlich immer
+ (strukturerhaltend, eineindeutig) aufeinander abbilden
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "6.5"
+key "Peterson:1972"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Bei der Konstruktion eines endlichen Körpers ist von allergrößter Bedeutung,
+ daß zu den Eigenschaften eines Ringes noch die der multiplikativen Gruppe
+ kommen.
+ Zusätzliches Kriterium ist danach die Existenz des multiplikativ inversen
+ Elements
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!inverses
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $r^{-1}$
+\end_inset
+
+ zu jedem 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Ordnung
+\end_layout
+
+\begin_layout Standard
+Definiert 
+\begin_inset Formula $q$
+\end_inset
+
+ die Anzahl der Elemente im Körper, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ inklusive Nullelement
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Null-
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $e_{(+)}$
+\end_inset
+
+, dann muß für die Ordnung der multiplikativen Gruppe 
+\begin_inset Formula $\mathbb{F}_{q}^{*}:=\mathbb{F}_{q}\setminus\{0\}$
+\end_inset
+
+ 
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "a\"|b"
+symbol "$a\\setminus b$"
+description "Differenzmenge $a$ abzüglich $b$"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "Fq*"
+symbol "$\\mathbb{F}_q^*$"
+description "Multiplikative Gruppe des endlichen Körpers $\\mathbb{F}_q$"
+
+\end_inset
+
+ gelten:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+|\mathbb{F}_{q}^{*}|=q-1\mperiod\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entsprechend Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_group_order"
+
+\end_inset
+
+ muß die Ordnung der multiplikativen Gruppe ein Vielfaches der Elementeordnung
+ 
+\begin_inset Formula $k=|r|$
+\end_inset
+
+ sein: 
+\begin_inset Formula $|\mathbb{F}_{q}^{*}|=ik$
+\end_inset
+
+ (Satz von 
+\noun on
+Lagrange
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Lagrange, Satz von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Lagrange}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
+
+\end_inset
+
+
+\noun default
+).
+ Ein 
+\noun on
+Galois
+\noun default
+-Körper kann deshalb nicht jede beliebige Ordnung annehmen -- wegen vorgenannter
+ Bedingung müssen 
 \begin_inset Formula $q=|\mathbb{F}_{q}^{*}|+1$
 \end_inset
 
@@ -5282,9 +6483,13 @@ Genauer gesagt sogar
 \begin_inset Formula $k$
 \end_inset
 
- eines Elements müssen teilerfremd sein.
+ eines jeden Elements 
+\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
+\end_inset
+
+ teilerfremd sein.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Im Umkehrschluß können nur solche Elemente 
@@ -5300,7 +6505,7 @@ Im Umkehrschluß können nur solche Elemente
 \end_inset
 
  keinen Teiler mit 
-\begin_inset Formula $|\mathbb{F}_{q}|=q$
+\begin_inset Formula $|\mathbb{F}_{q}|$
 \end_inset
 
  hat.
@@ -5311,8 +6516,18 @@ Im Umkehrschluß können nur solche Elemente
 
 \end_layout
 
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{align}
+\gcd(q,k) & =1\end{align}
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Standard
-Diese Erkenntnis läßt sich aus
+Diese Erkenntnis läßt sich (einerseits logisch, aber auch rein analytisch)
+ aus
 \end_layout
 
 \begin_layout Standard
@@ -5325,7 +6540,7 @@ Diese Erkenntnis läßt sich aus
 \end_layout
 
 \begin_layout Standard
-auch rein analytisch mit Hilfe des Satzes von 
+mit Hilfe des Satzes von 
 \noun on
 B
 \begin_inset ERT
@@ -5406,112 +6621,7 @@ reference "sec:algebra_euclid_generic"
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{3}
-\gcd(q,k) & =1 & \qquad(\alpha & =1, & \;\beta & =-i)\mperiod\end{alignat*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:algebra_multgrp_generators"
-
-\end_inset
-
-Generatorelemente
-\end_layout
-
-\begin_layout Standard
-Allgemein nennt man jede, von mindestens einem Element 
-\begin_inset Formula $g$
-\end_inset
-
- durch Potenzierung erzeugte multiplikative Gruppe, eine zyklische Gruppe
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Gruppe!zyklische
-\end_layout
-
-\end_inset
-
- (siehe Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_multgrp_elem_order"
-
-\end_inset
-
-).
- Umfaßt die von 
-\begin_inset Formula $g$
-\end_inset
-
- erzeugte Untergruppe 
-\begin_inset Formula $\left\langle g\right\rangle $
-\end_inset
-
- alle Elemente der multiplikativen Gruppe 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- (in irgendeiner Abfolge), dann bezeichnet man 
-\begin_inset Formula $g$
-\end_inset
-
- als Generatorelement
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Generatorelement
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Element!Generator-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Element!erzeugendes
-\end_layout
-
-\end_inset
-
- oder primitives 
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Element!primitives
-\end_layout
-
-\end_inset
-
- Element.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left\langle g\right\rangle :=\left\{ g^{1},g^{2},g^{3},\dots,g^{q-3},g^{q-2},g^{q-1}=g^{0}=1\right\} =\mathbb{F}_{q}^{*}\label{eq:algebra_generator_set}\end{equation}
+\gcd(q,k) & =1, & \quad\mbox{mit}\quad\alpha & =1, & \;\beta & =-i\mperiod\end{alignat*}
 
 \end_inset
 
@@ -5519,405 +6629,39 @@ Element!primitives
 \end_layout
 
 \begin_layout Standard
-Die Ordnung eines solchen Elements muß in diesem Sinne der Gruppenordnung
- 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- entsprechen.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Für den Spezialfall, daß es sich bei 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|$
-\end_inset
-
- um eine Primzahl handelt, sind alle Elemente primitiv.
- Allerdings könnte 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
- dann kein Primzahlenkörper sein, sondern müßte (da 
+Die einfachste Möglichkeit Teilerfremdheit zu gewährleisten, ist die Wahl
+ von 
 \begin_inset Formula $q$
 \end_inset
 
- gerade ist ) ein Erweiterungskörper sein.
-\end_layout
-
+ als Primzahl oder als Potenz einer Primzahl.
+ Im ersten Fall nennt man 
+\begin_inset Formula $\mathbb{F}_{p}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{align*}
-\left|\left\langle g\right\rangle \right| & =|\mathbb{F}_{q}^{*}|=q-1\end{align*}
-
+ einen Primzahlenkörper, für 
+\begin_inset Formula $q=p^{n}$
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Wie alle anderen Elemente muß auch 
-\begin_inset Formula $g$
+ einen Erweiterungs- oder Binärkörper (weitere Ausführungen zu 
+\begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
- die Äquivalenz
+ in Abschnitt
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:algebra_ord_elem"
-
-\end_inset
-
- erfüllen:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{align*}
-g^{q-1} & =1,\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-aber eben nur für Generatorelemente ist 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|=q-1$
-\end_inset
-
- der kleinste Exponent, welcher zu 
-\begin_inset Formula $g^{q-1}=1$
-\end_inset
-
- führt.
- Bei Kenntnis eines Generatorelements von 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- sind so nicht nur alle Elemente der multiplikativen Gruppe bekannt, sondern
- nach Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_ord_power"
-
-\end_inset
-
- auch deren Ordnung.
-\end_layout
-
-\begin_layout Standard
-Um die Frage zu beantworten, ob es immer mindestens ein Generatorelement
- gibt, rekapitulieren wir folgende Fakten:
-\end_layout
-
-\begin_layout Itemize
-Die Ordnung eines jeden Elements teilt die Gruppenordnung (Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_ord_power"
-
-\end_inset
-
-): 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|=i|r|$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Jedes Element 
-\begin_inset Formula $r=g^{n}$
-\end_inset
-
- kann durch Potenzieren aus 
-\begin_inset Formula $g$
-\end_inset
-
- erzeugt werden (ob alle ist noch offen).
-\end_layout
-
-\begin_layout Itemize
-Die Ordnung eines Elements 
-\begin_inset Formula $r$
-\end_inset
-
- erfüllt Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_ord_power"
-
-\end_inset
-
- in der Form: 
-\begin_inset Formula $|g|=\left|r\right|\gcd(|g|,n)$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Itemize
-Für die Ordnung eines Generatorelements muß 
-\begin_inset Formula $|g|=|\mathbb{F}_{q}^{*}|$
-\end_inset
-
- gelten.
-\end_layout
-
-\begin_layout Standard
-Kombination der formelmäßigen Voraussetzungen ergibt:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{align}
-|\mathbb{F}_{q}^{*}| & =|r|\gcd(|\mathbb{F}_{q}^{*}|,n)\nonumber \\
-i & =\gcd(i|r|,n)\label{eq:algebra_generator_index}\end{align}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und diese Bedingung muß für irgendeine Potenz 
-\begin_inset Formula $n=1,2,\ldots,|\mathbb{F}_{q}^{*}|$
-\end_inset
-
- zu gewährleisten sein (und zwar für jedes Element 
-\begin_inset Formula $r$
-\end_inset
-
-).
- Äquivalenz
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_generator_index"
-
-\end_inset
-
- kann aber nur erfüllt werden, wenn man 
-\begin_inset Formula $n=i\overline{n}$
-\end_inset
-
-, mit 
-\begin_inset Formula $\gcd(|r|,\overline{n})=1$
-\end_inset
-
- setzt.
- Die Anzahl der teilerfremden Zahlen 
-\begin_inset Formula $\overline{n}$
-\end_inset
-
- kleiner als 
-\begin_inset Formula $|r|$
-\end_inset
-
- liefert mit 
-\begin_inset Formula $\totient(|r|)$
-\end_inset
-
- 
-\noun on
-Euler
-\noun default
-'s Totient-Funktion
-\begin_inset Index
-status open
-
-\begin_layout Plain Layout
-Totient-Funktion
-\end_layout
-
-\end_inset
-
- (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_totient"
+reference "sec:algebra_extfield"
 
 \end_inset
 
 ).
- Sie ist (zumindest für 
-\begin_inset Formula $|r|>1$
-\end_inset
-
-) immer größer als 
-\begin_inset Formula $0$
-\end_inset
-
-, weshalb auch immer mindestens ein primitives Element existiert.
- Aus diesem Grund ist jede multiplikative 
-\noun on
-Abel
-\noun default
-'sche Gruppe zyklisch, wobei sie  
-\begin_inset Formula $\totient(|\mathbb{F}_{q}^{*}|)$
-\end_inset
-
- Generatorelemente besitzt.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Zur Anzahl von Elementen mit derselben Ordnung siehe auch Bemerkung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "enum:algebra_ord_power_totient"
-
-\end_inset
-
- auf Seite
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "enum:algebra_ord_power_totient"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Nach Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_ord_divider"
-
-\end_inset
-
- teilt die Ordnung eines jeden Elements 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset
-
- die Gruppenordnung.
- Unter dieser Prämisse können bestimmte Werte für 
-\begin_inset Formula $|r|$
-\end_inset
-
- nicht auftreten, nämlich genau die zu 
-\begin_inset Formula $|\mathbb{F}_{q}^{*}|/d$
-\end_inset
-
-, mit 
-\begin_inset Formula $d=\gcd(|\mathbb{F}_{q}^{*}|,k)$
-\end_inset
-
-, teilerfremden.
- Wieviele es davon gibt, liefert mit 
-\begin_inset Formula $\totient(|\mathbb{F}_{q}^{*}|/d)$
-\end_inset
-
- 
-\noun on
-Euler
-\noun default
-'s Totient-Funktion
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Totient-Funktion
-\end_layout
-
-\end_inset
-
- (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_totient"
-
-\end_inset
-
-).
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:algebra_zeroes_split"
-
-\end_inset
-
 Elemente als Nullstellen
 \end_layout
 
@@ -5931,150 +6675,63 @@ Element!als Nullstelle
 
 \end_inset
 
-Wenden wir uns jetzt einer etwas anderen Sichtweise auf die Elemente des
- endlichen Körpers 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
 
- zu, nämlich der Betrachtung über Nullstellen.
- Dazu gehen wir von dem Polynom 
-\begin_inset Formula $\varphi(x)=x^{q-1}-1$
-\end_inset
-
- mit 
-\begin_inset Formula $x,\varphi(x)\in\mathbb{F}_{q}^{*}$
-\end_inset
-
- aus, welches die Nullstellen 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- Einheitswurzeln
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-Einheitswurzeln
+Nullstellen!Elemente als
 \end_layout
 
 \end_inset
 
- 
-\begin_inset Formula $\alpha$
-\end_inset
-
- haben soll.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-\alpha^{q-1}-1 & =0 & \alpha^{q-1} & =1\qquad(\alpha\in\mathbb{F}_{q}^{*})\label{eq:algebra_zeroes_poly}\end{xalignat}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Wir stellen nun fest, daß entsprechend des Fundamentalsatzes der Algebra
- 
-\begin_inset Formula $\varphi(x)$
-\end_inset
-
- genau 
-\begin_inset Formula $q-1$
-\end_inset
-
- Nullstellen haben muß.
- Nach Formel
+Aus Abschnitt
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:algebra_ord_divider"
+reference "sec:algebra_zeroes_split"
 
 \end_inset
 
- wird diese Bedingung aber auch durch jedes einzelne Element aus 
+ (Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_group_factors_split"
+
+\end_inset
+
+) ist bekannt, daß man die Elemente der multiplikativen Gruppe 
 \begin_inset Formula $\mathbb{F}_{q}^{*}$
 \end_inset
 
- erfüllt.
- Da deren Anzahl genau mit der Anzahl der Nullstellen übereinstimmt, kann
- es sich bei den Elementen 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*},\msp q>1$
+ als Nullstellen des Polynoms 
+\begin_inset Formula $\varphi(x)=x^{q-1}-1$
 \end_inset
 
- nur (und genau) um die 
-\begin_inset Formula $q-1$
-\end_inset
+ auffassen kann.
+ Nimmt man jetzt noch das Nullelement
+\begin_inset Index
+status collapsed
 
- Nullstellen von 
-\begin_inset Formula $\varphi(x)$
-\end_inset
-
- handeln
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Satz~6.18"
-key "Peterson:1972"
-
-\end_inset
-
-.
- Das mehrfache Nullstellen nicht vorhanden sind, kann man (in Verbindung
- mit Gleichung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_zeroes_poly"
-
-\end_inset
-
-) durch Ableitung von 
-\begin_inset Formula $\varphi(x)$
-\end_inset
-
- an den Stellen 
-\begin_inset Formula $\alpha$
-\end_inset
-
- nachprüfen.
+\begin_layout Plain Layout
+Element!Null-
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula \[
-\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.(q-1)\, x^{q-2}\right|_{x=\alpha}=(q-1)\,\alpha^{-1}\alpha^{q-1}=(q-1)\,\alpha^{-1}\neq0\]
-
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
-Mit diesen Erkenntnissen läßt sich für 
-\begin_inset Formula $\varphi(x)$
+ 
+\begin_inset Formula $e_{(+)}=0$
 \end_inset
 
- eine Linearfaktordarstellung
+ hinzu, dehnt also die Betrachtung von der multiplikativen Gruppe auf alle
+ Elemente des Körpers aus, dann kann man als zusätzlichen Linearfaktor
 \begin_inset Index
 status collapsed
 
@@ -6084,16 +6741,16 @@ Linearfaktoren
 
 \end_inset
 
- auf Basis der Elemente 
-\begin_inset Formula $r$
+ 
+\begin_inset Formula $x-0$
 \end_inset
 
- angeben.
+ einbeziehen:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\varphi(x)=x^{q-1}-1=\prod_{r\in\mathbb{F}_{q}^{*}}(x-r)\label{eq:algebra_group_factors_split}\end{equation}
+\psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\mperiod\label{eq:algebra_field_factors_split}\end{equation}
 
 \end_inset
 
@@ -6101,46 +6758,8 @@ Linearfaktoren
 \end_layout
 
 \begin_layout Standard
-Nimmt man jetzt noch das Nullelement 
-\begin_inset Formula $r=0$
-\end_inset
-
- hinzu, dehnt also die Betrachtung von der multiplikativen Gruppe 
-\begin_inset Formula $\mathbb{F}_{q}^{*}=\mathbb{F}_{q}\setminus\{0\}$
-\end_inset
-
- auf alle Elemente des Körpers 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
- aus, dann muß man Element 
-\begin_inset Formula $r_{0}=0$
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- den Linearfaktor 
-\begin_inset Formula $x-0$
-\end_inset
-
- mit einbeziehen.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
 Deshalb bilden die Nullstellen von 
-\begin_inset Formula $\psi(x)=x^{q}-x$
+\begin_inset Formula $x^{q}-x=x\,(x^{q-1}-1)$
 \end_inset
 
  einen endlichen Körper 
@@ -6148,406 +6767,6 @@ Deshalb bilden die Nullstellen von
 \end_inset
 
 .
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{equation}
-\psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\label{eq:algebra_field_factors_split}\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Ausmultiplizieren der rechten Seite in Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_group_factors_split"
-
-\end_inset
-
- führt mit 
-\begin_inset Formula $\varphi(0)=-1$
-\end_inset
-
- noch zu der interessanten Äquivalenz:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{equation}
-1+\prod_{r\in\mathbb{F}_{q}^{*}}r=0\mperiod\label{eq:algebra_product_elements}\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Da alle Elemente 
-\begin_inset Formula $r$
-\end_inset
-
- der multiplikativen Gruppe 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- als Potenzen eines Generatorelements 
-\begin_inset Formula $g$
-\end_inset
-
- darstellbar sind, kann man Gleichung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:algebra_group_factors_split"
-
-\end_inset
-
- auch folgendermaßen schreiben:
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-\varphi(x)=\prod_{\nu=1}^{q-1}(x-g^{\nu})=(x-g)(x-g^{2})(x-g^{3})\cdots(x-g^{q-2})(x-1)\mperiod\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsection
-
-\noun on
-\begin_inset CommandInset label
-LatexCommand label
-name "sec:algebra_galois_field"
-
-\end_inset
-
-
-\noun default
-Endliche Körper
-\end_layout
-
-\begin_layout Standard
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Körper!endlicher
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Galois-Körper@
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noun{Galois}-Körper|see{Körper}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Körper!Galois-@
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noun{Galois}
-\end_layout
-
-\end_inset
-
--
-\end_layout
-
-\end_inset
-
-Jeder endliche Körper ist durch eine endliche Anzahl von Elementen charakterisie
-rt, auf welche die Körperaxiome von Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_field"
-
-\end_inset
-
- zutreffen.
- Man nennt solche algebraischen Strukturen auch 
-\noun on
-Galois
-\noun default
--Körper
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Körper!Galois-@
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noun{Galois}
-\end_layout
-
-\end_inset
-
--
-\end_layout
-
-\end_inset
-
- und bezeichnet sie mit 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "Fq"
-symbol "$\\mathbb{F}_q$"
-description "Endlicher Körper mit $q$ Elementen"
-
-\end_inset
-
- oder 
-\begin_inset Formula $\GF(q)$
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "GF(q)"
-symbol "$\\GF(q)$"
-description "\\noun{Galois}-Körper mit $q$ Elementen"
-
-\end_inset
-
-, wobei 
-\begin_inset Formula $q$
-\end_inset
-
- die Ordnung
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Ordnung
-\end_layout
-
-\end_inset
-
- des Körpers (Anzahl der Elemente) angibt.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Unerheblich ist dabei, ob die Menge der Körperelemente 
-\begin_inset Formula $r$
-\end_inset
-
- durch eine Restklassenoperation oder irgendeine andere Methode definiert
- wird.
- Bei gleicher Anzahl von Elementen kann man solche Mengen nämlich immer
- (strukturerhaltend, eineindeutig, bijektiv) aufeinander abbilden
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "6.5"
-key "Peterson:1972"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- Bei der Konstruktion eines endlichen Körpers ist von allergrößter Bedeutung,
- daß zu den Eigenschaften eines Ringes noch die der multiplikativen Gruppe
- 
-\begin_inset Formula $\mathbb{F}_{q}^{*}$
-\end_inset
-
- kommen.
- Zusätzliches Kriterium ist danach die Existenz eines multiplikativ inversen
- Elements
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Element!inverses
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r^{-1}$
-\end_inset
-
- zu jedem 
-\begin_inset Formula $r\in\mathbb{F}_{q}\setminus\{0\}$
-\end_inset
-
-, so daß 
-\begin_inset Formula $r\cdot r^{-1}=e_{(\cdot)}=1$
-\end_inset
-
- gilt (siehe Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_galois_multgrp"
-
-\end_inset
-
-).
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo: Überprüfen und weiter ausarbeiten...
-\end_layout
-
-\end_inset
-
-In Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_galois_multgrp"
-
-\end_inset
-
- (speziell Seite
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand pageref
-reference "sec:algebra_multgrp_group_note"
-
-\end_inset
-
-) haben wir herausgefunden, daß die Ordnung eines Elements keinen gemeinsamen
- Teiler mit der Ordnung 
-\begin_inset Formula $q$
-\end_inset
-
- des Körpers 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
- haben darf.
- Die einfachste Möglichkeit dies zu gewährleisten ist, die Wahl von 
-\begin_inset Formula $q$
-\end_inset
-
- als Primzahl oder als Potenz einer Primzahl.
- Im ersten Fall, 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- mit 
-\begin_inset Formula $q=p$
-\end_inset
-
- nennt man 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
- einen Primzahlenkörper, für 
-\begin_inset Formula $q=p^{n}$
-\end_inset
-
- einen Binär- oder Erweiterungskörper (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_extfield"
-
-\end_inset
-
-).
 \end_layout
 
 \begin_layout Section
@@ -6566,7 +6785,7 @@ Definition
 
 \begin_layout Standard
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Restklassen|(
@@ -6642,11 +6861,11 @@ als den Rest
 \end_inset
 
 , der bei der 
-\begin_inset Quotes eld
+\begin_inset Quotes gld
 \end_inset
 
 Division
-\begin_inset Quotes erd
+\begin_inset Quotes grd
 \end_inset
 
  
@@ -7255,7 +7474,7 @@ Ring mit Eins
 \begin_layout Standard
 Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Restklassen!
@@ -7280,18 +7499,7 @@ Restklassen!
 status collapsed
 
 \begin_layout Plain Layout
-Einselement
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{Ring}
-\end_layout
-
-\end_inset
-
-
+Element!Eins-
 \end_layout
 
 \end_inset
@@ -7310,7 +7518,7 @@ Restklassenkörper
 \end_layout
 
 \begin_layout Subsubsection
-Definition und Existenz
+Existenz
 \end_layout
 
 \begin_layout Standard
@@ -7328,7 +7536,7 @@ Restklassen!-körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!Restklassen-
+Koerper@Körper!Restklassen-
 \end_layout
 
 \end_inset
@@ -7491,20 +7699,7 @@ Element!Prim-
 
 \end_inset
 
- handelt (
-\begin_inset Formula $\mathbb{F_{q}}=\mathbb{Z}_{p},$
-\end_inset
-
- mit 
-\begin_inset Formula $q=p$
-\end_inset
-
-).
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Also in Bezug auf den Ring 
+ handelt (also in Bezug auf den Ring 
 \begin_inset Formula $\mathbb{Z}_{m}$
 \end_inset
 
@@ -7530,11 +7725,11 @@ description "Menge der Primzahlen"
 
 \end_inset
 
-.
-\end_layout
-
+, wodurch 
+\begin_inset Formula $\mathbb{F}_{q}:=\mathbb{Z}_{p}$
 \end_inset
 
+).
  Im anderen Fall wird die Anzahl der teilerfremden Zahlen durch 
 \noun on
 Euler
@@ -7554,7 +7749,7 @@ Totient-Funktion
 \end_inset
 
  bestimmt und so 
-\begin_inset Formula $\mathbb{F}_{q}=\mathbb{Z}_{m},$
+\begin_inset Formula $\mathbb{F}_{q}:=\mathbb{Z}_{m},$
 \end_inset
 
  mit 
@@ -7952,45 +8147,7 @@ Element!Ordnung
 
 \end_inset
 
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Gruppe!zyklische
-\end_layout
-
-\end_inset
-
-Eine für Restklassen spezifische Ausdrucksmöglichkeit der Potenzen
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Element!Potenzierung
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r^{\nu}$
-\end_inset
-
- eines Körperelements zeigt sich, wenn man nocheinmal deren Abfolge betrachtet
- (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cf
-\end_layout
-
-\end_inset
-
- Abschnitt
+Abgesehen von den allgemein geltenden Ordnungsrelationen (siehe Abschnitt
 \begin_inset space ~
 \end_inset
 
@@ -8001,63 +8158,27 @@ reference "sec:algebra_galois_multgrp"
 
 \end_inset
 
-).
- Da auf 
-\begin_inset Formula $r^{k-1}$
+) gibt es speziell für den Restklassenkörper 
+\begin_inset Formula $\mathbb{Z}_{p}$
 \end_inset
 
- wieder das Element 
-\begin_inset Formula $r^{0}=1$
-\end_inset
+ noch eine erwähnenswerte Ausdrucksmöglichkeit für die von einem Körperelement
+ generierte zyklische Untergruppe
+\begin_inset Index
+status collapsed
 
- folgt, kann man sie auch wiefolgt definieren
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "N"
-symbol "$\\mathbb{N}$"
-description "Menge der natürlichen Zahlen"
+\begin_layout Plain Layout
+Gruppe!zyklische
+\end_layout
 
 \end_inset
 
 :
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Ohne dabei zu vergessen, daß jede Potenz 
-\begin_inset Formula $r^{\nu}$
-\end_inset
-
- (bedingt durch die Modulo-Reduktion) auf ein anderes Element 
-\begin_inset Formula $r\in\mathbb{F}_{q}^{*}$
-\end_inset
-
- abgebildet wird.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo: Verallgemeinerung bzgl.
- der Ordnung von Elementen in 
-\begin_inset Formula $\mathbb{F}_{q}$
-\end_inset
-
-?
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N}\}\mperiod\label{eq:algebra_subgroup_elem_mod}\end{equation}
+\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N},\: r\in\mathbb{Z}\}\mperiod\label{eq:algebra_rcls_mod}\end{equation}
 
 \end_inset
 
@@ -8065,12 +8186,57 @@ Todo: Verallgemeinerung bzgl.
 \end_layout
 
 \begin_layout Standard
-Einsichtig wird die Schreibweise sofort, wenn man sie für jeden Exponenten
+Einsichtig wird die Schreibweise sofort, wenn man sie für jeden Exponent
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Element!Potenzierung
+\end_layout
+
+\end_inset
+
  
 \begin_inset Formula $n$
 \end_inset
 
  expandiert.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Letztlich eine Spezialisierung der Mengendarstellung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_subgroup_mod"
+
+\end_inset
+
+ von Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_elem_order"
+
+\end_inset
+
+ für den Fall 
+\begin_inset Formula $\mathbb{F}_{q}:=\mathbb{Z}_{p}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -8320,6 +8486,14 @@ key "Pollard:1975"
 
 \end_inset
 
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2"
+key "Bundschuh:2008"
+
+\end_inset
+
 .
 \begin_inset Foot
 status collapsed
@@ -8374,7 +8548,18 @@ status open
 
 
 \backslash
-noun{Euler}'s Totient-Funktion|see{Totient-Funktion}
+noun{Euler}
+\end_layout
+
+\end_inset
+
+'s Totient-Funktion|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Totient-Funktion}
 \end_layout
 
 \end_inset
@@ -8432,7 +8617,27 @@ description "\\noun{Euler}'sche Totient-Funktion"
 \noun on
 Fermat
 \noun default
-'s kleinen Satz folgendermaßen verallgemeinert:
+'s kleinen Satz folgendermaßen verallgemeinert
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "II"
+key "Pollard:1975"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2"
+key "Bundschuh:2008"
+
+\end_inset
+
+:
 \end_layout
 
 \begin_layout Quote
@@ -8542,11 +8747,7 @@ reference "eq:algebra_ord_divider"
 
 \end_inset
 
- (welche auch den Satz von 
-\noun on
-Lagrange
-\noun default
- verkörpert).
+.
 \end_layout
 
 \begin_layout Standard
@@ -8788,7 +8989,7 @@ Der Körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!
+Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{2}$
 \end_inset
 
@@ -8988,7 +9189,7 @@ Für den Körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!
+Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{5}$
 \end_inset
 
@@ -9058,7 +9259,7 @@ Für den Körper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!
+Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{7}$
 \end_inset
 
@@ -9136,7 +9337,7 @@ Vorbetrachtungen
 status collapsed
 
 \begin_layout Plain Layout
-Körper!Erweiterungs-
+Koerper@Körper!Erweiterungs-
 \end_layout
 
 \end_inset
@@ -9168,7 +9369,7 @@ Ein Erweiterungskörper
 status collapsed
 
 \begin_layout Plain Layout
-Körper!Teil-
+Koerper@Körper!Teil-
 \end_layout
 
 \end_inset
@@ -9201,7 +9402,7 @@ key "Peterson:1972"
 status collapsed
 
 \begin_layout Plain Layout
-Körper!-erweiterung
+Koerper@Körper!-erweiterung
 \end_layout
 
 \end_inset
@@ -9970,7 +10171,7 @@ description "Erweiterungskörper der Dimension $n$ über $p$"
 
 \end_inset
 
- verwendet, häufiger allerdings 
+ verwendet, oftmals auch 
 \begin_inset Formula $\mathbb{F}_{p^{n}}$
 \end_inset
 
@@ -10593,7 +10794,7 @@ Schnorr
 status collapsed
 
 \begin_layout Plain Layout
-Körper!Zerfällungs-
+Koerper@Körper!Zerfällungs-
 \end_layout
 
 \end_inset
@@ -11278,7 +11479,7 @@ reference "eq:algebra_residue_poly"
 status open
 
 \begin_layout Plain Layout
-Körper!
+Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{2}^{2}$
 \end_inset
 
@@ -11487,7 +11688,7 @@ Euklidischer Algorithmus
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Größter gemeinsamer Teiler|(
@@ -11497,7 +11698,7 @@ Größter gemeinsamer Teiler|(
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Euklidischer Algorithmus|(
@@ -11507,26 +11708,26 @@ Euklidischer Algorithmus|(
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Größter Gemeinsamer Teiler!Euklidischer Algorithmus|(
+Größter gemeinsamer Teiler!Euklidischer Algorithmus|(
 \end_layout
 
 \end_inset
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-GCD
+GCD|see
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-|see{Größter gemeinsamer Teiler}
+{Größter gemeinsamer Teiler}
 \end_layout
 
 \end_inset
@@ -12633,10 +12834,10 @@ Erweiterter euklidischer Algorithmus
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Größter gemeinsamer Teiler!Euklidischer Algorithmus!Erweiterter|(
+Größter gemeinsamer Teiler!Euklidischer Algorithmus!erweiterter|(
 \end_layout
 
 \end_inset
@@ -13261,17 +13462,17 @@ end{algorithmic}
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
-Größter gemeinsamer Teiler!Euklidischer Algorithmus!Erweiterter|)
+Größter gemeinsamer Teiler!Euklidischer Algorithmus!erweiterter|)
 \end_layout
 
 \end_inset
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Größter gemeinsamer Teiler!Euklidischer Algorithmus|)
@@ -13281,7 +13482,7 @@ Größter gemeinsamer Teiler!Euklidischer Algorithmus|)
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Euklidischer Algorithmus|)
@@ -13304,7 +13505,7 @@ Binärer GCD-Algorithmus
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Größter gemeinsamer Teiler!Binärer GCD Algorithmus
@@ -13351,9 +13552,9 @@ key "Stein:1967,Knuth:TAOCP2:1998"
 status open
 
 \begin_layout Plain Layout
-Im Grundsatz unterscheidet er sich nicht vom euklidischen Algorithmus, der
- in ähnlicher Art und Weise die Argumente stetig reduziert und dabei den
- größten gemeinsamen Teiler 
+Im Wesen unterscheidet er sich nicht vom euklidischen Algorithmus, der in
+ ähnlicher Art und Weise die Argumente stetig reduziert und dabei den größten
+ gemeinsamen Teiler 
 \begin_inset Formula $d$
 \end_inset
 
@@ -14599,6 +14800,19 @@ Sollte
 Erweiterter binärer GCD-Algorithmus
 \end_layout
 
+\begin_layout Standard
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Größter gemeinsamer Teiler!Binärer GCD Algorithmus!erweiterter|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Paragraph
 \begin_inset CommandInset label
 LatexCommand label
@@ -14687,7 +14901,7 @@ status open
 
 \begin_layout Standard
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Größter gemeinsamer Teiler!Binärer GCD Algorithmus!nach Kaliski@nach 
@@ -14710,17 +14924,7 @@ noun{Kaliski}
 
 
 \begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Größter gemeinsamer Teiler!Binärer GCD Algorithmus!erweiterter
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Kaliski GCD-Algorithmus@
@@ -16161,7 +16365,7 @@ resp
 \begin_inset Float algorithm
 wide false
 sideways false
-status collapsed
+status open
 
 \begin_layout Plain Layout
 \begin_inset Caption
@@ -20197,6 +20401,16 @@ noun{Penk}
 \end_inset
 
 |)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Größter gemeinsamer Teiler!Binärer GCD Algorithmus!erweiterter|)
 \end_layout
 
 \end_inset
