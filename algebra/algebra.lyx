@@ -7,7 +7,17 @@
 \input{all-inc}
 
 \setlength{\nomlabelwidth}{1in}
-\date{\today\ ($Revision: 1.24 $)}
+\date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision: 1.25 $}}
+
+%% fancyhdr adjustments
+%% \renewcommand{\headrulewidth}{0pt}
+%% \renewcommand{\footrulewidth}{0pt}
+%% \fancyhead{} % clear all header fields
+%% \fancyhead[RE]{\nouppercase{\rightmark}}
+%% \fancyhead[LO]{\nouppercase{\leftmark}}
+%% \fancyfoot{} % clear all footer fields
+%% \fancyfoot[RE,LO]{\textbf{\thepage}}
+%% \fancyfoot[LE,RO]{$RCSfile: algebra.lyx,v $, $Revision: 1.25 $}
 \end_preamble
 \use_default_options false
 \begin_modules
@@ -53,7 +63,7 @@ emphasized
 \quotes_language german
 \papercolumns 1
 \papersides 2
-\paperpagestyle default
+\paperpagestyle headings
 \tracking_changes false
 \output_changes false
 \author "" 
@@ -67,7 +77,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: algebra.lyx,v 1.24 2009-04-12 16:38:16 ralf Exp $
+Version $Id: algebra.lyx,v 1.25 2009-05-09 10:25:26 ralf Exp $
 \end_layout
 
 \end_inset
@@ -21644,7 +21654,7 @@ keitsvorteile nur bei der Potenzierung wirklich zum tragen.
 \begin_layout Standard
 Um einen leicht verständlichen Zugang zu finden, konzentrieren wir uns auf
  eine einzelne Multiplikation 
-\begin_inset Formula $c=ab\pmod{n}$
+\begin_inset Formula $c=ab\pmod{m}$
 \end_inset
 
 .
@@ -21653,11 +21663,11 @@ Um einen leicht verständlichen Zugang zu finden, konzentrieren wir uns auf
 \end_inset
 
  vorausgesetzt werden, die keinen gemeinsamen Teiler mit dem Modul 
-\begin_inset Formula $n$
+\begin_inset Formula $m$
 \end_inset
 
  hat und für die 
-\begin_inset Formula $r>n$
+\begin_inset Formula $r>m$
 \end_inset
 
  gewährleistet ist.
@@ -21666,7 +21676,7 @@ Um einen leicht verständlichen Zugang zu finden, konzentrieren wir uns auf
 Montgomery
 \noun default
 -Multiplikation kann man nun, unter der Voraussetzung 
-\begin_inset Formula $\gcd(r,n)=1$
+\begin_inset Formula $\gcd(r,m)=1$
 \end_inset
 
  (
@@ -21700,7 +21710,7 @@ status open
 zout
 \noun default
  
-\begin_inset Formula $\alpha r-\beta n=1$
+\begin_inset Formula $\alpha r-\beta m=1$
 \end_inset
 
 ), in folgenden Einzelschritten darstellen:
@@ -21741,11 +21751,11 @@ Eingangstransformation der Faktoren
 \end_inset
 
  zu 
-\begin_inset Formula $\hat{a}=ar\bmod n$
+\begin_inset Formula $\hat{a}=ar\bmod m$
 \end_inset
 
  und 
-\begin_inset Formula $\hat{b}=br\bmod n$
+\begin_inset Formula $\hat{b}=br\bmod m$
 \end_inset
 
  (eine normale Modulo-Division);
@@ -21774,11 +21784,11 @@ Berechnung des Produkts
 Montgomery
 \noun default
 -Reduktion von 
-\begin_inset Formula $x=(ar\bmod n)\cdot(br\bmod n)$
+\begin_inset Formula $x=(ar\bmod m)\cdot(br\bmod m)$
 \end_inset
 
  zu 
-\begin_inset Formula $\hat{c}=abr\bmod n=cr\bmod n$
+\begin_inset Formula $\hat{c}=abr\bmod m=cr\bmod m$
 \end_inset
 
 ;
@@ -21792,7 +21802,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Der Ausdruck 
-\begin_inset Formula $xr^{-1}\bmod n=\hat{a}\hat{b}r^{-1}\bmod n$
+\begin_inset Formula $xr^{-1}\bmod m=\hat{a}\hat{b}r^{-1}\bmod m$
 \end_inset
 
  wird auch als 
@@ -21813,7 +21823,7 @@ Montgomery
 \end_inset
 
  
-\begin_inset Formula $\hat{c}=\MONTG(x,r)=xr^{-1}\bmod n$
+\begin_inset Formula $\hat{c}=\MONTG(x,r,m)=xr^{-1}\bmod m$
 \end_inset
 
  führt zu einer 
@@ -21830,7 +21840,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Im Gegensatz zur Multiplikation, für welche 
-\begin_inset Formula $\hat{a}\cdot\hat{b}\neq\hat{c}\pmod{n}$
+\begin_inset Formula $\hat{a}\cdot\hat{b}\neq\hat{c}\pmod{m}$
 \end_inset
 
  gilt, verhält sich die Addition regulär: 
@@ -21873,7 +21883,7 @@ Rücktransformation des Ergebnisses
 \end_inset
 
  zu 
-\begin_inset Formula $c=\hat{c}r^{-1}\bmod n$
+\begin_inset Formula $c=\hat{c}r^{-1}\bmod m$
 \end_inset
 
 , ebenfalls eine 
@@ -21881,7 +21891,7 @@ Rücktransformation des Ergebnisses
 Montgomery
 \noun default
 -Reduktion: 
-\begin_inset Formula $c=\MONTG(\hat{c},r)$
+\begin_inset Formula $c=\MONTG(\hat{c},r,m)$
 \end_inset
 
 .
@@ -21923,7 +21933,7 @@ Zur Herleitung von
 Montgomery
 \noun default
 's effizienter Berechnungsmethode für 
-\begin_inset Formula $\MONTG(x,r)=xr^{-1}\bmod n$
+\begin_inset Formula $\MONTG(x,r,m)=xr^{-1}\bmod m$
 \end_inset
 
  wählen wir als Ausgangspunkt:
@@ -21931,8 +21941,8 @@ Montgomery
 
 \begin_layout Standard
 \begin_inset Formula \begin{alignat*}{2}
-n(\beta x\bmod r) & =n(\beta x-ur), & \quad\mbox{mit }u & =\left\lfloor \beta x/r\right\rfloor \\
-r(\alpha x\bmod n) & =r(\alpha x-vn), & \quad\mbox{mit }v & =\left\lfloor \alpha x/n\right\rfloor .\end{alignat*}
+m(\beta x\bmod r) & =m(\beta x-ur), & \quad\mbox{mit }u & =\left\lfloor \beta x/r\right\rfloor \\
+r(\alpha x\bmod m) & =r(\alpha x-vm), & \quad\mbox{mit }v & =\left\lfloor \alpha x/m\right\rfloor .\end{alignat*}
 
 \end_inset
 
@@ -21945,8 +21955,8 @@ Subtraktion beider Gleichungen ergibt
 
 \begin_layout Standard
 \begin_inset Formula \begin{align*}
-n(\beta x\bmod r)-r(\alpha x\bmod n) & =n(\beta x-ur)-r(\alpha x-vn)\\
- & =rn(v-u)-x(\alpha r-\beta n)\end{align*}
+m(\beta x\bmod r)-r(\alpha x\bmod m) & =m(\beta x-ur)-r(\alpha x-vm)\\
+ & =rm(v-u)-x(\alpha r-\beta m),\end{align*}
 
 \end_inset
 
@@ -21954,18 +21964,16 @@ n(\beta x\bmod r)-r(\alpha x\bmod n) & =n(\beta x-ur)-r(\alpha x-vn)\\
 \end_layout
 
 \begin_layout Standard
-und mit 
-\begin_inset Formula $\alpha r-\beta n=1$
+was mit 
+\begin_inset Formula $\gcd(r,m)=\alpha r-\beta m=1$
 \end_inset
 
-
-\noun on
-:
+ zu
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \[
-n(\beta x\bmod r)-r(\alpha x\bmod n)=(v-u)rn-x\]
+m(\beta x\bmod r)+x=(v-u)rm+r(\alpha x\bmod m)\]
 
 \end_inset
 
@@ -21973,20 +21981,20 @@ n(\beta x\bmod r)-r(\alpha x\bmod n)=(v-u)rn-x\]
 \end_layout
 
 \begin_layout Standard
-Umstellen nach
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \[
-\alpha x\bmod n=\frac{n(\beta x\bmod r)-(v-u)rn+x}{r}\]
-
+führt.
+ Wegen des Vorkommens von 
+\begin_inset Formula $r$
 \end_inset
 
+ in allen Summanden der rechten Seite muß die linke Seite durch 
+\begin_inset Formula $r$
+\end_inset
 
+ teilbar sein.
 \end_layout
 
 \begin_layout Standard
-sowie die Erkenntnis, daß es sich bei 
+Mit dem Wissen, daß es sich bei 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -21995,19 +22003,40 @@ sowie die Erkenntnis, daß es sich bei
 \end_inset
 
  im Restklassensystem modulo 
-\begin_inset Formula $n$
+\begin_inset Formula $m$
 \end_inset
 
  handelt (
-\begin_inset Formula $\alpha=r^{-1}\pmod{n}$
+\begin_inset Formula $\alpha=r^{-1}\pmod{m}$
 \end_inset
 
-), führt uns zum Ergebnis.
+, 
+\begin_inset Formula $\beta=-m^{-1}\pmod{r}\,$
+\end_inset
+
+), stellen wir noch um:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\alpha x\bmod m=\frac{m(\beta x\bmod r)-(v-u)rm+x}{r}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und gewinnen letztlich 
+\noun on
+Montgomery
+\noun default
+'s Reduktionsformel.
 \end_layout
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\MONTG(x,r)=xr^{-1}\bmod n=\frac{n(\beta x\bmod r)+x}{r}-(v-u)n\label{eq:algebra_montgomery_reduction}\end{equation}
+\MONTG(x,r,m)=xr^{-1}\bmod m=\frac{m(\beta x\bmod r)+x}{r}-(v-u)m\label{eq:algebra_montgomery_reduction}\end{equation}
 
 \end_inset
 
@@ -22023,27 +22052,178 @@ Praktisch benötigt man
 \begin_inset Formula $v$
 \end_inset
 
- nicht, sondern geht meist so vor:
+ nicht, sondern geht meist nach folgendem Algorithmus vor:
 \end_layout
 
-\begin_layout Enumerate
-Berechne den Ausdruck 
-\begin_inset Formula $t=[n(\beta x\bmod r)+x]/r$
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\noun on
+Montgomery
+\noun default
+-Reduktion 
+\begin_inset Formula $y=xr^{-1}\bmod m$
 \end_inset
 
-.
+
 \end_layout
 
-\begin_layout Enumerate
-Gilt 
-\begin_inset Formula $t\geq n$
 \end_inset
 
-, dann kann einmal 
-\begin_inset Formula $n$
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
 \end_inset
 
- subtrahiert werden.
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $t\Leftarrow\beta x\bmod r$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y\Leftarrow{\displaystyle \frac{mt+x}{r}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $y\geq n$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y\Leftarrow y-m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -22063,12 +22243,49 @@ reference "eq:algebra_montgomery_reduction"
 \end_inset
 
  nur logische oder Schiebeoperationen nötig.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Effiziente numerische Algorithmen zur 
+\noun on
+Montgomery
+\noun default
+-Reduktion findet man 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Koc:1996,Dusse:1991"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
  Um 
-\begin_inset Formula $\gcd(2^{j},n)=1$
+\begin_inset Formula $\gcd(2^{j},m)=1$
 \end_inset
 
  zu garantieren ist die einfachste Bedingung die, 
-\begin_inset Formula $n$
+\begin_inset Formula $m$
 \end_inset
 
  als ungerade vorauszusetzen.
