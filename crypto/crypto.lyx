@@ -1,0 +1,8058 @@
+#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass scrartcl
+\begin_preamble
+\input{all-inc}
+
+\newcommand {\hex} [1] {\ensuremath{\mathrm{{#1}_{H}}}}
+\end_preamble
+\options reqno
+\use_default_options false
+\begin_modules
+emphasized
+\end_modules
+\language german
+\inputencoding latin1
+\font_roman times
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\float_placement tbph
+\paperfontsize default
+\spacing single
+\use_hyperref true
+\pdf_subject "Kryptoalgorithmen"
+\pdf_keywords "Hash, MD5, SHA, MAC, ECB, OFB, CBC, CFB, CTR"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\papersize a4paper
+\use_geometry false
+\use_amsmath 2
+\use_esint 0
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\branch WITH_APPENDIX
+\selected 1
+\color #faf0e6
+\end_branch
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation skip
+\defskip medskip
+\quotes_language polish
+\papercolumns 1
+\papersides 2
+\paperpagestyle headings
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Version $Id: crypto.lyx,v 1.1 2009-10-18 10:00:37 ralf Exp $
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Todo:
+\end_layout
+
+\begin_layout Itemize
+Begriffe Ciphertext, Cipherblock, Schlüsseltext, Schlüsselblock, Klartext-Block,
+ Klartextblock vereinheitlichen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Title
+Kryptoalgorithmen
+\end_layout
+
+\begin_layout Subject
+Ein Überblick
+\end_layout
+
+\begin_layout Author
+Copyright 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+textcopyright
+\backslash
+  2007--
+\backslash
+number
+\backslash
+year
+\backslash
+ 
+\end_layout
+
+\end_inset
+
+ Ralf Hoppe (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+$Version$
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList figure
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset FloatList table
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% 
+\backslash
+begin{multicols}{2}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Abkürzungen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe auch 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ETSI:ETR338"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\noindent
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% Description environment: modify label indentation
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+renewcommand{
+\backslash
+descriptionlabel}[1]{
+\backslash
+hspace{
+\backslash
+labelsep}
+\backslash
+makebox[0.8in][l]{
+\backslash
+textbf{#1}}}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Description
+\noindent
+AAL ATM Adaption Layer
+\end_layout
+
+\begin_layout Description
+\noindent
+ASN Abstract Syntax Notation
+\end_layout
+
+\begin_layout Description
+ATM Asynchronous Transfer Mode
+\end_layout
+
+\begin_layout Description
+AUTH Authentication
+\end_layout
+
+\begin_layout Description
+CA Certification Authority
+\end_layout
+
+\begin_layout Description
+CBC Cipher Block Chaining
+\end_layout
+
+\begin_layout Description
+CFB Cipher Feedback
+\end_layout
+
+\begin_layout Description
+CONF Confidentiality
+\end_layout
+
+\begin_layout Description
+CRC Cyclic Redundancy Check
+\end_layout
+
+\begin_layout Description
+CRL Certificate Revocation List
+\end_layout
+
+\begin_layout Description
+D Decrypt
+\end_layout
+
+\begin_layout Description
+DES Data Encryption Standard
+\end_layout
+
+\begin_layout Description
+DH Diffie-Hellman
+\end_layout
+
+\begin_layout Description
+DSS Data Signature Standard
+\end_layout
+
+\begin_layout Description
+E Encrypt
+\end_layout
+
+\begin_layout Description
+EC Elliptic Curve
+\end_layout
+
+\begin_layout Description
+ECB Electronic Codebook
+\end_layout
+
+\begin_layout Description
+EC/DSA Elliptic Curve Digital Signature Algorithm
+\end_layout
+
+\begin_layout Description
+EC/KAS Elliptic Curve Key Agreement Scheme
+\end_layout
+
+\begin_layout Description
+FB Feedback Register
+\end_layout
+
+\begin_layout Description
+FEAL Fast Data Encipherment Algorithm
+\end_layout
+
+\begin_layout Description
+HMAC Hashed MAC
+\end_layout
+
+\begin_layout Description
+ICV Integrity Check Values
+\end_layout
+
+\begin_layout Description
+ID Identifier
+\end_layout
+
+\begin_layout Description
+INTEG Integrity
+\end_layout
+
+\begin_layout Description
+ISK Initial Session Key
+\end_layout
+
+\begin_layout Description
+IV Initialisation Vector
+\end_layout
+
+\begin_layout Description
+LFSR Linear Feedback Shift Register
+\end_layout
+
+\begin_layout Description
+LSB Least Significant Bit
+\end_layout
+
+\begin_layout Description
+MAC Message Authentication Code
+\end_layout
+
+\begin_layout Description
+MD5 Message Digest 5
+\end_layout
+
+\begin_layout Description
+MSB Most Significant Bit
+\end_layout
+
+\begin_layout Description
+OID Object Identifier
+\end_layout
+
+\begin_layout Description
+OUI Organizationally Unique Identifier
+\end_layout
+
+\begin_layout Description
+PDU Protocol Data Unit 
+\end_layout
+
+\begin_layout Description
+QoS Quality of Service
+\end_layout
+
+\begin_layout Description
+RNG Random Number Generator
+\end_layout
+
+\begin_layout Description
+RSA 
+\noun on
+Rivest
+\noun default
+, 
+\noun on
+Shamir
+\noun default
+, 
+\noun on
+Adleman
+\end_layout
+
+\begin_layout Description
+SHA Secure Hash Algorithm
+\end_layout
+
+\begin_layout Description
+SN Sequence Number
+\end_layout
+
+\begin_layout Description
+SV State Vector
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+%% 
+\backslash
+end{multicols}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Einführung
+\end_layout
+
+\begin_layout Section
+Symmetrische Algorithmen
+\end_layout
+
+\begin_layout Subsection
+Blockchiffren
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Blockchiffren|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Einordnung
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+C.E.
+\begin_inset space ~
+\end_inset
+
+Shannon
+\noun default
+ beschreibt in
+\begin_inset space ~
+\end_inset
+
+ ein allgemeines (symmetrisches
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Symmetrisch deshalb, weil für Ver- und Entschlüsselung derselbe Schlüssel
+ 
+\begin_inset Formula $K$
+\end_inset
+
+ zur Anwendung kommt.
+\end_layout
+
+\end_inset
+
+) Kryptosystem entsprechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:shannon_model"
+
+\end_inset
+
+ und formuliert auf dieser Grundlage erstmalig grundlegende Theoreme zur
+ theoretischen Sicherheit
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der schraffierte Bereich in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:shannon_model"
+
+\end_inset
+
+ wurde hinzugefügt um den unsicheren Kanal zu markieren.
+ Damit wird auch die Aussage anschaulich, daß der Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ auf sicherem Wege zum Empfänger gelangen muß.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename cryptosystem.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+
+\noun on
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:shannon_model"
+
+\end_inset
+
+Shannon
+\noun default
+'s Modell
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Teil
+\begin_inset space ~
+\end_inset
+
+III widmet er sich auch praktischen Aspekten der Auswahl 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ des Designs solcher Verschlüsselungsalgorithmen.
+ Dabei bezieht er sich unter anderem auf die folgenden Kriterien zur Bewertung
+ von Kryptosystemen:
+\end_layout
+
+\begin_layout Itemize
+die benötigte Menge an Kryptomaterial für einen erfolgreichen Angriff;
+\end_layout
+
+\begin_layout Itemize
+die Schlüssellänge;
+\end_layout
+
+\begin_layout Itemize
+die Komplexität
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Komplexität
+\end_layout
+
+\end_inset
+
+ des Ver- und Entschlüsselungsalgorithmus;
+\end_layout
+
+\begin_layout Itemize
+die Fehlerfortpflanzung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fehlerfortpflanzung
+\end_layout
+
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+und das (nicht) notwendige Padding
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Padding
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+Wirkprinzip
+\end_layout
+
+\begin_layout Standard
+Blockchiffren zeichnen sich dadurch aus, daß sie einen Klartext-Vektor (Plaintex
+t) der Breite 
+\begin_inset Formula $n$
+\end_inset
+
+ (Bit) in einen gleichgroßen Vektor verschlüsselte Daten (Ciphertext) transformi
+eren.
+ Diese Abbildung 
+\begin_inset Formula $E$
+\end_inset
+
+ von 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ möglichen Eingangsmustern auf wieder 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ Ausgangsmuster ist praktisch immer eineindeutig (affin, reversibel) und
+ wird durch den geheimen Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ gesteuert.
+ Besteht der Klartext wie in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:blockcipher_segmentation"
+
+\end_inset
+
+ aus mehr Bits als die Blockbreite 
+\begin_inset Formula $n$
+\end_inset
+
+ vorgibt, dann muß er in Teilblöcke dieser Breite segmentiert und der letzte
+ Block unter Umständen mit einem Muster 
+\emph on
+pad
+\emph default
+(ding)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Padding
+\end_layout
+
+\end_inset
+
+ aufgefüllt werden.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename blockcipher.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:blockcipher_segmentation"
+
+\end_inset
+
+Anwendung von Blockchiffren
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Klartext-Blöcke 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ werden dann nacheinander durch den Algorithmus 
+\begin_inset Formula $E$
+\end_inset
+
+ in Ciphertext-Blöcke 
+\begin_inset Formula $c_{i}=E(p_{i})$
+\end_inset
+
+ transformiert.
+ Dieser Prozeß kann vollständig unabhängig für jede Blockchiffre (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ jeden Block 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+) ablaufen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In diesem Fall spielt die Reihenfolge der Verschlüsselung der einzelnen
+ Blöcke 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ keine Rolle.
+\end_layout
+
+\end_inset
+
+ oder aber durch die Weitergabe von Zustandsvektoren 
+\emph on
+
+\begin_inset Formula $s_{i}$
+\end_inset
+
+
+\emph default
+ beeinflußt sein
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In diesem Fall müßte man, um die Unterschiede in den einzelnen Schritten
+ kenntlich zu machen, eigentlich 
+\begin_inset Formula $E_{i}$
+\end_inset
+
+ statt einfach nur 
+\begin_inset Formula $E$
+\end_inset
+
+ schreiben.
+ Darauf wurde jedoch verzichtet, weil das Subskript an 
+\begin_inset Formula $E$
+\end_inset
+
+ üblicherweise für den verwendeten Schlüssel reserviert ist, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ so: 
+\begin_inset Formula $c_{i}=E_{K}(p_{i})$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ Den ersten Zustandsvektor nennt man Initialisierungsvektor (IV) und wählt
+ ihn entweder zufällig (dann muß er zum Ort der Entschlüsselung übertragen
+ werden) oder per Vereinbarung, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ als statisches Muster.
+ Bei der Entschlüsselung läuft der gesamte Prozeß umgekehrt ab, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ derselbe Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ wird verwendet um mit Hilfe des inversen Algorithmus jeden Klartext-Block
+ 
+\begin_inset Formula $p_{i}=E^{-1}(c_{i})$
+\end_inset
+
+ wieder zu gewinnen.
+\end_layout
+
+\begin_layout Subsubsection
+Struktur
+\end_layout
+
+\begin_layout Standard
+
+\noun on
+Shannon
+\noun default
+ hat schon in
+\begin_inset space ~
+\end_inset
+
+ vorgeschlagen symmetrische Kryptoalgorithmen durch Anwendung von Substitution
+ (als nichtlineare Komponente) und Permutation zu realisieren.
+ Fast alle bekannten Blockchiffren wenden dieses Prinzip auf der Grundlage
+ einer einfachen Verarbeitungsstruktur nach 
+\noun on
+H.
+\begin_inset space ~
+\end_inset
+
+Feistel
+\noun default
+ an
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Feistel:1975"
+
+\end_inset
+
+.
+ Dazu wird der Plaintext-Block 
+\begin_inset Formula $p$
+\end_inset
+
+ in zwei Hälften 
+\begin_inset Formula $l_{0}$
+\end_inset
+
+ und 
+\begin_inset Formula $r_{0}$
+\end_inset
+
+ aufgeteilt (
+\begin_inset Formula $p=l_{0}||r_{0}$
+\end_inset
+
+) und an das Feistel-Netzwerk nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:feistel_network"
+
+\end_inset
+
+ übergeben.
+ Das Ergebnis 
+\begin_inset Formula $l_{1}||r_{1}$
+\end_inset
+
+ wird danach wieder auf den Eingang zurückgeführt und das Verfahren in mehreren
+ Runden (typisch 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ 16) wiederholt.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\oplus$"
+description "Exklusiv-Oder (XOR)"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+l_{i+1} & =r_{i}\\
+r_{i+1} & =l_{i}\oplus f(r_{i},K_{i})\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der sogenannte Rundschlüssel 
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ wird aus dem Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ abgeleitet (Key Scheduling) und sollte für jede Runde verschieden sein
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ein typisches Design-Kriterium des Algorithmus.
+\end_layout
+
+\end_inset
+
+.
+ Die nichtlineare Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ realisiert dabei die Substitution (in Abhängigkeit vom Rundenschlüssel),
+ die ständige Kreuzung von linker und rechter Hälfte zusammen mit der Xor-Operat
+ion eine reversible
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Operationen die zu einem Informationsverlust führen (And, Or, \SpecialChar \ldots{}
+) müssen an
+ dieser Stelle vermieden werden.
+\end_layout
+
+\end_inset
+
+ Permutation (und 
+\begin_inset Quotes pld
+\end_inset
+
+Durchmischung
+\begin_inset Quotes prd
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename feistel.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:feistel_network"
+
+\end_inset
+
+Runde einer typischen 
+\noun on
+Feistel
+\noun default
+-Chiffre
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Vorteile des Verfahrens gründen sich auf dessen Einfachheit:
+\end_layout
+
+\begin_layout Enumerate
+Aufwand und Kosten der Realisierung sind überschaubar;
+\end_layout
+
+\begin_layout Enumerate
+Hardware- und Software-Implementierungen sind gleichermaßen möglich;
+\end_layout
+
+\begin_layout Enumerate
+die Skalierbarkeit (nach Sicherheitsanforderungen, Geschwindigkeit oder
+ anderen Kriterien) ist durch Variation der Rundenanzahl gegeben;
+\end_layout
+
+\begin_layout Enumerate
+Ver- und Entschlüsselung können dieselbe Struktur verwenden.
+\end_layout
+
+\begin_layout Standard
+Der letzte Punkt soll noch kurz erläutert werden, wobei von Formel
+\begin_inset space ~
+\end_inset
+
+ auszugehen ist.
+ Stellen wir diese einfach für die Rückwärtsrichtung (Entschlüsselung) um,
+ so ergibt sich:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+r_{i} & =l_{i+1}\\
+l_{i} & =r_{i+1}\oplus f(l_{i+1},K_{i}),\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ alle Operationen bleiben erhalten
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Insbesondere wird eine Umkehrfunktion 
+\begin_inset Formula $f^{-1}$
+\end_inset
+
+ nicht benötigt.
+\end_layout
+
+\end_inset
+
+.
+ Was sich ändert ist einzig und allein die Verwendung der Rundenschlüssel,
+ welche bei der Verschlüsselung mit 
+\begin_inset Formula $K_{0}$
+\end_inset
+
+ startete.
+ Bei der Entschlüsselung muß man wie Formel
+\begin_inset space ~
+\end_inset
+
+ zeigt umgekehrt vorgehen, also den Schlüssel 
+\begin_inset Formula $K_{0}$
+\end_inset
+
+ zuletzt benutzen.
+\end_layout
+
+\begin_layout Subsubsection
+Data Encryption Algorithm (DES)
+\end_layout
+
+\begin_layout Standard
+Außerdem muß sichergestellt sein, daß dieser Schlüssel nicht 
+\begin_inset Quotes eld
+\end_inset
+
+weak
+\begin_inset Quotes erd
+\end_inset
+
+ ist, d.h.
+ Ver- und Entschlüsselung das gleiche Ergebnis liefern
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für den DES bedeutet diese Forderung, daß die 56
+\begin_inset space ~
+\end_inset
+
+Bit Schlüssel 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00000000000000}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{FFFFFFFFFFFFFF}
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{FFFFFFF0000000}
+\end_layout
+
+\end_inset
+
+und 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{0000000FFFFFFF}
+\end_layout
+
+\end_inset
+
+ eigentlich nicht verwendbar sind.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Advanced Encryption Algorithm (AES)
+\end_layout
+
+\begin_layout Subsubsection
+Fast Encryption Algorithm
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fast Encryption Algorithm
+\end_layout
+
+\end_inset
+
+ (FEAL)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+FEAL
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+FEAL
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+FEAL
+\end_layout
+
+\end_inset
+
+ ist ein relativ schneller Kryptoalgorithmus mit einer Blockbreite und Schlüssel
+länge von 64
+\begin_inset space ~
+\end_inset
+
+Bit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "miyaguchi:1990"
+
+\end_inset
+
+.
+ Vom ATM-Forum 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ATMF:SecuritySpec:1999"
+
+\end_inset
+
+ wird FEAL entspechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_feal_rounds"
+
+\end_inset
+
+ mit 
+\begin_inset Formula $N=32$
+\end_inset
+
+ Runden (FEAL-32) ohne Paritätsbits eingesetzt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename feal_round.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig_feal_rounds"
+
+\end_inset
+
+FEAL-Runden
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Key Schedule werden 
+\begin_inset Formula $N+8=40$
+\end_inset
+
+ jeweils 16
+\begin_inset space ~
+\end_inset
+
+Bit breite Schlüssel erzeugt, von denen 
+\begin_inset Formula $N=32$
+\end_inset
+
+ auf die einzelnen Runden angewendet werden.
+ Die restlichen 8
+\begin_inset space ~
+\end_inset
+
+Schlüssel dienen der Eingangs- und Ausgangstransformation.
+ Die Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ verarbeitet immer den rechten Teil
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $R_{i}$
+\end_inset
+
+ (32
+\begin_inset space ~
+\end_inset
+
+Bit Daten) mit Hilfe der 16
+\begin_inset space ~
+\end_inset
+
+Schlüsselbits
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $K_{i}$
+\end_inset
+
+ .
+ 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename feal_func.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig_feal_func"
+
+\end_inset
+
+FEAL-Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Sie ist speziell für die Implementierung auf 8
+\begin_inset space ~
+\end_inset
+
+Bit-CPUs ausgelegt und in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_feal_func"
+
+\end_inset
+
+ dargestellt.
+ In
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "miyaguchi:1990"
+
+\end_inset
+
+ sind für die Funktion 
+\begin_inset Formula $f$
+\end_inset
+
+ die folgenden äquivalenten Gleichungen angegeben.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+f_{0} & = & S_{0}(\alpha_{0},f_{1})\label{eqn_feal_func}\\
+f_{1} & = & S_{1}(\alpha_{0}\oplus\beta_{0}\oplus\alpha_{1},\alpha_{2}\oplus\beta_{1}\oplus\alpha_{3})\nonumber \\
+f_{2} & = & S_{0}(\alpha_{2}\oplus\beta_{1}\oplus\alpha_{3},f_{1})\nonumber \\
+f_{3} & = & S_{1}(\alpha_{3},f_{2})\nonumber \end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die dabei in den S-Boxen ausgeführte Byte-Operation in Bezug auf die Eingangsgrö
+ßen 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ ist
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+S_{0}(\alpha,\beta) & = & \mathrm{Rot}2((\alpha+\beta)\,\mathrm{mod}\,256)\label{eqn_feal_boxes}\\
+S_{1}(\alpha,\beta) & = & \mathrm{Rot}2((\alpha+\beta+1)\,\mathrm{mod}\,256)\nonumber \end{eqnarray}
+
+\end_inset
+
+ wobei 
+\emph on
+Rot2
+\emph default
+ eine Linksrotation um 2
+\begin_inset space ~
+\end_inset
+
+Bit darstellen soll.
+\end_layout
+
+\begin_layout Standard
+Die Erzeugung der Schlüssel 
+\begin_inset Formula $K_{0}\ldots K_{39}$
+\end_inset
+
+ im 
+\emph on
+Key Schedule
+\emph default
+ erfolgt entsprechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_feal_keysched"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename feal_keysched.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig_feal_keysched"
+
+\end_inset
+
+FEAL Key Schedule
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Funktion 
+\begin_inset Formula $f_{K}$
+\end_inset
+
+ benutzt dieselben S-Boxen wie die 
+\begin_inset Formula $f$
+\end_inset
+
+-Funktion und ist, wie die folgenden Gleichungen zeigen, auch von der Komplexitä
+t her ähnlich
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für weitere Details sei auf 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Fig. 4"
+key "miyaguchi:1990"
+
+\end_inset
+
+ oder auch
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schneier:1996"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "menezes:1997"
+
+\end_inset
+
+ verwiesen.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+f_{K_{0}} & = & S_{0}(\alpha_{0},f_{K_{1}}\oplus\beta_{0})\\
+f_{K_{1}} & = & S_{1}(\alpha_{0}\oplus\alpha_{1},\alpha_{2}\oplus\alpha_{3}\oplus\beta_{0})\\
+f_{K_{2}} & = & S_{0}(\alpha_{2}\oplus\alpha_{3},f_{K_{1}}\oplus\beta_{1})\\
+f_{K_{3}} & = & S_{1}(\alpha_{3},f_{K_{2}}\oplus\beta_{3})\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für eine kommerzielle Nutzung des Algorithmus' ist zu berücksichtigen, daß
+ in USA, England, Frankreich und Deutschland Patente darauf existieren.
+\end_layout
+
+\begin_layout Subsection
+Betriebsarten
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Blockchiffren!Betriebsarten
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Normalerweise bildet eine Blockchiffre 
+\begin_inset Formula $n$
+\end_inset
+
+ bit Klartext auf die gleiche Anzahl verschlüsselter Bits ab (Electronic
+ Codebook, ECB-Modus).
+ Betriebsarten, wie im Folgenden beschrieben, verknüpfen die Eingangs- und
+ Ausgangsvektoren durch Rückkopplungen mittels modularer Arithmetik.
+ Auf diese Weise werden ganz spezielle Eigenschaften erzeugt und kryptoanalytisc
+he Nachteile der einen oder anderen Betriebsart umgangen.
+ Eine genaue Auflistung der jeweiligen Eigenschaften geben 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:10116"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST:800-38A"
+
+\end_inset
+
+ sowie
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.2.2"
+key "Menezes:1992"
+
+\end_inset
+
+, historische Spezifikationen der Betriebsarten sind in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ANSI:X9.52,FIPS:81"
+
+\end_inset
+
+ zu finden.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:cbc"
+
+\end_inset
+
+Cipher Block Chaining (CBC)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Blockchiffren!Betriebsarten!CBC
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cipher Block Chaining (CBC)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Modes of Operation|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Blockchiffren}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In der Betriebsart CBC wird jeder Plaintext-Block 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ vor der Verschlüsselung mit dem letzten Ciphertext-Block 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ kombiniert (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ auch Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cbc_encipher"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat}{3}
+c_{i} & =E_{K}(p_{i}\oplus c_{i-1}), & p_{i} & =c_{i-1}\oplus D_{K}(c_{i}), & c_{-1} & ={IV}\label{eq:cbc_recursion}\end{xalignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dadurch ergibt sich eine Abhängigkeit über den gesamten zu verschlüsselnden
+ Klartext, welche 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ beim CBC-MAC ausgenutzt wird.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename cbc_encipher.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cbc_encipher"
+
+\end_inset
+
+CBC-Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+An Hand von Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cbc_decipher"
+
+\end_inset
+
+ (oder aus Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cbc_recursion"
+
+\end_inset
+
+) kann man das Entschlüsselungsverfahren leicht erklären.
+ Jeder Block 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ wird zuerst entschlüsselt, danach die Exklusiv-Oder (XOR) Operation mit
+ Hilfe des 
+\begin_inset Quotes eld
+\end_inset
+
+Vorgängers
+\begin_inset Quotes erd
+\end_inset
+
+ 
+\begin_inset Formula $c_{i-1}$
+\end_inset
+
+ rückgängig gemacht
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Da in diesem Modus der Ciphertext direktes Resultat der jeweiligen Blockverschlü
+sselung ist, benötigt man (im Gegensatz zu OFB- oder CFB-Modus) für die
+ Entschlüsselung den inversen Algorithmus.
+\end_layout
+
+\end_inset
+
+.
+ Für den ersten Block wird als Startwert ein Initialisierungsvektor (IV)
+ verwendet, der auch nicht unbedingt geheim sein muß.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename cbc_decipher.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cbc_decipher"
+
+\end_inset
+
+CBC-Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Eigenschaften des CBC-Modus bezüglich der Fehlerfortpflanzung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fehlerfortpflanzung
+\end_layout
+
+\end_inset
+
+ lassen sich entweder aus Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cbc_decipher"
+
+\end_inset
+
+ oder aber Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cbc_recursion"
+
+\end_inset
+
+ ableiten:
+\end_layout
+
+\begin_layout Enumerate
+Bitfehler im Block 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ wirken sich auf den aktuellen sowie den nächsten Klartext-Block aus.
+ Wegen 
+\begin_inset Formula $p_{i}=c_{i-1}\oplus D_{K}(c_{i})$
+\end_inset
+
+ sind in 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ nahezu alle Bits verfälscht
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der Fehler in 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ geht als Eingangsvektor in den Entschlüsselungsalgorithmus 
+\begin_inset Formula $D_{K}$
+\end_inset
+
+ ein und führt so dazu, daß 50% der Bits des Ausgangsvektors fehlerbehaftet
+ sind.
+\end_layout
+
+\end_inset
+
+.
+ In 
+\begin_inset Formula $p_{i+1}=c_{i}\oplus D_{K}(c_{i+1})$
+\end_inset
+
+ hingegen sind es nur solche, die auch in 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ fehlerhaft waren.
+ War deren Anzahl 
+\begin_inset Formula $m$
+\end_inset
+
+ so führt die Fehlerfortpflanzung zu 
+\begin_inset Formula $n+m$
+\end_inset
+
+ verfälschten Bits.
+\end_layout
+
+\begin_layout Enumerate
+Geht die Blocksynchronisation verloren, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ wird beispielsweise der Block 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cbc_decipher"
+
+\end_inset
+
+ gar nicht erst empfangen (und an dessen Stelle 
+\begin_inset Formula $c_{2}$
+\end_inset
+
+ verwendet), so wird der zugeordnete entschlüsselte Block 
+\begin_inset Formula $p_{2}$
+\end_inset
+
+ (jetzt an Stelle von 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+) komplett gestört sein.
+ Alle weiteren Blöcke sind jedoch wieder korrekt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Wobei 
+\begin_inset Formula $p_{1}$
+\end_inset
+
+ natürlich trotzdem fehlt (denn 
+\begin_inset Formula $c_{1}$
+\end_inset
+
+ wurde ja nicht empfangen), was für praktische Anwendungen schon ein schweres
+ Problem darstellt.
+\end_layout
+
+\end_inset
+
+, weshalb man auch von einer selbstsynchronisierenden Betriebsart spricht
+ (self-synchronizing, ciphertext autokey).
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Selbstsynchronisation
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Ohne Maßnahmen zur Blocksynchronisation bewirken eingefügte oder verlorene
+ Bits, daß auch alle weiteren Klartext-Blöcke fehlerhaft sind
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Dieses Verhalten gilt für alle blockorientierten Verschlüsselungsalgorithmen.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec_cfb_mode"
+
+\end_inset
+
+Cipher Feedback (CFB)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+CFB-Modus
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+DES-Modus CFB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im Gegensatz zum CBC-Modus (siehe Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:cbc"
+
+\end_inset
+
+) geht der Klartext bei dieser Betriebsart weder direkt noch indirekt über
+ den Verschlüsselungsalgorithmus 
+\begin_inset Formula $E_{K}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{xalignat}{3}
+c_{i} & =p_{i}\oplus E_{K}(c_{i-1}), & p_{i} & =c_{i}\oplus E_{K}(c_{i-1}), & E_{K}(c_{-1}) & =\mbox{IV}\label{eq:cfb_recursion}\end{xalignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus diesem Grund wird die inverse Operation zwar nicht benötigt, die Eigenschaft
+en der CFB-Betriebsart sind aber trotzdem vergleichbar zum CBC:
+\end_layout
+
+\begin_layout Enumerate
+sie ist selbstsynchronisierend;
+\end_layout
+
+\begin_layout Enumerate
+hat eine beschränkte Fehlerfortpflanzung und
+\end_layout
+
+\begin_layout Enumerate
+ist (zusätzlich) für Blockbreiten kleiner der des Algorithmus geeignet.
+\end_layout
+
+\begin_layout Standard
+Die ersten beiden Punkte lassen sich aus den Blockbildern
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cfb_encipher"
+
+\end_inset
+
+ und
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cfb_decipher"
+
+\end_inset
+
+ erkennen oder über Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:cfb_recursion"
+
+\end_inset
+
+ verifizieren.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename cfb_encipher.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cfb_encipher"
+
+\end_inset
+
+CFB-Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename cfb_decipher.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cfb_decipher"
+
+\end_inset
+
+CFB-Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen der Rückführung des Ciphertextes wirkt sich ein Empfangsfehler
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fehlerfortpflanzung
+\end_layout
+
+\end_inset
+
+ im Block 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ nur auf den aktuellen Klartext 
+\begin_inset Formula $p_{i}=c_{i}\oplus E_{K}(c_{i-1})$
+\end_inset
+
+ und den darauffolgenden Block 
+\begin_inset Formula $p_{i+1}=c_{i+1}\oplus E_{K}(c_{i})$
+\end_inset
+
+ aus.
+ In 
+\begin_inset Formula $p_{i+2}=c_{i+2}\oplus E_{K}(c_{i+1})$
+\end_inset
+
+ ist kein Einfluß von 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ gegeben, weshalb (wie im CBC-Modus) ein Fehlerburst von 
+\begin_inset Formula $m$
+\end_inset
+
+ Bits durch diese Art der Rückführung zu 
+\begin_inset Formula $n+m$
+\end_inset
+
+ fehlerhaften Bits verbreitert wird.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Blockbreitenreduktion (Fall 
+\begin_inset Formula $r<n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Die Betriebsart CFB ist auch für Nachrichtenblöcke geeignet, deren Anzahl
+ von Bits 
+\begin_inset Formula $r$
+\end_inset
+
+ kleiner als die Blockbreite 
+\begin_inset Formula $n$
+\end_inset
+
+ des Algorithmus ist.
+ Man benutzt in diesem Fall einfach nur die ersten 
+\begin_inset Formula $r$
+\end_inset
+
+ Output-Bits des Algorithmus, muß jedoch im Eingangsvektor die restlichen
+ 
+\begin_inset Formula $n-r$
+\end_inset
+
+ Bits auf einen konstanten Wert setzen (in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:10116"
+
+\end_inset
+
+ auf 
+\begin_inset Quotes eld
+\end_inset
+
+1
+\begin_inset Quotes erd
+\end_inset
+
+, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cfb_short"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfb_encipher_short.eps
+	width 45col%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfb_decipher_short.eps
+	width 45col%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cfb_short"
+
+\end_inset
+
+CFB mit verringerter Blockbreite
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Pipelining
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pipelining
+\end_layout
+
+\end_inset
+
+ (Fall 
+\begin_inset Formula $r>n$
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Bei Einsatz eines Feedback (FB) Registers im Rückkopplungszweig wird es
+ möglich den Kryptoalgorithmus zu parallelisieren
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Pipelining läßt sich auch mit dem Verfahren bei reduzierter Blockbreite
+ (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cfb_short"
+
+\end_inset
+
+) kombinieren.
+\end_layout
+
+\end_inset
+
+.
+ Man geht dazu wie in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cfb_pipeline"
+
+\end_inset
+
+ skizziert vor.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfb_encipher_pipeline.eps
+	width 45col%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cfb_decipher_pipeline.eps
+	width 45col%
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cfb_pipeline"
+
+\end_inset
+
+CFB mit Pipelining
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die damit einhergehende Verzögerung verschleppt allerdings auch die Auswirkung
+ von Bitfehlern, was oftmals unerwünscht ist.
+ Denn, sollte ein empfangener Cipherblock fehlerhaft sein, so wirkt sich
+ dies auf den aktuellen und den 
+\begin_inset Formula $k$
+\end_inset
+
+-ten darauffolgenden Block aus (wenn mit 
+\begin_inset Formula $k$
+\end_inset
+
+ die Tiefe des FB bezeichnet wird).
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec_ofb_mode"
+
+\end_inset
+
+Output Feedback (OFB)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+OFB-Modus
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+DES-Modus OFB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Auch in der Betriebsart OFB ist man prinzipiell in der Lage Blockbreiten
+ 
+\begin_inset Formula $r<n$
+\end_inset
+
+ zu verarbeiten, verliert aber die Eigenschaft der Selbstsynchronisation.
+ Das Prinzip dieser Betriebsart besteht darin, daß sowohl auf Sende- als
+ auch Empfangsseite der gleiche (Pseudozufalls-) Strom 
+\begin_inset Formula $e_{i}$
+\end_inset
+
+ erzeugt und dann direkt zum Ver- 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Entschlüsseln verwendet wird (siehe XOR-Operation in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ofb"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ofb_encipher.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+ 
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename ofb_decipher.eps
+	width 45col%
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ofb"
+
+\end_inset
+
+Betriebsart OFB
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vorteilhaft ist, daß Bitfehler in einem Cipherblock 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ ohne jegliche Streuwirkung transparent auf den Klartext 
+\begin_inset Formula $p_{i}$
+\end_inset
+
+ abgebildet werden -- die Fehlerfortpflanzung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fehlerfortpflanzung
+\end_layout
+
+\end_inset
+
+ demzufolge sehr begrenzt ausfällt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Diese Eigenschaft ist beonders wichtig für Anwendungen und Protokolle, die
+ eine bestimmte Quality of Service (QoS) zusichern.
+\end_layout
+
+\end_inset
+
+.
+ Gehen jedoch ganze Blöcke 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ verloren, so ist die Synchronisation bleibend gestört und der gesamte Klartext
+ ab diesem Zeitpunkt dauerhaft fehlerhaft
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Betriebsart OFB wird aus diesem Grund als nicht-selbstsynchronisierend
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+.
+ Zur Resynchronisation ist es deshalb unbedingt notwendig, daß von Zeit
+ zu Zeit (je nach Anforderung) ein neuer Initialisierungsvektor in Richtung
+ Empfänger übertragen wird.
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:ctr_mode"
+
+\end_inset
+
+Counter (CTR)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+CTR-Modus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die CTR-Betriebsart
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Eine Weiterentwicklung der Betriebsart CTR stellt der Galois/Counter Mode
+ (GCM) nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST:800-38D"
+
+\end_inset
+
+ dar.
+\end_layout
+
+\end_inset
+
+ arbeitet ähnlich wie der OFB-Modus, nur daß der 
+\begin_inset Quotes eld
+\end_inset
+
+Pseudozufall
+\begin_inset Quotes erd
+\end_inset
+
+ aus einer einem Zähler mit sehr großer (praktisch nicht erreichbarer) Periode
+ stammt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Lipmaa:2000"
+
+\end_inset
+
+.
+ Das Beispiel in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:ctr_mode"
+
+\end_inset
+
+, welches für ATM gilt (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Annex 6.4.4"
+key "ATMF:SecuritySpec:1999"
+
+\end_inset
+
+), soll das Prinzip verdeutlichen.
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ctr_mode.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:ctr_mode"
+
+\end_inset
+
+ATM Counter-Modus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Entscheidend ist, daß der Counter für jeden zu ver- oder entschlüsselnden
+ Block einen anderen Wert (Zustandsvektor) liefert.
+ Er besteht in diesem Fall aus:
+\end_layout
+
+\begin_layout Description
+LFSR
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LFSR
+\end_layout
+
+\end_inset
+
+ Das Schieberegister (LFSR) hat eine Länge von 21
+\begin_inset space ~
+\end_inset
+
+Bit und ist durch das irreduzible (und primitive) Generatorpolynom 
+\begin_inset Formula $g(x)=x^{21}+x^{2}+1$
+\end_inset
+
+ charakterisiert.
+\end_layout
+
+\begin_layout Description
+I/R
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+I/R-Bit
+\end_layout
+
+\end_inset
+
+ Das Initiator/Responder-Bit (I/R) identifiziert den Anrufenden (Calling
+ Party) bzw.
+ Angerufenen (Called Party) und schützt damit vor Angriffen auf schlüsselgleiche
+ Texte.
+\end_layout
+
+\begin_layout Description
+SEQ
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Sequenznummer
+\end_layout
+
+\end_inset
+
+ Die Sequenznummer (SEQ) wird von höheren Protokollen übernommen (nur AAL-3/4
+ und AAL-1).
+\end_layout
+
+\begin_layout Description
+SEG
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Segmentnummer
+\end_layout
+
+\end_inset
+
+ Die Segmentnummer (SEG) identifiziert das ver- 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ entschlüsselte Segment einer ATM-Zelle.
+\end_layout
+
+\begin_layout Description
+JUMP
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Sprungnummer
+\end_layout
+
+\end_inset
+
+ Die Jump Number
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Jump Number
+\end_layout
+
+\end_inset
+
+ (JUMP) wird bei jeder Session Key Changeover OAM-Zelle und bei einem 
+\emph on
+End Of Message
+\emph default
+
+\begin_inset space ~
+\end_inset
+
+(EOM) im AAL-5 erhöht.
+\end_layout
+
+\begin_layout Standard
+Bezüglich der Synchronisation und Fehlerfortpflanzung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fehlerfortpflanzung
+\end_layout
+
+\end_inset
+
+ gelten dieselben Aussagen wie für die Betriebsart OFB.
+ Vorteilhaft ist der CTR-Modus insbesondere für Hochgeschwindigkeitsanwendungen,
+ denn:
+\end_layout
+
+\begin_layout Itemize
+das Parallelisieren von Kryptooperationen ist möglich, da überhaupt keine
+ Rückkopplung vorhanden ist;
+\end_layout
+
+\begin_layout Itemize
+Ver- und Entschlüsselung verlaufen prinzipiell gleich (solange Synchronisation
+ herrscht), was die Realisierung vereinfacht und Ressourcen spart.
+ 
+\end_layout
+
+\begin_layout Subsubsection
+Mischarten
+\end_layout
+
+\begin_layout Standard
+Will man (in Verbindung mit hohen Datenraten) die Eigenschaft der Selbstsynchron
+isation mit einer geringen Fehlerfortpflanzung kombinieren, so bietet sich
+ eine Mischung von OFB und CFB als Betriebsarten an.
+ Dazu muß man nur die Rückkopplungen beider Betriebsarten (umschaltbar)
+ miteinander vereinen, was in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:mixed_mode"
+
+\end_inset
+
+ durch einen Multiplexer (MUX) realisiert wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Verschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mixed_encipher.eps
+	height 4.3cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Entschlüsselung
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename mixed_decipher.eps
+	height 4.37cm
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:mixed_mode"
+
+\end_inset
+
+Kombination von CFB- und OFB-Modus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Algorithmus
+\begin_inset space ~
+\end_inset
+
+ beschreibt den Entschlüsselungsvorgang, wobei statistische Selbstsynchronisatio
+n (siehe 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ruland:1997"
+
+\end_inset
+
+ für Details) eine Möglichkeit darstellt um den Zeitpunkt der Umschaltung
+ von einer Betriebsart in die andere zu bestimmen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float algorithm
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Synchronisation
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:cfbofb"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IF {synchron}
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+FOR {ever}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $c_{i}=p_{i}\oplus e_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $FB=e_{i}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT {OFB-Mode}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDFOR
+\end_layout
+
+\begin_layout Plain Layout
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE 
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $c_{i}=p_{i}\oplus e_{i}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $FB=c_{i}$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT {CFB-Mode}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Blockchiffren|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Section
+Asymmetrische Algorithmen
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Public-Key Verfahren
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec_rsa"
+
+\end_inset
+
+RSA
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+RSA|(
+\end_layout
+
+\end_inset
+
+Beim RSA-Algorithmus handelt es sich um das bekannteste asymmetrische Kryptoverf
+ahren, benannt nach seinen Erfindern 
+\noun on
+Rivest
+\noun default
+-
+\noun on
+Shamir
+\noun default
+-
+\noun on
+Adleman
+\noun default
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RSA:1978,Rivest:1978"
+
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Der Algorithmus wurde in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:1993"
+
+\end_inset
+
+ zu einem 
+\begin_inset Quotes pld
+\end_inset
+
+Quasi
+\begin_inset Quotes prd
+\end_inset
+
+-Standard erhoben und ist heute fester Bestandteil vieler internationaler
+ Normen und Standards
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:18033-2,ISO:9796-2,IEEE:STD1363,IETF:RFC1423,ATMF:SecuritySpec:1999"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Die mathematische Grundlage bilden Restklassenkörper, verbunden mit der
+ Schwierigkeit große Zahlen zu faktorisieren.
+\end_layout
+
+\begin_layout Subsubsection
+Schlüsselgenerierung
+\end_layout
+
+\begin_layout Standard
+Betrachten wir in der Voraussetzung zuerst die Schlüsselerzeugung, welche
+ im Wesen folgendermaßen abläuft:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Das Schlüsselmaterial bietet im allgemeinen das größte Angriffspotential.
+ Deshalb sollte man die Hinweise in Standards und Normen sowie einschlägigen
+ Literaturquellen wie
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "8.2.2"
+key "Menezes:1992"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "16.2"
+key "Welschenbach:2001"
+
+\end_inset
+
+ unbedingt berücksichtigen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Wähle zwei große Primzahlen 
+\begin_inset Formula $p,q>2$
+\end_inset
+
+, mit 
+\begin_inset Formula $p\neq q$
+\end_inset
+
+, welche das öffentliche Modul
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n=pq$
+\end_inset
+
+ bestimmen.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Zahlentheoretische Erläuterungen:
+\end_layout
+
+\begin_layout Itemize
+Bei der Restklasse 
+\begin_inset Formula $\mathbb{Z}_{n}:=\{0,1,\dots,n-1\}$
+\end_inset
+
+ handelt es sich um einen Ring (nicht um einen Körper, da 
+\begin_inset Formula $n$
+\end_inset
+
+ keine Primzahl ist).
+\end_layout
+
+\begin_layout Itemize
+Im Gegensatz dazu bilden 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+ jeweils einen Primzahlenkörper.
+\end_layout
+
+\begin_layout Itemize
+Läßt man aus 
+\begin_inset Formula $\mathbb{Z}_{n}$
+\end_inset
+
+ nur solche Elemente zu, die keinen gemeinsamen Teiler mit dem Modul 
+\begin_inset Formula $n$
+\end_inset
+
+ haben, wird ein Körper konstruierbar.
+ Die Anzahl der Elemente 
+\begin_inset Formula $r$
+\end_inset
+
+ in dessen multiplikativer Gruppe 
+\begin_inset Formula $\mathbb{Z}_{n}^{*}:=\{r\in\mathbb{Z}\,|\,0<r<n,\gcd(r,n)=1\}$
+\end_inset
+
+ ergibt sich mit Hilfe von 
+\noun on
+Euler
+\noun default
+'s Totient-Funktion zu 
+\begin_inset Formula $\varphi=\totient(n)=(p-1)(q-1)$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Nun wird eine Zufallszahl 
+\begin_inset Formula $1<e<\varphi$
+\end_inset
+
+ erzeugt, die keinen gemeinsamen Faktor mit 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ hat.
+ Diese (auch als öffentlicher Exponent bezeichnete) Zahl bildet die Basis
+ des öffentlichen Schlüssels 
+\begin_inset Formula $(n,e)$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Zahlentheoretische Erläuterungen:
+\end_layout
+
+\begin_layout Itemize
+Wegen 
+\begin_inset Formula $\gcd(e,\varphi)=1$
+\end_inset
+
+ gehört 
+\begin_inset Formula $e$
+\end_inset
+
+ zum endlichen Körper 
+\begin_inset Formula $\mathbb{Z}_{\varphi}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Für den privaten Schlüssel 
+\begin_inset Formula $(n,d)$
+\end_inset
+
+ wird jetzt eine weitere Zahl 
+\begin_inset Formula $d$
+\end_inset
+
+ so berechnet,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Zum Beispiel mit Hilfe des erweiterten euklidischen Algorithmus.
+\end_layout
+
+\end_inset
+
+ daß 
+\begin_inset Formula $de-1$
+\end_inset
+
+ ohne Rest durch 
+\begin_inset Formula $\varphi$
+\end_inset
+
+ teilbar ist.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+Zahlentheoretische Erläuterungen:
+\end_layout
+
+\begin_layout Itemize
+Ausgehend von
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+de & \equiv1\pmod{\varphi}\label{eqn_rsa_de}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+kann man 
+\begin_inset Formula $d$
+\end_inset
+
+ auch als Inverse des öffentlichen Exponents 
+\begin_inset Formula $e$
+\end_inset
+
+ im Körper 
+\begin_inset Formula $\mathbb{Z}_{\varphi}$
+\end_inset
+
+ ansehen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+d & \equiv e^{-1}\pmod{\varphi}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Algorithmus
+\end_layout
+
+\begin_layout Standard
+Für die Verschlüsselung wird folgende Operation auf dem Plaintext-Block
+ 
+\begin_inset Formula $m$
+\end_inset
+
+ ausgeführt, wobei dieser als Zahl 
+\begin_inset Formula $m\in\mathbb{Z}_{n}$
+\end_inset
+
+ interpretiert wird:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{align}
+c & =m^{e}\bmod n\label{eq:crypto_rsa_encipher}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die inverse Operation der Entschlüsselung wird in gleicher Art und Weise
+ vorgenommen:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{align}
+m' & =c^{d}\bmod n\mperiod\label{eq:crypto_rsa_decipher}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für den Beweis 
+\begin_inset Formula $m'=m$
+\end_inset
+
+ wendet man zuerst Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:crypto_rsa_encipher"
+
+\end_inset
+
+ an und bezieht dann die Restklassendarstellung 
+\begin_inset Formula $de=1+k\varphi$
+\end_inset
+
+ (
+\begin_inset Formula $k\in\mathbb{N}$
+\end_inset
+
+) ein.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+m' & =(m^{e}\bmod n)^{d}\bmod n\\
+ & =m^{de}\bmod n\\
+ & =m\cdot m^{\varphi k}\bmod n\\
+ & =m(m^{\varphi})^{k}\bmod n\\
+ & =m(m^{\varphi}\bmod n)^{k}\bmod n\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die weitere Argumentation beruht darauf, daß 
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $m^{\varphi}\bmod n=1$
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+ gilt und so:
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula \begin{align*}
+m' & =m(\,\underbrace{m^{\varphi}\bmod n}_{1}\,)^{k}\bmod n=m\bmod n=m\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Besitzen 
+\begin_inset Formula $m$
+\end_inset
+
+ und 
+\begin_inset Formula $n$
+\end_inset
+
+ keinen gemeinsamen Teiler (
+\begin_inset Formula $\gcd(m,n)=1$
+\end_inset
+
+, 
+\begin_inset Formula $m\in\mathbb{Z}_{n}^{*}$
+\end_inset
+
+), dann kann man auf 
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset Formula $m^{\varphi}\bmod n$
+\end_inset
+
+
+\begin_inset space \thinspace{}
+\end_inset
+
+ einfach 
+\noun on
+Euler
+\noun default
+'s Satz anwenden und ist fertig.
+\end_layout
+
+\begin_layout Standard
+Hat 
+\begin_inset Formula $m$
+\end_inset
+
+ allerdings gemeinsame Teiler mit 
+\begin_inset Formula $n$
+\end_inset
+
+, dann gilt 
+\begin_inset Formula $\gcd(m,n)\neq1$
+\end_inset
+
+ und deshalb 
+\begin_inset Formula $m\notin\mathbb{Z}_{n}^{*}$
+\end_inset
+
+.
+ Betrachtet man aber die Faktorisierung von 
+\begin_inset Formula $n$
+\end_inset
+
+, dann muß 
+\begin_inset Formula $m$
+\end_inset
+
+ ein Vielfaches von 
+\begin_inset Formula $p$
+\end_inset
+
+ oder 
+\begin_inset Formula $q$
+\end_inset
+
+ sein (wegen 
+\begin_inset Formula $m<n$
+\end_inset
+
+ jedoch nicht von 
+\begin_inset Formula $pq$
+\end_inset
+
+).
+ Unter dieser Voraussetzung wäre die Zerlegung 
+\begin_inset Formula $m=\overline{m}p$
+\end_inset
+
+ oder 
+\begin_inset Formula $m=\overline{m}q$
+\end_inset
+
+ möglich, wobei jeweils 
+\begin_inset Formula $\gcd(\overline{m},n)=1$
+\end_inset
+
+ gilt.
+ Im Fall 
+\begin_inset Formula $m=\overline{m}p$
+\end_inset
+
+ (für 
+\begin_inset Formula $m=\overline{m}q$
+\end_inset
+
+ ganz genauso) läßt sich die Modulo-Division 
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+
+\begin_inset Formula $m^{\varphi}\bmod n$
+\end_inset
+
+
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+ durch Kürzen von 
+\begin_inset Formula $p$
+\end_inset
+
+ 
+\family default
+\series default
+\shape default
+\size default
+\emph default
+\bar default
+\noun default
+\color inherit
+und unter Berücksichtigung von 
+\begin_inset Formula $\overline{m}<q$
+\end_inset
+
+ 
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+folgendermaßen vereinfachen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+m^{\varphi}\bmod n & =(\overline{m}p\bmod pq)^{\varphi}\bmod n=(\overline{m}\bmod q)^{\varphi}\bmod n=\overline{m}^{\varphi}\bmod q\bmod n=\overline{m}^{\varphi}\bmod q\mperiod\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wegen 
+\begin_inset Formula $\overline{m}\in\mathbb{Z}_{q}^{*}$
+\end_inset
+
+ kann jetzt wieder der Satz von 
+\noun on
+Euler
+\noun default
+ zur Anwendung kommen, was den Beweis vervollständigt.
+\end_layout
+
+\begin_layout Subsubsection
+Optimierung
+\end_layout
+
+\begin_layout Standard
+Eine Beschleunigung des Verfahrens läßt sich (algorithmisch) vor allem beim
+ Entschlüsseln erzielen.
+ Geht man dazu von
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+m' & =c^{d}\bmod n=c^{d}-lpq,\qquad l\in\mathbb{N}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+aus, dann lassen sich (durch Modulo-Division nach 
+\begin_inset Formula $p$
+\end_inset
+
+ und 
+\begin_inset Formula $q$
+\end_inset
+
+) die folgenden zwei Kongruenzen formulieren:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+m' & \equiv c^{d}\pmod{p} & m' & \equiv c^{d}\pmod{q}\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Diese legen eine Anwendung des Chinesischen Restsatzes
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Chinesischer Restsatz
+\end_layout
+
+\end_inset
+
+ nahe
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Grossschadl:2000,Welschenbach:2001"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Eine Voraussetzung für dessen Anwendung ist: 
+\begin_inset Formula $\gcd(p,q)=1$
+\end_inset
+
+, was bei der Wahl von 
+\begin_inset Formula $n$
+\end_inset
+
+ als Produkt zweier Primzahlen gegeben ist.
+\end_layout
+
+\end_inset
+
+ Führen wir dazu die folgenden Abkürzungen ein:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
+m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Als Voraussetzung benötigt man außerdem die 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bezout, Satz von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{B
+\backslash
+'{e}zout}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
+
+\end_inset
+
+-Koeffizienten 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in der GCD-Darstellung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\gcd(p,q)=\alpha p+\beta q=1,\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+welche 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ mit Hilfe des erweiterten euklidischen Algorithmus berechnet werden können.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Anwendung des euklidischen Algorithmus stellt im allgemeinen eine recheninte
+nsive Operation dar.
+ Glücklicherweise können 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ aber im voraus (einmalig) berechnet werden.
+\end_layout
+
+\end_inset
+
+ Sie stellen, wenn man vorangegangene Gleichung nach 
+\begin_inset Formula $p$
+\end_inset
+
+ und 
+\begin_inset Formula $q$
+\end_inset
+
+ modulo-dividiert, gleichzeitig die Inversen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+\alpha & =p^{-1}\pmod{q} & \beta & =q^{-1}\pmod{p}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+dar.
+ Durch Anwendung des Chinesischen Restsatzes
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Chinesischer Restsatz
+\end_layout
+
+\end_inset
+
+ für zwei Kongruenzen kann man 
+\begin_inset Formula $m'$
+\end_inset
+
+ berechnen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+m'=(\alpha m_{q}p+\beta m_{p}q)\bmod n\mperiod\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Vorteil liegt darin, daß die modulare Exponentiation modulo 
+\begin_inset Formula $n$
+\end_inset
+
+, welche die Komplexität 
+\begin_inset Formula $\mathcal{O}(\log^{3}n)$
+\end_inset
+
+ hat, auf zwei Operationen gleicher Art, aber mit verringerter Anzahl von
+ Stellen 
+\begin_inset Formula $\log n$
+\end_inset
+
+ verteilt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der Ausdruck 
+\begin_inset Formula $\log n$
+\end_inset
+
+ stellt ein Maß für die Anzahl der notwendigen Bits zur Repräsentation von
+ 
+\begin_inset Formula $n$
+\end_inset
+
+ dar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die weitere Optimierung kann in drei Schritte erfolgen:
+\end_layout
+
+\begin_layout Enumerate
+Wendet man den Chinesischen Restsatz in der Variante nach 
+\noun on
+H.
+\begin_inset space \thinspace{}
+\end_inset
+
+L.
+\begin_inset space ~
+\end_inset
+
+Garner
+\noun default
+ an, dann kann man weitere Operationen, wie 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ die finale Reduktion modulo 
+\begin_inset Formula $n$
+\end_inset
+
+, einsparen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Garner:1959"
+
+\end_inset
+
+.
+ Denn aus der Restklassendarstellung
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+m' & =m_{q}+xq & m' & =m_{p}+yp,\qquad x,y\in\mathbb{Z}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+läßt sich eine lineare diophantische Gleichung ableiten (siehe auch Anhang
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_diophantine_eqn"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+m_{p}-m_{q} & =xq-yp,\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+welche die Lösungsmenge
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+x_{k} & =\beta(m_{p}-m_{q})+kp & y_{k} & =-\alpha(m_{p}-m_{q})-kq,\qquad k\in\mathbb{Z}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+besitzt.
+ Üblicherweise benutzt man zur Berechnung von 
+\begin_inset Formula $m'$
+\end_inset
+
+ die Lösungen für 
+\begin_inset Formula $x_{k}$
+\end_inset
+
+ und erhält in geschlossener Darstellung:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+An dieser Stelle gilt es zu beachten, daß 
+\begin_inset Formula $q\beta=qq^{-1}\neq1$
+\end_inset
+
+ (denn 
+\begin_inset Formula $q\beta\equiv1$
+\end_inset
+
+ bezieht sich ausschließlich auf den Körper 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+m' & =m_{q}+q\beta(m_{p}-m_{q})+kn\mperiod\label{eq:crypto_rsa_garner}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Comment
+status open
+
+\begin_layout Plain Layout
+\SpecialChar \ldots{}
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ in der Variante des Chinesischen Restsatzes:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula \begin{xalignat*}{2}
+m' & =m_{q}+\beta q(m_{p}-m_{q})+kpq & m' & =m_{p}-\alpha p(m_{p}-m_{q})-kpq,\qquad k\in\mathbb{Z}\\
+ & =m_{q}+\beta qm_{p}-\beta qm_{q}+kpq &  & =m_{p}-\alpha pm_{p}+\alpha pm_{q}-kpq\\
+ & =m_{q}(1-\beta q)+\beta qm_{p}+kpq &  & =m_{p}(1-\alpha p)+\alpha pm_{q}-kpq\\
+ & =\alpha pm_{q}+\beta qm_{p}+kpq &  & =\beta qm_{p}+\alpha pm_{q}-kpq\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+In Abhängigkeit vom Vorzeichen der Größen 
+\begin_inset Formula $\beta$
+\end_inset
+
+ und 
+\begin_inset Formula $m_{p}-m_{q}$
+\end_inset
+
+, mit 
+\begin_inset Formula $\beta<q$
+\end_inset
+
+ und 
+\begin_inset Formula $|m_{p}-m_{q}|<\max(p,q)$
+\end_inset
+
+, kann man sich auf die Werte 
+\begin_inset Formula $-1\leqq k\leqq+1$
+\end_inset
+
+ beschränken.
+ Eine typische Vorgehensweise ist deshalb, zuerst 
+\begin_inset Formula $h=m_{q}+q\beta(m_{p}-m_{q})$
+\end_inset
+
+ zu berechnen und dann das Ergebnis auf 
+\begin_inset Formula $0<h<n$
+\end_inset
+
+ zu prüfen -- falls es nicht in diesem Intervall liegt, muß man einmal 
+\begin_inset Formula $n$
+\end_inset
+
+ adieren/subtrahieren.
+\end_layout
+
+\begin_layout Standard
+Der Vorteil von Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:crypto_rsa_garner"
+
+\end_inset
+
+ liegt vor allem darin, daß man im Gegensatz zum Chinesischen Restsatz (wegen
+ 
+\begin_inset Formula $-1\leqq k\leqq+1$
+\end_inset
+
+) keine Modulo-Division ausführen muß.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+\begin_inset CommandInset label
+LatexCommand label
+name "enu:crypto_rsa_opt_m"
+
+\end_inset
+
+Man kann aber noch weitergehen, indem die Berechnung von 
+\begin_inset Formula $m_{p}$
+\end_inset
+
+ und 
+\begin_inset Formula $m_{q}$
+\end_inset
+
+ vereinfacht wird.
+ Eine wesentliche Zeitersparnis kommt zustande, wenn man 
+\begin_inset Formula $c$
+\end_inset
+
+ vor dessen Potenzierung in der Länge reduziert.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
+ & =(c\bmod p)^{d}\bmod p &  & =(c\bmod q)^{d}\bmod q\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Eine weitere Optimierung bezieht sich auf den Exponenten 
+\begin_inset Formula $d$
+\end_inset
+
+, welcher ebenfalls reduziert werden kann.
+ Dazu muß man sich nur klarmachen, daß durch die Reduktion von 
+\begin_inset Formula $c$
+\end_inset
+
+ in Punkt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "enu:crypto_rsa_opt_m"
+
+\end_inset
+
+ das Ergebnis der Potenzierung jeweils in 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ oder 
+\begin_inset Formula $\mathbb{Z}_{q}$
+\end_inset
+
+ und insbesondere in der zugehörigen multiplikativen Gruppe liegt.
+ Da diese zyklisch ist, wiederholen sich beim Potenzieren die Werte mit
+ der Gruppenordnung 
+\begin_inset Formula $|\mathbb{Z}_{p}^{*}|=p-1$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $|\mathbb{Z}_{q}^{*}|=q-1$
+\end_inset
+
+.
+ Aus diesem Grund kann man 
+\begin_inset Formula $d$
+\end_inset
+
+ modulo der Gruppenordnung reduzieren (kleiner Satz von 
+\noun on
+Fermat
+\noun default
+).
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+m_{p} & =(c\bmod p)^{d}\bmod p & m_{q} & =(c\bmod q)^{d}\bmod q\\
+ & =c^{d\bmod(p-1)}\bmod p &  & =c^{d\bmod(q-1)}\bmod q\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Zu der privaten Schlüsseldarstellung 
+\begin_inset Formula $(n,d)$
+\end_inset
+
+ gibt es deshalb zwei Optionen:
+\end_layout
+
+\begin_layout Itemize
+ein Tripel 
+\begin_inset Formula $(p,q,d)$
+\end_inset
+
+, was wegen 
+\begin_inset Formula $n=pq$
+\end_inset
+
+ trivial erscheint
+\end_layout
+
+\begin_layout Itemize
+und die Darstellung als Quintupel 
+\begin_inset Formula $(p,q,d_{p},d_{q},q_{\mbox{inv}})$
+\end_inset
+
+, mit 
+\begin_inset Formula $d_{p}=d\bmod(p-1)$
+\end_inset
+
+, 
+\begin_inset Formula $d_{q}=d\bmod(q-1)$
+\end_inset
+
+ und 
+\begin_inset Formula $q_{\mbox{inv}}=q^{-1}\pmod{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Wegen der signifikanten Geschwindigkeitsvorteile wird praktisch fast immer
+ die Quintupel-Variante verwendet
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE:STD1363,PKCS1:2002"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "14.5.2"
+key "Menezes:1992"
+
+\end_inset
+
+ wird auf der Grundlage einer kurzen Komplexitätsbetrachtung die Beschleunigung
+ mit dem Faktor 
+\begin_inset Formula $4$
+\end_inset
+
+ ausgewiesen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+RSA|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec_diffie_hellman"
+
+\end_inset
+
+Diffie-Hellmann Schlüsselaustausch
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Diffie-Hellmann Schlüsselaustausch
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Das Verfahren von 
+\noun on
+Diffie
+\noun default
+ und 
+\noun on
+Hellmann
+\noun default
+ nutzt das Problem des diskreten Logarithmus
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Genauer gesagt das sogenannte 
+\noun on
+Diffie
+\noun default
+-
+\noun on
+Hellmann
+\noun default
+
+\begin_inset space ~
+\end_inset
+
+Problem, welches sich durch das Produkt im Exponenten 
+\begin_inset Formula $g^{ab}$
+\end_inset
+
+ vom Problem des diskreten Logarithmus unterscheidet.
+\end_layout
+
+\end_inset
+
+ um einen Schlüsselaustausch zu realisieren.
+ Voraussetzung dafür ist eine große Primzahl 
+\begin_inset Formula $p$
+\end_inset
+
+ (öffentliches Modul) und ein Generator 
+\begin_inset Formula $g$
+\end_inset
+
+ mit 
+\begin_inset Formula $0<g<p$
+\end_inset
+
+, welche beiden Kommunikationspartnern bekannt sind.
+ Der Austausch der Session Keys erfolgt folgendermaßen:
+\end_layout
+
+\begin_layout Enumerate
+Zuerst erzeugt der Initiator des Protokolls ein (geheimes) Element 
+\begin_inset Formula $a$
+\end_inset
+
+ mit 
+\begin_inset Formula $0<a<p-1$
+\end_inset
+
+ und berechnet damit seine öffentlichen Schlüssel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $A=g^{a}\bmod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Dieser Schlüssel 
+\begin_inset Formula $A$
+\end_inset
+
+ wird plain
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Unverschlüsselt, deshalb sollte das Verfahren immer in Verbindung mit einem
+ Signaturalgorithmus verwendet werden (zum Schutz vor dem Man-in-the-middle
+ Angriff).
+\end_layout
+
+\end_inset
+
+ zum Empfänger (Responder) übertragen.
+\end_layout
+
+\begin_layout Enumerate
+Er erzeugt ebenfalls eine Zufallszahl 
+\begin_inset Formula $b$
+\end_inset
+
+ und berechnet 
+\begin_inset Formula $B=g^{b}\bmod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Anschließend überträgt er 
+\begin_inset Formula $B=g^{b}\bmod p$
+\end_inset
+
+ als (unverschlüsselte) Antwort zum Initiator.
+\end_layout
+
+\begin_layout Enumerate
+Beide Partner berechnen dann mit Hilfe von 
+\begin_inset Formula $A$
+\end_inset
+
+ bzw.
+ 
+\begin_inset Formula $B$
+\end_inset
+
+ den Session Key 
+\begin_inset Formula $g^{ab}\bmod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+Der Initiator berechnet 
+\begin_inset Formula $B^{a}=(g^{b}\bmod p)^{a}=g^{ab}\bmod p$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Itemize
+Auf der anderen Seite wird äquivalent 
+\begin_inset Formula $A^{b}=(g^{a}\bmod p)^{b}=g^{ab}\bmod p$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec_elliptic_curve"
+
+\end_inset
+
+Elliptische Kurven
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Elliptische Kurven
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Elliptische Kurven werden in der Normalform nach 
+\noun on
+Weierstraß
+\noun default
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Weierstraßsche Normalform
+\end_layout
+
+\end_inset
+
+
+\noun on
+ 
+\noun default
+durch Gleichungen der Form
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+y^{2}=x^{3}+ax+b\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+definiert (siehe Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_ellcurve_x3_1"
+
+\end_inset
+
+).
+ Wegen der (nur) zwei freien Parameter 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
+ ist jede elliptische Kurve durch zwei Punkte
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $P_{1},P_{2}$
+\end_inset
+
+ eindeutig definiert.
+ Insofern ist jeder weitere Punkt durch die Kenntnis von 
+\begin_inset Formula $P_{1}$
+\end_inset
+
+ und 
+\begin_inset Formula $P_{2}$
+\end_inset
+
+ festgelegt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+y_{1}^{2} & = & x_{1}^{3}+ax_{1}+b\\
+y_{2}^{2} & = & x_{2}^{3}+ax_{2}+b\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für 
+\begin_inset Formula $a$
+\end_inset
+
+ ergibt die Differenz beider Gleichungen
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+y_{2}^{2}-y_{1}^{2} & = & x_{2}^{3}-x_{1}^{3}+a(x_{2}-x_{1})\\
+a & = & \frac{y_{2}^{2}-y_{1}^{2}-(x_{2}^{3}-x_{1}^{3})}{x_{2}-x_{1}}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+was dann zur Berechnung von 
+\begin_inset Formula $b$
+\end_inset
+
+ verwendet wird
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+b & = & y_{1}^{2}-x_{1}^{3}-ax_{1}\\
+ & = & \frac{x_{2}(y_{1}^{2}-x_{1}^{3})-x_{1}(y_{2}^{2}-x_{2}^{3})}{x_{2}-x_{1}}\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename ellcurv_x3_1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig_ellcurve_x3_1"
+
+\end_inset
+
+Prinzip der Elliptische Kurve
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zieht man nun durch 
+\begin_inset Formula $P_{1},P_{2}$
+\end_inset
+
+ eine Gerade so berechnet sich ein dritter Punkt 
+\begin_inset Formula $P_{3}'=(x_{3},y_{3}')$
+\end_inset
+
+ nach der Geradengleichung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+\frac{y_{3}'-y_{2}}{x_{3}-x_{2}} & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}\\
+y_{3}' & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}(x_{3}-x_{2})+y_{2}=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}(x_{3}-x_{1})+y_{1}\\
+ & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}x_{3}+\frac{y_{1}x_{2}-y_{2}x_{1}}{x_{2}-x_{1}}\\
+ & = & \lambda x_{3}+\frac{y_{1}x_{2}-y_{2}x_{1}}{x_{2}-x_{1}}\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\lambda=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{y_{3}'-y_{1}}{x_{3}-x_{1}}=\frac{y_{3}'-y_{2}}{x_{3}-x_{2}}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Den Schnittpunkt 
+\begin_inset Formula $P_{3}'$
+\end_inset
+
+ mit der elliptischen Kurve
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+y_{3}'^{2}=y_{3}^{2} & = & x_{3}^{3}+ax_{3}+b\\
+ & = & x_{3}^{3}+ax_{3}+y_{1}^{2}-x_{1}^{3}-ax_{1}\\
+ & = & x_{3}^{3}-x_{1}^{3}+a(x_{3}-x_{1})+y_{1}^{2}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+findet man durch Gleichsetzen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Unter Zuhilfenahme von 
+\begin_inset Formula $a^{3}-b^{3}=(a-b)(a^{2}+ab+b^{2})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+x_{3}^{3}-x_{1}^{3}+\lambda(x_{3}-x_{1})\frac{y_{2}^{2}-y_{1}^{2}-(x_{2}^{3}-x_{1}^{3})}{y_{2}-y_{1}}+y_{1}^{2} & = & \left[\lambda(x_{3}-x_{1})+y_{1}\right]^{2}\\
+x_{3}^{3}-x_{1}^{3}+\lambda(x_{3}-x_{1})(y_{2}+y_{1})-(x_{3}-x_{1})(x_{2}^{2}+x_{2}x_{1}+x_{1}^{2})+y_{1}^{2} & = & \lambda^{2}(x_{3}-x_{1})^{2}+2\lambda y_{1}(x_{3}-x_{1})+y_{1}^{2}\\
+x_{3}^{2}+x_{1}x_{3}+x_{1}^{2}+\lambda(y_{2}+y_{1})-x_{2}^{2}-x_{2}x_{1}-x_{1}^{2} & = & \lambda^{2}(x_{3}-x_{1})+2\lambda y_{1}\\
+x_{3}^{2}-x_{2}^{2}+x_{1}x_{3}+\lambda(y_{2}-y_{1})-x_{2}x_{1} & = & \lambda^{2}(x_{3}-x_{1})\\
+x_{3}^{2}-x_{2}^{2}+x_{1}x_{3}+\lambda^{2}(x_{2}-x_{1})-x_{2}x_{1} & = & \lambda^{2}(x_{3}-x_{1})\\
+(x_{3}-x_{2})(x_{3}+x_{2})+x_{1}(x_{3}-x_{2})-\lambda^{2}(x_{3}-x_{2}) & = & 0\\
+x_{3}+x_{2}+x_{1}-\lambda^{2} & = & 0\\
+x_{3} & = & \lambda^{2}-x_{2}-x_{1}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Aus der Geradengleichung ist nun auch 
+\begin_inset Formula $y_{3}'$
+\end_inset
+
+ berechenbar
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+y_{3}' & = & \lambda(x_{3}-x_{1})+y_{1}\\
+ & = & \lambda(\lambda^{2}-x_{2}-2x_{1})+y_{1}\\
+ & = & \lambda^{3}-\lambda(x_{2}+2x_{1})+y_{1}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Anwendbarkeit
+\end_layout
+
+\begin_layout Standard
+Der kryptologische Hintergrund ist nun folgender.
+ Man definiert die Addition zweier Punkte 
+\begin_inset Formula $P_{1},P_{2}$
+\end_inset
+
+ zu 
+\begin_inset Formula $P_{3}=P_{1}+P_{2}$
+\end_inset
+
+ so, daß 
+\begin_inset Formula $P_{3}$
+\end_inset
+
+ (wie in Abbildung
+\begin_inset space ~
+\end_inset
+
+ 
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_ellcurve_x3_1"
+
+\end_inset
+
+ dargestellt) wieder auf der elliptischen Kurve liegt
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Diese Operation kann man auf dem Körper der rationalen Zahlen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{Q}$
+\end_inset
+
+ oder z.B.
+\begin_inset space ~
+\end_inset
+
+auf der Menge der ganzen Zahlen modulo einer Primzahl
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\mathbb{F_{p}}$
+\end_inset
+
+ definieren (der kryptologisch interessantere Fall).
+\end_layout
+
+\end_inset
+
+.
+ Die Menge aller dieser Punkte 
+\begin_inset Formula $P_{3}$
+\end_inset
+
+ soll eine 
+\noun on
+Abel
+\noun default
+sche Gruppe 
+\begin_inset Formula $(G,+)$
+\end_inset
+
+ bilden, d.h.
+ es müssen folgende Bedingungen erfüllt sein.
+\end_layout
+
+\begin_layout Enumerate
+Die Addition von 
+\begin_inset Formula $P_{1},P_{2}\in G$
+\end_inset
+
+ führt in jedem Fall zu 
+\begin_inset Formula $P_{3}\in G=P_{1}+P_{2}$
+\end_inset
+
+.
+ Sie ist folgendermaßen erklärt:
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Normalfall
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula \begin{eqnarray*}
+x_{3} & = & \lambda^{2}-x_{2}-x_{1}\\
+-y_{3} & = & \lambda(x_{3}-x_{1})+y_{1}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Für 
+\begin_inset Formula $P_{1}=P_{2}=P=(x,y)$
+\end_inset
+
+ (der Anstieg 
+\begin_inset Formula $\frac{y_{2}-y_{1}}{x_{2}-x_{1}}\rightarrow\infty$
+\end_inset
+
+) wird die Tangente angelegt, d.h.
+ 
+\begin_inset Formula $\lambda$
+\end_inset
+
+ entspricht der ersten Ableitung der elliptischen Kurve am Punkt 
+\begin_inset Formula $P$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula \[
+\lambda=\frac{1}{2}\frac{3x^{2}+a}{\sqrt{x^{3}+ax+b}}=\frac{3x^{2}+a}{2y}\]
+
+\end_inset
+
+ und es gilt
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula \begin{eqnarray*}
+x_{3} & = & \left(\frac{3x^{2}+a}{2y}\right)^{2}-2x\\
+y_{3} & = & \frac{3x^{2}+a}{2y}(x-x_{3})-y\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Im Fall 
+\begin_inset Formula $x_{1}=x_{2}$
+\end_inset
+
+ und 
+\begin_inset Formula $y_{2}=-y_{1}$
+\end_inset
+
+ wird 
+\begin_inset Formula $P_{3}=(0,0)$
+\end_inset
+
+ definiert.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Die Addition sei assoziativ: 
+\begin_inset Formula $P_{1}+(P_{2}+P_{3})=(P_{1}+P_{2})+P_{3}$
+\end_inset
+
+ für 
+\begin_inset Formula $P_{1},P_{2},P_{3}\in G$
+\end_inset
+
+,
+\end_layout
+
+\begin_layout Enumerate
+Es gibt das neutrale Element 
+\begin_inset Formula $O\in G$
+\end_inset
+
+ mit 
+\begin_inset Formula $P+O=O+P=P$
+\end_inset
+
+ für 
+\begin_inset Formula $P\in G$
+\end_inset
+
+ .
+ Nimmt man an, daß 
+\begin_inset Formula $O=(x_{1},y_{1})$
+\end_inset
+
+ ist, dann muß die Forderung 
+\begin_inset Formula $P_{3}=P_{2}$
+\end_inset
+
+ gestellt werden, um 
+\begin_inset Formula $(x_{1},y_{1})$
+\end_inset
+
+ zu ermitteln.
+ Dazu verwendet man 
+\begin_inset Formula $x_{3}=\lambda^{2}-x_{2}-x_{1}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\lambda=\frac{y_{3}-y_{2}}{x_{3}-x_{2}}\rightarrow\infty$
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Formula \begin{eqnarray*}
+x_{1} & = & \lim_{\lambda\rightarrow\infty}\lambda^{2}-2x_{2}\\
+x_{1} & = & \infty\end{eqnarray*}
+
+\end_inset
+
+ und damit 
+\begin_inset Formula $y_{1}=\lim_{\lambda,x_{1}\rightarrow\infty}\lambda(x_{1}-x_{2})-y_{2}=\infty$
+\end_inset
+
+ .
+ Das neutrale Element ist damit 
+\begin_inset Formula $O=(\infty,\infty)$
+\end_inset
+
+, was auch geometrisch einleuchtend ist.
+\end_layout
+
+\begin_layout Enumerate
+Zu jedem beliebigen Element 
+\begin_inset Formula $P\in G$
+\end_inset
+
+ findet man 
+\begin_inset Formula $-P\in G$
+\end_inset
+
+, so daß wieder 
+\begin_inset Formula $(-P)+P=O$
+\end_inset
+
+ gültig ist.
+\end_layout
+
+\begin_layout Paragraph
+Kryptographische Anwendung
+\end_layout
+
+\begin_layout Standard
+Für die kryptographische Anwendung, insbesondere für Verfahren, die auf
+ dem diskreten Algorithmus basieren, wird zuerst die Gruppenpotenz definiert
+ zu 
+\begin_inset Formula $y=x^{n}=x\diamond x\diamond x\cdots x\diamond x$
+\end_inset
+
+.
+ Das diskrete Logarithmus Problem besteht nun bekanntermaßen darin die Zahl
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $n$
+\end_inset
+
+ zu finden, was bei einer Gruppenaddition per elliptischer Kurve ziemlich
+ schwierig ist.
+ Eines der bekanntesten Beispiele ist die Umsetzung des Diffie-Hellman Schlüssel
+austausches (vgl.
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec_diffie_hellman"
+
+\end_inset
+
+) auf elliptische Kurven
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Rosing:1999"
+
+\end_inset
+
+.
+ Aber auch Signatur- und Public-Key Verfahren können damit realisiert werden
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE:P1363"
+
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ANSI:X9:62"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
+Integrität
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integritaet@Integrität
+\end_layout
+
+\end_inset
+
+ und Authentizität
+\end_layout
+
+\begin_layout Standard
+Um die Integrität einer Nachricht zu schützen wendet man typischerweise
+ entweder Message Authentication Codes (MACs) oder aber digitale Signaturen
+ an
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Verwendung von Countern zum Schutz vor Replay-Atacken ist meist optional.
+\end_layout
+
+\end_inset
+
+.
+ Erstere sind mit symmetrischen Verfahren verbunden, letztere im Sprachgebrauch
+ fast immer auf asymmetrische Algorithmen bezogen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Integrität und Authentizität sind nicht voneinander zu trennen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "9.6.1"
+key "Menezes:1992"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+ Praktisch wird bei einer Integritätsprüfung (in den meisten Fällen) gleichzeiti
+g die Authentizität der Nachricht mit Bezug auf den Absender verifiziert.
+\end_layout
+
+\begin_layout Subsection
+MACs
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die gebräuchlichsten Verfahren der Bildung von MACs sind mittlerweile standardis
+iert, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:9797-2"
+
+\end_inset
+
+.
+ Dabei handelt es sich um den CBC-MAC und den HMAC mit kryptographischen
+ Hashfunktionen wie MD5
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MD5
+\end_layout
+
+\end_inset
+
+, SHA
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+SHA
+\end_layout
+
+\end_inset
+
+ oder RIPEMD
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+RIPEMD
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Subsubsection
+CBC-MAC
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MAC!CBC-
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:cbc_mac"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beim CBC-MAC handelt es sich um ein schon relativ lange in Benutzung befindliche
+s Verfahren zur Erzeugung von MACs
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:9797-1"
+
+\end_inset
+
+.
+ Dabei wird eine Blockchiffre im CBC-Modus genutzt, deren Zwischenergebnisse
+ jedoch nicht weiterverwendet.
+ Statt dessen wird nur das Resultat der letzten Verschlüsselung (immer mit
+ dem Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+) als kryptographische Prüfsumme (MAC) über die Nachricht 
+\begin_inset Formula $M$
+\end_inset
+
+ interpretiert.
+ Folgende Formel beschreibt jeden Einzelschritt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+c_{i}=E_{K}(c_{i-1}\oplus m_{i})\textrm{ mit }c_{-1}={IV}.\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:cbcmac_proc"
+
+\end_inset
+
+ stellt das gesamte Verfahren anschaulich dar.
+ Erwähnt werden soll noch, daß
+\end_layout
+
+\begin_layout Itemize
+die Nachricht 
+\begin_inset Formula $M$
+\end_inset
+
+ bei Bedarf auf die Blockbreite des Algorithmus 
+\begin_inset Formula $E$
+\end_inset
+
+ zu padden ist
+\end_layout
+
+\begin_layout Itemize
+und immer ein Initialisierungsvektor
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Initialisierungsvektor
+\end_layout
+
+\end_inset
+
+ (IV
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+IV|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Initialisierungsvektor}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+) benötigt wird
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der IV kann durchaus statisch sein, da ein Codebook-Angriff auf den ersten
+ Block (wie bei der CBC-Verschlüsselung möglich) hier nicht anwendbar ist
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "9.5.1"
+key "Menezes:1992"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename cbc_mac.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:cbcmac_proc"
+
+\end_inset
+
+Bildung des CBC-MAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+XCBC-MAC
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MAC!XCBC-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+XCBC-MAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der XCBC-MAC (Extended MAC) geht im Original auf
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Black:2000"
+
+\end_inset
+
+ zurück, hat seine Popularität wahrscheinlich aber IPSec zu verdanken
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RFC3566"
+
+\end_inset
+
+.
+ Er behebt eine Schwachstelle des CBC-MAC, die nur bei Nachrichten variabler
+ Länge in Erscheinung tritt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Example~9.62"
+key "Menezes:1992"
+
+\end_inset
+
+.
+ Die Bildungsvorschrift entspricht weitestgehend dem CBC-MAC, unterscheidet
+ sich jedoch wesentlich bei der Behandlung des letzten Blocks (siehe Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:xcbc_mac"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:xcbc_mac_multiple"
+
+\end_inset
+
+ohne Padding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename xcbc_mac_multiple.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:xcbc_mac_padding"
+
+\end_inset
+
+mit Padding
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename xcbc_mac_padding.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:xcbc_mac"
+
+\end_inset
+
+Bildung des XCBC-MAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Einzelschritte sind:
+\end_layout
+
+\begin_layout Enumerate
+Aus dem Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ werden durch Verschlüsselung drei neue Schlüssel erzeugt.
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+K_{1} & =E_{K}(\hex{01}\ldots\hex{01})\\
+K_{2} & =E_{K}(\hex{02}\ldots\hex{02})\\
+K_{3} & =E_{K}(\underbrace{\hex{03}\ldots\hex{03}}_{n/8})\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Mit dem Schlüssel 
+\begin_inset Formula $K_{1}$
+\end_inset
+
+ wird, abgesehen vom letzten Block, ein CBC-MAC nach Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:cbc_mac"
+
+\end_inset
+
+ gebildet.
+\end_layout
+
+\begin_layout Enumerate
+Die Verarbeitung des letzten Blocks wird nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:xcbc_mac"
+
+\end_inset
+
+ vorgenommen, wobei das Vorgehen davon abhängt, ob die Länge der Nachricht
+ 
+\begin_inset Formula $M$
+\end_inset
+
+ ein Vielfaches der Blockbreite 
+\begin_inset Formula $n$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Ist die Länge der Nachricht ein Vielfaches der Blockbreite 
+\begin_inset Formula $n$
+\end_inset
+
+, dann wird im letzten Schritt
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+\mbox{MAC}=E_{K_{1}}(m_{i}\oplus c_{i-1}\oplus K_{2})\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+gerechnet.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sollte jedoch Padding
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Padding
+\end_layout
+
+\end_inset
+
+ nötig ein, dann wird zuerst ein 
+\begin_inset Formula $1$
+\end_inset
+
+-Bit angehängt und bei Bedarf auf ein Vielfaches von 
+\begin_inset Formula $n$
+\end_inset
+
+ mit Nullen aufgefüllt.
+ Die Berechnung des MAC geht nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:xcbc_mac_padding"
+
+\end_inset
+
+ vor sich:
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\"|\"|$"
+description "Concatenation"
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+\mbox{MAC}=E_{K_{1}}(\underbrace{m_{i}||(100\ldots00)}_{n}\oplus c_{i-1}\oplus K_{3}).\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_deeper
+\begin_layout Subsubsection
+Hash-MAC (HMAC)
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MAC!Hash-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+HMAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der HMAC einer Message 
+\begin_inset Formula $M$
+\end_inset
+
+ wird mittels einer kryptographischen Hashfunktion
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Hashfunktion bestimmt in wesentlichem Maße die Sicherheit des Algorithmus.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hashfunktion
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $H$
+\end_inset
+
+ berechnet
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RFC2104,ISO:9797-2,FIPS:198-1"
+
+\end_inset
+
+.
+ Dazu geht man in folgenden Schritten vor:
+\end_layout
+
+\begin_layout Enumerate
+Der geheime Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ wird durch Anhängen von Null-Bytes auf die Blockbreite der Hashfunktion
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Der Fall, daß die Länge des Schlüssels 
+\begin_inset Formula $K$
+\end_inset
+
+ die Blockbreite der Hashfunktion überschreitet kommt in der Praxis weniger
+ häufig vor.
+ Tritt er aber ein, so wird nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RFC2104"
+
+\end_inset
+
+ in einem vorgelagerten Schritt 
+\begin_inset Formula $K'=H(K)$
+\end_inset
+
+ gebildet und an Stelle von 
+\begin_inset Formula $K$
+\end_inset
+
+ immer mit 
+\begin_inset Formula $K'$
+\end_inset
+
+ gearbeitet.
+\end_layout
+
+\end_inset
+
+ gebracht (ANSI-Padding
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Padding
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Padding!ANSI-
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Enumerate
+Der so verlängerte Schlüssel wird nun mit einer Wiederholung von 
+\begin_inset Formula $\hex{36}$
+\end_inset
+
+ bitweise Exklusiv-Oder (XOR) verknüpft.
+\end_layout
+
+\begin_layout Enumerate
+An diesen ersten Block wird die (zu schützende) Message 
+\begin_inset Formula $M$
+\end_inset
+
+ angehängt und auf die Verkettung unsere Hashfunktion 
+\begin_inset Formula $H$
+\end_inset
+
+ angewendet.
+ Als Resultat erhält man: 
+\begin_inset Formula $I\textrm{(nner)}=H[(K||\hex{00}\ldots\hex{00})\oplus(\hex{36}\ldots\hex{36})||M]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Genauso wie in Punkt 1 und 2 wird nun der Schlüssel 
+\begin_inset Formula $K$
+\end_inset
+
+ nocheinmal verarbeitet, nur das die XOR-Operation mit 
+\begin_inset Formula $\hex{5C}$
+\end_inset
+
+ erfolgt.
+\end_layout
+
+\begin_layout Enumerate
+An das Ergebnis wird 
+\begin_inset Formula $I\textrm{(nner)}$
+\end_inset
+
+ angehängt und darauf erneut die Hashfunktion 
+\begin_inset Formula $H$
+\end_inset
+
+ angewendet.
+ Als Ergebnis liegt schlußendlich der HMAC der Message 
+\begin_inset Formula $M$
+\end_inset
+
+ vor
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die Bildung von 
+\begin_inset Formula $O\textrm{(uter)}$
+\end_inset
+
+ ist recht effizient, da nur zwei Blöcke zu verarbeiten sind.
+\end_layout
+
+\end_inset
+
+: 
+\begin_inset Formula $O\textrm{(uter)}=H[(K||\hex{00}\ldots\hex{00})\oplus(\hex{5C}\ldots\hex{5C})||I]$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:hmac_proc"
+
+\end_inset
+
+ veranschaulicht das gesamte Verfahren.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename hmac.eps
+	width 100col%
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hmac_proc"
+
+\end_inset
+
+Bildung des HMAC
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Signaturen
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Eine Signatur wird durch asymmetrische Verschlüsselung des Hash
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hash
+\end_layout
+
+\end_inset
+
+-Wert (Digest
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Digest
+\end_layout
+
+\end_inset
+
+) einer Nachricht mit dem privaten Schlüssel gebildet.
+ Sie kann dann durch jeden Empfänger, der den öffentlichen Schlüssel besitzt,
+ verifiziert werden.
+\end_layout
+
+\begin_layout Subsubsection
+RSA
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+RSA-Algorithmus
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die RSA-Signatur über eine Nachricht 
+\begin_inset Formula $m$
+\end_inset
+
+ wird berechnet, indem der Hash-Wert von 
+\begin_inset Formula $m$
+\end_inset
+
+ mit dem privaten RSA-Schlüssel (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec_rsa"
+
+\end_inset
+
+) verschlüsselt wird.
+ Auf der Empfangsseite muß der, mit dem öffentlichen Schlüssel entschlüsselte
+ Hash, mit dem berechneten Wert für die Nachricht übereinstimmen
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Die (etwas unübliche) Verwendung des privaten Schlüssels für die Verschlüsselung
+ ist auf der Grundlage von Symmetrieformel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:rsa_symmetry"
+
+\end_inset
+
+ möglich.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+RSA hat die für digitale Signaturen
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur
+\end_layout
+
+\end_inset
+
+ wichtige Eigenschaft, daß Ver- und Entschlüsselung vertauschbar sind.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align}
+p & =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(d,n)}}p\right]\right\} =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(e,n)}}p\right]\right\} \label{eq:rsa_symmetry}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Digital Signature Algorithm
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Digital Signature Algorithm
+\end_layout
+
+\end_inset
+
+ (DSA
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+DSA
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+Der 
+\emph on
+Digital Signature Algorithm
+\emph default
+ (DSA) ist in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FIPS:186"
+
+\end_inset
+
+ standardisiert.
+ wurde für ATM Security in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Annex~6.8.2"
+key "ATMF:SecuritySpec:1999"
+
+\end_inset
+
+ verwendet.
+ Signiert wird der Hash-Wert
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Durch FIPS
+\begin_inset space ~
+\end_inset
+
+PUB wird hier i.A.
+ die Verwendung des SHA-1 Algorithmus gefordert.
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $h(m)$
+\end_inset
+
+ der Message 
+\begin_inset Formula $m$
+\end_inset
+
+.
+ 
+\end_layout
+
+\begin_layout Paragraph
+Voraussetzung
+\end_layout
+
+\begin_layout Enumerate
+Zuerst wählt man wieder eine große Primzahl 
+\begin_inset Formula $p$
+\end_inset
+
+ (das Modul) und ermittelt einen primen Teiler der 
+\noun on
+Euler
+\noun default
+-Funktion 
+\begin_inset Formula $\totient(p)=(p-1)$
+\end_inset
+
+, bezeichnet mit 
+\begin_inset Formula $q$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Nun wird eine Zahl 
+\begin_inset Formula $h$
+\end_inset
+
+ (mit 
+\begin_inset Formula $1<h<p-1$
+\end_inset
+
+) gewählt und modulo-exponentiert zu
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+g=h^{(p-1)/q}\bmod p\label{eqn_dsa_exp_g}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Außerdem wird ein privater Schlüssel 
+\begin_inset Formula $x$
+\end_inset
+
+ mit 
+\begin_inset Formula $0<x<q$
+\end_inset
+
+ gewählt.
+\end_layout
+
+\begin_layout Enumerate
+Der öffentliche Schlüssel 
+\begin_inset Formula $y$
+\end_inset
+
+ wird nach folgender Formel berechnet:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+y=g^{x}\bmod p\label{eqn_dsa_pubkey_y}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Die Daten 
+\begin_inset Formula $p,q$
+\end_inset
+
+ (optional 
+\begin_inset Formula $g$
+\end_inset
+
+, dann muß 
+\begin_inset Formula $g$
+\end_inset
+
+ nicht erneut berechnet werden) sowie der öffentliche Schlüssel 
+\begin_inset Formula $y$
+\end_inset
+
+ werden sicher an den/die Empfänger verteilt.
+\end_layout
+
+\begin_layout Paragraph
+Signieren
+\end_layout
+
+\begin_layout Standard
+Zum Signieren wählt man eine beliebige Zahl
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $k$
+\end_inset
+
+, mit 
+\begin_inset Formula $0<k<q$
+\end_inset
+
+, und berechnet damit zwei Zahlen 
+\begin_inset Formula $r,s$
+\end_inset
+
+ nach folgender Vorschrift:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+r & = & g^{k}\bmod p\bmod q\label{eqn_dsa_sign_r}\\
+s & = & k^{-1}\left[h(m)+xr\right]\bmod q\label{eqn_dsa_sign_s}\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Zur Bestimmung des inversen 
+\begin_inset Formula $k$
+\end_inset
+
+ ist das Lösen der Kongruenz 
+\begin_inset Formula $k^{-1}k\equiv1\pmod{q}$
+\end_inset
+
+ notwendig.
+ Vorteilhaft können sowohl Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_dsa_sign_r"
+
+\end_inset
+
+ als auch 
+\begin_inset Formula $k^{-1}$
+\end_inset
+
+ im Voraus (off-line) berechnet werden
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In sehr seltenen Fällen kann sowohl 
+\begin_inset Formula $r$
+\end_inset
+
+ als auch 
+\begin_inset Formula $s$
+\end_inset
+
+ Null werden, dann sollte man eine andere Zahl 
+\begin_inset Formula $k$
+\end_inset
+
+ wählen.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Abschließend wird die Message 
+\begin_inset Formula $m$
+\end_inset
+
+ sowie 
+\begin_inset Formula $(r,s)$
+\end_inset
+
+ als Signatur zum Empfänger übertragen.
+\end_layout
+
+\begin_layout Paragraph
+Verifizieren
+\end_layout
+
+\begin_layout Standard
+Das Verifizieren einer empfangenen Signatur 
+\begin_inset Formula $(\hat{r},\hat{s})$
+\end_inset
+
+ erfolgt folgendermaßen:
+\end_layout
+
+\begin_layout Enumerate
+Zuerst wird geprüft ob 
+\begin_inset Formula $0<\hat{r}<q$
+\end_inset
+
+ und 
+\begin_inset Formula $0<\hat{s}<q$
+\end_inset
+
+ gilt.
+\end_layout
+
+\begin_layout Enumerate
+Dann berechnet der Empfänger aus dem empfangenen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $\hat{s}$
+\end_inset
+
+ das Modulo-Inverse 
+\begin_inset Formula $w=\hat{s}^{-1}\bmod q$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Damit werden zwei Exponenten berechnet
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+\begin_inset Formula $u_{1}=\left[h(m)w\right]\bmod q$
+\end_inset
+
+ und
+\end_layout
+
+\begin_layout Enumerate
+\begin_inset Formula $u_{2}=(\hat{r}w)\bmod q$
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Zuletzt wird 
+\begin_inset Formula $v=\left[g^{u_{1}}\cdot y^{u_{2}}\right]\bmod p\bmod q$
+\end_inset
+
+ berechnet, was genau 
+\begin_inset Formula $\hat{r}$
+\end_inset
+
+ entsprechen muß.
+\end_layout
+
+\begin_layout Paragraph
+Beweis
+\end_layout
+
+\begin_layout Standard
+Dazu für richtige Signatur, d.h.
+ 
+\begin_inset Formula $r=\hat{r}$
+\end_inset
+
+ und 
+\begin_inset Formula $s=\hat{s}$
+\end_inset
+
+, ausgehend von Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_dsa_pubkey_y"
+
+\end_inset
+
+ und der Berechnungsformel für
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $v$
+\end_inset
+
+, der Beweis.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+v & =\left(g^{u_{1}}\cdot y^{u_{2}}\right)\bmod p\pmod{q}\\
+ & =\left[g^{h(m)w-l_{1}q}\cdot y^{rw-l_{2}q}\right]\bmod p\pmod{q}\\
+ & =\left[g^{-(l_{1}+l_{2})q}\cdot g^{h(m)w}\cdot(g^{x}\bmod p)^{rw}\right]\bmod p\pmod{q}\\
+ & =\left[g^{-(l_{1}+l_{2})q}\cdot g^{h(m)w}\cdot g^{xrw}\right]\bmod p\pmod{q}\\
+ & =\left\{ g^{-(l_{1}+l_{2})q}\cdot g^{\left[h(m)+xr\right]w}\right\} \bmod p\pmod{q}\\
+ & =\left\{ g^{-(l_{1}+l_{2})q}\cdot g^{s^{-1}\left[h(m)+xr\right]}\right\} \bmod p\pmod{q}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Umformung von Voraussetzung in Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_dsa_sign_s"
+
+\end_inset
+
+ zu
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+sk & =h(m)+xr\pmod{q}\\
+k & =s^{-1}\left[h(m)+xr\right]\pmod{q}\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und Einsetzen liefert für 
+\begin_inset Formula $v$
+\end_inset
+
+ unter Zuhilfenahme von Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_dsa_exp_g"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+v & = & \left[g^{-(l_{1}+l_{2})q}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
+ & = & \left[\left(g^{q}\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
+ & = & \left[\left(g^{q}\bmod p\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
+ & = & \left[\left(h^{p-1}\bmod p\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+für jedes 
+\begin_inset Formula $l_{\upsilon}\in\mathbb{Z}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Nach 
+\noun on
+Fermat
+\noun default
+s 
+\begin_inset Quotes eld
+\end_inset
+
+kleinem
+\begin_inset Quotes erd
+\end_inset
+
+ Satz ist aber 
+\begin_inset Formula $h^{p-1}\bmod p$
+\end_inset
+
+ kongruent Eins und es ergibt sich für 
+\begin_inset Formula $v$
+\end_inset
+
+ endgültig
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+v & = & g^{k}\bmod p\pmod{q}\\
+v & = & r\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Efficient Digital Signature Scheme
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Efficient Digital Signature Scheme
+\end_layout
+
+\end_inset
+
+ (ESIGN
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+ESIGN
+\end_layout
+
+\end_inset
+
+)
+\end_layout
+
+\begin_layout Standard
+
+\emph on
+ESIGN
+\emph default
+ nutzt wieder das Faktorisierungsproblem großer Zahlen als Einweg-Funktion
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "okamoto:1990"
+
+\end_inset
+
+.
+ Zum Signieren wird aus dem Hashwert der Message 
+\begin_inset Formula $h'(m)$
+\end_inset
+
+ ein Signaturblock
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $h(m)$
+\end_inset
+
+ nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Annex~6.8.3.1"
+key "ATMF:SecuritySpec:1999"
+
+\end_inset
+
+ gebildet, der dann mit dem 
+\emph on
+ESIGN
+\emph default
+-Verfahren bearbeitet wird..
+\end_layout
+
+\begin_layout Paragraph
+Voraussetzung
+\end_layout
+
+\begin_layout Enumerate
+Zuerst wählt man zwei große Primzahlen 
+\begin_inset Formula $p$
+\end_inset
+
+ und 
+\begin_inset Formula $q$
+\end_inset
+
+ (
+\begin_inset Formula $p>q$
+\end_inset
+
+ aber mit gleicher Bitlänge 
+\begin_inset Formula $L_{p}=L_{q}=L$
+\end_inset
+
+), die den privaten Schlüssel 
+\begin_inset Formula $(p,q)$
+\end_inset
+
+ bilden.
+\end_layout
+
+\begin_layout Enumerate
+Daraus wird das öffentliche Modul 
+\begin_inset Formula $n=p^{2}q$
+\end_inset
+
+ (mit Bitlänge 
+\begin_inset Formula $L_{n}=3L$
+\end_inset
+
+ und Nebenbedingung 
+\begin_inset Formula $h(m)<n$
+\end_inset
+
+) berechnet, welches zusammen mit einer Zahl 
+\begin_inset Formula $k\geq4$
+\end_inset
+
+ den öffentlichen Schlüssel 
+\begin_inset Formula $(n,k)$
+\end_inset
+
+ bildet.
+\end_layout
+
+\begin_layout Paragraph
+Signieren
+\end_layout
+
+\begin_layout Enumerate
+Zum Signieren wird jetzt eine Zufallszahl 
+\begin_inset Formula $x$
+\end_inset
+
+ mit 
+\begin_inset Formula $0\leq x<pq$
+\end_inset
+
+ gewählt.
+\end_layout
+
+\begin_layout Enumerate
+Es werden daraus die folgenden Größen berechnet
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula $y=\left\lceil x\right\rceil $
+\end_inset
+
+ wird als 
+\emph on
+ceil
+\emph default
+-Funktion bezeichnet und definiert die kleinste Zahl 
+\begin_inset Formula $x$
+\end_inset
+
+ die größer oder gleich 
+\begin_inset Formula $x$
+\end_inset
+
+ ist.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+w & = & \left\lceil \frac{h(m)-(x^{k}\bmod n)}{pq}\right\rceil =\frac{h(m)-(x^{k}\bmod n)}{pq}+\frac{\epsilon}{pq},\quad\epsilon<pq\\
+y & = & \frac{w}{kx^{k-1}}\bmod p=\frac{h(m)-(x^{k}\bmod n)+\epsilon}{pqkx^{k-1}}\bmod p\label{eqn_esign_y}\end{eqnarray}
+
+\end_inset
+
+ 
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+und letztlich die Signatur 
+\begin_inset Formula $S$
+\end_inset
+
+ zu
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+S=x+ypq\label{eqn_esign_signature}\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+Verifizieren
+\end_layout
+
+\begin_layout Standard
+Der Empfänger verifiziert die Signatur
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $S$
+\end_inset
+
+ durch Berechnung von 
+\begin_inset Formula $S^{k}\bmod n$
+\end_inset
+
+.
+ Wenn dieser Wert innerhalb der Schranken
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+h(m)\leq S^{k}\bmod n<h(m)+2^{2L}\]
+
+\end_inset
+
+liegt, ist die Signatur gültig
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Diese Bedingung wird häufig auch geschrieben als 
+\begin_inset Formula $h(m)\leq S^{k}\bmod n<h(m)+2^{\left\lceil 2/3L_{n}\right\rceil }$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+Beweis
+\end_layout
+
+\begin_layout Standard
+Zuerst setzt man Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_esign_signature"
+
+\end_inset
+
+ in die Verifikationsformel ein und wendet den binomischen Lehrsatz
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Binomischer Satz: 
+\begin_inset Formula $(a+b)^{n}=\sum_{i=0}^{n}\binom{n}{i}a^{i}b^{n-i}$
+\end_inset
+
+ mit 
+\begin_inset Formula $\binom{n}{i}=\frac{n!}{i!(n-i)!}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ an
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+S^{k}\bmod n & = & (x+ypq)^{k}\bmod n\\
+ & = & \sum_{i=0}^{k}\binom{k}{i}x^{i}(ypq)^{k-i}\bmod n\\
+ & = & x^{k}+kypqx^{k-1}\bmod n\end{eqnarray*}
+
+\end_inset
+
+
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Vereinfachung von Zeile 2 nach 3 ist mir nicht klar.
+\end_layout
+
+\begin_layout Plain Layout
+Es bleiben nur die Terme für i=k und i=k-1 übrig.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Offensichtlich scheint die Substitution des Terms
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $ypq$
+\end_inset
+
+ zu lohnen, wozu Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_esign_y"
+
+\end_inset
+
+ ohne das Modul
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $p$
+\end_inset
+
+ geschrieben wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+y & = & \frac{h(m)-(x^{k}\bmod n)+\epsilon}{pqkx^{k-1}}-\upsilon p\\
+ypqkx^{k-1} & = & h(m)-(x^{k}\bmod n)+\epsilon-\upsilon nkx^{k-1}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Einsetzen ergibt
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray}
+S^{k} & \equiv & x^{k}+h(m)-(x^{k}\bmod n)+\epsilon-\upsilon nkx^{k-1}\pmod{n}\\
+ & = & h(m)+\epsilon-\upsilon nkx^{k-1}\pmod{n}\\
+S^{k} & \equiv & h(m)+\epsilon\pmod{n}\label{eqn_esign_spowk}\end{eqnarray}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Man sieht sofort, daß der Ausdruck 
+\begin_inset Formula $S^{k}\pmod{n}$
+\end_inset
+
+ in Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_esign_spowk"
+
+\end_inset
+
+ immer größer als 
+\begin_inset Formula $h(m)$
+\end_inset
+
+ ist.
+\end_layout
+
+\begin_layout Standard
+Wegen der beschränkten Bitlänge 
+\begin_inset Formula $L$
+\end_inset
+
+ von 
+\begin_inset Formula $p,q$
+\end_inset
+
+ gilt immer 
+\begin_inset Formula $pq<2^{2L}$
+\end_inset
+
+.
+ Kombiniert mit der Bedingung 
+\begin_inset Formula $\epsilon<pq$
+\end_inset
+
+ erhält man
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+\epsilon<2^{2L}\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Nun kann man wieder Zuhilfenahme von Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eqn_esign_spowk"
+
+\end_inset
+
+ auch den rechten Teil der Verifikationsungleichung beweisen 
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+\left[S^{k}-h(m)\right]\bmod n & < & 2^{2L}\\
+S^{k}\bmod n & < & h(m)+2^{2L}\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Implementierung
+\end_layout
+
+\begin_layout Standard
+Praktisch kann man den Algorithmus durch Offline-Berechnung der Ausdrücke
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $x^{k}\bmod n$
+\end_inset
+
+ 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $(1/kx^{k-1})\bmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+noch erheblich beschleunigen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "okamoto:1990"
+
+\end_inset
+
+,
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "schneier:1996"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph
+ATM-Signaturblock
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+ATM-Signaturblock
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der Signaturblock 
+\begin_inset Formula $h(m)$
+\end_inset
+
+ wird nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Annex~6.8.3.1"
+key "ATMF:SecuritySpec:1999"
+
+\end_inset
+
+ aus dem eigentlichen Hashwert 
+\begin_inset Formula $h'(m)$
+\end_inset
+
+ der Message
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $m$
+\end_inset
+
+ entsprechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig_esign_sigblock"
+
+\end_inset
+
+ erzeugt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\align center
+\begin_inset Graphics
+	filename esign_hash.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig_esign_sigblock"
+
+\end_inset
+
+ESIGN Signaturblock-Bildung nach ATM-Forum
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei gilt für die Bitlänge 
+\begin_inset Formula $L$
+\end_inset
+
+ von SB 
+\begin_inset Formula $L=8K$
+\end_inset
+
+ und damit 
+\begin_inset Formula $h(m)=SB\cdot2^{2L}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Daraus ergibt sich als Verifikationsungleichung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{eqnarray*}
+SB\cdot2^{2L} & \leq & S^{k}\bmod n<SB\cdot2^{2L}+2^{2L}\\
+SB & \leq & (S^{k}\bmod n)2^{-2L}<SB+1\end{eqnarray*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+was letztlich bedeutet, daß die führenden 
+\begin_inset Formula $L$
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+Bits von 
+\begin_inset Formula $S^{k}\bmod n$
+\end_inset
+
+ mit 
+\begin_inset Formula $SB$
+\end_inset
+
+ übereinstimmen müssen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ein einfacher Vergleich von 
+\begin_inset Formula $L$
+\end_inset
+
+ Bits reduziert den Implementierungsaufwand.
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Branch WITH_APPENDIX
+status open
+
+\begin_layout Part*
+\start_of_appendix
+Anhänge
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset include
+LatexCommand include
+filename "../algebra/algebra.lyx"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
+bibfiles "adsp,crypto,math,security"
+options "bibtotoc,geralpha"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset index_print
+LatexCommand printindex
+
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document
