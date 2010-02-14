@@ -5,13 +5,16 @@
 \textclass scrartcl
 \begin_preamble
 \input{all-inc}
+\usepackage{multicol}
 
+\setlength{\nomlabelwidth}{5em}
+\date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision: 1.3 $}}
 \newcommand {\hex} [1] {\ensuremath{\mathrm{{#1}_{H}}}}
 \end_preamble
-\options reqno
 \use_default_options false
 \begin_modules
 emphasized
+synopsis
 \end_modules
 \language german
 \inputencoding latin1
@@ -25,7 +28,7 @@ emphasized
 \font_tt_scale 100
 
 \graphics default
-\float_placement tbph
+\float_placement !tbh
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -51,6 +54,10 @@ emphasized
 \selected 1
 \color #faf0e6
 \end_branch
+\branch WITH_FEAL
+\selected 0
+\color #faf0e6
+\end_branch
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -72,7 +79,7 @@ emphasized
 status open
 
 \begin_layout Plain Layout
-Version $Id: crypto.lyx,v 1.2 2009-10-18 10:04:45 ralf Exp $
+Version $Id: crypto.lyx,v 1.3 2010-02-14 14:51:11 ralf Exp $
 \end_layout
 
 \end_inset
@@ -128,18 +135,7 @@ year
 
 \end_inset
 
- Ralf Hoppe (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-$Revision: 1.2 $
-\end_layout
-
-\end_inset
-
-)
+ Ralf Hoppe
 \end_layout
 
 \begin_layout Standard
@@ -176,13 +172,17 @@ LatexCommand printnomenclature
 
 \end_layout
 
+\begin_layout Section*
+Abkürzungsverzeichnis
+\end_layout
+
 \begin_layout Standard
 \begin_inset ERT
 status open
 
 \begin_layout Plain Layout
 
-%% 
+
 \backslash
 begin{multicols}{2}
 \end_layout
@@ -192,236 +192,297 @@ begin{multicols}{2}
 
 \end_layout
 
-\begin_layout Section
-Abkürzungen
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Siehe auch 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "ETSI:ETR338"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\noindent
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-%% Description environment: modify label indentation
-\end_layout
-
-\begin_layout Plain Layout
-
-\end_layout
-
-\begin_layout Plain Layout
-
-
-\backslash
-renewcommand{
-\backslash
-descriptionlabel}[1]{
-\backslash
-hspace{
-\backslash
-labelsep}
-\backslash
-makebox[0.8in][l]{
-\backslash
-textbf{#1}}}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
 \noindent
 AAL ATM Adaption Layer
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
 \noindent
 ASN Abstract Syntax Notation
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 ATM Asynchronous Transfer Mode
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 AUTH Authentication
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
+BT Block Type
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CA Certification Authority
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CBC Cipher Block Chaining
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CFB Cipher Feedback
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CONF Confidentiality
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CRC Cyclic Redundancy Check
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 CRL Certificate Revocation List
 \end_layout
 
-\begin_layout Description
-D Decrypt
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
+D Decrypt, Data
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+DB Data Block
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 DES Data Encryption Standard
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 DH Diffie-Hellman
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 DSS Data Signature Standard
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 E Encrypt
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+EB Encoded Block
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 EC Elliptic Curve
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 ECB Electronic Codebook
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 EC/DSA Elliptic Curve Digital Signature Algorithm
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 EC/KAS Elliptic Curve Key Agreement Scheme
 \end_layout
 
-\begin_layout Description
-FB Feedback Register
+\begin_layout Labeling
+\labelwidthstring MMMM
+EM Encoded Message
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
+FB Feedback
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 FEAL Fast Data Encipherment Algorithm
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 HMAC Hashed MAC
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 ICV Integrity Check Values
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 ID Identifier
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 INTEG Integrity
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 ISK Initial Session Key
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 IV Initialisation Vector
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 LFSR Linear Feedback Shift Register
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 LSB Least Significant Bit
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 MAC Message Authentication Code
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 MD5 Message Digest 5
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 MSB Most Significant Bit
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+OAEP Optimal Asymmetric Encryption Padding
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 OID Object Identifier
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 OUI Organizationally Unique Identifier
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 PDU Protocol Data Unit 
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
+PKCS Public Key Cryptographic Standards
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
+PS Padding String
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 QoS Quality of Service
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 RNG Random Number Generator
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 RSA 
 \noun on
 Rivest
 \noun default
-, 
+-
 \noun on
 Shamir
 \noun default
-, 
+-
 \noun on
 Adleman
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 SHA Secure Hash Algorithm
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 SN Sequence Number
 \end_layout
 
-\begin_layout Description
+\begin_layout Labeling
+\labelwidthstring MMMM
+\noindent
 SV State Vector
 \end_layout
 
@@ -431,7 +492,7 @@ status open
 
 \begin_layout Plain Layout
 
-%% 
+
 \backslash
 end{multicols}
 \end_layout
@@ -450,6 +511,12 @@ Symmetrische Algorithmen
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:crypto_block_ciphers"
+
+\end_inset
+
 Blockchiffren
 \begin_inset Index
 status collapsed
@@ -480,6 +547,13 @@ Shannon
 \begin_inset space ~
 \end_inset
 
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Shannon:Secrecy:1949"
+
+\end_inset
+
  ein allgemeines (symmetrisches
 \begin_inset Foot
 status collapsed
@@ -491,28 +565,7 @@ Symmetrisch deshalb, weil für Ver- und Entschlüsselung derselbe Schlüssel
 \end_inset
 
  zur Anwendung kommt.
-\end_layout
-
-\end_inset
-
-) Kryptosystem entsprechend Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:shannon_model"
-
-\end_inset
-
- und formuliert auf dieser Grundlage erstmalig grundlegende Theoreme zur
- theoretischen Sicherheit
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Der schraffierte Bereich in Abbildung
+ Der schraffierte Bereich in Abbildung
 \begin_inset space ~
 \end_inset
 
@@ -533,7 +586,19 @@ reference "fig:shannon_model"
 
 \end_inset
 
-.
+) Kryptosystem entsprechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:shannon_model"
+
+\end_inset
+
+ und formuliert auf dieser Grundlage erstmalig grundlegende Theoreme zur
+ theoretischen Sicherheit.
 \end_layout
 
 \begin_layout Standard
@@ -572,10 +637,6 @@ Shannon
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -626,7 +687,7 @@ Komplexität
 
 \end_inset
 
- des Ver- und Entschlüsselungsalgorithmus;
+ des Ver- und Entschlüsselungsalgorithmus';
 \end_layout
 
 \begin_layout Itemize
@@ -982,8 +1043,9 @@ eg
  16) wiederholt.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
+prefix "~"
 symbol "$\\oplus$"
-description "Exklusiv-Oder (XOR)"
+description "Exklusiv-Oder (Modulo-2, XOR)"
 
 \end_inset
 
@@ -1009,24 +1071,14 @@ Der sogenannte Rundschlüssel
 \begin_inset Formula $K$
 \end_inset
 
- abgeleitet (Key Scheduling) und sollte für jede Runde verschieden sein
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Ein typisches Design-Kriterium des Algorithmus.
-\end_layout
-
-\end_inset
-
-.
+ abgeleitet (Key Scheduling) und sollte für jede Runde verschieden sein.
  Die nichtlineare Funktion 
 \begin_inset Formula $f$
 \end_inset
 
  realisiert dabei die Substitution (in Abhängigkeit vom Rundenschlüssel),
- die ständige Kreuzung von linker und rechter Hälfte zusammen mit der Xor-Operat
-ion eine reversible
+ die ständige Kreuzung von linker und rechter Hälfte zusammen mit der Exklusiv-O
+der (XOR) Operation eine reversible
 \begin_inset Foot
 status collapsed
 
@@ -1180,129 +1232,50 @@ Insbesondere wird eine Umkehrfunktion
 \end_layout
 
 \begin_layout Subsubsection
-Data Encryption Algorithm (DES)
-\end_layout
-
-\begin_layout Standard
-Außerdem muß sichergestellt sein, daß dieser Schlüssel nicht 
-\begin_inset Quotes eld
-\end_inset
-
-weak
-\begin_inset Quotes erd
-\end_inset
-
- ist, d.h.
- Ver- und Entschlüsselung das gleiche Ergebnis liefern
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Für den DES bedeutet diese Forderung, daß die 56
-\begin_inset space ~
-\end_inset
-
-Bit Schlüssel 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hex{00000000000000}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hex{FFFFFFFFFFFFFF}
-\end_layout
-
-\end_inset
-
-, 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hex{FFFFFFF0000000}
-\end_layout
-
-\end_inset
-
-und 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-hex{0000000FFFFFFF}
-\end_layout
-
-\end_inset
-
- eigentlich nicht verwendbar sind.
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Subsubsection
 Advanced Encryption Algorithm (AES)
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch WITH_FEAL
+status open
+
 \begin_layout Subsubsection
 Fast Encryption Algorithm
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Fast Encryption Algorithm
-\end_layout
-
-\end_inset
-
- (FEAL)
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-FEAL
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
-FEAL
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-FEAL
+Fast Encryption Algorithm
 \end_layout
 
 \end_inset
 
- ist ein relativ schneller Kryptoalgorithmus mit einer Blockbreite und Schlüssel
-länge von 64
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+FEAL|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Fast Encryption Algorithm}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+FEAL ist ein relativ schneller Kryptoalgorithmus mit einer Blockbreite und
+ Schlüssellänge von 64
 \begin_inset space ~
 \end_inset
 
@@ -1677,12 +1650,18 @@ f_{K_{3}} & = & S_{1}(\alpha_{3},f_{K_{2}}\oplus\beta_{3})\end{eqnarray*}
 
 \end_layout
 
-\begin_layout Standard
-Für eine kommerzielle Nutzung des Algorithmus' ist zu berücksichtigen, daß
- in USA, England, Frankreich und Deutschland Patente darauf existieren.
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:crypto_blockcipher_opmodes"
+
+\end_inset
+
 Betriebsarten
 \begin_inset Index
 status collapsed
@@ -1768,6 +1747,9 @@ name "sec:cbc"
 \end_inset
 
 Cipher Block Chaining (CBC)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Index
 status collapsed
 
@@ -1789,7 +1771,7 @@ Cipher Block Chaining (CBC)
 
 
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Modes of Operation|see
@@ -1808,10 +1790,6 @@ status open
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 In der Betriebsart CBC wird jeder Plaintext-Block 
 \begin_inset Formula $p_{i}$
 \end_inset
@@ -2200,6 +2178,9 @@ name "sec_cfb_mode"
 \end_inset
 
 Cipher Feedback (CFB)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Index
 status collapsed
 
@@ -2219,10 +2200,6 @@ DES-Modus CFB
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Im Gegensatz zum CBC-Modus (siehe Abschnitt
 \begin_inset space ~
 \end_inset
@@ -2794,6 +2771,9 @@ name "sec_ofb_mode"
 \end_inset
 
 Output Feedback (OFB)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Index
 status collapsed
 
@@ -2813,10 +2793,6 @@ DES-Modus OFB
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Auch in der Betriebsart OFB ist man prinzipiell in der Lage Blockbreiten
  
 \begin_inset Formula $r<n$
@@ -3013,6 +2989,9 @@ name "sec:ctr_mode"
 \end_inset
 
 Counter (CTR)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Index
 status collapsed
 
@@ -3022,10 +3001,6 @@ CTR-Modus
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Die CTR-Betriebsart
 \begin_inset Foot
 status collapsed
@@ -3538,7 +3513,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $FB=e_{i}$
+\begin_inset Formula $\mbox{FB}=e_{i}$
 \end_inset
 
  
@@ -3614,7 +3589,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $FB=c_{i}$
+\begin_inset Formula $\mbox{FB}=c_{i}$
 \end_inset
 
  
@@ -3684,6 +3659,1040 @@ Blockchiffren|)
 \end_layout
 
 \begin_layout Section
+Hash-Algorithmen
+\end_layout
+
+\begin_layout Subsection
+Einführung
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Hash-Algorithmen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Kryptografische Hash-Funktionen bilden das Rückgrat von Kryptoverfahren
+ und -algorithmen.
+ Wie die aus der Informatik bekannten Hash-Funktionen auch, bilden sie eine
+ große Eingangsmenge 
+\begin_inset Formula $\{x\}$
+\end_inset
+
+ eindeutig (deterministisch) auf eine viel kleinere Ausgangsmenge 
+\begin_inset Formula $y=\operatorname{H}(x)$
+\end_inset
+
+ ab.
+ Kryptografische Hash-Funktionen haben jedoch folgende ergänzende Eigenschaften,
+ welche deren Komplexität mit dem jeweiligen Stand der Technik in Verbindung
+ bringen:
+\end_layout
+
+\begin_layout Enumerate
+Es ist praktisch unmöglich zwei Eingangswerte 
+\begin_inset Formula $x\neq x'$
+\end_inset
+
+ zu finden (wahlfrei), die denselben Hashwert 
+\begin_inset Formula $y$
+\end_inset
+
+ besitzen (Kollisionsfreiheit).
+\end_layout
+
+\begin_layout Enumerate
+Der Algorithmus ist eine Einweg-Funktion
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Einweg-Funktion
+\end_layout
+
+\end_inset
+
+, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ für einen gegebenen Hash-Wert 
+\begin_inset Formula $y$
+\end_inset
+
+ kann man praktisch keinen zugehörigen Wert 
+\begin_inset Formula $x=\operatorname{H}^{-1}(y)$
+\end_inset
+
+ berechnen (1.
+\begin_inset space ~
+\end_inset
+
+Ursprungswert-Festigkeit).
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Eigentlich existiert 
+\begin_inset Formula $\operatorname{H}^{-1}$
+\end_inset
+
+ nicht einmal (oder nur theoretisch).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Es ist praktisch unmöglich zu einem vorgegebenen Eingangswert 
+\begin_inset Formula $x$
+\end_inset
+
+ einen weiteren Wert 
+\begin_inset Formula $x'\neq x$
+\end_inset
+
+ zu finden, der denselben Hash-Wert 
+\begin_inset Formula $y$
+\end_inset
+
+ erzeugt (2.
+\begin_inset space ~
+\end_inset
+
+Ursprungswert-Festigkeit).
+\end_layout
+
+\begin_layout Standard
+Insbesondere ältere Hash-Funktionen, wie 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ der MD5
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+MD5
+\end_layout
+
+\end_inset
+
+ können dies heute nicht mehr gewährleisten, aber auch der SHA-1
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+SHA-1
+\end_layout
+
+\end_inset
+
+ gilt seit 2005 als 
+\begin_inset Quotes pld
+\end_inset
+
+geknackt
+\begin_inset Quotes prd
+\end_inset
+
+.
+ Alternativen wie SHA-256 oder SHA-512 (auch kurz SHA-2
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+SHA-2
+\end_layout
+
+\end_inset
+
+ genannt) stehen zwar zur Verfügung, werden aber noch nicht überall konsequent
+ genutzt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Da auch die Lebenserwartung dieser Algorithmen begrenzt sein wird, will
+ das NIST bis 2012 den Nachfolger SHA-3 definieren (siehe 
+\begin_inset Flex URL
+status open
+
+\begin_layout Plain Layout
+
+http://csrc.nist.gov/groups/ST/hash/timeline.html
+\end_layout
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Wirkprinzip
+\end_layout
+
+\begin_layout Standard
+Die Berechnung des Hash-Wertes 
+\begin_inset Formula $y$
+\end_inset
+
+ erfolgt üblicherweise durch Zerlegung des Eingangs-Vektors 
+\begin_inset Formula $x$
+\end_inset
+
+ in 
+\begin_inset Formula $k$
+\end_inset
+
+ Blöcke fester Breite, die dann iterativ mit Hilfe einer nichtlinearen Kompressi
+onsfunktion 
+\begin_inset Formula $\operatorname{C}$
+\end_inset
+
+ verarbeitet werden.
+ Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:hash_merkle_damgard"
+
+\end_inset
+
+ zeigt die unter dem Namen Merkle/Damg
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+aa}
+\end_layout
+
+\end_inset
+
+rd-Konstruktion bekannte Struktur
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Merkle:1989,Damgard:1989"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+ Eine gewisse Ähnlichkeit mit den verketteten Betriebsarten der Blockchiffren
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:crypto_blockcipher_opmodes"
+
+\end_inset
+
+) läßt sich nicht von der Hand weisen.
+\end_layout
+
+\end_inset
+
+ Für jeden Zwischenwert gilt ausgehend von 
+\begin_inset Formula $y_{0}=\mbox{IV}$
+\end_inset
+
+ die Gleichung 
+\begin_inset Formula $y_{i}=\operatorname{C}(y_{i-1},x_{i})$
+\end_inset
+
+ und so für das Ergebnis: 
+\begin_inset Formula $y=\operatorname{H}(x)=y_{k}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename merkle-damgard.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:hash_merkle_damgard"
+
+\end_inset
+
+Merkle/Damg
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{
+\backslash
+aa}
+\end_layout
+
+\end_inset
+
+rd-Konstruktion
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Die MD-Familie
+\end_layout
+
+\begin_layout Standard
+Zu den Mitgliedern dieser Hash-Familie, welche von 
+\noun on
+R.
+\begin_inset space ~
+\end_inset
+
+Rivest
+\noun default
+ entwickelt wurde, gehören unter anderem der MD2\SpecialChar \ldots{}
+MD5, SHA-1 und SHA-2
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "RFC1321,FIPS:180-3,ISO:10118-3"
+
+\end_inset
+
+.
+ Am Beispiel des SHA-1 soll deren prinzipielle Arbeitsweise verdeutlicht
+ werden, wofür in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sha1"
+
+\end_inset
+
+ die zu SHA-1 gehörige Kompressionsfunktion 
+\begin_inset Formula $\operatorname{C}$
+\end_inset
+
+ dargestellt ist.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename sha1.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:sha1"
+
+\end_inset
+
+Hash-Funktion SHA-1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Der SHA-1 ist für 32-Bit Architekturen optimiert, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ alle Variablen in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sha1"
+
+\end_inset
+
+ sind von entsprechender Breite.
+ Die (Eingangs-) Blockbreite 
+\begin_inset Formula $x_{i}$
+\end_inset
+
+ beträgt 64
+\begin_inset space ~
+\end_inset
+
+Byte, also 16
+\begin_inset space ~
+\end_inset
+
+Worte zu je 32-Bit.
+ Ein Hash-Wert 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ besteht aus 160-Bit (20
+\begin_inset space ~
+\end_inset
+
+Byte, 5
+\begin_inset space ~
+\end_inset
+
+Worte) und wird iterativ in 80 sogenannten Runden erzeugt.
+ Speziell beim SHA-1 (nicht so bei SHA-2) werden jeweils 20
+\begin_inset space ~
+\end_inset
+
+Runden mit den gleichen Konstanten und Funktionen realisiert, so daß man
+ die Darstellung auf 4
+\begin_inset space ~
+\end_inset
+
+Funktionsblöcke 
+\begin_inset Formula $f_{1},\dots,f_{4}$
+\end_inset
+
+ reduzieren kann.
+ Der Algorithmus kann folgendermaßen beschrieben werden:
+\end_layout
+
+\begin_layout Enumerate
+Erzeuge im 
+\begin_inset Quotes pld
+\end_inset
+
+Message Schedule
+\begin_inset Quotes prd
+\end_inset
+
+ aus den 16
+\begin_inset space ~
+\end_inset
+
+Eingangsworten, welche 
+\begin_inset Formula $W_{0},\dots,W_{15}$
+\end_inset
+
+ zugeordnet werden, iterativ weitere 64
+\begin_inset space ~
+\end_inset
+
+Worte 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ nach folgender Vorschrift:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Die iterative Berechnung der 
+\begin_inset Formula $W_{i}$
+\end_inset
+
+ eröffnet im Zusammenhang mit deren sequentieller Nutzung die Möglichkeit,
+ nur jeweils 16
+\begin_inset space ~
+\end_inset
+
+Werte vorzuhalten (siehe auch 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "8.~Alternate Method of Computation"
+key "FIPS:180-1"
+
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+W_{i}=\rol^{1}(W_{i-3}\oplus W_{i-8}\oplus W_{i-14}\oplus W_{i-16}),\qquad16\leq i\leq79\mperiod\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Darin steht 
+\begin_inset Formula $\rol$
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "rol"
+symbol "$\\rol^i(x)$"
+description "Linksrotation von $x$ um $i$ Bit"
+
+\end_inset
+
+ für 
+\begin_inset Quotes pld
+\end_inset
+
+Rotate Left
+\begin_inset Quotes prd
+\end_inset
+
+ und der zugehörige Exponent für die Anzahl der Bits, um die es nach links
+ zu rotieren gilt.
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Sollte es sich um den ersten Block 
+\begin_inset Formula $x_{1}$
+\end_inset
+
+ handeln, dann initialisiere 
+\begin_inset Formula $H_{0},\dots,H_{5}$
+\end_inset
+
+ mit den Konstanten:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+H_{0} & =\hex{67452301} & H_{1} & =\hex{EFCDAB89}\\
+H_{2} & =\hex{98BADCFE} & H_{3} & =\hex{10325476}\\
+H_{4} & =\hex{C3D2E1F0}\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Ordne 
+\begin_inset Formula $(H_{0},\dots,H_{4})$
+\end_inset
+
+ dem Vektor 
+\begin_inset Formula $(A,B,C,D,E)$
+\end_inset
+
+ zu.
+\end_layout
+
+\begin_layout Enumerate
+Berechne 80
+\begin_inset space ~
+\end_inset
+
+Runden (
+\begin_inset Formula $0\leq t\leq79$
+\end_inset
+
+), im speziellen Fall von SHA-1 genau 
+\begin_inset Formula $4\cdot20$
+\end_inset
+
+ Runden (
+\begin_inset Formula $1\leq n\leq4$
+\end_inset
+
+), nach folgender Vorschrift:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{align*}
+\mathrm{TEMP} & :=\rol^{5}(A)+f_{n}(B,C,D)+E+W_{t}+K_{t}\\
+E & :=D\\
+D & :=C\\
+C & :=\rol^{30}(B)\\
+B & :=A\\
+A & :=\mathrm{TEMP},\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wobei Additionen immer modulo 
+\begin_inset Formula $2^{32}$
+\end_inset
+
+ ausgeführt werden.
+ Die Konstanten 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+ sind definiert als:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{alignat*}{4}
+K_{0} & =K_{1} &  & =\ldots &  & =\, & K_{19} & =\hex{5A827999}\\
+K_{20} & =K_{21} &  & =\ldots &  & =\, & K_{39} & =\hex{6ED9EBA1}\\
+K_{40} & =K_{41} &  & =\ldots &  & =\, & K_{59} & =\hex{8F1BBCDC}\\
+K_{60} & =K_{61} &  & =\ldots &  & =\, & K_{79} & =\hex{CA62C1D6}\mperiod\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die Funktionen 
+\begin_inset Formula $f_{1},\dots,f_{4}$
+\end_inset
+
+, welche für jeweils 20
+\begin_inset space ~
+\end_inset
+
+Runden verwendet werden, sind folgendermaßen spezifiziert:
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "~"
+symbol "$\\wedge$"
+description "(Bit-für-Bit) UND"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "~"
+symbol "$\\vee$"
+description "(Bit-für-Bit) ODER"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+f_{1}(B,C,D) & =(B\wedge C)\vee(\overline{B}\wedge D) &  & \qquad\mbox{(Multiplexer)}\\
+f_{2}(B,C,D) & =B\oplus C\oplus D &  & \qquad\mbox{(Parity)}\\
+f_{3}(B,C,D) & =(B\wedge C)\vee(B\wedge D)\vee(C\wedge D) &  & \qquad\mbox{(Majority)}\\
+f_{4}(B,C,D) & =B\oplus C\oplus D &  & \qquad\mbox{(Parity)}\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Berechne die Ergebniswerte 
+\begin_inset Formula $(H_{0},\dots,H_{4})$
+\end_inset
+
+, welche letztlich den Hash-Wert 
+\begin_inset Formula $y_{i}$
+\end_inset
+
+ dieses Blocks ausmachen, wiefolgt:
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Beachte, daß dieser letzte Schritt in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sha1"
+
+\end_inset
+
+ nicht dargestellt ist.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{xalignat*}{2}
+H_{0} & :=H_{0}+A & H_{1} & :=H_{1}+B\\
+H_{2} & :=H_{2}+C & H_{3} & :=H_{3}+D\\
+H_{4} & :=H_{4}+E\mperiod\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+SHA-2
+\end_layout
+
+\begin_layout Standard
+Bei den SHA-2
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+SHA-2
+\end_layout
+
+\end_inset
+
+ Hash-Funktionen ist dieses Prinzip erhalten geblieben, die Änderungen liegen
+ im Detail
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FIPS:180-3"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Itemize
+Die Anzahl der Bits im Hash-Wert wurde erhöht und entspricht dem jeweiligen
+ Namen: SHA-224, SHA-256, SHA-384, SHA-512.
+ Dazu gab es zwei wesentliche Modifikationen:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+SHA-224 und SHA-384 sind im Hash-Wert künstlich verkürzte SHA-256 und SHA-512
+ Varianten (die allerdings mit jeweils anderen Initialwerten für 
+\begin_inset Formula $(H_{0},\dots,H_{7})$
+\end_inset
+
+ starten).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Enumerate
+Der Hash-Vektor 
+\begin_inset Formula $(H_{0},\dots,H_{4})$
+\end_inset
+
+ wurde auf 
+\begin_inset Formula $(H_{0},\dots,H_{7})$
+\end_inset
+
+ erweitert, genau wie auch die Zwischenwerte 
+\begin_inset Formula $(A,B,C,D,E)$
+\end_inset
+
+ auf 
+\begin_inset Formula $(A,B,C,D,E,F,G,H)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+SHA-384 und SHA-512 sind optimiert für 64-Bit Architekturen, 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ jedes Wort ist 64-Bit breit und so auch die Blockbreite verdoppelt auf
+ 128
+\begin_inset space ~
+\end_inset
+
+Byte.
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+Zur 
+\begin_inset Quotes pld
+\end_inset
+
+Rotate Left
+\begin_inset Quotes prd
+\end_inset
+
+ Operation sind weitere hinzugekommen: 
+\begin_inset Quotes pld
+\end_inset
+
+Rotate Right
+\begin_inset Quotes prd
+\end_inset
+
+ und 
+\begin_inset Quotes pld
+\end_inset
+
+Shift Left/Right
+\begin_inset Quotes prd
+\end_inset
+
+ -- insgesamt wurden die Rundenfunktionen verkompliziert.
+\end_layout
+
+\begin_layout Itemize
+Innerhalb eines Algorithmus' ist die Rundenfunktion invariant -- es wird
+ in jeder Runde aber eine andere Konstante 
+\begin_inset Formula $K_{t}$
+\end_inset
+
+ verwendet.
+\end_layout
+
+\begin_layout Itemize
+Beim SHA-224/256 werden anstatt der 80
+\begin_inset space ~
+\end_inset
+
+Runden nur noch 64
+\begin_inset space ~
+\end_inset
+
+Runden benötigt.
+\end_layout
+
+\begin_layout Subsection
+Padding
+\end_layout
+
+\begin_layout Standard
+Da jede Hash-Funktion für eine fixe (Eingangs-) Blockbreite konzipiert ist,
+ muß man den letzten Block meist auf diese erweitern.
+ Bei den standardisierten Hash-Algorithmen scheint sich folgende Vorgehensweise
+ durchgesetzt zu haben:
+\end_layout
+
+\begin_layout Enumerate
+Füge immer ein einzelnes Bit mit dem Wert 
+\begin_inset Formula $1$
+\end_inset
+
+ an (typisches ISO-Padding), bei Byte-orientierten Implementierung den Wert
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{80}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Gewährleiste, daß am Ende des letzten Blocks 64
+\begin_inset space ~
+\end_inset
+
+Bit Platz sind für die Aufnahme eines Zählers.
+ Ist dies nicht gegeben, schließe den aktuellen Block durch Auffüllen mit
+ Nullen ab und verarbeite ihn mit der Kompressionsfunktion.
+\end_layout
+
+\begin_layout Enumerate
+Fülle den aktuellen Block, ausgenommen die letzten 64
+\begin_inset space ~
+\end_inset
+
+Bit, mit Nullen auf.
+\end_layout
+
+\begin_layout Enumerate
+Füge den Blockzähler (
+\family typewriter
+CNT
+\family default
+ in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:sha1"
+
+\end_inset
+
+) in die letzten 64
+\begin_inset space ~
+\end_inset
+
+Bit ein und verarbeite diesen Block mit der Kompressionsfunktion.
+\end_layout
+
+\begin_layout Enumerate
+Nehme das Ergebnis 
+\begin_inset Formula $y_{k}$
+\end_inset
+
+ dieses letzten Blocks als Hash-Wert 
+\begin_inset Formula $\operatorname{H}(x)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Section
 Asymmetrische Algorithmen
 \begin_inset Index
 status collapsed
@@ -3743,7 +4752,7 @@ key "RSA:1978,Rivest:1978"
 
 .
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Der Algorithmus wurde in
@@ -3773,7 +4782,7 @@ Quasi
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "ISO:18033-2,ISO:9796-2,IEEE:STD1363,IETF:RFC1423,ATMF:SecuritySpec:1999"
+key "ISO:18033-2,ISO:9796-2,IEEE:STD1363,RFC3447,ATMF:SecuritySpec:1999"
 
 \end_inset
 
@@ -3794,16 +4803,35 @@ Schlüsselgenerierung
 Betrachten wir in der Voraussetzung zuerst die Schlüsselerzeugung, welche
  im Wesen folgendermaßen abläuft:
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Das Schlüsselmaterial bietet im allgemeinen das größte Angriffspotential.
- Deshalb sollte man die Hinweise in Standards und Normen sowie einschlägigen
- Literaturquellen wie
+ Deshalb sollte man Anforderungen an RSA-Schlüssel, wie sie 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in
 \begin_inset space ~
 \end_inset
 
 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "NIST:800-56B"
+
+\end_inset
+
+, 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "8.2.2"
@@ -3811,7 +4839,7 @@ key "Menezes:1992"
 
 \end_inset
 
-, 
+ und 
 \begin_inset CommandInset citation
 LatexCommand cite
 after "16.2"
@@ -3819,7 +4847,7 @@ key "Welschenbach:2001"
 
 \end_inset
 
- unbedingt berücksichtigen.
+ formuliert sind, unbedingt berücksichtigen.
 \end_layout
 
 \end_inset
@@ -3857,11 +4885,22 @@ Bei der Restklasse
 \begin_inset Formula $\mathbb{Z}_{n}:=\{0,1,\dots,n-1\}$
 \end_inset
 
- handelt es sich um einen Ring (nicht um einen Körper, da 
+ handelt es sich um einen Ring, nicht um einen Körper.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Das Modul 
 \begin_inset Formula $n$
 \end_inset
 
- keine Primzahl ist).
+ kann als Produkt zweier ungerader Zahlen allenfalls als ungerade vorausgesetzt
+ werden, jedoch nicht als Primzahl.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -4169,7 +5208,18 @@ Besitzen
 \noun on
 Euler
 \noun default
-'s Satz anwenden und ist fertig.
+'s Satz (nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_euler_totient"
+
+\end_inset
+
+) anwenden und ist fertig.
 \end_layout
 
 \begin_layout Standard
@@ -4318,7 +5368,7 @@ Wegen
 \begin_inset Formula $\overline{m}\in\mathbb{Z}_{q}^{*}$
 \end_inset
 
- kann jetzt wieder der Satz von 
+ kann nun wieder der Satz von 
 \noun on
 Euler
 \noun default
@@ -4332,6 +5382,57 @@ Optimierung
 \begin_layout Standard
 Eine Beschleunigung des Verfahrens läßt sich (algorithmisch) vor allem beim
  Entschlüsseln erzielen.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Eine simple Methode den Rechenaufwand beim Verschlüsseln zu reduzieren ist,
+ den öffentlichen Exponent 
+\begin_inset Formula $e$
+\end_inset
+
+ als verhältnismäßig kleine Zahl zu wählen (im einfachsten Fall zu 
+\begin_inset Formula $3$
+\end_inset
+
+ oder 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Annex~D.6"
+key "ITU:X509"
+
+\end_inset
+
+ als 
+\noun on
+Fermat
+\noun default
+-Zahl 
+\begin_inset Formula $F_{4}=65537$
+\end_inset
+
+).
+\end_layout
+
+\end_inset
+
  Geht man dazu von
 \end_layout
 
@@ -4376,6 +5477,17 @@ Chinesischer Restsatz
 
 \end_inset
 
+ entsprechend Anhang
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_crt_lemma"
+
+\end_inset
+
  nahe
 \begin_inset space ~
 \end_inset
@@ -4405,13 +5517,13 @@ Eine Voraussetzung für dessen Anwendung ist:
 
 \end_inset
 
- Führen wir dazu die folgenden Abkürzungen ein:
+ 
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
 m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
-m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}\mperiod\end{xalignat*}
+m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}\end{xalignat*}
 
 \end_inset
 
@@ -4419,7 +5531,15 @@ m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}\mperiod\end{xalignat*}
 \end_layout
 
 \begin_layout Standard
-Als Voraussetzung benötigt man außerdem die 
+Als Voraussetzung benötigt man die Koeffizienten 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ und 
+\begin_inset Formula $\beta$
+\end_inset
+
+ in der 
 \noun on
 B
 \begin_inset ERT
@@ -4436,12 +5556,7 @@ status open
 
 zout
 \noun default
-
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Bezout, Satz von@
+-Darstellung des größten gemeinsamen Teilers (
 \begin_inset ERT
 status open
 
@@ -4449,27 +5564,34 @@ status open
 
 
 \backslash
-noun{B
-\backslash
-'{e}zout}
+cf
 \end_layout
 
 \end_inset
 
-, Satz von
-\end_layout
+ Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_euclid_bezout"
 
 \end_inset
 
--Koeffizienten 
-\begin_inset Formula $\alpha$
+ in Anhang
+\begin_inset space ~
 \end_inset
 
- und 
-\begin_inset Formula $\beta$
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_euclid_generic"
+
 \end_inset
 
- in der GCD-Darstellung
+)
 \end_layout
 
 \begin_layout Standard
@@ -4500,8 +5622,19 @@ eg
 status collapsed
 
 \begin_layout Plain Layout
-Die Anwendung des euklidischen Algorithmus stellt im allgemeinen eine recheninte
-nsive Operation dar.
+Die Anwendung des euklidischen Algorithmus' stellt im allgemeinen eine rechenint
+ensive Operation dar (siehe dazu auch Anhang
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_gcd"
+
+\end_inset
+
+) .
  Glücklicherweise können 
 \begin_inset Formula $\alpha$
 \end_inset
@@ -4510,7 +5643,7 @@ nsive Operation dar.
 \begin_inset Formula $\beta$
 \end_inset
 
- aber im voraus (einmalig) berechnet werden.
+ aber im voraus berechnet werden.
 \end_layout
 
 \end_inset
@@ -4528,7 +5661,7 @@ nsive Operation dar.
 
 \begin_layout Standard
 \begin_inset Formula \begin{xalignat*}{2}
-\alpha & =p^{-1}\pmod{q} & \beta & =q^{-1}\pmod{p}\end{xalignat*}
+\alpha & \equiv p^{-1}\pmod{q} & \beta & \equiv q^{-1}\pmod{p}\end{xalignat*}
 
 \end_inset
 
@@ -4536,27 +5669,26 @@ nsive Operation dar.
 \end_layout
 
 \begin_layout Standard
-dar.
- Durch Anwendung des Chinesischen Restsatzes
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Chinesischer Restsatz
-\end_layout
-
+im Körper 
+\begin_inset Formula $\mathbb{Z}_{q}$
 \end_inset
 
- für zwei Kongruenzen kann man 
+ und 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+ dar.
+ Durch Anwendung des Chinesischen Restsatzes für zwei Kongruenzen kann man
+ nun 
 \begin_inset Formula $m'$
 \end_inset
 
  berechnen:
 \end_layout
 
-\begin_layout Standard
-\begin_inset Formula \[
-m'=(\alpha m_{q}p+\beta m_{p}q)\bmod n\mperiod\]
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{equation}
+m'=(\alpha m_{q}p+\beta m_{p}q)\bmod n\mperiod\end{equation}
 
 \end_inset
 
@@ -4572,14 +5704,9 @@ Der Vorteil liegt darin, daß die modulare Exponentiation modulo
 \begin_inset Formula $\mathcal{O}(\log^{3}n)$
 \end_inset
 
- hat, auf zwei Operationen gleicher Art, aber mit verringerter Anzahl von
- Stellen 
-\begin_inset Formula $\log n$
-\end_inset
-
- verteilt.
+ hat,
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Der Ausdruck 
@@ -4596,18 +5723,19 @@ Der Ausdruck
 
 \end_inset
 
-
+ auf zwei Operationen gleicher Art, aber mit verringerter Anzahl von Stellen
+ verteilt.
 \end_layout
 
 \begin_layout Standard
-Die weitere Optimierung kann in drei Schritte erfolgen:
+Die weitere Optimierung kann in drei Schritten erfolgen:
 \end_layout
 
 \begin_layout Enumerate
 Wendet man den Chinesischen Restsatz in der Variante nach 
 \noun on
 H.
-\begin_inset space \thinspace{}
+\begin_inset space ~
 \end_inset
 
 L.
@@ -4616,24 +5744,7 @@ L.
 
 Garner
 \noun default
- an, dann kann man weitere Operationen, wie 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- die finale Reduktion modulo 
-\begin_inset Formula $n$
-\end_inset
-
-, einsparen
+ an, so werden weitere Vereinfachungen möglich
 \begin_inset space ~
 \end_inset
 
@@ -4707,14 +5818,14 @@ besitzt.
 
  und erhält in geschlossener Darstellung:
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
-An dieser Stelle gilt es zu beachten, daß 
-\begin_inset Formula $q\beta=qq^{-1}\neq1$
+An dieser Stelle muß man darauf hinweisen, daß für den Ausdruck 
+\begin_inset Formula $q\beta\neq1$
 \end_inset
 
- (denn 
+ gilt (denn 
 \begin_inset Formula $q\beta\equiv1$
 \end_inset
 
@@ -4731,8 +5842,8 @@ An dieser Stelle gilt es zu beachten, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-m' & =m_{q}+q\beta(m_{p}-m_{q})+kn\mperiod\label{eq:crypto_rsa_garner}\end{align}
+\begin_inset Formula \begin{align*}
+m' & =m_{q}+q\beta(m_{p}-m_{q})+kn\mperiod\end{align*}
 
 \end_inset
 
@@ -4779,60 +5890,84 @@ m' & =m_{q}+\beta q(m_{p}-m_{q})+kpq & m' & =m_{p}-\alpha p(m_{p}-m_{q})-kpq,\qq
 \end_layout
 
 \begin_layout Standard
-In Abhängigkeit vom Vorzeichen der Größen 
-\begin_inset Formula $\beta$
+Unter der Voraussetzung 
+\begin_inset Formula $m'=m'\bmod n$
 \end_inset
 
- und 
-\begin_inset Formula $m_{p}-m_{q}$
+ kann man vorangegangene Gleichung noch weiter reduzieren, wenn die allgemeingül
+tige Beziehung 
+\begin_inset Formula $(rq)\bmod(pq)=q(r\bmod p)$
 \end_inset
 
-, mit 
-\begin_inset Formula $\beta<q$
+ berücksichtigt wird.
+\begin_inset Note Comment
+status collapsed
+
+\begin_layout Plain Layout
+\begin_inset Formula \begin{align*}
+(ac)\bmod(bc) & =ac-kbc\\
+ & =ac-\left\lfloor \frac{ac}{bc}\right\rfloor bc\\
+ & =c(a-\left\lfloor \frac{a}{b}\right\rfloor b)\\
+ & =c(a\bmod b)\end{align*}
+
 \end_inset
 
- und 
-\begin_inset Formula $|m_{p}-m_{q}|<\max(p,q)$
+
+\end_layout
+
 \end_inset
 
-, kann man sich auf die Werte 
-\begin_inset Formula $-1\leqq k\leqq+1$
+
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula \begin{align}
+m' & =m_{q}+q[\beta(m_{p}-m_{q})\bmod p]\end{align}
+
 \end_inset
 
- beschränken.
- Eine typische Vorgehensweise ist deshalb, zuerst 
-\begin_inset Formula $h=m_{q}+q\beta(m_{p}-m_{q})$
-\end_inset
 
- zu berechnen und dann das Ergebnis auf 
-\begin_inset Formula $0<h<n$
-\end_inset
-
- zu prüfen -- falls es nicht in diesem Intervall liegt, muß man einmal 
-\begin_inset Formula $n$
-\end_inset
-
- adieren/subtrahieren.
 \end_layout
 
 \begin_layout Standard
-Der Vorteil von Formel
-\begin_inset space ~
+Die Vorteile dieser Darstellung liegen vor allem darin, daß
+\end_layout
+
+\begin_layout Itemize
+eine finale Modulo-Division durch 
+\begin_inset Formula $n$
 \end_inset
 
+ nicht mehr nötig ist;
+\end_layout
 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:crypto_rsa_garner"
+\begin_layout Itemize
+nur ein 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
 
 \end_inset
 
- liegt vor allem darin, daß man im Gegensatz zum Chinesischen Restsatz (wegen
- 
-\begin_inset Formula $-1\leqq k\leqq+1$
+zout
+\noun default
+-Kofaktor überhaupt benötigt wird;
+\end_layout
+
+\begin_layout Itemize
+wegen der Zwischenreduktion modulo 
+\begin_inset Formula $p$
 \end_inset
 
-) keine Modulo-Division ausführen muß.
+ die Speicherplatzanforderungen reduziert sind.
 \end_layout
 
 \end_deeper
@@ -4872,7 +6007,7 @@ m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
 
 \end_deeper
 \begin_layout Enumerate
-Eine weitere Optimierung bezieht sich auf den Exponenten 
+Eine letzte Optimierung bezieht sich auf den Exponenten 
 \begin_inset Formula $d$
 \end_inset
 
@@ -4928,10 +6063,30 @@ resp
 \begin_inset Formula $d$
 \end_inset
 
- modulo der Gruppenordnung reduzieren (kleiner Satz von 
-\noun on
-Fermat
-\noun default
+ auf die Gruppenordnung reduzieren (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ auch Anhang
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_galois_multgrp"
+
+\end_inset
+
 ).
 \end_layout
 
@@ -4964,12 +6119,12 @@ ein Tripel
 \begin_inset Formula $n=pq$
 \end_inset
 
- trivial erscheint
+ trivial erscheint;
 \end_layout
 
 \begin_layout Itemize
-und die Darstellung als Quintupel 
-\begin_inset Formula $(p,q,d_{p},d_{q},q_{\mbox{inv}})$
+oder die Darstellung als Quintupel 
+\begin_inset Formula $(p,q,d_{p},d_{q},q_{\textup{inv}})$
 \end_inset
 
 , mit 
@@ -4981,22 +6136,22 @@ und die Darstellung als Quintupel
 \end_inset
 
  und 
-\begin_inset Formula $q_{\mbox{inv}}=q^{-1}\pmod{p}$
+\begin_inset Formula $q_{\textup{inv}}=q^{-1}\pmod{p}$
 \end_inset
 
 .
 \end_layout
 
 \begin_layout Standard
-Wegen der signifikanten Geschwindigkeitsvorteile wird praktisch fast immer
- die Quintupel-Variante verwendet
+Wegen der signifikanten Geschwindigkeitsvorteile wird fast immer die Quintupel-V
+ariante verwendet
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "IEEE:STD1363,PKCS1:2002"
+key "IEEE:STD1363,ISO:18033-2,PKCS1:2002"
 
 \end_inset
 
@@ -5023,6 +6178,1238 @@ key "Menezes:1992"
 \end_inset
 
  ausgewiesen.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Verschlüsselung nach PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+PKCS
+\begin_inset space ~
+\end_inset
+
+#1
+\end_layout
+
+\end_inset
+
+Um den RSA-Algorithmus praktisch auf die Verschlüsselung von Daten anzuwenden,
+ müssen diese zuerst geeignet aufbereitet werden.
+ Der Prozeß dieser Formatierung wird in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE:STD1363,PKCS1:2002"
+
+\end_inset
+
+ als 
+\emph on
+Message Encoding Operation
+\emph default
+ bezeichnet, in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:1993"
+
+\end_inset
+
+ hingegen als 
+\emph on
+Encryption Block Formatting
+\emph default
+.
+\end_layout
+
+\begin_layout Paragraph
+PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\begin_inset space ~
+\end_inset
+
+v1.5
+\end_layout
+
+\begin_layout Standard
+Mit der Methode nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:1993"
+
+\end_inset
+
+ gestaltet sich die Formatierung noch relativ einfach.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Die Formatierung nach 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v1.5}
+\end_layout
+
+\end_inset
+
+ wurde in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v2.1}
+\end_layout
+
+\end_inset
+
+ als Verfahren 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{RSAES-PKCS1-v1
+\backslash
+_5}
+\end_layout
+
+\end_inset
+
+ übernommen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:2002"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+ Der Datenblock 
+\family typewriter
+D
+\family default
+ wird entsprechend Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:crypto_rsa_pkcs1v15"
+
+\end_inset
+
+ in die Struktur des sogenannten 
+\emph on
+Encryption Block
+\emph default
+ 
+\family typewriter
+EB
+\family default
+ eingebunden.
+ Auf den 
+\emph on
+Encryption Block
+\emph default
+ 
+\family typewriter
+EB
+\family default
+ wird letztlich der RSA-Algorithmus nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:crypto_rsa_encipher"
+
+\end_inset
+
+ angewendet.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Das führende 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+-Byte's in 
+\family typewriter
+EB
+\family default
+ gewährleistet für den (als Zahl interpretierten) 
+\emph on
+Encryption Block
+\emph default
+ 
+\begin_inset Formula $\mathrm{EB}<n$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\mathrm{EB}\in\mathbb{Z}_{n}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pkcs1_v15_eb.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:crypto_rsa_pkcs1v15"
+
+\end_inset
+
+Blockformatierung nach PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\begin_inset space ~
+\end_inset
+
+v1.5
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die weiteren Elemente im 
+\emph on
+Encryption Block
+\emph default
+ haben folgende Bedeutung:
+\end_layout
+
+\begin_layout Synopsis
+\labelwidthstring 4em
+\noindent
+BT Der 
+\emph on
+Block Type
+\emph default
+ zeigt die Verwendung des privaten oder öffentlichen Schlüssels (im anschließend
+en RSA-Algorithmus) an.
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ Signieren (Verwendung des privaten Schlüssels);
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{01}
+\end_layout
+
+\end_inset
+
+ genauso wie 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ (der Unterschied liegt im Element 
+\family typewriter
+PS
+\family default
+);
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{02}
+\end_layout
+
+\end_inset
+
+ Verschlüsseln (Verwendung des öffentlichen Schlüssels).
+\end_layout
+
+\end_deeper
+\begin_layout Synopsis
+\labelwidthstring 4em
+\noindent
+PS Ein 
+\emph on
+Padding String
+\emph default
+ dient der Anpassung an die Länge des Moduls
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\Vert x \\Vert$"
+description "Länge von $x$ in Byte"
+
+\end_inset
+
+ 
+\begin_inset Formula $k=\left\Vert n\right\Vert $
+\end_inset
+
+ so, daß 
+\begin_inset Formula $\left\Vert \mathrm{PS}\right\Vert +\left\Vert D\right\Vert +3=k$
+\end_inset
+
+ gewährleistet ist.
+ Die Länge von 
+\family typewriter
+PS
+\family default
+ soll mindestens 8
+\begin_inset space ~
+\end_inset
+
+Byte sein, was im Umkehrschluß die von 
+\family typewriter
+D
+\family default
+ auf 
+\begin_inset Formula $k-11$
+\end_inset
+
+ Bytes beschränkt.
+ Das Padding selbst hängt vom Typ des Blocks (
+\family typewriter
+BT
+\family default
+) ab:
+\end_layout
+
+\begin_deeper
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ alle Bytes sind 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{01}
+\end_layout
+
+\end_inset
+
+ alle Bytes sind 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{FF}
+\end_layout
+
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Labeling
+\labelwidthstring 00.00.0000
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{02}
+\end_layout
+
+\end_inset
+
+ alle Bytes sind zufällig, aber ungleich 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Der Inhalt von 
+\family typewriter
+PS
+\family default
+ ist beim Entschlüsseln (Byte für Byte) auf konforme Kodierung zu prüfen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "9.4"
+key "PKCS1:1993"
+
+\end_inset
+
+.
+ Für die Blocktypen 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{01}
+\end_layout
+
+\end_inset
+
+ und 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{02}
+\end_layout
+
+\end_inset
+
+ kann der Anfang (und damit auch die Länge) des Datenblocks 
+\family typewriter
+D
+\family default
+ ermittelt werden, indem das 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+-Byte zwischen 
+\family typewriter
+PS
+\family default
+ und 
+\family typewriter
+D
+\family default
+ gesucht wird.
+ Für den Blocktyp 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ ist dieses Verfahren nur geeignet, wenn das erste Byte in 
+\family typewriter
+D
+\family default
+ immer ungleich 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ ist.
+ Kann dies nicht vorausgesetzt werden, dann muß die Länge 
+\begin_inset Formula $\left\Vert \mathtt{D}\right\Vert $
+\end_inset
+
+ a priori bekannt sein.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Der Blocktyp 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+ wird im 
+\emph on
+Privacy Enhanced Mail
+\emph default
+ (PEM) RFC nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IETF:RFC1423"
+
+\end_inset
+
+ nicht verwendet.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Paragraph
+PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\begin_inset space ~
+\end_inset
+
+v2.1
+\end_layout
+
+\begin_layout Standard
+Nicht zuletzt wegen des sehr erfolgreiche Angriffs nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bleichenbacher:1998"
+
+\end_inset
+
+ wird die 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v1.5}
+\end_layout
+
+\end_inset
+
+ Formatierung heute nicht mehr empfohlen.
+ Statt dessen sollte grundsätzlich Version
+\begin_inset space ~
+\end_inset
+
+2 nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:2002,IEEE:STD1363,ISO:18033-2"
+
+\end_inset
+
+ zum Einsatz kommen, welche 
+\emph on
+Optimal Asymmetric Encryption Padding
+\emph default
+ (OAEP) verwendet
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bellare:1995"
+
+\end_inset
+
+.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Ursprünglich galt das von 
+\noun on
+M.
+\begin_inset space ~
+\end_inset
+
+Bellare
+\noun default
+ und 
+\noun on
+P.
+\begin_inset space ~
+\end_inset
+
+Rogaway
+\noun default
+ entwickelte OAEP (gegen 
+\emph on
+Chosen Ciphertext
+\emph default
+ 
+\emph on
+Attacks
+\emph default
+, im Rahmen des 
+\emph on
+Random Oracle Models
+\emph default
+) als beweisbar sicher.
+ Im Jahre
+\begin_inset space ~
+\end_inset
+
+2001 konnte jedoch 
+\noun on
+V.
+\begin_inset space ~
+\end_inset
+
+Shoup
+\noun default
+ einen Fehler in den Ausführungen von
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bellare:1995"
+
+\end_inset
+
+ nachweisen, weshalb OAEP heute 
+\begin_inset Quotes pld
+\end_inset
+
+nur
+\begin_inset Quotes prd
+\end_inset
+
+ noch als sehr sicher angesehen wird.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Den Kern der Blockformatierung nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:crypto_rsa_pkcs1v21"
+
+\end_inset
+
+ macht eine sogenannte 
+\emph on
+Mask Generation Function
+\emph default
+ (MGF, in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:crypto_rsa_pkcs1v21"
+
+\end_inset
+
+ mit 
+\family typewriter
+F
+\family default
+ bezeichnet) aus, welche selbst wiederum eine Hash-Funktion H verwendet.
+ Die MGF kann dasselbe leisten wie die Hash-Funktion, nämlich eine große
+ Eingangsmenge auf eine kleine Ausgangsmenge abbilden (mit 
+\begin_inset Formula $\left\Vert \operatorname{H}\right\Vert $
+\end_inset
+
+ soll im folgenden die Breite eines Hash-Wertes bezeichnet sein).
+ Sie kann aber auch das Umgekehrte -- eine kleine Eingangsmenge auf eine
+ größere Ausgangsmenge 
+\begin_inset Quotes pld
+\end_inset
+
+zerstreuen
+\begin_inset Quotes prd
+\end_inset
+
+.
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v2.1}
+\end_layout
+
+\end_inset
+
+ legt sich zwar in der Hash-Funktion nicht fest, definiert aber in 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "B.2.1"
+key "PKCS1:2002"
+
+\end_inset
+
+ eine konkrete 
+\emph on
+Mask Generation Function
+\emph default
+, genannt MGF1.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Sowohl 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:2002"
+
+\end_inset
+
+ als auch 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE:STD1363"
+
+\end_inset
+
+ lassen vom Spezifikationsansatz die Verwendung anderer MGF's zu, nur
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:18033-2"
+
+\end_inset
+
+ definiert aber eine solche (KDF2).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename pkcs1_v21_em.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:crypto_rsa_pkcs1v21"
+
+\end_inset
+
+Blockformatierung nach PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\begin_inset space ~
+\end_inset
+
+v2.1
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die einzelnen Kodierungsschritte können folgendermaßen beschrieben werden:
+\end_layout
+
+\begin_layout Enumerate
+Ergänze die Nachricht 
+\family typewriter
+M
+\family default
+ zuerst (und grundsätzlich) durch ein vorangestelltes Byte mit Wert 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{01}
+\end_layout
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Füge weitere 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+-Byte's hinzu (Padding), so daß ein Datenblock 
+\family typewriter
+DB
+\family default
+ der Länge 
+\begin_inset Formula $k-\left\Vert \operatorname{H}\right\Vert -1$
+\end_inset
+
+ entsteht.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Im Gegensatz zu PKCS
+\begin_inset space \thinspace{}
+\end_inset
+
+#1
+\begin_inset space ~
+\end_inset
+
+v1.5 ist keine Mindestanzahl vorgeschrieben (das Padding kann sogar leer
+ sein).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Bilde den Hash über ein vereinbartes, konstantes Label 
+\begin_inset Formula $L$
+\end_inset
+
+ und stelle das Ergebnis als 
+\begin_inset Formula $\mathrm{lHash}=\operatorname{H}(L)$
+\end_inset
+
+ an den Anfang des Datenblocks.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Praktisch ist 
+\begin_inset Formula $L$
+\end_inset
+
+ oftmals einfach leer, was für das Hashing kein Problem darstellt.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Erzeuge einen Zufallsstrom 
+\family typewriter
+Seed
+\family default
+ der Länge 
+\begin_inset Formula $\left\Vert \operatorname{H}\right\Vert $
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Berechne 
+\begin_inset Formula $\mathrm{maskedDB}=\mathrm{DB}\oplus\operatorname{MGF}(\mathrm{Seed})$
+\end_inset
+
+ als Teil der 
+\emph on
+Encoded Message
+\emph default
+ (
+\family typewriter
+EM
+\family default
+).
+\end_layout
+
+\begin_layout Enumerate
+Berechne 
+\begin_inset Formula $\mathrm{maskedSeed}=\mathrm{Seed}\oplus\operatorname{MGF}(\mathrm{maskedDB})$
+\end_inset
+
+, als höherwertigen Teil von 
+\family typewriter
+EM
+\family default
+.
+\end_layout
+
+\begin_layout Enumerate
+Stelle ein führendes 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+hex{00}
+\end_layout
+
+\end_inset
+
+-Byte an den Anfang von 
+\family typewriter
+EM
+\family default
+ (gewährleistet auch hier wieder 
+\begin_inset Formula $\mathrm{EM}<n$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Im Gegensatz zu 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v1.5}
+\end_layout
+
+\end_inset
+
+ geht in die RSA-Verschlüsselung 
+\begin_inset Formula $c=\mathrm{EM}^{e}\bmod n$
+\end_inset
+
+ hier nun ein Wert EM ein, der keinerlei Rückschlüsse auf den Datenblock
+ 
+\family typewriter
+DB
+\family default
+ zuläßt.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+In 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{PKCS
+\backslash
+,
+\backslash
+#1~v1.5}
+\end_layout
+
+\end_inset
+
+ waren zumindest 
+\family typewriter
+BT
+\family default
+ und (teils) 
+\family typewriter
+PS
+\family default
+ vorherzusagen, was sich dann auch 
+\noun on
+D.
+\begin_inset space ~
+\end_inset
+
+Bleichenbacher
+\noun default
+ in seiner 
+\emph on
+Chosen Ciphertext
+\emph default
+ 
+\emph on
+Attack
+\emph default
+ zunutze machte
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bleichenbacher:1998"
+
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -5124,11 +7511,7 @@ Zuerst erzeugt der Initiator des Protokolls ein (geheimes) Element
 \begin_inset Formula $0<a<p-1$
 \end_inset
 
- und berechnet damit seine öffentlichen Schlüssel
-\begin_inset space ~
-\end_inset
-
-
+ und berechnet damit seine öffentlichen Schlüssel 
 \begin_inset Formula $A=g^{a}\bmod p$
 \end_inset
 
@@ -5140,23 +7523,23 @@ Dieser Schlüssel
 \begin_inset Formula $A$
 \end_inset
 
- wird plain
+ wird im Klartext zum Empfänger (Responder) übertragen.
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
 Unverschlüsselt, deshalb sollte das Verfahren immer in Verbindung mit einem
- Signaturalgorithmus verwendet werden (zum Schutz vor dem Man-in-the-middle
- Angriff).
+ Signaturalgorithmus verwendet werden (zum Schutz vor Man-in-the-middle
+ Angriffen).
 \end_layout
 
 \end_inset
 
- zum Empfänger (Responder) übertragen.
+
 \end_layout
 
 \begin_layout Enumerate
-Er erzeugt ebenfalls eine Zufallszahl 
+Der Empfänger erzeugt ebenfalls eine Zufallszahl 
 \begin_inset Formula $b$
 \end_inset
 
@@ -5185,7 +7568,7 @@ Beide Partner berechnen dann mit Hilfe von
 \begin_inset Formula $B$
 \end_inset
 
- den Session Key 
+ den Sitzungsschlüssel 
 \begin_inset Formula $g^{ab}\bmod p$
 \end_inset
 
@@ -5195,7 +7578,7 @@ Beide Partner berechnen dann mit Hilfe von
 \begin_deeper
 \begin_layout Itemize
 Der Initiator berechnet 
-\begin_inset Formula $B^{a}=(g^{b}\bmod p)^{a}=g^{ab}\bmod p$
+\begin_inset Formula $B^{a}=(g^{b}\bmod p)^{a}\bmod p=g^{ab}\bmod p$
 \end_inset
 
 .
@@ -5203,7 +7586,7 @@ Der Initiator berechnet
 
 \begin_layout Itemize
 Auf der anderen Seite wird äquivalent 
-\begin_inset Formula $A^{b}=(g^{a}\bmod p)^{b}=g^{ab}\bmod p$
+\begin_inset Formula $A^{b}=(g^{a}\bmod p)^{b}\bmod p=g^{ab}\bmod p$
 \end_inset
 
 .
@@ -5926,22 +8309,22 @@ MD5
 
 \end_inset
 
-, SHA
+, SHA-1
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-SHA
+SHA-1
 \end_layout
 
 \end_inset
 
- oder RIPEMD
+ oder RIPEMD-160
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-RIPEMD
+RIPEMD-160
 \end_layout
 
 \end_inset
@@ -6169,7 +8552,7 @@ key "Black:2000"
 
 \end_inset
 
- zurück, hat seine Popularität wahrscheinlich aber IPSec zu verdanken
+ zurück, hat seine Popularität aber wahrscheinlich IPSec zu verdanken
 \begin_inset space ~
 \end_inset
 
@@ -6495,7 +8878,7 @@ Der HMAC einer Message
 
  wird mittels einer kryptographischen Hashfunktion
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Die Hashfunktion bestimmt in wesentlichem Maße die Sicherheit des Algorithmus.
@@ -6539,7 +8922,7 @@ Der geheime Schlüssel
 
  wird durch Anhängen von Null-Bytes auf die Blockbreite der Hashfunktion
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Der Fall, daß die Länge des Schlüssels 
@@ -6560,7 +8943,7 @@ key "RFC2104"
 \end_inset
 
  in einem vorgelagerten Schritt 
-\begin_inset Formula $K'=H(K)$
+\begin_inset Formula $K'=\operatorname{H}(K)$
 \end_inset
 
  gebildet und an Stelle von 
@@ -6613,12 +8996,12 @@ An diesen ersten Block wird die (zu schützende) Message
 \end_inset
 
  angehängt und auf die Verkettung unsere Hashfunktion 
-\begin_inset Formula $H$
+\begin_inset Formula $\operatorname{H}$
 \end_inset
 
  angewendet.
  Als Resultat erhält man: 
-\begin_inset Formula $I\textrm{(nner)}=H[(K||\hex{00}\ldots\hex{00})\oplus(\hex{36}\ldots\hex{36})||M]$
+\begin_inset Formula $I\textrm{(nner)}=\operatorname{H}[(K||\hex{00}\ldots\hex{00})\oplus(\hex{36}\ldots\hex{36})||M]$
 \end_inset
 
 .
@@ -6641,8 +9024,8 @@ An das Ergebnis wird
 \begin_inset Formula $I\textrm{(nner)}$
 \end_inset
 
- angehängt und darauf erneut die Hashfunktion 
-\begin_inset Formula $H$
+ angehängt und darauf erneut die Hash-Funktion 
+\begin_inset Formula $\operatorname{H}$
 \end_inset
 
  angewendet.
@@ -6665,7 +9048,7 @@ Die Bildung von
 \end_inset
 
 : 
-\begin_inset Formula $O\textrm{(uter)}=H[(K||\hex{00}\ldots\hex{00})\oplus(\hex{5C}\ldots\hex{5C})||I]$
+\begin_inset Formula $O\textrm{(uter)}=\operatorname{H}[(K||\hex{00}\ldots\hex{00})\oplus(\hex{5C}\ldots\hex{5C})||I]$
 \end_inset
 
 .
@@ -7825,7 +10208,7 @@ Praktisch kann man den Algorithmus durch Offline-Berechnung der Ausdrücke
 \end_layout
 
 \begin_layout Standard
-noch erheblich beschleunigen
+noch beschleunigen
 \begin_inset space ~
 \end_inset
 
@@ -7850,172 +10233,19 @@ key "schneier:1996"
 .
 \end_layout
 
-\begin_layout Paragraph
-ATM-Signaturblock
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-ATM-Signaturblock
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Der Signaturblock 
-\begin_inset Formula $h(m)$
-\end_inset
-
- wird nach
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "Annex~6.8.3.1"
-key "ATMF:SecuritySpec:1999"
-
-\end_inset
-
- aus dem eigentlichen Hashwert 
-\begin_inset Formula $h'(m)$
-\end_inset
-
- der Message
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset Formula $m$
-\end_inset
-
- entsprechend Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig_esign_sigblock"
-
-\end_inset
-
- erzeugt.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\align center
-\begin_inset Graphics
-	filename esign_hash.eps
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig_esign_sigblock"
-
-\end_inset
-
-ESIGN Signaturblock-Bildung nach ATM-Forum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Dabei gilt für die Bitlänge 
-\begin_inset Formula $L$
-\end_inset
-
- von SB 
-\begin_inset Formula $L=8K$
-\end_inset
-
- und damit 
-\begin_inset Formula $h(m)=SB\cdot2^{2L}$
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-Daraus ergibt sich als Verifikationsungleichung
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
-SB\cdot2^{2L} & \leq & S^{k}\bmod n<SB\cdot2^{2L}+2^{2L}\\
-SB & \leq & (S^{k}\bmod n)2^{-2L}<SB+1\end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-was letztlich bedeutet, daß die führenden 
-\begin_inset Formula $L$
-\end_inset
-
-
-\begin_inset space ~
-\end_inset
-
-Bits von 
-\begin_inset Formula $S^{k}\bmod n$
-\end_inset
-
- mit 
-\begin_inset Formula $SB$
-\end_inset
-
- übereinstimmen müssen
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Ein einfacher Vergleich von 
-\begin_inset Formula $L$
-\end_inset
-
- Bits reduziert den Implementierungsaufwand.
-\end_layout
-
-\end_inset
-
-.
-\end_layout
-
 \begin_layout Standard
 \begin_inset Branch WITH_APPENDIX
 status open
 
-\begin_layout Part*
+\begin_layout Standard
 \start_of_appendix
+\begin_inset Newpage clearpage
+\end_inset
+
+
+\end_layout
+
+\begin_layout Part*
 Anhänge
 \end_layout
 
