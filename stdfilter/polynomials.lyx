@@ -1,8 +1,13 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
 \textclass scrartcl
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,10 +18,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !bh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -35,6 +42,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -43,12 +51,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Properties of algebraic polynomials
-\end_layout
-
-\begin_layout Standard
-Version: $Id: polynomials.lyx,v 1.14 2007-09-22 17:44:46 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: polynomials.lyx,v 1.15 2010-09-17 20:17:35 ralf Exp $
 \end_layout
 
 \end_inset
@@ -62,8 +66,12 @@ Algebraische Funktionen
 
 \begin_layout Standard
 Algebraische Funktionen
-\begin_inset LatexCommand index
-name "Funktion!algebraische"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!algebraische
+\end_layout
 
 \end_inset
 
@@ -122,7 +130,7 @@ wobei
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -144,8 +152,12 @@ eg
 
 \begin_layout Itemize
 ein Polynom (ganzrationale Funktion
-\begin_inset LatexCommand index
-name "Funktion!ganzrationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!ganzrationale
+\end_layout
 
 \end_inset
 
@@ -154,8 +166,12 @@ name "Funktion!ganzrationale"
 
 \begin_layout Itemize
 eine gebrochen rationale Funktion
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
@@ -164,8 +180,12 @@ name "Funktion!gebrochen rationale"
 
 \begin_layout Itemize
 oder eine irrationale Funktion ist
-\begin_inset LatexCommand index
-name "Funktion!irrationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!irrationale
+\end_layout
 
 \end_inset
 
@@ -179,14 +199,19 @@ Die beiden ersten Fälle werden deshalb rational genannt, weil ein Ergebnis
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:poly"
 
 \end_inset
 
 Ganzrationale Funktionen (Polynome
-\begin_inset LatexCommand index
-name "Polynome|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Polynome|(
+\end_layout
 
 \end_inset
 
@@ -199,8 +224,12 @@ Definition
 
 \begin_layout Standard
 Polynome sind ganzrationale Funktionen
-\begin_inset LatexCommand index
-name "Funktion!ganzrationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!ganzrationale
+\end_layout
 
 \end_inset
 
@@ -228,8 +257,12 @@ mit (hier reellen) Koeffizienten
 
  ist.
  Eine nachträgliche Normierung ist durch Einführung eines Vorfaktors
-\begin_inset LatexCommand index
-name "Vorfaktor"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Vorfaktor
+\end_layout
 
 \end_inset
 
@@ -252,8 +285,12 @@ p(x)=C\sum_{i=0}^{n}\frac{a_{i}}{a_{n}}x^{i}=K\sum_{i=0}^{n}b_{i}x^{i}=K\left(x^
 \begin_layout Standard
 Die letzte Form ist vor allem dann von Bedeutung, wenn die Linearfaktordarstellu
 ng
-\begin_inset LatexCommand index
-name "Linearfaktoren"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Linearfaktoren
+\end_layout
 
 \end_inset
 
@@ -266,8 +303,12 @@ name "Linearfaktoren"
 \end_inset
 
  Anwendung finden soll (Hauptsatz der Algebra
-\begin_inset LatexCommand index
-name "Algebra!Hauptsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Algebra!Hauptsatz der
+\end_layout
 
 \end_inset
 
@@ -311,9 +352,13 @@ Interessant ist jedoch die Gewinnung der ersten Ableitung von
 \end_inset
 
 .
- Dazu geht man von Formel\InsetSpace ~
+ Dazu geht man von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_prd"
 
 \end_inset
@@ -343,15 +388,19 @@ Dieses Ergebnis
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Das Ergebnis spiegelt an sich nur die Produktregel der Differentiation für
  
 \begin_inset Formula $n$
 \end_inset
 
- Faktoren (von Formel\InsetSpace ~
+ Faktoren (von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_prd"
 
 \end_inset
@@ -420,7 +469,7 @@ für
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -460,34 +509,56 @@ Nullstellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Nullstellen!von Polynomen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!von Polynomen
+\end_layout
 
 \end_inset
 
 Bei der Linearfaktordarstellung
-\begin_inset LatexCommand index
-name "Linearfaktoren"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Linearfaktoren
+\end_layout
 
 \end_inset
 
- nach Formel\InsetSpace ~
+ nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_prd"
 
 \end_inset
 
  handelt es sich prinzipiell um den von 
 \noun on
-C.\InsetSpace ~
+C.
+\begin_inset space ~
+\end_inset
+
 F.
  Gauss
 \noun default
- in seiner Dissertation\InsetSpace ~
+ in seiner Dissertation
+\begin_inset space ~
+\end_inset
+
 1799 erstmals bewiesenen Hauptsatz der Algebra
-\begin_inset LatexCommand index
-name "Algebra!Hauptsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Algebra!Hauptsatz der
+\end_layout
 
 \end_inset
 
@@ -503,9 +574,13 @@ Jedes algebraische Polynom
 \begin_inset Formula $n$
 \end_inset
 
- komplexe Lösungen\InsetSpace ~
+ komplexe Lösungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Gauss:1799"
 
 \end_inset
@@ -521,16 +596,24 @@ Bei Polynomen mit reellen Koeffizienten
  müssen diese Nullstellen entweder konjugiert komplex (als Spezialfall imaginär)
  auftreten oder aber reell sein.
  Wäre diese Bedingung nicht erfüllt, dann würde Ausmultiplizieren der Produktdar
-stellung\InsetSpace ~
+stellung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_prd"
 
 \end_inset
 
- (zur Gewinnung der Summenformel\InsetSpace ~
+ (zur Gewinnung der Summenformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_sum"
 
 \end_inset
@@ -654,7 +737,7 @@ p^{(m)}(x) & = & q_{m}(x)\neq0\end{eqnarray*}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -677,8 +760,12 @@ ie
 
 -te jedoch nicht.
  Diese Aussage stellt eine Verallgemeinerung des Begriffes der Vielfachheit
-\begin_inset LatexCommand index
-name "Nullstellen!Vielfachheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!Vielfachheit
+\end_layout
 
 \end_inset
 
@@ -686,10 +773,14 @@ name "Nullstellen!Vielfachheit"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Außerdem wird eine Funktion
-\begin_inset LatexCommand index
-name "Funktion!maximal flache"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!maximal flache
+\end_layout
 
 \end_inset
 
@@ -707,16 +798,24 @@ name "Funktion!maximal flache"
 
 \begin_layout Standard
 Auch ohne genaue Kenntnis der Nullstellen eines Polynoms kann man ausgehend
- von den Koeffizienten in Summenformel\InsetSpace ~
+ von den Koeffizienten in Summenformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_sum"
 
 \end_inset
 
  Aussagen zu deren Lage machen
-\begin_inset LatexCommand index
-name "Nullstellen!Lage"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!Lage
+\end_layout
 
 \end_inset
 
@@ -729,7 +828,7 @@ Cauchy
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -738,9 +837,13 @@ eg
 
 \end_inset
 
- in\InsetSpace ~
+ in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "6.2.2."
 key "Kaiser:1980"
 
@@ -854,7 +957,7 @@ Die rechte Seite kann man auch als Quotient zweier Polynome darstellen,
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -910,8 +1013,12 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Polynome|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Polynome|)
+\end_layout
 
 \end_inset
 
@@ -927,8 +1034,12 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
@@ -937,7 +1048,7 @@ Dieser Typ der algebraischen Funktionen ist als Quotient zweier Polynome
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sonst würde es sich um eine ganzrationale Funktion handeln.
 \end_layout
 
@@ -956,9 +1067,13 @@ r(x)=\frac{u(x)}{v(x)}=\frac{\poly{a}{x}{m}}{\poly{b}{x}{n}}=\frac{\sum\limits _
 \end_layout
 
 \begin_layout Standard
-Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus Abschnitt\InsetSpace ~
+Die verschiedenen Darstellungsformen der ganzrationalen Funktionen aus Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:poly"
 
 \end_inset
@@ -968,7 +1083,7 @@ gsmöglichkeiten führt
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Den Spezialfall 
 \begin_inset Formula $r(x)=\frac{ax+b}{cx+d}$
 \end_inset
@@ -978,20 +1093,62 @@ Den Spezialfall
 Möbius
 \noun default
 -Transformation
-\begin_inset LatexCommand index
-name "Moebius-Transformation@\\noun{Möbius}-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Moebius-Transformation@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{M{
+\backslash
+"o}bius}-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Moebius-@\\noun{Möbius}-"
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!gebrochen-lineare"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Moebius-@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{M{
+\backslash
+"o}bius}-
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!gebrochen-lineare
+\end_layout
 
 \end_inset
 
@@ -1066,8 +1223,12 @@ Im Fall
 \end_inset
 
  fachen Pol im Unendlichen
-\begin_inset LatexCommand index
-name "Pol!im Unendlichen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!im Unendlichen
+\end_layout
 
 \end_inset
 
@@ -1173,16 +1334,24 @@ u(x) & =a_{m}\prod_{i=1}^{m}(x-\zn{x}{i}) & v(x) & =b_{n}\prod_{l=1}^{n}(x-\pn{x
 \end_layout
 
 \begin_layout Standard
-Einsetzen der Ableitungsformel\InsetSpace ~
+Einsetzen der Ableitungsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:poly_prd_deriv"
 
 \end_inset
 
- für Polynome in die Quotientenregel\InsetSpace ~
+ für Polynome in die Quotientenregel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:rational_func_deriv_base"
 
 \end_inset

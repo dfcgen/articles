@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -44,8 +52,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: cauer.lyx,v 1.14 2007-10-07 09:24:15 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: cauer.lyx,v 1.15 2010-09-17 20:16:54 ralf Exp $
 \end_layout
 
 \end_inset
@@ -56,7 +64,8 @@ Version: $Id: cauer.lyx,v 1.14 2007-10-07 09:24:15 ralf Exp $
 \begin_layout Section
 
 \noun on
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:filter_cauer"
 
 \end_inset
@@ -67,14 +76,35 @@ Cauer
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Cauer-Tiefpaß@\\noun{Cauer}-Tiefpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauer-Tiefpaß@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauer}
+\end_layout
+
+\end_inset
+
+-Tiefpaß|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!elliptisches"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!elliptisches
+\end_layout
 
 \end_inset
 
@@ -92,14 +122,48 @@ W.
  Cauer
 \noun default
 
-\begin_inset LatexCommand index
-name "Tiefpaß!Cauer@\\noun{Cauer}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tiefpaß!Cauer@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauer}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!Cauer@\\noun{Cauer}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Cauer@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauer}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
 
 \end_inset
 
@@ -108,7 +172,7 @@ dengangs
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -117,9 +181,13 @@ resp
 
 \end_inset
 
- der charakteristischen Funktion (Drosselung) in seinen Arbeiten untersucht\InsetSpace ~
+ der charakteristischen Funktion (Drosselung) in seinen Arbeiten untersucht
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Cauer:1954"
 
 \end_inset
@@ -132,17 +200,24 @@ key "Cauer:1954"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dieser Filtertyp ist eine konsequente Anwendung der elliptischen Transformations
-theorie, welche schon im 19.\InsetSpace ~
+theorie, welche schon im 19.
+\begin_inset space ~
+\end_inset
+
 Jahrhundert etabliert war.
 \end_layout
 
 \end_inset
 
-, welche im Anhang\InsetSpace ~
+, welche im Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elltr"
 
 \end_inset
@@ -155,57 +230,80 @@ Für die Drosselungsfunktion
 \begin_inset Formula $\drf(\omega)$
 \end_inset
 
- gibt es in der Literatur die verschiedensten Darstellungen\InsetSpace ~
+ gibt es in der Literatur die verschiedensten Darstellungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Cauer:1954,Unbehauen:1989,Mildenberger:1992,Zverev:1967,Piloty:1954,Fritzsche:1979a,Chen:1995"
 
 \end_inset
 
 , welche sich aber immer nur in der Skalierung von Amplituden- und Frequenzachse
  unterscheiden.
- Im Folgenden werden die Lösungsformeln\InsetSpace ~
+ Im Folgenden werden die Lösungsformeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_poly"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_poly"
 
 \end_inset
 
  der ersten elliptischen Haupt-Transformation nach 
 \noun on
-C.\InsetSpace ~
-G.\InsetSpace ~
+C.
+\begin_inset space ~
+\end_inset
+
+G.
+\begin_inset space ~
+\end_inset
+
 J.
  Jacobi
 \noun default
  als Ausgangspunkt dienen, die grundsätzliche Argumentation sich aber auf
  
 \noun on
-E.\InsetSpace ~
+E.
+\begin_inset space ~
+\end_inset
+
 I.
- Solotaref\SpecialChar \textcompwordmark{}
-f
+ Solotareff
 \noun default
  und dessen drittes Approximationsproblem stützen
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
-'s Problemstellung sowie dessen Lösungsformel\InsetSpace ~
+'s Problemstellung sowie dessen Lösungsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_solution"
 
 \end_inset
@@ -220,16 +318,24 @@ reference "eq:zolotar_solution"
 \end_inset
 
  enden würde.
- Etwas eleganter würden dafür die Reziprozitätsbeziehungen\InsetSpace ~
+ Etwas eleganter würden dafür die Reziprozitätsbeziehungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cauer_reciprocal"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cauer_poles_per_zeroes"
 
 \end_inset
@@ -243,16 +349,24 @@ reference "eq:filter_cauer_poles_per_zeroes"
 \end_layout
 
 \begin_layout Standard
-Wir gehen also von den genannten Gleichungen\InsetSpace ~
+Wir gehen also von den genannten Gleichungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_poly"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_poly"
 
 \end_inset
@@ -261,7 +375,7 @@ reference "eq:elltr1_even_poly"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Zu Ehren von 
 \noun on
 W.
@@ -318,16 +432,24 @@ Der Parameter
 \begin_inset Formula $M$
 \end_inset
 
- ist ein nach Formel\InsetSpace ~
+ ist ein nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_M"
 
 \end_inset
 
- (Seite\InsetSpace ~
+ (Seite
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand pageref
+
+\begin_inset CommandInset ref
+LatexCommand pageref
 reference "eq:elltr1_odd_M"
 
 \end_inset
@@ -341,9 +463,13 @@ reference "eq:elltr1_odd_M"
 \begin_inset Formula $K=\eK{k}$
 \end_inset
 
- nach Anhang\InsetSpace ~
+ nach Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elliptic_integral_K"
 
 \end_inset
@@ -357,7 +483,7 @@ reference "sec:elliptic_integral_K"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -366,9 +492,13 @@ cf
 
 \end_inset
 
- Anhang\InsetSpace ~
+ Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elliptic_func"
 
 \end_inset
@@ -382,21 +512,30 @@ Der Verlauf von
 \end_inset
 
  ist in den Abbildungen 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_odd_function"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_even_function"
 
 \end_inset
 
- von Anhang\InsetSpace ~
+ von Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elltr"
 
 \end_inset
@@ -416,7 +555,7 @@ Cauer
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -437,7 +576,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -448,14 +587,17 @@ cf
 
  
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
-'s drittes Problem in Anhang\InsetSpace ~
+'s drittes Problem in Anhang
+\begin_inset space ~
+\end_inset
+
 
 \noun on
 
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:zolotarev"
 
 \end_inset
@@ -495,9 +637,13 @@ und erhalten für die Amplitudencharakteristik
 \end_layout
 
 \begin_layout Standard
-Mit den ebenfalls aus Anhang\InsetSpace ~
+Mit den ebenfalls aus Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elltr"
 
 \end_inset
@@ -523,9 +669,13 @@ lassen sich die Dämpfungswerte
 \begin_inset Formula $A_{\textup{min}}$
 \end_inset
 
- aus dem Tiefpaß-Toleranzschema von Abbildung\InsetSpace ~
+ aus dem Tiefpaß-Toleranzschema von Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:lp_tol_scheme"
 
 \end_inset
@@ -558,7 +708,7 @@ Variation des Parameters
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -568,9 +718,13 @@ resp
 \end_inset
 
  Mindestdämpfung im Sperrbereich wesentlich beeinflußt.
- In Abbildung\InsetSpace ~
+ In Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:cauer_attenuation"
 
 \end_inset
@@ -592,34 +746,87 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
-\begin_inset Graphics
-	filename cauer_even.eps
-	subcaption
-	subcaptionText "Grad gerade ($n=6$)"
+\begin_inset Float figure
+wide false
+sideways false
+status open
 
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+Grad gerade (
+\begin_inset Formula $n=6$
 \end_inset
 
-
-\newline
-
-\begin_inset Graphics
-	filename cauer_odd.eps
-	keepAspectRatio
-	subcaption
-	subcaptionText "Grad ungerade ($n=7$)"
+)
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cauer_even.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset Newline newline
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+Grad ungerade (
+\begin_inset Formula $n=7$
+\end_inset
+
+)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename cauer_odd.eps
+	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:cauer_attenuation"
 
 \end_inset
@@ -642,9 +849,13 @@ Dämpfungsverlauf des
 \end_layout
 
 \begin_layout Standard
-Bemerkenswert ist in diesem Zusammenhang eine Eigenschaft von Gleichung\InsetSpace ~
+Bemerkenswert ist in diesem Zusammenhang eine Eigenschaft von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cauer_rational"
 
 \end_inset
@@ -653,7 +864,7 @@ reference "eq:filter_cauer_rational"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -662,9 +873,13 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr_reciprocal"
 
 \end_inset
@@ -677,7 +892,7 @@ Jacobi
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 In der Literatur findet man meist die Form 
 \begin_inset Formula $\zn{\omega}{\nu}\cdot\pn{\omega}{\mu}=1$
 \end_inset
@@ -704,9 +919,13 @@ Null- und Polstellen
 \end_layout
 
 \begin_layout Standard
-Zunächst sei auf eine Konsequenz von Gleichung\InsetSpace ~
+Zunächst sei auf eine Konsequenz von Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cauer_reciprocal"
 
 \end_inset
@@ -715,7 +934,7 @@ reference "eq:filter_cauer_reciprocal"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Nicht aber der von 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
@@ -753,9 +972,13 @@ Nicht aber der von
 \end_layout
 
 \begin_layout Standard
-Folglich muß die linke Seite in Gleichung\InsetSpace ~
+Folglich muß die linke Seite in Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cauer_reciprocal"
 
 \end_inset
@@ -783,8 +1006,25 @@ reference "eq:filter_cauer_reciprocal"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Cauer-Tiefpaß@\\noun{Cauer}-Tiefpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauer-Tiefpaß@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauer}
+\end_layout
+
+\end_inset
+
+-Tiefpaß|)
+\end_layout
 
 \end_inset
 

@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -44,8 +52,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: goal.lyx,v 1.15 2007-09-30 13:56:55 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: goal.lyx,v 1.16 2010-09-17 20:16:54 ralf Exp $
 \end_layout
 
 \end_inset
@@ -59,7 +67,8 @@ Approximation im Frequenzbereich
 
 \begin_layout Subsection
 Approximationsziel
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:approx_ampl"
 
 \end_inset
@@ -70,13 +79,18 @@ name "sec:approx_ampl"
 \begin_layout Standard
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung
-\begin_inset LatexCommand index
-name "Dämpfung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Dämpfung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "A(omega)"
 symbol "$\\atf(\\omega)$"
 description "Dämpfung"
@@ -88,15 +102,20 @@ description "Dämpfung"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\"| \\lps \"|$"
 description "Betrag von $\\lps$"
 
 \end_inset
 
  sowie der Phasengang
-\begin_inset LatexCommand index
-name "Phase"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Phase
+\end_layout
 
 \end_inset
 
@@ -105,14 +124,16 @@ name "Phase"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\ang\\lps$"
 description "Winkel von $\\lps$"
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "B(omega)"
 symbol "$\\phf(\\omega)$"
 description "Phase"
@@ -129,13 +150,13 @@ Tschebyscheff
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
 ne Filtertypen 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -144,9 +165,13 @@ eg
 
 \end_inset
 
- sehr schön in\InsetSpace ~
+ sehr schön in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Henderson:1958"
 
 \end_inset
@@ -157,8 +182,12 @@ key "Henderson:1958"
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Amplitudengang"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Amplitudengang
+\end_layout
 
 \end_inset
 
@@ -167,7 +196,8 @@ name "Amplitudengang"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "H(omega)"
 symbol "$\\trf(\\omega)$"
 description "Betrag der Übertragungsfunktion im $\\ft$-Bildbereich"
@@ -176,9 +206,9 @@ description "Betrag der Übertragungsfunktion im $\\ft$-Bildbereich"
 
 , 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -187,17 +217,25 @@ cf
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Guillemin:1952,Guillemin:1957,Winkler:1954,Zverev:1967,Fritzsche:1979a,Mildenberger:1992"
 
 \end_inset
 
 .
  Dazu wird üblicherweise statt der Amplitudencharakteristik
-\begin_inset LatexCommand index
-name "Amplitudencharakteristik"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Amplitudencharakteristik
+\end_layout
 
 \end_inset
 
@@ -206,7 +244,8 @@ name "Amplitudencharakteristik"
 \end_inset
 
  die charakteristische Funktion
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "D(omega)"
 symbol "$\\drf(\\omega)$"
 description "Drosselung"
@@ -218,8 +257,12 @@ description "Drosselung"
 \end_inset
 
 , welche auch Drosselung
-\begin_inset LatexCommand index
-name "Drosselung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Drosselung
+\end_layout
 
 \end_inset
 
@@ -238,9 +281,13 @@ name "Drosselung"
 
 \begin_layout Standard
 Es gibt verschiedene Gründe die Drosselung als Zielfunktion zu verwenden
- (siehe auch\InsetSpace ~
+ (siehe auch
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Saal:1958,Winkler:1954,Fritzsche:1979a,Zverev:1967"
 
 \end_inset
@@ -258,7 +305,7 @@ Aus Sicht der technischen Realisierbarkeit sind die Einschränkungen in Bezug
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -271,12 +318,12 @@ ie
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Im Gegensatz dazu muß 
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -294,9 +341,13 @@ eg
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.15"
 key "Zverev:1967"
 
@@ -309,9 +360,13 @@ key "Zverev:1967"
 Die Drosselung bringt das Filter-Problem einerseits gut zum Ausdruck (Approximat
 ion der Null-Linie im Durchlaßbereich), andererseits können bekannte mathematisc
 he Lösungen (die üblicherweise Standardintervalle approximieren) relativ
- problemlos verwendet werden\InsetSpace ~
+ problemlos verwendet werden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.9"
 key "Zverev:1967"
 
@@ -323,9 +378,13 @@ key "Zverev:1967"
 \begin_layout Enumerate
 An Reaktanz- (LC-) Vierpolen, welche allerdings vorwiegend historische Bedeutung
  haben, entspricht die Drosselung genau dem Verhältnis zwischen reflektierter
- und abgegebener Ausgangsleistung\InsetSpace ~
+ und abgegebener Ausgangsleistung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.1"
 key "Zverev:1967"
 
@@ -361,9 +420,13 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßi
 \end_layout
 
 \begin_layout Standard
-In Tabelle\InsetSpace ~
+In Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:approx_ampl_interval"
 
 \end_inset
@@ -372,7 +435,7 @@ reference "tab:approx_ampl_interval"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -391,11 +454,12 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "tab:approx_ampl_interval"
 
 \end_inset
@@ -408,30 +472,30 @@ Approximationskenngrößen
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
 <features>
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $g(\omega)$
 \end_inset
 
@@ -440,10 +504,10 @@ Approximationskenngrößen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\drf(\omega)$
 \end_inset
 
@@ -452,10 +516,10 @@ Approximationskenngrößen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\trf(\omega)$
 \end_inset
 
@@ -464,10 +528,10 @@ Approximationskenngrößen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\atf(\omega)$
 \end_inset
 
@@ -477,11 +541,11 @@ Approximationskenngrößen
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Durchlaßbereich
 \end_layout
 
@@ -490,7 +554,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -502,7 +566,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -514,7 +578,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $1$
 \end_inset
 
@@ -526,7 +590,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -536,11 +600,11 @@ Durchlaßbereich
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -549,7 +613,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $1$
 \end_inset
 
@@ -561,7 +625,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\sigma$
 \end_inset
 
@@ -573,7 +637,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{\sqrt{1+\sigma^{2}}}}$
 \end_inset
 
@@ -585,7 +649,7 @@ Durchlaßbereich
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $10\log\left(1+\sigma^{2}\right)$
 \end_inset
 
@@ -595,20 +659,20 @@ Durchlaßbereich
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Sperrbereich
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\infty$
 \end_inset
 
@@ -617,10 +681,10 @@ Sperrbereich
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\infty$
 \end_inset
 
@@ -629,10 +693,10 @@ Sperrbereich
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $0$
 \end_inset
 
@@ -641,10 +705,10 @@ Sperrbereich
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\infty$
 \end_inset
 
@@ -678,7 +742,7 @@ Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
  
 \begin_inset Formula $\omega_{g}=1$
@@ -694,9 +758,13 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 \end_inset
 
 .
- Man erhält damit ein Tiefpaß-Toleranzschema nach Abbildung\InsetSpace ~
+ Man erhält damit ein Tiefpaß-Toleranzschema nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:lp_tol_scheme"
 
 \end_inset
@@ -713,7 +781,7 @@ reference "fig:lp_tol_scheme"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gleichbedeutend mit der Forderung 
 \begin_inset Formula $\drf(\omega)\Rightarrow\infty$
 \end_inset
@@ -736,11 +804,10 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename lp_tol_scheme.eps
-	display color
 	scale 80
 	keepAspectRatio
 
@@ -749,12 +816,13 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Tiefpaß-Toleranzfeld
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:lp_tol_scheme"
 
 \end_inset
@@ -808,7 +876,8 @@ aus den Nullstellen von
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:filter_goal_best_approx"
 
 \end_inset
@@ -819,18 +888,28 @@ Bestapproximationen
 \begin_layout Standard
 
 \noun on
-P.\InsetSpace ~
+P.
+\begin_inset space ~
+\end_inset
+
 L.
  Tschebyscheff
 \noun default
- hat im 19.\InsetSpace ~
+ hat im 19.
+\begin_inset space ~
+\end_inset
+
 Jahrhundert mit dem nach ihm benannten 
 \emph on
 Alternantensatz
 \emph default
- die grundlegende Bedingung für eine Bestapproximation gefunden\InsetSpace ~
+ die grundlegende Bedingung für eine Bestapproximation gefunden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Chebyshev:1899,Meinardus:1964,Koerner:1988"
 
 \end_inset
@@ -844,7 +923,7 @@ Eine Bestapproximation
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Im Sinne der Bestimmung von 
 \begin_inset Formula $c_{1},c_{2},\ldots,c_{n}$
 \end_inset
@@ -882,7 +961,7 @@ Im Sinne der Bestimmung von
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -957,13 +1036,13 @@ In der Filtertheorie ist die (gesuchte) Funktion
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Weitere Normen und Fehlermaße sowie die Beziehung zwischen Fehlern im Frequenz-
  und Zeitbereich faßt 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -972,9 +1051,13 @@ eg
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Gumowski:1958"
 
 \end_inset
@@ -1024,9 +1107,13 @@ Genau an dieser Stelle unterscheiden sich nun die Standard-Tiefpässe dadurch,
 \end_inset
 
 .
- Der Grund ist in Ausgangsgleichung\InsetSpace ~
+ Der Grund ist in Ausgangsgleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:approx_discrimination"
 
 \end_inset
@@ -1048,9 +1135,13 @@ reference "eq:approx_discrimination"
 \end_layout
 
 \begin_layout Standard
-Geht man nun von einer Bestapproximation (wie in Abbildung\InsetSpace ~
+Geht man nun von einer Bestapproximation (wie in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:lp_tol_scheme"
 
 \end_inset

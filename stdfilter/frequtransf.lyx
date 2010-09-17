@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding auto
 \font_roman times
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize a4paper
 \use_geometry false
 \use_amsmath 1
@@ -35,6 +43,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -43,8 +52,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: frequtransf.lyx,v 1.5 2007-09-22 17:44:46 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: frequtransf.lyx,v 1.6 2010-09-17 20:16:54 ralf Exp $
 \end_layout
 
 \end_inset
@@ -57,37 +66,48 @@ Einleitung
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Frequenztransformationen|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Frequenztransformationen|(
+\end_layout
 
 \end_inset
 
 Aus den Tiefpaßapproximationen kann man durch Transformation der logarithmischen
  Frequenz\SpecialChar \-
 achse relativ leicht Filtertypen wie Hochpaß, Bandpaß oder Bandsperre
- gewinnen\InsetSpace ~
+ gewinnen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Papoulis:1956"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.4~ff."
 key "Zverev:1967"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4"
 key "Fritzsche:1979a"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "66.1"
 key "Chen:1995"
 
@@ -106,12 +126,12 @@ key "Chen:1995"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Transformation in einen Tiefpaß dient nur der Skalierung 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -135,11 +155,12 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "tab:frqtf_overview"
 
 \end_inset
@@ -152,29 +173,29 @@ Frequenztransformationen
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
 <features>
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" width="0">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="0">
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<column alignment="center" valignment="top" width="0">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Zieltyp
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\lps:=$
 \end_inset
 
@@ -183,10 +204,10 @@ Zieltyp
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\ji\omega:=$
 \end_inset
 
@@ -195,10 +216,10 @@ Zieltyp
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\omega:=$
 \end_inset
 
@@ -208,11 +229,11 @@ Zieltyp
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Tiefpaß
 \end_layout
 
@@ -221,7 +242,7 @@ Tiefpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\lps}{\omega_{0}}}$
 \end_inset
 
@@ -233,7 +254,7 @@ Tiefpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\ji\omega}{\omega_{0}}}$
 \end_inset
 
@@ -245,7 +266,7 @@ Tiefpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\omega}{\omega_{0}}}$
 \end_inset
 
@@ -255,11 +276,11 @@ Tiefpaß
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hochpaß
 \end_layout
 
@@ -268,7 +289,7 @@ Hochpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\omega_{0}}{\lps}}$
 \end_inset
 
@@ -280,7 +301,7 @@ Hochpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\omega_{0}}{\ji\omega}}$
 \end_inset
 
@@ -292,7 +313,7 @@ Hochpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{-\frac{\omega_{0}}{\omega}}$
 \end_inset
 
@@ -302,11 +323,11 @@ Hochpaß
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bandpaß
 \end_layout
 
@@ -315,7 +336,7 @@ Bandpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{Q\left(\frac{\lps}{\omega_{0}}+\frac{\omega_{0}}{\lps}\right)}$
 \end_inset
 
@@ -327,7 +348,7 @@ Bandpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\ji Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)}$
 \end_inset
 
@@ -339,7 +360,7 @@ Bandpaß
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{Q\left(\frac{\omega}{\omega_{0}}-\frac{\omega_{0}}{\omega}\right)}$
 \end_inset
 
@@ -349,20 +370,20 @@ Bandpaß
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bandsperre
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{Q\left(\frac{\lps}{\omega_{0}}+\frac{\omega_{0}}{\lps}\right)}}$
 \end_inset
 
@@ -371,10 +392,10 @@ Bandsperre
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\ji}{Q\left(\frac{\omega_{0}}{\omega}-\frac{\omega}{\omega_{0}}\right)}}$
 \end_inset
 
@@ -383,10 +404,10 @@ Bandsperre
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{Q\left(\frac{\omega_{0}}{\omega}-\frac{\omega}{\omega_{0}}\right)}}$
 \end_inset
 
@@ -424,9 +445,13 @@ Die Größe
 \end_layout
 
 \begin_layout Standard
-Abbildung\InsetSpace ~
+Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:frqtf_overview"
 
 \end_inset
@@ -440,7 +465,7 @@ reference "fig:frqtf_overview"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei positive und negative Kreisfrequenzen 
 \begin_inset Formula $\omega$
 \end_inset
@@ -461,7 +486,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename frequtransf.eps
@@ -471,11 +496,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:frqtf_overview"
 
 \end_inset
@@ -502,20 +528,32 @@ Hochpaß
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Hochpass@Hochpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hochpass@Hochpaß|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Hochpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Hochpaß|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!Hochpass@Hochpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Hochpass@Hochpaß|(
+\end_layout
 
 \end_inset
 
@@ -523,9 +561,13 @@ Die spezielle konforme Abbildung
 \begin_inset Formula $\lps:=\omega_{0}/\lps$
 \end_inset
 
- nach Tabelle\InsetSpace ~
+ nach Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:frqtf_overview"
 
 \end_inset
@@ -534,20 +576,58 @@ reference "tab:frqtf_overview"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein Spezialfall der 
 \noun on
 Möbius
 \noun default
 -Transformation
-\begin_inset LatexCommand index
-name "Moebius-Transformation@\\noun{Möbius}-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Moebius-Transformation@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{M{
+\backslash
+"o}bius}
+\end_layout
+
+\end_inset
+
+-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Moebius-@\\noun{Möbius}-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Moebius-@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{M{
+\backslash
+"o}bius}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
 
 \end_inset
 
@@ -564,9 +644,13 @@ name "Transformation!Moebius-@\\noun{Möbius}-"
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
-, wenn man von einer logarithmischen Frequenzachse ausgeht (siehe auch Abbildung\InsetSpace ~
+, wenn man von einer logarithmischen Frequenzachse ausgeht (siehe auch Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:frqtf_hp"
 
 \end_inset
@@ -580,7 +664,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename hp_tol_scheme.eps
@@ -590,11 +674,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:frqtf_hp"
 
 \end_inset
@@ -618,8 +703,12 @@ Hochpaß-Toleranzschema (logarithmisch,
 
 \begin_layout Standard
 Da bei den Standardapproximationen die normierte Grenzfrequenz
-\begin_inset LatexCommand index
-name "Grenzfrequenz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Grenzfrequenz
+\end_layout
 
 \end_inset
 
@@ -674,9 +763,13 @@ Pole und Nullstellen
 
 \begin_layout Standard
 Die Wirkung der Transformation auf die rationale Übertragungsfunktion nach
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_hp_rational"
 
 \end_inset
@@ -721,9 +814,9 @@ Einsetzen der Substitution
 \begin_layout Standard
 werden, 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -737,14 +830,22 @@ ie
 
 \begin_layout Itemize
 Pole
-\begin_inset LatexCommand index
-name "Pol!der Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!der Übertragungsfunktion
+\end_layout
 
 \end_inset
 
  und Nullstellen
-\begin_inset LatexCommand index
-name "Nullstellen!der Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!der Übertragungsfunktion
+\end_layout
 
 \end_inset
 
@@ -776,16 +877,20 @@ es entsteht eine neue Nullstelle bei
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset LatexCommand index
-name "Vorfaktor"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Vorfaktor
+\end_layout
 
 \end_inset
 
  wirkt nun das (komplexe) Produkt aller Pole 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -809,20 +914,32 @@ resp
 
 \end_deeper
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Filter!Hochpass@Hochpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Hochpass@Hochpaß|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Hochpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Hochpaß|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Hochpass@Hochpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hochpass@Hochpaß|)
+\end_layout
 
 \end_inset
 
@@ -838,20 +955,32 @@ Bandpaß
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Bandpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Bandpaß|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!Bandpass@Bandpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Bandpass@Bandpaß|(
+\end_layout
 
 \end_inset
 
@@ -864,9 +993,13 @@ Ein Bandpaßsystem hat typischerweise einen Durchlaßbereich, welcher sich
 \begin_inset Formula $\omega_{g_{2}}$
 \end_inset
 
- erstreckt (siehe Abbildung\InsetSpace ~
+ erstreckt (siehe Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:frqtf_bp"
 
 \end_inset
@@ -880,7 +1013,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename bp_tol_scheme.eps
@@ -890,11 +1023,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:frqtf_bp"
 
 \end_inset
@@ -918,9 +1052,13 @@ Bandpaß-Toleranzschema (logarithmisch,
 
 \begin_layout Standard
 Aus dem Tiefpaß-Amplitudengang läßt sich eine solche Charakteristik ableiten,
- wenn man die Transformationsbeziehung (nach Tabelle\InsetSpace ~
+ wenn man die Transformationsbeziehung (nach Tabelle
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "tab:frqtf_overview"
 
 \end_inset
@@ -944,8 +1082,12 @@ anwendet.
 \end_inset
 
  nimmt in diesem Fall die Bedeutung einer Mittenfrequenz
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß!Mittenfrequenz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß!Mittenfrequenz
+\end_layout
 
 \end_inset
 
@@ -954,8 +1096,12 @@ name "Bandpass@Bandpaß!Mittenfrequenz"
 \end_inset
 
  bezeichnet man als Güte
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß!Guete@Güte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß!Guete@Güte
+\end_layout
 
 \end_inset
 
@@ -964,18 +1110,22 @@ name "Bandpass@Bandpaß!Guete@Güte"
 \begin_inset Formula $\omega_{0}$
 \end_inset
 
- wird einsichtig, wenn man Gleichung\InsetSpace ~
+ wird einsichtig, wenn man Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_bp_map"
 
 \end_inset
 
  folgendermaßen umformt (
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -984,9 +1134,13 @@ cf
 
 \end_inset
 
- auch\InsetSpace ~
+ auch
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "7-1"
 key "Papoulis:1962"
 
@@ -1065,9 +1219,13 @@ wird deutlich, daß
 \end_layout
 
 \begin_layout Standard
-Was wir bezüglich Formel\InsetSpace ~
+Was wir bezüglich Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_bp_mapinv_helper"
 
 \end_inset
@@ -1146,16 +1304,16 @@ und deshalb für die geometrische Mittenfrequenz des Bandpaß'
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bei logarithmischer Abszisse 
 \begin_inset Formula $\omega_{\textup{BP}}$
 \end_inset
 
  liegen die beiden Grenzfrequenzen also (geometrisch, 
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1175,9 +1333,9 @@ ie
 .
  Aus arithmetischer Sicht (
 \begin_inset ERT
-status inlined
+status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1223,14 +1381,22 @@ Den Sinn,
 \end_inset
 
  als Gütedefinition
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß!Guete@Güte"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß!Guete@Güte
+\end_layout
 
 \end_inset
 
  herzunehmen, unterstreicht folgende Formel für die absolute Bandbreite
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß!Bandbreite"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß!Bandbreite
+\end_layout
 
 \end_inset
 
@@ -1256,9 +1422,13 @@ Pole und Nullstellen
 
 \begin_layout Standard
 Was die Transformation der Pol- und Nullstellen angeht, so gilt dafür ebenfalls
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_bp_mapinv"
 
 \end_inset
@@ -1276,7 +1446,7 @@ umständlichen
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Da Pole und Nullstellen bei der Transformation nach dem gleichen Schema
  wie jede andere Frequenz abgebildet werden, kann man sie einfach in die
  Transformationsbeziehung 
@@ -1353,14 +1523,22 @@ Zusammenfassend kann festgestellt werden, daß:
 
 \begin_layout Itemize
 jede Nullstelle
-\begin_inset LatexCommand index
-name "Nullstellen!der Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!der Übertragungsfunktion
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Pol!der Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Pol!der Übertragungsfunktion
+\end_layout
 
 \end_inset
 
@@ -1415,8 +1593,12 @@ die Transformation zu einer neuen Nullstelle
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset LatexCommand index
-name "Vorfaktor"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Vorfaktor
+\end_layout
 
 \end_inset
 
@@ -1439,20 +1621,32 @@ wirkt.
 
 \end_deeper
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Filter!Bandpass@Bandpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Bandpass@Bandpaß|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Bandpass@Bandpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandpass@Bandpaß|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Bandpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Bandpaß|)
+\end_layout
 
 \end_inset
 
@@ -1464,20 +1658,32 @@ Bandsperre
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Bandsperre|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandsperre|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Bandsperre|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Bandsperre|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!Bandsperre|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Bandsperre|(
+\end_layout
 
 \end_inset
 
@@ -1496,9 +1702,13 @@ Zur Bandsperre bleibt nicht soviel zu sagen -- vor allem weil sich diese
 
 \begin_layout Standard
 als Kombination von Bandpaß- und Hochpaß-Transformation erweist (Reihenfolge
- beliebig, siehe auch anschauliche Darstellung in Abbildung\InsetSpace ~
+ beliebig, siehe auch anschauliche Darstellung in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:frqtf_bs"
 
 \end_inset
@@ -1521,7 +1731,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename bs_tol_scheme.eps
@@ -1531,11 +1741,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:frqtf_bs"
 
 \end_inset
@@ -1562,9 +1773,13 @@ Vergleicht man die Substitutionsvorschrift für
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
- mit der für die Tiefpaß-Bandpaß-Transformation (nach\InsetSpace ~
+ mit der für die Tiefpaß-Bandpaß-Transformation (nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_bp_map"
 
 \end_inset
@@ -1578,9 +1793,13 @@ reference "eq:frqtf_bp_map"
 \begin_inset Formula $\omega_{\textup{LP}}$
 \end_inset
 
- in Formel\InsetSpace ~
+ in Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:frqtf_bp_mapinv"
 
 \end_inset
@@ -1615,20 +1834,32 @@ Für die aus der Tiefpaß-Frequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Filter!Bandsperre|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Bandsperre|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Tiefpaß-Bandsperre|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Tiefpaß-Bandsperre|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Bandsperre|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bandsperre|)
+\end_layout
 
 \end_inset
 
@@ -1636,8 +1867,12 @@ name "Bandsperre|)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Frequenztransformationen|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Frequenztransformationen|)
+\end_layout
 
 \end_inset
 

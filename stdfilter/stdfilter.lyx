@@ -1,8 +1,8 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
 \begin_preamble
 \input{all-inc}
 
@@ -11,7 +11,11 @@
 %% \usepackage{bibcheck}
 %% \usepackage{refcheck}
 \end_preamble
-\options reqno
+\use_default_options false
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -22,9 +26,22 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \paperfontsize default
 \spacing onehalf
+\use_hyperref true
+\pdf_subject "Filter"
+\pdf_keywords "Tschebyscheff, Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische"
+\pdf_bookmarks true
+\pdf_bookmarksnumbered true
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 3
+\pdf_breaklinks true
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
 \use_amsmath 2
@@ -32,7 +49,7 @@
 \cite_engine basic
 \use_bibtopic false
 \paperorientation portrait
-\branch NO_HTML
+\branch WITH_APPENDIX
 \selected 0
 \color #faf0e6
 \end_branch
@@ -53,41 +70,11 @@
 \begin_body
 
 \begin_layout Standard
-\begin_inset ERT
-status inlined
+\begin_inset Note Note
+status open
 
-\begin_layout Standard
-
-%% $Id: stdfilter.lyx,v 1.17 2007-10-07 09:24:15 ralf Exp $
-\end_layout
-
-\begin_layout Standard
-
-%%
-\end_layout
-
-\begin_layout Standard
-
-
-\backslash
-docsubj{Systeme, Filter, Approximationsfunktionen}{Filter}{Tschebyscheff,
- Cauer, Bessel, Butterworth, Filter, Tiefpass, Approximation, Elliptische}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-frontmatter
+\begin_layout Plain Layout
+Version $Id: stdfilter.lyx,v 1.18 2010-09-17 20:17:35 ralf Exp $
 \end_layout
 
 \end_inset
@@ -102,15 +89,15 @@ Systeme, Filter, Approximationsfunktionen
 \begin_layout Author
 Copyright 
 \begin_inset ERT
-status collapsed
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
 textcopyright
 \backslash
-  
+ 2004 -- 
 \backslash
 number
 \backslash
@@ -125,131 +112,8 @@ year
 \end_layout
 
 \begin_layout Standard
-Vorliegendes Werk soll dem Ingenieur 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- der Elektrotechnik, Nachrichtentechnik oder Signalverarbeitung die Grundlagen
- der konventionellen (analogen) Filterapproximationen nahebringen.
- Mit etwas mehr Ausführlichkeit als bei anderen Publikationen zu dieser
- Thematik wird versucht, auch die mathematischen Hintergründe zu vermitteln
- und dadurch etwas mehr Verständnis für die Zusammenhänge zu erreichen
-\begin_inset Foot
-status collapsed
-
-\begin_layout Standard
-Wobei der Lesende selbst darüber entscheiden kann, wie stark er sich von
- der Thematik einfangen läßt.
-\end_layout
-
-\end_inset
-
-.
- Besondere Aufmerksamkeit wird dabei der Verbindung zur 
-\noun on
-Tschebyscheff
-\noun default
-'schen Approximationstheorie, der Funktionentheorie sowie 
-\noun on
-Jacobi
-\noun default
-'s elliptischen Funktionen geschenkt.
- Ausgehend von den Eigenschaften zeit- sowie wertkontinuierlicher LTI-Systeme
- werden die bekanntesten (realisierbaren) Standard-Tiefpaßfilter erörtert.
- Dabei sind es insbesondere Forderungen an den Amplitudengang, welche im
- Mittelpunkt der Betrachtungen stehen.
- Abschließend wird die Transformation der Übertragungsfunktion in andere
- Frequenzbereiche 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- Filtertypen, wie Hochpaß, Bandpaß oder Bandsperre behandelt.
- Zahlreiche Anhänge sind von ihrer Ausführlichkeit so gestaltet, daß eine
- Einarbeitung in die mathematischen Grundlagen ermöglicht wird.
-\end_layout
-
-\begin_layout Standard
-Approximationsvorschriften im Zeitbereich, numerische Verfahren sowie die
- Näherung von anderen charakteristischen Größen, wie der Gruppenlaufzeit
- oder des Phasengangs, werden bei den Betrachtungen fast vollständig ausgespart
-\begin_inset Foot
-status collapsed
-
-\begin_layout Standard
-Approximationen im Zeitbereich (
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- das dortige Verhalten der Standard-Tiefpaßfilter) werden 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Standard
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- in\InsetSpace ~
-
-\begin_inset LatexCommand cite
-key "Guillemin:1952,Hli:1954,Kautz:1954,Guillemin:1957,Gumowski:1958,Zverev:1967"
-
-\end_inset
-
- untersucht.
-\end_layout
-
-\end_inset
-
-.
- Ebenfalls nicht behandelt (und außerdem vorausgesetzt) werden die Grundlagen
- der 
-\noun on
-Fourier
-\noun default
--Analyse, für welche es sehr gute Literatur gibt\InsetSpace ~
-
-\begin_inset LatexCommand cite
-key "Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Marko:1995,Bracewell:2003"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Standard
-\begin_inset LatexCommand tableofcontents
+\begin_inset CommandInset toc
+LatexCommand tableofcontents
 
 \end_inset
 
@@ -276,7 +140,7 @@ key "Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Ma
 \begin_inset ERT
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -291,7 +155,8 @@ nomlabelwidth}{1in}
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "sin"
 symbol "$\\sin(x)$"
 description "Sinus"
@@ -299,7 +164,8 @@ description "Sinus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "cos"
 symbol "$\\cos(x)$"
 description "Cosinus"
@@ -307,7 +173,8 @@ description "Cosinus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "tan"
 symbol "$\\tan(x)$"
 description "Tangens"
@@ -315,7 +182,8 @@ description "Tangens"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "cosh"
 symbol "$\\cosh(x)$"
 description "Cosinus Hyperbolicus"
@@ -323,7 +191,8 @@ description "Cosinus Hyperbolicus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "arcos"
 symbol "$\\arccos(x)$"
 description "Arcus Cosinus"
@@ -331,7 +200,8 @@ description "Arcus Cosinus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "arcosh"
 symbol "$\\arcosh(x)$"
 description "Area Cosinus Hyperbolicus"
@@ -339,7 +209,8 @@ description "Area Cosinus Hyperbolicus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "VP"
 symbol "$\\vp$"
 description "\\noun{Cauchy}-Hauptwert (Valor Principalis)"
@@ -347,7 +218,8 @@ description "\\noun{Cauchy}-Hauptwert (Valor Principalis)"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "sn(u,k)"
 symbol "$\\esn{u}{k}$"
 description "Elliptischer Sinus"
@@ -355,7 +227,8 @@ description "Elliptischer Sinus"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "arcosh"
 symbol "$\\exp(x)$"
 description "Exponentialfunktion"
@@ -363,7 +236,8 @@ description "Exponentialfunktion"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "arctan"
 symbol "$\\arctan(x)$"
 description "Arcus Tangens"
@@ -371,7 +245,8 @@ description "Arcus Tangens"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "cosec"
 symbol "$\\cosec(x)$"
 description "Cosekans ($\\cosec x=\\sin^{-1}x$)"
@@ -379,7 +254,8 @@ description "Cosekans ($\\cosec x=\\sin^{-1}x$)"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "sec"
 symbol "$\\sec(x)$"
 description "Sekans ($\\sec x=\\cos^{-1}x$)"
@@ -387,7 +263,8 @@ description "Sekans ($\\sec x=\\cos^{-1}x$)"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "s0"
 symbol "$\\zn{\\lps}{}$"
 description "Nullstelle einer Funktion von $\\lps$"
@@ -395,7 +272,8 @@ description "Nullstelle einer Funktion von $\\lps$"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "sx"
 symbol "$\\pn{\\lps}{}$"
 description "Pol einer Funktion von $\\lps$"
@@ -403,21 +281,24 @@ description "Pol einer Funktion von $\\lps$"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\zn[(\\drf)]{\\omega}{}$"
 description "Nullstelle von $\\drf(\\omega)$"
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 symbol "$\\pn[(\\drf)]{\\omega}{}$"
 description "Pol von $\\drf(\\omega)$"
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Im(z)"
 symbol "$\\imop(z)$"
 description "Imaginärteil von $z$"
@@ -425,7 +306,8 @@ description "Imaginärteil von $z$"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Re(z)"
 symbol "$\\reop(z)$"
 description "Realteil von $z$"
@@ -436,7 +318,8 @@ description "Realteil von $z$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand printnomenclature
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
 
 \end_inset
 
@@ -445,9 +328,161 @@ description "Realteil von $z$"
 
 \begin_layout Standard
 \begin_inset ERT
-status collapsed
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+frontmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Intention
+\end_layout
 
 \begin_layout Standard
+Vorliegendes Werk soll dem Ingenieur 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ der Elektrotechnik, Nachrichtentechnik oder Signalverarbeitung die Grundlagen
+ der konventionellen (analogen) Filterapproximationen nahebringen.
+ Mit etwas mehr Ausführlichkeit als bei anderen Publikationen zu dieser
+ Thematik wird versucht, auch die mathematischen Hintergründe zu vermitteln
+ und dadurch etwas mehr Verständnis für die Zusammenhänge zu erreichen
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Wobei der Lesende selbst darüber entscheiden kann, wie stark er sich von
+ der Thematik einfangen läßt.
+\end_layout
+
+\end_inset
+
+.
+ Besondere Aufmerksamkeit wird dabei der Verbindung zur 
+\noun on
+Tschebyscheff
+\noun default
+'schen Approximationstheorie, der Funktionentheorie sowie 
+\noun on
+Jacobi
+\noun default
+'s elliptischen Funktionen geschenkt.
+ Ausgehend von den Eigenschaften zeit- sowie wertkontinuierlicher LTI-Systeme
+ werden die bekanntesten (realisierbaren) Standard-Tiefpaßfilter erörtert.
+ Dabei sind es insbesondere Forderungen an den Amplitudengang, welche im
+ Mittelpunkt der Betrachtungen stehen.
+ Abschließend wird die Transformation der Übertragungsfunktion in andere
+ Frequenzbereiche 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Filtertypen, wie Hochpaß, Bandpaß oder Bandsperre behandelt.
+ Zahlreiche Anhänge sind von ihrer Ausführlichkeit so gestaltet, daß eine
+ Einarbeitung in die mathematischen Grundlagen ermöglicht wird.
+\end_layout
+
+\begin_layout Standard
+Approximationsvorschriften im Zeitbereich, numerische Verfahren sowie die
+ Näherung von anderen charakteristischen Größen, wie der Gruppenlaufzeit
+ oder des Phasengangs, werden bei den Betrachtungen fast vollständig ausgespart
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Approximationen im Zeitbereich (
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ das dortige Verhalten der Standard-Tiefpaßfilter) werden 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Guillemin:1952,Hli:1954,Kautz:1954,Guillemin:1957,Gumowski:1958,Zverev:1967"
+
+\end_inset
+
+ untersucht.
+\end_layout
+
+\end_inset
+
+.
+ Ebenfalls nicht behandelt (und außerdem vorausgesetzt) werden die Grundlagen
+ der 
+\noun on
+Fourier
+\noun default
+-Analyse, für welche es sehr gute Literatur gibt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bennett:1955,Papoulis:1962,Kuepfmueller:1968,Fritzsche:1985,Koerner:1988,Marko:1995,Bracewell:2003"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
 
 
 \backslash
@@ -464,8 +499,9 @@ LTI-Systeme
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{ltisys.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "ltisys.lyx"
 
 \end_inset
 
@@ -473,7 +509,7 @@ preview false
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 TeX4ht conversion of ltisys.lyx fails
 \end_layout
 
@@ -487,8 +523,9 @@ Tiefpaßfilter
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{goal.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "goal.lyx"
 
 \end_inset
 
@@ -496,8 +533,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{butterworth.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "butterworth.lyx"
 
 \end_inset
 
@@ -505,8 +543,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{cheby1.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "cheby1.lyx"
 
 \end_inset
 
@@ -514,8 +553,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{cheby2.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "cheby2.lyx"
 
 \end_inset
 
@@ -523,8 +563,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{cauer.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "cauer.lyx"
 
 \end_inset
 
@@ -532,8 +573,9 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{bessel.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "bessel.lyx"
 
 \end_inset
 
@@ -545,8 +587,9 @@ Frequenztransformationen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{frequtransf.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "frequtransf.lyx"
 
 \end_inset
 
@@ -554,17 +597,18 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\start_of_appendix
-\begin_inset Branch NO_HTML
+\begin_inset Branch WITH_APPENDIX
 status collapsed
 
 \begin_layout Chapter
+\start_of_appendix
 Algebraische Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{polynomials.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "polynomials.lyx"
 
 \end_inset
 
@@ -574,15 +618,15 @@ preview false
 \begin_layout Chapter
 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{../cheby/cheby.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "../cheby/cheby.lyx"
 
 \end_inset
 
@@ -590,7 +634,8 @@ preview false
 \end_layout
 
 \begin_layout Chapter
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:elliptic"
 
 \end_inset
@@ -599,8 +644,9 @@ Elliptische Integrale und Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{../elliptic/elliptic.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "../elliptic/elliptic.lyx"
 
 \end_inset
 
@@ -612,13 +658,9 @@ Funktionentheorie -- Analytische Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{../analysis/analysis.lyx}
-preview false
-
-\end_inset
-
-
-\end_layout
+\begin_inset CommandInset include
+LatexCommand include
+filename "../analysis/analysis.lyx"
 
 \end_inset
 
@@ -630,8 +672,14 @@ Tabellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Include \include{tables.lyx}
-preview false
+\begin_inset CommandInset include
+LatexCommand include
+filename "tables.lyx"
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -639,9 +687,10 @@ preview false
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand bibtex
-options "geralpha"
+\begin_inset CommandInset bibtex
+LatexCommand bibtex
 bibfiles "adsp,computers,crypto,math"
+options "geralpha"
 
 \end_inset
 
@@ -649,7 +698,8 @@ bibfiles "adsp,computers,crypto,math"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand printindex
+\begin_inset CommandInset index_print
+LatexCommand printindex
 
 \end_inset
 

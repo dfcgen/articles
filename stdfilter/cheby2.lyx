@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -44,8 +52,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: cheby2.lyx,v 1.14 2007-09-22 17:44:46 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: cheby2.lyx,v 1.15 2010-09-17 20:16:54 ralf Exp $
 \end_layout
 
 \end_inset
@@ -54,22 +62,39 @@ Version: $Id: cheby2.lyx,v 1.14 2007-09-22 17:44:46 ralf Exp $
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:filter_cheby2"
 
 \end_inset
 
 Inverser 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Tiefpaß
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Tschebyscheff-Invers-Tiefpaß@\\noun{Tschebyscheff}-Invers-Tiefpaß|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tschebyscheff-Invers-Tiefpaß@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
+
+\end_inset
+
+-Invers-Tiefpaß|(
+\end_layout
 
 \end_inset
 
@@ -81,39 +106,82 @@ Amplitudencharakteristik
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Filter!elliptisches"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!elliptisches
+\end_layout
 
 \end_inset
 
 Der
 \noun on
- Tschebyschef\SpecialChar \textcompwordmark{}
-f
+ Tschebyscheff
 \noun default
 -Tiefpaß
-\begin_inset LatexCommand index
-name "Tiefpaß!Tschebyscheff@\\noun{Tschebyscheff}-Invers-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tiefpaß!Tschebyscheff@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
+
+\end_inset
+
+-Invers-
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Filter!Tschebyscheff@\\noun{Tschebyscheff}-Invers-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Filter!Tschebyscheff@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
 
 \end_inset
 
- vom Typ\InsetSpace ~
+-Invers-
+\end_layout
+
+\end_inset
+
+ vom Typ
+\begin_inset space ~
+\end_inset
+
 II ist ebenfalls eine Anwendung der 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Funktionen erster Art -- diesmal aber so, daß eine Welligkeit im Durchlaßbereic
 h vermieden wird, dafür aber Dämpfungsminima im Sperrbereich hingenommen
- werden müssen\InsetSpace ~
+ werden müssen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.2.1.1"
 key "Fritzsche:1979a"
 
@@ -133,9 +201,13 @@ Konstanten
 \begin_inset Formula $\omega_{s}$
 \end_inset
 
- (siehe auch Abschnitt\InsetSpace ~
+ (siehe auch Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:filter_goal_best_approx"
 
 \end_inset
@@ -149,11 +221,10 @@ reference "sec:filter_goal_best_approx"
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Genau dafür stellen die 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Funktionen erster Art bekanntlich eine Bestapproximation dar.
 \end_layout
@@ -163,8 +234,7 @@ f
 .
  Weil das (Best-) Approximationsintervall der 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Funktionen im vorgenannten Sinne aber 
 \begin_inset Formula $[-1,+1]$
@@ -174,7 +244,7 @@ f
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Hier durch geometrische Spiegelung von Durchlaß- und Sperrbereich um die
  Eckfrequenz 
 \begin_inset Formula $\omega_{s}$
@@ -189,15 +259,14 @@ Hier durch geometrische Spiegelung von Durchlaß- und Sperrbereich um die
  Aus diesen logischen Überlegungen heraus kann man die Drosselungsfunktion
  für den inversen 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Tiefpaß ableiten.
 \end_layout
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\frac{\T_{n}(\omega_{s})}{\T_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}\end{equation}
+\drf(\omega)=\sigma\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}\end{equation}
 
 \end_inset
 
@@ -209,16 +278,24 @@ Wie
 \begin_inset Formula $\drf(\omega)$
 \end_inset
 
- sich auf der Grundlage von Formel\InsetSpace ~
+ sich auf der Grundlage von Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:approx_discrimination"
 
 \end_inset
 
- in einem typischen Dämpfungsverlauf darstellt zeigt Abbildung\InsetSpace ~
+ in einem typischen Dämpfungsverlauf darstellt zeigt Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:filter_cheby2_amplitude"
 
 \end_inset
@@ -252,14 +329,14 @@ werte
 \end_inset
 
  an den Extremstellen von 
-\begin_inset Formula $\T_{n}(x)$
+\begin_inset Formula $\Tn_{n}(x)$
 \end_inset
 
  bestimmt (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -268,9 +345,13 @@ cf
 
 \end_inset
 
- Anhang\InsetSpace ~
+ Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:cheby"
 
 \end_inset
@@ -280,7 +361,7 @@ reference "sec:cheby"
 
 \begin_layout Standard
 \begin_inset Formula \[
-A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\T_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]\]
+A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]\]
 
 \end_inset
 
@@ -297,7 +378,7 @@ Die zugehörigen
 \end_inset
 
 , also bezüglich 
-\begin_inset Formula $\T_{n}(\omega_{s}/\omega)$
+\begin_inset Formula $\Tn_{n}(\omega_{s}/\omega)$
 \end_inset
 
  an den Stellen 
@@ -308,8 +389,7 @@ Die zugehörigen
  Die immer dazwischen liegenden Dämpfungsmaxima werden durch die Nullstellen
  der 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Funktion erzeugt und sind deshalb bei 
 \begin_inset Formula $\omega_{s}/\cos[(k-1/2)\pi/n]$
@@ -318,18 +398,23 @@ f
  lokalisiert.
  Kombiniert man (wie beim 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
--Tiefpaß vom Typ\InsetSpace ~
-I) auch hier beide Ausdrücke, so erhält man die Frequenzen
- 
+-Tiefpaß vom Typ
+\begin_inset space ~
+\end_inset
+
+I) auch hier beide Ausdrücke, so erhält man die Frequenzen 
 \begin_inset Formula $\omega_{k}$
 \end_inset
 
- nach Abbildung\InsetSpace ~
+ nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:filter_cheby2_amplitude"
 
 \end_inset
@@ -352,7 +437,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename cheby2_amplitude.eps
@@ -362,21 +447,24 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:filter_cheby2_amplitude"
 
 \end_inset
 
 Dämpfungsverlauf des
 \noun on
- Tschebyschef\SpecialChar \textcompwordmark{}
-f
+ Tschebyscheff
 \noun default
--Tiefpaß Typ\InsetSpace ~
+-Tiefpaß Typ
+\begin_inset space ~
+\end_inset
+
 II
 \end_layout
 
@@ -400,9 +488,9 @@ Aufgrund der für
 
 \begin_layout Standard
 \begin_inset Formula \[
-\lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\T_{n}(\omega_{s})}{\T_{n}\left(0\right)}=\left\{ \begin{array}{ll}
+\lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(0\right)}=\left\{ \begin{array}{ll}
 \infty & \qquad(n\textrm{ ungerade})\\
-\pm\sigma\,\T_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})\end{array}\right.\]
+\pm\sigma\,\Tn_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})\end{array}\right.\]
 
 \end_inset
 
@@ -420,8 +508,7 @@ Nullstellen
 \begin_layout Standard
 Im Gegensatz zum ersten Typ des 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Tiefpaß besitzt 
 \begin_inset Formula $\trf(\lps)$
@@ -447,7 +534,7 @@ Laplace
 
 \begin_layout Standard
 \begin_inset Formula \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\T_{n}^{2}(\omega_{s})/\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\T_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\T_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}\end{equation}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})/\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\Tn_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}\end{equation}
 
 \end_inset
 
@@ -460,7 +547,7 @@ und setzen den Zähler Null.
 
 \begin_layout Standard
 \begin_inset Formula \[
-\T_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0\]
+\Tn_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0\]
 
 \end_inset
 
@@ -472,7 +559,7 @@ Von der Betrachtung der Extremwerte her (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -481,15 +568,19 @@ cf
 
 \end_inset
 
- voriger Abschnitt oder Anhang\InsetSpace ~
+ voriger Abschnitt oder Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:cheby"
 
 \end_inset
 
 ) ist schon bekannt, daß die Nullstellen von 
-\begin_inset Formula $\T_{n}(x)$
+\begin_inset Formula $\Tn_{n}(x)$
 \end_inset
 
  bei
@@ -541,7 +632,7 @@ Für den Fall eines Filters mit ungeradem Grad ist jedoch zu beachten, daß
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Und damit auch zu einer (theoretisch) unbeschränkten Dämpfung für 
 \begin_inset Formula $\omega\rightarrow\infty$
 \end_inset
@@ -563,17 +654,25 @@ Zur Ermittlung der Pole von
 \begin_inset Formula $\trf(\lps)$
 \end_inset
 
- kann man entweder formal die Polstellenbedingung für Gleichung\InsetSpace ~
+ kann man entweder formal die Polstellenbedingung für Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cheby2_trf_laplace"
 
 \end_inset
 
  formulieren oder (was dasselbe ist) den höheren Zusammenhang zwischen Drosselun
-g und Übertragungsfunktion nach Formel\InsetSpace ~
+g und Übertragungsfunktion nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:approx_discrimination"
 
 \end_inset
@@ -585,9 +684,13 @@ reference "eq:approx_discrimination"
 \end_inset
 
  charakterisiert sind.
- Nehmen wir also die Drosselungsfunktion dieses Filtertyps nach Gleichung\InsetSpace ~
+ Nehmen wir also die Drosselungsfunktion dieses Filtertyps nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cheby2_chfunc"
 
 \end_inset
@@ -597,7 +700,7 @@ reference "eq:filter_cheby2_chfunc"
 
 \begin_layout Standard
 \begin_inset Formula \[
-\sigma\T_{n}(\omega_{s})=\pm\ji\T_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod\]
+\sigma\Tn_{n}(\omega_{s})=\pm\ji\Tn_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod\]
 
 \end_inset
 
@@ -605,20 +708,27 @@ reference "eq:filter_cheby2_chfunc"
 \end_layout
 
 \begin_layout Standard
-Wegen der Ähnlichkeit mit Gleichung\InsetSpace ~
+Wegen der Ähnlichkeit mit Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:filter_cheby1_pole_cond"
 
 \end_inset
 
- des Typ\InsetSpace ~
+ des Typ
+\begin_inset space ~
+\end_inset
+
 I Tiefpaß substituieren wir 
 \begin_inset Formula $\lps'=-\omega_{s}/\lps$
 \end_inset
 
  und 
-\begin_inset Formula $1/\sigma'=\sigma\T_{n}(\omega_{s})$
+\begin_inset Formula $1/\sigma'=\sigma\Tn_{n}(\omega_{s})$
 \end_inset
 
  und erhalten:
@@ -626,7 +736,7 @@ I Tiefpaß substituieren wir
 
 \begin_layout Standard
 \begin_inset Formula \[
-\T_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod\]
+\Tn_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod\]
 
 \end_inset
 
@@ -634,9 +744,13 @@ I Tiefpaß substituieren wir
 \end_layout
 
 \begin_layout Standard
-Nun steht einer Wiederverwendung der in Abschnitt\InsetSpace ~
+Nun steht einer Wiederverwendung der in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:filter_cheby1_poles"
 
 \end_inset
@@ -660,17 +774,19 @@ nichts mehr im Wege.
 \begin_inset Foot
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei das Minuszeichen in 
 \begin_inset Formula $\pn{\lps}{}=-\omega_{s}/\pn{\lps'}{}$
 \end_inset
 
  entfällt, wenn man genau die andere Menge der Pole (beim 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
--Tiefpaß Typ\InsetSpace ~
+-Tiefpaß Typ
+\begin_inset space ~
+\end_inset
+
 I) von 
 \begin_inset Formula $\trf(\lps)\trf(-\lps)$
 \end_inset
@@ -706,7 +822,7 @@ sowie die Halbachsen (mit
 
 \begin_layout Emph(asized)
 \begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\T_{n}(\omega_{s})\right]\right\} \mperiod\end{xalignat}
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\} \mperiod\end{xalignat}
 
 \end_inset
 
@@ -717,12 +833,15 @@ sowie die Halbachsen (mit
 Man verifiziert an Hand der Formeln, daß die Lage der Polstellen qualitativ
  dieselbe wie beim ersten Typ des 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
--Tiefpaß (siehe Abbildung\InsetSpace ~
+-Tiefpaß (siehe Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:cheby1_roots"
 
 \end_inset
@@ -731,8 +850,25 @@ reference "fig:cheby1_roots"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Tschebyscheff-Invers-Tiefpaß@\\noun{Tschebyscheff}-Invers-Tiefpaß|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tschebyscheff-Invers-Tiefpaß@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
+
+\end_inset
+
+-Invers-Tiefpaß|)
+\end_layout
 
 \end_inset
 
