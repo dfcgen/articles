@@ -1,4 +1,4 @@
-#LyX 1.6.3 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -8,7 +8,7 @@
 \usepackage{multicol}
 
 \setlength{\nomlabelwidth}{5em}
-\date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision: 1.3 $}}
+\date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision: 1.4 $}}
 \newcommand {\hex} [1] {\ensuremath{\mathrm{{#1}_{H}}}}
 \end_preamble
 \use_default_options false
@@ -58,6 +58,10 @@ synopsis
 \selected 0
 \color #faf0e6
 \end_branch
+\branch WITH_ESIGN
+\selected 1
+\color #faf0e6
+\end_branch
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -79,7 +83,7 @@ synopsis
 status open
 
 \begin_layout Plain Layout
-Version $Id: crypto.lyx,v 1.3 2010-02-14 14:51:11 ralf Exp $
+Version $Id: crypto.lyx,v 1.4 2010-09-17 20:13:40 ralf Exp $
 \end_layout
 
 \end_inset
@@ -959,7 +963,7 @@ ie
 \end_layout
 
 \begin_layout Subsubsection
-Struktur
+Herkömmliche Struktur
 \end_layout
 
 \begin_layout Standard
@@ -1027,20 +1031,7 @@ reference "fig:feistel_network"
 \end_inset
 
  wird danach wieder auf den Eingang zurückgeführt und das Verfahren in mehreren
- Runden (typisch 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- 16) wiederholt.
+ Runden wiederholt.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "~"
@@ -1053,9 +1044,8 @@ description "Exklusiv-Oder (Modulo-2, XOR)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-l_{i+1} & =r_{i}\\
-r_{i+1} & =l_{i}\oplus f(r_{i},K_{i})\end{align*}
+\begin_inset Formula \begin{xalignat}{2}
+l_{i+1} & =r_{i} & r_{i+1} & =l_{i}\oplus f(r_{i},K_{i})\label{eq:crypto_feistel}\end{xalignat}
 
 \end_inset
 
@@ -1171,15 +1161,21 @@ Der letzte Punkt soll noch kurz erläutert werden, wobei von Formel
 \begin_inset space ~
 \end_inset
 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:crypto_feistel"
+
+\end_inset
+
  auszugehen ist.
  Stellen wir diese einfach für die Rückwärtsrichtung (Entschlüsselung) um,
  so ergibt sich:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-r_{i} & =l_{i+1}\\
-l_{i} & =r_{i+1}\oplus f(l_{i+1},K_{i}),\end{align*}
+\begin_inset Formula \begin{xalignat}{2}
+r_{i} & =l_{i+1} & l_{i} & =r_{i+1}\oplus f(l_{i+1},K_{i}),\label{eq:crypto_feistel_reverse}\end{xalignat}
 
 \end_inset
 
@@ -1220,11 +1216,18 @@ Insbesondere wird eine Umkehrfunktion
 \end_inset
 
  startete.
- Bei der Entschlüsselung muß man wie Formel
+ Bei der Entschlüsselung muß man, wie Formel
 \begin_inset space ~
 \end_inset
 
- zeigt umgekehrt vorgehen, also den Schlüssel 
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:crypto_feistel_reverse"
+
+\end_inset
+
+ zeigt, umgekehrt vorgehen, also den Schlüssel 
 \begin_inset Formula $K_{0}$
 \end_inset
 
@@ -1236,8 +1239,191 @@ Advanced Encryption Algorithm (AES)
 \end_layout
 
 \begin_layout Standard
+Definiert im NIST Dokument 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "FIPS:197"
+
+\end_inset
+
+ und mittlerweile auch durch die ISO in 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:18033-3"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph
+Substitution (SubBytes)
+\end_layout
+
+\begin_layout Paragraph
+Permutation (ShiftRows)
+\end_layout
+
+\begin_layout Paragraph
+Diffusion (MixColumns)
+\end_layout
+
+\begin_layout Standard
+Stellt einen weiteren Durchmischungsschritt dar, welcher die (jeweils) vier
+ Elemente einer Spalte der Zustandmatrix in Beziehung setzt.
+ Dazu werden sie als Koeffizienten von Polynomen im Restklassenkörper 
+\begin_inset Formula $\GF(2^{8})$
+\end_inset
+
+ aufgefaßt, auf die folgende Operation angewendet wird:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \[
+s^{\prime}(x)=a(x)\otimes s(x)=a(x)\cdot s(x)\bmod(x^{4}+1)\mperiod\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Die vier neuen Zustandsvariablen 
+\begin_inset Formula $s^{\prime}$
+\end_inset
+
+ kann man nach 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "5.1.3"
+key "FIPS:197"
+
+\end_inset
+
+ auch durch einfache XOR-Operationen aus den alten Werten 
+\begin_inset Formula $s$
+\end_inset
+
+ gewinnen.
+ Dies soll hier kurz nachgewiesen werden, wozu die einzelnen Schritte der
+ Multiplikation in 
+\begin_inset Formula $\mathbb{F}_{2^{8}}[x]/(x^{4}+1)$
+\end_inset
+
+ ausführlich dargestellt sind.
+\end_layout
+
+\begin_layout Enumerate
+Multiplikation 
+\begin_inset Formula $b(x)=a(x)\cdot s(x)$
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+\begin{split}b(x) & =(a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0})\cdot(s_{3}x^{3}+s_{2}x^{2}+s_{1}x+s_{0})\\
+ & =\underbrace{a_{3}s_{3}}_{b_{6}}x^{6}+\underbrace{(a_{2}s_{3}\oplus a_{3}s_{2})}_{b_{5}}x^{5}+\underbrace{(a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1})}_{b_{4}}x^{4}+\\
+ & \quad+\underbrace{(a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0})}_{b_{3}}x^{3}+\underbrace{(a_{0}s_{2}\oplus a_{1}s_{1}\oplus a_{2}s_{0})}_{b_{2}}x^{2}+\underbrace{(a_{0}s_{1}\oplus a_{1}s_{0})}_{b_{1}}x+\underbrace{a_{0}s_{0}}_{b_{0}}\end{split}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Modulo-Reduktion 
+\begin_inset Formula $b(x)\bmod(x^{4}+1)$
+\end_inset
+
+ durch Polynomdivision (mit Rest):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \begin{multline*}
+\begin{split}(b_{6}x^{6}+b_{5}x^{5}+b_{4}x^{4}+b_{3}x^{3}+b_{2}x^{2}+b_{1}x+b_{0})\bmod(x^{4}+1)=\\
+b_{3}x^{3}+(b_{2}\oplus b_{6})x^{2}+(b_{1}\oplus b_{5})x+(b_{0}\oplus b_{4})\end{split}
+\end{multline*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Vergleich der Koeffizienten in
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula \[
+s^{\prime}(x)=s_{3}^{\prime}x^{3}+s_{2}^{\prime}x^{2}+s_{1}^{\prime}x+s_{0}^{\prime}=b(x)\bmod(x^{4}+1)\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit dem Ergebnis der Modulo-Reduktion zeigt:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Auffällig daran ist, daß für jedes Byte 
+\begin_inset Formula $s_{i}^{\prime}$
+\end_inset
+
+ dieselbe Rechnung mit einem rotierenden Vektor 
+\begin_inset Formula $\mvec{s}=(s_{3},s_{2},s_{1},s_{0})$
+\end_inset
+
+ durchgeführt werden kann.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{alignat*}{2}
+s_{0}^{\prime} & =b_{0}\oplus b_{4} &  & =a_{0}s_{0}\oplus a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1}\\
+s_{1}^{\prime} & =b_{1}\oplus b_{5} &  & =a_{0}s_{1}\oplus a_{1}s_{0}\oplus a_{2}s_{3}\oplus a_{3}s_{2}\\
+s_{2}^{\prime} & =b_{2}\oplus b_{6} &  & =a_{0}s_{2}\oplus a_{1}s_{1}\oplus a_{2}s_{0}\oplus a_{3}s_{3}\\
+s_{3}^{\prime} & =b_{3} &  & =a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0}\mperiod\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Für den AES gelten die konkreten Werte 
+\begin_inset Formula $(a_{3},a_{2},a_{1},a_{0}):=(\hex{03},\hex{01},\hex{01},\hex{02})$
+\end_inset
+
+ bei der Verschlüsselung und 
+\begin_inset Formula $(a_{3},a_{2},a_{1},a_{0}):=(\hex{0B},\hex{0D},\hex{09},\hex{0E})$
+\end_inset
+
+ bei der Entschlüsselung.
+\end_layout
+
+\begin_layout Paragraph
+Rundenschlüssel (AddRoundKey)
+\end_layout
+
+\begin_layout Standard
 \begin_inset Branch WITH_FEAL
-status open
+status collapsed
 
 \begin_layout Subsubsection
 Fast Encryption Algorithm
@@ -3659,6 +3845,12 @@ Blockchiffren|)
 \end_layout
 
 \begin_layout Section
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:crypto_hash"
+
+\end_inset
+
 Hash-Algorithmen
 \end_layout
 
@@ -3668,20 +3860,37 @@ Einführung
 
 \begin_layout Standard
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Hash-Algorithmen
+Hash!-Algorithmen
 \end_layout
 
 \end_inset
 
 
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hash
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
 Kryptografische Hash-Funktionen bilden das Rückgrat von Kryptoverfahren
- und -algorithmen.
+ und -algorithmen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Menezes:1992"
+
+\end_inset
+
+.
  Wie die aus der Informatik bekannten Hash-Funktionen auch, bilden sie eine
  große Eingangsmenge 
 \begin_inset Formula $\{x\}$
@@ -3692,9 +3901,8 @@ Kryptografische Hash-Funktionen bilden das Rückgrat von Kryptoverfahren
 \end_inset
 
  ab.
- Kryptografische Hash-Funktionen haben jedoch folgende ergänzende Eigenschaften,
- welche deren Komplexität mit dem jeweiligen Stand der Technik in Verbindung
- bringen:
+ Sie haben jedoch folgende ergänzende Eigenschaften, welche deren algorithmische
+ Komplexität mit dem jeweiligen Stand der Technik in Verbindung bringen:
 \end_layout
 
 \begin_layout Enumerate
@@ -3745,7 +3953,7 @@ ie
 \begin_inset space ~
 \end_inset
 
-Ursprungswert-Festigkeit).
+Urbild-Festigkeit).
 \begin_inset Foot
 status collapsed
 
@@ -3779,7 +3987,7 @@ Es ist praktisch unmöglich zu einem vorgegebenen Eingangswert
 \begin_inset space ~
 \end_inset
 
-Ursprungswert-Festigkeit).
+Urbild-Festigkeit).
 \end_layout
 
 \begin_layout Standard
@@ -3924,7 +4132,7 @@ key "Merkle:1989,Damgard:1989"
 status collapsed
 
 \begin_layout Plain Layout
- Eine gewisse Ähnlichkeit mit den verketteten Betriebsarten der Blockchiffren
+Eine gewisse Ähnlichkeit mit den verketteten Betriebsarten der Blockchiffren
  (
 \begin_inset ERT
 status open
@@ -3949,7 +4157,7 @@ reference "sec:crypto_blockcipher_opmodes"
 
 \end_inset
 
-) läßt sich nicht von der Hand weisen.
+) ist nicht von der Hand zu weisen.
 \end_layout
 
 \end_inset
@@ -4064,7 +4272,7 @@ reference "fig:sha1"
 
 \end_inset
 
- die zu SHA-1 gehörige Kompressionsfunktion 
+ die zugehörige Kompressionsfunktion 
 \begin_inset Formula $\operatorname{C}$
 \end_inset
 
@@ -4582,7 +4790,7 @@ Shift Left/Right
 \begin_inset Quotes prd
 \end_inset
 
- -- insgesamt wurden die Rundenfunktionen verkompliziert.
+ -- insgesamt wurde die Rundenfunktion verkompliziert.
 \end_layout
 
 \begin_layout Itemize
@@ -4599,11 +4807,11 @@ Beim SHA-224/256 werden anstatt der 80
 \begin_inset space ~
 \end_inset
 
-Runden nur noch 64
+Runden nur 64
 \begin_inset space ~
 \end_inset
 
-Runden benötigt.
+Runden ausgeführt.
 \end_layout
 
 \begin_layout Subsection
@@ -4658,7 +4866,7 @@ Bit, mit Nullen auf.
 \end_layout
 
 \begin_layout Enumerate
-Füge den Blockzähler (
+Füge einen Blockzähler (
 \family typewriter
 CNT
 \family default
@@ -4827,7 +5035,7 @@ eg
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "NIST:800-56B"
+key "NIST:800-56B,FIPS:186-3,IEEE:STD1363"
 
 \end_inset
 
@@ -4982,6 +5190,38 @@ Wegen
 \end_inset
 
 .
+\end_layout
+
+\begin_layout Itemize
+Aus 
+\begin_inset Formula $\gcd[e,(p-1)(q-1)]=1$
+\end_inset
+
+ läßt sich als notwendige Voraussetzungen 
+\begin_inset Formula $\gcd(e,p-1)=1$
+\end_inset
+
+ und 
+\begin_inset Formula $\gcd(e,q-1)=1$
+\end_inset
+
+ ableiten.
+\end_layout
+
+\begin_layout Itemize
+Da 
+\begin_inset Formula $p-1$
+\end_inset
+
+ und 
+\begin_inset Formula $q-1$
+\end_inset
+
+ gerade Zahlen sind, muß 
+\begin_inset Formula $e$
+\end_inset
+
+ wegen des vorangegangenen Punktes auf jeden Fall ungerade sein.
 \end_layout
 
 \end_deeper
@@ -6903,7 +7143,7 @@ mbox{PKCS
 \begin_inset space ~
 \end_inset
 
-2 nach
+2.1 nach
 \begin_inset space ~
 \end_inset
 
@@ -7127,7 +7367,7 @@ status open
 \noindent
 \align center
 \begin_inset Graphics
-	filename pkcs1_v21_em.eps
+	filename pkcs1_v21_oaep.eps
 
 \end_inset
 
@@ -9111,6 +9351,14 @@ Bildung des HMAC
 
 \begin_layout Subsection
 Signaturen
+\end_layout
+
+\begin_layout Subsubsection
+Einleitung
+\end_layout
+
+\begin_layout Standard
+Elektronische Signaturen
 \begin_inset Index
 status collapsed
 
@@ -9120,15 +9368,171 @@ Signatur
 
 \end_inset
 
+ dienen der Authentifizierung -- im Sinne dessen daß sie (
+\begin_inset ERT
+status open
 
+\begin_layout Plain Layout
+
+
+\backslash
+cf
 \end_layout
 
-\begin_layout Subsubsection
-Einleitung
+\end_inset
+
+ Signaturgesetz
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signaturgesetz
+\end_layout
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Itemize
+dem Inhaber eines Signaturschlüssels eindeutig zugeordnet sind 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ ihn identifizieren;
+\end_layout
+
+\begin_layout Itemize
+eine nachträgliche Änderung der Daten (Nachricht), mit denen sie verknüpft
+ sind, sicher erkennbar machen.
 \end_layout
 
 \begin_layout Standard
-Eine Signatur wird durch asymmetrische Verschlüsselung des Hash
+Man unterscheidet Signaturen mit 
+\begin_inset Quotes pld
+\end_inset
+
+Message Recovery
+\begin_inset Quotes prd
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur!mit 
+\begin_inset Quotes pld
+\end_inset
+
+Message Recovery
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+ (siehe 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "ISO:9796-2"
+
+\end_inset
+
+ oder
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Menezes:1992"
+
+\end_inset
+
+) und Signaturen mit 
+\begin_inset Quotes pld
+\end_inset
+
+Appendix
+\begin_inset Quotes prd
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur!mit 
+\begin_inset Quotes pld
+\end_inset
+
+Appendix
+\begin_inset Quotes prd
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+.
+ In der Praxis werden Signaturen mit Anhang nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "IEEE:STD1363,PKCS1:2002,FIPS:186-3,ANSI:X9.62"
+
+\end_inset
+
+ wohl am häufigsten verwendet.
+ Ihre Bildungsvorschrift kann man wiefolgt skizzieren (siehe auch Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:crypto_sign_appendix"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Enumerate
+H(ash): Berechne den Hash
 \begin_inset Index
 status collapsed
 
@@ -9138,28 +9542,83 @@ Hash
 
 \end_inset
 
--Wert (Digest
-\begin_inset Index
-status collapsed
+ (
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-Digest
+
+
+\backslash
+resp
 \end_layout
 
 \end_inset
 
-) einer Nachricht mit dem privaten Schlüssel gebildet.
- Sie kann dann durch jeden Empfänger, der den öffentlichen Schlüssel besitzt,
- verifiziert werden.
-\end_layout
-
-\begin_layout Subsubsection
-RSA
+ Message Digest
 \begin_inset Index
 status collapsed
 
 \begin_layout Plain Layout
-RSA-Algorithmus
+Message Digest (MD)
+\end_layout
+
+\end_inset
+
+) der Nachricht 
+\begin_inset Formula $M$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+C(oding): Kodiere das Ergebnis nach einem dem Kryptoalgorithmus (siehe nächster
+ Punkt) angepaßten Schema.
+\end_layout
+
+\begin_layout Enumerate
+E(ncrypt): Verschlüssele den so strukturierten Hash mit dem privaten Teil
+ 
+\begin_inset Formula $K_{\mathrm{priv}}$
+\end_inset
+
+ des Signaturschlüssels.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset Graphics
+	filename signapp.eps
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:crypto_sign_appendix"
+
+\end_inset
+
+Signatur mit Anhang
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -9168,7 +9627,90 @@ RSA-Algorithmus
 \end_layout
 
 \begin_layout Standard
-Die RSA-Signatur über eine Nachricht 
+Die Integrität der empfangenen (und möglicherweise veränderten) Nachricht
+ 
+\begin_inset Formula $M'$
+\end_inset
+
+ kann im weiteren mit Hilfe der Signatur verifiziert werden.
+ Dazu sind auf der Empfängerseite folgende Schritte nötig:
+\end_layout
+
+\begin_layout Enumerate
+Berechne 
+\begin_inset Formula $\operatorname{H}(M')$
+\end_inset
+
+ in gleicher Art und Weise wie beim Herausgeber.
+\end_layout
+
+\begin_layout Enumerate
+Entschlüssele die Signatur mit Hilfe des öffentlichen Teils 
+\begin_inset Formula $K_{\mathrm{pub}}$
+\end_inset
+
+ des Signaturschlüssels und dekodiere 
+\begin_inset Formula $\operatorname{H}(M)$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Vergleiche 
+\begin_inset Formula $\operatorname{H}(M)$
+\end_inset
+
+ mit 
+\begin_inset Formula $\operatorname{H}(M')$
+\end_inset
+
+ um die Integrität 
+\begin_inset Formula $M'=M$
+\end_inset
+
+ zu verifizieren.
+\end_layout
+
+\begin_layout Subsubsection
+RSA-Signaturen nach PKCS #1
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+PKCS
+\begin_inset space ~
+\end_inset
+
+#1
+\end_layout
+
+\end_inset
+
+Die RSA-Signatur
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur!RSA-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Signatur!nach PKCS~#1
+\end_layout
+
+\end_inset
+
+ über eine Nachricht 
 \begin_inset Formula $m$
 \end_inset
 
@@ -9244,6 +9786,24 @@ Signatur
 \begin_layout Standard
 \begin_inset Formula \begin{align}
 p & =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(d,n)}}p\right]\right\} =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(e,n)}}p\right]\right\} \label{eq:rsa_symmetry}\end{align}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+PKCS 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "PKCS1:2002"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Bellare:1996"
 
 \end_inset
 
@@ -9745,28 +10305,12 @@ v & = & r\end{eqnarray*}
 
 \end_layout
 
+\begin_layout Standard
+\begin_inset Branch WITH_ESIGN
+status open
+
 \begin_layout Subsubsection
-Efficient Digital Signature Scheme
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Efficient Digital Signature Scheme
-\end_layout
-
-\end_inset
-
- (ESIGN
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-ESIGN
-\end_layout
-
-\end_inset
-
-)
+Efficient Digital Signature Scheme (ESIGN)
 \end_layout
 
 \begin_layout Standard
@@ -9774,6 +10318,26 @@ ESIGN
 \emph on
 ESIGN
 \emph default
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+ESIGN
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Efficient Digital Signature Scheme
+\end_layout
+
+\end_inset
+
  nutzt wieder das Faktorisierungsproblem großer Zahlen als Einweg-Funktion
 \begin_inset space ~
 \end_inset
@@ -10231,6 +10795,11 @@ key "schneier:1996"
 \end_inset
 
 .
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
