@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman default
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !bh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 2
@@ -42,10 +50,10 @@
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
-\begin_layout Standard
-Version: $Id: tables.lyx,v 1.7 2007-09-30 13:57:32 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: tables.lyx,v 1.8 2010-09-17 20:17:43 ralf Exp $
 \end_layout
 
 \end_inset
@@ -62,21 +70,61 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Fourier-Transformation@\\noun{Fourier}-Transf.|see{Transformation}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Fourier-Transformation@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Fourier}
+\end_layout
 
 \end_inset
 
+-Transf.|see
+\begin_inset ERT
+status open
 
-\begin_inset LatexCommand index
-name "Transformation!Fourier@\\noun{Fourier}-"
+\begin_layout Plain Layout
+{Transformation}
+\end_layout
 
 \end_inset
 
 
 \end_layout
 
-\begin_layout Standard
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Fourier@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Fourier}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\end_inset
+
 An dieser Stelle sollen einige wichtige Korrespondenzen der 
 \noun on
 Fourier
@@ -88,7 +136,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -97,9 +145,13 @@ eg
 
 \end_inset
 
- in\InsetSpace ~
+ in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Papoulis:1962,Bracewell:2003,Marko:1995,Fritzsche:1985,Stopp:1992"
 
 \end_inset
@@ -108,7 +160,8 @@ key "Papoulis:1962,Bracewell:2003,Marko:1995,Fritzsche:1985,Stopp:1992"
 \end_layout
 
 \begin_layout Subsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:fourier_def"
 
 \end_inset
@@ -117,8 +170,25 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Transformation!Fourier@\\noun{Fourier}-!Definition"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Fourier@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Fourier}
+\end_layout
+
+\end_inset
+
+-!Definition
+\end_layout
 
 \end_inset
 
@@ -143,7 +213,7 @@ Cauchy
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -162,7 +232,7 @@ ie
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Im ungünstigsten Fall unter Hinzunahme von 
 \noun on
 Dirac
@@ -178,8 +248,12 @@ Dirac
 \end_inset
 
  mit der Eigenschaft (absoluter Konvergenz
-\begin_inset LatexCommand index
-name "Konvergenz!absolute"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz!absolute
+\end_layout
 
 \end_inset
 
@@ -204,7 +278,7 @@ existiert
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wegen 
 \begin_inset Formula $|F(\ji\omega)|=\left|\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|f(t)\expf^{-\ji\omega t}\right|\tic t=\int_{-\infty}^{\infty}|f(t)|\tic t$
 \end_inset
@@ -214,9 +288,13 @@ Wegen
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1"
 key "Stopp:1992"
 
@@ -260,8 +338,25 @@ Regeln
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Transformation!Fourier@\\noun{Fourier}-!Regeln"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Fourier@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Fourier}
+\end_layout
+
+\end_inset
+
+-!Regeln
+\end_layout
 
 \end_inset
 
@@ -272,53 +367,53 @@ name "Transformation!Fourier@\\noun{Fourier}-!Regeln"
 \begin_inset Tabular
 <lyxtabular version="3" rows="12" columns="4">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="center" valignment="top" leftline="true" width="3cm">
-<column alignment="center" valignment="top" leftline="true" width="3.5cm">
-<column alignment="center" valignment="top" leftline="true" width="3.5cm">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="3.5cm">
-<row topline="true" bottomline="true" endhead="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bezeichnung
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Zeitfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bildfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bemerkungen
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Linearität
 \end_layout
 
@@ -327,7 +422,7 @@ Linearität
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $a\, f(t)+b\, g(t)$
 \end_inset
 
@@ -336,10 +431,10 @@ Linearität
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $a\, F(\omega)+b\, G(\omega)$
 \end_inset
 
@@ -351,18 +446,18 @@ Linearität
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ähnlichkeit
 \end_layout
 
@@ -371,7 +466,7 @@ Linearität
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $f(at)$
 \end_inset
 
@@ -380,10 +475,10 @@ Linearität
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{|a|}F\left(\frac{\omega}{a}\right)}$
 \end_inset
 
@@ -395,7 +490,7 @@ Linearität
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $a\neq0$
 \end_inset
 
@@ -405,11 +500,11 @@ Linearität
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Verschiebung
 \end_layout
 
@@ -418,7 +513,7 @@ Verschiebung
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $f(t-t_{0})$
 \end_inset
 
@@ -427,10 +522,10 @@ Verschiebung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\expf^{-\ji\omega t_{0}}F(\omega)}$
 \end_inset
 
@@ -442,7 +537,51 @@ Verschiebung
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{\expf^{\ji\omega_{0}t}f(t)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $F(\omega-\omega_{0})$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -453,51 +592,7 @@ Verschiebung
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $\mtab{\expf^{\ji\omega_{0}t}f(t)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $F(\omega-\omega_{0})$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
+\begin_layout Plain Layout
 Differentiation
 \end_layout
 
@@ -506,7 +601,7 @@ Differentiation
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\tdiff{f}{t}}$
 \end_inset
 
@@ -515,10 +610,10 @@ Differentiation
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\ji\omega\, F(\omega)}$
 \end_inset
 
@@ -530,7 +625,51 @@ Differentiation
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{-\ji t\, f(t)}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{\tdiff{F}{\omega}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -541,51 +680,7 @@ Differentiation
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $\mtab{-\ji t\, f(t)}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $\mtab{\tdiff{F}{\omega}}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
+\begin_layout Plain Layout
 Integration
 \end_layout
 
@@ -594,7 +689,7 @@ Integration
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{t}f(\tau)\tic\tau}$
 \end_inset
 
@@ -603,10 +698,10 @@ Integration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\pi F(0)\dirac(\omega)+\frac{F(\omega)}{\ji\omega}}$
 \end_inset
 
@@ -618,7 +713,7 @@ Integration
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $F(0)=\reop F(0)$
 \end_inset
 
@@ -629,19 +724,19 @@ Integration
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{f(0)}{2}\dirac(t)-\frac{f(t)}{\ji2\pi t}}$
 \end_inset
 
@@ -650,10 +745,10 @@ Integration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\omega}F(\Omega)\tic\Omega}$
 \end_inset
 
@@ -662,21 +757,21 @@ Integration
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Faltung
 \end_layout
 
@@ -685,7 +780,7 @@ Faltung
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $(f_{1}*f_{2})(t)$
 \end_inset
 
@@ -694,10 +789,10 @@ Faltung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $F_{1}(\omega)\, F_{2}(\omega)$
 \end_inset
 
@@ -709,7 +804,7 @@ Faltung
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f_{1}(\tau)\, f_{2}(t-\tau)\tic\tau}$
 \end_inset
 
@@ -720,19 +815,19 @@ Faltung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $2\pi f_{1}(t)\, f_{2}(t)$
 \end_inset
 
@@ -741,10 +836,10 @@ Faltung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $(F_{1}*F_{2})(\omega)$
 \end_inset
 
@@ -753,30 +848,30 @@ Faltung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Vertauschung
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $F(t)$
 \end_inset
 
@@ -785,10 +880,10 @@ Vertauschung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $2\pi f(-\omega)$
 \end_inset
 
@@ -797,10 +892,10 @@ Vertauschung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -819,8 +914,25 @@ Korrespondenzen
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Transformation!Fourier@\\noun{Fourier}-!Korrespondenzen"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Fourier@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Fourier}
+\end_layout
+
+\end_inset
+
+-!Korrespondenzen
+\end_layout
 
 \end_inset
 
@@ -831,53 +943,53 @@ name "Transformation!Fourier@\\noun{Fourier}-!Korrespondenzen"
 \begin_inset Tabular
 <lyxtabular version="3" rows="19" columns="4">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="center" valignment="top" leftline="true" width="3cm">
-<column alignment="center" valignment="top" leftline="true" width="3.5cm">
-<column alignment="center" valignment="top" leftline="true" width="3.5cm">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="3.5cm">
-<row topline="true" bottomline="true" endhead="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="3cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="top" width="3.5cm">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bezeichnung
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Zeitfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bildfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bemerkungen
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Dirac-Stoß
 \end_layout
 
@@ -886,7 +998,7 @@ Dirac-Stoß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\dirac(t)$
 \end_inset
 
@@ -895,10 +1007,10 @@ Dirac-Stoß
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $1$
 \end_inset
 
@@ -910,7 +1022,54 @@ Dirac-Stoß
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $2\pi\dirac(\omega)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $1=\usf(t)+\usf(-t)$
+\end_inset
+
 
 \end_layout
 
@@ -921,54 +1080,7 @@ Dirac-Stoß
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $1$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $2\pi\dirac(\omega)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $1=\usf(t)+\usf(-t)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
+\begin_layout Plain Layout
 Einheitssprung
 \end_layout
 
@@ -977,7 +1089,7 @@ Einheitssprung
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\usf(t)$
 \end_inset
 
@@ -986,10 +1098,10 @@ Einheitssprung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\pi\dirac(\omega)+\frac{1}{\ji\omega}}$
 \end_inset
 
@@ -1001,27 +1113,27 @@ Einheitssprung
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{2}\left[\dirac(t)-\frac{1}{\ji\pi t}\right]}$
 \end_inset
 
@@ -1030,10 +1142,10 @@ Einheitssprung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\usf(\omega)$
 \end_inset
 
@@ -1042,10 +1154,10 @@ Einheitssprung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1053,26 +1165,27 @@ Einheitssprung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Rechteckimpuls
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\rect(t)=\allowbreak\begin{cases}
 0 & \quad(|t|>T/2)\\
 1 & \quad(|t|\leq T/2)\end{cases}$
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "rect(t)"
 symbol "$\\rect(t)$"
 description "Rechteckfunktion"
@@ -1084,10 +1197,10 @@ description "Rechteckfunktion"
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{T\sinc\frac{\omega T}{2}}$
 \end_inset
 
@@ -1096,10 +1209,10 @@ description "Rechteckfunktion"
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Breite 
 \begin_inset Formula $T$
 \end_inset
@@ -1111,48 +1224,48 @@ Breite
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Signumfunktion
 \end_layout
 
@@ -1161,7 +1274,7 @@ Signumfunktion
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\sign(t)$
 \end_inset
 
@@ -1170,10 +1283,10 @@ Signumfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{2}{\ji\omega}}$
 \end_inset
 
@@ -1185,7 +1298,7 @@ Signumfunktion
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\sign(t)=2\usf(t)-1$
 \end_inset
 
@@ -1196,19 +1309,19 @@ Signumfunktion
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\ji}{\pi t}}$
 \end_inset
 
@@ -1217,10 +1330,10 @@ Signumfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\sign(\omega)$
 \end_inset
 
@@ -1229,21 +1342,21 @@ Signumfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\expf$
 \end_inset
 
@@ -1255,7 +1368,7 @@ Signumfunktion
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\expf^{-\left|\frac{t}{T}\right|}}$
 \end_inset
 
@@ -1267,7 +1380,7 @@ Signumfunktion
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{2T}{1+(\omega T)^{2}}}$
 \end_inset
 
@@ -1276,10 +1389,10 @@ Signumfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1287,10 +1400,10 @@ Signumfunktion
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Gauß
@@ -1300,10 +1413,10 @@ Gauß
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\expf^{-\pi(\frac{t}{T})^{2}}}$
 \end_inset
 
@@ -1312,10 +1425,10 @@ Gauß
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{T\expf^{-\frac{(\omega T)^{2}}{4\pi}}}$
 \end_inset
 
@@ -1324,10 +1437,10 @@ Gauß
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\alpha>0$
 \end_inset
 
@@ -1338,48 +1451,48 @@ Gauß
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Kreisfunktionen
 \end_layout
 
@@ -1388,7 +1501,7 @@ Kreisfunktionen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\sin(\omega_{0}t)$
 \end_inset
 
@@ -1397,10 +1510,10 @@ Kreisfunktionen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\ji\pi[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})]$
 \end_inset
 
@@ -1412,7 +1525,51 @@ Kreisfunktionen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\cos(\omega_{0}t)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\pi[\dirac(\omega-\omega_{0})+\dirac(\omega+\omega_{0})]$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1423,51 +1580,7 @@ Kreisfunktionen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $\cos(\omega_{0}t)$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-\begin_inset Formula $\pi[\dirac(\omega-\omega_{0})+\dirac(\omega+\omega_{0})]$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
-
-\end_layout
-
-\end_inset
-</cell>
-</row>
-<row topline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Standard
+\begin_layout Plain Layout
 Einschaltvorgänge
 \end_layout
 
@@ -1476,7 +1589,7 @@ Einschaltvorgänge
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\usf(t)\expf^{-\alpha t}}$
 \end_inset
 
@@ -1485,10 +1598,10 @@ Einschaltvorgänge
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{\alpha+\ji\omega}}$
 \end_inset
 
@@ -1500,7 +1613,7 @@ Einschaltvorgänge
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\alpha>0$
 \end_inset
 
@@ -1511,19 +1624,19 @@ Einschaltvorgänge
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\usf(t)\expf^{-\alpha t}\sin(\omega_{0}t)}$
 \end_inset
 
@@ -1532,10 +1645,10 @@ Einschaltvorgänge
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\omega_{0}}{(\alpha+\ji\omega)^{2}+\omega_{0}^{2}}}$
 \end_inset
 
@@ -1544,10 +1657,10 @@ Einschaltvorgänge
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\alpha>0$
 \end_inset
 
@@ -1558,19 +1671,19 @@ Einschaltvorgänge
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\usf(t)\,\sin(\omega_{0}t)$
 \end_inset
 
@@ -1582,7 +1695,7 @@ Einschaltvorgänge
 <cell multicolumn="1" alignment="block" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\ji\mtab{\frac{\pi}{2}}[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})]+\mtab{\frac{\omega_{0}}{\omega_{0}^{2}-\omega^{2}}}$
 \end_inset
 
@@ -1594,27 +1707,27 @@ Einschaltvorgänge
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\usf(t)\,\cos(\omega_{0}t)$
 \end_inset
 
@@ -1626,7 +1739,7 @@ Einschaltvorgänge
 <cell multicolumn="1" alignment="block" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{\pi}{2}}[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})]+\mtab{\frac{\ji\omega}{\omega_{0}^{2}-\omega^{2}}}$
 \end_inset
 
@@ -1638,27 +1751,27 @@ Einschaltvorgänge
 <cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Abtastfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\sum_{n=-\infty}^{\infty}\dirac(t-nT_{0})}$
 \end_inset
 
@@ -1667,10 +1780,10 @@ Abtastfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\omega_{0}\sum_{n=-\infty}^{\infty}\dirac(\omega-n\omega_{0})}$
 \end_inset
 
@@ -1679,10 +1792,10 @@ Abtastfunktion
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\omega_{0}=\frac{2\pi}{T_{0}}}$
 \end_inset
 
@@ -1707,33 +1820,33 @@ Systembeziehungen
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="center" valignment="top" leftline="true" width="8cm">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="6cm">
-<row topline="true" bottomline="true" endhead="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="8cm">
+<column alignment="center" valignment="top" width="6cm">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Beziehung
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bemerkungen
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $f(t)*\dirac(t-t_{0})=f(t-t_{0})$
 \end_inset
 
@@ -1745,7 +1858,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $f(t)*\dirac(t)=f(t)$
 \end_inset
 
@@ -1755,11 +1868,11 @@ Bemerkungen
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(t)\,\dirac(t)\tic t=f(0)}$
 \end_inset
 
@@ -1771,7 +1884,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{f(0)=\frac{f(-0)+f(+0)}{2}}$
 \end_inset
 
@@ -1781,11 +1894,11 @@ Bemerkungen
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\ji\omega)\tic\omega=\frac{1}{\pi}\int_{0}^{\infty}\reop[F(\ji\omega)]\tic\omega=f(0)}$
 \end_inset
 
@@ -1797,11 +1910,11 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1810,9 +1923,13 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:fourier_transform_def"
 
 \end_inset
@@ -1823,11 +1940,11 @@ reference "eq:fourier_transform_def"
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(t)\tic t=\int_{-\infty}^{\infty}f_{g}(t)\tic t=F(0)}$
 \end_inset
 
@@ -1839,10 +1956,14 @@ reference "eq:fourier_transform_def"
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
-siehe auch\InsetSpace ~
+\begin_layout Plain Layout
+siehe auch
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-1"
 key "Papoulis:1962"
 
@@ -1854,11 +1975,11 @@ key "Papoulis:1962"
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\lim_{\omega\rightarrow\infty}\omega F(\ji\omega)=f(+0)}$
 \end_inset
 
@@ -1870,7 +1991,7 @@ key "Papoulis:1962"
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bedingung: 
 \begin_inset Formula $F(\ji\omega)$
 \end_inset
@@ -1885,11 +2006,11 @@ Bedingung:
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f^{2}(t)\tic t=\frac{1}{2\pi}\int_{-\infty}^{\infty}|F(\ji\omega)|^{2}\tic t}$
 \end_inset
 
@@ -1898,10 +2019,10 @@ Bedingung:
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Parseval
@@ -1927,43 +2048,43 @@ Uneigentliche Integrale
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
-<column alignment="center" valignment="top" leftline="true" width="5cm">
-<column alignment="center" valignment="top" leftline="true" width="5cm">
-<column alignment="center" valignment="top" leftline="true" rightline="true" width="4cm">
-<row topline="true" bottomline="true" endhead="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="5cm">
+<column alignment="center" valignment="top" width="4cm">
+<row endhead="true">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Integral
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Stammfunktion
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Bemerkungen
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true" endhead="true">
+<row endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1972,7 +2093,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -1981,18 +2102,18 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true" endhead="true">
+<row endhead="true">
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{0}^{\infty}\expf^{-x}\tic x=1}$
 \end_inset
 
@@ -2004,7 +2125,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{-\expf^{-x}}$
 \end_inset
 
@@ -2016,18 +2137,18 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}x^{2}\expf^{-x^{2}}\tic x=\frac{\sqrt{\pi}}{2}}$
 \end_inset
 
@@ -2039,7 +2160,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2048,18 +2169,18 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int_{-\infty}^{\infty}\expf^{-x^{2}}\tic x=\sqrt{\pi}}$
 \end_inset
 
@@ -2071,7 +2192,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
@@ -2080,18 +2201,18 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \end_layout
 
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\vp\int_{-\infty}^{\infty}\frac{2a}{x^{2}-a^{2}}\tic x=0}$
 \end_inset
 
@@ -2103,7 +2224,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\ln\left|\frac{x-a}{x+a}\right|}$
 \end_inset
 
@@ -2115,7 +2236,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\frac{2a}{x^{2}-a^{2}}=\frac{1}{x-a}-\frac{1}{x+a}}$
 \end_inset
 
@@ -2125,11 +2246,11 @@ Bemerkungen
 \end_inset
 </cell>
 </row>
-<row topline="true">
+<row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\vp\int_{-\infty}^{\infty}\frac{2x}{x^{2}-a^{2}}\tic x=0}$
 \end_inset
 
@@ -2141,7 +2262,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\ln|(x-a)(x+a)|}$
 \end_inset
 
@@ -2153,7 +2274,7 @@ Bemerkungen
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\int\frac{f'(x)}{f(x)}\tic x=\ln|f(x)|}$
 \end_inset
 
@@ -2163,11 +2284,11 @@ Bemerkungen
 \end_inset
 </cell>
 </row>
-<row topline="true" bottomline="true">
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\vp\int_{-\infty}^{\infty}\frac{\tdc x}{x-a}=0}$
 \end_inset
 
@@ -2176,10 +2297,10 @@ Bemerkungen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $\mtab{\ln\left|x-a\right|}$
 \end_inset
 
@@ -2188,10 +2309,10 @@ Bemerkungen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Existenz nur als 
 \noun on
 Cauchy

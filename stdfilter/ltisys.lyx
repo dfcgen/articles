@@ -1,11 +1,17 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.2 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrbookams
+\textclass scrbook
 \begin_preamble
 \usepackage{a4}
 \end_preamble
+\use_default_options false
+\master stdfilter.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -16,10 +22,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !bh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 1
@@ -49,8 +57,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: ltisys.lyx,v 1.17 2008-10-25 17:21:56 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: ltisys.lyx,v 1.18 2010-09-17 20:17:04 ralf Exp $
 \end_layout
 
 \end_inset
@@ -59,8 +67,12 @@ Version: $Id: ltisys.lyx,v 1.17 2008-10-25 17:21:56 ralf Exp $
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System|(
+\end_layout
 
 \end_inset
 
@@ -74,16 +86,21 @@ Systemüberblick
 \begin_layout Standard
 Bevor auf die konventionellen Approximationen für zeit- und wertkontinuierliche
  Filter eingegangen werden kann, noch eine kurze Rekapitulation der Eigenschafte
-n linearer zeitinvarianter Systeme\InsetSpace ~
+n linearer zeitinvarianter Systeme
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5."
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "1"
 key "Kress:1979"
 
@@ -98,7 +115,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename ltisys.eps
@@ -108,10 +125,10 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Systemgrößen in Original- und Bildbereich
 \end_layout
 
@@ -130,14 +147,22 @@ Linearität
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!lineares"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!lineares
+\end_layout
 
 \end_inset
 
 Ein System ist linear, wenn das Superpositionsprinzip
-\begin_inset LatexCommand index
-name "Superposition"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Superposition
+\end_layout
 
 \end_inset
 
@@ -145,7 +170,7 @@ name "Superposition"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -165,14 +190,22 @@ x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mi
 \end_inset
 
  Für ein LTI-System berechnet sich die Ausgangsfunktion als Faltung
-\begin_inset LatexCommand index
-name "Faltung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
 
 \end_inset
 
  der Impulsantwort
-\begin_inset LatexCommand index
-name "LTI-System!Impulsantwort"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Impulsantwort
+\end_layout
 
 \end_inset
 
@@ -181,7 +214,8 @@ name "LTI-System!Impulsantwort"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "h(t)"
 symbol "$\\irf(t)$"
 description "Impulsantwort"
@@ -218,7 +252,7 @@ beschrieben werden kann
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Gleiches gilt im Frequenzbereich, da die 
 \noun on
 Fourier
@@ -232,7 +266,8 @@ Fourier
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:ltisys_stability"
 
 \end_inset
@@ -241,14 +276,33 @@ Stabilität
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!stabiles"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!stabiles
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Stabilität|see{LTI-System}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Stabilität|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{LTI-System}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -266,16 +320,21 @@ ung eines endlichen Eingangssignals
 \begin_inset Formula $\left|Y(\ji\omega)\right|<\infty$
 \end_inset
 
-) beschränkt ist\InsetSpace ~
+) beschränkt ist
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "1.2.1"
 key "Kress:1979"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.11"
 key "Wunsch:1962"
 
@@ -283,16 +342,24 @@ key "Wunsch:1962"
 
 .
  Im Zeitbereich kann daraus relativ schnell eine Bedingung an die Impulsantwort
- des Systems abgeleitet werden, wenn man für das Integral in Formel\InsetSpace ~
+ des Systems abgeleitet werden, wenn man für das Integral in Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_linearity_conv"
 
 \end_inset
 
  absolute Konvergenz
-\begin_inset LatexCommand index
-name "Konvergenz!absolute"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz!absolute
+\end_layout
 
 \end_inset
 
@@ -300,10 +367,14 @@ name "Konvergenz!absolute"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Und den Mittelwertsatz der Integralrechnung
-\begin_inset LatexCommand index
-name "Integral!rechnung@-rechnung!Mittelwertsatz der"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!rechnung@-rechnung!Mittelwertsatz der
+\end_layout
 
 \end_inset
 
@@ -316,9 +387,13 @@ name "Integral!rechnung@-rechnung!Mittelwertsatz der"
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "1.4.5"
 key "Mildenberger:1981"
 
@@ -338,8 +413,12 @@ key "Mildenberger:1981"
 
 \begin_layout Standard
 Im Zeitbereich fordert man deshalb für die Impulsantwort
-\begin_inset LatexCommand index
-name "LTI-System!Impulsantwort"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Impulsantwort
+\end_layout
 
 \end_inset
 
@@ -365,7 +444,8 @@ Fourier
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "H(jomega)"
 symbol "$\\trf(\\ji\\omega)$"
 description "(Komplexe) Übertragungsfunktion im $\\ft$-Bildbereich"
@@ -373,7 +453,8 @@ description "(Komplexe) Übertragungsfunktion im $\\ft$-Bildbereich"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "FT"
 symbol "$\\ft$"
 description "\\noun{Fourier}-Transformation"
@@ -381,36 +462,44 @@ description "\\noun{Fourier}-Transformation"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "FT-1"
 symbol "$\\ft^{-1}$"
 description "\\noun{Fourier}-Rücktransformation"
 
 \end_inset
 
- sichert\InsetSpace ~
+ sichert
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Wax:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.3.1"
 key "Mildenberger:1981"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,$4 \\sdot 43$"
 key "Whittaker:1927"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2-1"
 key "Papoulis:1962"
 
@@ -432,11 +521,11 @@ key "Papoulis:1962"
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Aus dem Mittelwertsatz der Integralrechnung
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)\]
 
@@ -445,11 +534,11 @@ Aus dem Mittelwertsatz der Integralrechnung
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 ergeben sich die Relationen:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{eqnarray*}
 \trf(\ji\omega) & = & \int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t=\expf^{-\ji\omega\xi}\int_{-\infty}^{\infty}\irf(t)\tic t,\qquad\xi\in(-\infty,\infty)\\
 |\trf(\ji\omega)| & \leq & \left|\int_{-\infty}^{\infty}\irf(t)\tic t\right|\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t\end{eqnarray*}
@@ -470,19 +559,39 @@ Eine davon abgeleitete Forderung bei rationaler
 \end_inset
 
 -Übertragungsfunktion
-\begin_inset LatexCommand index
-name "Uebertragungsfunktion@Übertragungsfunktion|see{LTI-System}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Uebertragungsfunktion@Übertragungsfunktion|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{LTI-System}
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion"
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Uebertragungsfunktion@Übertragungsfunktion
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "H(s)"
 symbol "$\\trf(\\lps)$"
 description "(Komplexe) Übertragungsfunktion im $\\lt$-Bildbereich"
@@ -490,7 +599,8 @@ description "(Komplexe) Übertragungsfunktion im $\\lt$-Bildbereich"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "s"
 symbol "$\\lps$"
 description "\\noun{Laplace}-Variable $\\lps=\\alpha+\\ji\\omega$"
@@ -498,7 +608,8 @@ description "\\noun{Laplace}-Variable $\\lps=\\alpha+\\ji\\omega$"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "LT"
 symbol "$\\lt$"
 description "\\noun{Laplace}-Transformation"
@@ -506,7 +617,8 @@ description "\\noun{Laplace}-Transformation"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "LT-1"
 symbol "$\\lt^{-1}$"
 description "\\noun{Laplace}-Rücktransformation"
@@ -531,8 +643,25 @@ ist die, daß alle Polstellen negative Realteile aufweisen müssen (
 Hurwitz
 \noun default
 -Polynom
-\begin_inset LatexCommand index
-name "Hurwitz-Polynom@\\noun{Hurwitz}-Polynom"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hurwitz-Polynom@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hurwitz}
+\end_layout
+
+\end_inset
+
+-Polynom
+\end_layout
 
 \end_inset
 
@@ -543,8 +672,12 @@ name "Hurwitz-Polynom@\\noun{Hurwitz}-Polynom"
 \end_inset
 
 ) gewährleistet werden, daß die Partialbruchzerlegung
-\begin_inset LatexCommand index
-name "Partialbruchzerlegung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Partialbruchzerlegung
+\end_layout
 
 \end_inset
 
@@ -559,28 +692,38 @@ name "Partialbruchzerlegung"
 
 bei der Rücktransformation in den Zeitbereich zu einer beschränkten Impulsantwor
 t
-\begin_inset LatexCommand index
-name "LTI-System!Impulsantwort"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Impulsantwort
+\end_layout
 
 \end_inset
 
- führt\InsetSpace ~
+ führt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.5.4"
 key "Stopp:1992"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "44.2"
 key "Chen:1995"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "76"
 key "Koerner:1988"
 
@@ -625,21 +768,33 @@ Sollte jedoch
 \end_inset
 
  in die Summe aus einer echt gebrochen rationalen Funktion
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
- (auf welche wieder die Formeln\InsetSpace ~
+ (auf welche wieder die Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_stability_partial_propfrac"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_stability_irf_propfrac"
 
 \end_inset
@@ -652,7 +807,7 @@ reference "eq:ltisys_stability_irf_propfrac"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Abspaltung einer Konstanten, welche bei der Rücktransformation in den
  Zeitbereich zu einem 
 \noun on
@@ -688,11 +843,11 @@ Dirac
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Beispiel: Die Übertragungsfunktion eines Hochpaß' erster Ordnung
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \trf(\lps)=\frac{\lps R_{1}C}{1+\lps(R_{1}+R_{2})C}\]
 
@@ -701,11 +856,11 @@ Beispiel: Die Übertragungsfunktion eines Hochpaß' erster Ordnung
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 kann auch als
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}\left[1-\frac{1}{1+\lps(R_{1}+R_{2})C}\right]\]
 
@@ -714,7 +869,7 @@ kann auch als
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 dargestellt werden.
 \end_layout
 
@@ -736,7 +891,7 @@ Durch eine Grenzwertbetrachtung für
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei es hierbei irrelevant ist, ob der Real- oder Imaginärteil (oder auch
  der Betrag) von 
 \begin_inset Formula $\lps$
@@ -763,11 +918,11 @@ Wobei es hierbei irrelevant ist, ob der Real- oder Imaginärteil (oder auch
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für das Beispiel gilt:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \trf(\infty)=\lim_{\lps\rightarrow\infty}\trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}\]
 
@@ -804,14 +959,33 @@ Nimmt man noch die
 
 \begin_layout Standard
 die verallgemeinerte Impulsantwort
-\begin_inset LatexCommand index
-name "Impulsantwort|see{LTI-System}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Impulsantwort|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{LTI-System}
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "LTI-System!Impulsantwort"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Impulsantwort
+\end_layout
 
 \end_inset
 
@@ -819,7 +993,7 @@ name "LTI-System!Impulsantwort"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Auch in diesem Fall gilt 
 \begin_inset Formula $\lim_{t\rightarrow\infty}\irf(t)=0$
 \end_inset
@@ -846,7 +1020,8 @@ Auch in diesem Fall gilt
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:ltisys_causality"
 
 \end_inset
@@ -855,14 +1030,33 @@ Kausalität
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!kausales"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!kausales
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Kausalität|see{LTI-System}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Kausalität|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{LTI-System}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -887,7 +1081,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -910,17 +1104,15 @@ Laplace
 
 \begin_layout Subsection
 \begin_inset ERT
-status collapsed
+status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
 headingmath{
 \backslash
-ft}{
-\backslash
-noun{Fourier}}
+ft}{Fourier}
 \end_layout
 
 \end_inset
@@ -956,8 +1148,12 @@ Fourier
 \noun default
 -Transformation dieser (notwendigen, für realisierbare Systeme nicht hinreichend
 en) Bedingung in den Bildbereich führt mit Hilfe des Faltungssatzes
-\begin_inset LatexCommand index
-name "Faltungssatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltungssatz
+\end_layout
 
 \end_inset
 
@@ -973,7 +1169,7 @@ name "Faltungssatz"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Außerdem nicht zu vergessen der Ähnlichkeitssatz sowie die Eigenschaft der
  
 \noun on
@@ -1048,14 +1244,58 @@ Fourier
 Hilbert
 \noun default
 -Transformation
-\begin_inset LatexCommand index
-name "Hilbert-Transformation@\\noun{Hilbert}-Transf.|see{Transformation}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hilbert-Transformation@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hilbert}
+\end_layout
+
+\end_inset
+
+-Transf.|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+{Transformation}
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Hilbert@\\noun{Hilbert}-"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Hilbert@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hilbert}-
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1063,7 +1303,7 @@ name "Transformation!Hilbert@\\noun{Hilbert}-"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Alle vorgenannten Fakten müssen sicherlich auch dann gelten, wenn das System
  durch einen 
 \noun on
@@ -1100,23 +1340,29 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-verbunden\InsetSpace ~
+verbunden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "9"
 key "Papoulis:2002"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1"
 key "Marko:1995"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4"
 key "Fritzsche:1985"
 
@@ -1128,14 +1374,22 @@ key "Fritzsche:1985"
 \begin_layout Standard
 Ein anderer, aber sehr einfacher Ansatz geht davon aus, daß grundsätzlich
  jede Zeitfunktion in eine gerade und eine ungerade Teilfunktion
-\begin_inset LatexCommand index
-name "Funktion!gerade"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gerade
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Funktion!ungerade"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!ungerade
+\end_layout
 
 \end_inset
 
@@ -1143,16 +1397,21 @@ name "Funktion!ungerade"
 \begin_inset Formula $y(t)=y_{g}(t)+y_{u}(t)$
 \end_inset
 
- zerlegt werden kann\InsetSpace ~
+ zerlegt werden kann
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4.1"
 key "Fritzsche:1985"
 
@@ -1179,7 +1438,7 @@ y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t),\end{xalignat*}
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1196,7 +1455,7 @@ ie
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man beachte aber, daß mögliche 
 \noun on
 Dirac
@@ -1221,7 +1480,7 @@ Dirac
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1230,9 +1489,13 @@ cf
 
 \end_inset
 
- auch Kommentar in\InsetSpace ~
+ auch Kommentar in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
@@ -1243,16 +1506,24 @@ key "Papoulis:1962"
 Hilbert
 \noun default
 -Transformation).
- In Folge dessen gelten die weiteren Ausführungen (bis dieser Fall auf Seite\InsetSpace ~
+ In Folge dessen gelten die weiteren Ausführungen (bis dieser Fall auf Seite
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand pageref
+
+\begin_inset CommandInset ref
+LatexCommand pageref
 reference "par:ltisys_causal_infty"
 
 \end_inset
 
- erörtert und in Zusammenhang mit Abschnitt\InsetSpace ~
+ erörtert und in Zusammenhang mit Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
@@ -1265,7 +1536,7 @@ reference "sec:ltisys_stability"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1288,7 +1559,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1309,7 +1580,7 @@ ie
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1372,7 +1643,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1382,14 +1653,19 @@ cf
 \end_inset
 
  
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:fourier_def"
 
 \end_inset
 
 ), so führt Anwendung des Faltungssatzes
-\begin_inset LatexCommand index
-name "Faltungssatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltungssatz
+\end_layout
 
 \end_inset
 
@@ -1419,7 +1695,7 @@ name "Faltungssatz"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1436,14 +1712,48 @@ noun{Laplace}}
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Laplace@\\noun{Laplace}!-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Laplace@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}!-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Laplace@\\noun{Laplace}-"
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Laplace@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Laplace}-
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1463,7 +1773,7 @@ Laplace
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1482,7 +1792,7 @@ ie
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1491,16 +1801,24 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_improper_integrals_halfplane"
 
 \end_inset
 
- oder\InsetSpace ~
+ oder
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-5"
 key "Papoulis:1962"
 
@@ -1514,7 +1832,7 @@ key "Papoulis:1962"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Entspricht mit 
 \begin_inset Formula $\lps\rightarrow\ji\omega$
 \end_inset
@@ -1531,7 +1849,7 @@ Laplace
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1540,9 +1858,13 @@ cf
 
 \end_inset
 
- auch\InsetSpace ~
+ auch
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4.1.3"
 key "Mildenberger:1981"
 
@@ -1553,9 +1875,13 @@ key "Mildenberger:1981"
 
 \end_inset
 
- definiert\InsetSpace ~
+ definiert
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "119"
 key "Brown:1996"
 
@@ -1601,9 +1927,13 @@ Laplace
 \begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\Omega)F_{2}(\lps-\Omega)\tic\Omega\rlt[]2\pi\ji\, f_{1}(t)\, f_{2}(t)$
 \end_inset
 
- an\InsetSpace ~
+ an
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "29"
 key "Abramowitz:1972"
 
@@ -1621,7 +1951,7 @@ key "Abramowitz:1972"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1649,8 +1979,25 @@ y(t)=2\lt^{-1}\left\{ \frac{1}{\lps}\right\} \,\lt^{-1}\left\{ F_{1}(\lps)\right
 \begin_layout Standard
 Diese Beziehung enthält das wesentliche Resultat: wegen der Multiplikation
  mit dem Einheitssprung
-\begin_inset LatexCommand index
-name "Heaviside-Funktion@\\noun{Heaviside}-Funktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Heaviside-Funktion@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Heaviside}-Funktion
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -1659,7 +2006,8 @@ name "Heaviside-Funktion@\\noun{Heaviside}-Funktion"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "s(t)"
 symbol "$\\usf(t)$"
 description "Einheitssprung (\\noun{Heaviside}-Funktion)"
@@ -1675,8 +2023,12 @@ description "Einheitssprung (\\noun{Heaviside}-Funktion)"
 \end_inset
 
  (Kausalität
-\begin_inset LatexCommand index
-name "Funktion!kausale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!kausale
+\end_layout
 
 \end_inset
 
@@ -1688,7 +2040,7 @@ name "Funktion!kausale"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wegen des Integrationsintervalls in 
 \begin_inset Formula $\lt\{y(t)\}=\int_{0}^{\infty}y(t)\,\expf^{-\lps t}\tic t$
 \end_inset
@@ -1741,7 +2093,7 @@ Anhand der vorangegangenen Ausführungen wurde deutlich, daß ein kausales
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1770,9 +2122,13 @@ Hilbert
 
 \begin_layout Standard
 Was die kausalen Signale angeht, so kann man aufgrund der Abhängigkeit zwischen
- Real- und Imaginärteil noch redundanzfreie Darstellungen ableiten\InsetSpace ~
+ Real- und Imaginärteil noch redundanzfreie Darstellungen ableiten
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "13"
 key "Bracewell:2003"
 
@@ -1841,7 +2197,7 @@ Sollte
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ansonsten muß man den in 
 \begin_inset Formula $\usf(t)$
 \end_inset
@@ -1870,48 +2226,73 @@ y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(
 \begin_layout Standard
 Die jeweils andere Komponente ist faktisch redundant, was solche Transformatione
 n wie die Cosinus- oder Sinus-Transformation
-\begin_inset LatexCommand index
-name "Transformation!Cosinus-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Cosinus-
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Transformation!Sinus-"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Transformation!Sinus-
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Sinus-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Sinus-Transformation
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Cosinus-Transformation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cosinus-Transformation
+\end_layout
 
 \end_inset
 
- rechtfertigt\InsetSpace ~
+ rechtfertigt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.2"
 key "Wunsch:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1.2"
 key "Stopp:1992"
 
 \end_inset
 
 .
- Diese ergeben sich (bis auf einen konstanten Faktor) sofort aus Formel\InsetSpace ~
+ Diese ergeben sich (bis auf einen konstanten Faktor) sofort aus Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_ftinv"
 
 \end_inset
@@ -1939,9 +2320,13 @@ Laplace
 \begin_inset Formula $F_{1}(\lps)$
 \end_inset
 
- von Seite\InsetSpace ~
+ von Seite
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand pageref
+
+\begin_inset CommandInset ref
+LatexCommand pageref
 reference "eq:ltisys_causal_lt_time"
 
 \end_inset
@@ -1951,9 +2336,13 @@ reference "eq:ltisys_causal_lt_time"
 \begin_inset Formula $\lt^{-1}\{F_{1}(\lps)\}$
 \end_inset
 
- der Bedingung nach Gleichung\InsetSpace ~
+ der Bedingung nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_lt_time"
 
 \end_inset
@@ -1970,7 +2359,7 @@ von Hause aus
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2012,8 +2401,12 @@ Integralsätze
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!Übertragungsfunktion|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Übertragungsfunktion|(
+\end_layout
 
 \end_inset
 
@@ -2025,7 +2418,7 @@ Fourier
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2044,29 +2437,36 @@ tion von kausalen LTI-Systemen zahlreiche Darstellungsformen angeben, die
 \noun on
 Bode
 \noun default
- bezeichnet werden\InsetSpace ~
+ bezeichnet werden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Bode:1945"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1"
 key "Marko:1995"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10."
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2.3.2"
 key "Seron:1997"
 
@@ -2080,7 +2480,7 @@ Real-/Imaginärteilbeziehungen in der
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2098,9 +2498,13 @@ noun{Laplace}}
 
 \begin_layout Standard
 Eine erste Betrachtung dazu (die etwas ausführlicher erfolgt), geht von
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_boundary"
 
 \end_inset
@@ -2210,16 +2614,24 @@ so ergibt sich im
 
 \begin_layout Standard
 Eine weitere Darstellung, der allerdings keinerlei Annahmen in Bezug auf
- die Zeitfunktionen zugrunde liegen, kann ausgehend von\InsetSpace ~
+ die Zeitfunktionen zugrunde liegen, kann ausgehend von
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_boundary_component"
 
 \end_inset
 
- gewonnen werden\InsetSpace ~
+ gewonnen werden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.13"
 key "Wunsch:1962"
 
@@ -2274,7 +2686,7 @@ lung zwischen Real- und Imaginärteil gewonnen werden
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Genauso für die reelle Komponente, hier jedoch ohne Beweis.
 \end_layout
 
@@ -2287,11 +2699,11 @@ Genauso für die reelle Komponente, hier jedoch ohne Beweis.
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Und für den Realteil
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
 \trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]+\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
  & =\frac{\imop[\trf(\lps)]}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
@@ -2322,7 +2734,7 @@ Real-/Imaginärteilbeziehungen auf der
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2347,7 +2759,7 @@ Auf der imaginären Achse gilt (für Systeme mit
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2356,9 +2768,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:analysis_improper_integrals_halfplane"
 
 \end_inset
@@ -2370,9 +2786,10 @@ reference "sec:analysis_improper_integrals_halfplane"
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Man beachte immer die Voraussetzung, denn nach 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10."
 key "Papoulis:1962"
 
@@ -2447,7 +2864,7 @@ Für den Real- und Imaginärteil kann man nun direkt ablesen
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Beide Gleichungen bestätigen augenscheinlich 
 \begin_inset Formula $\trf(-\ji\omega)=\cjgt[\trf]{\ji\omega}$
 \end_inset
@@ -2461,7 +2878,7 @@ Beide Gleichungen bestätigen augenscheinlich
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2470,23 +2887,29 @@ cf
 
 \end_inset
 
- auch\InsetSpace ~
+ auch
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.1"
 key "Marko:1995"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.13"
 key "Wunsch:1962"
 
@@ -2509,11 +2932,11 @@ key "Wunsch:1962"
 \begin_inset Note Note
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Mit
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{xalignat*}{2}
 \frac{2\omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}+\frac{1}{\omega+\Omega} & \frac{2\Omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}-\frac{1}{\omega+\Omega}\end{xalignat*}
 
@@ -2522,11 +2945,11 @@ Mit
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 kann man den Beweis relativ leicht umkehren.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{alignat*}{3}
 \frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega+\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)-\trf(-\ji\omega)}{2} &  & =\ji\,\imop[\trf(\ji\omega)]\\
 \frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\Omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)+\trf(-\ji\omega)}{2} &  & =\reop[\trf(\ji\omega)]\end{alignat*}
@@ -2554,9 +2977,13 @@ Oftmals sind in der Literatur Darstellungen zu finden, in denen
 \begin_inset Formula $\trf(\ji\omega)$
 \end_inset
 
- auch auf der rechten Seite im Integranden auftaucht und die letztlich auf\InsetSpace ~
+ auch auf der rechten Seite im Integranden auftaucht und die letztlich auf
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Bode:1945"
 
 \end_inset
@@ -2565,7 +2992,7 @@ key "Bode:1945"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Der Summand 
 \begin_inset Formula $\trf(\infty)$
 \end_inset
@@ -2580,34 +3007,74 @@ Der Summand
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Bode@\\noun{Bode}!Integralsaetze@Integralsätze"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bode@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Bode}!Integralsaetze@Integralsätze
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Integral!saetze von Bode@-sätze von \\noun{Bode}"
+\end_layout
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Integral!saetze von Bode@-sätze von 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Bode}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.14"
 key "Wunsch:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "6.4"
 key "Spataru:1973"
 
@@ -2649,7 +3116,7 @@ Cauchy
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Für 
 \begin_inset Formula $\Omega=\omega$
 \end_inset
@@ -2667,7 +3134,7 @@ Für
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Ein Spezialfall des Grenzwertes 
 \begin_inset Formula $\lim_{\omega\rightarrow\infty}\omega\,\ln\left|\frac{\omega+\lps}{\omega-\lps}\right|=2\reop\lps$
 \end_inset
@@ -2676,9 +3143,13 @@ Ein Spezialfall des Grenzwertes
 \begin_inset Formula $\lt$
 \end_inset
 
--Ebene\InsetSpace ~
+-Ebene
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "B.1"
 key "Seron:1997"
 
@@ -2689,9 +3160,13 @@ key "Seron:1997"
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.3.23"
 key "Abramowitz:1972"
 
@@ -2710,16 +3185,24 @@ key "Abramowitz:1972"
 \end_layout
 
 \begin_layout Standard
-Beide Beziehungen entsprechen folglich den Formeln\InsetSpace ~
+Beide Beziehungen entsprechen folglich den Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_reint_even"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_imint_even"
 
 \end_inset
@@ -2737,7 +3220,8 @@ reference "eq:ltisys_causal_imint_even"
 \end_layout
 
 \begin_layout Subsubsection
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "par:ltisys_causal_infty"
 
 \end_inset
@@ -2746,7 +3230,7 @@ Systeme mit
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2790,9 +3274,13 @@ aber mit beschränkter
 \begin_inset Formula $|\trf(\infty)|=\lim_{|\lps|\rightarrow\infty}|\trf(\lps)|$
 \end_inset
 
-, wie für rationale Übertragungsfunktionen in Abschnitt\InsetSpace ~
+, wie für rationale Übertragungsfunktionen in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
@@ -2803,9 +3291,13 @@ Jordan
 \noun default
 's Lemma zurückgreifen.
  Aus diesem Grund sind alle vorangegangenen Aussagen derart anzupassen,
- daß der im Unendlichen verlaufende Integrationsweg (nach Abbildung\InsetSpace ~
+ daß der im Unendlichen verlaufende Integrationsweg (nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_halfplane_int_singularity"
 
 \end_inset
@@ -2814,16 +3306,21 @@ reference "fig:analysis_halfplane_int_singularity"
 \noun on
 Cauchy
 \noun default
-'s Integralformel berücksichtigt wird\InsetSpace ~
+'s Integralformel berücksichtigt wird
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.12"
 key "Wunsch:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
@@ -2881,7 +3378,7 @@ Unter der Maßgabe
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -2958,9 +3455,13 @@ Letzter Ausdruck weist nun eindeutig darauf hin, daß es sich bei dem Integral
 \end_layout
 
 \begin_layout Standard
-Zurück zur Ausgangsbeziehung\InsetSpace ~
+Zurück zur Ausgangsbeziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_boundary_nonlp"
 
 \end_inset
@@ -2982,7 +3483,7 @@ und stellen fest, daß sich der Realteil
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Deshalb haben alle Beziehungen für den Imaginärteil der 
 \begin_inset Formula $\lt$
 \end_inset
@@ -3017,10 +3518,14 @@ erhöht
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Konform zu Formel\InsetSpace ~
+\begin_layout Plain Layout
+Konform zu Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_stability_trf_asymptotic"
 
 \end_inset
@@ -3028,9 +3533,13 @@ reference "eq:ltisys_stability_trf_asymptotic"
 , welche speziell für rationale Übertragungsfunktionen gilt (mit denen wir
  es in der Praxis eigentlich immer zu tun haben).
  Logisch auch deshalb weil die Rücktransformation des konstanten Anteils
- der Übertragungsfunktion nach Formel\InsetSpace ~
+ der Übertragungsfunktion nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_stability_trf_propsum"
 
 \end_inset
@@ -3049,7 +3558,7 @@ Dirac
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3058,9 +3567,13 @@ eg
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_boundary"
 
 \end_inset
@@ -3081,7 +3594,7 @@ reference "eq:ltisys_causal_boundary"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3091,18 +3604,26 @@ ie
 \end_inset
 
  der Realteil kann bei solchen Systemen nur bis auf eine Konstante aus dem
- Imaginärteil bestimmt werden\InsetSpace ~
+ Imaginärteil bestimmt werden
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-2"
 key "Papoulis:1962"
 
 \end_inset
 
 .
- Umgekehrt bleibt die Abhängigkeit nach Beziehung\InsetSpace ~
+ Umgekehrt bleibt die Abhängigkeit nach Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_hilbert_imag"
 
 \end_inset
@@ -3111,10 +3632,14 @@ reference "eq:ltisys_hilbert_imag"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-In\InsetSpace ~
+\begin_layout Plain Layout
+In
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-5"
 key "Papoulis:1962"
 
@@ -3124,9 +3649,13 @@ key "Papoulis:1962"
 \begin_inset Formula $0<\trf(\infty)<\infty$
 \end_inset
 
- als nicht-kausal angesehen, denn die Impulsantwort enthält (wie in Abschnitt\InsetSpace ~
+ als nicht-kausal angesehen, denn die Impulsantwort enthält (wie in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
@@ -3153,8 +3682,12 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Uebertragungsfunktion@Übertragungsfunktion|)
+\end_layout
 
 \end_inset
 
@@ -3162,7 +3695,8 @@ name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion|)"
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:ltisys_minphase"
 
 \end_inset
@@ -3175,20 +3709,43 @@ Eigenschaften
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!Minimalphasen-|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Minimalphasen-|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Minimalphasensystem|("
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Minimalphasensystem|(
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Mindestphasensystem|see{Minimalphasensystem}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Mindestphasensystem|see
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+{Minimalphasensystem}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3197,14 +3754,22 @@ Minimalphasig nennt man Systeme, die in der rechten
 \end_inset
 
 -Halbebene weder Pole noch Nullstellen
-\begin_inset LatexCommand index
-name "Nullstellen!der Uebertragungsfunktion@der Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Nullstellen!der Uebertragungsfunktion@der Übertragungsfunktion
+\end_layout
 
 \end_inset
 
- besitzen\InsetSpace ~
+ besitzen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-3"
 key "Papoulis:1962"
 
@@ -3221,8 +3786,25 @@ key "Papoulis:1962"
 Hurwitz
 \noun default
 -Polynome
-\begin_inset LatexCommand index
-name "Hurwitz-Polynom@\\noun{Hurwitz}-Polynom"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Hurwitz-Polynom@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hurwitz}-Polynom
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3231,7 +3813,7 @@ name "Hurwitz-Polynom@\\noun{Hurwitz}-Polynom"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3256,7 +3838,7 @@ resp
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Übertragungsfunktion 
 \begin_inset Formula $\trf(\lps)$
 \end_inset
@@ -3266,7 +3848,7 @@ Die Übertragungsfunktion
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3275,9 +3857,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
@@ -3297,23 +3883,35 @@ reference "sec:ltisys_stability"
 \begin_inset Formula $F(\lps)=\ln\trf(\lps)$
 \end_inset
 
-, so kann man nach Beziehung\InsetSpace ~
+, so kann man nach Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_hilbert_real"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_hilbert_imag"
 
 \end_inset
 
  einen determinierten Zusammenhang zwischen Dämpfung
-\begin_inset LatexCommand index
-name "Daempfung@Dämpfung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Daempfung@Dämpfung
+\end_layout
 
 \end_inset
 
@@ -3321,8 +3919,9 @@ name "Daempfung@Dämpfung"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "foot:ltisys_mps_neper"
 
 \end_inset
@@ -3332,8 +3931,25 @@ Bei Anwendung der Definition in
 Neper
 \noun default
 
-\begin_inset LatexCommand index
-name "Neper@\\noun{Neper}"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Neper@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Neper}
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -3351,8 +3967,12 @@ name "Neper@\\noun{Neper}"
 \end_inset
 
  und Phase
-\begin_inset LatexCommand index
-name "Phase"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Phase
+\end_layout
 
 \end_inset
 
@@ -3384,9 +4004,13 @@ Jordan
 
 .
  Im Allgemeinen kann man von dieser Voraussetzung jedoch nicht ausgehen,
- so daß genau wie in den Beziehungen\InsetSpace ~
+ so daß genau wie in den Beziehungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_causal_nonlp_hilbert"
 
 \end_inset
@@ -3395,9 +4019,13 @@ reference "eq:ltisys_causal_nonlp_hilbert"
 \begin_inset Formula $\atf(\infty)$
 \end_inset
 
- zu berücksichtigen ist\InsetSpace ~
+ zu berücksichtigen ist
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.3.1.2"
 key "Fritzsche:1981a"
 
@@ -3422,14 +4050,35 @@ Bode
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Bode@\\noun{Bode}!Zerlegungssatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Bode@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Bode}!Zerlegungssatz
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
 Praktisch kann man jedes LTI-System mit rationaler Übertragungsfunktion
-\begin_inset LatexCommand index
-name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Uebertragungsfunktion@Übertragungsfunktion
+\end_layout
 
 \end_inset
 
@@ -3438,35 +4087,46 @@ name "LTI-System!Uebertragungsfunktion@Übertragungsfunktion"
 \end_inset
 
  als Kettenschaltung eines Allpaß-
-\begin_inset LatexCommand index
-name "Allpaß"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Allpaß
+\end_layout
 
 \end_inset
 
- und eines Minimalphasensystems verstehen\InsetSpace ~
+ und eines Minimalphasensystems verstehen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-3"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "5.2"
 key "Marko:1995"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.14"
 key "Wunsch:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.5"
 key "Fritzsche:1979a"
 
@@ -3510,7 +4170,7 @@ Hurwitz
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Nullstellen von 
 \begin_inset Formula $U_{+}(-\lps)$
 \end_inset
@@ -3536,7 +4196,7 @@ Die Nullstellen von
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3616,7 +4276,7 @@ stems besteht aufgrund der Nullstellenlage (
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3643,7 +4303,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3652,9 +4312,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_causality"
 
 \end_inset
@@ -3664,9 +4328,13 @@ reference "sec:ltisys_causality"
 \end_layout
 
 \begin_layout Enumerate
-Aus Formel\InsetSpace ~
+Aus Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_mps_split_rational"
 
 \end_inset
@@ -3686,9 +4354,13 @@ reference "eq:ltisys_mps_split_rational"
 
 \end_deeper
 \begin_layout Standard
-Um die Problematik etwas anschaulicher zu gestalten, hier ein Beispiel aus\InsetSpace ~
+Um die Problematik etwas anschaulicher zu gestalten, hier ein Beispiel aus
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-3"
 key "Papoulis:1962"
 
@@ -3742,7 +4414,7 @@ Jordan
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Korrespondenz 
 \begin_inset Formula $\mbig{\frac{1-\lps}{1+\lps}}\rlt2\expf^{-t}-\dirac(t)$
 \end_inset
@@ -3804,7 +4476,7 @@ Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{align*}
 \mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\}  & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
  & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
@@ -3873,8 +4545,12 @@ Realisierbarkeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System!realisierbares"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!realisierbares
+\end_layout
 
 \end_inset
 
@@ -3900,7 +4576,7 @@ LTI-Systeme, die sowohl kausal als auch stabil sind, nennt man (physikalisch)
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Was dazu führt, daß Real- und Imaginärteil von 
 \begin_inset Formula $\trf(\ji\omega)$
 \end_inset
@@ -3909,9 +4585,13 @@ Was dazu führt, daß Real- und Imaginärteil von
 \noun on
 Hilbert
 \noun default
--Transformation verbunden sind (siehe Abschnitt\InsetSpace ~
+-Transformation verbunden sind (siehe Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_causality"
 
 \end_inset
@@ -3927,8 +4607,12 @@ reference "sec:ltisys_causality"
 \end_inset
 
  beschränkt
-\begin_inset LatexCommand index
-name "Funktion!analytische!Beschränktheit"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!analytische!Beschränktheit
+\end_layout
 
 \end_inset
 
@@ -3940,7 +4624,7 @@ name "Funktion!analytische!Beschränktheit"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -3949,9 +4633,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
@@ -3962,8 +4650,12 @@ reference "sec:ltisys_stability"
 
  negative Realteile aufweisen.
  Speziell für quadratisch integrierbare
-\begin_inset LatexCommand index
-name "Konvergenz!quadratische"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Konvergenz!quadratische
+\end_layout
 
 \end_inset
 
@@ -3971,21 +4663,26 @@ name "Konvergenz!quadratische"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 \noun on
 Parseval
 \noun default
-'sches Theorem\InsetSpace ~
+'sches Theorem
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "2-5"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4.11"
 key "Marko:1995"
 
@@ -4014,42 +4711,67 @@ sind diese Bedingungen mit Hilfe des
 Paley-Wiener
 \noun default
 -Kriteriums prüfbar
-\begin_inset LatexCommand index
-name "Paley-Wiener-Kriterium@\\noun{Paley-Wiener}-Kriterium"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Paley-Wiener-Kriterium@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Paley-Wiener}-Kriterium
+\end_layout
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "Theorem~XII"
 key "Paley:1934"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "10-5"
 key "Papoulis:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,82"
 key "Achieser:1967"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "3.22"
 key "Wunsch:1962"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Wax:1962"
 
 \end_inset
@@ -4087,7 +4809,7 @@ sich bei
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4096,9 +4818,13 @@ resp
 
 \end_inset
 
- Dämpfungsverlauf (siehe Fußnote\InsetSpace ~
+ Dämpfungsverlauf (siehe Fußnote
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "foot:ltisys_mps_neper"
 
 \end_inset
@@ -4121,7 +4847,7 @@ Bode
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4130,16 +4856,24 @@ cf
 
 \end_inset
 
- Formel\InsetSpace ~
+ Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_mps_split_bode"
 
 \end_inset
 
- in Abschnitt\InsetSpace ~
+ in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_minphase"
 
 \end_inset
@@ -4154,7 +4888,7 @@ barer Übertragungsfunktion
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4163,9 +4897,13 @@ resp
 
 \end_inset
 
- Impulsantwort (nach\InsetSpace ~
+ Impulsantwort (nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_paley_wiener_cond"
 
 \end_inset
@@ -4178,7 +4916,7 @@ Paley-Wiener
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Frage, ob instabile LTI-Systeme das 
 \noun on
 Paley-Wiener
@@ -4193,7 +4931,7 @@ Paley-Wiener
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4202,16 +4940,24 @@ cf
 
 \end_inset
 
- auch Abschnitt\InsetSpace ~
+ auch Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_stability"
 
 \end_inset
 
-, insbesondere Formel\InsetSpace ~
+, insbesondere Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_stability_irf_propfrac"
 
 \end_inset
@@ -4230,14 +4976,22 @@ Da die Übertragungsfunktion
 \end_inset
 
  von solchen LTI-Systemen
-\begin_inset LatexCommand index
-name "LTI-System!kausales"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!kausales
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "LTI-System!stabiles"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!stabiles
+\end_layout
 
 \end_inset
 
@@ -4261,7 +5015,8 @@ name "LTI-System!stabiles"
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "C"
 symbol "$\\mathbb{C}$"
 description "Komplexe Zahlen"
@@ -4272,7 +5027,7 @@ description "Komplexe Zahlen"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4296,7 +5051,8 @@ ie
 \end_inset
 
 
-\begin_inset LatexCommand nomenclature
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
 prefix "Z"
 symbol "$\\mathbb{Z}$"
 description "Ganze Zahlen"
@@ -4398,7 +5154,8 @@ Paley-Wiener
 
 \begin_layout Standard
 Nach Voraussetzung (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_paley_wiener_cond"
 
 \end_inset
@@ -4433,7 +5190,7 @@ Damit ist die Konvergenz eines Teilintegrals schon nachgewiesen und es bietet
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die Beschränktheit des Teilintegrals für 
 \begin_inset Formula $\atf_{-}(\omega)$
 \end_inset
@@ -4491,7 +5248,7 @@ und zerlegen das rechte Integral
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Wobei wir auch den Imaginärteil des Ausdrucks berücksichtigen, denn bei
  minimalphasigen LTI-Systemen besteht ein determinierter Zusammenhang zwischen
  Real- und Imaginärteil der Übertragungsfunktion und deshalb auch zwischen
@@ -4499,7 +5256,7 @@ Wobei wir auch den Imaginärteil des Ausdrucks berücksichtigen, denn bei
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -4508,9 +5265,13 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:ltisys_causality"
 
 \end_inset
@@ -4534,9 +5295,13 @@ reference "sec:ltisys_causality"
 
 \begin_layout Standard
 Die beiden Teilintegrale können nun durch Kurvenintegration auf dem halbkreisför
-migen (rechts liegendem) Weg nach Abbildung\InsetSpace ~
+migen (rechts liegendem) Weg nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:analysis_imag_inf_integral"
 
 \end_inset
@@ -4557,16 +5322,37 @@ Bei dem rechten Kurvenintegral handelt es sich wegen der Polfreiheit von
 \noun on
 Cauchy
 \noun default
-'s Integralformel\InsetSpace ~
+'s Integralformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_halfplane_right_cauchy_imint"
 
 \end_inset
 
  in der (rechten) Halbebene
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Integralformel in der Halbebene"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}!Integralformel in der Halbebene
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -4594,13 +5380,31 @@ Das linke Integral verschwindet nach dem Satz von
 Cauchy
 \noun default
 
-\begin_inset LatexCommand index
-name "Cauchy@\\noun{Cauchy}!Satz von"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Cauchy@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Cauchy}!Satz von
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
  (
-\begin_inset LatexCommand ref
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:analysis_cauchy_integral"
 
 \end_inset
@@ -4621,9 +5425,13 @@ reference "eq:analysis_cauchy_integral"
 \end_layout
 
 \begin_layout Standard
-Einsetzen der letzten beiden Ergebnisse in Zwischenformel\InsetSpace ~
+Einsetzen der letzten beiden Ergebnisse in Zwischenformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:ltisys_paley_wiener_notabs"
 
 \end_inset
@@ -4645,14 +5453,22 @@ konvergiert.
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "Minimalphasensystem|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Minimalphasensystem|)
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "LTI-System!Minimalphasen-|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System!Minimalphasen-|)
+\end_layout
 
 \end_inset
 
@@ -4660,8 +5476,12 @@ name "LTI-System!Minimalphasen-|)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset LatexCommand index
-name "LTI-System|)"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+LTI-System|)
+\end_layout
 
 \end_inset
 
