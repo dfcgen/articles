@@ -1,8 +1,14 @@
-#LyX 1.5.1 created this file. For more info see http://www.lyx.org/
-\lyxformat 276
+#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
 \begin_document
 \begin_header
-\textclass scrartams
+\textclass scrartcl
+\use_default_options false
+\master elliptic.lyx
+\begin_modules
+theorems-ams
+emphasized
+\end_modules
 \language german
 \inputencoding latin1
 \font_roman times
@@ -13,10 +19,12 @@
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
+
 \graphics default
 \float_placement !bh
 \paperfontsize default
 \spacing single
+\use_hyperref false
 \papersize default
 \use_geometry false
 \use_amsmath 1
@@ -35,6 +43,7 @@
 \tracking_changes false
 \output_changes false
 \author "" 
+\author "" 
 \end_header
 
 \begin_body
@@ -43,8 +52,8 @@
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
-Version: $Id: zolotarev.lyx,v 1.9 2007-09-22 17:44:45 ralf Exp $
+\begin_layout Plain Layout
+Version $Id: zolotarev.lyx,v 1.10 2010-09-17 20:14:59 ralf Exp $
 \end_layout
 
 \end_inset
@@ -53,19 +62,36 @@ Version: $Id: zolotarev.lyx,v 1.9 2007-09-22 17:44:45 ralf Exp $
 \end_layout
 
 \begin_layout Section
-\begin_inset LatexCommand label
+\begin_inset CommandInset label
+LatexCommand label
 name "sec:zolotarev"
 
 \end_inset
 
 
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
 's drittes Problem
-\begin_inset LatexCommand index
-name "Solotareff's drittes Problem@\\noun{Solotareff}'s drittes Problem"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Solotareff's drittes Problem@
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Solotareff}'s drittes Problem
+\end_layout
+
+\end_inset
+
+
+\end_layout
 
 \end_inset
 
@@ -75,14 +101,20 @@ name "Solotareff's drittes Problem@\\noun{Solotareff}'s drittes Problem"
 \begin_layout Standard
 
 \noun on
-E.\InsetSpace ~
-I.
- Solotaref\SpecialChar \textcompwordmark{}
-f 
-\noun default
-hat sich in\InsetSpace ~
+E.
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+I.
+ Solotareff 
+\noun default
+hat sich in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Zolotarev:1932"
 
 \end_inset
@@ -91,7 +123,7 @@ key "Zolotarev:1932"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -102,51 +134,58 @@ resp
 
  
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 -Approximation
-\begin_inset LatexCommand index
-name "Approximation!gleichm\"a{\\ss}ige"
+\begin_inset Index
+status open
 
-\end_inset
-
-
-\begin_inset LatexCommand index
-name "Approximation"
+\begin_layout Plain Layout
+Approximation!gleichmäßige
+\end_layout
 
 \end_inset
 
  auseinandergesetzt, von denen insbesondere das dritte Problem hier von
- Interesse sei
+ Interesse sei.
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Kurze Darstellungen sind auch in\InsetSpace ~
+\begin_layout Plain Layout
+Kurze Darstellungen sind auch in
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Todd:1983"
 
 \end_inset
 
 , 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "II"
 key "Achieser:1967"
 
 \end_inset
 
  und 
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,50"
 key "Achieser:1970"
 
 \end_inset
 
- sowie\InsetSpace ~
+ sowie
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Piloty:1954"
 
 \end_inset
@@ -156,10 +195,13 @@ key "Piloty:1954"
 
 \end_inset
 
-.
  Es widmet sich der Suche nach einer gebrochen rationalen Funktion
-\begin_inset LatexCommand index
-name "Funktion!gebrochen rationale"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Funktion!gebrochen rationale
+\end_layout
 
 \end_inset
 
@@ -214,7 +256,7 @@ und
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -228,7 +270,7 @@ resp
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -237,9 +279,13 @@ cf
 
 \end_inset
 
- Toleranzschema in Abbildung\InsetSpace ~
+ Toleranzschema in Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:zolotar_tol"
 
 \end_inset
@@ -268,7 +314,7 @@ wide false
 sideways false
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \align center
 \begin_inset Graphics
 	filename zolotarev_problem3.eps
@@ -278,11 +324,12 @@ status open
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Caption
 
-\begin_layout Standard
-\begin_inset LatexCommand label
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
 name "fig:zolotar_tol"
 
 \end_inset
@@ -307,8 +354,7 @@ Toleranzschema für
 \begin_layout Standard
 
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
  hat nun aus Symmetrieeigenschaften sowie der Bedingung
 \end_layout
@@ -327,9 +373,13 @@ die folgende Form von
 \begin_inset Formula $f(x)$
 \end_inset
 
- geschlußfolgert\InsetSpace ~
+ geschlußfolgert
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 key "Todd:1983"
 
 \end_inset
@@ -351,7 +401,7 @@ Die Lösung dieser Approximationsaufgabe
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -360,9 +410,13 @@ resp
 
 \end_inset
 
- der nach\InsetSpace ~
+ der nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_goal"
 
 \end_inset
@@ -375,21 +429,28 @@ Jacobi
  Haupttransformation.
  Um den speziellen Intervallgrenzen in 
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
 's drittem Problem Rechnung zu tragen, müssen die Achsen allerdings noch
  passend skaliert werden.
- Dazu setzt man in den rationalen Transformationsbeziehungen\InsetSpace ~
+ Dazu setzt man in den rationalen Transformationsbeziehungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_poly"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_poly"
 
 \end_inset
@@ -425,7 +486,7 @@ und erhält
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -434,16 +495,24 @@ resp
 
 \end_inset
 
- nach den Parameterdarstellungen\InsetSpace ~
+ nach den Parameterdarstellungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_param_y"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_param_y"
 
 \end_inset
@@ -479,24 +548,36 @@ Die Verschiebung der ehemaligen Extremwerte
 \begin_inset Formula $\pm\lambda^{-1/2}$
 \end_inset
 
- entspricht dem Toleranzschema nach Abbildung\InsetSpace ~
+ entspricht dem Toleranzschema nach Abbildung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:zolotar_tol"
 
 \end_inset
 
 , wenn man die Verläufe der ersten elliptischen Haupttransformation in den
- zugehörigen Abbildungen\InsetSpace ~
+ zugehörigen Abbildungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_odd_function"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_even_function"
 
 \end_inset
@@ -505,16 +586,24 @@ reference "fig:elltr1_even_function"
 \end_layout
 
 \begin_layout Standard
-Passt man auch die Berechnungsformeln\InsetSpace ~
+Passt man auch die Berechnungsformeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_lambda"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_lambda"
 
 \end_inset
@@ -546,9 +635,13 @@ Berücksichtigt man für den Fall eines ungeraden
 \begin_inset Formula $n$
 \end_inset
 
- die Gleichung\InsetSpace ~
+ die Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_lambda_coeff"
 
 \end_inset
@@ -557,9 +650,13 @@ reference "eq:elltr1_odd_lambda_coeff"
 \begin_inset Formula $n$
 \end_inset
 
- entsprechend\InsetSpace ~
+ entsprechend
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_lambda"
 
 \end_inset
@@ -595,12 +692,15 @@ dann ergeben sich noch die folgenden Vereinfachungen:
 \begin_layout Standard
 Bezüglich des 
 \noun on
-Solotaref\SpecialChar \textcompwordmark{}
-f
+Solotareff
 \noun default
-'schen Ausgangspunktes nach Beziehung\InsetSpace ~
+'schen Ausgangspunktes nach Beziehung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_rational_base"
 
 \end_inset
@@ -623,16 +723,24 @@ b_{\upsilon}=\sqrt{k}\, a_{\nu}\]
 
 \begin_layout Standard
 Wegen der Skalierung der x-Achse verschieben sich natürlich auch alle Nullstelle
-n und Pole nach den Formeln\InsetSpace ~
+n und Pole nach den Formeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_poles"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_zeroes"
 
 \end_inset
@@ -641,16 +749,24 @@ reference "eq:elltr1_odd_zeroes"
 \begin_inset Formula $n$
 \end_inset
 
- ungerade) sowie\InsetSpace ~
+ ungerade) sowie
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_zeroes"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_poles"
 
 \end_inset
@@ -673,16 +789,24 @@ reference "eq:elltr1_even_poles"
 \end_layout
 
 \begin_layout Standard
-Die Berechnungsformeln\InsetSpace ~
+Die Berechnungsformeln
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_coeffs"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_even_zeroes"
 
 \end_inset
@@ -710,51 +834,91 @@ Sie repräsentieren letztlich das Ergebnis der Bestapproximation.
 \begin_layout Proof
 Der Beweis der Bestapproximation beruht auf 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 's Alternantensatz
-\begin_inset LatexCommand index
-name "Tschebyscheff'sche Alternantenbedingung@\\noun{Tschebyschef\\textcompwordmark{}f}'sche Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tschebyscheff'sche Alternantenbedingung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
+
+\end_inset
+
+'sche Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Approximation!Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Approximation!Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Alternantensatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Alternantensatz
+\end_layout
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand cite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "Satz~23"
 key "Meinardus:1964"
 
 \end_inset
 
-, welcher angewandt auf die Ausgangspolynome\InsetSpace ~
+, welcher angewandt auf die Ausgangspolynome
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_poly_start"
 
 \end_inset
 
- in kurzer Form lautet\InsetSpace ~
+ in kurzer Form lautet
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,6"
 key "Meinardus:1964"
 
@@ -787,11 +951,11 @@ im Approximationsintervall genau
 \begin_inset Formula $m+n+3$
 \end_inset
 
- Extremalpunkte hat
+ Extremalpunkte hat,
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula $n+1$
 \end_inset
 
@@ -803,7 +967,7 @@ status collapsed
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -820,7 +984,7 @@ ie
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -830,7 +994,8 @@ cf
 \end_inset
 
  
-\begin_inset LatexCommand cite
+\begin_inset CommandInset citation
+LatexCommand cite
 after "Satz~23"
 key "Meinardus:1964"
 
@@ -841,14 +1006,18 @@ key "Meinardus:1964"
 
 \end_inset
 
-, an denen sie alternierend den Wert 
+ an denen sie alternierend den Wert 
 \begin_inset Formula $\pm\varepsilon$
 \end_inset
 
  annimmt.
- Berücksichtigt man den Polynomgrad in Zähler und Nenner der Lösungsformel\InsetSpace ~
+ Berücksichtigt man den Polynomgrad in Zähler und Nenner der Lösungsformel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_solution"
 
 \end_inset
@@ -869,16 +1038,24 @@ n & (n\textrm{ gerade})\end{cases}\mperiod\]
 
 \begin_layout Proof
 Betrachtet man nun einfach die Funktionsverläufe der ersten elliptischen
- Haupttransformation in den Abbildungen\InsetSpace ~
+ Haupttransformation in den Abbildungen
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_odd_function"
 
 \end_inset
 
- und\InsetSpace ~
+ und
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "fig:elltr1_even_function"
 
 \end_inset
@@ -917,8 +1094,7 @@ Aufgrund ihrer Anzahl sowie des alternierenden Fehlers
 
  ist die 
 \noun on
-Tschebyschef\SpecialChar \textcompwordmark{}
-f
+Tschebyscheff
 \noun default
 'sche Alternantenbedingung erfüllt und die Funktion 
 \begin_inset Formula $\efunc{f}{x}{k}$
@@ -928,7 +1104,7 @@ f
 \begin_inset Note Note
 status open
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \efunc{f}{x}{k}=\sqrt{\lambda}\,\esn{\frac{u}{M}}{\lambda}\]
 
@@ -940,9 +1116,13 @@ status open
 
 \end_inset
 
-Wir wollen hier einen Zugang nach\InsetSpace ~
+Wir wollen hier einen Zugang nach
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand cite
+
+\begin_inset CommandInset citation
+LatexCommand cite
 after "\\S\\,39"
 key "Achieser:1967"
 
@@ -969,7 +1149,10 @@ minimiert wird.
 \end_inset
 
 Es ist erkennbar, daß es sich bei dieser Aufgabenstellung um eine Bestapproximat
-ion der Konstante\InsetSpace ~
+ion der Konstante
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $1$
 \end_inset
@@ -989,9 +1172,13 @@ Die Lösung der Approximationsaufgabe beruht auf
 Jacobi
 \noun default
 schen elliptischen Funktionen in Verbindung mit der ersten elliptischen
- Haupttransformation nach Gleichung\InsetSpace ~
+ Haupttransformation nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_dn_x"
 
 \end_inset
@@ -1009,10 +1196,14 @@ reference "eq:elltr1_odd_dn_x"
 \begin_inset Foot
 status collapsed
 
-\begin_layout Standard
-Es sei daran erinnert, daß Gleichung\InsetSpace ~
+\begin_layout Plain Layout
+Es sei daran erinnert, daß Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_dn_x"
 
 \end_inset
@@ -1057,16 +1248,24 @@ Das Modul
 \begin_inset Formula $M$
 \end_inset
 
- sind schon in Anhang\InsetSpace ~
+ sind schon in Anhang
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elliptic"
 
 \end_inset
 
- bestimmt worden, die Berechnung dieser Größen kann mittels Gleichung\InsetSpace ~
+ bestimmt worden, die Berechnung dieser Größen kann mittels Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_odd_M"
 
 \end_inset
@@ -1075,7 +1274,7 @@ reference "eq:elltr1_odd_M"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1084,9 +1283,13 @@ resp
 
 \end_inset
 
-\InsetSpace ~
 
-\begin_inset LatexCommand ref
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:elltr1_lambda"
 
 \end_inset
@@ -1117,12 +1320,19 @@ reference "eq:elltr1_lambda"
 \end_inset
 
 , dann erhält man eine Bestapproximation
-\begin_inset LatexCommand index
-name "Approximation!Bestapproximation"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Approximation!Bestapproximation
+\end_layout
 
 \end_inset
 
- der Konstante\InsetSpace ~
+ der Konstante
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $1$
 \end_inset
@@ -1142,26 +1352,55 @@ Der Beweis der Bestapproximation beruht auf
 Tschebyscheff
 \noun default
 's Alternantensatzes
-\begin_inset LatexCommand index
-name "Tschebyscheff'sche Alternantenbedingung@\\noun{Tschebyscheff}'sche Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Tschebyscheff'sche Alternantenbedingung@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tschebyscheff}
+\end_layout
+
+\end_inset
+
+'sche Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Approximation!Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Approximation!Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Alternantenbedingung"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Alternantenbedingung
+\end_layout
 
 \end_inset
 
 
-\begin_inset LatexCommand index
-name "Alternantensatz"
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Alternantensatz
+\end_layout
 
 \end_inset
 
@@ -1169,7 +1408,10 @@ name "Alternantensatz"
 \begin_inset Formula $g(x)/f(x)$
 \end_inset
 
- stellt genau dann eine Bestapproximation (der Konstante\InsetSpace ~
+ stellt genau dann eine Bestapproximation (der Konstante
+\begin_inset space ~
+\end_inset
+
 
 \begin_inset Formula $1$
 \end_inset
@@ -1190,9 +1432,13 @@ name "Alternantensatz"
 \begin_inset Formula $g(x)/f(x)$
 \end_inset
 
- nach Gleichung\InsetSpace ~
+ nach Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_approx_func"
 
 \end_inset
@@ -1209,7 +1455,7 @@ reference "eq:zolotar_approx_func"
 \begin_inset ERT
 status collapsed
 
-\begin_layout Standard
+\begin_layout Plain Layout
 
 
 \backslash
@@ -1218,17 +1464,25 @@ cf
 
 \end_inset
 
- Abschnitt\InsetSpace ~
+ Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elltr1"
 
 \end_inset
 
 ).
- Ähnlich wie in Abschnitt\InsetSpace ~
+ Ähnlich wie in Abschnitt
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "sec:elltr_general_solution"
 
 \end_inset
@@ -1237,9 +1491,13 @@ reference "sec:elltr_general_solution"
 \begin_inset Formula $u$
 \end_inset
 
- wegen Gleichung\InsetSpace ~
+ wegen Gleichung
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_solution"
 
 \end_inset
@@ -1317,9 +1575,13 @@ Tschebyscheff
 \begin_inset Formula $\edn{u/M}{\lambda}$
 \end_inset
 
- nach Formel\InsetSpace ~
+ nach Formel
+\begin_inset space ~
+\end_inset
 
-\begin_inset LatexCommand ref
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:zolotar_solution_dn"
 
 \end_inset
