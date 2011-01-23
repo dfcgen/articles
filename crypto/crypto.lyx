@@ -83,7 +83,7 @@ synopsis
 status open
 
 \begin_layout Plain Layout
-Version $Id: crypto.lyx,v 1.4 2010-09-17 20:13:40 ralf Exp $
+Version $Id$
 \end_layout
 
 \end_inset
@@ -128,18 +128,20 @@ status open
 \backslash
 textcopyright
 \backslash
-  2007--
-\backslash
-number
-\backslash
-year
-\backslash
  
 \end_layout
 
 \end_inset
 
- Ralf Hoppe
+ 2007
+\begin_inset space ~
+\end_inset
+
+--
+\begin_inset space ~
+\end_inset
+
+2010 Ralf Hoppe
 \end_layout
 
 \begin_layout Standard
@@ -986,6 +988,28 @@ H.
 
 Feistel
 \noun default
+ 
+\begin_inset Index
+status open
+
+\begin_layout Plain Layout
+Feistel-Netzwerk@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+\backslash
+noun{Feistel}
+\end_layout
+
+\end_inset
+
+-Netzwerk
+\end_layout
+
+\end_inset
+
  an
 \begin_inset space ~
 \end_inset
@@ -1239,22 +1263,36 @@ Advanced Encryption Algorithm (AES)
 \end_layout
 
 \begin_layout Standard
-Definiert im NIST Dokument 
+Der AES ist definiert im NIST-Standard
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "FIPS:197"
 
 \end_inset
 
- und mittlerweile auch durch die ISO in 
+ und mittlerweile auch als
+\begin_inset space ~
+\end_inset
+
+
 \begin_inset CommandInset citation
 LatexCommand cite
 key "ISO:18033-3"
 
 \end_inset
 
-
+.
+ Es gibt so viele Beschreibungen und Implementierungshinweise zum AES, daß
+ ich dies hier nicht weiter ausführe.
 \end_layout
+
+\begin_layout Plain Layout
+\begin_inset Note Comment
+status open
 
 \begin_layout Paragraph
 Substitution (SubBytes)
@@ -1268,7 +1306,7 @@ Permutation (ShiftRows)
 Diffusion (MixColumns)
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Stellt einen weiteren Durchmischungsschritt dar, welcher die (jeweils) vier
  Elemente einer Spalte der Zustandmatrix in Beziehung setzt.
  Dazu werden sie als Koeffizienten von Polynomen im Restklassenkörper 
@@ -1278,7 +1316,7 @@ Stellt einen weiteren Durchmischungsschritt dar, welcher die (jeweils) vier
  aufgefaßt, auf die folgende Operation angewendet wird:
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 s^{\prime}(x)=a(x)\otimes s(x)=a(x)\cdot s(x)\bmod(x^{4}+1)\mperiod\]
 
@@ -1287,7 +1325,7 @@ s^{\prime}(x)=a(x)\otimes s(x)=a(x)\cdot s(x)\bmod(x^{4}+1)\mperiod\]
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 Die vier neuen Zustandsvariablen 
 \begin_inset Formula $s^{\prime}$
 \end_inset
@@ -1322,7 +1360,7 @@ Multiplikation
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 \begin{split}b(x) & =(a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0})\cdot(s_{3}x^{3}+s_{2}x^{2}+s_{1}x+s_{0})\\
  & =\underbrace{a_{3}s_{3}}_{b_{6}}x^{6}+\underbrace{(a_{2}s_{3}\oplus a_{3}s_{2})}_{b_{5}}x^{5}+\underbrace{(a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1})}_{b_{4}}x^{4}+\\
@@ -1344,7 +1382,7 @@ Modulo-Reduktion
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{multline*}
 \begin{split}(b_{6}x^{6}+b_{5}x^{5}+b_{4}x^{4}+b_{3}x^{3}+b_{2}x^{2}+b_{1}x+b_{0})\bmod(x^{4}+1)=\\
 b_{3}x^{3}+(b_{2}\oplus b_{6})x^{2}+(b_{1}\oplus b_{5})x+(b_{0}\oplus b_{4})\end{split}
@@ -1361,7 +1399,7 @@ Vergleich der Koeffizienten in
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \[
 s^{\prime}(x)=s_{3}^{\prime}x^{3}+s_{2}^{\prime}x^{2}+s_{1}^{\prime}x+s_{0}^{\prime}=b(x)\bmod(x^{4}+1)\]
 
@@ -1370,7 +1408,7 @@ s^{\prime}(x)=s_{3}^{\prime}x^{3}+s_{2}^{\prime}x^{2}+s_{1}^{\prime}x+s_{0}^{\pr
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 mit dem Ergebnis der Modulo-Reduktion zeigt:
 \begin_inset Foot
 status collapsed
@@ -1392,7 +1430,7 @@ Auffällig daran ist, daß für jedes Byte
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Plain Layout
 \begin_inset Formula \begin{alignat*}{2}
 s_{0}^{\prime} & =b_{0}\oplus b_{4} &  & =a_{0}s_{0}\oplus a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1}\\
 s_{1}^{\prime} & =b_{1}\oplus b_{5} &  & =a_{0}s_{1}\oplus a_{1}s_{0}\oplus a_{2}s_{3}\oplus a_{3}s_{2}\\
@@ -1405,7 +1443,7 @@ s_{3}^{\prime} & =b_{3} &  & =a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus
 \end_layout
 
 \end_deeper
-\begin_layout Standard
+\begin_layout Plain Layout
 Für den AES gelten die konkreten Werte 
 \begin_inset Formula $(a_{3},a_{2},a_{1},a_{0}):=(\hex{03},\hex{01},\hex{01},\hex{02})$
 \end_inset
@@ -1419,6 +1457,11 @@ Für den AES gelten die konkreten Werte
 
 \begin_layout Paragraph
 Rundenschlüssel (AddRoundKey)
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
