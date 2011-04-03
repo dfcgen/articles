@@ -1,4 +1,4 @@
-#LyX 1.6.0 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -147,41 +147,6 @@ description "Phase"
 Tschebyscheff
 \noun default
 -) Approximation des Amplitudenganges
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
-ne Filtertypen 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-eg
-\end_layout
-
-\end_inset
-
- sehr schön in
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Henderson:1958"
-
-\end_inset
-
- dargestellt sind, werden dann einfach hingenommen.
-\end_layout
-
-\end_inset
-
-
 \begin_inset Index
 status collapsed
 
@@ -229,6 +194,40 @@ key "Guillemin:1952,Guillemin:1957,Winkler:1954,Zverev:1967,Fritzsche:1979a,Mild
 \end_inset
 
 .
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Insbesondere die Zeitfunktionen Impuls- und Sprungantwort, welche für verschiede
+ne Filtertypen 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ sehr schön in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Henderson:1958"
+
+\end_inset
+
+ dargestellt sind, werden dann einfach hingenommen.
+\end_layout
+
+\end_inset
+
  Dazu wird üblicherweise statt der Amplitudencharakteristik
 \begin_inset Index
 status collapsed
@@ -315,6 +314,18 @@ ie
 \end_inset
 
  fast jede rationale Funktion ist hier erlaubt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.15"
+key "Zverev:1967"
+
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -342,18 +353,6 @@ eg
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "2.15"
-key "Zverev:1967"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Enumerate
@@ -738,7 +737,7 @@ Die Definition von Durchlaß- und Sperrbereich beruht auf dem Fakt, daß (fast)
 \begin_inset Formula $0\leq\omega\leq\omega_{g}$
 \end_inset
 
- angenommen
+ angenommen,
 \begin_inset Foot
 status collapsed
 
@@ -753,7 +752,7 @@ Wobei normalerweise mit normierten Frequenzen gearbeitet und deshalb oftmals
 
 \end_inset
 
-, für den Sperrbereich 
+ für den Sperrbereich 
 \begin_inset Formula $\omega_{s}\leq\omega<\infty$
 \end_inset
 
@@ -777,9 +776,9 @@ reference "fig:lp_tol_scheme"
 \begin_inset Formula $\atf_{\textup{min}}$
 \end_inset
 
- definiert
+ definiert.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Gleichbedeutend mit der Forderung 
@@ -795,7 +794,7 @@ Gleichbedeutend mit der Forderung
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -921,7 +920,7 @@ key "Chebyshev:1899,Meinardus:1964,Koerner:1988"
 \begin_layout Quote
 Eine Bestapproximation
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Im Sinne der Bestimmung von 
@@ -1032,9 +1031,13 @@ In der Filtertheorie ist die (gesuchte) Funktion
 \begin_inset Formula $g_{n}$
 \end_inset
 
- geringster Abweichung
+ geringster Abweichung meist die Drosselung 
+\begin_inset Formula $\drf(\omega)$
+\end_inset
+
+.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Weitere Normen und Fehlermaße sowie die Beziehung zwischen Fehlern im Frequenz-
@@ -1067,11 +1070,6 @@ key "Gumowski:1958"
 
 \end_inset
 
- meist die Drosselung 
-\begin_inset Formula $\drf(\omega)$
-\end_inset
-
-.
  Die zu approximierende Funktion 
 \begin_inset Formula $f(x)$
 \end_inset
