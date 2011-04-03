@@ -1,4 +1,4 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
+#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
 \lyxformat 345
 \begin_document
 \begin_header
@@ -331,7 +331,7 @@ description "Erwartungswert der Zufallsgröße $X$"
 \begin_inset Formula $x_{i}$
 \end_inset
 
- mit der Wahrscheinlichkeit ihres Auftretens
+ mit der Wahrscheinlichkeit ihres Auftretens.
 \begin_inset Foot
 status collapsed
 
@@ -340,8 +340,12 @@ Oftmals auch geschrieben als typischer Operator
 \begin_inset Formula $\mean X$
 \end_inset
 
- oder 
+, 
 \begin_inset Formula $\mean\left[X\right]$
+\end_inset
+
+ oder 
+\begin_inset Formula $\mean\left\{ X\right\} $
 \end_inset
 
 .
@@ -349,7 +353,7 @@ Oftmals auch geschrieben als typischer Operator
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -396,7 +400,11 @@ Streuung
 
 \end_inset
 
+ der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset
 
+ um ihren Erwartungswert.
 \begin_inset Foot
 status collapsed
 
@@ -456,11 +464,7 @@ Streuung
 
 \end_inset
 
- der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
 
- um ihren Erwartungswert.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -535,9 +539,9 @@ Kann
 \begin_inset Formula $x$
 \end_inset
 
- annehmen, dann kommt man zu kontinuierlichen Zufallsgrößen
+ annehmen, dann kommt man zu kontinuierlichen Zufallsgrößen.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
@@ -546,7 +550,7 @@ Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -584,7 +588,7 @@ Die Zufallsgröße
 \begin_inset Formula $x$
 \end_inset
 
- aus einem endlichen oder unendlichen Intervall annehmen
+ aus einem endlichen oder unendlichen Intervall annehmen.
 \begin_inset Foot
 status collapsed
 
@@ -602,7 +606,6 @@ Wobei streng gesehen ein ganz konkreter Wert
 
 \end_inset
 
-.
  Bezieht man sich auf Grenzwerte 
 \begin_inset ERT
 status collapsed
@@ -896,9 +899,9 @@ Erwartungswert
 \end_inset
 
  ergibt sich wie bei den diskreten Zufallsgrößen -- jetzt wird aber jeder
- Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert
+ Wert mit der differentiellen Wahrscheinlichkeit seines Auftretens multipliziert.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Mit Hilfe von Gleichung
@@ -937,7 +940,7 @@ key "Gnedenko:1958"
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -950,29 +953,7 @@ key "Gnedenko:1958"
 \end_layout
 
 \begin_layout Standard
-In ähnlicher Art und Weise
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Erwartungswert, Varianz und alle weiteren Integrale der Form 
-\begin_inset Formula $\int x^{i}p(x)\tic x$
-\end_inset
-
- nennt man (mit 
-\begin_inset Formula $i=1,2,\ldots$
-\end_inset
-
-) Momente der Zufallsgröße 
-\begin_inset Formula $X$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- (und unter Berücksichtigung von Formel
+In ähnlicher Art und Weise (und unter Berücksichtigung von Formel
 \begin_inset space ~
 \end_inset
 
@@ -989,6 +970,28 @@ status collapsed
 
 \begin_layout Plain Layout
 Varianz
+\end_layout
+
+\end_inset
+
+:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Erwartungswert, Varianz und alle weiteren Integrale der Form 
+\begin_inset Formula $\int x^{i}p(x)\tic x$
+\end_inset
+
+ nennt man (mit 
+\begin_inset Formula $i=1,2,\ldots$
+\end_inset
+
+) Momente der Zufallsgröße 
+\begin_inset Formula $X$
+\end_inset
+
+.
 \end_layout
 
 \end_inset
@@ -1077,7 +1080,7 @@ description "Quadratischer Effektivwert der Zufallsgröße $X$"
 
 \end_inset
 
-
+.
 \begin_inset Foot
 status collapsed
 
@@ -1096,7 +1099,7 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -1497,9 +1500,9 @@ Randverteilung
 \begin_inset Formula $\pr(X_{i}<x_{i})$
 \end_inset
 
- ausdrückt
+ ausdrückt.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Hier wird eine Ergebnis des Satzes von 
@@ -1511,7 +1514,7 @@ Fubini
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_deeper
@@ -1736,9 +1739,9 @@ resp
 \begin_inset Formula $\pr(B\mid A)=\pr(B)$
 \end_inset
 
- und deshalb
+ und deshalb:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Grundlagen der Kombinatorik, 
@@ -2400,7 +2403,7 @@ Korrelationskoeffizient
 
 \end_inset
 
- ist ein Maß für die Abhängigkeit zweier Zufallsgrößen
+ ist ein Maß für die Abhängigkeit zweier Zufallsgrößen.
 \begin_inset Foot
 status collapsed
 
@@ -2418,7 +2421,7 @@ Pearson
 
 \end_inset
 
-.
+
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "Corr()"
@@ -2469,7 +2472,11 @@ Linear abhängige Zufallsgrößen (
 
 \begin_layout Enumerate
 Von unkorrelierten Zufallsgrößen spricht man, wenn der Korrelationskoeffizient
- identisch Null ist
+ identisch Null ist: 
+\begin_inset Formula $\corr(X_{1},X_{2})=0$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -2480,11 +2487,7 @@ Unkorrelierte Zufallsgrößen sind nicht notwendigerweise stochastisch unabhäng
 
 \end_inset
 
-: 
-\begin_inset Formula $\corr(X_{1},X_{2})=0$
-\end_inset
 
-.
 \end_layout
 
 \begin_layout Standard
@@ -2731,9 +2734,9 @@ Die Wahrscheinlichkeitsdichte für
 \begin_inset Formula $X$
 \end_inset
 
- annehmen kann, monoton verläuft
+ annehmen kann, monoton verläuft.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Wenn die Transformationsfunktion nicht monoton verläuft, ist die ein-eindeutige
@@ -2776,7 +2779,6 @@ reference "sec:prob_prd"
 
 \end_inset
 
-.
  Angenommen nun, 
 \begin_inset Formula $Y$
 \end_inset
@@ -3012,9 +3014,9 @@ Da an der unteren Grenze immer
 \begin_inset Formula $F_{X}(a)=0$
 \end_inset
 
- gilt
+ gilt,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Existiert 
@@ -3047,7 +3049,7 @@ resp
 
 \end_inset
 
-, ergibt sich:
+ ergibt sich:
 \end_layout
 
 \begin_layout Standard
@@ -3276,9 +3278,9 @@ reference "eq:prob_transform_single_differential"
 \begin_inset Formula $n$
 \end_inset
 
- Dimensionen verfolgt
+ Dimensionen verfolgt, wobei wir (zuerst) jegliche Betragszeichen ignorieren.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Auch Gleichung
@@ -3302,7 +3304,7 @@ reference "eq:prob_transform_single"
 
 \end_inset
 
-, wobei wir (zuerst) jegliche Betragszeichen ignorieren.
+
 \end_layout
 
 \begin_layout Standard
@@ -3345,7 +3347,7 @@ reference "fig:prob_function_transform"
 \begin_layout Standard
 Den Zusammenhang zwischen den Inhaltsmomenten
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Momente niedriger Ordnung sind 
@@ -3382,21 +3384,7 @@ eg
 \begin_inset Formula $\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}$
 \end_inset
 
- gibt uns die aus der Integralrechnung bekannte
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Substitutionssatz für Mehrfach-Integrale: 
-\begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec J_{h}\right|\tic\mvec{z}$
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
- Funktional- 
+ gibt uns die aus der Integralrechnung bekannte Funktional- 
 \begin_inset ERT
 status collapsed
 
@@ -3451,6 +3439,20 @@ noun{Jacobi}
 \end_inset
 
 .
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Substitutionssatz für Mehrfach-Integrale: 
+\begin_inset Formula $\int_{h(B)}f(\mvec{x})\tic\mvec{x}=\int_{B}f\left[h(\mvec{z})\right]\left|\mvec J_{h}\right|\tic\mvec{z}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -3619,8 +3621,20 @@ reference "eq:prob_transform_density_differential"
 \end_inset
 
  gewinnen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S\\,23"
+key "Gnedenko:1958"
+
+\end_inset
+
+.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
@@ -3642,18 +3656,6 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 \end_inset
 
 
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "\\S\\,23"
-key "Gnedenko:1958"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -3852,9 +3854,9 @@ künstlich
 \begin_inset Formula $f_{1}$
 \end_inset
 
- ist
+ ist.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Hilfreich ist natürlich die Wahl einer möglichst einfachen Funktion.
@@ -3862,7 +3864,7 @@ Hilfreich ist natürlich die Wahl einer möglichst einfachen Funktion.
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -4190,6 +4192,16 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_contin
 \begin_layout Standard
 Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
 er Zufallsgrößen also genau die Faltung
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Faltung
+\end_layout
+
+\end_inset
+
+ der einzelnen Dichtefunktionen.
 \begin_inset Foot
 status collapsed
 
@@ -4204,16 +4216,6 @@ Faltung zweier Funktionen:
 \end_inset
 
 
-\begin_inset Index
-status collapsed
-
-\begin_layout Plain Layout
-Faltung
-\end_layout
-
-\end_inset
-
- der einzelnen Dichtefunktionen.
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "*"
@@ -4373,17 +4375,8 @@ Randdichte
 
 \begin_layout Standard
 Demzufolge ist der Erwartungswert der Summe zweier Zufallsgrößen unabhängig
- von der (verbundenen) Wahrscheinlichkeitsdichte
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
-\end_layout
-
-\end_inset
-
- einfach die Summe der einzelnen Erwartungswerte
+ von der (verbundenen) Wahrscheinlichkeitsdichte einfach die Summe der einzelnen
+ Erwartungswerte
 \begin_inset space ~
 \end_inset
 
@@ -4396,6 +4389,16 @@ key "Gnedenko:1958"
 \end_inset
 
 .
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -4573,9 +4576,10 @@ reference "eq:prob_sum_var_ext"
 \end_layout
 
 \begin_layout Standard
-Sind beide Zufallsgrößen sowohl unabhängig
+Sind beide Zufallsgrößen sowohl unabhängig als auch (zumindest eine) mittelwertf
+rei,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Verschwindende Kovarianz, 
@@ -4611,8 +4615,7 @@ reference "eq:prob_cov_zero_mean"
 
 \end_inset
 
- als auch (zumindest eine) mittelwertfrei, dann berechnet sich der Effektivwert
- der Summengröße wiefolgt:
+ dann berechnet sich der Effektivwert der Summengröße wiefolgt:
 \end_layout
 
 \begin_layout Standard
@@ -4657,7 +4660,7 @@ Normalverteilung
 
 
 \begin_inset Index
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Gauss-Verteilung@
@@ -4689,6 +4692,43 @@ Zwei unabhängige Zufallsgrößen
 \end_inset
 
  seien normalverteilt
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\mu$"
+description "Erwartungswert der Normalverteilung"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\cnorm(x)$"
+description "Standard-Normalverteilung"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\sigma^{2}$"
+description "Varianz der Normalverteilung"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula \begin{equation}
+p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und additiv überlagert.
 \begin_inset Foot
 status collapsed
 
@@ -4733,44 +4773,6 @@ Glockenkurve
 
 \end_inset
 
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$\\mu$"
-description "Erwartungswert der Normalverteilung"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$\\cnorm(x)$"
-description "Standard-Normalverteilung"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$\\sigma^{2}$"
-description "Varianz der Normalverteilung"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-und additiv überlagert.
  Die Berechnung der resultierenden Dichtefunktion 
 \begin_inset Formula $p_{Y}(y)$
 \end_inset
@@ -4856,9 +4858,17 @@ Die Summe zweier normalverteilter Zufallsgrößen mit den Erwartungswerten
 \begin_inset Formula $\sigma_{i}^{2}$
 \end_inset
 
- ist wieder normalverteilt
+ ist wieder normalverteilt mit dem Erwartungswert 
+\begin_inset Formula $\mu_{1}+\mu_{2}$
+\end_inset
+
+ und der Varianz 
+\begin_inset Formula $\sigma_{1}^{2}+\sigma_{2}^{2}$
+\end_inset
+
+.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Die Ergebnisse für den Erwartungswert und die Varianz bestätigen nur die
@@ -4889,15 +4899,7 @@ reference "eq:prob_sum_var"
 
 \end_inset
 
- mit dem Erwartungswert 
-\begin_inset Formula $\mu_{1}+\mu_{2}$
-\end_inset
 
- und der Varianz 
-\begin_inset Formula $\sigma_{1}^{2}+\sigma_{2}^{2}$
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -5025,9 +5027,9 @@ Auch diesmal ermitteln wir zuerst die Umkehrfunktionen
 \begin_inset Formula $X_{2}$
 \end_inset
 
- sowie die Radikanden
+ sowie die Radikanden.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Den Verlust der halben (differentiellen) Wahrscheinlichkeit durch die 
@@ -5043,7 +5045,7 @@ Vorzeichen-Mehrdeutigkeit
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -5809,17 +5811,7 @@ ergodische
 
  zur Bestimmung seiner statistischen Parameter ausreicht (Ergodizität).
  Dies bedeutet unter anderem, daß alle statistischen Kenngrößen (Momente,
- wie Erwartungswert
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
-\end_layout
-
-\end_inset
-
-, Varianz 
+ wie Erwartungswert, Varianz 
 \begin_inset ERT
 status collapsed
 
@@ -5856,6 +5848,16 @@ key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958"
 \end_inset
 
 .
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -5959,12 +5961,26 @@ resp
 \begin_inset Formula $\cov(\cdot)$
 \end_inset
 
- eng verwandte) Größe
+ eng verwandte) Größe und bezeichnen sie als Korrelation
+\begin_inset Index
+status collapsed
+
+\begin_layout Plain Layout
+Korrelation
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $r(X_{1},X_{2})$
+\end_inset
+
+ zweier Zufallsgrößen:
 \begin_inset Foot
 status collapsed
 
 \begin_layout Plain Layout
-Und uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
+Die uns im Zusammenhang mit dem Erwartungswert des Produktes von Zufallsgrößen
  (Abschnitt
 \begin_inset space ~
 \end_inset
@@ -5992,21 +6008,7 @@ reference "sec:prob_covariance_dependent"
 
 \end_inset
 
- und bezeichnen sie als Korrelation
-\begin_inset Index
-status collapsed
 
-\begin_layout Plain Layout
-Korrelation
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $r(X_{1},X_{2})$
-\end_inset
-
- zweier Zufallsgrößen:
 \end_layout
 
 \begin_layout Standard
@@ -6311,6 +6313,14 @@ Energiesignale
 
 ), dann wird üblicherweise die Definition der AKF (sowie aller daraus abgeleitet
 en Größen) geringfügig modifiziert
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\acf^{(E)}_{xx}$"
+description "Autokorrelationsfunktion des Energiesignals $x(t)$"
+
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -6329,14 +6339,6 @@ Ansonsten würde wegen der Division durch
 \end_inset
 
 
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$\\acf^{(E)}_{xx}$"
-description "Autokorrelationsfunktion des Energiesignals $x(t)$"
-
-\end_inset
-
-.
 \end_layout
 
 \begin_layout Standard
@@ -6402,7 +6404,11 @@ reference "enu:prob_acf_zero"
 
 \end_inset
 
- gilt immer die Relation
+ gilt immer die Relation 
+\begin_inset Formula $\left|\acf_{xx}(\tau)\right|\leq\acf_{xx}(0)$
+\end_inset
+
+.
 \begin_inset Foot
 status collapsed
 
@@ -6443,11 +6449,7 @@ noun{Cauchy-Schwarz}
 
 \end_inset
 
- 
-\begin_inset Formula $\left|\acf_{xx}(\tau)\right|\leq\acf_{xx}(0)$
-\end_inset
 
-.
 \begin_inset Note Note
 status open
 
@@ -6679,7 +6681,7 @@ Leistungsdichte!Spektrale
 \end_inset
 
 Machen wir nun einen weiteren Schritt von den Zufallsprozessen zu Zufallssignale
-n, der allerdings eher eine Notationsfrage
+n, der allerdings eher eine Notationsfrage als etwas Grundsätzliches ist.
 \begin_inset Foot
 status collapsed
 
@@ -6693,7 +6695,6 @@ Fourier
 
 \end_inset
 
- als etwas Grundsätzliches ist.
  Dabei stellen wir die Frage nach der spektralen Leistungsdichte eines stationär
 en, ergodischen Zufallsprozesses, also nach infinitesimalen Leistungsanteilen
  in einem Frequenzbereich 
@@ -6885,7 +6886,7 @@ Nun wird die Integrationsreihenfolge vertauscht und danach
 \begin_inset Formula $u=t+\tau$
 \end_inset
 
- substituiert
+ substituiert.
 \begin_inset Foot
 status collapsed
 
@@ -6907,7 +6908,7 @@ Wobei die Integrationsgrenzen
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -6953,7 +6954,7 @@ resp
 \begin_inset Formula $\lim_{T\rightarrow\infty}T^{-1}\int x^{2}(t)\tic t$
 \end_inset
 
- endlich
+ endlich.
 \begin_inset Foot
 status collapsed
 
@@ -6975,7 +6976,7 @@ Man kann sich auch vorstellen, daß
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -7059,7 +7060,7 @@ reference "eq:prob_psd_wiener_chintchin"
 
 ) ganz einfach ergibt, wenn man den Faltungssatz
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 \begin_inset Formula $(f*g)(t)\lft F(\ji\omega)\, G(\ji\omega)$
@@ -7170,9 +7171,9 @@ Da (schon) die Autokorrelationsfunktion eine gerade Funktion ist, muß die
 \begin_inset Formula $\spd_{xx}(\omega)$
 \end_inset
 
- reelwertig und positiv sein
+ reelwertig und positiv sein.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Insbesondere gehen alle Phaseninformationen, die in 
@@ -7192,7 +7193,7 @@ verloren
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Enumerate
@@ -7259,7 +7260,7 @@ reference "enu:prob_psd_power"
 \end_inset
 
  auch wirklich als Leistungsdichte auffassen, wenn man den Hauptsatz der
- Differential- und Integralrechnung
+ Differential- und Integralrechnung hinzuzieht.
 \begin_inset Foot
 status collapsed
 
@@ -7272,7 +7273,7 @@ status collapsed
 
 \end_inset
 
- hinzuzieht.
+
 \end_layout
 
 \begin_deeper
@@ -7309,9 +7310,9 @@ Rauschen!Weißes
 \begin_inset Formula $\spd_{0}$
 \end_inset
 
- bezeichnet sein soll) zieht
+ bezeichnet sein soll) zieht.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Deshalb auch 
@@ -7324,7 +7325,7 @@ weißes
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -7537,9 +7538,9 @@ Was den Zusammenhang mit den zeitlichen Zufallsprozessen angeht, ist auch
 \noun on
 Fourier
 \noun default
--Transformierte
+-Transformierte,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -7555,7 +7556,7 @@ Chintchin
 
 \end_inset
 
-, nämlich der Kreuzkorrelationsfunktion
+ nämlich der Kreuzkorrelationsfunktion
 \begin_inset Index
 status collapsed
 
@@ -8263,9 +8264,13 @@ reference "sec:prob_acf"
 \end_layout
 
 \begin_layout Standard
-Zuerst
+Zuerst drücken wir 
+\begin_inset Formula $y(t_{0})$
+\end_inset
+
+ durch die (für LTI-Systeme
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Bei LTI-Systemen kann man vom Superpositionsprinzip von Nutz- und Störsignal
@@ -8287,11 +8292,7 @@ ie
 
 \end_inset
 
- drücken wir 
-\begin_inset Formula $y(t_{0})$
-\end_inset
-
- durch die (für LTI-Systeme typische) Faltung
+ typische) Faltung
 \begin_inset Index
 status collapsed
 
@@ -8571,9 +8572,9 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-Für das Nutzsignal ergeben sich folgerichtig die Beziehungen
+Für das Nutzsignal ergeben sich folgerichtig die Beziehungen:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Das Nutzsignal 
@@ -8604,7 +8605,7 @@ reference "eq:prob_acf_conv"
 
 \end_inset
 
-:
+
 \end_layout
 
 \begin_layout Standard
@@ -8788,9 +8789,9 @@ Für stationäre ergodische Prozesse ist die Betrachtung von
 \begin_inset Formula $kT$
 \end_inset
 
- ausreichend
+ ausreichend.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Statt 
@@ -8823,14 +8824,13 @@ resp
 
 \end_inset
 
-.
  Wenn 
 \begin_inset Formula $\Delta$
 \end_inset
 
- die Höhe einer Quantisierungsstufe
+ die Höhe einer Quantisierungsstufe darstellt,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Wir betrachten hier nur linearer Quantisierung, 
@@ -8851,7 +8851,7 @@ ie
 
 \end_inset
 
- darstellt, dann wird der Signalwert 
+ dann wird der Signalwert 
 \begin_inset Formula $f(kT)$
 \end_inset
 
@@ -8999,9 +8999,9 @@ In der Theorie ist der auf den Eingang des A/D-Wandlers bezogene Effektivwert
 \begin_inset Formula $B$
 \end_inset
 
- (die typischerweise den A/D-Wandler charakterisieren
+ (die typischerweise den A/D-Wandler
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Wobei in 
@@ -9013,8 +9013,8 @@ Wobei in
 
 \end_inset
 
-) und der maximal erlaubten Größe des Eingangssignals (üblicherweise die
- Referenzspannung 
+ charakterisieren) und der maximal erlaubten Größe des Eingangssignals (üblicher
+weise die Referenzspannung 
 \begin_inset Formula $U_{0}$
 \end_inset
 
@@ -9109,7 +9109,11 @@ Bei einem sinusförmigen Nutzsignal
 \begin_inset Formula $\tilde{s}$
 \end_inset
 
- maximaler Aussteuerung ist als größter Spitzenwert
+ maximaler Aussteuerung ist als größter Spitzenwert 
+\begin_inset Formula $U_{0}=\sqrt{\smash[b]{2}}\,\tilde{s}$
+\end_inset
+
+ anzusetzen.
 \begin_inset Foot
 status collapsed
 
@@ -9132,11 +9136,6 @@ ie
 
 \end_inset
 
- 
-\begin_inset Formula $U_{0}=\sqrt{\smash[b]{2}}\,\tilde{s}$
-\end_inset
-
- anzusetzen.
  Durch Anwendung der Gleichung
 \begin_inset space ~
 \end_inset
@@ -9169,7 +9168,7 @@ Wesentlich ist die Erkenntnis, daß bei einer Erhöhung der Auflösung des
 \begin_inset Formula $6,02\textrm{dB}$
 \end_inset
 
- zunimmt
+ zunimmt.
 \begin_inset Foot
 status collapsed
 
@@ -9180,7 +9179,7 @@ Selbst wenn man andere Signalformen zugrunde legt, ändert sich dieser Fakt
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Subsection
@@ -9300,9 +9299,9 @@ Normalverteilung
 
 \end_inset
 
- sind
+ sind,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Zentraler Grenzwertsatz für Summen von unabhängigen Zufallsvariablen
@@ -9322,7 +9321,7 @@ key "Koerner:1988"
 
 \end_inset
 
-, wobei 
+ wobei 
 \begin_inset Formula $\sigma_{i}$
 \end_inset
 
@@ -9402,9 +9401,9 @@ Substituiert man
 \begin_inset Formula $\cnorm(z)$
 \end_inset
 
- gearbeitet werden
+ gearbeitet werden.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Mittelwertfreie Normalverteilung mit 
@@ -9416,7 +9415,7 @@ Mittelwertfreie Normalverteilung mit
 
 \end_inset
 
-.
+
 \end_layout
 
 \begin_layout Standard
@@ -9513,12 +9512,12 @@ T=\frac{\mu_{1}+\mu_{2}}{2}\]
 
 \begin_layout Standard
 Die Wahrscheinlichkeit, einen der Impulse dabei falsch zu erkennen, liegt
- bei
+ bei:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
-Bei Berücksichtigung der Beziehung 
+Unter Berücksichtigung der Beziehung 
 \begin_inset Formula $\cnorm(-x)=1-\cnorm(x)$
 \end_inset
 
