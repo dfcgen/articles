@@ -87,7 +87,7 @@ noun{Fourier}
 
 \end_inset
 
--Transf.|see
+-Transformation|see
 \begin_inset ERT
 status open
 
@@ -105,7 +105,7 @@ status open
 
 
 \begin_inset Index
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Transformation!Fourier@
@@ -545,16 +545,16 @@ Verschiebung
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+Modulation
 \end_layout
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -566,7 +566,7 @@ Verschiebung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -578,7 +578,7 @@ Verschiebung
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -646,7 +646,7 @@ Differentiation
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{-\ji t\, f(t)}$
+\begin_inset Formula $\mtab{-\ji\, tf(t)}$
 \end_inset
 
 
@@ -714,7 +714,7 @@ Integration
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $F(0)=\reop F(0)$
+\begin_inset Formula $F(0)=\reop\{F(0)\}$
 \end_inset
 
 
@@ -944,7 +944,7 @@ noun{Fourier}
 <lyxtabular version="3" rows="19" columns="4">
 <features islongtable="true" headTopDL="true" headBottomDL="true">
 <column alignment="center" valignment="top" width="3cm">
-<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="middle" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <row endhead="true">
@@ -1178,9 +1178,9 @@ Rechteckimpuls
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\rect(t)=\allowbreak\begin{cases}
-0 & \quad(|t|>T/2)\\
-1 & \quad(|t|\leq T/2)\end{cases}$
+\begin_inset Formula $\rect(t)=\begin{cases}
+0, & |t|>T/2\\
+1, & |t|\leq T/2\end{cases}$
 \end_inset
 
 
@@ -1299,7 +1299,7 @@ Signumfunktion
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sign(t)=2\usf(t)-1$
+\begin_inset Formula $1+\sign(t)=2\usf(t)$
 \end_inset
 
 
@@ -1360,7 +1360,7 @@ Signumfunktion
 \begin_inset Formula $\expf$
 \end_inset
 
--Funktionen
+-Funktion
 \end_layout
 
 \end_inset
@@ -1393,7 +1393,7 @@ Signumfunktion
 \begin_inset Text
 
 \begin_layout Plain Layout
-
+doppelseitig
 \end_layout
 
 \end_inset
@@ -1441,7 +1441,7 @@ Gauß
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\alpha>0$
+\begin_inset Formula $\mtab{\expf^{-\pi t^{2}}\lft\expf^{-\pi f^{2}}}$
 \end_inset
 
 
@@ -1558,7 +1558,7 @@ Kreisfunktionen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\pi[\dirac(\omega-\omega_{0})+\dirac(\omega+\omega_{0})]$
+\begin_inset Formula $\pi[\dirac(\omega+\omega_{0})+\dirac(\omega-\omega_{0})]$
 \end_inset
 
 
@@ -1740,7 +1740,7 @@ Einschaltvorgänge
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\frac{\pi}{2}}[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})]+\mtab{\frac{\ji\omega}{\omega_{0}^{2}-\omega^{2}}}$
+\begin_inset Formula $\mtab{\frac{\pi}{2}}[\dirac(\omega+\omega_{0})+\dirac(\omega-\omega_{0})]+\mtab{\frac{\ji\omega}{\omega_{0}^{2}-\omega^{2}}}$
 \end_inset
 
 
@@ -1873,7 +1873,7 @@ Bemerkungen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(t)\,\dirac(t)\tic t=f(0)}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f(t)\,\dirac(t-t_{0})\tic t=f(t_{0})}$
 \end_inset
 
 
@@ -1885,7 +1885,7 @@ Bemerkungen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{f(0)=\frac{f(-0)+f(+0)}{2}}$
+\begin_inset Formula $f(t_{0})=\nicefrac{1}{2}[f(t_{0}-0)+f(t_{0}+0)]$
 \end_inset
 
 
