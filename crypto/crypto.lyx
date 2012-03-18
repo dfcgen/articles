@@ -1,5 +1,5 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -16,20 +16,27 @@
 \use_default_options false
 \begin_modules
 emphasized
-synopsis
 \end_modules
+\maintain_unincluded_children false
 \language german
+\language_package default
 \inputencoding latin1
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -49,21 +56,33 @@ synopsis
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
 \branch WITH_APPENDIX
 \selected 1
+\filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch WITH_FEAL
 \selected 0
+\filename_suffix 0
 \color #faf0e6
 \end_branch
 \branch WITH_ESIGN
 \selected 1
+\filename_suffix 0
 \color #faf0e6
 \end_branch
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -74,8 +93,9 @@ synopsis
 \paperpagestyle headings
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -181,6 +201,7 @@ status open
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -529,7 +550,7 @@ name "sec:crypto_block_ciphers"
 \end_inset
 
 Blockchiffren
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -689,7 +710,7 @@ die Schlüssellänge;
 
 \begin_layout Itemize
 die Komplexität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -703,7 +724,7 @@ Komplexität
 
 \begin_layout Itemize
 die Fehlerfortpflanzung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -717,7 +738,7 @@ Fehlerfortpflanzung
 
 \begin_layout Itemize
 und das (nicht) notwendige Padding
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -780,7 +801,7 @@ reference "fig:blockcipher_segmentation"
 pad
 \emph default
 (ding)
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -994,7 +1015,7 @@ H.
 Feistel
 \noun default
  
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -1074,8 +1095,10 @@ description "Exklusiv-Oder (Modulo-2, XOR)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-l_{i+1} & =r_{i} & r_{i+1} & =l_{i}\oplus f(r_{i},K_{i})\label{eq:crypto_feistel}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+l_{i+1} & =r_{i} & r_{i+1} & =l_{i}\oplus f(r_{i},K_{i})\label{eq:crypto_feistel}
+\end{xalignat}
 
 \end_inset
 
@@ -1204,8 +1227,10 @@ reference "eq:crypto_feistel"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-r_{i} & =l_{i+1} & l_{i} & =r_{i+1}\oplus f(l_{i+1},K_{i}),\label{eq:crypto_feistel_reverse}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+r_{i} & =l_{i+1} & l_{i} & =r_{i+1}\oplus f(l_{i+1},K_{i}),\label{eq:crypto_feistel_reverse}
+\end{xalignat}
 
 \end_inset
 
@@ -1323,8 +1348,10 @@ Stellt einen weiteren Durchmischungsschritt dar, welcher die (jeweils) vier
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-s^{\prime}(x)=a(x)\otimes s(x)=a(x)\cdot s(x)\bmod(x^{4}+1)\mperiod\]
+\begin_inset Formula 
+\[
+s^{\prime}(x)=a(x)\otimes s(x)=a(x)\cdot s(x)\bmod(x^{4}+1)\mperiod
+\]
 
 \end_inset
 
@@ -1367,10 +1394,12 @@ Multiplikation
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \begin{split}b(x) & =(a_{3}x^{3}+a_{2}x^{2}+a_{1}x+a_{0})\cdot(s_{3}x^{3}+s_{2}x^{2}+s_{1}x+s_{0})\\
  & =\underbrace{a_{3}s_{3}}_{b_{6}}x^{6}+\underbrace{(a_{2}s_{3}\oplus a_{3}s_{2})}_{b_{5}}x^{5}+\underbrace{(a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1})}_{b_{4}}x^{4}+\\
- & \quad+\underbrace{(a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0})}_{b_{3}}x^{3}+\underbrace{(a_{0}s_{2}\oplus a_{1}s_{1}\oplus a_{2}s_{0})}_{b_{2}}x^{2}+\underbrace{(a_{0}s_{1}\oplus a_{1}s_{0})}_{b_{1}}x+\underbrace{a_{0}s_{0}}_{b_{0}}\end{split}
+ & \quad+\underbrace{(a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0})}_{b_{3}}x^{3}+\underbrace{(a_{0}s_{2}\oplus a_{1}s_{1}\oplus a_{2}s_{0})}_{b_{2}}x^{2}+\underbrace{(a_{0}s_{1}\oplus a_{1}s_{0})}_{b_{1}}x+\underbrace{a_{0}s_{0}}_{b_{0}}
+\end{split}
 \]
 
 \end_inset
@@ -1389,9 +1418,11 @@ Modulo-Reduktion
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \begin{multline*}
+\begin_inset Formula 
+\begin{multline*}
 \begin{split}(b_{6}x^{6}+b_{5}x^{5}+b_{4}x^{4}+b_{3}x^{3}+b_{2}x^{2}+b_{1}x+b_{0})\bmod(x^{4}+1)=\\
-b_{3}x^{3}+(b_{2}\oplus b_{6})x^{2}+(b_{1}\oplus b_{5})x+(b_{0}\oplus b_{4})\end{split}
+b_{3}x^{3}+(b_{2}\oplus b_{6})x^{2}+(b_{1}\oplus b_{5})x+(b_{0}\oplus b_{4})
+\end{split}
 \end{multline*}
 
 \end_inset
@@ -1406,8 +1437,10 @@ Vergleich der Koeffizienten in
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \[
-s^{\prime}(x)=s_{3}^{\prime}x^{3}+s_{2}^{\prime}x^{2}+s_{1}^{\prime}x+s_{0}^{\prime}=b(x)\bmod(x^{4}+1)\]
+\begin_inset Formula 
+\[
+s^{\prime}(x)=s_{3}^{\prime}x^{3}+s_{2}^{\prime}x^{2}+s_{1}^{\prime}x+s_{0}^{\prime}=b(x)\bmod(x^{4}+1)
+\]
 
 \end_inset
 
@@ -1437,11 +1470,13 @@ Auffällig daran ist, daß für jedes Byte
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 s_{0}^{\prime} & =b_{0}\oplus b_{4} &  & =a_{0}s_{0}\oplus a_{1}s_{3}\oplus a_{2}s_{2}\oplus a_{3}s_{1}\\
 s_{1}^{\prime} & =b_{1}\oplus b_{5} &  & =a_{0}s_{1}\oplus a_{1}s_{0}\oplus a_{2}s_{3}\oplus a_{3}s_{2}\\
 s_{2}^{\prime} & =b_{2}\oplus b_{6} &  & =a_{0}s_{2}\oplus a_{1}s_{1}\oplus a_{2}s_{0}\oplus a_{3}s_{3}\\
-s_{3}^{\prime} & =b_{3} &  & =a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0}\mperiod\end{alignat*}
+s_{3}^{\prime} & =b_{3} &  & =a_{0}s_{3}\oplus a_{1}s_{2}\oplus a_{2}s_{1}\oplus a_{3}s_{0}\mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -1479,7 +1514,7 @@ Fast Encryption Algorithm
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1489,7 +1524,7 @@ Fast Encryption Algorithm
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1720,11 +1755,13 @@ key "miyaguchi:1990"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 f_{0} & = & S_{0}(\alpha_{0},f_{1})\label{eqn_feal_func}\\
 f_{1} & = & S_{1}(\alpha_{0}\oplus\beta_{0}\oplus\alpha_{1},\alpha_{2}\oplus\beta_{1}\oplus\alpha_{3})\nonumber \\
 f_{2} & = & S_{0}(\alpha_{2}\oplus\beta_{1}\oplus\alpha_{3},f_{1})\nonumber \\
-f_{3} & = & S_{1}(\alpha_{3},f_{2})\nonumber \end{eqnarray}
+f_{3} & = & S_{1}(\alpha_{3},f_{2})\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -1745,9 +1782,11 @@ Die dabei in den S-Boxen ausgeführte Byte-Operation in Bezug auf die Eingangsgr
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 S_{0}(\alpha,\beta) & = & \mathrm{Rot}2((\alpha+\beta)\,\mathrm{mod}\,256)\label{eqn_feal_boxes}\\
-S_{1}(\alpha,\beta) & = & \mathrm{Rot}2((\alpha+\beta+1)\,\mathrm{mod}\,256)\nonumber \end{eqnarray}
+S_{1}(\alpha,\beta) & = & \mathrm{Rot}2((\alpha+\beta+1)\,\mathrm{mod}\,256)\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -1874,11 +1913,13 @@ key "menezes:1997"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f_{K_{0}} & = & S_{0}(\alpha_{0},f_{K_{1}}\oplus\beta_{0})\\
 f_{K_{1}} & = & S_{1}(\alpha_{0}\oplus\alpha_{1},\alpha_{2}\oplus\alpha_{3}\oplus\beta_{0})\\
 f_{K_{2}} & = & S_{0}(\alpha_{2}\oplus\alpha_{3},f_{K_{1}}\oplus\beta_{1})\\
-f_{K_{3}} & = & S_{1}(\alpha_{3},f_{K_{2}}\oplus\beta_{3})\end{eqnarray*}
+f_{K_{3}} & = & S_{1}(\alpha_{3},f_{K_{2}}\oplus\beta_{3})
+\end{eqnarray*}
 
 \end_inset
 
@@ -1898,7 +1939,7 @@ name "sec:crypto_blockcipher_opmodes"
 \end_inset
 
 Betriebsarten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1985,7 +2026,7 @@ Cipher Block Chaining (CBC)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1995,7 +2036,7 @@ Blockchiffren!Betriebsarten!CBC
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2005,7 +2046,7 @@ Cipher Block Chaining (CBC)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2061,8 +2102,10 @@ reference "fig:cbc_encipher"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{3}
-c_{i} & =E_{K}(p_{i}\oplus c_{i-1}), & p_{i} & =c_{i-1}\oplus D_{K}(c_{i}), & c_{-1} & ={IV}\label{eq:cbc_recursion}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{3}
+c_{i} & =E_{K}(p_{i}\oplus c_{i-1}), & p_{i} & =c_{i-1}\oplus D_{K}(c_{i}), & c_{-1} & ={IV}\label{eq:cbc_recursion}
+\end{xalignat}
 
 \end_inset
 
@@ -2227,7 +2270,7 @@ CBC-Entschlüsselung
 
 \begin_layout Standard
 Die Eigenschaften des CBC-Modus bezüglich der Fehlerfortpflanzung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2378,7 +2421,7 @@ Wobei
 
 , weshalb man auch von einer selbstsynchronisierenden Betriebsart spricht
  (self-synchronizing, ciphertext autokey).
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2416,7 +2459,7 @@ Cipher Feedback (CFB)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2426,7 +2469,7 @@ CFB-Modus
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2455,8 +2498,10 @@ reference "sec:cbc"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{3}
-c_{i} & =p_{i}\oplus E_{K}(c_{i-1}), & p_{i} & =c_{i}\oplus E_{K}(c_{i-1}), & E_{K}(c_{-1}) & =\mbox{IV}\label{eq:cfb_recursion}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{3}
+c_{i} & =p_{i}\oplus E_{K}(c_{i-1}), & p_{i} & =c_{i}\oplus E_{K}(c_{i-1}), & E_{K}(c_{-1}) & =\mbox{IV}\label{eq:cfb_recursion}
+\end{xalignat}
 
 \end_inset
 
@@ -2599,7 +2644,7 @@ CFB-Entschlüsselung
 
 \begin_layout Standard
 Wegen der Rückführung des Ciphertextes wirkt sich ein Empfangsfehler
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2816,7 +2861,7 @@ CFB mit verringerter Blockbreite
 
 \begin_layout Paragraph
 Pipelining
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3009,7 +3054,7 @@ Output Feedback (OFB)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3019,7 +3064,7 @@ OFB-Modus
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3173,7 +3218,7 @@ Vorteilhaft ist, daß Bitfehler in einem Cipherblock
 \end_inset
 
  abgebildet werden -- die Fehlerfortpflanzung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3227,7 +3272,7 @@ Counter (CTR)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3362,7 +3407,7 @@ Entscheidend ist, daß der Counter für jeden zu ver- oder entschlüsselnden
 
 \begin_layout Description
 LFSR
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3384,7 +3429,7 @@ Bit und ist durch das irreduzible (und primitive) Generatorpolynom
 
 \begin_layout Description
 I/R
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3401,7 +3446,7 @@ I/R-Bit
 
 \begin_layout Description
 SEQ
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3416,7 +3461,7 @@ Sequenznummer
 
 \begin_layout Description
 SEG
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3443,7 +3488,7 @@ resp
 
 \begin_layout Description
 JUMP
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3453,7 +3498,7 @@ Sprungnummer
 \end_inset
 
  Die Jump Number
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3475,7 +3520,7 @@ End Of Message
 
 \begin_layout Standard
 Bezüglich der Synchronisation und Fehlerfortpflanzung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3881,7 +3926,7 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3908,7 +3953,7 @@ Einführung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3918,7 +3963,7 @@ Hash!-Algorithmen
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3968,7 +4013,7 @@ Es ist praktisch unmöglich zwei Eingangswerte
 
 \begin_layout Enumerate
 Der Algorithmus ist eine Einweg-Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4054,7 +4099,7 @@ eg
 \end_inset
 
  der MD5
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4064,7 +4109,7 @@ MD5
 \end_inset
 
  können dies heute nicht mehr gewährleisten, aber auch der SHA-1
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4083,7 +4128,7 @@ geknackt
 
 .
  Alternativen wie SHA-256 oder SHA-512 (auch kurz SHA-2
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4498,8 +4543,10 @@ key "FIPS:180-1"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-W_{i}=\rol^{1}(W_{i-3}\oplus W_{i-8}\oplus W_{i-14}\oplus W_{i-16}),\qquad16\leq i\leq79\mperiod\]
+\begin_inset Formula 
+\[
+W_{i}=\rol^{1}(W_{i-3}\oplus W_{i-8}\oplus W_{i-14}\oplus W_{i-16}),\qquad16\leq i\leq79\mperiod
+\]
 
 \end_inset
 
@@ -4547,10 +4594,12 @@ Sollte es sich um den ersten Block
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 H_{0} & =\hex{67452301} & H_{1} & =\hex{EFCDAB89}\\
 H_{2} & =\hex{98BADCFE} & H_{3} & =\hex{10325476}\\
-H_{4} & =\hex{C3D2E1F0}\end{xalignat*}
+H_{4} & =\hex{C3D2E1F0}
+\end{xalignat*}
 
 \end_inset
 
@@ -4592,13 +4641,15 @@ Runden (
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mathrm{TEMP} & :=\rol^{5}(A)+f_{n}(B,C,D)+E+W_{t}+K_{t}\\
 E & :=D\\
 D & :=C\\
 C & :=\rol^{30}(B)\\
 B & :=A\\
-A & :=\mathrm{TEMP},\end{align*}
+A & :=\mathrm{TEMP},
+\end{align*}
 
 \end_inset
 
@@ -4619,11 +4670,13 @@ wobei Additionen immer modulo
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{4}
+\begin_inset Formula 
+\begin{alignat*}{4}
 K_{0} & =K_{1} &  & =\ldots &  & =\, & K_{19} & =\hex{5A827999}\\
 K_{20} & =K_{21} &  & =\ldots &  & =\, & K_{39} & =\hex{6ED9EBA1}\\
 K_{40} & =K_{41} &  & =\ldots &  & =\, & K_{59} & =\hex{8F1BBCDC}\\
-K_{60} & =K_{61} &  & =\ldots &  & =\, & K_{79} & =\hex{CA62C1D6}\mperiod\end{alignat*}
+K_{60} & =K_{61} &  & =\ldots &  & =\, & K_{79} & =\hex{CA62C1D6}\mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -4661,11 +4714,13 @@ description "(Bit-für-Bit) ODER"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 f_{1}(B,C,D) & =(B\wedge C)\vee(\overline{B}\wedge D) &  & \qquad\mbox{(Multiplexer)}\\
 f_{2}(B,C,D) & =B\oplus C\oplus D &  & \qquad\mbox{(Parity)}\\
 f_{3}(B,C,D) & =(B\wedge C)\vee(B\wedge D)\vee(C\wedge D) &  & \qquad\mbox{(Majority)}\\
-f_{4}(B,C,D) & =B\oplus C\oplus D &  & \qquad\mbox{(Parity)}\mperiod\end{xalignat*}
+f_{4}(B,C,D) & =B\oplus C\oplus D &  & \qquad\mbox{(Parity)}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -4708,10 +4763,12 @@ reference "fig:sha1"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 H_{0} & :=H_{0}+A & H_{1} & :=H_{1}+B\\
 H_{2} & :=H_{2}+C & H_{3} & :=H_{3}+D\\
-H_{4} & :=H_{4}+E\mperiod\end{xalignat*}
+H_{4} & :=H_{4}+E\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -4725,7 +4782,7 @@ SHA-2
 
 \begin_layout Standard
 Bei den SHA-2
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4951,7 +5008,7 @@ Nehme das Ergebnis
 
 \begin_layout Section
 Asymmetrische Algorithmen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4974,7 +5031,7 @@ RSA
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -5315,8 +5372,10 @@ Ausgehend von
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-de & \equiv1\pmod{\varphi}\label{eqn_rsa_de}\end{align}
+\begin_inset Formula 
+\begin{align}
+de & \equiv1\pmod{\varphi}\label{eqn_rsa_de}
+\end{align}
 
 \end_inset
 
@@ -5340,8 +5399,10 @@ kann man
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-d & \equiv e^{-1}\pmod{\varphi}\end{align*}
+\begin_inset Formula 
+\begin{align*}
+d & \equiv e^{-1}\pmod{\varphi}
+\end{align*}
 
 \end_inset
 
@@ -5368,8 +5429,10 @@ Für die Verschlüsselung wird folgende Operation auf dem Plaintext-Block
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-c & =m^{e}\bmod n\label{eq:crypto_rsa_encipher}\end{align}
+\begin_inset Formula 
+\begin{align}
+c & =m^{e}\bmod n\label{eq:crypto_rsa_encipher}
+\end{align}
 
 \end_inset
 
@@ -5382,8 +5445,10 @@ Die inverse Operation der Entschlüsselung wird in gleicher Art und Weise
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-m' & =c^{d}\bmod n\mperiod\label{eq:crypto_rsa_decipher}\end{align}
+\begin_inset Formula 
+\begin{align}
+m' & =c^{d}\bmod n\mperiod\label{eq:crypto_rsa_decipher}
+\end{align}
 
 \end_inset
 
@@ -5418,12 +5483,14 @@ reference "eq:crypto_rsa_encipher"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 m' & =(m^{e}\bmod n)^{d}\bmod n\\
  & =m^{de}\bmod n\\
  & =m\cdot m^{\varphi k}\bmod n\\
  & =m(m^{\varphi})^{k}\bmod n\\
- & =m(m^{\varphi}\bmod n)^{k}\bmod n\end{align*}
+ & =m(m^{\varphi}\bmod n)^{k}\bmod n
+\end{align*}
 
 \end_inset
 
@@ -5456,8 +5523,10 @@ Die weitere Argumentation beruht darauf, daß
 \bar no
 \noun off
 \color none
-\begin_inset Formula \begin{align*}
-m' & =m(\,\underbrace{m^{\varphi}\bmod n}_{1}\,)^{k}\bmod n=m\bmod n=m\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+m' & =m(\,\underbrace{m^{\varphi}\bmod n}_{1}\,)^{k}\bmod n=m\bmod n=m\mperiod
+\end{align*}
 
 \end_inset
 
@@ -5644,8 +5713,10 @@ folgendermaßen vereinfachen:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-m^{\varphi}\bmod n & =(\overline{m}p\bmod pq)^{\varphi}\bmod n=(\overline{m}\bmod q)^{\varphi}\bmod n=\overline{m}^{\varphi}\bmod q\bmod n=\overline{m}^{\varphi}\bmod q\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+m^{\varphi}\bmod n & =(\overline{m}p\bmod pq)^{\varphi}\bmod n=(\overline{m}\bmod q)^{\varphi}\bmod n=\overline{m}^{\varphi}\bmod q\bmod n=\overline{m}^{\varphi}\bmod q\mperiod
+\end{align*}
 
 \end_inset
 
@@ -5726,8 +5797,10 @@ Fermat
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-m' & =c^{d}\bmod n=c^{d}-lpq,\qquad l\in\mathbb{N}\end{align*}
+\begin_inset Formula 
+\begin{align*}
+m' & =c^{d}\bmod n=c^{d}-lpq,\qquad l\in\mathbb{N}
+\end{align*}
 
 \end_inset
 
@@ -5747,8 +5820,10 @@ aus, dann lassen sich (durch Modulo-Division nach
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-m' & \equiv c^{d}\pmod{p} & m' & \equiv c^{d}\pmod{q}\mperiod\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+m' & \equiv c^{d}\pmod{p} & m' & \equiv c^{d}\pmod{q}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -5757,7 +5832,7 @@ m' & \equiv c^{d}\pmod{p} & m' & \equiv c^{d}\pmod{q}\mperiod\end{xalignat*}
 
 \begin_layout Standard
 Diese legen eine Anwendung des Chinesischen Restsatzes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5810,9 +5885,11 @@ Eine Voraussetzung für dessen Anwendung ist:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
-m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}\end{xalignat*}
+m' & \equiv m_{p}\pmod{p} & m' & \equiv m_{q}\pmod{q}
+\end{xalignat*}
 
 \end_inset
 
@@ -5884,8 +5961,10 @@ reference "sec:algebra_euclid_generic"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\gcd(p,q)=\alpha p+\beta q=1,\]
+\begin_inset Formula 
+\[
+\gcd(p,q)=\alpha p+\beta q=1,
+\]
 
 \end_inset
 
@@ -5949,8 +6028,10 @@ reference "sec:algebra_gcd"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\alpha & \equiv p^{-1}\pmod{q} & \beta & \equiv q^{-1}\pmod{p}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\alpha & \equiv p^{-1}\pmod{q} & \beta & \equiv q^{-1}\pmod{p}
+\end{xalignat*}
 
 \end_inset
 
@@ -5976,8 +6057,10 @@ im Körper
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-m'=(\alpha m_{q}p+\beta m_{p}q)\bmod n\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+m'=(\alpha m_{q}p+\beta m_{p}q)\bmod n\mperiod
+\end{equation}
 
 \end_inset
 
@@ -6050,8 +6133,10 @@ key "Garner:1959"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-m' & =m_{q}+xq & m' & =m_{p}+yp,\qquad x,y\in\mathbb{Z}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+m' & =m_{q}+xq & m' & =m_{p}+yp,\qquad x,y\in\mathbb{Z}
+\end{xalignat*}
 
 \end_inset
 
@@ -6074,8 +6159,10 @@ reference "sec:algebra_diophantine_eqn"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-m_{p}-m_{q} & =xq-yp,\end{align*}
+\begin_inset Formula 
+\begin{align*}
+m_{p}-m_{q} & =xq-yp,
+\end{align*}
 
 \end_inset
 
@@ -6087,8 +6174,10 @@ welche die Lösungsmenge
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-x_{k} & =\beta(m_{p}-m_{q})+kp & y_{k} & =-\alpha(m_{p}-m_{q})-kq,\qquad k\in\mathbb{Z}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x_{k} & =\beta(m_{p}-m_{q})+kp & y_{k} & =-\alpha(m_{p}-m_{q})-kq,\qquad k\in\mathbb{Z}
+\end{xalignat*}
 
 \end_inset
 
@@ -6131,8 +6220,10 @@ An dieser Stelle muß man darauf hinweisen, daß für den Ausdruck
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-m' & =m_{q}+q\beta(m_{p}-m_{q})+kn\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+m' & =m_{q}+q\beta(m_{p}-m_{q})+kn\mperiod
+\end{align*}
 
 \end_inset
 
@@ -6162,11 +6253,13 @@ resp
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 m' & =m_{q}+\beta q(m_{p}-m_{q})+kpq & m' & =m_{p}-\alpha p(m_{p}-m_{q})-kpq,\qquad k\in\mathbb{Z}\\
  & =m_{q}+\beta qm_{p}-\beta qm_{q}+kpq &  & =m_{p}-\alpha pm_{p}+\alpha pm_{q}-kpq\\
  & =m_{q}(1-\beta q)+\beta qm_{p}+kpq &  & =m_{p}(1-\alpha p)+\alpha pm_{q}-kpq\\
- & =\alpha pm_{q}+\beta qm_{p}+kpq &  & =\beta qm_{p}+\alpha pm_{q}-kpq\end{xalignat*}
+ & =\alpha pm_{q}+\beta qm_{p}+kpq &  & =\beta qm_{p}+\alpha pm_{q}-kpq
+\end{xalignat*}
 
 \end_inset
 
@@ -6193,11 +6286,13 @@ tige Beziehung
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 (ac)\bmod(bc) & =ac-kbc\\
  & =ac-\left\lfloor \frac{ac}{bc}\right\rfloor bc\\
  & =c(a-\left\lfloor \frac{a}{b}\right\rfloor b)\\
- & =c(a\bmod b)\end{align*}
+ & =c(a\bmod b)
+\end{align*}
 
 \end_inset
 
@@ -6210,8 +6305,10 @@ status collapsed
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-m' & =m_{q}+q[\beta(m_{p}-m_{q})\bmod p]\end{align}
+\begin_inset Formula 
+\begin{align}
+m' & =m_{q}+q[\beta(m_{p}-m_{q})\bmod p]
+\end{align}
 
 \end_inset
 
@@ -6285,9 +6382,11 @@ Man kann aber noch weitergehen, indem die Berechnung von
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 m_{p} & =c^{d}\bmod p & m_{q} & =c^{d}\bmod q\\
- & =(c\bmod p)^{d}\bmod p &  & =(c\bmod q)^{d}\bmod q\end{xalignat*}
+ & =(c\bmod p)^{d}\bmod p &  & =(c\bmod q)^{d}\bmod q
+\end{xalignat*}
 
 \end_inset
 
@@ -6381,9 +6480,11 @@ reference "sec:algebra_galois_multgrp"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 m_{p} & =(c\bmod p)^{d}\bmod p & m_{q} & =(c\bmod q)^{d}\bmod q\\
- & =c^{d\bmod(p-1)}\bmod p &  & =c^{d\bmod(q-1)}\bmod q\end{xalignat*}
+ & =c^{d\bmod(p-1)}\bmod p &  & =c^{d\bmod(q-1)}\bmod q
+\end{xalignat*}
 
 \end_inset
 
@@ -6483,7 +6584,7 @@ Verschlüsselung nach PKCS
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6779,8 +6880,7 @@ Encryption Block
  haben folgende Bedeutung:
 \end_layout
 
-\begin_layout Synopsis
-\labelwidthstring 4em
+\begin_layout Description
 \noindent
 BT Der 
 \emph on
@@ -6860,8 +6960,7 @@ hex{02}
 \end_layout
 
 \end_deeper
-\begin_layout Synopsis
-\labelwidthstring 4em
+\begin_layout Description
 \noindent
 PS Ein 
 \emph on
@@ -7707,7 +7806,7 @@ key "Bleichenbacher:1998"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -7727,7 +7826,7 @@ name "sec_diffie_hellman"
 \end_inset
 
 Diffie-Hellmann Schlüsselaustausch
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7890,7 +7989,7 @@ name "sec_elliptic_curve"
 \end_inset
 
 Elliptische Kurven
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7908,7 +8007,7 @@ Elliptische Kurven werden in der Normalform nach
 Weierstraß
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7925,8 +8024,10 @@ durch Gleichungen der Form
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-y^{2}=x^{3}+ax+b\]
+\begin_inset Formula 
+\[
+y^{2}=x^{3}+ax+b
+\]
 
 \end_inset
 
@@ -7975,9 +8076,11 @@ reference "fig_ellcurve_x3_1"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{1}^{2} & = & x_{1}^{3}+ax_{1}+b\\
-y_{2}^{2} & = & x_{2}^{3}+ax_{2}+b\end{eqnarray*}
+y_{2}^{2} & = & x_{2}^{3}+ax_{2}+b
+\end{eqnarray*}
 
 \end_inset
 
@@ -7993,9 +8096,11 @@ Für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{2}^{2}-y_{1}^{2} & = & x_{2}^{3}-x_{1}^{3}+a(x_{2}-x_{1})\\
-a & = & \frac{y_{2}^{2}-y_{1}^{2}-(x_{2}^{3}-x_{1}^{3})}{x_{2}-x_{1}}\end{eqnarray*}
+a & = & \frac{y_{2}^{2}-y_{1}^{2}-(x_{2}^{3}-x_{1}^{3})}{x_{2}-x_{1}}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8011,9 +8116,11 @@ was dann zur Berechnung von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 b & = & y_{1}^{2}-x_{1}^{3}-ax_{1}\\
- & = & \frac{x_{2}(y_{1}^{2}-x_{1}^{3})-x_{1}(y_{2}^{2}-x_{2}^{3})}{x_{2}-x_{1}}\end{eqnarray}
+ & = & \frac{x_{2}(y_{1}^{2}-x_{1}^{3})-x_{1}(y_{2}^{2}-x_{2}^{3})}{x_{2}-x_{1}}
+\end{eqnarray}
 
 \end_inset
 
@@ -8072,11 +8179,13 @@ Zieht man nun durch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \frac{y_{3}'-y_{2}}{x_{3}-x_{2}} & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}\\
 y_{3}' & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}(x_{3}-x_{2})+y_{2}=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}(x_{3}-x_{1})+y_{1}\\
  & = & \frac{y_{2}-y_{1}}{x_{2}-x_{1}}x_{3}+\frac{y_{1}x_{2}-y_{2}x_{1}}{x_{2}-x_{1}}\\
- & = & \lambda x_{3}+\frac{y_{1}x_{2}-y_{2}x_{1}}{x_{2}-x_{1}}\end{eqnarray}
+ & = & \lambda x_{3}+\frac{y_{1}x_{2}-y_{2}x_{1}}{x_{2}-x_{1}}
+\end{eqnarray}
 
 \end_inset
 
@@ -8088,8 +8197,10 @@ mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lambda=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{y_{3}'-y_{1}}{x_{3}-x_{1}}=\frac{y_{3}'-y_{2}}{x_{3}-x_{2}}\]
+\begin_inset Formula 
+\[
+\lambda=\frac{y_{2}-y_{1}}{x_{2}-x_{1}}=\frac{y_{3}'-y_{1}}{x_{3}-x_{1}}=\frac{y_{3}'-y_{2}}{x_{3}-x_{2}}
+\]
 
 \end_inset
 
@@ -8105,10 +8216,12 @@ Den Schnittpunkt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{3}'^{2}=y_{3}^{2} & = & x_{3}^{3}+ax_{3}+b\\
  & = & x_{3}^{3}+ax_{3}+y_{1}^{2}-x_{1}^{3}-ax_{1}\\
- & = & x_{3}^{3}-x_{1}^{3}+a(x_{3}-x_{1})+y_{1}^{2}\end{eqnarray*}
+ & = & x_{3}^{3}-x_{1}^{3}+a(x_{3}-x_{1})+y_{1}^{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8134,7 +8247,8 @@ Unter Zuhilfenahme von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 x_{3}^{3}-x_{1}^{3}+\lambda(x_{3}-x_{1})\frac{y_{2}^{2}-y_{1}^{2}-(x_{2}^{3}-x_{1}^{3})}{y_{2}-y_{1}}+y_{1}^{2} & = & \left[\lambda(x_{3}-x_{1})+y_{1}\right]^{2}\\
 x_{3}^{3}-x_{1}^{3}+\lambda(x_{3}-x_{1})(y_{2}+y_{1})-(x_{3}-x_{1})(x_{2}^{2}+x_{2}x_{1}+x_{1}^{2})+y_{1}^{2} & = & \lambda^{2}(x_{3}-x_{1})^{2}+2\lambda y_{1}(x_{3}-x_{1})+y_{1}^{2}\\
 x_{3}^{2}+x_{1}x_{3}+x_{1}^{2}+\lambda(y_{2}+y_{1})-x_{2}^{2}-x_{2}x_{1}-x_{1}^{2} & = & \lambda^{2}(x_{3}-x_{1})+2\lambda y_{1}\\
@@ -8142,7 +8256,8 @@ x_{3}^{2}-x_{2}^{2}+x_{1}x_{3}+\lambda(y_{2}-y_{1})-x_{2}x_{1} & = & \lambda^{2}
 x_{3}^{2}-x_{2}^{2}+x_{1}x_{3}+\lambda^{2}(x_{2}-x_{1})-x_{2}x_{1} & = & \lambda^{2}(x_{3}-x_{1})\\
 (x_{3}-x_{2})(x_{3}+x_{2})+x_{1}(x_{3}-x_{2})-\lambda^{2}(x_{3}-x_{2}) & = & 0\\
 x_{3}+x_{2}+x_{1}-\lambda^{2} & = & 0\\
-x_{3} & = & \lambda^{2}-x_{2}-x_{1}\end{eqnarray*}
+x_{3} & = & \lambda^{2}-x_{2}-x_{1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8158,10 +8273,12 @@ Aus der Geradengleichung ist nun auch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y_{3}' & = & \lambda(x_{3}-x_{1})+y_{1}\\
  & = & \lambda(\lambda^{2}-x_{2}-2x_{1})+y_{1}\\
- & = & \lambda^{3}-\lambda(x_{2}+2x_{1})+y_{1}\end{eqnarray*}
+ & = & \lambda^{3}-\lambda(x_{2}+2x_{1})+y_{1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8264,9 +8381,11 @@ Normalfall
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 x_{3} & = & \lambda^{2}-x_{2}-x_{1}\\
--y_{3} & = & \lambda(x_{3}-x_{1})+y_{1}\end{eqnarray*}
+-y_{3} & = & \lambda(x_{3}-x_{1})+y_{1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -8296,8 +8415,10 @@ Für
 \end_inset
 
 
-\begin_inset Formula \[
-\lambda=\frac{1}{2}\frac{3x^{2}+a}{\sqrt{x^{3}+ax+b}}=\frac{3x^{2}+a}{2y}\]
+\begin_inset Formula 
+\[
+\lambda=\frac{1}{2}\frac{3x^{2}+a}{\sqrt{x^{3}+ax+b}}=\frac{3x^{2}+a}{2y}
+\]
 
 \end_inset
 
@@ -8306,9 +8427,11 @@ Für
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 x_{3} & = & \left(\frac{3x^{2}+a}{2y}\right)^{2}-2x\\
-y_{3} & = & \frac{3x^{2}+a}{2y}(x-x_{3})-y\end{eqnarray*}
+y_{3} & = & \frac{3x^{2}+a}{2y}(x-x_{3})-y
+\end{eqnarray*}
 
 \end_inset
 
@@ -8384,9 +8507,11 @@ Es gibt das neutrale Element
 \end_inset
 
 
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 x_{1} & = & \lim_{\lambda\rightarrow\infty}\lambda^{2}-2x_{2}\\
-x_{1} & = & \infty\end{eqnarray*}
+x_{1} & = & \infty
+\end{eqnarray*}
 
 \end_inset
 
@@ -8492,7 +8617,7 @@ key "ANSI:X9:62"
 
 \begin_layout Section
 Integrität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8548,7 +8673,7 @@ g die Authentizität der Nachricht mit Bezug auf den Absender verifiziert.
 
 \begin_layout Subsection
 MACs
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8589,7 +8714,7 @@ key "ISO:9797-2"
 .
  Dabei handelt es sich um den CBC-MAC und den HMAC mit kryptographischen
  Hashfunktionen wie MD5
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8599,7 +8724,7 @@ MD5
 \end_inset
 
 , SHA-1
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8609,7 +8734,7 @@ SHA-1
 \end_inset
 
  oder RIPEMD-160
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8623,7 +8748,7 @@ RIPEMD-160
 
 \begin_layout Subsubsection
 CBC-MAC
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8672,8 +8797,10 @@ key "ISO:9797-1"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-c_{i}=E_{K}(c_{i-1}\oplus m_{i})\textrm{ mit }c_{-1}={IV}.\]
+\begin_inset Formula 
+\[
+c_{i}=E_{K}(c_{i-1}\oplus m_{i})\textrm{ mit }c_{-1}={IV}.
+\]
 
 \end_inset
 
@@ -8710,7 +8837,7 @@ die Nachricht
 
 \begin_layout Itemize
 und immer ein Initialisierungsvektor
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8720,7 +8847,7 @@ Initialisierungsvektor
 \end_inset
 
  (IV
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8807,7 +8934,7 @@ Bildung des CBC-MAC
 
 \begin_layout Subsubsection
 XCBC-MAC
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8817,7 +8944,7 @@ MAC!XCBC-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9004,10 +9131,12 @@ Aus dem Schlüssel
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 K_{1} & =E_{K}(\hex{01}\ldots\hex{01})\\
 K_{2} & =E_{K}(\hex{02}\ldots\hex{02})\\
-K_{3} & =E_{K}(\underbrace{\hex{03}\ldots\hex{03}}_{n/8})\end{align*}
+K_{3} & =E_{K}(\underbrace{\hex{03}\ldots\hex{03}}_{n/8})
+\end{align*}
 
 \end_inset
 
@@ -9069,8 +9198,10 @@ Ist die Länge der Nachricht ein Vielfaches der Blockbreite
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\mbox{MAC}=E_{K_{1}}(m_{i}\oplus c_{i-1}\oplus K_{2})\]
+\begin_inset Formula 
+\[
+\mbox{MAC}=E_{K_{1}}(m_{i}\oplus c_{i-1}\oplus K_{2})
+\]
 
 \end_inset
 
@@ -9084,7 +9215,7 @@ gerechnet.
 \end_deeper
 \begin_layout Enumerate
 Sollte jedoch Padding
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9126,8 +9257,10 @@ description "Concatenation"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\mbox{MAC}=E_{K_{1}}(\underbrace{m_{i}||(100\ldots00)}_{n}\oplus c_{i-1}\oplus K_{3}).\]
+\begin_inset Formula 
+\[
+\mbox{MAC}=E_{K_{1}}(\underbrace{m_{i}||(100\ldots00)}_{n}\oplus c_{i-1}\oplus K_{3}).
+\]
 
 \end_inset
 
@@ -9138,7 +9271,7 @@ description "Concatenation"
 \end_deeper
 \begin_layout Subsubsection
 Hash-MAC (HMAC)
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9148,7 +9281,7 @@ MAC!Hash-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9176,7 +9309,7 @@ Die Hashfunktion bestimmt in wesentlichem Maße die Sicherheit des Algorithmus.
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9249,7 +9382,7 @@ key "RFC2104"
 \end_inset
 
  gebracht (ANSI-Padding
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9259,7 +9392,7 @@ Padding
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9408,7 +9541,7 @@ Einleitung
 
 \begin_layout Standard
 Elektronische Signaturen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9431,7 +9564,7 @@ cf
 \end_inset
 
  Signaturgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9475,7 +9608,7 @@ Message Recovery
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9536,7 +9669,7 @@ Appendix
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9582,7 +9715,7 @@ reference "fig:crypto_sign_appendix"
 
 \begin_layout Enumerate
 H(ash): Berechne den Hash
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9605,7 +9738,7 @@ resp
 \end_inset
 
  Message Digest
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9726,7 +9859,7 @@ RSA-Signaturen nach PKCS #1
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9740,7 +9873,7 @@ PKCS
 \end_inset
 
 Die RSA-Signatur
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9750,7 +9883,7 @@ Signatur!RSA-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9820,7 +9953,7 @@ reference "eq:rsa_symmetry"
 
 \begin_layout Standard
 RSA hat die für digitale Signaturen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9833,8 +9966,10 @@ Signatur
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-p & =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(d,n)}}p\right]\right\} =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(e,n)}}p\right]\right\} \label{eq:rsa_symmetry}\end{align}
+\begin_inset Formula 
+\begin{align}
+p & =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(d,n)}}p\right]\right\} =\textrm{RSA}_{(e,n)}\left\{ \textrm{RSA}_{(d,n)}\left[\vphantom{\textrm{RSA}_{(e,n)}}p\right]\right\} \label{eq:rsa_symmetry}
+\end{align}
 
 \end_inset
 
@@ -9861,7 +9996,7 @@ key "Bellare:1996"
 
 \begin_layout Subsubsection
 Digital Signature Algorithm
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9871,7 +10006,7 @@ Digital Signature Algorithm
 \end_inset
 
  (DSA
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9978,8 +10113,10 @@ Nun wird eine Zahl
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-g=h^{(p-1)/q}\bmod p\label{eqn_dsa_exp_g}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+g=h^{(p-1)/q}\bmod p\label{eqn_dsa_exp_g}
+\end{equation}
 
 \end_inset
 
@@ -10009,8 +10146,10 @@ Der öffentliche Schlüssel
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y=g^{x}\bmod p\label{eqn_dsa_pubkey_y}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y=g^{x}\bmod p\label{eqn_dsa_pubkey_y}
+\end{equation}
 
 \end_inset
 
@@ -10063,9 +10202,11 @@ Zum Signieren wählt man eine beliebige Zahl
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 r & = & g^{k}\bmod p\bmod q\label{eqn_dsa_sign_r}\\
-s & = & k^{-1}\left[h(m)+xr\right]\bmod q\label{eqn_dsa_sign_s}\end{eqnarray}
+s & = & k^{-1}\left[h(m)+xr\right]\bmod q\label{eqn_dsa_sign_s}
+\end{eqnarray}
 
 \end_inset
 
@@ -10243,13 +10384,15 @@ reference "eqn_dsa_pubkey_y"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 v & =\left(g^{u_{1}}\cdot y^{u_{2}}\right)\bmod p\pmod{q}\\
  & =\left[g^{h(m)w-l_{1}q}\cdot y^{rw-l_{2}q}\right]\bmod p\pmod{q}\\
  & =\left[g^{-(l_{1}+l_{2})q}\cdot g^{h(m)w}\cdot(g^{x}\bmod p)^{rw}\right]\bmod p\pmod{q}\\
  & =\left[g^{-(l_{1}+l_{2})q}\cdot g^{h(m)w}\cdot g^{xrw}\right]\bmod p\pmod{q}\\
  & =\left\{ g^{-(l_{1}+l_{2})q}\cdot g^{\left[h(m)+xr\right]w}\right\} \bmod p\pmod{q}\\
- & =\left\{ g^{-(l_{1}+l_{2})q}\cdot g^{s^{-1}\left[h(m)+xr\right]}\right\} \bmod p\pmod{q}\end{align*}
+ & =\left\{ g^{-(l_{1}+l_{2})q}\cdot g^{s^{-1}\left[h(m)+xr\right]}\right\} \bmod p\pmod{q}
+\end{align*}
 
 \end_inset
 
@@ -10272,9 +10415,11 @@ reference "eqn_dsa_sign_s"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 sk & =h(m)+xr\pmod{q}\\
-k & =s^{-1}\left[h(m)+xr\right]\pmod{q}\end{align*}
+k & =s^{-1}\left[h(m)+xr\right]\pmod{q}
+\end{align*}
 
 \end_inset
 
@@ -10301,11 +10446,13 @@ reference "eqn_dsa_exp_g"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 v & = & \left[g^{-(l_{1}+l_{2})q}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
  & = & \left[\left(g^{q}\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
  & = & \left[\left(g^{q}\bmod p\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\\
- & = & \left[\left(h^{p-1}\bmod p\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}\end{eqnarray*}
+ & = & \left[\left(h^{p-1}\bmod p\right)^{-(l_{1}+l_{2})}\bmod p\cdot g^{k}\bmod p\right]\bmod p\pmod{q}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10345,9 +10492,11 @@ kleinem
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 v & = & g^{k}\bmod p\pmod{q}\\
-v & = & r\end{eqnarray*}
+v & = & r
+\end{eqnarray*}
 
 \end_inset
 
@@ -10368,7 +10517,7 @@ Efficient Digital Signature Scheme (ESIGN)
 ESIGN
 \emph default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10378,7 +10527,7 @@ ESIGN
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10529,9 +10678,11 @@ ceil
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 w & = & \left\lceil \frac{h(m)-(x^{k}\bmod n)}{pq}\right\rceil =\frac{h(m)-(x^{k}\bmod n)}{pq}+\frac{\epsilon}{pq},\quad\epsilon<pq\\
-y & = & \frac{w}{kx^{k-1}}\bmod p=\frac{h(m)-(x^{k}\bmod n)+\epsilon}{pqkx^{k-1}}\bmod p\label{eqn_esign_y}\end{eqnarray}
+y & = & \frac{w}{kx^{k-1}}\bmod p=\frac{h(m)-(x^{k}\bmod n)+\epsilon}{pqkx^{k-1}}\bmod p\label{eqn_esign_y}
+\end{eqnarray}
 
 \end_inset
 
@@ -10549,8 +10700,10 @@ und letztlich die Signatur
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-S=x+ypq\label{eqn_esign_signature}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+S=x+ypq\label{eqn_esign_signature}
+\end{equation}
 
 \end_inset
 
@@ -10580,8 +10733,10 @@ Der Empfänger verifiziert die Signatur
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-h(m)\leq S^{k}\bmod n<h(m)+2^{2L}\]
+\begin_inset Formula 
+\[
+h(m)\leq S^{k}\bmod n<h(m)+2^{2L}
+\]
 
 \end_inset
 
@@ -10640,10 +10795,12 @@ Binomischer Satz:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 S^{k}\bmod n & = & (x+ypq)^{k}\bmod n\\
  & = & \sum_{i=0}^{k}\binom{k}{i}x^{i}(ypq)^{k-i}\bmod n\\
- & = & x^{k}+kypqx^{k-1}\bmod n\end{eqnarray*}
+ & = & x^{k}+kypqx^{k-1}\bmod n
+\end{eqnarray*}
 
 \end_inset
 
@@ -10696,9 +10853,11 @@ reference "eqn_esign_y"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 y & = & \frac{h(m)-(x^{k}\bmod n)+\epsilon}{pqkx^{k-1}}-\upsilon p\\
-ypqkx^{k-1} & = & h(m)-(x^{k}\bmod n)+\epsilon-\upsilon nkx^{k-1}\end{eqnarray*}
+ypqkx^{k-1} & = & h(m)-(x^{k}\bmod n)+\epsilon-\upsilon nkx^{k-1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10710,10 +10869,12 @@ Einsetzen ergibt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 S^{k} & \equiv & x^{k}+h(m)-(x^{k}\bmod n)+\epsilon-\upsilon nkx^{k-1}\pmod{n}\\
  & = & h(m)+\epsilon-\upsilon nkx^{k-1}\pmod{n}\\
-S^{k} & \equiv & h(m)+\epsilon\pmod{n}\label{eqn_esign_spowk}\end{eqnarray}
+S^{k} & \equiv & h(m)+\epsilon\pmod{n}\label{eqn_esign_spowk}
+\end{eqnarray}
 
 \end_inset
 
@@ -10765,8 +10926,10 @@ Wegen der beschränkten Bitlänge
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\epsilon<2^{2L}\]
+\begin_inset Formula 
+\[
+\epsilon<2^{2L}
+\]
 
 \end_inset
 
@@ -10789,9 +10952,11 @@ reference "eqn_esign_spowk"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \left[S^{k}-h(m)\right]\bmod n & < & 2^{2L}\\
-S^{k}\bmod n & < & h(m)+2^{2L}\end{eqnarray*}
+S^{k}\bmod n & < & h(m)+2^{2L}
+\end{eqnarray*}
 
 \end_inset
 
@@ -10896,6 +11061,7 @@ options "bibtotoc,geralpha"
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 
