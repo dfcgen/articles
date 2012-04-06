@@ -1,5 +1,5 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -7,20 +7,28 @@
 \master elliptic.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !bh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 1
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -73,7 +91,7 @@ name "sec:zolotarev"
 Solotareff
 \noun default
 's drittes Problem
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -137,7 +155,7 @@ resp
 Tschebyscheff
 \noun default
 -Approximation
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -196,7 +214,7 @@ key "Piloty:1954"
 \end_inset
 
  Es widmet sich der Suche nach einer gebrochen rationalen Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -234,9 +252,11 @@ Funktion!gebrochen rationale
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 U(x) & =\sum_{\upsilon=0}^{n}c_{\upsilon}x^{\upsilon}=\poly{c}{x}{n}\label{eq:zolotar_poly_start}\\
-V(x) & =\sum_{\mu=0}^{m}d_{\mu}x^{\mu}=\poly{d}{x}{m}\nonumber \end{align}
+V(x) & =\sum_{\mu=0}^{m}d_{\mu}x^{\mu}=\poly{d}{x}{m}\nonumber 
+\end{align}
 
 \end_inset
 
@@ -294,10 +314,13 @@ reference "fig:zolotar_tol"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \left.\begin{array}{l}
 \max\limits _{\left|x\right|\leq\sqrt{k}}f(x)\\
-\max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}\end{array}\right\} \Rightarrow\textrm{Min.}\label{eq:zolotar_goal}\end{equation}
+\max\limits _{\left|x\right|\geq\frac{1}{\sqrt{k}}}\mbig{\frac{1}{f(x)}}
+\end{array}\right\} \Rightarrow\textrm{Min.}\label{eq:zolotar_goal}
+\end{equation}
 
 \end_inset
 
@@ -360,8 +383,10 @@ Solotareff
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f(x)\, f\left(\frac{1}{x}\right)=1\]
+\begin_inset Formula 
+\[
+f(x)\, f\left(\frac{1}{x}\right)=1
+\]
 
 \end_inset
 
@@ -388,8 +413,10 @@ key "Todd:1983"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-f(x)\sim\prod\frac{b_{\upsilon}^{2}-x^{2}}{1-b_{\upsilon}^{2}x^{2}}\label{eq:zolotar_rational_base}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(x)\sim\prod\frac{b_{\upsilon}^{2}-x^{2}}{1-b_{\upsilon}^{2}x^{2}}\label{eq:zolotar_rational_base}
+\end{equation}
 
 \end_inset
 
@@ -459,8 +486,10 @@ reference "eq:elltr1_odd_poly"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-x & \Rightarrow\frac{x}{\sqrt{k}} & y & \Rightarrow\frac{f(x)}{\sqrt{\lambda}}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x & \Rightarrow\frac{x}{\sqrt{k}} & y & \Rightarrow\frac{f(x)}{\sqrt{\lambda}}
+\end{xalignat*}
 
 \end_inset
 
@@ -472,10 +501,13 @@ und erhält
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \efunc{f}{x}{k}=\begin{cases}
 \sqrt{\frac{\lambda}{k}}\cdot\frac{x}{M}\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & \quad(n\textrm{ ungerade})\\
-\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & \quad(n\textrm{ gerade})\end{cases}\]
+\sqrt{\lambda}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{1-\frac{x^{2}}{ka_{\nu}^{2}}}{1-ka_{\nu}^{2}x^{2}} & \quad(n\textrm{ gerade})
+\end{cases}
+\]
 
 \end_inset
 
@@ -521,10 +553,13 @@ reference "eq:elltr1_even_param_y"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 x & =\sqrt{k}\,\esn{u}{k}, & \efunc{f}{x}{k} & =\sqrt{\lambda}\,\begin{cases}
 \esn{u/M}{\lambda} & \quad(n\textrm{ ungerade})\\
-\ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})\end{cases}\mperiod\end{xalignat*}
+\ecd{u/M}{\lambda} & \quad(n\textrm{ gerade})
+\end{cases}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -620,10 +655,13 @@ reference "eq:elltr1_even_lambda"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \varepsilon=\begin{cases}
 \sqrt{k}\prod\limits _{\nu=1,3,5,\ldots}^{n-2}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ ungerade})\\
-\prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ gerade})\end{cases}\]
+\prod\limits _{\nu=1,3,5,\ldots}^{n-1}k\,\esn[2]{\nu\frac{K}{n}}{k} & (n\textrm{ gerade})
+\end{cases}
+\]
 
 \end_inset
 
@@ -665,9 +703,11 @@ reference "eq:elltr1_even_lambda"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \frac{\lambda}{kM^{2}} & =\prod_{\nu=2,4,6,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ ungerade})\\
-\lambda & =\prod_{\nu=1,3,5,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ gerade})\end{xalignat*}
+\lambda & =\prod_{\nu=1,3,5,\ldots}^{n-1}\left(ka_{\nu}^{2}\right)^{2} &  & (n\textrm{ gerade})
+\end{xalignat*}
 
 \end_inset
 
@@ -679,10 +719,13 @@ dann ergeben sich noch die folgenden Vereinfachungen:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \efunc{f}{x}{k}=\begin{cases}
 (-1)^{\frac{n-1}{2}}x\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ ungerade})\\
-(-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})\end{cases}\label{eq:zolotar_solution}\end{equation}
+(-1)^{\frac{n}{2}}\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\frac{ka_{\nu}^{2}-x^{2}}{1-ka_{\nu}^{2}x^{2}} & (n\textrm{ gerade})
+\end{cases}\label{eq:zolotar_solution}
+\end{equation}
 
 \end_inset
 
@@ -713,8 +756,10 @@ reference "eq:zolotar_rational_base"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-b_{\upsilon}=\sqrt{k}\, a_{\nu}\]
+\begin_inset Formula 
+\[
+b_{\upsilon}=\sqrt{k}\, a_{\nu}
+\]
 
 \end_inset
 
@@ -779,9 +824,11 @@ reference "eq:elltr1_even_poles"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{1}
+\begin_inset Formula 
+\begin{xalignat*}{1}
 \zn{x}{\nu} & =\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}\\
-\pn{x}{\nu} & =\frac{1}{\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}\end{xalignat*}
+\pn{x}{\nu} & =\frac{1}{\sqrt{k}\,\esn{\nu\frac{K}{n}}{k}}=\frac{1}{\zn{x}{\nu}}
+\end{xalignat*}
 
 \end_inset
 
@@ -819,8 +866,10 @@ reference "eq:elltr1_even_zeroes"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-a_{\nu}=\esn{\nu\frac{K}{n}}{k}\mperiod\]
+\begin_inset Formula 
+\[
+a_{\nu}=\esn{\nu\frac{K}{n}}{k}\mperiod
+\]
 
 \end_inset
 
@@ -837,7 +886,7 @@ Der Beweis der Bestapproximation beruht auf
 Tschebyscheff
 \noun default
 's Alternantensatz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -860,7 +909,7 @@ noun{Tschebyscheff}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -870,7 +919,7 @@ Approximation!Alternantenbedingung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -880,7 +929,7 @@ Alternantenbedingung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -936,10 +985,13 @@ Die Funktion
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \varepsilon(x)=\begin{cases}
 \efunc{f}{x}{k} & \quad(\left|x\right|\leq\sqrt{k})\\
-\mbig{\frac{1}{\efunc{f}{x}{k}}} & \quad(\left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}})\end{cases}\]
+\mbig{\frac{1}{\efunc{f}{x}{k}}} & \quad(\left|x\right|\geq\mbig{\frac{1}{\sqrt{k}}})
+\end{cases}
+\]
 
 \end_inset
 
@@ -1026,10 +1078,13 @@ reference "eq:zolotar_solution"
 \end_layout
 
 \begin_layout Proof
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 m=\begin{cases}
 n-1 & (n\textrm{ ungerade})\\
-n & (n\textrm{ gerade})\end{cases}\mperiod\]
+n & (n\textrm{ gerade})
+\end{cases}\mperiod
+\]
 
 \end_inset
 
@@ -1105,14 +1160,18 @@ Tschebyscheff
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\efunc{f}{x}{k}=\sqrt{\lambda}\,\esn{\frac{u}{M}}{\lambda}\]
+\begin_inset Formula 
+\[
+\efunc{f}{x}{k}=\sqrt{\lambda}\,\esn{\frac{u}{M}}{\lambda}
+\]
 
 \end_inset
 
 
-\begin_inset Formula \[
-\edn[2]{\frac{u}{M}}{\lambda}=1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}=1-\lambda\efunc[2]{f}{x}{k}=1-\varepsilon^{2}\efunc[2]{g}{x}{k}\]
+\begin_inset Formula 
+\[
+\edn[2]{\frac{u}{M}}{\lambda}=1-\lambda^{2}\esn[2]{\frac{u}{M}}{\lambda}=1-\lambda\efunc[2]{f}{x}{k}=1-\varepsilon^{2}\efunc[2]{g}{x}{k}
+\]
 
 \end_inset
 
@@ -1137,14 +1196,18 @@ key "Achieser:1967"
 \end_inset
 
  befaßt, so daß der relative Fehler einer Abweichung von der Zielfunktion
-\begin_inset Formula \[
-f(x)=\frac{1}{\sqrt{1-k^{2}x}},\qquad\qquad0\leq k\leq1\]
+\begin_inset Formula 
+\[
+f(x)=\frac{1}{\sqrt{1-k^{2}x}},\qquad\qquad0\leq k\leq1
+\]
 
 \end_inset
 
 minimiert wird.
-\begin_inset Formula \[
-\max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
+\begin_inset Formula 
+\[
+\max_{0\leq x\leq1}\left|\frac{f(x)-g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}
+\]
 
 \end_inset
 
@@ -1162,8 +1225,10 @@ ion der Konstante
 \end_inset
 
  handelt.
-\begin_inset Formula \[
-\max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}\]
+\begin_inset Formula 
+\[
+\max_{0\leq x\leq1}\left|1-\frac{g(x)}{f(x)}\right|\Rightarrow\textrm{Min.}
+\]
 
 \end_inset
 
@@ -1234,9 +1299,11 @@ reference "eq:elltr1_dn_x"
 \end_inset
 
  erhält.
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 x & =\esn[2]{u}{k}\label{eq:zolotar_solution}\\
-\edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\label{eq:zolotar_solution_dn}\end{align}
+\edn{\frac{u}{M}}{\lambda} & =\sqrt{1-k^{2}x}\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\label{eq:zolotar_solution_dn}
+\end{align}
 
 \end_inset
 
@@ -1320,7 +1387,7 @@ reference "eq:elltr1_lambda"
 \end_inset
 
 , dann erhält man eine Bestapproximation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1342,8 +1409,10 @@ Approximation!Bestapproximation
 \end_inset
 
 , also entsprechend unserer Eingangsbetrachtungen
-\begin_inset Formula \begin{equation}
-\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\mperiod\label{eq:zolotar_approx_func}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}=\frac{g(x)}{f(x)}\mperiod\label{eq:zolotar_approx_func}
+\end{equation}
 
 \end_inset
 
@@ -1352,7 +1421,7 @@ Der Beweis der Bestapproximation beruht auf
 Tschebyscheff
 \noun default
 's Alternantensatzes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1375,7 +1444,7 @@ noun{Tschebyscheff}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1385,7 +1454,7 @@ Approximation!Alternantenbedingung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1395,7 +1464,7 @@ Alternantenbedingung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1529,8 +1598,10 @@ reference "eq:zolotar_solution"
 
  eine charakteristische Eigenschaft der ersten elliptischen Transformation
  ist 
-\begin_inset Formula \[
-M\Lambda=\frac{K}{2m+1},\]
+\begin_inset Formula 
+\[
+M\Lambda=\frac{K}{2m+1},
+\]
 
 \end_inset
 
@@ -1552,14 +1623,18 @@ befinden sich also
 \end_inset
 
  bei
-\begin_inset Formula \[
-x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\mperiod\]
+\begin_inset Formula 
+\[
+x_{\upsilon}=\esn[2]{u_{\upsilon}}{k}=\esn[2]{\upsilon\frac{K}{2m+1}}{k}\mperiod
+\]
 
 \end_inset
 
 Aufgrund ihrer Anzahl sowie der Fehlerfunktion
-\begin_inset Formula \[
-\varepsilon=1-\frac{2}{1+\lambda'}\edn{\frac{u_{\upsilon}}{M}}{\lambda}=\pm\frac{1-\lambda'}{1+\lambda'}\]
+\begin_inset Formula 
+\[
+\varepsilon=1-\frac{2}{1+\lambda'}\edn{\frac{u_{\upsilon}}{M}}{\lambda}=\pm\frac{1-\lambda'}{1+\lambda'}
+\]
 
 \end_inset
 
@@ -1595,9 +1670,11 @@ reference "eq:zolotar_solution_dn"
 \end_inset
 
  bestimmt durch
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 g(x) & =f(x)\cdot\frac{2}{1+\lambda'}\edn{\frac{u}{M}}{\lambda}\\
- & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\mperiod\end{align*}
+ & =\frac{2}{1+\lambda'}\cdot\frac{\prod\limits _{\mu=1,3,5,\ldots}^{2m-1}1-k^{2}\esn[2]{\mu\frac{K}{n}}{k}x}{\prod\limits _{\nu=2,4,6,\ldots}^{2m}1-k^{2}\esn[2]{\nu\frac{K}{n}}{k}x}\mperiod
+\end{align*}
 
 \end_inset
 

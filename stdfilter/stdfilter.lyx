@@ -1,11 +1,9 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
 \begin_preamble
-\input{all-inc}
-
 %% \usepackage{showlabels}
 %% \usepackage{showidx}
 %% \usepackage{bibcheck}
@@ -13,24 +11,39 @@
 
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
+
+\newcommand{\edrf} [3] [0] {\epq{#1}{\drf}{#2}{#3}} %%  elliptic \drf
 \end_preamble
+\options noprefix
 \use_default_options false
 \begin_modules
 theorems-ams
-emphasized
+helpers
+mathext
+elliptic
+electrical
+algorithm
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing onehalf
 \use_hyperref true
@@ -49,13 +62,23 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
 \branch WITH_APPENDIX
 \selected 1
+\filename_suffix 0
 \color #faf0e6
 \end_branch
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -66,8 +89,9 @@ emphasized
 \paperpagestyle headings
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -323,6 +347,7 @@ description "Realteil"
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -350,7 +375,7 @@ Intention
 \end_layout
 
 \begin_layout Standard
-Vorliegendes Werk soll dem Ingenieur 
+Vorliegendes Papier soll dem Ingenieur 
 \begin_inset ERT
 status collapsed
 
@@ -690,7 +715,7 @@ filename "tables.lyx"
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,computers,crypto,math"
+bibfiles "computers,crypto,math,electrical"
 options "geralpha"
 
 \end_inset
@@ -719,6 +744,7 @@ indexname}{Stichwortverzeichnis}
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 

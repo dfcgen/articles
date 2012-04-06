@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 2
 \tocdepth 2
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -76,7 +94,7 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -106,7 +124,7 @@ Amplitudencharakteristik
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -120,7 +138,7 @@ Der
  Tschebyscheff
 \noun default
 -Tiefpaß
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -143,7 +161,7 @@ noun{Tschebyscheff}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -263,8 +281,10 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\drf(\omega)=\sigma\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}
+\end{equation}
 
 \end_inset
 
@@ -308,8 +328,10 @@ reference "fig:filter_cheby2_amplitude"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-A_{\textup{max}}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\sigma^{2}\right)\mperiod\]
+\begin_inset Formula 
+\[
+A_{\textup{max}}=10\log\left[1+{\drf}^{2}(1)\right]=10\log\left(1+\sigma^{2}\right)\mperiod
+\]
 
 \end_inset
 
@@ -358,8 +380,10 @@ reference "sec:cheby"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]\]
+\begin_inset Formula 
+\[
+A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]
+\]
 
 \end_inset
 
@@ -421,8 +445,10 @@ reference "fig:filter_cheby2_amplitude"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{k}=\omega_{s}\sec\left(k\frac{\pi}{2n}\right),\qquad k=0,1,2,\ldots,n-1\]
+\begin_inset Formula 
+\[
+\omega_{k}=\omega_{s}\sec\left(k\frac{\pi}{2n}\right),\qquad k=0,1,2,\ldots,n-1
+\]
 
 \end_inset
 
@@ -485,10 +511,13 @@ Aufgrund der für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(0\right)}=\left\{ \begin{array}{ll}
 \infty & \qquad(n\textrm{ ungerade})\\
-\pm\sigma\,\Tn_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})\end{array}\right.\]
+\pm\sigma\,\Tn_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -531,8 +560,10 @@ Laplace
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})/\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\Tn_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})/\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\Tn_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}
+\end{equation}
 
 \end_inset
 
@@ -544,8 +575,10 @@ und setzen den Zähler Null.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0\]
+\begin_inset Formula 
+\[
+\Tn_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0
+\]
 
 \end_inset
 
@@ -585,8 +618,10 @@ reference "sec:cheby"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\zn{x}{\nu}=\ji\frac{\omega_{s}}{\zn{\lps}{\nu}}=\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\]
+\begin_inset Formula 
+\[
+\zn{x}{\nu}=\ji\frac{\omega_{s}}{\zn{\lps}{\nu}}=\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)
+\]
 
 \end_inset
 
@@ -602,8 +637,10 @@ liegen und deshalb bezüglich
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n-1,n\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\zn{\lps}{\nu}=\ji\omega_{s}\sec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n-1,n\mperiod
+\end{equation}
 
 \end_inset
 
@@ -697,8 +734,10 @@ reference "eq:filter_cheby2_chfunc"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\sigma\Tn_{n}(\omega_{s})=\pm\ji\Tn_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod\]
+\begin_inset Formula 
+\[
+\sigma\Tn_{n}(\omega_{s})=\pm\ji\Tn_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod
+\]
 
 \end_inset
 
@@ -733,8 +772,10 @@ I Tiefpaß substituieren wir
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod\]
+\begin_inset Formula 
+\[
+\Tn_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod
+\]
 
 \end_inset
 
@@ -757,8 +798,10 @@ reference "sec:filter_cheby1_poles"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\pn{\lps'}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pn{\lps'}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)
+\end{equation}
 
 \end_inset
 
@@ -802,8 +845,10 @@ I) von
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)},\qquad\nu=1,2,\ldots,n\]
+\begin_inset Formula 
+\[
+\pn{\lps}{\nu}=\frac{\omega_{s}}{-\alpha_{H}\sin\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)+\ji\omega_{H}\cos\left(\mbig{\frac{2\nu-1}{2}\cdot\frac{\pi}{n}}\right)},\qquad\nu=1,2,\ldots,n
+\]
 
 \end_inset
 
@@ -819,8 +864,10 @@ sowie die Halbachsen (mit
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\} \mperiod\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\} \mperiod
+\end{xalignat}
 
 \end_inset
 
@@ -848,7 +895,7 @@ reference "fig:cheby1_roots"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

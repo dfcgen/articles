@@ -1,32 +1,40 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
 \DeclareMathOperator{\crc}{CRC}
 
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
-\options reqno
+\options noprefix,reqno
 \use_default_options false
 \begin_modules
-emphasized
+helpers
+mathext
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -43,15 +51,25 @@ emphasized
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 1
+\use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
 \branch WITH_APPENDIX
 \selected 0
+\filename_suffix 0
 \color #faf0e6
 \end_branch
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -62,8 +80,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -147,6 +166,7 @@ status collapsed
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -204,7 +224,7 @@ Grundlagen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -214,7 +234,7 @@ Körper
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -229,7 +249,7 @@ Eine grundlegende Vorbetrachtung für alle folgenden Ausführungen ist die,
 \end_inset
 
  ein äquivalentes Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -391,8 +411,10 @@ Bit nach links verschoben.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\frac{x^{k}M(x)}{G(x)}=F(x)+\frac{R(x)}{G(x)}\label{eq:crc_base_div}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{x^{k}M(x)}{G(x)}=F(x)+\frac{R(x)}{G(x)}\label{eq:crc_base_div}
+\end{equation}
 
 \end_inset
 
@@ -404,8 +426,10 @@ Der dabei entstehende Divisionsrest
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-R(x)=\crc\{M(x)\}=x^{k}M(x)\bmod{G(x)}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+R(x)=\crc\{M(x)\}=x^{k}M(x)\bmod{G(x)}
+\end{equation}
 
 \end_inset
 
@@ -455,8 +479,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-C(x)=x^{k}M(x)+R(x)\label{eq:crc_code_word}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+C(x)=x^{k}M(x)+R(x)\label{eq:crc_code_word}
+\end{equation}
 
 \end_inset
 
@@ -550,10 +576,12 @@ reference "eq:crc_code_word"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 C(x) & =x^{k}M(x)+R(x)\\
  & =F(x)G(x)+R(x)+R(x)\\
- & =F(x)G(x)\end{align*}
+ & =F(x)G(x)
+\end{align*}
 
 \end_inset
 
@@ -574,8 +602,10 @@ Die Teilbarkeit des Codewortes
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-C(x)\bmod G(x)=0\]
+\begin_inset Formula 
+\[
+C(x)\bmod G(x)=0
+\]
 
 \end_inset
 
@@ -613,8 +643,10 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-[C(x)+E(x)]\bmod{G(x)}\neq0\label{eq:crc_err_cond}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+[C(x)+E(x)]\bmod{G(x)}\neq0\label{eq:crc_err_cond}
+\end{equation}
 
 \end_inset
 
@@ -711,10 +743,12 @@ Da ja bekanntlich kein System ideal ist, muß man auch hier einräumen, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 [C(x)+E(x)]\bmod{G(x)} & =C(x)\bmod{G(x)}+E(x)\bmod{G(x)}\nonumber \\
  & =F(x)G(x)\bmod{G(x)}+E(x)\bmod{G(x)}\nonumber \\
- & =E(x)\bmod{G(x)}\label{eq:crc_err}\end{align}
+ & =E(x)\bmod{G(x)}\label{eq:crc_err}
+\end{align}
 
 \end_inset
 
@@ -744,8 +778,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=\left[E(x)\, x^{k}\right]\bmod{G(x)}\]
+\begin_inset Formula 
+\[
+\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=\left[E(x)\, x^{k}\right]\bmod{G(x)}
+\]
 
 \end_inset
 
@@ -914,8 +950,10 @@ reference "eq:crc_err"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-E(x)\bmod{G(x)}=x^{r}\bmod{G(x)}\label{eq:crc_err_single}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+E(x)\bmod{G(x)}=x^{r}\bmod{G(x)}\label{eq:crc_err_single}
+\end{equation}
 
 \end_inset
 
@@ -1032,8 +1070,10 @@ reference "eq:crc_err"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-E(x)\bmod{G(x)}=\left\{ x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]\right\} \bmod{G(x)}\]
+\begin_inset Formula 
+\[
+E(x)\bmod{G(x)}=\left\{ x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]\right\} \bmod{G(x)}
+\]
 
 \end_inset
 
@@ -1050,8 +1090,10 @@ aus und bedenken, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-E(x)=x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]=F(x)G(x)\]
+\begin_inset Formula 
+\[
+E(x)=x^{l}\left[e_{r}x^{r}+e_{r-1}x^{r-1}+\cdots+e_{2}x^{2}+e_{1}x+1\right]=F(x)G(x)
+\]
 
 \end_inset
 
@@ -1094,8 +1136,10 @@ reference "eq:crc_err_single"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\crc\{C(x)+E(x)\}=\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=x^{r+k}\bmod{G(x)}\]
+\begin_inset Formula 
+\[
+\crc\{C(x)+E(x)\}=\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=x^{r+k}\bmod{G(x)}
+\]
 
 \end_inset
 
@@ -1425,8 +1469,10 @@ Oftmals werden alle Register auf 1 gesetzt, so daß auch wenn
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-M'(x)=x^{m}R_{0}(x)+M(x)\]
+\begin_inset Formula 
+\[
+M'(x)=x^{m}R_{0}(x)+M(x)
+\]
 
 \end_inset
 
@@ -1442,10 +1488,12 @@ Bildet man nun den CRC-Rest für die Gesamtnachricht
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \crc\{M'(x)\} & = & x^{k}\left[x^{m}R_{0}(x)+M(x)\right]\bmod{G(x)}\\
  & = & x^{k}x^{m}R_{0}(x)\bmod{G(x)}+x^{k}M(x)\bmod{G(x)}\\
- & = & \crc\left\{ x^{m}R_{0}(x)\right\} +\crc\left\{ M(x)\right\} ,\end{eqnarray*}
+ & = & \crc\left\{ x^{m}R_{0}(x)\right\} +\crc\left\{ M(x)\right\} ,
+\end{eqnarray*}
 
 \end_inset
 
@@ -1514,8 +1562,10 @@ Nimmt man wieder an, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-R(x)=x^{k}M(x)\bmod{G(x)}.\]
+\begin_inset Formula 
+\[
+R(x)=x^{k}M(x)\bmod{G(x)}.
+\]
 
 \end_inset
 
@@ -1531,8 +1581,10 @@ Es wird also der Polynomrest
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-x^{k}M(x)=F(x)G(x)+R(x)\]
+\begin_inset Formula 
+\[
+x^{k}M(x)=F(x)G(x)+R(x)
+\]
 
 \end_inset
 
@@ -1557,8 +1609,10 @@ unter der Nebenbedingung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-M'(x)=x^{8}M(x)+B(x),\]
+\begin_inset Formula 
+\[
+M'(x)=x^{8}M(x)+B(x),
+\]
 
 \end_inset
 
@@ -1574,10 +1628,12 @@ dann gilt für den zugehörigen CRC-Rest
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 R'(x) & =x^{k}M'(x)\bmod{G(x)}\nonumber \\
  & =[x^{8}x^{k}M(x)+x^{k}B(x)]\bmod{G(x)}\nonumber \\
- & =[x^{8}R(x)+x^{k}B(x)]\bmod{G(x)}\mperiod\label{eq:crc_table_general}\end{align}
+ & =[x^{8}R(x)+x^{k}B(x)]\bmod{G(x)}\mperiod\label{eq:crc_table_general}
+\end{align}
 
 \end_inset
 
@@ -1613,8 +1669,10 @@ Bit und der niederwertige Teil
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-x^{8}R_{0}(x)\bmod{G(x)}=x^{8}R_{0}(x)\]
+\begin_inset Formula 
+\[
+x^{8}R_{0}(x)\bmod{G(x)}=x^{8}R_{0}(x)
+\]
 
 \end_inset
 
@@ -1637,10 +1695,12 @@ reference "eq:crc_table_general"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 R'(x) & =[x^{k}R_{1}(x)+x^{k}B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
  & =x^{k}[R_{1}(x)+B(x)]\bmod{G(x)}+x^{8}R_{0}(x)\\
- & =\crc\{R_{1}(x)+B(x)\}+x^{8}R_{0}(x)\mperiod\end{align*}
+ & =\crc\{R_{1}(x)+B(x)\}+x^{8}R_{0}(x)\mperiod
+\end{align*}
 
 \end_inset
 
@@ -1691,7 +1751,7 @@ filename "../algebra/algebra.lyx"
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,computers,crypto,math"
+bibfiles "computers,crypto,math,electrical"
 options "gerplain"
 
 \end_inset
@@ -1702,6 +1762,7 @@ options "gerplain"
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 

@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \leftmargin 2cm
 \rightmargin 2cm
 \secnumdepth 2
@@ -44,8 +61,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -64,7 +82,7 @@ Version $Id$
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -118,7 +136,7 @@ resp
 Thomson
 \noun default
 -Tiefpaß
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -141,7 +159,7 @@ noun{Bessel}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -171,7 +189,7 @@ nteilen (wie die vorangegangen Filter), sondern eher als verzerrungsarmes
 \end_inset
 
  eines idealen LTI-Systems
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -208,8 +226,10 @@ key "Thomson:1949,Storch:1951"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\dirac(t-t_{0})\lpt\trf(\lps)=\expf^{-\lps\, t_{0}}\;\Rightarrow\;\expf^{-\ji\omega\, t_{0}}\]
+\begin_inset Formula 
+\[
+\dirac(t-t_{0})\lpt\trf(\lps)=\expf^{-\lps\, t_{0}}\;\Rightarrow\;\expf^{-\ji\omega\, t_{0}}
+\]
 
 \end_inset
 
@@ -230,8 +250,10 @@ Die Verzögerungszeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\expf^{x}=\sinh x+\cosh x\]
+\begin_inset Formula 
+\[
+\expf^{x}=\sinh x+\cosh x
+\]
 
 \end_inset
 
@@ -243,8 +265,10 @@ und deren Reihenentwicklungen.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\coth x=\frac{\cosh x}{\sinh x}=\frac{\mbig{1+\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\frac{x^{6}}{6!}+\cdots}}{\mbig{x+\frac{x^{3}}{3}+\frac{x^{5}}{5!}+\frac{x^{7}}{7!}+\cdots}}\]
+\begin_inset Formula 
+\[
+\coth x=\frac{\cosh x}{\sinh x}=\frac{\mbig{1+\frac{x^{2}}{2!}+\frac{x^{4}}{4!}+\frac{x^{6}}{6!}+\cdots}}{\mbig{x+\frac{x^{3}}{3}+\frac{x^{5}}{5!}+\frac{x^{7}}{7!}+\cdots}}
+\]
 
 \end_inset
 
@@ -291,7 +315,7 @@ Ein Polynom, dessen Wurzeln allesamt einen negativen Realteil besitzen.
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -334,7 +358,7 @@ und (wie noch zu sehen sein wird) der Kettenbruch eine zulässige Systemfunktion
 \begin_layout Standard
 Durch eigene Rechnung oder Verwendung eines geeigneten Nachschlagewerks
  erhält man aus der Reihenentwicklung den folgenden Kettenbruch
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -351,8 +375,10 @@ Kettenbruch!-entwicklung von coth@-entwicklung von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\coth x=\cfrac{1}{x}+\cfrac{1}{\cfrac{3}{x}+\cfrac{1}{\cfrac{5}{x}+\cfrac{1}{\cfrac[r]{7}{x}+\cdots}}}\mperiod\label{eq:filter_bessel_cfrac}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\coth x=\cfrac{1}{x}+\cfrac{1}{\cfrac{3}{x}+\cfrac{1}{\cfrac{5}{x}+\cfrac{1}{\cfrac[r]{7}{x}+\cdots}}}\mperiod\label{eq:filter_bessel_cfrac}
+\end{equation}
 
 \end_inset
 
@@ -374,9 +400,11 @@ Bricht man diese Entwicklung nach
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{3}
+\begin_inset Formula 
+\begin{xalignat*}{3}
 P_{n} & =(2n-1)P_{n-1}+x^{2}P_{n-2} & P_{0} & =1 & P_{-1} & =0\\
-Q_{n} & =(2n-1)Q_{n-1}+x^{2}Q_{n-2} & Q_{0} & =0 & Q_{-1} & =\frac{1}{x}\end{xalignat*}
+Q_{n} & =(2n-1)Q_{n-1}+x^{2}Q_{n-2} & Q_{0} & =0 & Q_{-1} & =\frac{1}{x}
+\end{xalignat*}
 
 \end_inset
 
@@ -443,8 +471,10 @@ Kommen wir nun zurück zur Approximation von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\coth x=\frac{\cosh x}{\sinh x}\approx\frac{P_{n}}{Q_{n}}\]
+\begin_inset Formula 
+\[
+\coth x=\frac{\cosh x}{\sinh x}\approx\frac{P_{n}}{Q_{n}}
+\]
 
 \end_inset
 
@@ -453,7 +483,7 @@ Kommen wir nun zurück zur Approximation von
 
 \begin_layout Standard
 und in Konsequenz als Summenterme in der Exponentialfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -466,8 +496,10 @@ Exponentialfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\expf^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\mperiod\]
+\begin_inset Formula 
+\[
+\expf^{x}=\cosh x+\sinh x\approx P_{n}+Q_{n}=(2n-1)\,\left(P_{n-1}+Q_{n-1}\right)+x^{2}\left(P_{n-2}+Q_{n-2}\right)\mperiod
+\]
 
 \end_inset
 
@@ -481,7 +513,7 @@ Die Summe (und gleichzeitig Berechnungsvorschrift auf der rechten Seite)
 Bessel
 \noun default
 -Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -511,8 +543,10 @@ noun{Bessel}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{3}
-\textrm{B}_{n}(x) & =(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x), & \textrm{B}_{0}(x) & =1, & \textrm{B}_{-1}(x) & =\frac{1}{x}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{3}
+\textrm{B}_{n}(x) & =(2n-1)\,\textrm{B}_{n-1}(x)+x^{2}\textrm{B}_{n-2}(x), & \textrm{B}_{0}(x) & =1, & \textrm{B}_{-1}(x) & =\frac{1}{x}
+\end{xalignat}
 
 \end_inset
 
@@ -528,11 +562,13 @@ Bessel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \textrm{B}_{1}(x) & =x+1\\
 \textrm{B}_{2}(x) & =x^{2}+3x+3\\
 \textrm{B}_{3}(x) & =x^{3}+6x^{2}+15x+15\\
-\textrm{B}_{4}(x) & =x^{4}+10x^{3}+45x^{2}+105x+105\mperiod\end{align*}
+\textrm{B}_{4}(x) & =x^{4}+10x^{3}+45x^{2}+105x+105\mperiod
+\end{align*}
 
 \end_inset
 
@@ -548,8 +584,10 @@ Mit der so gewonnen Näherung für
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{b_{0}}{\textrm{B}_{n}(\lps)}=\frac{b_{0}}{\poly{b}{\lps}{n}}\label{eq:filter_bessel_laplace}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\frac{b_{0}}{\textrm{B}_{n}(\lps)}=\frac{b_{0}}{\poly{b}{\lps}{n}}\label{eq:filter_bessel_laplace}
+\end{equation}
 
 \end_inset
 
@@ -598,7 +636,7 @@ reference "eq:filter_bessel_cfrac"
 Hurwitz
 \noun default
 -Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -706,7 +744,7 @@ reference "fig:filter_bessel_response"
 
 .
  Recht gut zu erkennen ist dabei der relativ lineare Phasengang
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -716,7 +754,7 @@ Phase!maximal flache
 \end_inset
 
 , welcher sich im Nullpunkt als maximal flache Gruppen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -846,7 +884,7 @@ Bessel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

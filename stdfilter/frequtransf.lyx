@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
+\language_package default
 \inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 1
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -66,7 +84,7 @@ Einleitung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -177,7 +195,7 @@ Frequenztransformationen
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -528,7 +546,7 @@ Hochpaß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -538,7 +556,7 @@ Hochpass@Hochpaß|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -548,7 +566,7 @@ Transformation!Tiefpaß-Hochpaß|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -582,7 +600,7 @@ Ein Spezialfall der
 Möbius
 \noun default
 -Transformation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -607,7 +625,7 @@ noun{M{
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -703,7 +721,7 @@ Hochpaß-Toleranzschema (logarithmisch,
 
 \begin_layout Standard
 Da bei den Standardapproximationen die normierte Grenzfrequenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -728,8 +746,10 @@ Grenzfrequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf_{\textup{HP}}(\lps)=\frac{\poly{a}{\left(\mbig{\frac{1}{\lps}}\right)}{m}}{\poly{b}{\left(\mbig{\frac{1}{\lps}}\right)}{n}}\mperiod\]
+\begin_inset Formula 
+\[
+\trf_{\textup{HP}}(\lps)=\frac{\poly{a}{\left(\mbig{\frac{1}{\lps}}\right)}{m}}{\poly{b}{\left(\mbig{\frac{1}{\lps}}\right)}{n}}\mperiod
+\]
 
 \end_inset
 
@@ -749,8 +769,10 @@ Multipliziert man noch den Nenner mit
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf_{\textup{HP}}(\lps)=\lps^{n-m}\,\frac{a_{0}\lps^{m}+a_{1}\lps^{m-1}+\cdots+a_{m-1}\lps+a_{m}}{b_{0}\lps^{n}+b_{1}\lps^{n-1}+\cdots+b_{n-1}\lps+b_{n}}\label{eq:frqtf_hp_rational}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf_{\textup{HP}}(\lps)=\lps^{n-m}\,\frac{a_{0}\lps^{m}+a_{1}\lps^{m-1}+\cdots+a_{m-1}\lps+a_{m}}{b_{0}\lps^{n}+b_{1}\lps^{n-1}+\cdots+b_{n-1}\lps+b_{n}}\label{eq:frqtf_hp_rational}
+\end{equation}
 
 \end_inset
 
@@ -784,8 +806,10 @@ reference "eq:frqtf_hp_rational"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf_{\textup{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+\begin_inset Formula 
+\[
+\trf_{\textup{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}
+\]
 
 \end_inset
 
@@ -801,10 +825,12 @@ Einsetzen der Substitution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \trf_{\textup{HP}}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\lps}}-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\lps}}-\pn{\lps}{\nu})}\\
  & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(1-\lps\,\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(1-\lps\,\pn{\lps}{\nu})}\\
- & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\zn{\lps}{\mu}}}-\lps)}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\pn{\lps}{\nu}}}-\lps)}\end{align*}
+ & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\mbig{\frac{1}{\zn{\lps}{\mu}}}-\lps)}{\prod\limits _{\nu=1}^{n}(\mbig{\frac{1}{\pn{\lps}{\nu}}}-\lps)}
+\end{align*}
 
 \end_inset
 
@@ -830,7 +856,7 @@ ie
 
 \begin_layout Itemize
 Pole
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -840,7 +866,7 @@ Pol!der Übertragungsfunktion
 \end_inset
 
  und Nullstellen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -854,8 +880,10 @@ Nullstellen!der Übertragungsfunktion
 
 \begin_deeper
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\zn{\lps}{\textup{HP}}=\frac{1}{\zn{\lps}{\textup{LP}}},\qquad\pn{\lps}{\textup{HP}}=\frac{1}{\pn{\lps}{\textup{LP}}}\]
+\begin_inset Formula 
+\[
+\zn{\lps}{\textup{HP}}=\frac{1}{\zn{\lps}{\textup{LP}}},\qquad\pn{\lps}{\textup{HP}}=\frac{1}{\pn{\lps}{\textup{LP}}}
+\]
 
 \end_inset
 
@@ -877,7 +905,7 @@ es entsteht eine neue Nullstelle bei
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -904,8 +932,10 @@ resp
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-(-1)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\mperiod\]
+\begin_inset Formula 
+\[
+(-1)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\zn{\lps}{\mu}}{\prod\limits _{\nu=1}^{n}\pn{\lps}{\nu}}\mperiod
+\]
 
 \end_inset
 
@@ -914,7 +944,7 @@ resp
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -924,7 +954,7 @@ Filter!Hochpass@Hochpaß|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -934,7 +964,7 @@ Transformation!Tiefpaß-Hochpaß|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -955,7 +985,7 @@ Bandpaß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -965,7 +995,7 @@ Transformation!Tiefpaß-Bandpaß|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -975,7 +1005,7 @@ Bandpass@Bandpaß|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1067,8 +1097,10 @@ reference "tab:frqtf_overview"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\omega_{\textup{LP}}=Q\left(\frac{\omega_{\textup{BP}}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{\textup{BP}}}\right),\label{eq:frqtf_bp_map}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{\textup{LP}}=Q\left(\frac{\omega_{\textup{BP}}}{\omega_{0}}-\frac{\omega_{0}}{\omega_{\textup{BP}}}\right),\label{eq:frqtf_bp_map}
+\end{equation}
 
 \end_inset
 
@@ -1082,7 +1114,7 @@ anwendet.
 \end_inset
 
  nimmt in diesem Fall die Bedeutung einer Mittenfrequenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1096,7 +1128,7 @@ Bandpass@Bandpaß!Mittenfrequenz
 \end_inset
 
  bezeichnet man als Güte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1150,8 +1182,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{\textup{LP}}=Q\,\frac{\omega_{\textup{BP}}^{2}-\omega_{0}^{2}}{\omega_{0}\omega_{\textup{BP}}}=Q\,\frac{(\omega_{\textup{BP}}-\omega_{0})(\omega_{\textup{BP}}+\omega_{0})}{\omega_{0}\omega_{\textup{BP}}}\mperiod\]
+\begin_inset Formula 
+\[
+\omega_{\textup{LP}}=Q\,\frac{\omega_{\textup{BP}}^{2}-\omega_{0}^{2}}{\omega_{0}\omega_{\textup{BP}}}=Q\,\frac{(\omega_{\textup{BP}}-\omega_{0})(\omega_{\textup{BP}}+\omega_{0})}{\omega_{0}\omega_{\textup{BP}}}\mperiod
+\]
 
 \end_inset
 
@@ -1172,8 +1206,10 @@ Um auch für die Güte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{\textup{BP}}^{2}-\frac{\omega_{\textup{LP}}}{Q}\omega_{\textup{BP}}-1=0\]
+\begin_inset Formula 
+\[
+\omega_{\textup{BP}}^{2}-\frac{\omega_{\textup{LP}}}{Q}\omega_{\textup{BP}}-1=0
+\]
 
 \end_inset
 
@@ -1185,8 +1221,10 @@ die quadratische Lösungsformel (vorerst formal) an:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\omega_{\textup{BP}_{1,2}}=\frac{\omega_{\textup{LP}}}{2Q}\pm\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}\mperiod\label{eq:frqtf_bp_mapinv_helper}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{\textup{BP}_{1,2}}=\frac{\omega_{\textup{LP}}}{2Q}\pm\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}\mperiod\label{eq:frqtf_bp_mapinv_helper}
+\end{equation}
 
 \end_inset
 
@@ -1198,8 +1236,10 @@ An Hand der mehr anschaulichen Umformung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left(\omega_{\textup{BP}}-\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}=\left(\frac{\omega_{\textup{LP}}}{2Q}-1\right)\left(\frac{\omega_{\textup{LP}}}{2Q}-1\right)\]
+\begin_inset Formula 
+\[
+\left(\omega_{\textup{BP}}-\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}=\left(\frac{\omega_{\textup{LP}}}{2Q}-1\right)\left(\frac{\omega_{\textup{LP}}}{2Q}-1\right)
+\]
 
 \end_inset
 
@@ -1236,8 +1276,10 @@ reference "eq:frqtf_bp_mapinv_helper"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{\omega_{\textup{LP}}}{2Q}<\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}\]
+\begin_inset Formula 
+\[
+\frac{\omega_{\textup{LP}}}{2Q}<\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}
+\]
 
 \end_inset
 
@@ -1268,8 +1310,10 @@ eine der beiden Frequenzen
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\omega_{\textup{BP}_{1,2}}=\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}\:\pm\frac{\omega_{\textup{LP}}}{2Q}\mperiod\label{eq:frqtf_bp_mapinv}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{\textup{BP}_{1,2}}=\sqrt{\left(\frac{\omega_{\textup{LP}}}{2Q}\right)^{2}+1}\:\pm\frac{\omega_{\textup{LP}}}{2Q}\mperiod\label{eq:frqtf_bp_mapinv}
+\end{equation}
 
 \end_inset
 
@@ -1291,8 +1335,10 @@ Jede Frequenz des Tiefpasses wird demzufolge auf zwei neue Frequenzen abgebildet
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{g_{1,2}}=\sqrt{\left(\frac{1}{2Q}\right)^{2}+1}\:\pm\frac{1}{2Q}=\sqrt{\left(\frac{1}{2Q}\right)^{2}+1}\:\pm\frac{\Delta\!\omega}{2}\]
+\begin_inset Formula 
+\[
+\omega_{g_{1,2}}=\sqrt{\left(\frac{1}{2Q}\right)^{2}+1}\:\pm\frac{1}{2Q}=\sqrt{\left(\frac{1}{2Q}\right)^{2}+1}\:\pm\frac{\Delta\!\omega}{2}
+\]
 
 \end_inset
 
@@ -1367,8 +1413,10 @@ ie
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\omega_{g_{1}}\omega_{g_{2}}=1\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{g_{1}}\omega_{g_{2}}=1\mperiod
+\end{equation}
 
 \end_inset
 
@@ -1381,7 +1429,7 @@ Den Sinn,
 \end_inset
 
  als Gütedefinition
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1391,7 +1439,7 @@ Bandpass@Bandpaß!Guete@Güte
 \end_inset
 
  herzunehmen, unterstreicht folgende Formel für die absolute Bandbreite
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1408,8 +1456,10 @@ Bandpass@Bandpaß!Bandbreite
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\Delta\!\omega=\omega_{g_{2}}-\omega_{g_{1}}=\frac{1}{Q}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\Delta\!\omega=\omega_{g_{2}}-\omega_{g_{1}}=\frac{1}{Q}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -1466,8 +1516,10 @@ Da Pole und Nullstellen bei der Transformation nach dem gleichen Schema
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf_{\textup{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}\]
+\begin_inset Formula 
+\[
+\trf_{\textup{LP}}(\lps)=\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}(\lps-\zn{\lps}{\mu})}{\prod\limits _{\nu=1}^{n}(\lps-\pn{\lps}{\nu})}
+\]
 
 \end_inset
 
@@ -1487,10 +1539,12 @@ zuerst die
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \trf_{\textup{BP}}(\lps) & =\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q\left(\lps+\mbig{\frac{1}{\lps}}\right)-\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q\left(\lps+\mbig{\frac{1}{\lps}}\right)-\pn{\lps}{\nu}\right]}\\
  & =\lps^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left[Q(1+\lps^{2})-\lps\,\zn{\lps}{\mu}\right]}{\prod\limits _{\nu=1}^{n}\left[Q(1+\lps^{2})-\lps\,\pn{\lps}{\nu}\right]}\\
- & =\left(\frac{\lps}{Q}\right)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left(\lps^{2}-\mbig{\frac{\zn{\lps}{\mu}}{Q}}\lps+1\right)}{\prod\limits _{\nu=1}^{n}\left(\lps^{2}-\mbig{\frac{\pn{\lps}{\nu}}{Q}}\lps+1\right)}\end{align*}
+ & =\left(\frac{\lps}{Q}\right)^{n-m}\,\frac{a_{m}}{b_{n}}\cdot\frac{\prod\limits _{\mu=1}^{m}\left(\lps^{2}-\mbig{\frac{\zn{\lps}{\mu}}{Q}}\lps+1\right)}{\prod\limits _{\nu=1}^{n}\left(\lps^{2}-\mbig{\frac{\pn{\lps}{\nu}}{Q}}\lps+1\right)}
+\end{align*}
 
 \end_inset
 
@@ -1509,8 +1563,10 @@ Aus jedem Linearfaktor der Tiefpaß-Übertragungsfunktion entspringen (wegen
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\zn{\lps}{\textup{BP}_{1,2}}=\frac{\zn{\lps}{\textup{LP}}}{2Q}\pm\sqrt{\left(\frac{\zn{\lps}{\textup{LP}}}{2Q}\right)^{2}-1},\quad\mbox{mit}\quad\zn{\lps}{\textup{BP}_{1}}\zn{\lps}{\textup{BP}_{2}}=1\]
+\begin_inset Formula 
+\[
+\zn{\lps}{\textup{BP}_{1,2}}=\frac{\zn{\lps}{\textup{LP}}}{2Q}\pm\sqrt{\left(\frac{\zn{\lps}{\textup{LP}}}{2Q}\right)^{2}-1},\quad\mbox{mit}\quad\zn{\lps}{\textup{BP}_{1}}\zn{\lps}{\textup{BP}_{2}}=1
+\]
 
 \end_inset
 
@@ -1523,7 +1579,7 @@ Zusammenfassend kann festgestellt werden, daß:
 
 \begin_layout Itemize
 jede Nullstelle
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1533,7 +1589,7 @@ Nullstellen!der Übertragungsfunktion
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1547,9 +1603,11 @@ Pol!der Übertragungsfunktion
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \zn{\lps}{\textup{BP}_{1,2}} & =\frac{1}{2Q}\left(\zn{\lps}{\textup{LP}}\pm\sqrt{\zn[2]{\lps}{\textup{LP}}-4Q^{2}}\,\right)\\
-\pn{\lps}{\textup{BP}_{1,2}} & =\frac{1}{2Q}\left(\pn{\lps}{\textup{LP}}\pm\sqrt{\pn[2]{\lps}{\textup{LP}}-4Q^{2}}\,\right)\end{align*}
+\pn{\lps}{\textup{BP}_{1,2}} & =\frac{1}{2Q}\left(\pn{\lps}{\textup{LP}}\pm\sqrt{\pn[2]{\lps}{\textup{LP}}-4Q^{2}}\,\right)
+\end{align*}
 
 \end_inset
 
@@ -1593,7 +1651,7 @@ die Transformation zu einer neuen Nullstelle
 
 \begin_layout Itemize
 als Vorfaktor
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1607,8 +1665,10 @@ Vorfaktor
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{a_{m}}{b_{n}}Q^{-(n-m)}\]
+\begin_inset Formula 
+\[
+\frac{a_{m}}{b_{n}}Q^{-(n-m)}
+\]
 
 \end_inset
 
@@ -1621,7 +1681,7 @@ wirkt.
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1631,7 +1691,7 @@ Filter!Bandpass@Bandpaß|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1641,7 +1701,7 @@ Bandpass@Bandpaß|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1658,7 +1718,7 @@ Bandsperre
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1668,7 +1728,7 @@ Bandsperre|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1678,7 +1738,7 @@ Transformation!Tiefpaß-Bandsperre|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1692,8 +1752,10 @@ Zur Bandsperre bleibt nicht soviel zu sagen -- vor allem weil sich diese
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\lps_{\textup{LP}} & =\frac{1}{\lps_{\textup{HP}}}, & \lps_{\textup{HP}} & =Q\left(\lps_{\textup{BS}}+\frac{1}{\lps_{\textup{BS}}}\right)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\lps_{\textup{LP}} & =\frac{1}{\lps_{\textup{HP}}}, & \lps_{\textup{HP}} & =Q\left(\lps_{\textup{BS}}+\frac{1}{\lps_{\textup{BS}}}\right)
+\end{xalignat*}
 
 \end_inset
 
@@ -1717,8 +1779,10 @@ reference "fig:frqtf_bs"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\lps_{\textup{LP}} & =\frac{1}{Q\left(\lps_{\textup{BS}}+\lps_{\textup{BS}}^{-1}\right)}, & \omega_{\textup{LP}} & =\frac{1}{Q\left(\omega_{\textup{BS}}^{-1}-\omega_{\textup{BS}}\right)}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\lps_{\textup{LP}} & =\frac{1}{Q\left(\lps_{\textup{BS}}+\lps_{\textup{BS}}^{-1}\right)}, & \omega_{\textup{LP}} & =\frac{1}{Q\left(\omega_{\textup{BS}}^{-1}-\omega_{\textup{BS}}\right)}
+\end{xalignat*}
 
 \end_inset
 
@@ -1808,8 +1872,10 @@ reference "eq:frqtf_bp_mapinv"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\omega_{\textup{BS}_{1,2}}=\sqrt{1+\left(\frac{1}{2Q\,\omega_{\textup{LP}}}\right)^{2}}\:\pm\frac{1}{2Q\,\omega_{\textup{LP}}}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{\textup{BS}_{1,2}}=\sqrt{1+\left(\frac{1}{2Q\,\omega_{\textup{LP}}}\right)^{2}}\:\pm\frac{1}{2Q\,\omega_{\textup{LP}}}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -1825,8 +1891,10 @@ Für die aus der Tiefpaß-Frequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\omega_{g_{1,2}} & =\sqrt{1+\left(\frac{1}{2Q}\right)^{2}}\:\pm\frac{1}{2Q}, & \qquad\Delta\!\omega & =\frac{1}{Q}\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\omega_{g_{1,2}} & =\sqrt{1+\left(\frac{1}{2Q}\right)^{2}}\:\pm\frac{1}{2Q}, & \qquad\Delta\!\omega & =\frac{1}{Q}
+\end{align*}
 
 \end_inset
 
@@ -1834,7 +1902,7 @@ Für die aus der Tiefpaß-Frequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1844,7 +1912,7 @@ Filter!Bandsperre|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1854,7 +1922,7 @@ Transformation!Tiefpaß-Bandsperre|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1867,7 +1935,7 @@ Bandsperre|)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

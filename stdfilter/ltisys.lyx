@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -10,20 +10,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !bh
 \paperfontsize default
 \spacing single
@@ -32,9 +40,18 @@ emphasized
 \use_geometry false
 \use_amsmath 1
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \leftmargin 2cm
 \rightmargin 2cm
 \secnumdepth 3
@@ -47,8 +64,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -67,7 +85,7 @@ Version $Id$
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -147,7 +165,7 @@ Linearität
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -157,7 +175,7 @@ LTI-System!lineares
 \end_inset
 
 Ein System ist linear, wenn das Superpositionsprinzip
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -184,13 +202,15 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mit}\quad y_{i}=f_{\textrm{System}}(x_{i})\mperiod\]
+\begin_inset Formula 
+\[
+x:=x_{1}+x_{2}+\cdots\quad\Rightarrow\quad y:=y_{1}+y_{2}+\cdots\qquad\textrm{mit}\quad y_{i}=f_{\textrm{System}}(x_{i})\mperiod
+\]
 
 \end_inset
 
  Für ein LTI-System berechnet sich die Ausgangsfunktion als Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -200,7 +220,7 @@ Faltung
 \end_inset
 
  der Impulsantwort
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -226,8 +246,10 @@ description "Impulsantwort"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y(t)=(x*\irf)(t)=\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\label{eq:ltisys_linearity_conv}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y(t)=(x*\irf)(t)=\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\label{eq:ltisys_linearity_conv}
+\end{equation}
 
 \end_inset
 
@@ -239,8 +261,10 @@ weshalb die Summe durch
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-y(t)=\int_{-\infty}^{\infty}x_{1}(\tau)\irf(t-\tau)\tic\tau+\int_{-\infty}^{\infty}x_{2}(\tau)\irf(t-\tau)\tic\tau+\cdots=y_{1}(t)+y_{2}(t)+y_{3}(t)+\cdots\]
+\begin_inset Formula 
+\[
+y(t)=\int_{-\infty}^{\infty}x_{1}(\tau)\irf(t-\tau)\tic\tau+\int_{-\infty}^{\infty}x_{2}(\tau)\irf(t-\tau)\tic\tau+\cdots=y_{1}(t)+y_{2}(t)+y_{3}(t)+\cdots
+\]
 
 \end_inset
 
@@ -276,7 +300,7 @@ Stabilität
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -286,7 +310,7 @@ LTI-System!stabiles
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -354,7 +378,7 @@ reference "eq:ltisys_linearity_conv"
 \end_inset
 
  absolute Konvergenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -381,7 +405,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Und den Mittelwertsatz der Integralrechnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -403,8 +427,10 @@ Integral!rechnung@-rechnung!Mittelwertsatz der
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-|y(t)| & =\left|\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\right|\leq\int_{-\infty}^{\infty}|x(\tau)|\,|\irf(t-\tau)|\tic\tau\leq M\int_{-\infty}^{\infty}|\irf(t-\tau)|\tic\tau\end{align*}
+\begin_inset Formula 
+\begin{align*}
+|y(t)| & =\left|\int_{-\infty}^{\infty}x(\tau)\irf(t-\tau)\tic\tau\right|\leq\int_{-\infty}^{\infty}|x(\tau)|\,|\irf(t-\tau)|\tic\tau\leq M\int_{-\infty}^{\infty}|\irf(t-\tau)|\tic\tau
+\end{align*}
 
 \end_inset
 
@@ -413,7 +439,7 @@ Integral!rechnung@-rechnung!Mittelwertsatz der
 
 \begin_layout Standard
 Im Zeitbereich fordert man deshalb für die Impulsantwort
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -426,8 +452,10 @@ LTI-System!Impulsantwort
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty,\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty,
+\end{equation}
 
 \end_inset
 
@@ -509,8 +537,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-|\trf(\ji\omega)| & =\left|\int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|\irf(t)\vphantom{\expf^{-\ji\omega t}}\right|\,\left|\expf^{-\ji\omega t}\right|\tic t\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty\end{align*}
+\begin_inset Formula 
+\begin{align*}
+|\trf(\ji\omega)| & =\left|\int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|\irf(t)\vphantom{\expf^{-\ji\omega t}}\right|\,\left|\expf^{-\ji\omega t}\right|\tic t\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t<\infty
+\end{align*}
 
 \end_inset
 
@@ -526,8 +556,10 @@ Aus dem Mittelwertsatz der Integralrechnung
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)\]
+\begin_inset Formula 
+\[
+\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)
+\]
 
 \end_inset
 
@@ -539,9 +571,11 @@ ergeben sich die Relationen:
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \trf(\ji\omega) & = & \int_{-\infty}^{\infty}\irf(t)\expf^{-\ji\omega t}\tic t=\expf^{-\ji\omega\xi}\int_{-\infty}^{\infty}\irf(t)\tic t,\qquad\xi\in(-\infty,\infty)\\
-|\trf(\ji\omega)| & \leq & \left|\int_{-\infty}^{\infty}\irf(t)\tic t\right|\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t\end{eqnarray*}
+|\trf(\ji\omega)| & \leq & \left|\int_{-\infty}^{\infty}\irf(t)\tic t\right|\leq\int_{-\infty}^{\infty}|\irf(t)|\tic t
+\end{eqnarray*}
 
 \end_inset
 
@@ -559,7 +593,7 @@ Eine davon abgeleitete Forderung bei rationaler
 \end_inset
 
 -Übertragungsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -580,7 +614,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -629,8 +663,10 @@ description "\\noun{Laplace}-Rücktransformation"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{\poly{a}{\lps}{m}}{\poly{b}{\lps}{n}}\label{eq:ltisys_stability_transfer_rational}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\frac{\poly{a}{\lps}{m}}{\poly{b}{\lps}{n}}\label{eq:ltisys_stability_transfer_rational}
+\end{equation}
 
 \end_inset
 
@@ -643,7 +679,7 @@ ist die, daß alle Polstellen negative Realteile aufweisen müssen (
 Hurwitz
 \noun default
 -Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -672,7 +708,7 @@ noun{Hurwitz}
 \end_inset
 
 ) gewährleistet werden, daß die Partialbruchzerlegung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -685,14 +721,16 @@ Partialbruchzerlegung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots\label{eq:ltisys_stability_partial_propfrac}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots\label{eq:ltisys_stability_partial_propfrac}
+\end{equation}
 
 \end_inset
 
 bei der Rücktransformation in den Zeitbereich zu einer beschränkten Impulsantwor
 t
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -733,8 +771,10 @@ key "Koerner:1988"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots\label{eq:ltisys_stability_irf_propfrac}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots\label{eq:ltisys_stability_irf_propfrac}
+\end{equation}
 
 \end_inset
 
@@ -746,8 +786,10 @@ und wegen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{t\rightarrow\infty}\irf(t)=\lim_{\lps\rightarrow0}\lps\,\trf(\lps)=0\]
+\begin_inset Formula 
+\[
+\lim_{t\rightarrow\infty}\irf(t)=\lim_{\lps\rightarrow0}\lps\,\trf(\lps)=0
+\]
 
 \end_inset
 
@@ -768,7 +810,7 @@ Sollte jedoch
 \end_inset
 
  in die Summe aus einer echt gebrochen rationalen Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -830,9 +872,11 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \trf(\lps) & =\frac{\sum\limits _{i=0}^{n-1}\left(a_{i}-\mbig{\frac{a_{n}}{b_{n}}}b_{i}\right)\,\lps^{i}}{\sum\limits _{k=0}^{n}b_{k}\lps^{k}}+\cdots+\frac{a_{n}}{b_{n}}\label{eq:ltisys_stability_trf_propsum}\\
- & =\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots+\frac{a_{n}}{b_{n}}\nonumber \end{align}
+ & =\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots+\frac{a_{n}}{b_{n}}\nonumber 
+\end{align}
 
 \end_inset
 
@@ -848,8 +892,10 @@ Beispiel: Die Übertragungsfunktion eines Hochpaß' erster Ordnung
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\trf(\lps)=\frac{\lps R_{1}C}{1+\lps(R_{1}+R_{2})C}\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{\lps R_{1}C}{1+\lps(R_{1}+R_{2})C}
+\]
 
 \end_inset
 
@@ -861,8 +907,10 @@ kann auch als
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}\left[1-\frac{1}{1+\lps(R_{1}+R_{2})C}\right]\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}\left[1-\frac{1}{1+\lps(R_{1}+R_{2})C}\right]
+\]
 
 \end_inset
 
@@ -906,8 +954,10 @@ Wobei es hierbei irrelevant ist, ob der Real- oder Imaginärteil (oder auch
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\lim_{\lps\rightarrow\infty}\trf(\lps)=\frac{a_{n}}{b_{n}}=\trf(\infty)\label{eq:ltisys_stability_trf_asymptotic}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{\lps\rightarrow\infty}\trf(\lps)=\frac{a_{n}}{b_{n}}=\trf(\infty)\label{eq:ltisys_stability_trf_asymptotic}
+\end{equation}
 
 \end_inset
 
@@ -923,8 +973,10 @@ Für das Beispiel gilt:
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\trf(\infty)=\lim_{\lps\rightarrow\infty}\trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}\]
+\begin_inset Formula 
+\[
+\trf(\infty)=\lim_{\lps\rightarrow\infty}\trf(\lps)=\frac{R_{1}}{R_{1}+R_{2}}
+\]
 
 \end_inset
 
@@ -949,8 +1001,10 @@ Nimmt man noch die
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots+\trf(\infty)\label{eq:ltisys_stability_partial_genfrac}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\frac{c_{1}}{(\lps-\pn{\lps}{1})^{\mu_{1}}}+\frac{c_{2}}{(\lps-\pn{\lps}{2})^{\mu_{2}}}+\cdots+\trf(\infty)\label{eq:ltisys_stability_partial_genfrac}
+\end{equation}
 
 \end_inset
 
@@ -959,7 +1013,7 @@ Nimmt man noch die
 
 \begin_layout Standard
 die verallgemeinerte Impulsantwort
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -980,7 +1034,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1011,8 +1065,10 @@ Auch in diesem Fall gilt
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots+\trf(\infty)\,\dirac(t)\mperiod\label{eq:ltisys_stability_irf_genfrac}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\irf(t)=\frac{c_{1}}{(\mu_{1}-1)!}t^{\mu_{1}-1}\expf^{\pn{\lps}{1}t}+\frac{c_{2}}{(\mu_{2}-1)!}t^{\mu_{2}-1}\expf^{\pn{\lps}{2}t}+\cdots+\trf(\infty)\,\dirac(t)\mperiod\label{eq:ltisys_stability_irf_genfrac}
+\end{equation}
 
 \end_inset
 
@@ -1030,7 +1086,7 @@ Kausalität
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1040,7 +1096,7 @@ LTI-System!kausales
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1110,7 +1166,7 @@ status open
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 ft}{Fourier}
 \end_layout
@@ -1133,8 +1189,10 @@ Der geradlinigste Ansatz formuliert das Verschwinden des Signals
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\usf(-t)\, y(t)\equiv0\mperiod\]
+\begin_inset Formula 
+\[
+\usf(-t)\, y(t)\equiv0\mperiod
+\]
 
 \end_inset
 
@@ -1148,7 +1206,7 @@ Fourier
 \noun default
 -Transformation dieser (notwendigen, für realisierbare Systeme nicht hinreichend
 en) Bedingung in den Bildbereich führt mit Hilfe des Faltungssatzes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1188,8 +1246,10 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{Y(\ji\omega)}{2\pi}*\left[\pi\dirac(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\ji\omega)+\ji\frac{1}{\pi\omega}*Y(\ji\omega)\right]=0\mperiod\]
+\begin_inset Formula 
+\[
+\frac{Y(\ji\omega)}{2\pi}*\left[\pi\dirac(-\omega)+\ji\frac{1}{\omega}\right]=\frac{1}{2}\left[Y(\ji\omega)+\ji\frac{1}{\pi\omega}*Y(\ji\omega)\right]=0\mperiod
+\]
 
 \end_inset
 
@@ -1201,9 +1261,11 @@ Separiert man Real- und Imaginärteil, dann muß für ein kausales Signal
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \reop[Y(\ji\omega)]-\frac{1}{\pi\omega}*\imop[Y(\ji\omega)] & =0\\
-\imop[Y(\ji\omega)]+\frac{1}{\pi\omega}*\reop[Y(\ji\omega)] & =0\end{align*}
+\imop[Y(\ji\omega)]+\frac{1}{\pi\omega}*\reop[Y(\ji\omega)] & =0
+\end{align*}
 
 \end_inset
 
@@ -1224,9 +1286,11 @@ gelten.
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat}{3}
+\begin_inset Formula 
+\begin{alignat}{3}
 \reop Y(\ji\omega) & =\frac{1}{\pi\omega}*\imop Y(\ji\omega) &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\Omega)}{\omega-\Omega}\tic\Omega &  & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\} \label{eq:ltisys_hilbert_real}\\
--\imop Y(\ji\omega) & =\frac{1}{\pi\omega}*\reop Y(\ji\omega) &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega &  & =\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_hilbert_imag}\end{alignat}
+-\imop Y(\ji\omega) & =\frac{1}{\pi\omega}*\reop Y(\ji\omega) &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\Omega)}{\omega-\Omega}\tic\Omega &  & =\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_hilbert_imag}
+\end{alignat}
 
 \end_inset
 
@@ -1244,7 +1308,7 @@ Fourier
 Hilbert
 \noun default
 -Transformation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1267,7 +1331,7 @@ noun{Hilbert}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -1295,8 +1359,10 @@ noun{Hilbert}-Transformation}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\mathcal{H}\{f(x)\}=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi=\frac{1}{\pi x}*f(x)\]
+\begin_inset Formula 
+\[
+\mathcal{H}\{f(x)\}=\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\xi)}{x-\xi}\tic\xi=\frac{1}{\pi x}*f(x)
+\]
 
 \end_inset
 
@@ -1366,7 +1432,7 @@ Dirac
 \begin_layout Standard
 Ein anderer, aber sehr einfacher Ansatz geht davon aus, daß grundsätzlich
  jede Zeitfunktion in eine gerade und eine ungerade Teilfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1376,7 +1442,7 @@ Funktion!gerade
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1418,8 +1484,10 @@ key "Fritzsche:1985"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t),\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t),
+\end{xalignat*}
 
 \end_inset
 
@@ -1589,9 +1657,11 @@ resp
 \end_inset
 
  kann folgendermaßen vereinfacht werden:
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 y(t) & =2y_{g}(t)=2y_{u}(t), & \qquad t & \geq0\\
-y(-t) & =2y_{g}(t)=-2y_{u}(t), & \qquad t & <0\mperiod\end{alignat*}
+y(-t) & =2y_{g}(t)=-2y_{u}(t), & \qquad t & <0\mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -1608,8 +1678,10 @@ Hieraus läßt sich die Abhängigkeit zwischen geradem und ungeradem Anteil
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-y_{g}(t) & =\sign(t)y_{u}(t) & y_{u}(t) & =\sign(t)y_{g}(t)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+y_{g}(t) & =\sign(t)y_{u}(t) & y_{u}(t) & =\sign(t)y_{g}(t)
+\end{xalignat*}
 
 \end_inset
 
@@ -1651,7 +1723,7 @@ reference "sec:fourier_def"
 \end_inset
 
 ), so führt Anwendung des Faltungssatzes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1672,10 +1744,12 @@ Faltungssatz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \reop Y(\ji\omega) & =\frac{2}{\ji\omega}*\ji\frac{\imop Y(\ji\omega)}{2\pi} & \ji\,\imop Y(\ji\omega) & =\frac{2}{\ji\omega}*\frac{\reop Y(\ji\omega)}{2\pi}\\
 \reop Y(\ji\omega) & =\frac{1}{\pi\omega}*\imop Y(\ji\omega) & \imop Y(\ji\omega) & =-\frac{1}{\pi\omega}*\reop Y(\ji\omega)\\
-\reop Y(\ji\omega) & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\}  & \imop Y(\ji\omega) & =-\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod\end{xalignat*}
+\reop Y(\ji\omega) & =\mathcal{H}\left\{ \imop Y(\ji\omega)\right\}  & \imop Y(\ji\omega) & =-\mathcal{H}\left\{ \reop Y(\ji\omega)\right\} \mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -1690,7 +1764,7 @@ status collapsed
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 lt}{
 \backslash
@@ -1703,7 +1777,7 @@ noun{Laplace}}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1726,7 +1800,7 @@ noun{Laplace}!-Transformation
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1882,8 +1956,10 @@ key "Mildenberger:1981"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-Y(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{Y(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega,\qquad\reop\lps>0\label{eq:ltisys_causal_boundary}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Y(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{Y(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega,\qquad\reop\lps>0\label{eq:ltisys_causal_boundary}
+\end{equation}
 
 \end_inset
 
@@ -1900,8 +1976,10 @@ chkeiten, welche für
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-Y(\lps)=\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop Y(\Omega)}{\lps-\Omega}\tic\Omega=\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop Y(\Omega)}{\lps-\Omega}\tic\Omega\label{eq:ltisys_causal_boundary_component}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Y(\lps)=\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop Y(\Omega)}{\lps-\Omega}\tic\Omega=\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop Y(\Omega)}{\lps-\Omega}\tic\Omega\label{eq:ltisys_causal_boundary_component}
+\end{equation}
 
 \end_inset
 
@@ -1959,8 +2037,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y(t)=2\lt^{-1}\left\{ \frac{1}{\lps}\right\} \,\lt^{-1}\left\{ F_{1}(\lps)\right\} =2\usf(t)\lt^{-1}\left\{ F_{1}(\lps)\right\} \label{eq:ltisys_causal_lt_time}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y(t)=2\lt^{-1}\left\{ \frac{1}{\lps}\right\} \,\lt^{-1}\left\{ F_{1}(\lps)\right\} =2\usf(t)\lt^{-1}\left\{ F_{1}(\lps)\right\} \label{eq:ltisys_causal_lt_time}
+\end{equation}
 
 \end_inset
 
@@ -1970,7 +2050,7 @@ y(t)=2\lt^{-1}\left\{ \frac{1}{\lps}\right\} \,\lt^{-1}\left\{ F_{1}(\lps)\right
 \begin_layout Standard
 Diese Beziehung enthält das wesentliche Resultat: wegen der Multiplikation
  mit dem Einheitssprung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2014,7 +2094,7 @@ description "Einheitssprung (\\noun{Heaviside}-Funktion)"
 \end_inset
 
  (Kausalität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2129,9 +2209,11 @@ key "Bracewell:2003"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 Y(\ji\omega) & =\reop[Y(\ji\omega)]-\frac{\ji}{\pi\omega}*\reop[Y(\ji\omega)] &  & =\frac{1}{\pi\omega}*\imop[Y(\ji\omega)]+\ji\imop[Y(\ji\omega)]\\
- & =\left[\dirac(\omega)-\frac{\ji}{\pi\omega}\right]*\reop Y(\ji\omega) &  & =\left[\ji\,\dirac(\omega)+\frac{1}{\pi\omega}\right]*\imop Y(\ji\omega)\mperiod\end{alignat*}
+ & =\left[\dirac(\omega)-\frac{\ji}{\pi\omega}\right]*\reop Y(\ji\omega) &  & =\left[\ji\,\dirac(\omega)+\frac{1}{\pi\omega}\right]*\imop Y(\ji\omega)\mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -2148,9 +2230,11 @@ Durch Anwendung des Faltungssatzes und (wieder) der Transformation für den
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 Y(\ji\omega) & =\frac{1}{\pi}\left[\pi\dirac(\omega)+\frac{1}{\ji\omega}\right]*\reop Y(\ji\omega) &  & =\frac{\ji}{\pi}\left[\pi\dirac(\omega)+\frac{1}{\ji\omega}\right]*\imop Y(\ji\omega)\\
- & =\reop[Y(\ji\omega)]-\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\ji\Omega)}{\omega-\Omega}\tic\Omega &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\ji\Omega)}{\omega-\Omega}\tic\Omega+\ji\imop[Y(\ji\omega)]\end{alignat*}
+ & =\reop[Y(\ji\omega)]-\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{\reop Y(\ji\Omega)}{\omega-\Omega}\tic\Omega &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\imop Y(\ji\Omega)}{\omega-\Omega}\tic\Omega+\ji\imop[Y(\ji\omega)]
+\end{alignat*}
 
 \end_inset
 
@@ -2162,8 +2246,10 @@ erhält man für die Zeitfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
-y(t) & =2\usf(t)\ft^{-1}\left\{ \reop Y(\ji\omega)\right\}  &  & =2\ji\usf(t)\,\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} \mperiod\end{alignat*}
+\begin_inset Formula 
+\begin{alignat*}{2}
+y(t) & =2\usf(t)\ft^{-1}\left\{ \reop Y(\ji\omega)\right\}  &  & =2\ji\usf(t)\,\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} \mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -2206,8 +2292,10 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_ftinv}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_ftinv}
+\end{equation}
 
 \end_inset
 
@@ -2217,7 +2305,7 @@ y(t)=2\ft^{-1}\left\{ \reop Y(\ji\omega)\right\} =2\ji\,\ft^{-1}\left\{ \imop Y(
 \begin_layout Standard
 Die jeweils andere Komponente ist faktisch redundant, was solche Transformatione
 n wie die Cosinus- oder Sinus-Transformation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2227,7 +2315,7 @@ Transformation!Cosinus-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2237,7 +2325,7 @@ Transformation!Sinus-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2247,7 +2335,7 @@ Sinus-Transformation
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2293,9 +2381,11 @@ htigt.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 y(t) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\reop[Y(\ji\omega)]\expf^{\ji\omega t}\tic\omega=\frac{2}{\pi}\int_{0}^{\infty}\reop[Y(\ji\omega)]\cos(\omega t)\tic\omega\\
- & =\frac{\ji}{\pi}\int_{-\infty}^{\infty}\imop[Y(\ji\omega)]\expf^{\ji\omega t}\tic\omega=-\frac{2}{\pi}\int_{0}^{\infty}\imop[Y(\ji\omega)]\sin(\omega t)\tic\omega\end{align*}
+ & =\frac{\ji}{\pi}\int_{-\infty}^{\infty}\imop[Y(\ji\omega)]\expf^{\ji\omega t}\tic\omega=-\frac{2}{\pi}\int_{0}^{\infty}\imop[Y(\ji\omega)]\sin(\omega t)\tic\omega
+\end{align*}
 
 \end_inset
 
@@ -2379,8 +2469,10 @@ Laplace
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-y(t)=2\lt^{-1}\left\{ \reop Y(\lps)\right\} =2\ji\lt^{-1}\left\{ \imop Y(\lps)\right\} \end{equation}
+\begin_inset Formula 
+\begin{equation}
+y(t)=2\lt^{-1}\left\{ \reop Y(\lps)\right\} =2\ji\lt^{-1}\left\{ \imop Y(\lps)\right\} 
+\end{equation}
 
 \end_inset
 
@@ -2392,7 +2484,7 @@ Integralsätze
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2475,7 +2567,7 @@ status collapsed
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 lt}{
 \backslash
@@ -2508,9 +2600,11 @@ reference "eq:ltisys_causal_boundary"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \trf(\lps) & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\lps+\ji\Omega)\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\\
- & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\lps\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega+\frac{\ji}{2\pi}\int_{-\infty}^{\infty}\frac{\Omega\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\mperiod\end{eqnarray*}
+ & = & \frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\lps\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega+\frac{\ji}{2\pi}\int_{-\infty}^{\infty}\frac{\Omega\trf(\ji\Omega)}{\lps^{2}+\Omega^{2}}\tic\Omega\mperiod
+\end{eqnarray*}
 
 \end_inset
 
@@ -2595,8 +2689,10 @@ so ergibt sich im
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\trf(\lps)=\frac{1}{\pi}\int_{0}^{\infty}\frac{\lps\reop[\trf(\ji\Omega)]-\Omega\imop[\trf(\ji\Omega)]}{\lps^{2}+\Omega^{2}}\tic\Omega,\qquad\reop\lps>0\mperiod\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{1}{\pi}\int_{0}^{\infty}\frac{\lps\reop[\trf(\ji\Omega)]-\Omega\imop[\trf(\ji\Omega)]}{\lps^{2}+\Omega^{2}}\tic\Omega,\qquad\reop\lps>0\mperiod
+\]
 
 \end_inset
 
@@ -2637,9 +2733,11 @@ key "Wunsch:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \trf(\lps) & =\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]+\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
- & =\frac{\reop[\trf(\lps)]}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+ & =\frac{\reop[\trf(\lps)]}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega
+\end{align*}
 
 \end_inset
 
@@ -2659,8 +2757,10 @@ und nimmt die für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\reop[\trf(\lps)]+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\reop[\trf(\lps)]+\frac{1}{\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega
+\]
 
 \end_inset
 
@@ -2695,10 +2795,12 @@ Und für den Realteil
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]+\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
  & =\frac{\imop[\trf(\lps)]}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc\Omega}{\lps-\Omega}+\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\\
-\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega
+\end{align*}
 
 \end_inset
 
@@ -2711,9 +2813,11 @@ Und für den Realteil
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \imop\trf(\lps) & =-\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\reop[\trf(\Omega)]-\reop[\trf(\lps)]}{\lps-\Omega}\tic\Omega,\qquad\reop\lps>0\\
-\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega\end{align*}
+\reop\trf(\lps) & =\frac{1}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{\imop[\trf(\Omega)]-\imop[\trf(\lps)]}{\lps-\Omega}\tic\Omega
+\end{align*}
 
 \end_inset
 
@@ -2729,7 +2833,7 @@ status collapsed
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 ji
 \backslash
@@ -2799,8 +2903,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\ji\omega)=\trf(\ji\omega)*\frac{1}{\ji\omega\pi}=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_int_infty}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\ji\omega)=\trf(\ji\omega)*\frac{1}{\ji\omega\pi}=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_int_infty}
+\end{equation}
 
 \end_inset
 
@@ -2817,8 +2923,10 @@ Mit dem Ziel den Nenner des Integranden zu einer geraden (oder ungeraden)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\ji\omega)=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{(\omega+\Omega)\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\]
+\begin_inset Formula 
+\[
+\trf(\ji\omega)=\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{(\omega+\Omega)\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega
+\]
 
 \end_inset
 
@@ -2842,8 +2950,10 @@ Dabei verschwinden die Integrale über
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\ji\omega)=\frac{2}{\pi\ji}\vp\int_{0}^{\infty}\frac{\omega\reop[\trf(\ji\Omega)]+\ji\Omega\imop[\trf(\ji\Omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_int_even}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\ji\omega)=\frac{2}{\pi\ji}\vp\int_{0}^{\infty}\frac{\omega\reop[\trf(\ji\Omega)]+\ji\Omega\imop[\trf(\ji\Omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_int_even}
+\end{equation}
 
 \end_inset
 
@@ -2910,9 +3020,11 @@ Beide Gleichungen bestätigen augenscheinlich
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \reop\trf(\ji\omega) & =\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_even}\\
-\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\mperiod\label{eq:ltisys_causal_imint_even}\end{align}
+\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega\mperiod\label{eq:ltisys_causal_imint_even}
+\end{align}
 
 \end_inset
 
@@ -2928,8 +3040,10 @@ Mit
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
-\frac{2\omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}+\frac{1}{\omega+\Omega} & \frac{2\Omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}-\frac{1}{\omega+\Omega}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\frac{2\omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}+\frac{1}{\omega+\Omega} & \frac{2\Omega}{\omega^{2}-\Omega^{2}} & =\frac{1}{\omega-\Omega}-\frac{1}{\omega+\Omega}
+\end{xalignat*}
 
 \end_inset
 
@@ -2941,9 +3055,11 @@ kann man den Beweis relativ leicht umkehren.
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{alignat*}{3}
+\begin_inset Formula 
+\begin{alignat*}{3}
 \frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega+\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)-\trf(-\ji\omega)}{2} &  & =\ji\,\imop[\trf(\ji\omega)]\\
-\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\Omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)+\trf(-\ji\omega)}{2} &  & =\reop[\trf(\ji\omega)]\end{alignat*}
+\frac{1}{\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\Omega\,\trf(\ji\Omega)}{\omega^{2}-\Omega^{2}}\tic\Omega & =\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\vp\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\omega+\Omega}\tic\Omega &  & =\frac{\trf(\ji\omega)+\trf(-\ji\omega)}{2} &  & =\reop[\trf(\ji\omega)]
+\end{alignat*}
 
 \end_inset
 
@@ -2980,7 +3096,7 @@ key "Bode:1945"
 \end_inset
 
  zurückgehen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3003,7 +3119,7 @@ noun{Bode}!Integralsaetze@Integralsätze
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3075,9 +3191,11 @@ Der Summand
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \reop\trf(\ji\omega) & =\trf(\infty)+\frac{2}{\pi}\vp\int_{0}^{\infty}\frac{\Omega\imop[\trf(\ji\Omega)]-\omega\imop[\trf(\ji\omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_reint_infty}\\
-\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop[\trf(\ji\Omega)]-\reop[\trf(\ji\omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_imint_infty}\end{align}
+\imop\trf(\ji\omega) & =-\frac{2\omega}{\pi}\vp\int_{0}^{\infty}\frac{\reop[\trf(\ji\Omega)]-\reop[\trf(\ji\omega)]}{\omega^{2}-\Omega^{2}}\tic\Omega\label{eq:ltisys_causal_imint_infty}
+\end{align}
 
 \end_inset
 
@@ -3168,8 +3286,10 @@ key "Seron:1997"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\vp\int_{0}^{\infty}\frac{2\omega}{\omega^{2}-\Omega^{2}}\tic\Omega=\vp\int_{0}^{\infty}\frac{1}{\Omega+\omega}-\frac{1}{\Omega-\omega}\tic\Omega=\ln\left|\frac{\omega+\Omega}{\omega-\Omega}\right|_{\Omega=0}^{\Omega\rightarrow\infty}=0\]
+\begin_inset Formula 
+\[
+\vp\int_{0}^{\infty}\frac{2\omega}{\omega^{2}-\Omega^{2}}\tic\Omega=\vp\int_{0}^{\infty}\frac{1}{\Omega+\omega}-\frac{1}{\Omega-\omega}\tic\Omega=\ln\left|\frac{\omega+\Omega}{\omega-\Omega}\right|_{\Omega=0}^{\Omega\rightarrow\infty}=0
+\]
 
 \end_inset
 
@@ -3203,8 +3323,10 @@ reference "eq:ltisys_causal_imint_even"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\vp\int_{0}^{\infty}\frac{2\omega\trf(\ji\omega)}{\omega^{2}-\Omega^{2}}\tic\Omega=2\omega\trf(\ji\omega)\vp\int_{0}^{\infty}\frac{\tdc\Omega}{\omega^{2}-\Omega^{2}}=0\mperiod\]
+\begin_inset Formula 
+\[
+\vp\int_{0}^{\infty}\frac{2\omega\trf(\ji\omega)}{\omega^{2}-\Omega^{2}}\tic\Omega=2\omega\trf(\ji\omega)\vp\int_{0}^{\infty}\frac{\tdc\Omega}{\omega^{2}-\Omega^{2}}=0\mperiod
+\]
 
 \end_inset
 
@@ -3228,7 +3350,7 @@ status collapsed
 \backslash
 protect
 \backslash
-headingmath{
+tocmath{
 \backslash
 trf(
 \backslash
@@ -3247,10 +3369,13 @@ Für LTI-Systeme mit der Eigenschaft
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \lim_{\substack{|\lps|\rightarrow\infty\\
-\reop\lps>0}
-}\!\trf(\lps)\neq0,\]
+\reop\lps>0
+}
+}\!\trf(\lps)\neq0,
+\]
 
 \end_inset
 
@@ -3324,8 +3449,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_boundary_nonlp}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega-\frac{1}{2\pi\ji}\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega\mperiod\label{eq:ltisys_causal_boundary_nonlp}
+\end{equation}
 
 \end_inset
 
@@ -3349,8 +3476,10 @@ Betrachten wir zuerst den Integrationsweg
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\int_{C_{\infty}}\frac{\trf(\Omega)}{\Omega-\lps}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta}-\lps)\tic\theta\]
+\begin_inset Formula 
+\[
+\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\int_{C_{\infty}}\frac{\trf(\Omega)}{\Omega-\lps}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta}-\lps)\tic\theta
+\]
 
 \end_inset
 
@@ -3387,8 +3516,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta})\tic\theta\]
+\begin_inset Formula 
+\[
+\int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega=-\ji\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta})\tic\theta
+\]
 
 \end_inset
 
@@ -3400,8 +3531,10 @@ Außerdem ist wegen der (für reelle Zeitfunktionen immer geltenden) Relation
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\cjgt{\lps})=\cjgt[\trf]{\lps},\]
+\begin_inset Formula 
+\[
+\trf(\cjgt{\lps})=\cjgt[\trf]{\lps},
+\]
 
 \end_inset
 
@@ -3414,11 +3547,13 @@ eine Beschränkung des Integrationsweges auf einen positiven Viertelkreis
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \int_{C_{\infty}}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega & =-\ji\lim_{r\rightarrow\infty}\left[\int_{-\frac{\pi}{2}}^{0}\trf(r\expf^{\ji\theta})\tic\theta+\int_{0}^{\frac{\pi}{2}}\trf(r\expf^{\ji\theta})\tic\theta\right]\\
  & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\trf(r\expf^{-\ji\theta})+\trf(r\expf^{\ji\theta})\tic\theta\\
  & =-\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\cjgt[\trf]{r\expf^{\ji\theta}}+\trf(r\expf^{\ji\theta})\tic\theta\\
- & =-2\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta\end{align*}
+ & =-2\ji\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta
+\end{align*}
 
 \end_inset
 
@@ -3462,8 +3597,10 @@ reference "eq:ltisys_causal_boundary_nonlp"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega+\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\trf(\Omega)}{\lps-\Omega}\tic\Omega+\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta
+\]
 
 \end_inset
 
@@ -3497,8 +3634,10 @@ Deshalb haben alle Beziehungen für den Imaginärteil der
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\infty)=\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta\]
+\begin_inset Formula 
+\[
+\trf(\infty)=\frac{1}{\pi}\lim_{r\rightarrow\infty}\int_{0}^{\frac{\pi}{2}}\reop\trf(r\expf^{\ji\theta})\tic\theta
+\]
 
 \end_inset
 
@@ -3573,8 +3712,10 @@ reference "eq:ltisys_causal_boundary"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\trf(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega+\trf(\infty),\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{\trf(\ji\Omega)}{\lps-\ji\Omega}\tic\Omega+\trf(\infty),
+\]
 
 \end_inset
 
@@ -3664,8 +3805,10 @@ Dirac
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-\reop\trf(\ji\omega)-\trf(\infty) & =\mathcal{H}\left\{ \imop\trf(\ji\omega)\right\}  & \imop\trf(\ji\omega) & =-\mathcal{H}\left\{ \reop\trf(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_nonlp_hilbert}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\reop\trf(\ji\omega)-\trf(\infty) & =\mathcal{H}\left\{ \imop\trf(\ji\omega)\right\}  & \imop\trf(\ji\omega) & =-\mathcal{H}\left\{ \reop\trf(\ji\omega)\right\} \mperiod\label{eq:ltisys_causal_nonlp_hilbert}
+\end{xalignat}
 
 \end_inset
 
@@ -3673,7 +3816,7 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3700,7 +3843,7 @@ Eigenschaften
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3710,7 +3853,7 @@ LTI-System!Minimalphasen-|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3720,7 +3863,7 @@ Minimalphasensystem|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3745,7 +3888,7 @@ Minimalphasig nennt man Systeme, die in der rechten
 \end_inset
 
 -Halbebene weder Pole noch Nullstellen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3777,7 +3920,7 @@ key "Papoulis:1962"
 Hurwitz
 \noun default
 -Polynome
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3896,7 +4039,7 @@ reference "eq:ltisys_hilbert_imag"
 \end_inset
 
  einen determinierten Zusammenhang zwischen Dämpfung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3910,7 +4053,7 @@ Daempfung@Dämpfung
 \end_inset
 
  und Phase
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3939,7 +4082,7 @@ Bei Anwendung der Definition in
 Neper
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3974,8 +4117,10 @@ noun{Neper}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\atf(\omega) & =\mathcal{H}\left\{ \phf(\omega)\right\}  & \phf(\omega) & =-\mathcal{H}\left\{ \atf(\omega)\right\} \end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\atf(\omega) & =\mathcal{H}\left\{ \phf(\omega)\right\}  & \phf(\omega) & =-\mathcal{H}\left\{ \atf(\omega)\right\} 
+\end{xalignat*}
 
 \end_inset
 
@@ -4025,8 +4170,10 @@ key "Fritzsche:1981a"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
-\atf(\omega)-\atf(\infty) & =\mathcal{H}\left\{ \phf(\omega)\right\}  & \phf(\omega) & =-\mathcal{H}\left\{ \atf(\omega)\right\} \end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\atf(\omega)-\atf(\infty) & =\mathcal{H}\left\{ \phf(\omega)\right\}  & \phf(\omega) & =-\mathcal{H}\left\{ \atf(\omega)\right\} 
+\end{xalignat*}
 
 \end_inset
 
@@ -4040,7 +4187,7 @@ Bode
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4063,7 +4210,7 @@ noun{Bode}!Zerlegungssatz
 \end_inset
 
 Praktisch kann man jedes LTI-System mit rationaler Übertragungsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4077,7 +4224,7 @@ LTI-System!Uebertragungsfunktion@Übertragungsfunktion
 \end_inset
 
  als Kettenschaltung eines Allpaß-
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4139,8 +4286,10 @@ key "Fritzsche:1979a"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\frac{U(\lps)}{V(\lps)}=\frac{U_{-}(\lps)\, U_{+}(\lps)}{V(\lps)}\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{U(\lps)}{V(\lps)}=\frac{U_{-}(\lps)\, U_{+}(\lps)}{V(\lps)}
+\]
 
 \end_inset
 
@@ -4160,8 +4309,10 @@ Hurwitz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textup{ALP}}},\label{eq:ltisys_mps_split_rational}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textup{ALP}}},\label{eq:ltisys_mps_split_rational}
+\end{equation}
 
 \end_inset
 
@@ -4223,8 +4374,10 @@ sowie einen stabilen Allpaß
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\lps)=\trf_{\textup{MPS}}(\lps)\cdot\trf_{\textup{ALP}}(\lps)\label{eq:ltisys_mps_split_bode}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)=\trf_{\textup{MPS}}(\lps)\cdot\trf_{\textup{ALP}}(\lps)\label{eq:ltisys_mps_split_bode}
+\end{equation}
 
 \end_inset
 
@@ -4249,8 +4402,10 @@ Minimalphasensystem
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
--\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{\textup{MPS}}(\ji\omega)+\ang\trf_{\textup{ALP}}(\ji\omega)\]
+\begin_inset Formula 
+\[
+-\phf(\omega)=\ang\trf(\ji\omega)=\ang\trf_{\textup{MPS}}(\ji\omega)+\ang\trf_{\textup{ALP}}(\ji\omega)
+\]
 
 \end_inset
 
@@ -4334,8 +4489,10 @@ reference "eq:ltisys_mps_split_rational"
 
 \begin_deeper
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{3}
-\trf_{\textup{ALP}}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{\textup{ALP}}(\omega) & =2\ang G(\ji\omega)\mperiod\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{3}
+\trf_{\textup{ALP}}(\lps) & =\frac{G(-\lps)}{G(\lps)} &  & \mbox{mit} & \phf_{\textup{ALP}}(\omega) & =2\ang G(\ji\omega)\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -4360,8 +4517,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{\textup{ALP}}}\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\underbrace{\frac{1}{2+\lps}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{1-\lps}{1+\lps}}_{\trf_{\textup{ALP}}}
+\]
 
 \end_inset
 
@@ -4438,8 +4597,10 @@ Dirac
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)=\frac{3}{2+\lps}-\frac{2}{1+\lps}\rlt\irf(t)=\usf(t)\,(3\expf^{-2t}-2\expf^{-t})\]
+\begin_inset Formula 
+\[
+\trf(\lps)=\frac{3}{2+\lps}-\frac{2}{1+\lps}\rlt\irf(t)=\usf(t)\,(3\expf^{-2t}-2\expf^{-t})
+\]
 
 \end_inset
 
@@ -4451,10 +4612,12 @@ Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \trf_{\textup{ALP}}(\ji\omega) & =\frac{1-\ji\omega}{1+\ji\omega} & \trf_{\textup{MPS}}(\ji\omega) & =\frac{1}{2+\ji\omega}\\
 \reop\trf_{\textup{ALP}}(\ji\omega) & =\frac{1-\omega^{2}}{1+\omega^{2}} & \reop\trf_{\textup{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}\\
-\imop\trf_{\textup{ALP}}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{\textup{MPS}}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}\end{xalignat*}
+\imop\trf_{\textup{ALP}}(\ji\omega) & =-\frac{2\omega}{1+\omega^{2}} & \imop\trf_{\textup{MPS}}(\ji\omega) & =-\frac{\omega}{4+\omega^{2}}
+\end{xalignat*}
 
 \end_inset
 
@@ -4466,11 +4629,13 @@ Beide als Kettenschaltungen anzusehende Übertragungsfunktionen
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\}  & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
  & =\frac{1}{a}\mathcal{H}\left\{ \frac{x/a}{1+(x/a)^{2}}\right\} \\
  & =-\frac{1}{a}\cdot\frac{1}{1+(x/a)^{2}}\\
- & =-\frac{a}{a^{2}+x^{2}}\end{align*}
+ & =-\frac{a}{a^{2}+x^{2}}
+\end{align*}
 
 \end_inset
 
@@ -4488,8 +4653,10 @@ ionsbeziehung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\} =-\frac{a}{a^{2}+x^{2}}\]
+\begin_inset Formula 
+\[
+\mathcal{H}\left\{ \frac{x}{a^{2}+x^{2}}\right\} =-\frac{a}{a^{2}+x^{2}}
+\]
 
 \end_inset
 
@@ -4501,9 +4668,11 @@ feststellt.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \reop\trf_{\textup{ALP}}(\ji\omega)-\trf_{\textup{ALP}}(\infty) & =\frac{2}{1+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\textup{ALP}}(\ji\omega)\right\} \\
-\reop\trf_{\textup{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\textup{MPS}}(\ji\omega)\right\} \end{align*}
+\reop\trf_{\textup{MPS}}(\ji\omega) & =\frac{2}{4+\omega^{2}}=\mathcal{H}\left\{ \imop\trf_{\textup{MPS}}(\ji\omega)\right\} 
+\end{align*}
 
 \end_inset
 
@@ -4534,7 +4703,7 @@ Realisierbarkeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4595,7 +4764,7 @@ reference "sec:ltisys_causality"
 \end_inset
 
  beschränkt
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4638,7 +4807,7 @@ reference "sec:ltisys_stability"
 
  negative Realteile aufweisen.
  Speziell für quadratisch integrierbare
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4685,8 +4854,10 @@ key "Marko:1995"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega=2\pi\int_{-\infty}^{\infty}\irf^{2}(t)\tic t<\infty\label{eq:ltisys_paley_wiener_cond}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega=2\pi\int_{-\infty}^{\infty}\irf^{2}(t)\tic t<\infty\label{eq:ltisys_paley_wiener_cond}
+\end{equation}
 
 \end_inset
 
@@ -4699,7 +4870,7 @@ sind diese Bedingungen mit Hilfe des
 Paley-Wiener
 \noun default
 -Kriteriums prüfbar
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4768,8 +4939,10 @@ key "Wax:1962"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}\frac{|\ln|\trf(\ji\omega)||}{1+\omega^{2}}\tic\omega<\infty\label{eq:ltisys_paley_wiener}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{|\ln|\trf(\ji\omega)||}{1+\omega^{2}}\tic\omega<\infty\label{eq:ltisys_paley_wiener}
+\end{equation}
 
 \end_inset
 
@@ -4964,7 +5137,7 @@ Da die Übertragungsfunktion
 \end_inset
 
  von solchen LTI-Systemen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4974,7 +5147,7 @@ LTI-System!kausales
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5033,8 +5206,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi,\qquad k\in\mathbb{Z}\]
+\begin_inset Formula 
+\[
+\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi,\qquad k\in\mathbb{Z}
+\]
 
 \end_inset
 
@@ -5063,8 +5238,10 @@ wird ersichtlich, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
--\ln|\trf(\ji\omega)|=\lim_{\alpha\rightarrow0}\reop\atf(\lps)=\reop\atf(\ji\omega)\]
+\begin_inset Formula 
+\[
+-\ln|\trf(\ji\omega)|=\lim_{\alpha\rightarrow0}\reop\atf(\lps)=\reop\atf(\ji\omega)
+\]
 
 \end_inset
 
@@ -5084,12 +5261,16 @@ Gleichrichter
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xxalignat}{2}
+\begin_inset Formula 
+\begin{xxalignat}{2}
 \atf_{+}(\omega) & =\begin{cases}
 \ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|\geq1)\\
-0 & \quad(\,|\trf(\ji\omega)|<1)\end{cases} & \atf_{-}(\omega) & =\begin{cases}
+0 & \quad(\,|\trf(\ji\omega)|<1)
+\end{cases} & \atf_{-}(\omega) & =\begin{cases}
 \ln|\trf(\ji\omega)| & \quad(\,|\trf(\ji\omega)|<1)\\
-0 & \quad(\,|\trf(\ji\omega)|\geq1)\end{cases},\end{xxalignat}
+0 & \quad(\,|\trf(\ji\omega)|\geq1)
+\end{cases},
+\end{xxalignat}
 
 \end_inset
 
@@ -5110,9 +5291,11 @@ dann wird
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \int_{-\infty}^{\infty}\frac{|\atf(\omega)|}{1+\omega^{2}}\tic\omega & =\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega-\int_{-\infty}^{\infty}\frac{\atf_{-}(\omega)}{1+\omega^{2}}\tic\omega\\
--\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega & =\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega+\int_{-\infty}^{\infty}\frac{\atf_{-}(\omega)}{1+\omega^{2}}\tic\omega\end{align*}
+-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega & =\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega+\int_{-\infty}^{\infty}\frac{\atf_{-}(\omega)}{1+\omega^{2}}\tic\omega
+\end{align*}
 
 \end_inset
 
@@ -5164,8 +5347,10 @@ reference "eq:ltisys_paley_wiener_cond"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\infty>\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega>2\int_{-\infty}^{\infty}\atf_{+}(\omega)\tic\omega>2\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega\mperiod\]
+\begin_inset Formula 
+\[
+\infty>\int_{-\infty}^{\infty}|\trf(\ji\omega)|^{2}\tic\omega>2\int_{-\infty}^{\infty}\atf_{+}(\omega)\tic\omega>2\int_{-\infty}^{\infty}\frac{\atf_{+}(\omega)}{1+\omega^{2}}\tic\omega\mperiod
+\]
 
 \end_inset
 
@@ -5205,8 +5390,10 @@ Die Beschränktheit des Teilintegrals für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega<\infty\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega<\infty
+\]
 
 \end_inset
 
@@ -5223,8 +5410,10 @@ zu erbringen.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega=\reop\left[-\ji\,\int_{\omega=-\infty}^{\infty}\frac{\atf(\ji\omega)}{1+\omega^{2}}\tic(\ji\omega)\right]=\reop\left[-\ji\,\int_{\lps=-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps\right]\label{eq:ltisys_paley_wiener_notabs}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{\atf(\omega)}{1+\omega^{2}}\tic\omega=\reop\left[-\ji\,\int_{\omega=-\infty}^{\infty}\frac{\atf(\ji\omega)}{1+\omega^{2}}\tic(\ji\omega)\right]=\reop\left[-\ji\,\int_{\lps=-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps\right]\label{eq:ltisys_paley_wiener_notabs}
+\end{equation}
 
 \end_inset
 
@@ -5273,8 +5462,10 @@ reference "sec:ltisys_causality"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps=\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps+1}\tic\lps-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps\mperiod\]
+\begin_inset Formula 
+\[
+\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{1-\lps^{2}}\tic\lps=\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps+1}\tic\lps-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps\mperiod
+\]
 
 \end_inset
 
@@ -5322,7 +5513,7 @@ reference "eq:analysis_halfplane_right_cauchy_imint"
 \end_inset
 
  in der (rechten) Halbebene
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5353,8 +5544,10 @@ noun{Cauchy}!Integralformel in der Halbebene
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
--\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps=\ji\,\pi\,\res{1}{\frac{\atf(\lps)}{\lps-1}}=\ji\,\pi\atf(1)<\infty\]
+\begin_inset Formula 
+\[
+-\frac{1}{2}\int_{-\ji\infty}^{\ji\infty}\frac{\atf(\lps)}{\lps-1}\tic\lps=\ji\,\pi\,\res{1}{\frac{\atf(\lps)}{\lps-1}}=\ji\,\pi\atf(1)<\infty
+\]
 
 \end_inset
 
@@ -5368,7 +5561,7 @@ Das linke Integral verschwindet nach dem Satz von
 Cauchy
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5428,8 +5621,10 @@ reference "eq:ltisys_paley_wiener_notabs"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=\pi\reop\atf(1)=\pi\ln|\trf(1)|\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}\frac{\ln|\trf(\ji\omega)|}{1+\omega^{2}}\tic\omega=\pi\reop\atf(1)=\pi\ln|\trf(1)|
+\end{equation}
 
 \end_inset
 
@@ -5441,7 +5636,7 @@ konvergiert.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5451,7 +5646,7 @@ Minimalphasensystem|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5464,7 +5659,7 @@ LTI-System!Minimalphasen-|)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

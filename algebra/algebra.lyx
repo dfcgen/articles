@@ -1,41 +1,39 @@
-#LyX 1.6.5 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
-
 \setlength{\nomlabelwidth}{5em}
-%% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
-
-%% fancyhdr adjustments
-%% \renewcommand{\headrulewidth}{0pt}
-%% \renewcommand{\footrulewidth}{0pt}
-%% \fancyhead{} % clear all header fields
-%% \fancyhead[RE]{\nouppercase{\rightmark}}
-%% \fancyhead[LO]{\nouppercase{\leftmark}}
-%% \fancyfoot{} % clear all footer fields
-%% \fancyfoot[RE,LO]{\textbf{\thepage}}
-%% \fancyfoot[LE,RO]{$RCSfile: algebra.lyx,v $, $Revision$}
 \end_preamble
+\options noprefix
 \use_default_options false
 \begin_modules
-emphasized
+helpers
+mathext
+algorithm
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
-\font_roman default
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
 \font_sans default
 \font_typewriter default
-\font_default_family rmdefault
+\font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -44,8 +42,8 @@ emphasized
 \pdf_bookmarks true
 \pdf_bookmarksnumbered true
 \pdf_bookmarksopen true
-\pdf_bookmarksopenlevel 2
-\pdf_breaklinks true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
 \pdf_pdfborder true
 \pdf_colorlinks true
 \pdf_backref false
@@ -54,9 +52,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -67,8 +74,9 @@ emphasized
 \paperpagestyle headings
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -157,6 +165,7 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -179,8 +188,16 @@ fi
 
 \end_layout
 
+\begin_layout Standard
+
+\end_layout
+
 \begin_layout Section
 Algebraische Grundstrukturen
+\end_layout
+
+\begin_layout Standard
+
 \end_layout
 
 \begin_layout Subsection
@@ -204,7 +221,7 @@ Allgemeine Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -214,7 +231,7 @@ Algebra
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -300,7 +317,7 @@ die Anwendung der Operation
 \end_inset
 
  führen (Abgeschlossenheit
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -326,7 +343,7 @@ für alle
 \end_inset
 
  (Assoziativität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -340,7 +357,7 @@ Assoziativität
 
 \begin_layout Enumerate
 ein neutrales Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -371,7 +388,7 @@ description "neutrales Element"
 \end_inset
 
  (Identität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -389,7 +406,7 @@ für jedes Element
 \end_inset
 
  muß ein inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -451,7 +468,7 @@ description "Menge von Elementen $a_i$"
 \end_inset
 
  erfüllt, wird die Gruppe kommutativ
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -478,7 +495,7 @@ resp
 Abel
 \noun default
 'sch
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -501,7 +518,7 @@ noun{Abel}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -539,7 +556,7 @@ status open
 
 \begin_layout Standard
 Die Ordnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -549,7 +566,7 @@ Ordnung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -559,7 +576,7 @@ Gruppe!Ordnung
 \end_inset
 
  (auch Mächtigkeit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -569,7 +586,7 @@ Mächtigkeit
 \end_inset
 
  oder Kardinalität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -659,7 +676,7 @@ description "$a$ ist Teilmenge von $b$"
 \end_inset
 
  als Untergruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -669,7 +686,7 @@ Gruppe!Unter-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -722,7 +739,7 @@ key "Peterson:1972"
  wird durch den Satz von 
 \noun on
 Lagrange
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -750,8 +767,10 @@ noun{Lagrange}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left|G\right|=i\left|U\right|\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left|G\right|=i\left|U\right|
+\end{equation}
 
 \end_inset
 
@@ -772,7 +791,7 @@ Die Ordnung
 \end_inset
 
  der so genannte Index
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -793,7 +812,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -885,7 +904,7 @@ Additive Gruppen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -919,7 +938,7 @@ eine assoziative Operation
 
 \begin_layout Enumerate
 ein neutrales (Null-) Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -940,7 +959,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -975,7 +994,7 @@ mit der Beziehung
 
 \begin_layout Enumerate
 und für sie außerdem ein inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1001,7 +1020,7 @@ Element!inverses
 
 \begin_layout Standard
 Das bekannteste Beispiel einer solchen Gruppe ist die der ganzen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1035,7 +1054,7 @@ Multiplikative Gruppen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1065,7 +1084,7 @@ eine assoziative Operation
 
 \begin_layout Itemize
 ein neutrales (Eins-) Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1111,7 +1130,7 @@ mit der Identität
 
 \begin_layout Itemize
 und ein inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1138,7 +1157,7 @@ Element!inverses
 \begin_layout Standard
 sind definiert.
  Zur Multiplikation ist zu bemerken, daß nicht-negative Potenzen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1151,8 +1170,10 @@ Element!Potenzierung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-a^{0}=e_{(\cdot)}=1,\qquad a^{n+1}=a\cdot a^{n},\]
+\begin_inset Formula 
+\[
+a^{0}=e_{(\cdot)}=1,\qquad a^{n+1}=a\cdot a^{n},
+\]
 
 \end_inset
 
@@ -1168,8 +1189,10 @@ also durch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-a^{n}=\underbrace{a\cdot a\dotsm a}_{n\text{-mal}}\]
+\begin_inset Formula 
+\[
+a^{n}=\underbrace{a\cdot a\dotsm a}_{n\text{-mal}}
+\]
 
 \end_inset
 
@@ -1178,7 +1201,7 @@ a^{n}=\underbrace{a\cdot a\dotsm a}_{n\text{-mal}}\]
 
 \begin_layout Standard
 Das Nullelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1217,7 +1240,7 @@ Ringe
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1272,7 +1295,7 @@ Bezüglich der Addition bildet
 Abel
 \noun default
 'sche Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -1306,7 +1329,7 @@ noun{Abel}
 \end_inset
 
  ist eine so genannte Halbgruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1316,7 +1339,7 @@ Halbgruppe
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1390,7 +1413,7 @@ Außerdem muß für
 \end_inset
 
  das Distributivgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1424,7 +1447,7 @@ Existiert zusätzlich noch die Identität
 \end_inset
 
  Monoid
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1434,7 +1457,7 @@ Monoid
 \end_inset
 
  oder Ring
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1475,7 +1498,7 @@ mit
 \noun default
 \color inherit
  jeweils ein inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1485,7 +1508,7 @@ Element!inverses
 \end_inset
 
  besitzen, nennt man Einheitengruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1506,7 +1529,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1523,7 +1546,7 @@ Ring!Einheitengruppe
  Ein Ring wird außerdem als 
 \emph on
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1535,7 +1558,7 @@ Ring!kommutativer
 kommutativ
 \emph default
  bezeichnet, wenn auch für die Multiplikation das Kommutativgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1550,7 +1573,7 @@ Kommutativgesetz
 
  gilt.
  Ein typisches Beispiel hierfür ist der Ring
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1568,7 +1591,7 @@ Ring!
 \end_inset
 
  der ganzen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1595,7 +1618,7 @@ Körper
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -1605,7 +1628,7 @@ Koerper@Körper
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -1747,7 +1770,7 @@ Die bekanntesten Körper sind die der
 
 \begin_layout Itemize
 reellen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1778,7 +1801,7 @@ description "Körper der reellen Zahlen"
 
 \begin_layout Itemize
 komplexen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1809,7 +1832,7 @@ description "Körper der komplexen Zahlen"
 
 \begin_layout Itemize
 rationalen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1854,7 +1877,7 @@ Umfaßt nicht die transzendent entwickelten Zahlen wie
 
 \begin_layout Itemize
 sowie der endliche Körper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1864,7 +1887,7 @@ Koerper@Körper!endlicher
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1928,7 +1951,7 @@ Vektorraum
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1938,7 +1961,7 @@ Vektor!-raum
 \end_inset
 
 Eine Menge von Vektoren
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2083,7 +2106,7 @@ für jeden Vektor
 \end_inset
 
  führt (Abgeschlossenheit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2127,7 +2150,7 @@ bezüglich zweier Skalare
 \end_inset
 
  die folgenden Distributivgesetze
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2141,9 +2164,11 @@ Distributivgesetz
 \end_inset
 
 
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 a(\mvec{u}+\mvec{v}) & =a\mvec{u}+a\mvec{v}\\
-\mvec{v}(a+b) & =a\mvec{v}+b\mvec{v}\end{align*}
+\mvec{v}(a+b) & =a\mvec{v}+b\mvec{v}
+\end{align*}
 
 \end_inset
 
@@ -2152,7 +2177,7 @@ a(\mvec{u}+\mvec{v}) & =a\mvec{u}+a\mvec{v}\\
 
 \begin_layout Enumerate
 das Assoziativgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2170,7 +2195,7 @@ Assoziativgesetz
 
 \begin_layout Enumerate
 und es ein multiplikativ neutrales Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2231,7 +2256,7 @@ eg
 
 .
  Entsprechend ist auch das neutrale Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2257,7 +2282,7 @@ Kann man jeden Vektor von
 \end_inset
 
  als Linearkombination
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2274,8 +2299,10 @@ Linearkombination
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\mvec{v}=\sum_{i=1}^{n}\alpha_{i}\mvec{u_{i}},\]
+\begin_inset Formula 
+\[
+\mvec{v}=\sum_{i=1}^{n}\alpha_{i}\mvec{u_{i}},
+\]
 
 \end_inset
 
@@ -2288,7 +2315,7 @@ so nennt man
 \end_inset
 
  die Basis
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2306,7 +2333,7 @@ Vektor!-raum!Basis
 \end_inset
 
  die Dimension
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2342,7 +2369,7 @@ Algebra (Verband)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2363,7 +2390,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2378,7 +2405,7 @@ Eine Algebra über einem Körper
 
  ist eine Erweiterung des Begriffs Vektorraum in Bezug auf die Vektormultiplikat
 ion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2443,7 +2470,7 @@ für zwei Vektoren
 \end_inset
 
  ist ein Produkt
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2461,7 +2488,7 @@ Vektor!-produkt
 \end_inset
 
  abgeschlossen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2479,7 +2506,7 @@ Abgeschlossenheit!Algebra
 
 \begin_layout Enumerate
 das Assoziativgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2497,7 +2524,7 @@ Assoziativgesetz
 
 \begin_layout Enumerate
 auch das Distributivgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2524,7 +2551,7 @@ Zusammenfassung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2534,7 +2561,7 @@ Gruppe!additive
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2544,7 +2571,7 @@ Gruppe!multiplikative
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2554,7 +2581,7 @@ Gruppe!Halb-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2564,7 +2591,7 @@ Monoid
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2574,7 +2601,7 @@ Ring
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2584,7 +2611,7 @@ Koerper@Körper
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2641,7 +2668,7 @@ Eigenschaften algebraischer Strukturen
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="10">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -3718,7 +3745,7 @@ Abel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3778,7 +3805,7 @@ assoziativ;
 
 \begin_layout Itemize
 mit einem neutralen Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3796,7 +3823,7 @@ Element!Eins-
 
 \begin_layout Itemize
 eindeutig invertierbar
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3819,7 +3846,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Mit diesen Eigenschaften können sie als Einheitengruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3829,7 +3856,7 @@ Ring!Einheitengruppe
 \end_inset
 
  eines kommutativen Ringes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3863,7 +3890,7 @@ reference "sec:algebra_ring"
 \end_inset
 
 ) oder als multiplikative Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3915,7 +3942,7 @@ Ordnung von Elementen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3926,7 +3953,7 @@ Gruppe!multiplikative
 
 Endliche multiplikative Gruppen sind insbesondere wegen ihrer Eigenschaften
  beim Potenzieren
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3946,7 +3973,7 @@ Element!Potenzierung
 
 .
  Nach dem Prinzip der Abgeschlossenheit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3994,8 +4021,10 @@ Abgeschlossenheit!Gruppe
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-r^{k} & =e_{(\cdot)}=1,\qquad r\in G^{*}\label{eq:algebra_ord_elem}\end{align}
+\begin_inset Formula 
+\begin{align}
+r^{k} & =e_{(\cdot)}=1,\qquad r\in G^{*}\label{eq:algebra_ord_elem}
+\end{align}
 
 \end_inset
 
@@ -4013,7 +4042,7 @@ gibt.
 \end_inset
 
  erzeugte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4023,7 +4052,7 @@ Element!erzeugendes
 \end_inset
 
  zyklische
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4033,7 +4062,7 @@ Gruppe!zyklische
 \end_inset
 
  Untergruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4043,7 +4072,7 @@ Gruppe!Unter-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4078,8 +4107,10 @@ Auch zyklische Permutation der Elemente
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-\left\langle r\right\rangle  & =\{\left.r^{n}\,\right|1\leq n\leq k\}\subseteq G^{*}\mperiod\label{eq:algebra_subgroup_elem}\end{align}
+\begin_inset Formula 
+\begin{align}
+\left\langle r\right\rangle  & =\{\left.r^{n}\,\right|1\leq n\leq k\}\subseteq G^{*}\mperiod\label{eq:algebra_subgroup_elem}
+\end{align}
 
 \end_inset
 
@@ -4104,8 +4135,10 @@ description "Menge der natürlichen Zahlen"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-\left\langle r\right\rangle  & =\{\left.r^{n\bmod k}\,\right|n\in\mathbb{N}\}\mperiod\label{eq:algebra_subgroup_mod}\end{align}
+\begin_inset Formula 
+\begin{align}
+\left\langle r\right\rangle  & =\{\left.r^{n\bmod k}\,\right|n\in\mathbb{N}\}\mperiod\label{eq:algebra_subgroup_mod}
+\end{align}
 
 \end_inset
 
@@ -4129,7 +4162,7 @@ reference "fig:algebra_ord_elem"
 \end_inset
 
  als Kreisteilung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4210,7 +4243,7 @@ Die Ordnung (Anzahl der Elemente) der Untergruppe
 
  führt.
  Man nennt sie auch Ordnung des Elements
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4286,7 +4319,7 @@ reference "eq:algebra_ord_elem"
 \end_inset
 
  multipliziert, eine Berechnungsvorschrift für das inverse Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4299,8 +4332,10 @@ Element!inverses
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-r^{-1} & =r^{k-1}\mperiod\label{eq:algebra_multgrp_inv}\end{align}
+\begin_inset Formula 
+\begin{align}
+r^{-1} & =r^{k-1}\mperiod\label{eq:algebra_multgrp_inv}
+\end{align}
 
 \end_inset
 
@@ -4348,8 +4383,10 @@ reference "eq:algebra_ord_elem"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-r^{k} & =r^{|r|}=1 & s^{l} & =s^{|s|}=1\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+r^{k} & =r^{|r|}=1 & s^{l} & =s^{|s|}=1
+\end{xalignat*}
 
 \end_inset
 
@@ -4365,8 +4402,10 @@ und für weitere Potenzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-r^{ik} & =(r^{k})^{i}=1^{i}=\underbrace{1\cdot1\cdot1\cdots1\cdot1}_{i\text{-mal}}=1\mperiod\label{eq:algebra_power_element}\end{align}
+\begin_inset Formula 
+\begin{align}
+r^{ik} & =(r^{k})^{i}=1^{i}=\underbrace{1\cdot1\cdot1\cdots1\cdot1}_{i\text{-mal}}=1\mperiod\label{eq:algebra_power_element}
+\end{align}
 
 \end_inset
 
@@ -4378,8 +4417,10 @@ Unter diesen Voraussetzungen kann man
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-s^{l}=\left(r^{n}\right)^{l}=r^{nl}=1=r^{k}=r^{ki}\]
+\begin_inset Formula 
+\[
+s^{l}=\left(r^{n}\right)^{l}=r^{nl}=1=r^{k}=r^{ki}
+\]
 
 \end_inset
 
@@ -4398,7 +4439,7 @@ formulieren und so
 
  beschränkt, haben wir es hierbei mit der Frage nach dem kleinsten gemeinsamen
  Vielfachen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4526,8 +4567,10 @@ Das kleinste gemeinsame Vielfache von
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\lcm(a,b)=xa=yb\]
+\begin_inset Formula 
+\[
+\lcm(a,b)=xa=yb
+\]
 
 \end_inset
 
@@ -4547,8 +4590,10 @@ Mit
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-x\overline{a}=y\overline{b},\]
+\begin_inset Formula 
+\[
+x\overline{a}=y\overline{b},
+\]
 
 \end_inset
 
@@ -4569,8 +4614,10 @@ welche mit
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\lcm(a,b)=b\overline{a}=d\overline{a}\overline{b}=\frac{d^{2}\overline{a}\overline{b}}{d}=\frac{ab}{d}=\frac{ab}{\gcd(a,b)}\mperiod\]
+\begin_inset Formula 
+\[
+\lcm(a,b)=b\overline{a}=d\overline{a}\overline{b}=\frac{d^{2}\overline{a}\overline{b}}{d}=\frac{ab}{d}=\frac{ab}{\gcd(a,b)}\mperiod
+\]
 
 \end_inset
 
@@ -4579,7 +4626,7 @@ welche mit
 
 \end_inset
 
- zur Verfügung steht, wollen wir aus Verständnisgründen den ausführlichen
+ zur Verfügung steht, wollen wir aus Verständnis-gründen den ausführlichen
  Weg beschreiten.
  Dazu wird unter Zuhilfenahme der Abkürzung 
 \begin_inset Formula $d=\gcd(k,n)$
@@ -4607,8 +4654,10 @@ description "Teilerfremder Teil von $a$ bezüglich einer anderen Zahl"
 \end_inset
 
  eliminiert.
-\begin_inset Formula \begin{equation}
-\overline{n}l=\overline{k}i\label{eq:algebra_ord_lcm}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\overline{n}l=\overline{k}i\label{eq:algebra_ord_lcm}
+\end{equation}
 
 \end_inset
 
@@ -4633,8 +4682,10 @@ Wegen der Teilerfremdheit von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-i & =\overline{n}=\frac{n}{\gcd(k,n)} & l & =\overline{k}=\frac{k}{\gcd(k,n)}\label{eq:algebra_ord_index}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+i & =\overline{n}=\frac{n}{\gcd(k,n)} & l & =\overline{k}=\frac{k}{\gcd(k,n)}\label{eq:algebra_ord_index}
+\end{xalignat}
 
 \end_inset
 
@@ -4646,8 +4697,10 @@ Die Konsequenzen aus dem Ergebnis
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-l & =\left|r^{n}\right|=\frac{|r|}{\gcd(|r|,n)}\label{eq:algebra_ord_power}\end{align}
+\begin_inset Formula 
+\begin{align}
+l & =\left|r^{n}\right|=\frac{|r|}{\gcd(|r|,n)}\label{eq:algebra_ord_power}
+\end{align}
 
 \end_inset
 
@@ -4690,7 +4743,7 @@ reference "enum:algebra_ord_power_totient"
 Als Bestätigung für den Satz von 
 \noun on
 Lagrange
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4769,7 +4822,7 @@ reference "eq:algebra_power_element"
 \end_inset
 
  Im Sinne der Definition des Index
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4933,7 +4986,7 @@ reference "sec:algebra_totient"
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4977,7 +5030,7 @@ reference "eq:algebra_multgrp_inv"
 \end_inset
 
  beim Übergang zu dessen Inversen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5016,7 +5069,7 @@ Variante
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5036,7 +5089,7 @@ Die Ordnung der von
  ist nach dem Satz von 
 \noun on
 Lagrange
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5093,8 +5146,10 @@ key "Bosch:1996"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-|G^{*}|=ik\mperiod\label{eq:algebra_ord_divider}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+|G^{*}|=ik\mperiod\label{eq:algebra_ord_divider}
+\end{equation}
 
 \end_inset
 
@@ -5125,8 +5180,10 @@ reference "eq:algebra_ord_elem"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-r^{|G^{*}|} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}\end{align}
+\begin_inset Formula 
+\begin{align}
+r^{|G^{*}|} & =r^{ik}=(r^{k})^{i}=1\mperiod\label{eq:algebra_ord_multgrp}
+\end{align}
 
 \end_inset
 
@@ -5171,8 +5228,10 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\underbrace{\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\dots,\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}}}_{|G^{*}|\text{ Elemente }(i\text{ Perioden})}\]
+\begin_inset Formula 
+\[
+\underbrace{\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}},\dots,\underbrace{r^{1},r^{2},r^{3},\dots,r^{k}}_{k\text{ Elemente}}}_{|G^{*}|\text{ Elemente }(i\text{ Perioden})}
+\]
 
 \end_inset
 
@@ -5189,11 +5248,13 @@ Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 r^{|G^{*}|}-1=r^{ik}-1 & =(r^{k}-1)\,\left[r^{(i-1)k}+r^{(i-2)k}+\dots+r^{2k}+r^{k}+1\right]\\
  & =(r^{k}-1)\,\left[(r^{k})^{i-1}+(r^{k})^{i-2}+\dots+(r^{k})^{2}+(r^{k})^{1}+(r^{k})^{0}\right]\\
  & =(r^{k}-1)\,\underbrace{(1+1+\dots+1+1+1)}_{i\text{-mal}}\\
- & =(r^{k}-1)\, i\end{align*}
+ & =(r^{k}-1)\, i
+\end{align*}
 
 \end_inset
 
@@ -5272,7 +5333,7 @@ reference "eq:algebra_ord_divider"
 
 ).
  Nach dem Prinzip der Abgeschlossenheit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5315,7 +5376,7 @@ mbox{Bed.}
 ).
  Abgesehen von der Reihenfolge kann deshalb folgende eindeutige Mengenabbildung
  (Bijektion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5341,9 +5402,11 @@ description "Abbildung von $a$ auf $b$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 rr_{1}\cdot rr_{2}\cdot rr_{3}\dotsm rr_{|G^{*}|} & =r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|}\\
-r^{|G^{*}|}r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|} & =r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|}\end{align*}
+r^{|G^{*}|}r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|} & =r_{1}r_{2}r_{3}\dotsm r_{|G^{*}|}
+\end{align*}
 
 \end_inset
 
@@ -5406,7 +5469,7 @@ Allgemein nennt man jede, von mindestens einem Element
 \end_inset
 
  durch Potenzierung erzeugte multiplikative Gruppe, eine zyklische Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5444,7 +5507,7 @@ reference "sec:algebra_multgrp_elem_order"
 \end_inset
 
  als Generatorelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5454,7 +5517,7 @@ Generator!-element
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5464,7 +5527,7 @@ Element!Generator-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5474,7 +5537,7 @@ Element!erzeugendes
 \end_inset
 
  oder primitives 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5487,8 +5550,10 @@ Element!primitives
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left\langle g\right\rangle :=\left\{ g^{1},g^{2},g^{3},\dots,g^{|G^{*}|-1},g^{|G^{*}|}=g^{0}=1\right\} =G^{*}\label{eq:algebra_generator_set}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left\langle g\right\rangle :=\left\{ g^{1},g^{2},g^{3},\dots,g^{|G^{*}|-1},g^{|G^{*}|}=g^{0}=1\right\} =G^{*}\label{eq:algebra_generator_set}
+\end{equation}
 
 \end_inset
 
@@ -5515,8 +5580,10 @@ Für den Spezialfall, daß es sich bei der Gruppenordnung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\left|g\right| & =|G^{*}|\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\left|g\right| & =|G^{*}|
+\end{align*}
 
 \end_inset
 
@@ -5645,9 +5712,11 @@ Kombination der formelmäßigen Voraussetzungen ergibt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 |G^{*}| & =k\gcd(|G^{*}|,n)\nonumber \\
-i & =\gcd(ik,n)\label{eq:algebra_generator_index}\end{align}
+i & =\gcd(ik,n)\label{eq:algebra_generator_index}
+\end{align}
 
 \end_inset
 
@@ -5701,7 +5770,7 @@ reference "eq:algebra_generator_index"
 Euler
 \noun default
 's Totient-Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5827,7 +5896,7 @@ reference "eq:algebra_ord_divider"
 Euler
 \noun default
 's Totient-Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5879,7 +5948,7 @@ Elemente als Nullstellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5889,7 +5958,7 @@ Element!als Nullstelle
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5926,7 +5995,7 @@ resp
 \end_inset
 
  Einheitswurzeln
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5943,8 +6012,10 @@ Einheitswurzeln
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-\alpha^{|G^{*}|}-1 & =0 & \alpha^{|G^{*}|} & =1\qquad(\alpha\in G^{*})\label{eq:algebra_zeroes_poly}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\alpha^{|G^{*}|}-1 & =0 & \alpha^{|G^{*}|} & =1\qquad(\alpha\in G^{*})\label{eq:algebra_zeroes_poly}
+\end{xalignat}
 
 \end_inset
 
@@ -6028,8 +6099,10 @@ reference "eq:algebra_zeroes_poly"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.|G^{*}|\, x^{|G^{*}|-1}\right|_{x=\alpha}=|G^{*}|\,\alpha^{-1}\alpha^{|G^{*}|}=|G^{*}|\,\alpha^{-1}\neq0\]
+\begin_inset Formula 
+\[
+\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.|G^{*}|\, x^{|G^{*}|-1}\right|_{x=\alpha}=|G^{*}|\,\alpha^{-1}\alpha^{|G^{*}|}=|G^{*}|\,\alpha^{-1}\neq0
+\]
 
 \end_inset
 
@@ -6042,7 +6115,7 @@ Mit diesen Erkenntnissen läßt sich für
 \end_inset
 
  eine Linearfaktordarstellung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6059,8 +6132,10 @@ Linearfaktoren
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-\varphi(x) & =x^{|G^{*}|}-1=\prod_{r\in G^{*}}(x-r)\label{eq:algebra_group_factors_split}\end{align}
+\begin_inset Formula 
+\begin{align}
+\varphi(x) & =x^{|G^{*}|}-1=\prod_{r\in G^{*}}(x-r)\label{eq:algebra_group_factors_split}
+\end{align}
 
 \end_inset
 
@@ -6076,8 +6151,10 @@ Ausmultiplizieren der rechten Seite führt mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-1+\prod_{r\in G^{*}}r & =0\mperiod\label{eq:algebra_product_elements}\end{align}
+\begin_inset Formula 
+\begin{align}
+1+\prod_{r\in G^{*}}r & =0\mperiod\label{eq:algebra_product_elements}
+\end{align}
 
 \end_inset
 
@@ -6094,7 +6171,7 @@ Da alle Elemente
 \end_inset
 
  als Potenzen eines Generatorelements
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6104,7 +6181,7 @@ Generator!-element
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6132,8 +6209,10 @@ reference "eq:algebra_group_factors_split"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\varphi(x) & =\prod_{n=1}^{|G^{*}|}(x-g^{n})=(x-g)(x-g^{2})(x-g^{3})\cdots(x-g^{|G^{*}|-1})(x-1)\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\varphi(x) & =\prod_{n=1}^{|G^{*}|}(x-g^{n})=(x-g)(x-g^{2})(x-g^{3})\cdots(x-g^{|G^{*}|-1})(x-1)\mperiod
+\end{align*}
 
 \end_inset
 
@@ -6159,7 +6238,7 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6169,7 +6248,7 @@ Koerper@Körper!endlicher
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6203,7 +6282,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6243,7 +6322,7 @@ reference "sec:algebra_field"
 Galois
 \noun default
 -Körper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6296,7 +6375,7 @@ description "\\noun{Galois}-Körper mit $q$ Elementen"
 \end_inset
 
  die Ordnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6339,7 +6418,7 @@ key "Peterson:1972"
  kommen.
  Zusätzliches Kriterium ist danach die Existenz des multiplikativ inversen
  Elements
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6382,7 +6461,7 @@ ie
 \end_inset
 
  inklusive Nullelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6421,8 +6500,10 @@ description "Multiplikative Gruppe des endlichen Körpers $\\mathbb{F}_q$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-|\mathbb{F}_{q}^{*}|=q-1\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+|\mathbb{F}_{q}^{*}|=q-1\mperiod
+\end{equation}
 
 \end_inset
 
@@ -6453,7 +6534,7 @@ reference "sec:algebra_multgrp_group_order"
  (Satz von 
 \noun on
 Lagrange
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6525,8 +6606,10 @@ Im Umkehrschluß können nur solche Elemente
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-\gcd(q,k) & =1\end{align}
+\begin_inset Formula 
+\begin{align}
+\gcd(q,k) & =1
+\end{align}
 
 \end_inset
 
@@ -6539,8 +6622,10 @@ Diese Erkenntnis läßt sich (einerseits logisch, aber auch rein analytisch)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-1 & =q-ik\mperiod\label{eq:algebra_multgrp_group_divider}\end{align}
+\begin_inset Formula 
+\begin{align}
+1 & =q-ik\mperiod\label{eq:algebra_multgrp_group_divider}
+\end{align}
 
 \end_inset
 
@@ -6566,7 +6651,7 @@ status open
 zout
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6628,8 +6713,10 @@ reference "sec:algebra_euclid_generic"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{3}
-\gcd(q,k) & =1, & \quad\mbox{mit}\quad\alpha & =1, & \;\beta & =-i\mperiod\end{alignat*}
+\begin_inset Formula 
+\begin{alignat*}{3}
+\gcd(q,k) & =1, & \quad\mbox{mit}\quad\alpha & =1, & \;\beta & =-i\mperiod
+\end{alignat*}
 
 \end_inset
 
@@ -6674,7 +6761,7 @@ Elemente als Nullstellen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6684,7 +6771,7 @@ Element!als Nullstelle
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6725,7 +6812,7 @@ reference "eq:algebra_group_factors_split"
 
  auffassen kann.
  Nimmt man jetzt noch das Nullelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6740,7 +6827,7 @@ Element!Null-
 
  hinzu, dehnt also die Betrachtung von der multiplikativen Gruppe auf alle
  Elemente des Körpers aus, dann kann man als zusätzlichen Linearfaktor
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6757,8 +6844,10 @@ Linearfaktoren
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\mperiod\label{eq:algebra_field_factors_split}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\psi(x)=x\,\varphi(x)=x^{q}-x=\prod_{r\in\mathbb{F}_{q}}(x-r)\mperiod\label{eq:algebra_field_factors_split}
+\end{equation}
 
 \end_inset
 
@@ -6792,7 +6881,7 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6802,7 +6891,7 @@ Restklassen|(
 \end_inset
 
 Restklassen sind Kongruenzen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6818,7 +6907,7 @@ Kongruenz
 
 .
  Das Rechnen mit solchen Elementen wird als modulare oder Modulo-Arithmetik
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6832,7 +6921,7 @@ Modulo-Arithmetik
 \end_inset
 
  als das Modul
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6855,8 +6944,10 @@ description "Modulo"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-r\equiv a\bmod m\label{eq:algebra_def_mod}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r\equiv a\bmod m\label{eq:algebra_def_mod}
+\end{equation}
 
 \end_inset
 
@@ -6903,7 +6994,7 @@ description "Kongruenz"
 
 .
  Im Umkehrschluß sind die Restklassenelemente
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6916,8 +7007,10 @@ Element!Restklassen-
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-a=qm+r,\qquad0\leq r<m\label{eq:algebra_mod_reverse}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+a=qm+r,\qquad0\leq r<m\label{eq:algebra_mod_reverse}
+\end{equation}
 
 \end_inset
 
@@ -6944,7 +7037,7 @@ eg
 \end_inset
 
  im Ring der ganzen Zahlen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6970,8 +7063,10 @@ Zahlen!ganze
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\rcls{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},\]
+\begin_inset Formula 
+\[
+\rcls{r}{m}=\{\left.a\right|a\in R,r\equiv a\bmod m\},
+\]
 
 \end_inset
 
@@ -7028,9 +7123,11 @@ description "Restklasse zum Modul $m$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \rcls{0}{4} & =\{\dotsc,-12,-8,-4,0,4,8,\dotsc\} & \rcls{2}{4} & =\{\dotsc,-10,-6,-2,2,6,10,\dotsc\}\\
-\rcls{1}{4} & =\{\dotsc,-11,-7,-3,1,5,9,\dotsc\} & \rcls{3}{4} & =\{\dotsc,-9,-5,-1,3,7,11,\dotsc\}\end{xalignat*}
+\rcls{1}{4} & =\{\dotsc,-11,-7,-3,1,5,9,\dotsc\} & \rcls{3}{4} & =\{\dotsc,-9,-5,-1,3,7,11,\dotsc\}
+\end{xalignat*}
 
 \end_inset
 
@@ -7042,8 +7139,10 @@ description "Restklasse zum Modul $m$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-R_{m}=\{\rcls{r_{0}}{m},\rcls{r_{1}}{m},\dots,\rcls{r_{n-1}}{m}\},\]
+\begin_inset Formula 
+\[
+R_{m}=\{\rcls{r_{0}}{m},\rcls{r_{1}}{m},\dots,\rcls{r_{n-1}}{m}\},
+\]
 
 \end_inset
 
@@ -7085,8 +7184,10 @@ description "Restklassenring/Menge\\footnote{Die ganzen Zahlen von $0$ bis $m-1$
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\rcls{0}{m},\rcls{1}{m},\dots,\rcls{m-1}{m}\}\mperiod\]
+\begin_inset Formula 
+\[
+\mathbb{Z}_{m}=\mathbb{Z}/m\mathbb{Z}=\{\rcls{0}{m},\rcls{1}{m},\dots,\rcls{m-1}{m}\}\mperiod
+\]
 
 \end_inset
 
@@ -7105,7 +7206,7 @@ Restklassenringe
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7115,7 +7216,7 @@ Ring!Restklassen-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7199,7 +7300,7 @@ Bezüglich der Addition muß
 Abel
 \noun default
 'sche Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7240,7 +7341,7 @@ ie
 \begin_deeper
 \begin_layout Enumerate
 die Addition existiert und ist abgeschlossen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7264,10 +7365,12 @@ Die Operation führt immer wieder auf ein Element in
 \end_inset
 
  
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \rcls{r}{m} & =\rcls{r_{1}}{m}+\rcls{r_{2}}{m}=(a_{1}-mq_{1}+a_{2}-mq_{2})\bmod m\\
  & =(a_{1}+a_{2})\bmod m-\left[m(q_{1}+q_{2})\right]\bmod m=(r_{1}+r_{2})\bmod m\\
- & =\rcls{r_{1}+r_{2}}{m}\end{align*}
+ & =\rcls{r_{1}+r_{2}}{m}
+\end{align*}
 
 \end_inset
 
@@ -7280,8 +7383,10 @@ sie ist außerdem sowohl assoziativ als auch kommutativ (
 Abel
 \noun default
 'sch); 
-\begin_inset Formula \[
-\rcls{r_{1}}{m}+(\rcls{r_{2}}{m}+\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}+\rcls{r_{2}}{m})+\rcls{r_{3}}{m}=\rcls{r_{3}}{m}+\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\]
+\begin_inset Formula 
+\[
+\rcls{r_{1}}{m}+(\rcls{r_{2}}{m}+\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}+\rcls{r_{2}}{m})+\rcls{r_{3}}{m}=\rcls{r_{3}}{m}+\rcls{r_{2}}{m}+\rcls{r_{1}}{m}
+\]
 
 \end_inset
 
@@ -7290,7 +7395,7 @@ Abel
 
 \begin_layout Enumerate
 das neutrale Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7304,8 +7409,10 @@ Element!neutrales
 \end_inset
 
  existiert;
-\begin_inset Formula \[
-\rcls{r}{m}+\rcls{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\rcls{r}{m}\]
+\begin_inset Formula 
+\[
+\rcls{r}{m}+\rcls{0}{m}=(a-mq+mq_{0})\bmod m=\left[a-m(q-q_{0})\right]\bmod m=a\bmod m=\rcls{r}{m}
+\]
 
 \end_inset
 
@@ -7314,7 +7421,7 @@ Element!neutrales
 
 \begin_layout Enumerate
 jedes Element besitzt ein inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7328,8 +7435,10 @@ Element!inverses
 \end_inset
 
  mit 
-\begin_inset Formula \[
-\rcls{r}{m}+(-\rcls{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\rcls{0}{m}.\]
+\begin_inset Formula 
+\[
+\rcls{r}{m}+(-\rcls{r}{m})=a\bmod m+(m-a)\bmod m=m\bmod m=\rcls{0}{m}.
+\]
 
 \end_inset
 
@@ -7343,7 +7452,7 @@ Für die Multiplikation muß
 \end_inset
 
  eine Halbgruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7358,7 +7467,7 @@ Halbgruppe
 \begin_deeper
 \begin_layout Enumerate
 ebenfalls abgeschlossen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7368,10 +7477,12 @@ Abgeschlossenheit!Restklassenring
 \end_inset
 
  sein; 
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \rcls{r}{m} & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}=(r_{1}-mq_{1})\cdot(r_{2}-mq_{2})\bmod m\\
  & =\left[r_{1}r_{2}+m(mq_{1}q_{2}-r_{1}q_{2}-r_{2}q_{1})\right]\bmod m=(r_{1}\cdot r_{2})\bmod m\\
- & =\rcls{r_{1}\cdot r_{2}}{m}\end{align*}
+ & =\rcls{r_{1}\cdot r_{2}}{m}
+\end{align*}
 
 \end_inset
 
@@ -7380,7 +7491,7 @@ Abgeschlossenheit!Restklassenring
 
 \begin_layout Enumerate
 und das Assoziativgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7394,8 +7505,10 @@ Assoziativgesetz
 \end_inset
 
  erfüllen;
-\begin_inset Formula \[
-\rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}\cdot\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m})\cdot\rcls{r_{3}}{m}\]
+\begin_inset Formula 
+\[
+\rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}\cdot\rcls{r_{3}}{m})=(\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m})\cdot\rcls{r_{3}}{m}
+\]
 
 \end_inset
 
@@ -7409,7 +7522,7 @@ Außerdem muß für alle
 \end_inset
 
  das Distributivgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7423,10 +7536,12 @@ Distributivgesetz
 \end_inset
 
 
-\begin_inset Formula \begin{alignat*}{1}
+\begin_inset Formula 
+\begin{alignat*}{1}
 \rcls{r_{1}}{m}\cdot(\rcls{r_{2}}{m}+\rcls{r_{3}}{m}) & =(r_{1}-mq_{1})\cdot\left[r_{2}+r_{3}-m(q_{2}+q_{3})\right]\bmod m\\
  & =(r_{1}r_{2}+r_{1}r_{3})\bmod m\\
- & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\cdot\rcls{r_{3}}{m}\end{alignat*}
+ & =\rcls{r_{1}}{m}\cdot\rcls{r_{2}}{m}+\rcls{r_{1}}{m}\cdot\rcls{r_{3}}{m}
+\end{alignat*}
 
 \end_inset
 
@@ -7439,7 +7554,7 @@ Da
 \end_inset
 
  ein neutrales Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7457,7 +7572,7 @@ Element!neutrales
 \end_inset
 
  besitzt, handelt es sich sogar um einen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7471,8 +7586,10 @@ Ring!mit Eins
 Ring mit Eins
 \emph default
 .
-\begin_inset Formula \[
-\rcls{r}{m}\cdot\rcls{1}{m}=(r\cdot1)\bmod m=r\bmod m=\rcls{r}{m}\]
+\begin_inset Formula 
+\[
+\rcls{r}{m}\cdot\rcls{1}{m}=(r\cdot1)\bmod m=r\bmod m=\rcls{r}{m}
+\]
 
 \end_inset
 
@@ -7481,7 +7598,7 @@ Ring mit Eins
 
 \begin_layout Standard
 Aus Anwendungssicht ist sofort zu erkennen, daß insbesondere die Restklassen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7503,7 +7620,7 @@ Restklassen!
 \end_inset
 
  erfüllen und somit einen kommutativen Ring mit Einselement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7530,7 +7647,7 @@ Existenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7540,7 +7657,7 @@ Restklassen!-körper
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7550,7 +7667,7 @@ Koerper@Körper!Restklassen-
 \end_inset
 
 Für den Übergang von einem Restklassenring
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7560,7 +7677,7 @@ Restklassen!-ring
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7578,7 +7695,7 @@ Ring!Restklassen-
 \end_inset
 
  das Vorhandensein eines multiplikativ inversen Elements
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7670,7 +7787,7 @@ description "Größter gemeinsamer Teiler von $a$ und $b$"
 \end_inset
 
  um ein Primelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7680,7 +7797,7 @@ Primelement
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7690,7 +7807,7 @@ Element!Prim-
 \end_inset
 
  handelt (ein vollständiges Restklassensystem
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7734,8 +7851,8 @@ description "Menge der Primzahlen"
 \end_inset
 
 ).
- Im Fall des Auschlusses von Elementen (ein reduziertes Restklassensystem
-\begin_inset Index
+ Im Fall des Ausschlusses von Elementen (ein reduziertes Restklassensystem
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7749,7 +7866,7 @@ Restklassen!-system!reduziertes
 Euler
 \noun default
 's Totient-Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7845,8 +7962,10 @@ Ist
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\underbrace{{\rcls{r}{m}}^{-1}\rcls{r}{m}}_{e_{(\cdot)}=1}\cdot\rcls{s}{m}=\rcls{s}{m}={\rcls{r}{m}}^{-1}\rcls{m}{m}=0\]
+\begin_inset Formula 
+\[
+\underbrace{{\rcls{r}{m}}^{-1}\rcls{r}{m}}_{e_{(\cdot)}=1}\cdot\rcls{s}{m}=\rcls{s}{m}={\rcls{r}{m}}^{-1}\rcls{m}{m}=0
+\]
 
 \end_inset
 
@@ -7946,7 +8065,7 @@ status open
 zout
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8011,7 +8130,7 @@ reference "sec:algebra_gcd"
 \end_inset
 
  darstellbar ist
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8039,9 +8158,11 @@ noun{B
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat}{1}
+\begin_inset Formula 
+\begin{alignat}{1}
 \gcd(r,m)=1 & =\alpha r+\beta m\equiv\alpha r\bmod m\label{eq:algebra_rcls_relprime}\\
-\rcls{1}{m} & =\rcls{\alpha}{m}\cdot\rcls{r}{m}\mperiod\nonumber \end{alignat}
+\rcls{1}{m} & =\rcls{\alpha}{m}\cdot\rcls{r}{m}\mperiod\nonumber 
+\end{alignat}
 
 \end_inset
 
@@ -8057,8 +8178,10 @@ Das inverse Element von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-{\rcls{r}{m}}^{-1}=\rcls{\alpha}{m},\]
+\begin_inset Formula 
+\[
+{\rcls{r}{m}}^{-1}=\rcls{\alpha}{m},
+\]
 
 \end_inset
 
@@ -8139,7 +8262,7 @@ Multiplikative Gruppe
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8177,7 +8300,7 @@ Ordnung von Elementen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8203,7 +8326,7 @@ reference "sec:algebra_galois_multgrp"
 
  noch eine erwähnenswerte Ausdrucksmöglichkeit für die von einem Körperelement
  generierte zyklische Untergruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8216,8 +8339,10 @@ Gruppe!zyklische
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N},\: r\in\mathbb{Z}\}\mperiod\label{eq:algebra_rcls_mod}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N},\: r\in\mathbb{Z}\}\mperiod\label{eq:algebra_rcls_mod}
+\end{equation}
 
 \end_inset
 
@@ -8226,7 +8351,7 @@ Gruppe!zyklische
 
 \begin_layout Standard
 Einsichtig wird die Schreibweise sofort, wenn man sie für jeden Exponent
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8279,14 +8404,16 @@ reference "sec:algebra_multgrp_elem_order"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 r^{0}\bmod(r^{k}-1) & =r^{0}\\
 r^{1}\bmod(r^{k}-1) & =r^{1}\\
 r^{2}\bmod(r^{k}-1) & =r^{2}\\
  & \vdots\\
 r^{k-1}\bmod(r^{k}-1) & =r^{k-1}\\
 r^{k}\bmod(r^{k}-1) & =1=r^{0}\\
- & \vdots\end{align*}
+ & \vdots
+\end{align*}
 
 \end_inset
 
@@ -8325,7 +8452,7 @@ reference "eq:algebra_ord_multgrp"
 Fermat
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8385,8 +8512,10 @@ description "Primzahlenkörper"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-r^{p-1}\equiv1\pmod{p}\label{eq:algebra_theorem_fermat}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r^{p-1}\equiv1\pmod{p}\label{eq:algebra_theorem_fermat}
+\end{equation}
 
 \end_inset
 
@@ -8428,8 +8557,10 @@ Oft auch in den Varianten
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-r^{p-1}-1=np\equiv0\pmod{p}\label{eq:algebra_ord_mod_factor}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r^{p-1}-1=np\equiv0\pmod{p}\label{eq:algebra_ord_mod_factor}
+\end{equation}
 
 \end_inset
 
@@ -8457,7 +8588,7 @@ reference "eq:algebra_theorem_fermat"
 \end_inset
 
  zu invertieren.
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8470,8 +8601,10 @@ Element!inverses
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-r^{-1} & \equiv r^{p-2}\pmod{p}\end{align*}
+\begin_inset Formula 
+\begin{align*}
+r^{-1} & \equiv r^{p-2}\pmod{p}
+\end{align*}
 
 \end_inset
 
@@ -8483,7 +8616,7 @@ Satz von Wilson
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8533,7 +8666,7 @@ reference "eq:algebra_product_elements"
 Wilson
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8602,8 +8735,10 @@ Er ist sowohl notwendige als auch hinreichende Bedingung dafür, daß es sich
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-(p-1)!\equiv-1\equiv p-1\pmod{p}\label{eq:algebra_lemma_wilson}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+(p-1)!\equiv-1\equiv p-1\pmod{p}\label{eq:algebra_lemma_wilson}
+\end{equation}
 
 \end_inset
 
@@ -8623,7 +8758,7 @@ Euler
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8764,7 +8899,7 @@ Da die Eins immer als teilerfremd angesehen wird, gilt:
 \end_layout
 
 \begin_layout Quote
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8811,8 +8946,10 @@ ie
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-r^{\totient(m)}\equiv1\pmod{m}\mperiod\label{eq:algebra_euler_totient}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+r^{\totient(m)}\equiv1\pmod{m}\mperiod\label{eq:algebra_euler_totient}
+\end{equation}
 
 \end_inset
 
@@ -8913,8 +9050,10 @@ reference "eq:algebra_ord_divider"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-r^{|\mathbb{Z}_{m}^{*}|}\equiv1\pmod{m}\]
+\begin_inset Formula 
+\[
+r^{|\mathbb{Z}_{m}^{*}|}\equiv1\pmod{m}
+\]
 
 \end_inset
 
@@ -8946,7 +9085,7 @@ reference "eq:algebra_euler_totient"
 Fermat
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8981,11 +9120,8 @@ Für einen speziellen Fall, nämlich das Produkt zweier Primzahlen
 status collapsed
 
 \begin_layout Plain Layout
-Dieser Fall hat besondere Bedeutung im Zusammenhang mit dem 
-\lang english
-RSA
-\lang german
--Algorithmus (siehe 
+Dieser Fall hat besondere Bedeutung im Zusammenhang mit dem RSA-Algorithmus
+ (siehe 
 \begin_inset ERT
 status collapsed
 
@@ -9096,10 +9232,12 @@ oder
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \totient(m) & =m-1-(p+q-2)\\
  & =pq-(p+q)+1\\
- & =(p-1)(q-1)\end{align*}
+ & =(p-1)(q-1)
+\end{align*}
 
 \end_inset
 
@@ -9134,8 +9272,10 @@ Für den allgemeineren Fall zweier teilerfremder Zahlen gilt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\totient(p^{n}) & =\totient(p\cdot p^{n-1})=(p-1)p^{n-1}\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\totient(p^{n}) & =\totient(p\cdot p^{n-1})=(p-1)p^{n-1}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -9156,7 +9296,7 @@ Körper
 
 \begin_layout Standard
 Der Körper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9170,7 +9310,7 @@ Koerper@Körper!
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9225,16 +9365,18 @@ Die Addition (modulo
 \end_inset
 
 
-\begin_inset Formula \begin{xalignat}{2}
+\begin_inset Formula 
+\begin{xalignat}{2}
 0+0 & =0 & 1+1 & =2\bmod2=0\label{eq:algebra_mod2_add_inv}\\
-0+1 & =1 & 1+0 & =1\nonumber \end{xalignat}
+0+1 & =1 & 1+0 & =1\nonumber 
+\end{xalignat}
 
 \end_inset
 
  geradezu primitiv und entspricht dem logischen 
 \emph on
 Exklusiv-Oder
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9306,9 +9448,11 @@ Und
 \end_inset
 
 
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 0\cdot0 & =0 & 1\cdot1 & =1\\
-0\cdot1 & =0 & 1\cdot0 & =0\end{xalignat*}
+0\cdot1 & =0 & 1\cdot0 & =0
+\end{xalignat*}
 
 \end_inset
 
@@ -9347,7 +9491,7 @@ Körper
 
 \begin_layout Standard
 Für den Körper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9369,7 +9513,7 @@ Koerper@Körper!
 \end_inset
 
 , gilt für die Ordnung der Elemente:
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9379,7 +9523,7 @@ Totient-Funktion
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9392,11 +9536,13 @@ Element!Ordnung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xxalignat}{7}
+\begin_inset Formula 
+\begin{xxalignat}{7}
 r_{1} & =1 & \left\langle r_{1}\right\rangle  & =\left\{ 1\right\}  & k & =1 & \totient(k) & =1 & r_{1}^{k} & =1 & r_{1}^{p-1} & =1 &  & \pmod{5}\\
 r_{2} & =2 & \left\langle r_{2}\right\rangle  & =\left\{ 1,2,4,3\right\}  & k & =4 & \totient(k) & =2 & r_{2}^{k} & =16\equiv1 & r_{2}^{p-1} & =16\equiv1 &  & \pmod{5}\\
 r_{3} & =3 & \left\langle r_{3}\right\rangle  & =\left\{ 1,3,4,2\right\}  & k & =4 & \totient(k) & =2 & r_{3}^{k} & =81\equiv1 & r_{3}^{p-1} & =81\equiv1 &  & \pmod{5}\\
-r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4\right\}  & k & =2 & \totient(k) & =1 & r_{4}^{k} & =16\equiv1 & r_{4}^{p-1} & =256\equiv1 &  & \pmod{5}\mperiod\end{xxalignat}
+r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4\right\}  & k & =2 & \totient(k) & =1 & r_{4}^{k} & =16\equiv1 & r_{4}^{p-1} & =256\equiv1 &  & \pmod{5}\mperiod
+\end{xxalignat}
 
 \end_inset
 
@@ -9417,7 +9563,7 @@ Körper
 
 \begin_layout Plain Layout
 Für den Körper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9439,7 +9585,7 @@ Koerper@Körper!
 \end_inset
 
 , gilt für die Ordnung der Elemente:
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9449,7 +9595,7 @@ Totient-Funktion
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9462,13 +9608,15 @@ Element!Ordnung
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xxalignat}{7}
+\begin_inset Formula 
+\begin{xxalignat}{7}
 r_{1} & =1 & \left\langle r_{1}\right\rangle  & =\left\{ 1\right\}  & k & =1 & \totient(k) & =1 & r_{1}^{k} & =1 & r_{1}^{p-1} & =1 &  & \pmod{7}\\
 r_{2} & =2 & \left\langle r_{2}\right\rangle  & =\left\{ 1,2,4\right\}  & k & =3 & \totient(k) & =2 & r_{2}^{k} & =\equiv1 & r_{2}^{p-1} & =\equiv1 &  & \pmod{7}\\
 r_{3} & =3 & \left\langle r_{3}\right\rangle  & =\left\{ 1,3,2,6,4,5\right\}  & k & =6 & \totient(k) & =2 & r_{3}^{k} & =\equiv1 & r_{3}^{p-1} & =\equiv1 &  & \pmod{7}\\
 r_{4} & =4 & \left\langle r_{4}\right\rangle  & =\left\{ 1,4,2\right\}  & k & =2 & \totient(k) & =2 & r_{4}^{k} & =\equiv1 & r_{4}^{p-1} & =\equiv1 &  & \pmod{7}\\
 r_{5} & =5 & \left\langle r_{5}\right\rangle  & =\left\{ 1,5,4,6,2,3\right\}  & k & =6 & \totient(k) & =2 & r_{5}^{k} & =\equiv1 & r_{4}^{p-1} & =\equiv1 &  & \pmod{7}\mperiod\\
-r_{6} & =6 & \left\langle r_{6}\right\rangle  & =\left\{ 1,6\right\}  & k & =2 & \totient(k) & =1 & r_{5}^{k} & =\equiv1 & r_{4}^{p-1} & =\equiv1 &  & \pmod{7}\mperiod\end{xxalignat}
+r_{6} & =6 & \left\langle r_{6}\right\rangle  & =\left\{ 1,6\right\}  & k & =2 & \totient(k) & =1 & r_{5}^{k} & =\equiv1 & r_{4}^{p-1} & =\equiv1 &  & \pmod{7}\mperiod
+\end{xxalignat}
 
 \end_inset
 
@@ -9495,7 +9643,7 @@ Vorbetrachtungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9505,7 +9653,7 @@ Koerper@Körper!Erweiterungs-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9527,7 +9675,7 @@ Ein Erweiterungskörper
 \end_inset
 
  als Teilkörper
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9537,7 +9685,7 @@ Koerper@Körper!Teil-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9560,7 +9708,7 @@ key "Peterson:1972"
 
 .
  Der Grad der Körpererweiterung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9615,7 +9763,7 @@ resp
 \end_inset
 
  geschrieben
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9630,7 +9778,7 @@ Dimension
 \end_inset
 
  besteht entsprechend der Definition des Vektorraumes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9676,9 +9824,11 @@ reference "sec:algebra_vector_space"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 {[\mathbb{C}:\mathbb{R}]} & =2,\text{ die Erweiterung der Dimension um eine imaginäre Komponente;}\\
-{[\mathbb{R}:\mathbb{Q}]} & =\infty,\text{ hier sind die rationalen Zahlen noch abzählbar.}\end{align*}
+{[\mathbb{R}:\mathbb{Q}]} & =\infty,\text{ hier sind die rationalen Zahlen noch abzählbar.}
+\end{align*}
 
 \end_inset
 
@@ -9692,7 +9842,7 @@ Polynomringe
 \begin_layout Standard
 Ausgehend von den Vorbetrachtungen konstruieren wir jetzt einen endlichen
  Polynomring
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9702,7 +9852,7 @@ Ring!Polynom-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9729,9 +9879,11 @@ description "Polynomring"
 
 .
  
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\dots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
-f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}\end{align}
+f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}
+\end{align}
 
 \end_inset
 
@@ -9755,7 +9907,7 @@ Darin seien die üblichen Polynomoperationen, wie Addition und Multiplikation
 \end_inset
 
 , dann wird das Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9769,7 +9921,7 @@ Polynom!monisches
 \end_inset
 
  das so genannte Leitmonom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9783,7 +9935,7 @@ Monom
 
 \begin_layout Standard
 Wird anschließend eine Restklassendivision
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9797,7 +9949,7 @@ Restklassen!-division
 \end_inset
 
  durch ein Polynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9833,7 +9985,7 @@ description "Polynom-Restklassenring auf dem Grundkörper $\\mathbb{Z}_p$"
 
 , dann bildet die Menge der darin enthaltenen Restklassen wieder einen Restklass
 enring
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9843,7 +9995,7 @@ Restklassen!-ring
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9911,7 +10063,7 @@ description "Grad des Polynoms $h(x)$"
 Abel
 \noun default
 'sche Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9963,7 +10115,7 @@ Das neutrale Element
 
 \begin_layout Enumerate
 Ein additiv inverses Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9998,7 +10150,7 @@ Element!inverses
 \end_inset
 
  ist eine multiplikative Halbgruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10008,7 +10160,7 @@ Halbgruppe
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10066,7 +10218,7 @@ Auch das Assoziativgesetz
 \begin_layout Enumerate
 Aus den bisherigen Erkenntnissen zu Restklassenringen ist im Zusammenhang
  mit Polynomoperationen zu schlußfolgern, daß das Distributivgesetz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10092,7 +10244,7 @@ Der Übergang zu einem Körper wird möglich, wenn
 \end_inset
 
  ein Primelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10106,7 +10258,7 @@ Element!Prim-
 \end_inset
 
  ist, es sich also um ein (so genanntes) irreduzibles
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10216,7 +10368,7 @@ key "Bosch:1996"
 
 .
  Man spricht auch von einem Vektorraum
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10279,7 +10431,7 @@ reference "sec:algebra_vector_space"
 \end_inset
 
  bilden die (Polynom-) Basis
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10298,7 +10450,7 @@ Polynom!-basis
 
 .
  Entsprechend ist die Dimension
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10366,7 +10518,7 @@ reference "sec:algebra_residue_field"
 
 \begin_layout Enumerate
 Das Modul
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10388,7 +10540,7 @@ Modul
 
 \begin_layout Enumerate
 Die Restklassendivision
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10432,7 +10584,7 @@ Die Menge der Elemente
 \end_inset
 
  gehörenden Restklasse
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10467,7 +10619,7 @@ Restklassen
 
 \begin_layout Enumerate
 Das Nullelement ist das Nullpolynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10498,7 +10650,7 @@ resp
 \end_inset
 
 , das Einselement das Einheitspolynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10572,7 +10724,7 @@ Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
 \end_inset
 
  hat dessen multiplikative Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10604,7 +10756,7 @@ Jedes Element
 \end_inset
 
  hat eine Ordnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10627,7 +10779,7 @@ resp
 \end_inset
 
  Periode
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10656,8 +10808,10 @@ reference "eq:algebra_ord_elem"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\mperiod\]
+\begin_inset Formula 
+\[
+\left[r(x)\right]^{k}-1\equiv0\pmod{m(x)}\mperiod
+\]
 
 \end_inset
 
@@ -10669,7 +10823,7 @@ reference "eq:algebra_ord_elem"
 Nach dem Satz von 
 \noun on
 Lagrange
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10698,7 +10852,7 @@ noun{Lagrange}
 \end_inset
 
  des Elements die der multiplikativen Gruppe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10733,8 +10887,10 @@ ie
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\mperiod\label{eq:algebra_extfield_zeroes_base}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left[r(x)\right]^{q-1}-1\equiv0\pmod{m(x)}\mperiod\label{eq:algebra_extfield_zeroes_base}
+\end{equation}
 
 \end_inset
 
@@ -10744,7 +10900,7 @@ ie
 \end_deeper
 \begin_layout Enumerate
 Jedes erzeugende (primitive) Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10754,7 +10910,7 @@ Element!primitives
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10772,7 +10928,7 @@ Element!Generator-
 \end_inset
 
  erfüllt die Bedingung der maximalen Zykluslänge
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10797,7 +10953,7 @@ Zykluslänge
 
  verwendet zu werden.
  Nimmt man das Nullelement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10811,7 +10967,7 @@ Element!Null-
 \end_inset
 
  sowie das Einselement
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10888,10 +11044,12 @@ reference "eq:algebra_ord_mod_factor"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 x^{q-1}-1 & =h(x)\, m(x)\\
 x^{q-1}-1 & \equiv0\pmod{m(x)}\\
-x^{q}-x & \equiv0\pmod{m(x)},\end{align*}
+x^{q}-x & \equiv0\pmod{m(x)},
+\end{align*}
 
 \end_inset
 
@@ -10952,7 +11110,7 @@ Schnorr
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10962,7 +11120,7 @@ Koerper@Körper!Zerfällungs-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10972,7 +11130,7 @@ Zerfällungskörper
 \end_inset
 
 Nach dem Hauptsatz der Zahlentheorie
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10982,7 +11140,7 @@ Hauptsatz der Zahlentheorie
 \end_inset
 
  kann man für jede natürliche Zahl eine eindeutigen Primfaktorzerlegung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10995,8 +11153,10 @@ Primfaktorzerlegung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\dotsm\]
+\begin_inset Formula 
+\[
+m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\dotsm
+\]
 
 \end_inset
 
@@ -11013,8 +11173,10 @@ finden.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f(x)=\left[m_{1}(x)\right]^{e_{1}}\,\left[m_{2}(x)\right]^{e_{2}}\left[m_{3}(x)\right]^{e_{3}}\dotsm\]
+\begin_inset Formula 
+\[
+f(x)=\left[m_{1}(x)\right]^{e_{1}}\,\left[m_{2}(x)\right]^{e_{2}}\left[m_{3}(x)\right]^{e_{3}}\dotsm
+\]
 
 \end_inset
 
@@ -11242,8 +11404,10 @@ resp
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\psi(x)=x^{q}-x=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha),\qquad\psi(x)\in\mathbb{F}_{p}[x]\]
+\begin_inset Formula 
+\[
+\psi(x)=x^{q}-x=\prod_{\alpha\in\mathbb{F}_{q}}(x-\alpha),\qquad\psi(x)\in\mathbb{F}_{p}[x]
+\]
 
 \end_inset
 
@@ -11256,7 +11420,7 @@ Ein weiteres Charakteristikum des Zerfällungskörpers
 \end_inset
 
  sind die konjugierten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11316,8 +11480,10 @@ einer
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-(b+c)^{p}=\sum_{k=0}^{p}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}+\sum_{k=1}^{p-1}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}\]
+\begin_inset Formula 
+\[
+(b+c)^{p}=\sum_{k=0}^{p}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}+\sum_{k=1}^{p-1}\binom{p}{k}b^{p-k}c^{k}=b^{p}+c^{p}
+\]
 
 \end_inset
 
@@ -11397,8 +11563,10 @@ reference "sec:algebra_residue_multgrp"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-m\left(\alpha^{p}\right)=\sum_{i=0}^{n}a_{i}\alpha^{ip}=\sum_{i=0}^{n}a_{i}^{p}\alpha^{ip}=\sum_{i=0}^{n}\left(a_{i}\alpha^{i}\right)^{p}=\left(\sum_{i=0}^{n}a_{i}\alpha^{i}\right)^{p}=\left[m(\alpha)\right]^{p}=0\]
+\begin_inset Formula 
+\[
+m\left(\alpha^{p}\right)=\sum_{i=0}^{n}a_{i}\alpha^{ip}=\sum_{i=0}^{n}a_{i}^{p}\alpha^{ip}=\sum_{i=0}^{n}\left(a_{i}\alpha^{i}\right)^{p}=\left(\sum_{i=0}^{n}a_{i}\alpha^{i}\right)^{p}=\left[m(\alpha)\right]^{p}=0
+\]
 
 \end_inset
 
@@ -11420,7 +11588,7 @@ Das irreduzible Polynom
 \end_inset
 
  wird auch Minimalpolynom
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11430,7 +11598,7 @@ Minimalpolynom
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11440,7 +11608,7 @@ Polynom!Minimal-
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11496,8 +11664,10 @@ key "Peterson:1972"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-m(x)=\prod_{\nu=0}^{n-1}\left(x-\alpha^{p^{\nu}}\right)\mperiod\]
+\begin_inset Formula 
+\[
+m(x)=\prod_{\nu=0}^{n-1}\left(x-\alpha^{p^{\nu}}\right)\mperiod
+\]
 
 \end_inset
 
@@ -11511,7 +11681,7 @@ Die Nullstellen
 
  kann man (wegen ihrer linearen Unabhängigkeit) verwenden, um statt einer
  Polynombasis
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11521,7 +11691,7 @@ Vektor!-raum!Basis
 \end_inset
 
  eine so genannte Normalbasis
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11556,7 +11726,7 @@ status open
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 mathbb{Z}_2^n}{Z(2**n)}
 \end_layout
@@ -11637,7 +11807,7 @@ reference "eq:algebra_residue_poly"
 \end_inset
 
  Polynome zum Erweiterungskörper
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -11662,9 +11832,11 @@ Koerper@Körper!
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 r_{0}(x) & =0 & r_{1}(x) & =1\\
-r_{2}(x) & =x & r_{3}(x) & =x+1\mperiod\end{xalignat*}
+r_{2}(x) & =x & r_{3}(x) & =x+1\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -11677,7 +11849,7 @@ Wie sich leicht feststellen läßt, ist
 \end_inset
 
  das erzeugende Element
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11698,10 +11870,12 @@ Element!erzeugendes
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 (x+1)^{0} & =1\\
 (x+1)^{1} & =x+1\\
-(x+1)^{2} & =x^{2}+x+x+1=x^{2}+1\equiv x\pmod{x^{2}+x+1}\end{align*}
+(x+1)^{2} & =x^{2}+x+x+1=x^{2}+1\equiv x\pmod{x^{2}+x+1}
+\end{align*}
 
 \end_inset
 
@@ -11734,10 +11908,12 @@ Außerdem sind alle Elemente (abgesehen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \left[r_{1}(x)\right]^{3}-1 & =0\\
 \left[r_{2}(x)\right]^{3}-1 & =x^{3}-1=(x-1)\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\\
-\left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}\end{align*}
+\left[r_{3}(x)\right]^{3}-1 & =(x+1)^{3}-1=x^{3}+x^{2}+x=x\,(x^{2}+x+1)\equiv0\pmod{x^{2}+x+1}
+\end{align*}
 
 \end_inset
 
@@ -11799,8 +11975,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2}+x+1}\]
+\begin_inset Formula 
+\[
+r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2}+x+1}
+\]
 
 \end_inset
 
@@ -11808,7 +11986,7 @@ r_{1}(x)\cdot r_{2}(x)\cdot r_{3}(x)=1\cdot x\cdot(x+1)=x^{2}+x\equiv1\pmod{x^{2
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -11849,7 +12027,7 @@ Euklidischer Algorithmus
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -11859,7 +12037,7 @@ Größter gemeinsamer Teiler|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -11869,7 +12047,7 @@ Euklidischer Algorithmus|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -11879,7 +12057,7 @@ Größter gemeinsamer Teiler!Euklidischer Algorithmus|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -12379,8 +12557,10 @@ reference "sec:algebra_residue_classes"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-c_{i-1}=q_{i+1}c_{i}+c_{i+1},\qquad0\leq c_{i+1}<c_{i}\]
+\begin_inset Formula 
+\[
+c_{i-1}=q_{i+1}c_{i}+c_{i+1},\qquad0\leq c_{i+1}<c_{i}
+\]
 
 \end_inset
 
@@ -12393,14 +12573,16 @@ geschrieben werden.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 a=c_{0} & =q_{2}c_{1}+c_{2} & \qquad(c_{2}<c_{1})\\
 b=c_{1} & =q_{3}c_{2}+c_{3} & \qquad(c_{3}<c_{2})\\
 c_{2} & =q_{4}c_{3}+c_{4} & \qquad(c_{4}<c_{3})\\
  & \;\vdots\\
 c_{k-3} & =q_{k-1}c_{k-2}+c_{k-1} & \qquad(c_{k-1}<c_{k-2})\\
 c_{k-2} & =q_{k}c_{k-1}+c_{k} & \qquad(c_{k}<c_{k-1})\\
-c_{k-1} & =q_{k+1}c_{k}+0 & \qquad(c_{k+1}=0)\end{alignat*}
+c_{k-1} & =q_{k+1}c_{k}+0 & \qquad(c_{k+1}=0)
+\end{alignat*}
 
 \end_inset
 
@@ -12535,8 +12717,10 @@ Viel kürzer kann man auch damit argumentieren, daß die Modulo-Division
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-c_{i+1}=c_{i-1}\bmod c_{i}=c_{i-1}-q_{i}c_{i}=\overline{c}_{i-1}d-q_{i}\overline{c}_{i}d=d(\overline{c}_{i-1}-q_{i}\overline{c}_{i})\]
+\begin_inset Formula 
+\[
+c_{i+1}=c_{i-1}\bmod c_{i}=c_{i-1}-q_{i}c_{i}=\overline{c}_{i-1}d-q_{i}\overline{c}_{i}d=d(\overline{c}_{i-1}-q_{i}\overline{c}_{i})
+\]
 
 \end_inset
 
@@ -12590,8 +12774,10 @@ So gilt allgemein:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\gcd(c_{i-1},c_{i})=\gcd(c_{i+1},c_{i})=\gcd(c_{i-1}\bmod c_{i},c_{i})\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\gcd(c_{i-1},c_{i})=\gcd(c_{i+1},c_{i})=\gcd(c_{i-1}\bmod c_{i},c_{i})
+\end{equation}
 
 \end_inset
 
@@ -12624,12 +12810,14 @@ en Teiler enthalten.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 d & =c_{k-2}-q_{k}c_{k-1}\\
  & =c_{k-2}-q_{k}(c_{k-3}-q_{k-1}c_{k-2})=c_{k-2}(1+q_{k}q_{k-1})-c_{k-3}q_{k}\\
  & =(c_{k-4}-q_{k-2}c_{k-3})(1+q_{k}q_{k-1})-c_{k-3}q_{k}=c_{k-4}(1+q_{k}q_{k-1})-c_{k-3}\left[q_{k-2}(1+q_{k}q_{k-1})+q_{k}\right]\\
  & \;\vdots\\
- & =\alpha c_{0}+\beta c_{1}\end{align*}
+ & =\alpha c_{0}+\beta c_{1}
+\end{align*}
 
 \end_inset
 
@@ -12653,8 +12841,10 @@ welche auf ganzen Zahlen
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
-d & =\gcd(a,b)=\alpha a+\beta b\label{eq:algebra_euclid_bezout}\end{align}
+\begin_inset Formula 
+\begin{align}
+d & =\gcd(a,b)=\alpha a+\beta b\label{eq:algebra_euclid_bezout}
+\end{align}
 
 \end_inset
 
@@ -12691,7 +12881,7 @@ status open
 zout
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -12855,8 +13045,10 @@ reference "sec:algebra_diophantine_eqn"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{3}
-a & =d\overline{a} & b= & d\overline{b} & 1 & =\gcd(\overline{a},\overline{b})=\alpha\overline{a}+\beta\overline{b}\label{eq:algebra_euclid_factors}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{3}
+a & =d\overline{a} & b= & d\overline{b} & 1 & =\gcd(\overline{a},\overline{b})=\alpha\overline{a}+\beta\overline{b}\label{eq:algebra_euclid_factors}
+\end{xalignat}
 
 \end_inset
 
@@ -12896,11 +13088,13 @@ reference "eq:algebra_euclid_bezout"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 d & =(\alpha+n\overline{b})a+(\beta-n\overline{a})b\\
  & =\alpha a+\beta b+n(\overline{b}a-\overline{a}b)\\
  & =\alpha a+\beta b+n(\overline{b}\overline{a}d-\overline{a}\overline{b}d)\\
- & =\alpha a+\beta b\end{align*}
+ & =\alpha a+\beta b
+\end{align*}
 
 \end_inset
 
@@ -12996,8 +13190,10 @@ Sollte man nur an einem Kofaktor (beispielhaft
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\alpha & :=\alpha\mp q\overline{b} & \qquad\beta & :=\beta\pm q\overline{a}\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\alpha & :=\alpha\mp q\overline{b} & \qquad\beta & :=\beta\pm q\overline{a}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -13015,7 +13211,7 @@ Erweiterter euklidischer Algorithmus
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -13045,8 +13241,8 @@ status open
 
 zout
 \noun default
-
-\begin_inset Index
+-Kofaktoren
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -13070,7 +13266,7 @@ noun{B
 
 \end_inset
 
--Kofaktoren 
+ 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -13150,8 +13346,10 @@ Durch Induktion ergibt sich aus
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-c_{i}=c_{i-2}-q_{i}c_{i-1}=d\overline{c}_{i}=\alpha_{i}a+\beta_{i}b\label{eq:algebra_euclid_ext}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+c_{i}=c_{i-2}-q_{i}c_{i-1}=d\overline{c}_{i}=\alpha_{i}a+\beta_{i}b\label{eq:algebra_euclid_ext}
+\end{equation}
 
 \end_inset
 
@@ -13171,10 +13369,12 @@ durch Einsetzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 c_{i+1} & =c_{i-1}-q_{i+1}c_{i}=\alpha_{i+1}a+\beta_{i+1}b\\
  & =\alpha_{i-1}a+\beta_{i-1}b-q_{i+1}(\alpha_{i}a+\beta_{i}b)\\
- & =(\alpha_{i-1}-q_{i+1}\alpha_{i})a+(\beta_{i-1}-q_{i+1}\beta_{i})b\mperiod\end{align*}
+ & =(\alpha_{i-1}-q_{i+1}\alpha_{i})a+(\beta_{i-1}-q_{i+1}\beta_{i})b\mperiod
+\end{align*}
 
 \end_inset
 
@@ -13205,8 +13405,10 @@ reference "eq:algebra_euclid_ext"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
-\alpha_{i+1} & =\alpha_{i-1}-q_{i+1}\alpha_{i} & \beta_{i+1} & =\beta_{i-1}-q_{i+1}\beta_{i}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\alpha_{i+1} & =\alpha_{i-1}-q_{i+1}\alpha_{i} & \beta_{i+1} & =\beta_{i-1}-q_{i+1}\beta_{i}
+\end{xalignat*}
 
 \end_inset
 
@@ -13643,7 +13845,7 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -13653,7 +13855,7 @@ Größter gemeinsamer Teiler!Euklidischer Algorithmus!erweiterter|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -13663,7 +13865,7 @@ Größter gemeinsamer Teiler!Euklidischer Algorithmus|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -13686,7 +13888,7 @@ Binärer GCD-Algorithmus
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -13751,13 +13953,15 @@ Im Wesen unterscheidet er sich nicht vom euklidischen Algorithmus, der in
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 d & =\gcd(a_{0},b_{0})\\
  & =\gcd(a_{1},b_{1})\\
  & \vdots\\
  & =\gcd(a_{i},b_{i})\\
  & \vdots\\
- & =\gcd(a_{k},0)=a_{k}\end{align*}
+ & =\gcd(a_{k},0)=a_{k}
+\end{align*}
 
 \end_inset
 
@@ -13825,7 +14029,7 @@ Reduktionsschema des binären GCD-Algorithmus
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="4">
-<features headTopDL="true" headBottomDL="true">
+<features headTopDL="true" headBottomDL="true" tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -14559,9 +14763,11 @@ n, bis nach
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 d & =2^{n}\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
- & =2^{n}(\alpha_{n}a_{n}+\beta_{n}b_{n})=\alpha_{n}a+\beta_{n}b\end{align*}
+ & =2^{n}(\alpha_{n}a_{n}+\beta_{n}b_{n})=\alpha_{n}a+\beta_{n}b
+\end{align*}
 
 \end_inset
 
@@ -14628,10 +14834,12 @@ zout
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 d & =\alpha a+\beta b=\gcd(a,b)=2^{n}d'=2^{n}\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
 d' & =\alpha'a'+\beta'b'=\gcd(a',b')=\gcd\left(\frac{a}{2^{n}},\frac{b}{2^{n}}\right)\\
-d & =2^{n}d'=2^{n}(\alpha'a'+\beta'b')=2^{n}\left(\alpha'\frac{a}{2^{n}}+\beta'\frac{b}{2^{n}}\right)=\alpha'a+\beta'b\end{align*}
+d & =2^{n}d'=2^{n}(\alpha'a'+\beta'b')=2^{n}\left(\alpha'\frac{a}{2^{n}}+\beta'\frac{b}{2^{n}}\right)=\alpha'a+\beta'b
+\end{align*}
 
 \end_inset
 
@@ -14983,7 +15191,7 @@ Erweiterter binärer GCD-Algorithmus
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -15014,14 +15222,14 @@ status open
 
 
 \backslash
-headingspecial{
+toccmd{
 \end_layout
 
 \end_inset
 
 
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Auch 
@@ -15030,11 +15238,7 @@ Auch
 Right Shift Delayed Halving
 \emph default
 \lang german
- (
-\lang english
-RSDH
-\lang german
-) oder 
+ (RSDH) oder 
 \emph on
 \lang english
 Almost Montgomery Inverse
@@ -15082,8 +15286,8 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
-status open
+\begin_inset Index idx
+status collapsed
 
 \begin_layout Plain Layout
 Größter gemeinsamer Teiler!Binärer GCD Algorithmus!nach Kaliski@nach 
@@ -15105,8 +15309,8 @@ noun{Kaliski}
 \end_inset
 
 
-\begin_inset Index
-status open
+\begin_inset Index idx
+status collapsed
 
 \begin_layout Plain Layout
 Kaliski GCD-Algorithmus@
@@ -15132,9 +15336,11 @@ Betrachtet man das Reduktionsschema des binären GCD-Algorithmus, so kann
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 a_{i} & =u_{i+1}^{\prime}a_{i+1}+v_{i+1}^{\prime}b_{i+1} & a_{i+1} & =u_{i}^{\prime\prime}a_{i}+v_{i}^{\prime\prime}b_{i}\\
-b_{i} & =s_{i+1}^{\prime}a_{i+1}+t_{i+1}^{\prime}b_{i+1} & b_{i+1} & =s_{i}^{\prime\prime}a_{i}+t_{i}^{\prime\prime}b_{i},\end{xalignat*}
+b_{i} & =s_{i+1}^{\prime}a_{i+1}+t_{i+1}^{\prime}b_{i+1} & b_{i+1} & =s_{i}^{\prime\prime}a_{i}+t_{i}^{\prime\prime}b_{i},
+\end{xalignat*}
 
 \end_inset
 
@@ -15228,9 +15434,11 @@ Andere mögliche Anfangsbedingung wären:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat}{3}
+\begin_inset Formula 
+\begin{alignat}{3}
 a_{0} & =u_{i}a_{i}+v_{i}b_{i} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_kaliski_a0}\\
-b_{0} & =s_{i}a_{i}+t_{i}b_{i} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_kaliski_b0}\end{alignat}
+b_{0} & =s_{i}a_{i}+t_{i}b_{i} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_kaliski_b0}
+\end{alignat}
 
 \end_inset
 
@@ -15250,9 +15458,11 @@ Durch Einsetzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 a_{0} & =u_{i}a_{i}+v_{i}b_{i} &  & =u_{i+1}a_{i+1}+v_{i+1}b_{i+1}\\
-b_{0} & =s_{i}a_{i}+t_{i}b_{i} &  & =s_{i+1}a_{i+1}+t_{i+1}b_{i+1}\end{alignat*}
+b_{0} & =s_{i}a_{i}+t_{i}b_{i} &  & =s_{i+1}a_{i+1}+t_{i+1}b_{i+1}
+\end{alignat*}
 
 \end_inset
 
@@ -15285,10 +15495,12 @@ reference "tab:algebra_gcd_kaliski"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 s_{i}a_{i}+t_{i}b_{i} & =s_{i+1}\frac{a_{i}-b_{i}}{2}+t_{i+1}b_{i}\\
  & =\frac{s_{i+1}}{2}a_{i}+\left(t_{i+1}-\frac{s_{i+1}}{2}\right)b_{i}\\
- & =\underbrace{\frac{s_{i+1}}{2}}_{s_{i}}a_{i}+\underbrace{\left(t_{i+1}-s_{i}\right)}_{t_{i}}b_{i}\end{align*}
+ & =\underbrace{\frac{s_{i+1}}{2}}_{s_{i}}a_{i}+\underbrace{\left(t_{i+1}-s_{i}\right)}_{t_{i}}b_{i}
+\end{align*}
 
 \end_inset
 
@@ -15311,10 +15523,13 @@ reference "tab:algebra_gcd_kaliski"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \mdet{D_{i}}=u_{i}t_{i}-s_{i}v_{i}=\left|\begin{array}{cc}
 u_{i} & v_{i}\\
-s_{i} & t_{i}\end{array}\right|\mbox{ , mit }\mdet{D_{0}}=1\]
+s_{i} & t_{i}
+\end{array}\right|\mbox{ , mit }\mdet{D_{0}}=1
+\]
 
 \end_inset
 
@@ -15356,7 +15571,7 @@ Kaliski
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="9">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -16078,10 +16293,12 @@ reference "eq:algebra_gcd_kaliski_b0"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xxalignat}{2}
+\begin_inset Formula 
+\begin{xxalignat}{2}
 s_{i}a_{0}-u_{i}b_{0} & =s_{i}(u_{i}a_{i}+v_{i}b_{i})-u_{i}(s_{i}a_{i}+t_{i}b_{i}) & t_{i}a_{0}-v_{i}b_{0} & =t_{i}(u_{i}a_{i}+v_{i}b_{i})-v_{i}(s_{i}a_{i}+t_{i}b_{i})\\
  & =(s_{i}v_{i}-u_{i}t_{i})b_{i} &  & =(u_{i}t_{i}-s_{i}v_{i})a_{i}\\
- & =-\mdet{D_{i}}\, b_{i} &  & =\mdet{D_{i}}\, a_{i}\end{xxalignat}
+ & =-\mdet{D_{i}}\, b_{i} &  & =\mdet{D_{i}}\, a_{i}
+\end{xxalignat}
 
 \end_inset
 
@@ -16145,10 +16362,12 @@ reference "sec:algebra_gcd_binary_notes"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
 s_{k}a_{0}-u_{k}b_{0} & =0 & s_{k}a_{0}-u_{k}b_{0} & =-2^{k}b_{k}\\
-t_{k}a_{0}-v_{k}b_{0} & =2^{k}a_{k} & t_{k}a_{0}-v_{k}b_{0} & =0\mperiod\end{xalignat*}
+t_{k}a_{0}-v_{k}b_{0} & =2^{k}a_{k} & t_{k}a_{0}-v_{k}b_{0} & =0\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -16209,10 +16428,12 @@ key "Kaliski:1995"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
 a_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0} & b_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0}\\
-2^{k}\gcd(a,b) & =t_{k}a_{0}-v_{k}b_{0} & 2^{k}\gcd(a,b) & =-s_{k}a_{0}+u_{k}b_{0}\end{xalignat*}
+2^{k}\gcd(a,b) & =t_{k}a_{0}-v_{k}b_{0} & 2^{k}\gcd(a,b) & =-s_{k}a_{0}+u_{k}b_{0}
+\end{xalignat*}
 
 \end_inset
 
@@ -16392,8 +16613,10 @@ resp
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-2^{i}\gcd(a,b)=ta-vb=(t+b)a-(v+a)b\]
+\begin_inset Formula 
+\[
+2^{i}\gcd(a,b)=ta-vb=(t+b)a-(v+a)b
+\]
 
 \end_inset
 
@@ -16454,8 +16677,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-2^{i}\gcd(a,b)=ta-vb\]
+\begin_inset Formula 
+\[
+2^{i}\gcd(a,b)=ta-vb
+\]
 
 \end_inset
 
@@ -16507,10 +16732,12 @@ dann sind genau drei Fälle konstruierbar, in denen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{u})}a^{(\mbox{u})}\right]^{(\mbox{u})}-\left[v^{(\mbox{u})}b^{(\mbox{u})}\right]^{(\mbox{u})}\\
 \left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{u})}a^{(\mbox{g})}\right]^{(\mbox{g})}-\left[v^{(\mbox{g})}b^{(\mbox{u})}\right]^{(\mbox{g})}\\
-\left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{g})}a^{(\mbox{u})}\right]^{(\mbox{g})}-\left[v^{(\mbox{u})}b^{(\mbox{g})}\right]^{(\mbox{g})}\end{align*}
+\left[2^{i}\gcd(a,b)\right]^{(\mbox{g})} & =\left[t^{(\mbox{g})}a^{(\mbox{u})}\right]^{(\mbox{g})}-\left[v^{(\mbox{u})}b^{(\mbox{g})}\right]^{(\mbox{g})}
+\end{align*}
 
 \end_inset
 
@@ -16539,7 +16766,7 @@ resp
 \begin_inset Formula $v+a$
 \end_inset
 
- zu einer geraden Zahl, womit sich das Korekturverfahren bestätigt.
+ zu einer geraden Zahl, womit sich das Korrekturverfahren bestätigt.
 \end_layout
 
 \end_deeper
@@ -17887,10 +18114,12 @@ I)
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
 a_{0} & =u_{k}a_{k}=u_{k}d & a_{0} & =v_{k}b_{k}=v_{k}d\\
-b_{0} & =s_{k}a_{k}=s_{k}d & b_{0} & =t_{k}b_{k}=t_{k}d\end{xalignat*}
+b_{0} & =s_{k}a_{k}=s_{k}d & b_{0} & =t_{k}b_{k}=t_{k}d
+\end{xalignat*}
 
 \end_inset
 
@@ -17939,10 +18168,12 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
 \overline{a}_{0}=u_{k} & \leq\gcd(a,b)\leq a_{0} & \overline{a}_{0}=v_{k} & \leq\gcd(a,b)\leq a_{0}\\
-\overline{b}_{0}=s_{k} & \leq\gcd(a,b)\leq b_{0} & \overline{b}_{0}=t_{k} & \leq\gcd(a,b)\leq b_{0}\mperiod\end{xalignat*}
+\overline{b}_{0}=s_{k} & \leq\gcd(a,b)\leq b_{0} & \overline{b}_{0}=t_{k} & \leq\gcd(a,b)\leq b_{0}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -18290,11 +18521,13 @@ Und das nicht nur für den speziellen Fall
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 2^{i}\gcd(a,b) & =(t+\overline{b})a-(v+\overline{a})b\\
  & =ta+\overline{b}a-vb+\overline{a}b\\
  & =ta+\overline{b}\overline{a}d-vb-\overline{a}\overline{b}d\\
- & =ta-vb\end{align*}
+ & =ta-vb
+\end{align*}
 
 \end_inset
 
@@ -18303,7 +18536,7 @@ Und das nicht nur für den speziellen Fall
 
 \end_deeper
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -18347,7 +18580,7 @@ status collapsed
 
 
 \backslash
-headingspecial{
+toccmd{
 \end_layout
 
 \end_inset
@@ -18391,7 +18624,7 @@ status collapsed
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -18414,7 +18647,7 @@ noun{Penk}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -18490,9 +18723,11 @@ Andere mögliche Anfangsbedingung wären:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat}{3}
+\begin_inset Formula 
+\begin{alignat}{3}
 a_{i} & =u_{i}a_{0}+v_{i}b_{0} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_penk_a0}\\
-b_{i} & =s_{i}a_{0}+t_{i}b_{0} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_penk_b0}\end{alignat}
+b_{i} & =s_{i}a_{0}+t_{i}b_{0} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_penk_b0}
+\end{alignat}
 
 \end_inset
 
@@ -18549,10 +18784,12 @@ resp
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \mbox{Fall: }b_{k} & =0 & \mbox{Fall: }a_{k} & =0\\
 a_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0} & b_{k}=\gcd(a,b) & =\alpha a_{0}+\beta b_{0}\\
- & =u_{k}a_{0}+v_{k}b_{0} &  & =s_{k}a_{0}+t_{k}b_{0}\end{xalignat*}
+ & =u_{k}a_{0}+v_{k}b_{0} &  & =s_{k}a_{0}+t_{k}b_{0}
+\end{xalignat*}
 
 \end_inset
 
@@ -18583,9 +18820,11 @@ reference "tab:algebra_gcd_binary_reduction"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 a_{i+1} & =u_{i+1}a_{0}+v_{i+1}b_{0}\\
-b_{i+1} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{align*}
+b_{i+1} & =s_{i+1}a_{0}+t_{i+1}b_{0}
+\end{align*}
 
 \end_inset
 
@@ -18619,9 +18858,11 @@ kann man für den jeweiligen Reduktionsfall die zugehörige Transformationen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 a_{i+1}=\frac{a_{i}-b_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=b_{i} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
-(u_{i}-s_{i})a_{0}+(v_{i}-t_{i})b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{xalignat*}
+(u_{i}-s_{i})a_{0}+(v_{i}-t_{i})b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}
+\end{xalignat*}
 
 \end_inset
 
@@ -18633,9 +18874,11 @@ Vergleich von linker und rechter Seite läßt den Schluß zu:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 u_{i+1} & =\frac{u_{i}-s_{i}}{2} & \qquad s_{i+1} & =s_{i}\\
-v_{i+1} & =\frac{v_{i}-t_{i}}{2} & \qquad t_{i+1} & =t_{i}\mperiod\end{align*}
+v_{i+1} & =\frac{v_{i}-t_{i}}{2} & \qquad t_{i+1} & =t_{i}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -18660,9 +18903,11 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 a_{i+1}=\frac{a_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=b_{i} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
-u_{i}a_{0}+v_{i}b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}\end{xalignat*}
+u_{i}a_{0}+v_{i}b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =s_{i+1}a_{0}+t_{i+1}b_{0}
+\end{xalignat*}
 
 \end_inset
 
@@ -18685,9 +18930,11 @@ u_{i}a_{0}+v_{i}b_{0} & =2u_{i+1}a_{0}+2v_{i+1}b_{0} & s_{i}a_{0}+t_{i}b_{0} & =
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 a_{i+1}=\frac{a_{i}-b_{i}}{2} & =u_{i+1}a_{0}+v_{i+1}b_{0} & b_{i+1}=\frac{b_{i}-a_{i}}{2} & =s_{i+1}a_{0}+t_{i+1}b_{0}\\
-u_{i}a_{0}+v_{i}b_{0} & =u_{i+1}a_{0}+v_{i+1}b_{0} & (s_{i}-u_{i})a_{0}+(t_{i}-v_{i})b_{0} & =2s_{i+1}a_{0}+2t_{i+1}b_{0}\end{xalignat*}
+u_{i}a_{0}+v_{i}b_{0} & =u_{i+1}a_{0}+v_{i+1}b_{0} & (s_{i}-u_{i})a_{0}+(t_{i}-v_{i})b_{0} & =2s_{i+1}a_{0}+2t_{i+1}b_{0}
+\end{xalignat*}
 
 \end_inset
 
@@ -18792,7 +19039,7 @@ Penk
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="8">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -19317,9 +19564,11 @@ reference "eq:algebra_gcd_penk_b0"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{1}
+\begin_inset Formula 
+\begin{alignat*}{1}
 a_{i} & =(u_{i}\pm b_{0})a_{0}+(v_{i}\mp a_{0})b_{0}\\
-b_{i} & =(s_{i}\pm b_{0})a_{0}+(t_{i}\mp a_{0})b_{0}\end{alignat*}
+b_{i} & =(s_{i}\pm b_{0})a_{0}+(t_{i}\mp a_{0})b_{0}
+\end{alignat*}
 
 \end_inset
 
@@ -20565,7 +20814,7 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -20588,7 +20837,7 @@ noun{Penk}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -20598,7 +20847,7 @@ Größter gemeinsamer Teiler!Binärer GCD Algorithmus!erweiterter|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -20621,7 +20870,7 @@ Lineare diophantische Gleichungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -20639,8 +20888,10 @@ Gleichungen mit ausschließlich ganzzahligen Lösungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-ax+by=c,\qquad\mbox{mit }a,b,c\in\mathbb{N}\mperiod\label{eq:algebra_diophant_question}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+ax+by=c,\qquad\mbox{mit }a,b,c\in\mathbb{N}\mperiod\label{eq:algebra_diophant_question}
+\end{equation}
 
 \end_inset
 
@@ -20694,8 +20945,10 @@ Zuerst bemerken wir, daß die Differenz zweier Lösungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-(ax_{1}+by_{1})-(ax_{2}+by_{2}) & =a\,\underbrace{(x_{1}-x_{2})}_{x}+b\,\underbrace{(y_{1}-y_{2})}_{y}=0\end{align*}
+\begin_inset Formula 
+\begin{align*}
+(ax_{1}+by_{1})-(ax_{2}+by_{2}) & =a\,\underbrace{(x_{1}-x_{2})}_{x}+b\,\underbrace{(y_{1}-y_{2})}_{y}=0
+\end{align*}
 
 \end_inset
 
@@ -20715,8 +20968,10 @@ Mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\overline{a}x+\overline{b}y=0\]
+\begin_inset Formula 
+\[
+\overline{a}x+\overline{b}y=0
+\]
 
 \end_inset
 
@@ -20766,8 +21021,10 @@ Eine Untermenge der Lösungen stellt für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-x_{1} & =x_{2}+x=x_{2}+n\overline{b} & y_{1} & =y_{2}+y=y_{2}-n\overline{a}\mperiod\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x_{1} & =x_{2}+x=x_{2}+n\overline{b} & y_{1} & =y_{2}+y=y_{2}-n\overline{a}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -20809,9 +21066,11 @@ zout
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \gcd(a,b)=d & =\alpha a+\beta b\\
-d\overline{c} & =\alpha\overline{c}a+\beta\overline{c}b\end{align*}
+d\overline{c} & =\alpha\overline{c}a+\beta\overline{c}b
+\end{align*}
 
 \end_inset
 
@@ -20823,8 +21082,10 @@ gilt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-ax+by=c=d\overline{c}=\alpha\overline{c}a+\beta\overline{c}b\mperiod\]
+\begin_inset Formula 
+\[
+ax+by=c=d\overline{c}=\alpha\overline{c}a+\beta\overline{c}b\mperiod
+\]
 
 \end_inset
 
@@ -20848,8 +21109,10 @@ Eine partikuläre Lösung (
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-x_{2}=\alpha\overline{c} & =\alpha\frac{c}{d} & y_{2} & =\beta\overline{c}=\beta\frac{c}{d}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x_{2}=\alpha\overline{c} & =\alpha\frac{c}{d} & y_{2} & =\beta\overline{c}=\beta\frac{c}{d}
+\end{xalignat*}
 
 \end_inset
 
@@ -20857,12 +21120,14 @@ x_{2}=\alpha\overline{c} & =\alpha\frac{c}{d} & y_{2} & =\beta\overline{c}=\beta
 \end_layout
 
 \begin_layout Standard
-Die Vielfalt aller Lösungen stellt sich dadurch wiefolgt dar:
+Die Vielfalt aller Lösungen stellt sich dadurch wie folgt dar:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-x_{n} & =\alpha\frac{c}{d}+n\frac{b}{d} & y_{n} & =\beta\frac{c}{d}-n\frac{a}{d}\mperiod\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+x_{n} & =\alpha\frac{c}{d}+n\frac{b}{d} & y_{n} & =\beta\frac{c}{d}-n\frac{a}{d}\mperiod
+\end{xalignat}
 
 \end_inset
 
@@ -20878,8 +21143,10 @@ Für den Spezialfall
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-x_{n} & =\alpha c+nb & y_{n} & =\beta c-na\mperiod\label{eq:algebra_diophant_relprime}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+x_{n} & =\alpha c+nb & y_{n} & =\beta c-na\mperiod\label{eq:algebra_diophant_relprime}
+\end{xalignat}
 
 \end_inset
 
@@ -20902,7 +21169,7 @@ Hilfssatz für zwei Kongruenzen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -20912,7 +21179,7 @@ Chinesischer Restsatz|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -20926,9 +21193,9 @@ Um sich dem Chinesischen Restsatz
 status collapsed
 
 \begin_layout Plain Layout
-
+CRT -- 
 \lang english
-CRT -- Chinese Remainder Theorem
+Chinese Remainder Theorem
 \end_layout
 
 \end_inset
@@ -20943,8 +21210,10 @@ CRT -- Chinese Remainder Theorem
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-z & \equiv a\pmod{n} & z & \equiv b\pmod{m},\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+z & \equiv a\pmod{n} & z & \equiv b\pmod{m},
+\end{xalignat*}
 
 \end_inset
 
@@ -20964,8 +21233,8 @@ wenn vorausgesetzt wird, daß
 \end_layout
 
 \begin_layout Standard
-Um sie zu beantworten formulieren wir den Ausgangspunkt zuersteinmal entsprechen
-d Restklassenbeziehung
+Um sie zu beantworten formulieren wir den Ausgangspunkt zuerst einmal entspreche
+nd Restklassenbeziehung
 \begin_inset space ~
 \end_inset
 
@@ -20980,8 +21249,10 @@ reference "eq:algebra_mod_reverse"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
-z & =a+xn=b+ym,\qquad x,y\in\mathbb{N}\mperiod\label{eq:algebra_crt_rcls}\end{align}
+\begin_inset Formula 
+\begin{align}
+z & =a+xn=b+ym,\qquad x,y\in\mathbb{N}\mperiod\label{eq:algebra_crt_rcls}
+\end{align}
 
 \end_inset
 
@@ -20993,8 +21264,10 @@ Deren Darstellung als
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-c=b-a=xn-ym\label{eq:algebra_crt_diophant}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+c=b-a=xn-ym\label{eq:algebra_crt_diophant}
+\end{equation}
 
 \end_inset
 
@@ -21060,8 +21333,10 @@ zout
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-c=c(\alpha n+\beta m)=\alpha nc+\beta mc\]
+\begin_inset Formula 
+\[
+c=c(\alpha n+\beta m)=\alpha nc+\beta mc
+\]
 
 \end_inset
 
@@ -21160,8 +21435,10 @@ reference "sec:algebra_euclid_hint"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-x_{k} & =\alpha c+km & y_{k} & =-\beta c-kn,\qquad k\in\mathbb{Z}\mperiod\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x_{k} & =\alpha c+km & y_{k} & =-\beta c-kn,\qquad k\in\mathbb{Z}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -21184,10 +21461,12 @@ reference "eq:algebra_crt_rcls"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
+\begin_inset Formula 
+\begin{xalignat}{2}
 z_{k} & =a+x_{k}n & z_{k} & =b+y_{k}m\nonumber \\
  & =a+(\alpha c-km)n &  & =b-(\beta c+kn)m\label{eq:algebra_crt_garner}\\
- & =a\,\underbrace{(1-\alpha n)}_{\beta m}+\alpha bn-kmn &  & =b\,\underbrace{(1-\beta m)}_{\alpha n}+\beta am-kmn\nonumber \end{xalignat}
+ & =a\,\underbrace{(1-\alpha n)}_{\beta m}+\alpha bn-kmn &  & =b\,\underbrace{(1-\beta m)}_{\alpha n}+\beta am-kmn\nonumber 
+\end{xalignat}
 
 \end_inset
 
@@ -21199,8 +21478,10 @@ und so eine geschlossene Darstellung für die Lösungsmenge.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-z_{k}=\alpha bn+\beta am+kmn\end{equation}
+\begin_inset Formula 
+\begin{equation}
+z_{k}=\alpha bn+\beta am+kmn
+\end{equation}
 
 \end_inset
 
@@ -21249,8 +21530,10 @@ Hierbei wird ganz deutlich, daß es sich bei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-1 & \equiv\beta m\pmod{n} & 1 & \equiv\alpha n\pmod{m}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+1 & \equiv\beta m\pmod{n} & 1 & \equiv\alpha n\pmod{m}
+\end{xalignat*}
 
 \end_inset
 
@@ -21262,9 +21545,11 @@ können wir die Probe machen.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xxalignat}{2}
+\begin_inset Formula 
+\begin{xxalignat}{2}
 z_{k}\bmod n & =\underbrace{(\alpha b+km)n}_{0}+\beta am\bmod n & z_{k}\bmod m & =\alpha bn+\underbrace{(\beta a+kn)m}_{0}\bmod m\\
- & =\beta am\bmod n=a &  & =\alpha bn\bmod m=b\end{xxalignat}
+ & =\beta am\bmod n=a &  & =\alpha bn\bmod m=b
+\end{xxalignat}
 
 \end_inset
 
@@ -21284,8 +21569,10 @@ Die Lösungsmenge
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-z\equiv\alpha bn+\beta am\pmod{mn}\label{eq:algebra_crt_simple}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+z\equiv\alpha bn+\beta am\pmod{mn}\label{eq:algebra_crt_simple}
+\end{equation}
 
 \end_inset
 
@@ -21297,7 +21584,7 @@ Ein System von Kongruenzen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -21310,11 +21597,13 @@ Nehmen wir jetzt ein ganzes System von Kongruenzen an:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 x & \equiv a_{1}\pmod{m_{1}}\\
 x & \equiv a_{2}\pmod{m_{2}}\\
  & \vdots\\
-x & \equiv a_{n}\pmod{m_{n}},\end{align*}
+x & \equiv a_{n}\pmod{m_{n}},
+\end{align*}
 
 \end_inset
 
@@ -21453,10 +21742,13 @@ Bezeichnen wir mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \overline{m}_{i}=\frac{m}{m_{i}}=\frac{\prod\limits _{j=1}^{n}m_{j}}{m_{i}}=\prod\limits _{\substack{j=1\\
-j\neq i}
-}^{n}m_{j},\]
+j\neq i
+}
+}^{n}m_{j},
+\]
 
 \end_inset
 
@@ -21524,7 +21816,7 @@ zout
 \begin_inset Formula $\alpha_{i}$
 \end_inset
 
- kann wieder als Inverses aufgefasst werden: 
+ kann wieder als Inverses aufgefaßt werden: 
 \begin_inset Formula $\alpha_{i}\equiv\overline{m}_{i}^{-1}\pmod{m_{i}}$
 \end_inset
 
@@ -21537,9 +21829,11 @@ zout
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \alpha_{i}\overline{m}_{i}+\beta_{i}m_{i} & =1\\
-\alpha_{i}\overline{m}_{i}\bmod m_{i} & =1\mperiod\end{align*}
+\alpha_{i}\overline{m}_{i}\bmod m_{i} & =1\mperiod
+\end{align*}
 
 \end_inset
 
@@ -21569,7 +21863,7 @@ Im Gegensatz dazu verschwindet
 Kronecker
 \noun default
 -Symbols
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -21608,10 +21902,13 @@ ausgedrückt werden:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \alpha_{k}\overline{m}_{k}\bmod m_{i}=\delta_{i\, k}=\begin{cases}
 0 & \quad(i\neq k)\\
-1 & \quad(i=k)\end{cases}\mperiod\]
+1 & \quad(i=k)
+\end{cases}\mperiod
+\]
 
 \end_inset
 
@@ -21627,8 +21924,10 @@ Die endgültige Lösungsidee besteht nun darin, für jede Kongruenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}\bmod m_{i}}={\displaystyle \sum_{k=1}^{n}a_{k}\delta_{i\, k}\bmod m_{i}}=a_{i}\bmod m_{i}\equiv x\pmod{m_{i}}\]
+\begin_inset Formula 
+\[
+{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}\bmod m_{i}}={\displaystyle \sum_{k=1}^{n}a_{k}\delta_{i\, k}\bmod m_{i}}=a_{i}\bmod m_{i}\equiv x\pmod{m_{i}}
+\]
 
 \end_inset
 
@@ -21648,8 +21947,10 @@ Wie zu sehen, ist die Summe auf der linken Seite kongruent zu
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-x\equiv{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}}\pmod{m}\label{eq:algebra_crt_solution}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+x\equiv{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}}\pmod{m}\label{eq:algebra_crt_solution}
+\end{equation}
 
 \end_inset
 
@@ -21688,10 +21989,13 @@ reference "sec:algebra_crt_lemma"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 1 & =\alpha_{1}\overline{m}_{1}+\beta_{1}m_{1} & 1 & =\alpha_{2}\overline{m}_{2}+\beta_{2}m_{2}\\
  & =\alpha_{1}m_{2}+\beta_{1}m_{1} &  & =\alpha_{2}m_{1}+\beta_{2}m_{2}\\
-\\\alpha_{1} & =\beta_{2} & \alpha_{2} & =\beta_{1}\end{xalignat*}
+\\
+\alpha_{1} & =\beta_{2} & \alpha_{2} & =\beta_{1}
+\end{xalignat*}
 
 \end_inset
 
@@ -21753,8 +22057,10 @@ key "Crandall:2005"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-x\equiv\alpha_{1}a_{1}\overline{m}_{1}+\alpha_{2}a_{2}\overline{m}_{2}=\alpha_{1}a_{1}m_{2}+\alpha_{2}a_{2}m_{1}=\alpha_{1}a_{1}m_{2}+\beta_{1}a_{2}m_{1}\pmod{m_{1}m_{2}}\]
+\begin_inset Formula 
+\[
+x\equiv\alpha_{1}a_{1}\overline{m}_{1}+\alpha_{2}a_{2}\overline{m}_{2}=\alpha_{1}a_{1}m_{2}+\alpha_{2}a_{2}m_{1}=\alpha_{1}a_{1}m_{2}+\beta_{1}a_{2}m_{1}\pmod{m_{1}m_{2}}
+\]
 
 \end_inset
 
@@ -21762,7 +22068,7 @@ x\equiv\alpha_{1}a_{1}\overline{m}_{1}+\alpha_{2}a_{2}\overline{m}_{2}=\alpha_{1
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -21789,7 +22095,7 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -22106,7 +22412,7 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -22140,9 +22446,11 @@ Montgomery
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 m(\beta x\bmod r) & =m(\beta x-ur), & \quad\mbox{mit }u & =\left\lfloor \beta x/r\right\rfloor \\
-r(\alpha x\bmod m) & =r(\alpha x-vm), & \quad\mbox{mit }v & =\left\lfloor \alpha x/m\right\rfloor .\end{alignat*}
+r(\alpha x\bmod m) & =r(\alpha x-vm), & \quad\mbox{mit }v & =\left\lfloor \alpha x/m\right\rfloor .
+\end{alignat*}
 
 \end_inset
 
@@ -22154,9 +22462,11 @@ Subtraktion beider Gleichungen ergibt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 m(\beta x\bmod r)-r(\alpha x\bmod m) & =m(\beta x-ur)-r(\alpha x-vm)\\
- & =rm(v-u)-x(\alpha r-\beta m),\end{align*}
+ & =rm(v-u)-x(\alpha r-\beta m),
+\end{align*}
 
 \end_inset
 
@@ -22172,8 +22482,10 @@ was mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-m(\beta x\bmod r)+x=(v-u)rm+r(\alpha x\bmod m)\]
+\begin_inset Formula 
+\[
+m(\beta x\bmod r)+x=(v-u)rm+r(\alpha x\bmod m)
+\]
 
 \end_inset
 
@@ -22248,8 +22560,10 @@ Mit dem Wissen, daß es sich bei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\alpha x\bmod m=\frac{m(\beta x\bmod r)-(v-u)rm+x}{r}\]
+\begin_inset Formula 
+\[
+\alpha x\bmod m=\frac{m(\beta x\bmod r)-(v-u)rm+x}{r}
+\]
 
 \end_inset
 
@@ -22265,8 +22579,10 @@ Montgomery
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\MONTG(x,r,m)=xr^{-1}\bmod m=\frac{m(\beta x\bmod r)+x}{r}-(v-u)m\label{eq:algebra_montgomery_reduction}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\MONTG(x,r,m)=xr^{-1}\bmod m=\frac{m(\beta x\bmod r)+x}{r}-(v-u)m\label{eq:algebra_montgomery_reduction}
+\end{equation}
 
 \end_inset
 
@@ -22293,8 +22609,10 @@ reference "eq:algebra_mod_reverse"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-xr^{-1}\bmod m=xr^{-1}-\left\lfloor \frac{xr^{-1}}{m}\right\rfloor m=xr^{-1}-qm\]
+\begin_inset Formula 
+\[
+xr^{-1}\bmod m=xr^{-1}-\left\lfloor \frac{xr^{-1}}{m}\right\rfloor m=xr^{-1}-qm
+\]
 
 \end_inset
 
@@ -22317,8 +22635,10 @@ reference "eq:algebra_montgomery_reduction"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-xr^{-1}\bmod m=xr^{-1}-[v-u-r^{-1}(\beta x\bmod r)]m\]
+\begin_inset Formula 
+\[
+xr^{-1}\bmod m=xr^{-1}-[v-u-r^{-1}(\beta x\bmod r)]m
+\]
 
 \end_inset
 
@@ -22330,8 +22650,10 @@ Schlußfolgerung:
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-q=v-u-r^{-1}(\beta x\bmod r)\]
+\begin_inset Formula 
+\[
+q=v-u-r^{-1}(\beta x\bmod r)
+\]
 
 \end_inset
 
@@ -22652,7 +22974,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-Als eine wesentliche Erkenntniss für die Implementierung erweist sich der
+Als eine wesentliche Erkenntnis für die Implementierung erweist sich der
  Fakt, daß die Veränderung von 
 \begin_inset Formula $\beta$
 \end_inset
@@ -22685,9 +23007,11 @@ Wegen
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \alpha r-\beta m & =1\\
-\alpha & \equiv r^{-1}\pmod{m}\end{align*}
+\alpha & \equiv r^{-1}\pmod{m}
+\end{align*}
 
 \end_inset
 
@@ -22699,7 +23023,7 @@ bleibt (egal ob man etwas zu
 \begin_inset Formula $\beta$
 \end_inset
 
- hinzuaddiert/-subtrahiert) 
+ hinzu addiert/-subtrahiert) 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -22756,12 +23080,14 @@ Aber nicht alle Stellen von
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 m(\beta x\bmod r)-r(\alpha x\bmod m) & =rm(v-u)-x(\alpha r-\beta m+\beta'm)\\
 m[(\beta-\beta')x\bmod r]-r(\alpha x\bmod m) & =rm(v-u)-x(\alpha r-\beta m)-x\beta'm)\\
 r(\alpha x\bmod m) & =m[(\beta-\beta')x\bmod r]+x+x\beta'm-rm(v-u)\\
  & =m(\beta x\bmod r-\beta'x\bmod r)+x+x\beta'm-rm(v-u)\\
- & =m(\beta x\bmod r)+x+m(\beta'x-\beta'x\bmod r)-rm(v-u)\end{align*}
+ & =m(\beta x\bmod r)+x+m(\beta'x-\beta'x\bmod r)-rm(v-u)
+\end{align*}
 
 \end_inset
 
@@ -22785,9 +23111,11 @@ Die rechte Seite ist immer noch ein Vielfaches von
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 r(\alpha x\bmod m) & =\underbrace{mt+x-rm(v-u)}_{\mbox{Originalwert}}+\underbrace{q'mr}_{\mbox{Abweichung}}\\
-\alpha x\bmod m & =\frac{mt+x}{r}-(v-u)m+q'm\end{align*}
+\alpha x\bmod m & =\frac{mt+x}{r}-(v-u)m+q'm
+\end{align*}
 
 \end_inset
 
@@ -22842,8 +23170,10 @@ Verwendet man nur die Stelle
 
 \begin_deeper
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\beta=\beta_{k-1}B^{k-1}+\beta_{k-2}B^{k-2}+\dots+\beta_{2}B^{2}+\beta_{1}B+\beta_{0}=\beta_{0}+\beta'\]
+\begin_inset Formula 
+\[
+\beta=\beta_{k-1}B^{k-1}+\beta_{k-2}B^{k-2}+\dots+\beta_{2}B^{2}+\beta_{1}B+\beta_{0}=\beta_{0}+\beta'
+\]
 
 \end_inset
 
@@ -22860,7 +23190,7 @@ Obwohl
 \begin_inset Formula $\beta$
 \end_inset
 
- weiterhin aus mehr Stellen besteht, wenn man diese nicht gerade wegläßt.
+ weiterhin aus mehr Stellen besteht, wenn man diese nicht gerade weg läßt.
 \end_layout
 
 \end_inset
@@ -22882,8 +23212,10 @@ Obwohl
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\mu r-1=\mu B^{k}-1=\beta m=\beta_{0}m_{0}+(\beta_{1}m_{0}+\beta_{0}m_{1})B+\dots\]
+\begin_inset Formula 
+\[
+\mu r-1=\mu B^{k}-1=\beta m=\beta_{0}m_{0}+(\beta_{1}m_{0}+\beta_{0}m_{1})B+\dots
+\]
 
 \end_inset
 
@@ -22989,11 +23321,13 @@ Eigentlich wird beginnend beim LSB jedes einzelne Bit von
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 x\cdot y^{(1)}\bmod2^{1} & =1\quad(\mbox{Schlußfolgerung: }y^{(1)}=1)\\
 x\cdot y^{(2)}\bmod2^{2} & =1\\
  & \vdots\\
-x\cdot y^{(s)}\bmod2^{s} & =1,\end{align*}
+x\cdot y^{(s)}\bmod2^{s} & =1,
+\end{align*}
 
 \end_inset
 
@@ -23444,7 +23778,7 @@ Obwohl
 \begin_inset Formula $\beta$
 \end_inset
 
- entspricht - und das haben wir zuvor schon durchdiskutiert.
+ entspricht - und das haben wir zuvor schon durch diskutiert.
 \end_layout
 
 \end_inset
@@ -23473,7 +23807,7 @@ thisjob{algebra}%
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,crypto,math"
+bibfiles "crypto,math,electrical"
 options "bibtotoc,geralpha"
 
 \end_inset
@@ -23484,6 +23818,7 @@ options "bibtotoc,geralpha"
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 

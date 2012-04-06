@@ -4,7 +4,6 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
 \usepackage{multicol}
 
 \setlength{\nomlabelwidth}{5em}
@@ -13,14 +12,17 @@
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
+\options noprefix
 \use_default_options false
 \begin_modules
-emphasized
+helpers
+mathext
+algorithm
 \end_modules
 \maintain_unincluded_children false
 \language german
 \language_package default
-\inputencoding latin1
+\inputencoding auto
 \fontencoding global
 \font_roman times
 \font_sans default
@@ -11050,7 +11052,7 @@ filename "../algebra/algebra.lyx"
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,crypto,math,security"
+bibfiles "crypto,math,security,electrical"
 options "bibtotoc,geralpha"
 
 \end_inset

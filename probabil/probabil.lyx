@@ -1,31 +1,38 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
-
-%% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
-\options reqno
+\options noprefix,reqno
 \use_default_options false
 \begin_modules
-emphasized
+helpers
+mathext
+electrical
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing onehalf
 \use_hyperref true
@@ -42,11 +49,20 @@ emphasized
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 1
+\use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -57,8 +73,9 @@ emphasized
 \paperpagestyle headings
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -217,6 +234,7 @@ nomlabelwidth}{1in}
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -232,7 +250,7 @@ Diskrete Zufallsgrößen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -274,7 +292,7 @@ description "Wahrscheinlichkeit"
 
  betragen.
  Die Wahrscheinlichkeit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -295,8 +313,10 @@ Wahrscheinlichkeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\sum_{i=1}^{N}p_{i}=1\]
+\begin_inset Formula 
+\[
+\sum_{i=1}^{N}p_{i}=1
+\]
 
 \end_inset
 
@@ -305,7 +325,7 @@ Wahrscheinlichkeit
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -357,8 +377,10 @@ Oftmals auch geschrieben als typischer Operator
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}
+\end{equation}
 
 \end_inset
 
@@ -367,7 +389,7 @@ Oftmals auch geschrieben als typischer Operator
 
 \begin_layout Standard
 Die Varianz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -391,7 +413,7 @@ description "Varianz der Zufallsgröße $X$"
 
  ist der Erwartungswert der quadratischen Abweichung vom Erwartungswert.
  Sie ist dadurch ein gutes Maß für die Streuung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -427,7 +449,7 @@ Auch häufig anzutreffen als
 \end_inset
 
  angegeben, welche Standardabweichung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -450,7 +472,7 @@ resp
 \end_inset
 
  Streuung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -468,8 +490,10 @@ Streuung
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\var(X)=\mean\left[X-\mean(X)\right]^{2}\label{eq:prob_generic_var}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X)=\mean\left[X-\mean(X)\right]^{2}\label{eq:prob_generic_var}
+\end{equation}
 
 \end_inset
 
@@ -482,8 +506,10 @@ rschrift:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\var(X)=\sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X)=\sum_{i=1}^{N}p_{i}\left[x_{i}-\mean(X)\right]^{2}\label{eq:prob_discrete_var}
+\end{equation}
 
 \end_inset
 
@@ -492,7 +518,7 @@ rschrift:
 
 \begin_layout Standard
 Für mittelwertfreie Zufallsgrößen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -522,8 +548,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\var(X)=\sum_{i=1}^{N}p_{i}\, x_{i}^{2}\mperiod\]
+\begin_inset Formula 
+\[
+\var(X)=\sum_{i=1}^{N}p_{i}\, x_{i}^{2}\mperiod
+\]
 
 \end_inset
 
@@ -554,7 +582,7 @@ Dieser Schritt stellt eine Verallgemeinerung dar -- deshalb sind alle folgenden
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -571,7 +599,7 @@ Kontinuierliche Zufallsgrößen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -624,8 +652,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p(x)=\pr\left(x-\frac{\tdc x}{2}\leq X\leq x+\frac{\tdc x}{2}\right)\]
+\begin_inset Formula 
+\[
+p(x)=\pr\left(x-\frac{\tdc x}{2}\leq X\leq x+\frac{\tdc x}{2}\right)
+\]
 
 \end_inset
 
@@ -638,7 +668,7 @@ Die (jetzt) kontinuierliche Größe
 \end_inset
 
  gibt die Wahrscheinlichkeit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -669,7 +699,7 @@ Wahrscheinlichkeit
 \end_inset
 
  auch als Dichtefunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -679,7 +709,7 @@ Dichtefunktion
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -705,8 +735,10 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\pr(a\leq X\leq b)=\int_{a}^{b}p(x)\tic x\label{eq:prob_continuous}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pr(a\leq X\leq b)=\int_{a}^{b}p(x)\tic x\label{eq:prob_continuous}
+\end{equation}
 
 \end_inset
 
@@ -726,8 +758,10 @@ Wie bei den diskreten Zufallsgrößen muß die Wahrscheinlichkeit, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}p(x)\tic x=1\label{eq:prob_continuous_unity}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}p(x)\tic x=1\label{eq:prob_continuous_unity}
+\end{equation}
 
 \end_inset
 
@@ -747,7 +781,7 @@ reference "eq:prob_continuous"
 \end_inset
 
  zu integrieren, wird oft die sogenannte Verteilungsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -773,8 +807,10 @@ description "Verteilungsfunktion der Zufallsgröße $X$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\pr(-\infty\leq X\leq x)=\pr(X\leq x)=F(x)=\int_{-\infty}^{x}p(u)\tic u\label{eq:prob_distribution}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pr(-\infty\leq X\leq x)=\pr(X\leq x)=F(x)=\int_{-\infty}^{x}p(u)\tic u\label{eq:prob_distribution}
+\end{equation}
 
 \end_inset
 
@@ -827,7 +863,7 @@ Summe
 \begin_layout Standard
 Nach dem Hauptsatz der Differential- und Integralrechnung gilt für die Wahrschei
 nlichkeitsdichte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -849,8 +885,10 @@ description "Wahrscheinlichkeitsdichte der Zufallsgröße $X$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p(x)=\tdiff{F(x)}{x}\label{eq:prob_continuous_differential}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p(x)=\tdiff{F(x)}{x}\label{eq:prob_continuous_differential}
+\end{equation}
 
 \end_inset
 
@@ -877,10 +915,12 @@ reference "eq:prob_distribution"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \pr(a\leq x\leq b) & =\int_{a}^{b}p(x)\tic x\nonumber \\
  & =\lim_{c\rightarrow-\infty}\left[\int_{c}^{b}p(x)\tic x-\int_{c}^{a}p(x)\tic x\right]\nonumber \\
-\pr(a\leq x\leq b) & =F(b)-F(a)\end{align}
+\pr(a\leq x\leq b) & =F(b)-F(a)
+\end{align}
 
 \end_inset
 
@@ -889,7 +929,7 @@ reference "eq:prob_distribution"
 
 \begin_layout Standard
 Der Erwartungswert
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -944,8 +984,10 @@ key "Gnedenko:1958"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x\label{eq:prob_continuous_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x\label{eq:prob_continuous_mean}
+\end{equation}
 
 \end_inset
 
@@ -965,7 +1007,7 @@ reference "eq:prob_continuous_unity"
 \end_inset
 
 ) ergibt sich für die Varianz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1000,8 +1042,10 @@ Erwartungswert, Varianz und alle weiteren Integrale der Form
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\var(X)=\int_{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\tic x\label{eq:prob_continuous_var}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X)=\int_{-\infty}^{\infty}\left[x-\mean(X)\right]^{2}p(x)\tic x\label{eq:prob_continuous_var}
+\end{equation}
 
 \end_inset
 
@@ -1013,10 +1057,12 @@ und im weiteren
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \var(X) & =\int_{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\tic x\\
  & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-2\mean(X)\int_{-\infty}^{\infty}x\, p(x)\tic x+\mean^{2}(X)\int_{-\infty}^{\infty}p(x)\tic x\\
- & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-\mean^{2}(X)\mperiod\end{align*}
+ & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-\mean^{2}(X)\mperiod
+\end{align*}
 
 \end_inset
 
@@ -1029,8 +1075,10 @@ Die Varianz ist also der quadratische Erwartungswert abzüglich des Quadrats
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\var(X)=\mean(X^{2})-\mean^{2}(X)\label{eq:prob_continuous_var_rms}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X)=\mean(X^{2})-\mean^{2}(X)\label{eq:prob_continuous_var_rms}
+\end{equation}
 
 \end_inset
 
@@ -1042,8 +1090,10 @@ Umgekehrt gilt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mean(X^{2})=\var(X)+\mean^{2}(X)\mperiod\label{eq:prob_continuous_rms}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X^{2})=\var(X)+\mean^{2}(X)\mperiod\label{eq:prob_continuous_rms}
+\end{equation}
 
 \end_inset
 
@@ -1053,7 +1103,7 @@ Umgekehrt gilt:
 \begin_layout Standard
 Für Zufallsgrößen mit verschwindendem Mittelwert ist die Varianz gleich
  dem Quadrat des Effektivwertes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1103,8 +1153,10 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\var(X)\overset{\mean(X)=0}{=}\mean(X^{2})=\tilde{X}^{2}\label{eq:prob_continuous_var_mean_zero}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X)\overset{\mean(X)=0}{=}\mean(X^{2})=\tilde{X}^{2}\label{eq:prob_continuous_var_mean_zero}
+\end{equation}
 
 \end_inset
 
@@ -1116,7 +1168,7 @@ Gleichverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1127,7 +1179,7 @@ Gleichverteilung
 
 Eine der einfachsten Wahrscheinlichkeitsverteilungen ist die sogenannte
  Gleichverteilung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1150,8 +1202,10 @@ Gleichverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}p(x)\tic x=\int_{a}^{b}p(x)\tic x=1\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}p(x)\tic x=\int_{a}^{b}p(x)\tic x=1
+\]
 
 \end_inset
 
@@ -1163,10 +1217,13 @@ muß sie folgender Gleichung für die Dichtefunktion genügen:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 p(x)=\left\{ \begin{array}{ll}
 \mbig{\frac{1}{b-a}} & \; a\leq x\leq b\\
-0 & \textrm{\;\ sonst.}\end{array}\right.\label{eq:prob_equal_distribution}\end{equation}
+0 & \textrm{\;\ sonst.}
+\end{array}\right.\label{eq:prob_equal_distribution}
+\end{equation}
 
 \end_inset
 
@@ -1189,8 +1246,10 @@ reference "eq:prob_continuous_mean"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x=\int_{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\mperiod\label{eq:prob_equal_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x=\int_{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\mperiod\label{eq:prob_equal_mean}
+\end{equation}
 
 \end_inset
 
@@ -1213,10 +1272,12 @@ reference "eq:prob_continuous_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \var(X) & =\int_{a}^{b}\frac{\left[x-\mean(X)\right]^{2}}{b-a}\tdc x=\frac{1}{3(b-a)}\left.\left[x-\mean(X)\right]^{3}\right|_{a}^{b}\nonumber \\
  & =\frac{1}{3(b-a)}\left\{ \left[b-\mean(X)\right]^{3}-\left[a-\mean(X)\right]^{3}\right\} =\frac{1}{3(b-a)}\left[\left(\frac{b-a}{2}\right)^{3}-\left(\frac{a-b}{2}\right)^{3}\right]\nonumber \\
-\var(X) & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}\end{align}
+\var(X) & =\frac{(b-a)^{2}}{12}\label{eq:prob_equal_var}
+\end{align}
 
 \end_inset
 
@@ -1224,7 +1285,7 @@ reference "eq:prob_continuous_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1245,7 +1306,7 @@ Definition und Eigenschaften
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1305,7 +1366,7 @@ resp
 \end_inset
 
  gemeinsame Verteilungsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1331,8 +1392,10 @@ description "Verteilungsfunktion des Zufallsvektors $\\mvec{X}$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-F_{X}(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})\]
+\begin_inset Formula 
+\[
+F_{X}(x_{1},x_{2},\ldots,x_{n})=\pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n})
+\]
 
 \end_inset
 
@@ -1394,8 +1457,10 @@ description "Wahrscheinlichkeitsdichte des Zufallsvektors $\\mvec{X}$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-F_{X}(x_{1},x_{2},\ldots,x_{n})=\int_{-\infty}^{x_{1}}\int_{-\infty}^{x_{2}}\cdots\int_{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}\label{eq:prob_distribution_multi}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+F_{X}(x_{1},x_{2},\ldots,x_{n})=\int_{-\infty}^{x_{1}}\int_{-\infty}^{x_{2}}\cdots\int_{-\infty}^{x_{n}}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}\label{eq:prob_distribution_multi}
+\end{equation}
 
 \end_inset
 
@@ -1411,8 +1476,10 @@ Umgekehrt läßt sich durch partielle Differentiation nach allen
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\label{eq:prob_density_multi}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{X}(x_{1},x_{2},\ldots,x_{n})=\frac{\pdc^{n}F_{X}(x_{1},x_{2},\ldots,x_{n})}{\pdc x_{1}\,\pdc x_{2}\cdots\pdc x_{n}}\label{eq:prob_density_multi}
+\end{equation}
 
 \end_inset
 
@@ -1479,7 +1546,7 @@ ie
 \end_inset
 
  zu einer eindimensionalen Randverteilung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1519,9 +1586,11 @@ Fubini
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 F_{i}(x_{i}) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}\int_{-\infty}^{x_{i}}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{i+1}\tic u_{i}\tic u_{i-1}\cdots\tdc u_{2}\tic u_{1}\\
- & =\int_{-\infty}^{x_{i}}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{i+1}\tic u_{i-1}\cdots\tdc u_{2}\tic u_{1}\tic u_{i}\end{align*}
+ & =\int_{-\infty}^{x_{i}}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p_{X}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{i+1}\tic u_{i-1}\cdots\tdc u_{2}\tic u_{1}\tic u_{i}
+\end{align*}
 
 \end_inset
 
@@ -1538,7 +1607,7 @@ Partielle Differentiation der Randverteilung
 \end_inset
 
  führt zur (Rand-) Wahrscheinlichkeitsdichte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1551,8 +1620,10 @@ Randdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{i+1}\tic x_{i-1}\cdots\tdc x_{2}\tic x_{1}\]
+\begin_inset Formula 
+\[
+p_{i}(x_{i})=\pdiff{F_{i}(x_{i})}{x_{i}}=\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{i+1}\tic x_{i-1}\cdots\tdc x_{2}\tic x_{1}
+\]
 
 \end_inset
 
@@ -1568,9 +1639,11 @@ Für den zweidimensionalen Fall (
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 F_{1}(x_{1}) & =\int_{-\infty}^{x_{1}}\int_{-\infty}^{\infty}p_{X}(u_{1},u_{2})\tic u_{2}\tic u_{1}\label{eq:prob_distribution_dual}\\
-p_{1}(x_{1}) & =\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\mperiod\label{eq:prob_density_dual}\end{align}
+p_{1}(x_{1}) & =\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\mperiod\label{eq:prob_density_dual}
+\end{align}
 
 \end_inset
 
@@ -1588,9 +1661,11 @@ Als (vollständig) unabhängig werden Zufallsgrößen bezeichnet, wenn deren
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pr(X_{1}<x_{1},X_{2}<x_{2},\ldots,X_{n}<x_{n}) & =\pr(X_{1}<x_{1})\pr(X_{2}<x_{2})\cdots\pr(X_{n}<x_{n})\\
-F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})\end{align*}
+F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})
+\end{align*}
 
 \end_inset
 
@@ -1600,7 +1675,7 @@ F_{X}(x_{1},x_{2},\ldots,x_{n}) & =F_{1}(x_{1})F_{2}(x_{2})\cdots F_{n}(x_{n})\e
 \begin_layout Standard
 Grundvoraussetzung für diese Äquivalenz ist die Definition der bedingten
  Wahrscheinlichkeit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1621,8 +1696,10 @@ Wahrscheinlichkeit!bedingte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\pr(B\mid A)=\frac{\pr(A\cap B)}{\pr(A)}\mperiod\label{eq:prob_dependent_events}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pr(B\mid A)=\frac{\pr(A\cap B)}{\pr(A)}\mperiod\label{eq:prob_dependent_events}
+\end{equation}
 
 \end_inset
 
@@ -1680,8 +1757,10 @@ Umgestellt nach
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\pr(A\cap B)=\pr(A)\pr(B\mid A)=\pr(B)\pr(A\mid B)\label{eq:prob_dependent_mult}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pr(A\cap B)=\pr(A)\pr(B\mid A)=\pr(B)\pr(A\mid B)\label{eq:prob_dependent_mult}
+\end{equation}
 
 \end_inset
 
@@ -1770,8 +1849,10 @@ Bool
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(A\cap B)=\pr(A)\pr(B)\mperiod\]
+\begin_inset Formula 
+\[
+\pr(A\cap B)=\pr(A)\pr(B)\mperiod
+\]
 
 \end_inset
 
@@ -1788,7 +1869,7 @@ Erwartungswert
 
 \begin_layout Standard
 Konsequent kann man auch die Definition des Erwartungswertes
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1842,8 +1923,10 @@ key "Gnedenko:1958"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\mean(X_{i})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}x_{i}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\ldots\tdc x_{2}\tic x_{1}\qquad1\leq i\leq n\]
+\begin_inset Formula 
+\[
+\mean(X_{i})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}x_{i}p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\ldots\tdc x_{2}\tic x_{1}\qquad1\leq i\leq n
+\]
 
 \end_inset
 
@@ -1853,7 +1936,7 @@ key "Gnedenko:1958"
 \begin_layout Standard
 Man muß allerdings hinzufügen, daß es sich um den Erwartungswert der Randverteil
 ung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1871,14 +1954,17 @@ Randverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \mvec{\mean(X_{i})}=\left(\begin{array}{c}
 \mean(X_{1})\\
 \mean(X_{2})\\
 \vdots\\
 \mean(X_{i})\\
 \vdots\\
-\mean(X_{n})\end{array}\right)\]
+\mean(X_{n})
+\end{array}\right)
+\]
 
 \end_inset
 
@@ -1909,8 +1995,10 @@ reference "eq:prob_generic_var"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\var(X_{i})=\mean\left[X_{i}-\mean(X_{i})\right]^{2}\qquad1\leq i\leq n\]
+\begin_inset Formula 
+\[
+\var(X_{i})=\mean\left[X_{i}-\mean(X_{i})\right]^{2}\qquad1\leq i\leq n
+\]
 
 \end_inset
 
@@ -1943,7 +2031,7 @@ Sind
 
  zwei (nicht notwendigerweise unabhängige) Zufallsgrößen, dann nennt man
  die folgende Größe Kovarianz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1973,8 +2061,10 @@ description "Kovarianz der Zufallsgrößen $X_{1},X_{2}$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\cov(X_{1},X_{2})=\mean\left\{ \left[X_{1}-\mean(X_{1})\right]\left[X_{2}-\mean(X_{2})\right]\right\} \label{eq:prob_covariance_def}
+\end{equation}
 
 \end_inset
 
@@ -2050,9 +2140,11 @@ die Trivialität
 
 \begin_deeper
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \cov(X_{1},X_{2}) & =\mean\left[X_{1}X_{2}-X_{1}\mean(X_{2})-X_{2}\mean(X_{1})+\mean(X_{1})\,\mean(X_{2})\right]\nonumber \\
- & =\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}\end{align}
+ & =\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\label{eq:prob_cov_shift}
+\end{align}
 
 \end_inset
 
@@ -2066,8 +2158,10 @@ Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarian
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})\overset{\mean{X_{i}}=0}{=}\mean(X_{1}X_{2}),\qquad\qquad i=1,2\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\cov(X_{1},X_{2})\overset{\mean{X_{i}}=0}{=}\mean(X_{1}X_{2}),\qquad\qquad i=1,2
+\end{equation}
 
 \end_inset
 
@@ -2076,7 +2170,7 @@ Ist eine der beiden Zufallsgrößen mittelwertfrei, dann entspricht die Kovarian
 
 \begin_layout Standard
 Unter diesen Bedingungen spricht man auch von der Korrelation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2143,8 +2237,10 @@ reference "eq:prob_continuous_var_rms"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\cov(X,X)=\var(X)\]
+\begin_inset Formula 
+\[
+\cov(X,X)=\var(X)
+\]
 
 \end_inset
 
@@ -2157,8 +2253,10 @@ Für kontinuierliche Zufallsgrößen kann die Kovarianz wiefolgt konkretisiert
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\cov(X_{1},X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\label{eq:prob_cov_continuous}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\cov(X_{1},X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\label{eq:prob_cov_continuous}
+\end{equation}
 
 \end_inset
 
@@ -2188,8 +2286,10 @@ Dabei geht man davon aus, daß der Vektor
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})\]
+\begin_inset Formula 
+\[
+p_{X}(x_{1},x_{2})=p_{1}(x_{1})p_{2}(x_{2})
+\]
 
 \end_inset
 
@@ -2212,10 +2312,12 @@ reference "eq:prob_cov_continuous"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \cov(X_{1},X_{2}) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})p_{2}(x_{2})\tic x_{1}\tic x_{2}\\
  & =\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\tic x_{2}\\
- & =\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\tic x_{2}\end{align*}
+ & =\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\tic x_{2}
+\end{align*}
 
 \end_inset
 
@@ -2227,9 +2329,11 @@ Wegen der allgemeingültigen Beziehung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \int_{-\infty}^{\infty}\left[x-\mean(X)\right]\, p(x)\tic x & =\int_{-\infty}^{\infty}x\, p(x)\tic x-\int_{-\infty}^{\infty}\mean(X)\, p(x)\tic x\\
- & =\mean(X)-\mean(X)\int_{-\infty}^{\infty}\, p(x)\tic x=0\end{align*}
+ & =\mean(X)-\mean(X)\int_{-\infty}^{\infty}\, p(x)\tic x=0
+\end{align*}
 
 \end_inset
 
@@ -2267,8 +2371,10 @@ reference "eq:prob_cov_shift"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mean(X_{1}X_{2})\overset{\cov(X_{1},X_{2})=0}{=}\mean(X_{1})\,\mean(X_{2}),\label{eq:prob_cov_zero_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X_{1}X_{2})\overset{\cov(X_{1},X_{2})=0}{=}\mean(X_{1})\,\mean(X_{2}),\label{eq:prob_cov_zero_mean}
+\end{equation}
 
 \end_inset
 
@@ -2290,7 +2396,7 @@ Für einen mehrdimensionalen Zufallsvektor
 \end_inset
 
  kann man eine sogenannte Varianz-Kovarianz-Matrix
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2300,7 +2406,7 @@ Kovarianz
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2317,8 +2423,10 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-c_{i,k}=\cov(X_{i},X_{k})=\mean\left\{ \left[X_{i}-\mean(X_{i})\right]\left[X_{k}-\mean(X_{k})\right]\right\} \]
+\begin_inset Formula 
+\[
+c_{i,k}=\cov(X_{i},X_{k})=\mean\left\{ \left[X_{i}-\mean(X_{i})\right]\left[X_{k}-\mean(X_{k})\right]\right\} 
+\]
 
 \end_inset
 
@@ -2342,12 +2450,15 @@ deren Elemente
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \mvec{C}=\left(\begin{array}{cccc}
 \var(X_{1}) & \cov(X_{2},X_{1}) & \cdots & \cov(X_{n},X_{1})\\
 \cov(X_{1},X_{2}) & \var(X_{2}) & \cdots & \cov(X_{n},X_{2})\\
 \vdots & \vdots & \ddots & \vdots\\
-\cov(X_{1},X_{n}) & \cov(X_{2},X_{n}) & \cdots & \var(X_{n})\end{array}\right)\]
+\cov(X_{1},X_{n}) & \cov(X_{2},X_{n}) & \cdots & \var(X_{n})
+\end{array}\right)
+\]
 
 \end_inset
 
@@ -2394,7 +2505,7 @@ Korrelationskoeffizient
 
 \begin_layout Standard
 Der Korrelationskoeffizient
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2434,8 +2545,10 @@ description "Korrelationskoeffizient der Zufallsgrößen $X_{1},X_{2}$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\var(X_{2})}}\label{eq:prob_corr_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\corr(X_{1},X_{2})=\frac{\cov(X_{1},X_{2})}{\sqrt{\var(X_{1})\var(X_{2})}}\label{eq:prob_corr_def}
+\end{equation}
 
 \end_inset
 
@@ -2526,8 +2639,10 @@ reference "eq:prob_continuous_var_mean_zero"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\corr(X_{1},X_{2})\overset{\mean X_{i}=0}{=}\frac{\mean(X_{1}X_{2})}{\sqrt{\mean(X_{1}^{2})\mean(X_{2}^{2})}}\mperiod\label{eq:prob_corr_mean_zero}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\corr(X_{1},X_{2})\overset{\mean X_{i}=0}{=}\frac{\mean(X_{1}X_{2})}{\sqrt{\mean(X_{1}^{2})\mean(X_{2}^{2})}}\mperiod\label{eq:prob_corr_mean_zero}
+\end{equation}
 
 \end_inset
 
@@ -2535,7 +2650,7 @@ reference "eq:prob_continuous_var_mean_zero"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2832,9 +2947,11 @@ reference "fig:prob_function_transform"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \left|\tdc\pr_{X}(x)\right| & =\left|\tdc\pr_{Y}(y)\right|\nonumber \\
-p_{X}(x)\,\left|\tdc x\right| & =p_{Y}(y)\,\left|\tdc y\right|\label{eq:prob_transform_single_differential}\end{align}
+p_{X}(x)\,\left|\tdc x\right| & =p_{Y}(y)\,\left|\tdc y\right|\label{eq:prob_transform_single_differential}
+\end{align}
 
 \end_inset
 
@@ -2919,8 +3036,10 @@ Transformationsfunktion
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\left[h(y)\right]\left|h'(y)\right|\label{eq:prob_transform_single}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=p_{X}(x)\,\left|h'(y)\right|=p_{X}\left[h(y)\right]\left|h'(y)\right|\label{eq:prob_transform_single}
+\end{equation}
 
 \end_inset
 
@@ -2955,8 +3074,10 @@ Mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)\,\left|\tdc y\right|=p_{X}(x)\,\left|\tdc x\right|\]
+\begin_inset Formula 
+\[
+p_{Y}(y)\,\left|\tdc y\right|=p_{X}(x)\,\left|\tdc x\right|
+\]
 
 \end_inset
 
@@ -3000,9 +3121,11 @@ reference "eq:prob_distribution"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 F_{Y}(y) & =\int_{-\infty}^{y}p_{y}(u)\tic u=\int_{h(-\infty)}^{h(y)}p_{x}(u)\tic u\\
-F_{Y}(y) & =F_{X}\left[h(y)\right]-F_{X}\left[h(-\infty)\right]\end{align*}
+F_{Y}(y) & =F_{X}\left[h(y)\right]-F_{X}\left[h(-\infty)\right]
+\end{align*}
 
 \end_inset
 
@@ -3053,8 +3176,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-F_{Y}(y)=F_{X}\left[h(y)\right]\end{equation}
+\begin_inset Formula 
+\begin{equation}
+F_{Y}(y)=F_{X}\left[h(y)\right]
+\end{equation}
 
 \end_inset
 
@@ -3107,7 +3232,7 @@ Trigonometrische Übertragungsfunktion (bei Gleichverteilung)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3142,8 +3267,10 @@ Die Eingangsgröße
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\mperiod\]
+\begin_inset Formula 
+\[
+p_{Y}(y)=\frac{p_{X}(x)}{\left|f'(x)\right|}=\frac{1}{\pi}\cdot\frac{1}{\cos x}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-\sin^{2}x}}=\frac{1}{\pi}\cdot\frac{1}{\sqrt{1-y^{2}}}\mperiod
+\]
 
 \end_inset
 
@@ -3173,8 +3300,10 @@ Die Eingangsgröße
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{p_{X}(y/A)}{\left|A\right|}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\frac{p_{X}(x)}{f'(x)}=\frac{p_{X}(y/A)}{\left|A\right|}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -3222,11 +3351,13 @@ Gesucht ist die Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Quotation
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 Y_{1} & =f_{1}(X_{1},X_{2},\ldots,X_{n})\\
 Y_{2} & =f_{2}(X_{1},X_{2},\ldots,X_{n})\\
 \vdots & =\vdots\\
-Y_{n} & =f_{n}(X_{1},X_{2},\ldots,X_{n})\end{align*}
+Y_{n} & =f_{n}(X_{1},X_{2},\ldots,X_{n})
+\end{align*}
 
 \end_inset
 
@@ -3252,8 +3383,10 @@ description "Umkehrfunktion von $f(x)$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mvec{Y}=\mvec{f}(\mvec{X})\qquad\qquad\mvec{X}=\mvec f^{(-1)}(\mvec{Y})=\mvec{h}(\mvec{Y})\label{eq:prob_transform_func_vectors}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mvec{Y}=\mvec{f}(\mvec{X})\qquad\qquad\mvec{X}=\mvec f^{(-1)}(\mvec{Y})=\mvec{h}(\mvec{Y})\label{eq:prob_transform_func_vectors}
+\end{equation}
 
 \end_inset
 
@@ -3308,8 +3441,10 @@ reference "eq:prob_transform_single"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{X}(\mvec{x})\tic x_{1}\tic x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\tic y_{1}\tic y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_density_differential}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{X}(\mvec{x})\tic x_{1}\tic x_{2}\cdots\tdc x_{n}=p_{Y}(\mvec{y})\tic y_{1}\tic y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_density_differential}
+\end{equation}
 
 \end_inset
 
@@ -3402,7 +3537,7 @@ resp
 Jacobi
 \noun default
 -Determinante
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3412,7 +3547,7 @@ Funktionaldeterminante
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3456,8 +3591,10 @@ Substitutionssatz für Mehrfach-Integrale:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=\left|\mvec J_{h}\right|\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_jacobian_det}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\tdc x_{1}\,\tdc x_{2}\cdots\tdc x_{n}=\left|\mvec J_{h}\right|\,\tdc y_{1}\,\tdc y_{2}\cdots\tdc y_{n}\label{eq:prob_transform_jacobian_det}
+\end{equation}
 
 \end_inset
 
@@ -3506,12 +3643,15 @@ tabvstretch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left|\mvec J_{h}\right|=\left|\begin{array}{cccc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{n}}}\\
 \mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{n}}}\\
 \vdots & \vdots & \ddots & \vdots\\
-\mbig{\pdiff{h_{n}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{n}}}\end{array}\right|,\]
+\mbig{\pdiff{h_{n}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{2}}} & \cdots & \mbig{\pdiff{h_{n}(\mvec{y})}{y_{n}}}
+\end{array}\right|,
+\]
 
 \end_inset
 
@@ -3572,8 +3712,10 @@ reference "eq:prob_transform_jacobian_det"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{Y}(\mvec{y})=\left|\mvec J_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(\mvec{y})=\left|\mvec J_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}
+\end{equation}
 
 \end_inset
 
@@ -3659,9 +3801,11 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 F_{Y}(\mvec{y}) & =\int_{-\infty}^{y_{1}}\int_{-\infty}^{y_{2}}\cdots\int_{-\infty}^{y_{n}}p_{Y}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}\nonumber \\
- & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\label{eq:prob_distribution_func_generic}\end{align}
+ & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\label{eq:prob_distribution_func_generic}
+\end{align}
 
 \end_inset
 
@@ -3717,9 +3861,11 @@ reference "eq:prob_transform_density_differential"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \mean(Y_{i}) & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}y_{i}p_{Y}(y_{1},y_{2},\ldots,y_{n})\tic y_{n}\cdots\tdc y_{2}\tic y_{1}\\
- & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\end{eqnarray*}
+ & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}
+\end{eqnarray*}
 
 \end_inset
 
@@ -3735,8 +3881,10 @@ Für den zweidimensionalen Spezialfall
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mean(Y)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\label{eq:prob_mean_func_dual}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(Y)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\label{eq:prob_mean_func_dual}
+\end{equation}
 
 \end_inset
 
@@ -3758,7 +3906,7 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3768,7 +3916,7 @@ Summe von Zufallsgrößen|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3778,7 +3926,7 @@ Zufallsgrößen!Summe von|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3876,9 +4024,11 @@ Zuerst werden die Umkehrfunktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 X_{1} & =h_{1}(Y_{1},Y_{2})=\frac{Y_{1}+Y_{2}}{2}\\
-X_{2} & =h_{2}(Y_{1},Y_{2})=\frac{Y_{1}-Y_{2}}{2}\end{align*}
+X_{2} & =h_{2}(Y_{1},Y_{2})=\frac{Y_{1}-Y_{2}}{2}
+\end{align*}
 
 \end_inset
 
@@ -3906,12 +4056,16 @@ tabvstretch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left|\mvec J_{h}\right|=\left|\begin{array}{cc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
-\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\left|\begin{array}{cc}
+\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}
+\end{array}\right|=\left|\begin{array}{cc}
 1/2 & 1/2\\
-1/2 & -1/2\end{array}\right|=-\frac{1}{2}\]
+1/2 & -1/2
+\end{array}\right|=-\frac{1}{2}
+\]
 
 \end_inset
 
@@ -3967,8 +4121,10 @@ reference "eq:prob_transform_density_multi"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)\]
+\begin_inset Formula 
+\[
+p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)
+\]
 
 \end_inset
 
@@ -4033,8 +4189,10 @@ reference "eq:prob_density_dual"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=-\frac{1}{2}\int_{-\infty}^{\infty}p_{X}\left(\frac{y+y_{2}}{2},\frac{y-y_{2}}{2}\right)\tic y_{2}\]
+\begin_inset Formula 
+\[
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=-\frac{1}{2}\int_{-\infty}^{\infty}p_{X}\left(\frac{y+y_{2}}{2},\frac{y-y_{2}}{2}\right)\tic y_{2}
+\]
 
 \end_inset
 
@@ -4071,8 +4229,10 @@ ie
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{X}\left(z,y-z\right)\tic z\label{eq:prob_continuous_add_dep}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{X}\left(z,y-z\right)\tic z\label{eq:prob_continuous_add_dep}
+\end{equation}
 
 \end_inset
 
@@ -4097,8 +4257,10 @@ sdichte.
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
-p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)
+\end{xalignat*}
 
 \end_inset
 
@@ -4181,8 +4343,10 @@ reference "eq:prob_continuous_add_dep"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_continuous_convolution}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_continuous_convolution}
+\end{equation}
 
 \end_inset
 
@@ -4192,7 +4356,7 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_contin
 \begin_layout Standard
 Nach dieser Formel ist die Wahrscheinlichkeitsdichte der Summe zweier unabhängig
 er Zufallsgrößen also genau die Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4228,8 +4392,10 @@ description "Faltungs-Operator"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=(p_{1}*p_{2})\,(y)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=(p_{1}*p_{2})\,(y)
+\end{equation}
 
 \end_inset
 
@@ -4245,8 +4411,10 @@ Für die Summe von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)=(p_{1}*p_{2}*p_{3}*\cdots*p_{n-1}*p_{n})\,(y)\mperiod\]
+\begin_inset Formula 
+\[
+p_{Y}(y)=(p_{1}*p_{2}*p_{3}*\cdots*p_{n-1}*p_{n})\,(y)\mperiod
+\]
 
 \end_inset
 
@@ -4264,7 +4432,7 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4292,8 +4460,10 @@ reference "eq:prob_continuous_mean"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\mean(Y)=\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}y\, p_{Y}(y)\tic y\]
+\begin_inset Formula 
+\[
+\mean(Y)=\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}y\, p_{Y}(y)\tic y
+\]
 
 \end_inset
 
@@ -4320,11 +4490,13 @@ reference "eq:prob_continuous_add_dep"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mean(X_{1}+X_{2}) & =\int_{y=-\infty}^{\infty}y\int_{x_{1}=-\infty}^{\infty}p_{X}(x_{1},y-x_{1})\tic x_{1}\tic y\\
  & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}(x_{1}+x_{2})\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
  & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{1}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{2}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
- & =\int_{-\infty}^{\infty}x_{1}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int_{-\infty}^{\infty}x_{2}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\mperiod\end{align*}
+ & =\int_{-\infty}^{\infty}x_{1}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int_{-\infty}^{\infty}x_{2}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -4344,7 +4516,7 @@ reference "eq:prob_density_dual"
 \end_inset
 
  aber genau die Randdichten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4365,8 +4537,10 @@ Randdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}+\int_{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}\]
+\begin_inset Formula 
+\[
+\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}+\int_{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}
+\]
 
 \end_inset
 
@@ -4402,8 +4576,10 @@ Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{1})\label{eq:prob_sum_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X_{1}+X_{2})=\mean(X_{1})+\mean(X_{1})\label{eq:prob_sum_mean}
+\end{equation}
 
 \end_inset
 
@@ -4415,7 +4591,7 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4440,12 +4616,14 @@ reference "eq:prob_continuous_var_rms"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \var(Y) & =\mean(Y^{2})-\mean^{2}(Y)\nonumber \\
  & =\mean(X_{1}+X_{2})^{2}-\mean^{2}(X_{1}+X_{2})\nonumber \\
  & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\left[\mean(X_{1})+\mean(X_{2})\right]^{2}\label{eq:prob_sum_var_ext}\\
  & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})-\mean^{2}(X_{1})-\mean^{2}(X_{2})-2\mean(X_{1})\,\mean(X_{2})\nonumber \\
- & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\mperiod\nonumber \end{align}
+ & =\var(X_{1})+\var(X_{2})+2\left[\mean(X_{1}X_{2})-\mean(X_{1})\,\mean(X_{2})\right]\mperiod\nonumber 
+\end{align}
 
 \end_inset
 
@@ -4468,8 +4646,10 @@ reference "sec:prob_covariance_dependent"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\label{eq:prob_sum_var}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})+2\cov(X_{1},X_{2})\label{eq:prob_sum_var}
+\end{equation}
 
 \end_inset
 
@@ -4517,8 +4697,10 @@ reference "sec:prob_covariance_dependent"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})\mperiod\]
+\begin_inset Formula 
+\[
+\var(X_{1}+X_{2})=\var(X_{1})+\var(X_{2})\mperiod
+\]
 
 \end_inset
 
@@ -4530,7 +4712,7 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4565,10 +4747,12 @@ reference "eq:prob_sum_var_ext"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mean(Y^{2}) & =\var(Y)+\mean^{2}(Y)\\
  & =\mean(X_{1}^{2})+\mean(X_{2}^{2})+2\mean(X_{1}X_{2})\\
-\tilde{Y}^{2} & =\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+2\mean(X_{1}X_{2})\end{align*}
+\tilde{Y}^{2} & =\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+2\mean(X_{1}X_{2})
+\end{align*}
 
 \end_inset
 
@@ -4619,8 +4803,10 @@ reference "eq:prob_cov_zero_mean"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\tilde{Y}\overset{\mean(X_{i})=0}{=}\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}},\qquad\qquad i=1,2\mperiod\]
+\begin_inset Formula 
+\[
+\tilde{Y}\overset{\mean(X_{i})=0}{=}\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}},\qquad\qquad i=1,2\mperiod
+\]
 
 \end_inset
 
@@ -4636,8 +4822,10 @@ Induktive Fortsetzung ergibt für den Effektivwert der Summe
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\tilde{Y}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+\tilde{X}_{3}^{2}+\cdots+\tilde{X}_{n-1}^{2}+\tilde{X}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{X}_{i}^{2}}\mperiod\]
+\begin_inset Formula 
+\[
+\tilde{Y}=\sqrt{\tilde{X}_{1}^{2}+\tilde{X}_{2}^{2}+\tilde{X}_{3}^{2}+\cdots+\tilde{X}_{n-1}^{2}+\tilde{X}_{n}^{2}}=\sqrt{\sum_{i=1}^{n}\tilde{X}_{i}^{2}}\mperiod
+\]
 
 \end_inset
 
@@ -4649,7 +4837,7 @@ Superposition bei Normalverteilung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4659,7 +4847,7 @@ Normalverteilung
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4719,8 +4907,10 @@ description "Varianz der Normalverteilung"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{i}(x)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2
+\end{equation}
 
 \end_inset
 
@@ -4751,7 +4941,7 @@ resp
 \end_inset
 
  Glockenkurve
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4810,8 +5000,10 @@ description "\\noun{Euler}'sche Zahl"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft\left\{ p_{i}(x)\right\} =\expf^{-\mu_{i}}\expf^{-2\left(\pi\sigma_{i}f\right)^{2}}\]
+\begin_inset Formula 
+\[
+\ft\left\{ p_{i}(x)\right\} =\expf^{-\mu_{i}}\expf^{-2\left(\pi\sigma_{i}f\right)^{2}}
+\]
 
 \end_inset
 
@@ -4823,8 +5015,10 @@ und dann einfach multipliziert (Faltungssatz).
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft\left\{ p_{Y}(y)\right\} =\expf^{-(\mu_{1}+\mu_{2})}\expf^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}\]
+\begin_inset Formula 
+\[
+\ft\left\{ p_{Y}(y)\right\} =\expf^{-(\mu_{1}+\mu_{2})}\expf^{-2\left(\pi\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}}f\right)^{2}}
+\]
 
 \end_inset
 
@@ -4840,8 +5034,10 @@ Die Rücktransformation von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right],\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\mu=\mu_{1}+\mu_{2}\]
+\begin_inset Formula 
+\[
+p_{Y}(y)=\frac{1}{\sqrt{2\pi}\,\sigma}\exp\left[-\frac{1}{2}\left(\frac{x-\mu}{\sigma}\right)^{2}\right],\qquad\textrm{mit }\sigma=\sqrt{\sigma_{1}^{2}+\sigma_{2}^{2}},\quad\mu=\mu_{1}+\mu_{2}
+\]
 
 \end_inset
 
@@ -4903,7 +5099,7 @@ reference "eq:prob_sum_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4913,7 +5109,7 @@ Summe von Zufallsgrößen|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4940,7 +5136,7 @@ Wahrscheinlichkeitsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4950,7 +5146,7 @@ Wahrscheinlichkeitsdichte!eines Produkts
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4960,7 +5156,7 @@ Zufallsgrößen!Produkt von|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5049,9 +5245,11 @@ Vorzeichen-Mehrdeutigkeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 X_{1} & =h_{1}(Y_{1},Y_{2})=\sqrt{Y_{1}Y_{2}}\\
-X_{2} & =h_{2}(Y_{1},Y_{2})=\sqrt{Y_{1}/Y_{2}}\end{align*}
+X_{2} & =h_{2}(Y_{1},Y_{2})=\sqrt{Y_{1}/Y_{2}}
+\end{align*}
 
 \end_inset
 
@@ -5079,12 +5277,16 @@ tabvstretch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left|\mvec J_{h}\right|=\left|\begin{array}{cc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
-\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}\end{array}\right|=\frac{1}{4}\left|\begin{array}{cc}
+\mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}
+\end{array}\right|=\frac{1}{4}\left|\begin{array}{cc}
 \mbig{\sqrt{\frac{y_{2}}{y_{1}}}} & \mbig{\sqrt{\frac{y_{1}}{y_{2}}}}\\
-\mbig{\frac{1}{\sqrt{y_{1}y_{2}}}} & \mbig{-\sqrt{\frac{y_{1}}{y_{2}^{3}}}}\end{array}\right|=-\frac{1}{4}\left(\frac{1}{y_{2}}+y_{1}\right)\]
+\mbig{\frac{1}{\sqrt{y_{1}y_{2}}}} & \mbig{-\sqrt{\frac{y_{1}}{y_{2}^{3}}}}
+\end{array}\right|=-\frac{1}{4}\left(\frac{1}{y_{2}}+y_{1}\right)
+\]
 
 \end_inset
 
@@ -5134,8 +5336,10 @@ Einleuchtende Erklärung notwendig
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)\]
+\begin_inset Formula 
+\[
+p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)
+\]
 
 \end_inset
 
@@ -5189,8 +5393,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}\]
+\begin_inset Formula 
+\[
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}
+\]
 
 \end_inset
 
@@ -5227,10 +5433,12 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 p_{Y}(y) & = & \int_{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\tic z\\
  & = & \int_{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\tic z\\
- & = & \int_{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int_{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\tic z\mperiod\end{eqnarray*}
+ & = & \int_{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int_{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\tic z\mperiod
+\end{eqnarray*}
 
 \end_inset
 
@@ -5285,8 +5493,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int z\, p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0\]
+\begin_inset Formula 
+\[
+\int z\, p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0
+\]
 
 \end_inset
 
@@ -5299,8 +5509,10 @@ n gilt also:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\tic z\mperiod\label{eq:prob_continuous_prd}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{X}(z,y/z)}{z}\tic z\mperiod\label{eq:prob_continuous_prd}
+\end{equation}
 
 \end_inset
 
@@ -5339,8 +5551,10 @@ reference "sec:prob_sum"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
-p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+p_{Y}(y) & =\pr\left(Y=y\pm\frac{\tdc y}{2}\right) & p_{X}(x_{1},x_{2}) & =\pr\left(X_{1}=x_{1}\pm\frac{\tdc x_{1}}{2}\cap X_{2}=x_{2}\pm\frac{\tdc x_{2}}{2}\right)
+\end{xalignat*}
 
 \end_inset
 
@@ -5383,8 +5597,10 @@ Für einen willkürlich gewählten Wert
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-p_{X}(x)\,\tdc x=p_{Y}(y)\,\tdc y\]
+\begin_inset Formula 
+\[
+p_{X}(x)\,\tdc x=p_{Y}(y)\,\tdc y
+\]
 
 \end_inset
 
@@ -5437,8 +5653,10 @@ reference "eq:prob_continuous_prd"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\tic z\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\tic z\mperiod
+\end{equation}
 
 \end_inset
 
@@ -5450,7 +5668,7 @@ Erwartungswert
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5483,8 +5701,10 @@ reference "eq:prob_mean_func_dual"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\mean(X_{1}X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\mperiod\label{eq:prob_prd_continuous_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X_{1}X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{1}x_{2}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\mperiod\label{eq:prob_prd_continuous_mean}
+\end{equation}
 
 \end_inset
 
@@ -5525,9 +5745,11 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \mean(X_{1}X_{2}) & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{1}x_{2}p_{1}(x_{1})p_{2}(x_{2})\tic x_{2}\tic x_{1}\\
- & = & \int_{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}\end{eqnarray*}
+ & = & \int_{-\infty}^{\infty}x_{1}p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}x_{2}p_{2}(x_{2})\tic x_{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -5539,8 +5761,10 @@ und erhält als Ergebnis:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\mean(X_{1}X_{2})=\mean(X_{1})\mean(X_{2})\mperiod\label{eq:prob_prd_mean}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\mean(X_{1}X_{2})=\mean(X_{1})\mean(X_{2})\mperiod\label{eq:prob_prd_mean}
+\end{equation}
 
 \end_inset
 
@@ -5553,7 +5777,7 @@ Verschwindet der Erwartungswert des Produkts sogar überall, also gilt
 \end_inset
 
 , dann werden die beiden Zufallsgrößen als orthogonal
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5570,7 +5794,7 @@ Varianz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5621,14 +5845,16 @@ reference "eq:prob_prd_mean"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \var(Y) & =\int_{-\infty}^{\infty}y^{2}p(y)\tic y-\mean^{2}(Y)\\
  & =\int_{x=-\infty}^{\infty}y^{2}\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\int_{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean(X_{1})\mean(X_{2})\\
  & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean(X_{1})\mean(X_{2})\\
- & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean(X_{1})\mean(X_{2})\end{align*}
+ & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean(X_{1})\mean(X_{2})
+\end{align*}
 
 \end_inset
 
@@ -5637,7 +5863,7 @@ reference "eq:prob_prd_mean"
 
 \begin_layout Standard
 Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5650,8 +5876,10 @@ Zufallsgrößen!mittelwertfreie
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})\label{eq:prob_prd_var}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})\label{eq:prob_prd_var}
+\end{equation}
 
 \end_inset
 
@@ -5663,7 +5891,7 @@ Effektivwert
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5709,9 +5937,11 @@ reference "eq:prob_prd_var"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mean(Y^{2}) & =\var(Y)+\mean^{2}(Y)=\mean(X_{1}^{2})\mean(X_{2}^{2})\\
-\tilde{Y}^{2} & =\tilde{X}_{1}^{2}\,\tilde{X}_{2}^{2}\end{align*}
+\tilde{Y}^{2} & =\tilde{X}_{1}^{2}\,\tilde{X}_{2}^{2}
+\end{align*}
 
 \end_inset
 
@@ -5727,8 +5957,10 @@ Für den Effektivwert des Produkts
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\tilde{Y}=\tilde{X}_{1}\tilde{X}_{2}\tilde{X}_{3}\cdots\tilde{X}_{n-1}\tilde{X}_{n}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\tilde{Y}=\tilde{X}_{1}\tilde{X}_{2}\tilde{X}_{3}\cdots\tilde{X}_{n-1}\tilde{X}_{n}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -5736,7 +5968,7 @@ Für den Effektivwert des Produkts
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5746,7 +5978,7 @@ Produkt von Zufallsgrößen|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5773,7 +6005,7 @@ Einführung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5861,10 +6093,12 @@ Man sagt auch, daß Scharmittelwerte und Zeitmittelwerte äquivalent sind.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \mean\left[\mvec{X}(t_{0})\right] & =\mean\left[X(t)\right]\\
 \var\left[\mvec{X}(t_{0})\right] & =\var\left[X(t)\right]\\
- & \vdots\end{align*}
+ & \vdots
+\end{align*}
 
 \end_inset
 
@@ -5962,7 +6196,7 @@ resp
 \end_inset
 
  eng verwandte) Größe und bezeichnen sie als Korrelation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6012,8 +6246,10 @@ reference "sec:prob_covariance_dependent"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-r(X_{1},X_{2})=\mean(X_{1}X_{2})\]
+\begin_inset Formula 
+\[
+r(X_{1},X_{2})=\mean(X_{1}X_{2})
+\]
 
 \end_inset
 
@@ -6036,8 +6272,10 @@ reference "eq:prob_cov_shift"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-r(X_{1},X_{2})=\cov(X_{1},X_{2})+\mean(X_{1})\,\mean(X_{2})\]
+\begin_inset Formula 
+\[
+r(X_{1},X_{2})=\cov(X_{1},X_{2})+\mean(X_{1})\,\mean(X_{2})
+\]
 
 \end_inset
 
@@ -6062,8 +6300,10 @@ Erinnern wir uns an den Ausgangspunkt und ersetzen die (zur besseren Anschauung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-r\left[X(t_{0}),X(t_{0}+\tau)\right]=\mean\left[X(t_{0})X(t_{0}+\tau)\right]\]
+\begin_inset Formula 
+\[
+r\left[X(t_{0}),X(t_{0}+\tau)\right]=\mean\left[X(t_{0})X(t_{0}+\tau)\right]
+\]
 
 \end_inset
 
@@ -6077,7 +6317,7 @@ Ferner berücksichtigen wir, daß für stationäre Zufallsprozesse der Zeitpunkt
 \end_inset
 
  keine Bedeutung hat -- und definieren die sogenannte Autokorrelationsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6102,8 +6342,10 @@ description "Autokorrelationsfunktion des Zufallsprozesses $\\mvec{X}(t)$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\acf_{xx}(\tau)=\mean\left[X(t)X(t+\tau)\right]\overset{\mean(X)=0}{=}\cov\left[X(t),X(t+\tau)\right]\]
+\begin_inset Formula 
+\[
+\acf_{xx}(\tau)=\mean\left[X(t)X(t+\tau)\right]\overset{\mean(X)=0}{=}\cov\left[X(t),X(t+\tau)\right]
+\]
 
 \end_inset
 
@@ -6147,8 +6389,10 @@ reference "sec:prob_prd"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\acf_{xx}(\tau)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x(t)x(t+\tau)p_{X}\left[x(t)x(t+\tau)\right]\tic x(t)\tic x(t+\tau)\mperiod\]
+\begin_inset Formula 
+\[
+\acf_{xx}(\tau)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x(t)x(t+\tau)p_{X}\left[x(t)x(t+\tau)\right]\tic x(t)\tic x(t+\tau)\mperiod
+\]
 
 \end_inset
 
@@ -6178,8 +6422,10 @@ description "Zeit-Mittelwert des Zufallssignals $x(t)$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{xx}(\tau)=\mean\left[x(t)x(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)x(t+\tau)\tic t=\avg{x(t)x(t+\tau)}\label{eq:prob_acf_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{xx}(\tau)=\mean\left[x(t)x(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)x(t+\tau)\tic t=\avg{x(t)x(t+\tau)}\label{eq:prob_acf_def}
+\end{equation}
 
 \end_inset
 
@@ -6224,9 +6470,11 @@ ie
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \acf_{xx}(-\tau) & = & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)x(t-\tau)\tic t\\
- & \overset{u:=t-\tau}{=} & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(u+\tau)x(u)\tic u=\acf_{xx}(\tau)\end{eqnarray*}
+ & \overset{u:=t-\tau}{=} & \lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(u+\tau)x(u)\tic u=\acf_{xx}(\tau)
+\end{eqnarray*}
 
 \end_inset
 
@@ -6272,8 +6520,10 @@ resp
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x^{2}(t)\tic t=\mean\left[X^{2}(t)\right]=\tilde{X}^{2}=P\label{eq:prob_acf_zero}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x^{2}(t)\tic t=\mean\left[X^{2}(t)\right]=\tilde{X}^{2}=P\label{eq:prob_acf_zero}
+\end{equation}
 
 \end_inset
 
@@ -6298,7 +6548,7 @@ Ist
 \end_inset
 
  aber ein determiniertes Energiesignal
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6342,8 +6592,10 @@ Ansonsten würde wegen der Division durch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{xx}^{(E)}(\tau)=\int_{-\infty}^{\infty}x(t)x(t+\tau)\tic t\label{eq:prob_acf_energy_signals}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{xx}^{(E)}(\tau)=\int_{-\infty}^{\infty}x(t)x(t+\tau)\tic t\label{eq:prob_acf_energy_signals}
+\end{equation}
 
 \end_inset
 
@@ -6369,8 +6621,10 @@ Für
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\tic t\,\int_{T}x(t)\tic t=\left[\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\tic t\right]^{2}=\avg{x(t)}^{2}\]
+\begin_inset Formula 
+\[
+\lim_{\tau\rightarrow\pm\infty}\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\tic t\,\int_{T}x(t)\tic t=\left[\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\tic t\right]^{2}=\avg{x(t)}^{2}
+\]
 
 \end_inset
 
@@ -6418,7 +6672,7 @@ Hintergrund ist die
 Cauchy-Schwarz
 \noun default
 'sche Ungleichung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6454,9 +6708,11 @@ noun{Cauchy-Schwarz}
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 \left[\int_{a}^{b}f(x)\, g(x)\tic x\right]^{2} & \leq & \int_{a}^{b}f^{2}(x)\tic x\,\int_{a}^{b}g^{2}(x)\tic x,\qquad x\in\mathbb{R}\\
-\left|\int_{a}^{b}f(z)\,\cjgt[g]{z}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}\end{eqnarray*}
+\left|\int_{a}^{b}f(z)\,\cjgt[g]{z}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}
+\end{eqnarray*}
 
 \end_inset
 
@@ -6481,7 +6737,7 @@ reference "enu:prob_acf_even"
 \end_inset
 
  ergibt sich die Ausdrucksmöglichkeit der AKF als Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6495,10 +6751,12 @@ Faltung
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \acf_{xx}(\tau)=\acf_{xx}(-\tau) & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)x[-(\tau-t)]\tic t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)x[-(\tau-t)]\tic t\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\end{align*}
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}
+\end{align*}
 
 \end_inset
 
@@ -6506,8 +6764,10 @@ Faltung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\cjgt{x})(\tau)\label{eq:prob_acf_conv}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{xx}(\tau)=\lim_{T\rightarrow\infty}\frac{1}{T}(x*\cjgt{x})(\tau)\label{eq:prob_acf_conv}
+\end{equation}
 
 \end_inset
 
@@ -6549,8 +6809,10 @@ description "Konjugierte Funktion $x(-t)$ im Zeitbereich"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\acf_{xx}^{(E)}(\tau)=(x*\cjgt{x})(\tau)\mperiod\]
+\begin_inset Formula 
+\[
+\acf_{xx}^{(E)}(\tau)=(x*\cjgt{x})(\tau)\mperiod
+\]
 
 \end_inset
 
@@ -6577,7 +6839,7 @@ zwei
 \end_inset
 
  durch ein Ähnlichkeitsmaß erklären, welches Kreuzkorrelationsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6602,8 +6864,10 @@ description "Kreuzkorrelationsfunktion der Zufallsprozesse $\\mvec{X}(t),\\mvec{
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\, y(t+\tau)\tic t\label{eq:prob_ccf_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\, y(t+\tau)\tic t\label{eq:prob_ccf_def}
+\end{equation}
 
 \end_inset
 
@@ -6645,7 +6909,7 @@ reference "eq:prob_ccf_def"
 \end_inset
 
 , die auch als Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6658,8 +6922,10 @@ Faltung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\acf_{xy}^{(E)}(\tau)=\int_{-\infty}^{\infty}x(t)y(t+\tau)\tic t=(x*\cjgt{y})(\tau)\]
+\begin_inset Formula 
+\[
+\acf_{xy}^{(E)}(\tau)=\int_{-\infty}^{\infty}x(t)y(t+\tau)\tic t=(x*\cjgt{y})(\tau)
+\]
 
 \end_inset
 
@@ -6671,7 +6937,7 @@ Spektrale Leistungsdichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6746,8 +7012,10 @@ reference "eq:prob_acf_zero"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x^{2}(t)\tic t\]
+\begin_inset Formula 
+\[
+P=\acf_{xx}(0)=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x^{2}(t)\tic t
+\]
 
 \end_inset
 
@@ -6782,8 +7050,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-X(\omega)=\int_{-\infty}^{\infty}x(t)\expf^{-\ji\omega t}\tic t\]
+\begin_inset Formula 
+\[
+X(\omega)=\int_{-\infty}^{\infty}x(t)\expf^{-\ji\omega t}\tic t
+\]
 
 \end_inset
 
@@ -6805,7 +7075,7 @@ muß für die Existenz von
 Dirac
 \noun default
 -Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6844,8 +7114,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\int_{-T/2}^{T/2}\acf_{xx}(\tau)\expf^{-\ji\omega\tau}\tic\tau\]
+\begin_inset Formula 
+\[
+\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\int_{-T/2}^{T/2}\acf_{xx}(\tau)\expf^{-\ji\omega\tau}\tic\tau
+\]
 
 \end_inset
 
@@ -6872,9 +7144,11 @@ reference "eq:prob_acf_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\int_{-T/2}^{T/2}\left[\frac{1}{T}\int_{T}x(t)x(t+\tau)\tic t\right]\expf^{-\ji\omega\tau}\tic\tau\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\int_{-T/2}^{T/2}x(t)x(t+\tau)\expf^{-\ji\omega\tau}\tic t\tic\tau\end{align*}
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}\int_{-T/2}^{T/2}x(t)x(t+\tau)\expf^{-\ji\omega\tau}\tic t\tic\tau
+\end{align*}
 
 \end_inset
 
@@ -6912,12 +7186,14 @@ Wobei die Integrationsgrenzen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \ft\left\{ \acf_{xx}(\tau)\right\}  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\int_{-T/2}^{T/2}x(t+\tau)\expf^{-\ji\omega\tau}\tic\tau\tic t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\int_{-T/2}^{T/2}x(u)\expf^{-\ji\omega(u-t)}\tic u\tic t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\expf^{-\ji\omega(-t)}\int_{-T/2}^{T/2}x(u)\expf^{-\ji\omega u}\tic u\tic t\\
  & =\lim_{T\rightarrow\infty}\frac{1}{T}\int_{-T/2}^{T/2}x(t)\expf^{-\ji(-\omega)t}\tdc t\cdot\int_{-T/2}^{T/2}x(u)\expf^{-\ji\omega u}\tic u\\
- & =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\ji\omega)X(\ji\omega)\end{align*}
+ & =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\ji\omega)X(\ji\omega)
+\end{align*}
 
 \end_inset
 
@@ -6980,8 +7256,10 @@ Man kann sich auch vorstellen, daß
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\ji\omega)\right|^{2}=\spd_{xx}(\omega)\label{eq:prob_psd_wiener_chintchin}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\ft\left\{ \acf_{xx}(\tau)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\ji\omega)\right|^{2}=\spd_{xx}(\omega)\label{eq:prob_psd_wiener_chintchin}
+\end{equation}
 
 \end_inset
 
@@ -7024,7 +7302,7 @@ Wiener
 Chintchin
 \noun default
 -Theorem
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7072,7 +7350,7 @@ status collapsed
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7097,8 +7375,10 @@ reference "eq:prob_acf_conv"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft\left\{ \acf_{xx}(\tau)\right\} =\ft\left\{ \lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\ft\left\{ x(t)*x(-t)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\ji\omega)X(\ji\omega)\]
+\begin_inset Formula 
+\[
+\ft\left\{ \acf_{xx}(\tau)\right\} =\ft\left\{ \lim_{T\rightarrow\infty}\frac{1}{T}\left.x(t)*x(-t)\right|_{t=\tau}\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}\ft\left\{ x(t)*x(-t)\right\} =\lim_{T\rightarrow\infty}\frac{1}{T}X(-\ji\omega)X(\ji\omega)
+\]
 
 \end_inset
 
@@ -7123,8 +7403,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\acf_{xx}(\tau)\]
+\begin_inset Formula 
+\[
+\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\acf_{xx}(\tau)
+\]
 
 \end_inset
 
@@ -7152,8 +7434,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\acf_{xx}(\tau)\rft\spd_{xx}(\omega)\]
+\begin_inset Formula 
+\[
+\acf_{xx}(\tau)\rft\spd_{xx}(\omega)
+\]
 
 \end_inset
 
@@ -7217,8 +7501,10 @@ Die mittlere Leistung
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-P=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega\]
+\begin_inset Formula 
+\[
+P=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega
+\]
 
 \end_inset
 
@@ -7234,8 +7520,10 @@ Für diesen Nachweis geht man am Besten von der bekannten Beziehung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\expf^{\ji\omega\tau}\tic\omega=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega\]
+\begin_inset Formula 
+\[
+P=\acf_{xx}(0)=\lim_{\tau\rightarrow0}\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} =\lim_{\tau\rightarrow0}\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\expf^{\ji\omega\tau}\tic\omega=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}(\omega)\tic\omega
+\]
 
 \end_inset
 
@@ -7278,8 +7566,10 @@ status collapsed
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{\tdc P}{\tdc\omega}=\frac{\spd_{xx}(\omega)}{2\pi}=\spd_{xx}(f)\]
+\begin_inset Formula 
+\[
+\frac{\tdc P}{\tdc\omega}=\frac{\spd_{xx}(\omega)}{2\pi}=\spd_{xx}(f)
+\]
 
 \end_inset
 
@@ -7293,7 +7583,7 @@ Weißes Rauschen
 
 \begin_layout Standard
 Weißes Rauschen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7329,8 +7619,10 @@ weißes
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xx}(\omega)=\spd_{0}\]
+\begin_inset Formula 
+\[
+\spd_{xx}(\omega)=\spd_{0}
+\]
 
 \end_inset
 
@@ -7351,8 +7643,10 @@ Wiener-Chintchin
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xx}(\omega)=\spd_{0}\rft\acf_{xx}(\tau)=\spd_{0}\,\dirac(\tau)\]
+\begin_inset Formula 
+\[
+\spd_{xx}(\omega)=\spd_{0}\rft\acf_{xx}(\tau)=\spd_{0}\,\dirac(\tau)
+\]
 
 \end_inset
 
@@ -7388,7 +7682,7 @@ reference "eq:prob_psd_wiener_chintchin"
 \end_inset
 
  und man erhält für die spektrale Energiedichte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7410,8 +7704,10 @@ description "Spektrale Energiedichte des Signals $x(t)$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xx}^{(E)}(\omega)=\left|X(\ji\omega)\right|^{2}=\ft\left\{ \acf_{xx}^{(E)}(\tau)\right\} \mperiod\]
+\begin_inset Formula 
+\[
+\spd_{xx}^{(E)}(\omega)=\left|X(\ji\omega)\right|^{2}=\ft\left\{ \acf_{xx}^{(E)}(\tau)\right\} \mperiod
+\]
 
 \end_inset
 
@@ -7431,8 +7727,10 @@ Parseval
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-E=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left|X(\ji\omega)\right|^{2}\tdc\omega=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}^{(E)}(\omega)\tic\omega,\]
+\begin_inset Formula 
+\[
+E=\frac{1}{2\pi}\int_{-\infty}^{\infty}\left|X(\ji\omega)\right|^{2}\tdc\omega=\frac{1}{2\pi}\int_{-\infty}^{\infty}\spd_{xx}^{(E)}(\omega)\tic\omega,
+\]
 
 \end_inset
 
@@ -7444,8 +7742,10 @@ dann bestätigt uns das Differential
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{\tdc E}{\tdc\omega}=\spd_{xx}^{(E)}(\omega)\]
+\begin_inset Formula 
+\[
+\frac{\tdc E}{\tdc\omega}=\spd_{xx}^{(E)}(\omega)
+\]
 
 \end_inset
 
@@ -7463,7 +7763,7 @@ Kreuzleistungs- und Energiedichten
 \begin_layout Standard
 Eine Verallgemeinerung zur spektralen Leistungsdichte (eines Zufallssignals)
  stellt die Kreuzleistungsdichte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7507,8 +7807,10 @@ description "Konjugiert komplexe Funktion $X(-\\ji\\omega)$ im Bildbereich"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xy}(\ji\omega)=\lim_{T\rightarrow\infty}\frac{1}{T}X(\ji\omega)\,\cjgt[Y]{\ji\omega}\]
+\begin_inset Formula 
+\[
+\spd_{xy}(\ji\omega)=\lim_{T\rightarrow\infty}\frac{1}{T}X(\ji\omega)\,\cjgt[Y]{\ji\omega}
+\]
 
 \end_inset
 
@@ -7557,7 +7859,7 @@ Chintchin
 \end_inset
 
  nämlich der Kreuzkorrelationsfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7602,8 +7904,10 @@ reference "eq:prob_ccf_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xy}(\ji\omega)=\ft\left\{ \acf_{xy}(\tau)\right\} \]
+\begin_inset Formula 
+\[
+\spd_{xy}(\ji\omega)=\ft\left\{ \acf_{xy}(\tau)\right\} 
+\]
 
 \end_inset
 
@@ -7616,7 +7920,7 @@ Für Energiesignale (
 \end_inset
 
 ) ist die Kreuzenergiedichte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7630,8 +7934,10 @@ Kreuzenergiedichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{xy}^{(E)}(\ji\omega)=X(\ji\omega)\,\cjgt[Y]{\ji\omega}\rft\acf_{xy}^{(E)}(\tau)\]
+\begin_inset Formula 
+\[
+\spd_{xy}^{(E)}(\ji\omega)=X(\ji\omega)\,\cjgt[Y]{\ji\omega}\rft\acf_{xy}^{(E)}(\tau)
+\]
 
 \end_inset
 
@@ -7639,7 +7945,7 @@ Kreuzenergiedichte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7660,7 +7966,7 @@ LTI-Systeme
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7715,8 +8021,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-Y(\ji\omega)=\trf(\ji\omega)X(\ji\omega)\]
+\begin_inset Formula 
+\[
+Y(\ji\omega)=\trf(\ji\omega)X(\ji\omega)
+\]
 
 \end_inset
 
@@ -7756,9 +8064,11 @@ tution entstehenden Ausdruck
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 Y(\ji\omega)\cjgt[Y]{\ji\omega} & = & \trf(\ji\omega)\cjgt[\trf]{\ji\omega}\, X(\ji\omega)\cjgt[X]{\ji\omega}\\
-\left|Y(\ji\omega)\right|^{2} & = & \left|\trf(\ji\omega)\right|^{2}\left|X(\ji\omega)\right|^{2}\end{eqnarray*}
+\left|Y(\ji\omega)\right|^{2} & = & \left|\trf(\ji\omega)\right|^{2}\left|X(\ji\omega)\right|^{2}
+\end{eqnarray*}
 
 \end_inset
 
@@ -7826,8 +8136,10 @@ und bildet sowohl links- als auch rechtsseitig mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{T\rightarrow\infty}\frac{1}{T}\left|Y(\ji\omega)\right|^{2}=\left|\trf(\ji\omega)\right|^{2}\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\ji\omega)\right|^{2}\]
+\begin_inset Formula 
+\[
+\lim_{T\rightarrow\infty}\frac{1}{T}\left|Y(\ji\omega)\right|^{2}=\left|\trf(\ji\omega)\right|^{2}\lim_{T\rightarrow\infty}\frac{1}{T}\left|X(\ji\omega)\right|^{2}
+\]
 
 \end_inset
 
@@ -7855,8 +8167,10 @@ ozesse im Frequenzbereich.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\spd_{yy}(\omega)=\left|\trf(\ji\omega)\right|^{2}\spd_{xx}(\omega)\label{eq:prob_lti_frequency_domain}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\spd_{yy}(\omega)=\left|\trf(\ji\omega)\right|^{2}\spd_{xx}(\omega)\label{eq:prob_lti_frequency_domain}
+\end{equation}
 
 \end_inset
 
@@ -7872,8 +8186,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\ft^{(-1)}\left\{ \spd_{yy}(\omega)\right\} =\ft^{(-1)}\left\{ \left|\trf(\ji\omega)\right|^{2}\right\} *\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} \]
+\begin_inset Formula 
+\[
+\ft^{(-1)}\left\{ \spd_{yy}(\omega)\right\} =\ft^{(-1)}\left\{ \left|\trf(\ji\omega)\right|^{2}\right\} *\ft^{(-1)}\left\{ \spd_{xx}(\omega)\right\} 
+\]
 
 \end_inset
 
@@ -7885,8 +8201,10 @@ und so für die (zeitinvarianten) Autokorrelationsfunktionen:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{yy}(\tau)=\ft^{(-1)}\left\{ \left|\trf(\ji\omega)\right|^{2}\right\} *\acf_{xx}(\tau)\mperiod\label{eq:prob_lti_time_domain}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{yy}(\tau)=\ft^{(-1)}\left\{ \left|\trf(\ji\omega)\right|^{2}\right\} *\acf_{xx}(\tau)\mperiod\label{eq:prob_lti_time_domain}
+\end{equation}
 
 \end_inset
 
@@ -7912,8 +8230,10 @@ description "Impulsantwort"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\trf(\ji\omega)\; & \rft\irf(t) & \cjgt[\trf]{\ji\omega}\; & \rft\cjgt[\irf]{t}=\irf(-t)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\trf(\ji\omega)\; & \rft\irf(t) & \cjgt[\trf]{\ji\omega}\; & \rft\cjgt[\irf]{t}=\irf(-t)
+\end{xalignat*}
 
 \end_inset
 
@@ -7941,7 +8261,7 @@ reference "eq:prob_lti_time_domain"
 \end_inset
 
  als zweifache Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7954,8 +8274,10 @@ Faltung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)\label{eq:prob_lti_time_conv}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)\label{eq:prob_lti_time_conv}
+\end{equation}
 
 \end_inset
 
@@ -7986,8 +8308,10 @@ reference "eq:prob_acf_energy_signals"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{\trf}^{(E)}(\tau)=(\irf*\cjgt{\irf})(\tau)\lft\spd_{\trf}^{(E)}(\omega)=\left|\trf(\ji\omega)\right|^{2}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{\trf}^{(E)}(\tau)=(\irf*\cjgt{\irf})(\tau)\lft\spd_{\trf}^{(E)}(\omega)=\left|\trf(\ji\omega)\right|^{2}
+\end{equation}
 
 \end_inset
 
@@ -8000,7 +8324,7 @@ so erhält man die
 Wiener-Lee
 \noun default
 -Beziehung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8026,8 +8350,10 @@ noun{Wiener-Lee}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\acf_{yy}(\tau)=(\acf_{\trf}^{(E)}*\acf_{xx})(\tau)\label{eq:prob_wiener_lee}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\acf_{yy}(\tau)=(\acf_{\trf}^{(E)}*\acf_{xx})(\tau)\label{eq:prob_wiener_lee}
+\end{equation}
 
 \end_inset
 
@@ -8044,7 +8370,7 @@ Sind
 \end_inset
 
  Signale mit endlicher Energie
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8085,8 +8411,10 @@ reference "eq:prob_lti_frequency_domain"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\spd_{yy}^{(E)}(\omega)=\left|\trf(\ji\omega)\right|^{2}\spd_{xx}^{(E)}(\omega)\]
+\begin_inset Formula 
+\[
+\spd_{yy}^{(E)}(\omega)=\left|\trf(\ji\omega)\right|^{2}\spd_{xx}^{(E)}(\omega)
+\]
 
 \end_inset
 
@@ -8103,7 +8431,7 @@ Optimalfilter
 
 \begin_layout Standard
 Optimalfilter
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8113,7 +8441,7 @@ Optimalfilter
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8123,7 +8451,7 @@ Matched Filter
 \end_inset
 
  sind (LTI-) Systeme
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8158,7 +8486,7 @@ reference "fig:prob_optimal_filter"
 \end_inset
 
  weißes Rauschen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8255,8 +8583,10 @@ reference "sec:prob_acf"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}\Rightarrow\textrm{Max.}\]
+\begin_inset Formula 
+\[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}\Rightarrow\textrm{Max.}
+\]
 
 \end_inset
 
@@ -8293,7 +8623,7 @@ ie
 \end_inset
 
  typische) Faltung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8314,8 +8644,10 @@ Faltung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-y^{2}(t_{0})=\left[\left.(\irf*x)\right|_{t=t_{0}}\right]^{2}=\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}\]
+\begin_inset Formula 
+\[
+y^{2}(t_{0})=\left[\left.(\irf*x)\right|_{t=t_{0}}\right]^{2}=\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}
+\]
 
 \end_inset
 
@@ -8363,7 +8695,7 @@ ff.
 \end_inset
 
  das Ausblendtheorem
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8377,7 +8709,7 @@ Ausblendtheorem
 Dirac
 \noun default
 -Funktion
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -8415,8 +8747,10 @@ description "\\noun{Dirac}-Funktion"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)=\spd_{0}\left.\irf(\tau)*\irf(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t\]
+\begin_inset Formula 
+\[
+\acf_{yy}(\tau)=(\irf*\cjgt{\irf}*\acf_{xx})(\tau)=\spd_{0}\left.\irf(\tau)*\irf(-\tau)\right|_{\tau=0}=\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t
+\]
 
 \end_inset
 
@@ -8428,8 +8762,10 @@ Bringen wir nun beide Zwischenergebnisse zusammen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\]
+\begin_inset Formula 
+\[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}
+\]
 
 \end_inset
 
@@ -8453,8 +8789,10 @@ und erweitern den Bruch noch um
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}\]
+\begin_inset Formula 
+\[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{\left[\int_{-\infty}^{\infty}\irf(t)x(t_{0}-t)\tic t\right]^{2}}{\spd_{0}\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}
+\]
 
 \end_inset
 
@@ -8464,7 +8802,7 @@ und erweitern den Bruch noch um
 \begin_layout Standard
 Etwas umsortiert (und gesichtet) ist festzustellen, daß hier der Korrelationskoe
 ffizient
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -8485,7 +8823,7 @@ reference "eq:prob_corr_mean_zero"
 \end_inset
 
  in der zeitlichen Form für Energiesignale
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -8498,8 +8836,10 @@ Energiesignale
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int_{-\infty}^{\infty}x_{1}(t)x_{2}(t)\tic t}{\sqrt{\int_{-\infty}^{\infty}x_{1}^{2}(t)\tic t\;\int_{-\infty}^{\infty}x_{2}^{2}(t)\tic t}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\corr\left[x_{1}(t),x_{2}(t)\right]=\frac{\int_{-\infty}^{\infty}x_{1}(t)x_{2}(t)\tic t}{\sqrt{\int_{-\infty}^{\infty}x_{1}^{2}(t)\tic t\;\int_{-\infty}^{\infty}x_{2}^{2}(t)\tic t}}
+\end{equation}
 
 \end_inset
 
@@ -8519,8 +8859,10 @@ zwischen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int_{-\infty}^{\infty}\irf(u)x(t_{0}-u)\tic u\right]^{2}}{\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}=\frac{E}{\spd_{0}}\corr^{2}\left[\irf(t),x(t_{0}-t)\right]\]
+\begin_inset Formula 
+\[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\cdot\frac{\left[\int_{-\infty}^{\infty}\irf(u)x(t_{0}-u)\tic u\right]^{2}}{\int_{-\infty}^{\infty}\irf^{2}(t)\tic t}\cdot\frac{E}{\int_{-\infty}^{\infty}x^{2}(t_{0}-t)\tic t}=\frac{E}{\spd_{0}}\corr^{2}\left[\irf(t),x(t_{0}-t)\right]
+\]
 
 \end_inset
 
@@ -8540,7 +8882,7 @@ reference "sec:prob_corr"
 \end_inset
 
  wissen, ist der Korrelationskoeffizient
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8563,8 +8905,10 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf_{opt}=k\,\cjgt{X}\expf^{-\ji\omega t_{0}}\rft k\, x(t_{0}-t)\]
+\begin_inset Formula 
+\[
+\trf_{opt}=k\,\cjgt{X}\expf^{-\ji\omega t_{0}}\rft k\, x(t_{0}-t)
+\]
 
 \end_inset
 
@@ -8609,9 +8953,11 @@ reference "eq:prob_acf_conv"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 y(t) & =x(t)*\irf(t)=k\, x(t)*x(t_{0}-t)\\
-Y(\ji\omega) & =\trf(\ji\omega)\, X(\ji\omega)=k\, X(\ji\omega)\cjgt{X}\expf^{-\ji\omega t_{0}}=k\,\left|X(\ji\omega)\right|^{2}\expf^{-\ji\omega t_{0}}\mperiod\end{align*}
+Y(\ji\omega) & =\trf(\ji\omega)\, X(\ji\omega)=k\, X(\ji\omega)\cjgt{X}\expf^{-\ji\omega t_{0}}=k\,\left|X(\ji\omega)\right|^{2}\expf^{-\ji\omega t_{0}}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -8631,8 +8977,10 @@ Die Leistungsbilanz zum Zeitpunkt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\mperiod\]
+\begin_inset Formula 
+\[
+\frac{y^{2}(t_{0})}{\acf_{yy}(0)}=\frac{E}{\spd_{0}}\mperiod
+\]
 
 \end_inset
 
@@ -8648,7 +8996,7 @@ Quantisierungsrauschen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8658,7 +9006,7 @@ Quantisierungsrauschen
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8677,7 +9025,7 @@ Die Wandlung eines zeitkontinuierlichen Eingangssignals
 
  ist ein Vorgang, der üblicherweise aus den Schritten: Abtasten und Quantisierun
 g
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8869,7 +9217,7 @@ ie
 
  -- und zwar mit gleicher Wahrscheinlichkeit -- quantisiert.
  Dadurch ist der Fehler
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8887,7 +9235,7 @@ Quantisierung!Fehler
 \end_inset
 
  gleichverteilt
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8983,9 +9331,11 @@ reference "eq:prob_continuous_rms"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \tilde{n}^{2} & =\var(n)=\frac{(b-a)^{2}}{12}=\frac{\Delta^{2}}{12}\nonumber \\
-\tilde{n} & =\frac{\Delta}{\sqrt{12}}\approx\frac{\Delta}{3,46}\end{align}
+\tilde{n} & =\frac{\Delta}{\sqrt{12}}\approx\frac{\Delta}{3,46}
+\end{align}
 
 \end_inset
 
@@ -9028,8 +9378,10 @@ weise die Referenzspannung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\tilde{n}=\frac{\Delta}{\sqrt{12}}=\frac{U_{0}}{N\sqrt{12}}=2^{-B}\frac{U_{0}}{\sqrt{12}}\mperiod\label{eq:prob_noise_magnitude_bits}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\tilde{n}=\frac{\Delta}{\sqrt{12}}=\frac{U_{0}}{N\sqrt{12}}=2^{-B}\frac{U_{0}}{\sqrt{12}}\mperiod\label{eq:prob_noise_magnitude_bits}
+\end{equation}
 
 \end_inset
 
@@ -9041,7 +9393,7 @@ Signal-Rausch-Abstand (Signal-Noise-Ratio, SNR)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9064,8 +9416,10 @@ description "Signal-Noise-Ratio (Signal-Rausch-Abstand)"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\textrm{SNR}=10\log\frac{P_{s}}{P_{n}}\]
+\begin_inset Formula 
+\[
+\textrm{SNR}=10\log\frac{P_{s}}{P_{n}}
+\]
 
 \end_inset
 
@@ -9079,7 +9433,7 @@ Wird die Leistung jeweils am gleichen Widerstand umgesetzt kann die SNR
 \end_inset
 
  und des Quantisierungsrauschens
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9096,8 +9450,10 @@ Quantisierungsrauschen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\textrm{SNR}=10\log\left(\frac{\tilde{s}}{\tilde{n}}\right)^{2}=20\log\frac{\tilde{s}}{\tilde{n}}\]
+\begin_inset Formula 
+\[
+\textrm{SNR}=10\log\left(\frac{\tilde{s}}{\tilde{n}}\right)^{2}=20\log\frac{\tilde{s}}{\tilde{n}}
+\]
 
 \end_inset
 
@@ -9152,10 +9508,12 @@ stand bestimmt werden.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \textrm{SNR} & =20\log\left(\frac{U_{0}}{\sqrt{2}}\cdot\frac{2^{B}\sqrt{12}}{U_{0}}\right)\nonumber \\
 \textrm{SNR} & =10\log6+B\cdot20\log2\\
-\textrm{SNR} & \approx7,78\textrm{dB}+B\cdot6,02\textrm{dB}\nonumber \end{align}
+\textrm{SNR} & \approx7,78\textrm{dB}+B\cdot6,02\textrm{dB}\nonumber 
+\end{align}
 
 \end_inset
 
@@ -9187,7 +9545,7 @@ Pulsbreitendiskriminierung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9290,7 +9648,7 @@ Pulsbreitendiskriminierung
 
 \begin_layout Standard
 Geht man davon aus, daß die Impulsbreiten normalverteilt
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -9334,8 +9692,10 @@ chkeitsdichten
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-p_{i}(t)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\mperiod\]
+\begin_inset Formula 
+\[
+p_{i}(t)=\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{x-\mu_{i}}{\sigma_{i}}\right)^{2}\right],\qquad i=1,2\mperiod
+\]
 
 \end_inset
 
@@ -9379,8 +9739,10 @@ reference "eq:prob_distribution"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(T_{i}<t)=F_{i}(t)=\int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{u-\mu_{i}}{\sigma_{i}}\right)^{2}\right]\tdc u\mperiod\]
+\begin_inset Formula 
+\[
+\pr(T_{i}<t)=F_{i}(t)=\int_{-\infty}^{t}\frac{1}{\sqrt{2\pi}\,\sigma_{i}}\exp\left[-\frac{1}{2}\left(\frac{u-\mu_{i}}{\sigma_{i}}\right)^{2}\right]\tdc u\mperiod
+\]
 
 \end_inset
 
@@ -9419,9 +9781,11 @@ Mittelwertfreie Normalverteilung mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 F_{i}(t) & = & \int_{-\infty}^{(t-\mu_{i})/\sigma_{i}}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{z^{2}}{2}\right)\tdc z=\cnorm\left(\frac{t-\mu_{i}}{\sigma_{i}}\right)\nonumber \\
-\cnorm(x) & = & \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{u^{2}}{2}\right)\tdc u\label{eq:prob_normal_std_distribution}\end{eqnarray}
+\cnorm(x) & = & \int_{-\infty}^{x}\frac{1}{\sqrt{2\pi}}\exp\left(-\frac{u^{2}}{2}\right)\tdc u\label{eq:prob_normal_std_distribution}
+\end{eqnarray}
 
 \end_inset
 
@@ -9441,8 +9805,10 @@ Die Wahrscheinlichkeit, daß der Impuls mit der Länge
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(T_{1}<T)=\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right)\]
+\begin_inset Formula 
+\[
+\pr(T_{1}<T)=\cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right)
+\]
 
 \end_inset
 
@@ -9458,8 +9824,10 @@ Entsprechend gilt für die Wahrscheinlichkeit den Impuls mit der Breite
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(T_{2}>T)=1-\pr(T_{2}<T)=1-\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\mu_{2}-T}{\sigma_{2}}\right)\]
+\begin_inset Formula 
+\[
+\pr(T_{2}>T)=1-\pr(T_{2}<T)=1-\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)=\cnorm\left(\frac{\mu_{2}-T}{\sigma_{2}}\right)
+\]
 
 \end_inset
 
@@ -9475,10 +9843,12 @@ Gesucht wird nun der optimale Abtastzeitpunkt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pr(T_{1}<T) & =\pr(T_{2}>T)\\
 \cnorm\left(\frac{T-\mu_{1}}{\sigma_{1}}\right) & =\cnorm\left(\frac{T-\mu_{2}}{\sigma_{2}}\right)\\
-\frac{T-\mu_{1}}{\sigma_{1}} & =\frac{\mu_{2}-T}{\sigma_{2}}\end{align*}
+\frac{T-\mu_{1}}{\sigma_{1}} & =\frac{\mu_{2}-T}{\sigma_{2}}
+\end{align*}
 
 \end_inset
 
@@ -9502,8 +9872,10 @@ Bei gleicher Streuung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-T=\frac{\mu_{1}+\mu_{2}}{2}\]
+\begin_inset Formula 
+\[
+T=\frac{\mu_{1}+\mu_{2}}{2}
+\]
 
 \end_inset
 
@@ -9530,8 +9902,10 @@ Unter Berücksichtigung der Beziehung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{T-\mu_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\mu_{2}-\mu_{1}}{2\sigma}\right)\mperiod\]
+\begin_inset Formula 
+\[
+\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{T-\mu_{1}}{\sigma}\right)=1-\cnorm\left(\frac{\mu_{2}-\mu_{1}}{2\sigma}\right)\mperiod
+\]
 
 \end_inset
 
@@ -9547,8 +9921,10 @@ Geht man dagegen vom gleichen relativen Fehler
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{\mu_{1}}{\sigma_{1}}=\frac{\mu_{2}}{\sigma_{2}}=\frac{1}{\varepsilon}\]
+\begin_inset Formula 
+\[
+\frac{\mu_{1}}{\sigma_{1}}=\frac{\mu_{2}}{\sigma_{2}}=\frac{1}{\varepsilon}
+\]
 
 \end_inset
 
@@ -9560,10 +9936,12 @@ der optimale Wert zu
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \frac{T-\mu_{1}}{\varepsilon\,\mu_{1}} & =\frac{\mu_{2}-T}{\varepsilon\,\mu_{2}}\\
 \frac{T}{\mu_{1}}-1 & =1-\frac{T}{\mu_{2}}\\
-T & =2\frac{\mu_{1}\,\mu_{2}}{\mu_{1}+\mu_{2}}\mperiod\end{align*}
+T & =2\frac{\mu_{1}\,\mu_{2}}{\mu_{1}+\mu_{2}}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -9578,8 +9956,10 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{1}{\varepsilon}\cdot\frac{\mu_{2}-\mu_{1}}{\mu_{2}+\mu_{1}}\right)\mperiod\]
+\begin_inset Formula 
+\[
+\pr(T_{1}>T)=1-\pr(T_{1}<T)=1-\cnorm\left(\frac{1}{\varepsilon}\cdot\frac{\mu_{2}-\mu_{1}}{\mu_{2}+\mu_{1}}\right)\mperiod
+\]
 
 \end_inset
 
@@ -9589,7 +9969,7 @@ Der günstigste Abtastzeitpunkt liegt also beim Quotienten aus quadratisch
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,math"
+bibfiles "math,electrical"
 options "geralpha"
 
 \end_inset
@@ -9600,6 +9980,7 @@ options "geralpha"
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 

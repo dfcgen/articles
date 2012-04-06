@@ -1,31 +1,37 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc.tex}
-
-%% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
-\options reqno
+\options noprefix,reqno
 \use_default_options false
 \begin_modules
-emphasized
+helpers
+mathext
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing onehalf
 \use_hyperref true
@@ -44,9 +50,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -57,8 +72,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -216,6 +232,7 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -239,7 +256,7 @@ fi%
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -265,7 +282,7 @@ Cauchy-Riemann
 
 \begin_layout Standard
 Holomorphe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -275,7 +292,7 @@ Holomorphie
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -304,7 +321,7 @@ status collapsed
 \begin_layout Plain Layout
 In der komplexen Analysis nennt man eine Funktion analytisch, wenn sie durch
  eine Potenzreihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -349,8 +366,10 @@ description "Ableitung der Funktion $f(z)$ nach $z$"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\tdiff{f(z)}{z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h},\qquad z\in\mathbb{C}\label{eq:analysis_derivative_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\tdiff{f(z)}{z}=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h},\qquad z\in\mathbb{C}\label{eq:analysis_derivative_def}
+\end{equation}
 
 \end_inset
 
@@ -394,7 +413,7 @@ Eine Funktion
 ganze
 \emph default
  Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -566,9 +585,11 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray}
+\begin_inset Formula 
+\begin{eqnarray}
 \pdiff{f(z)}{x} & = & \pdiff{f(z)}{\,(\ji y)}\label{eq:analysis_integrability_cond_cplx}\\
-\pdiff{u(x,y)}{x}+\ji\pdiff{v(x,y)}{x} & = & -\ji\pdiff{u(x,y)}{y}+\pdiff{v(x,y)}{y}\nonumber \end{eqnarray}
+\pdiff{u(x,y)}{x}+\ji\pdiff{v(x,y)}{x} & = & -\ji\pdiff{u(x,y)}{y}+\pdiff{v(x,y)}{y}\nonumber 
+\end{eqnarray}
 
 \end_inset
 
@@ -599,7 +620,7 @@ Sie sind eine notwendige Bedingung für die Differenzierbarkeit von
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -635,7 +656,7 @@ noun{--Riemann}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -645,7 +666,7 @@ Differenzierbarkeit
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -658,8 +679,10 @@ Integrabilitätsbedingung
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-\pdiff{u(x,y)}{x} & =\pdiff{v(x,y)}{y} & \pdiff{u(x,y)}{y} & =-\pdiff{v(x,y)}{x}\label{eq:analysis_integrability_cond}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\pdiff{u(x,y)}{x} & =\pdiff{v(x,y)}{y} & \pdiff{u(x,y)}{y} & =-\pdiff{v(x,y)}{x}\label{eq:analysis_integrability_cond}
+\end{xalignat}
 
 \end_inset
 
@@ -676,8 +699,10 @@ und wegen der Unabhängigkeit des Grenzwertes von jedweder Annäherungsrichtung
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f'(z)=\pdiff{u(x,y)}{x}+\ji\pdiff{v(x,y)}{x}=\pdiff{v(x,y)}{y}-\ji\pdiff{u(x,y)}{y}\label{eq:analysis_derivative_separated}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f'(z)=\pdiff{u(x,y)}{x}+\ji\pdiff{v(x,y)}{x}=\pdiff{v(x,y)}{y}-\ji\pdiff{u(x,y)}{y}\label{eq:analysis_derivative_separated}
+\end{equation}
 
 \end_inset
 
@@ -701,8 +726,10 @@ resp
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f'(z)=\tdiff{f(z)}{z}=\pdiff{f(z)}{x}=-\ji\pdiff{f(z)}{y}\mperiod\label{eq:analysis_complex_derivative}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f'(z)=\tdiff{f(z)}{z}=\pdiff{f(z)}{x}=-\ji\pdiff{f(z)}{y}\mperiod\label{eq:analysis_complex_derivative}
+\end{equation}
 
 \end_inset
 
@@ -747,9 +774,11 @@ reference "eq:analysis_integrability_cond"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \frac{\pdc^{2}u(x,y)}{\pdc x^{2}} & =\frac{\pdc^{2}v(x,y)}{\pdc x\pic y} & \frac{\pdc^{2}u(x,y)}{\pdc x\pic y} & =-\frac{\pdc^{2}v(x,y)}{\pdc x^{2}}\\
-\frac{\pdc^{2}u(x,y)}{\pdc y\pic x} & =\frac{\pdc^{2}v(x,y)}{\pdc y^{2}} & \frac{\pdc^{2}u(x,y)}{\pdc y^{2}} & =-\frac{\pdc^{2}v(x,y)}{\pdc y\pic x}\end{align*}
+\frac{\pdc^{2}u(x,y)}{\pdc y\pic x} & =\frac{\pdc^{2}v(x,y)}{\pdc y^{2}} & \frac{\pdc^{2}u(x,y)}{\pdc y^{2}} & =-\frac{\pdc^{2}v(x,y)}{\pdc y\pic x}
+\end{align*}
 
 \end_inset
 
@@ -763,7 +792,7 @@ und addiert/subtrahiert sie daraufhin diagonal, so erhält man (wegen der
 Schwarz
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -786,7 +815,7 @@ noun{Schwarz}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -825,9 +854,11 @@ noun{Schwarz}}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \frac{\pdc^{2}u}{\pdc x^{2}}+\frac{\pdc^{2}u}{\pdc y^{2}} & =\frac{\pdc^{2}v}{\pdc x\pic y}-\frac{\pdc^{2}v}{\pdc y\pic x}=0\\
-\frac{\pdc^{2}v}{\pdc y^{2}}+\frac{\pdc^{2}v}{\pdc x^{2}} & =\frac{\pdc^{2}u}{\pdc y\pic x}-\frac{\pdc^{2}u}{\pdc x\pic y}=0\mperiod\end{align*}
+\frac{\pdc^{2}v}{\pdc y^{2}}+\frac{\pdc^{2}v}{\pdc x^{2}} & =\frac{\pdc^{2}u}{\pdc y\pic x}-\frac{\pdc^{2}u}{\pdc x\pic y}=0\mperiod
+\end{align*}
 
 \end_inset
 
@@ -836,7 +867,7 @@ noun{Schwarz}}
 
 \begin_layout Standard
 Real- und Imaginärteil analytischer Funktionen sind harmonische
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -859,7 +890,7 @@ resp
 \end_inset
 
  Potentialfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -869,7 +900,7 @@ Potentialfunktionen
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -896,7 +927,7 @@ ie
 Laplace
 \noun default
 -Gleichungen
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -931,8 +962,10 @@ noun{Laplace}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\pdiff{}{x}\reop\left[f'(z)\right] & =\pdiff{}{y}\imop\left[f'(z)\right] & \pdiff{}{y}\reop\left[f'(z)\right] & =-\pdiff{}{x}\imop\left[f'(z)\right]\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\pdiff{}{x}\reop\left[f'(z)\right] & =\pdiff{}{y}\imop\left[f'(z)\right] & \pdiff{}{y}\reop\left[f'(z)\right] & =-\pdiff{}{x}\imop\left[f'(z)\right]
+\end{align*}
 
 \end_inset
 
@@ -965,7 +998,7 @@ Nimmt man
 \end_inset
 
  wahr, dann ist oftmals die Funktionaldeterminante
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -979,7 +1012,7 @@ Funktionaldeterminante
 Jacobi
 \noun default
 -Determinante
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1036,10 +1069,13 @@ Cauchy-Riemann
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \left|\frac{\pdc(u,v)}{\pdc(x,y)}\right|=\left|\begin{array}{cc}
 u_{x} & u_{y}\\
-v_{x} & v_{y}\end{array}\right|=\frac{\pdc u}{\pdc x}\cdot\frac{\pdc v}{\pdc y}-\frac{\pdc u}{\pdc y}\cdot\frac{\pdc v}{\pdc x}=\left(\frac{\pdc u}{\pdc x}\right)^{2}+\left(\frac{\pdc v}{\pdc x}\right)^{2}=\left|f'(z)\right|^{2}\]
+v_{x} & v_{y}
+\end{array}\right|=\frac{\pdc u}{\pdc x}\cdot\frac{\pdc v}{\pdc y}-\frac{\pdc u}{\pdc y}\cdot\frac{\pdc v}{\pdc x}=\left(\frac{\pdc u}{\pdc x}\right)^{2}+\left(\frac{\pdc v}{\pdc x}\right)^{2}=\left|f'(z)\right|^{2}
+\]
 
 \end_inset
 
@@ -1067,7 +1103,7 @@ Eine Funktion
  wird auch als 
 \emph on
 regulär
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1092,7 +1128,7 @@ Funktion!reguläre
 \end_inset
 
  außerdem noch stetig sein, dann existiert eine (eindeutige) Umkehrfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1127,7 +1163,7 @@ status collapsed
 
 
 \backslash
-headingmath{(z-z_{0})^n}{(z-z0)**n}
+tocmath{(z-z_{0})^n}{(z-z0)**n}
 \end_layout
 
 \end_inset
@@ -1197,11 +1233,13 @@ reference "eq:analysis_integrability_cond_cplx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pdiff{}{x}(z-z_{0})^{n} & =\pdiff{}{x}\, r^{n}\expf^{\ji n\theta}\\
  & =nr^{n-1}\expf^{\ji n\theta}\pdiff{r}{x}+r^{n}\expf^{\ji n\theta}\ji n\pdiff{\theta}{x}\\
  & =nr^{n}\expf^{\ji n\theta}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
- & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\end{align*}
+ & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)
+\end{align*}
 
 \end_inset
 
@@ -1230,8 +1268,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pdiff{}{y}(z-z_{0})^{n}=n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{y}+\ji\pdiff{\theta}{y}\right)\mperiod\]
+\begin_inset Formula 
+\[
+\pdiff{}{y}(z-z_{0})^{n}=n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{y}+\ji\pdiff{\theta}{y}\right)\mperiod
+\]
 
 \end_inset
 
@@ -1253,8 +1293,10 @@ Setzen wir jetzt (kurz)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-r & =\left|z\right|=\sqrt{z\,\cjgt{z}}=\sqrt{x^{2}+y^{2}} & \theta & =\ang z=\arctan\frac{y}{x}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+r & =\left|z\right|=\sqrt{z\,\cjgt{z}}=\sqrt{x^{2}+y^{2}} & \theta & =\ang z=\arctan\frac{y}{x}
+\end{xalignat*}
 
 \end_inset
 
@@ -1266,9 +1308,11 @@ ausgegangen und dann die Ableitungen gebildet werden.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \pdiff{r}{x} & =\frac{x}{\sqrt{x^{2}+y^{2}}}=\frac{x}{r} & \pdiff{r}{y} & =\frac{y}{\sqrt{x^{2}+y^{2}}}=\frac{y}{r}\\
-\pdiff{\theta}{x} & =-\frac{y}{x^{2}+y^{2}}=-\frac{y}{r^{2}} & \pdiff{\theta}{y} & =\frac{x}{x^{2}+y^{2}}=\frac{x}{r^{2}}\end{xalignat*}
+\pdiff{\theta}{x} & =-\frac{y}{x^{2}+y^{2}}=-\frac{y}{r^{2}} & \pdiff{\theta}{y} & =\frac{x}{x^{2}+y^{2}}=\frac{x}{r^{2}}
+\end{xalignat*}
 
 \end_inset
 
@@ -1284,10 +1328,12 @@ Jetzt können die so gewonnenen Ausdrücke eingesetzt werden, was mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pdiff{}{x}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\frac{1}{r}\pdiff{r}{x}+\ji\pdiff{\theta}{x}\right)\\
  & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
- & =\frac{n}{r^{2}}(z-z_{0})^{n}\,\cjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\,\cjgt{(z-z_{0})}=n(z-z_{0})^{n-1}
+\end{align*}
 
 \end_inset
 
@@ -1322,10 +1368,12 @@ Wobei
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pdiff{}{(\ji y)}(z-z_{0})^{n} & =n(z-z_{0})^{n}\left(\pdiff{\theta}{y}-\ji\frac{1}{r}\pdiff{r}{y}\right)\\
  & =n(z-z_{0})^{n}\left(\frac{x-x_{0}}{r^{2}}-\ji\frac{y-y_{0}}{r^{2}}\right)\\
- & =\frac{n}{r^{2}}(z-z_{0})^{n}\cjgt{(z-z_{0})}=n(z-z_{0})^{n-1}\end{align*}
+ & =\frac{n}{r^{2}}(z-z_{0})^{n}\cjgt{(z-z_{0})}=n(z-z_{0})^{n-1}
+\end{align*}
 
 \end_inset
 
@@ -1360,8 +1408,10 @@ reference "eq:analysis_integrability_cond_cplx"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\pdiff{}{z}(z-z_{0})^{n}=n(z-z_{0})^{n-1}=\pdiff{}{x}(z-z_{0})^{n}=\pdiff{}{(\ji y)}(z-z_{0})^{n}\mperiod\]
+\begin_inset Formula 
+\[
+\pdiff{}{z}(z-z_{0})^{n}=n(z-z_{0})^{n-1}=\pdiff{}{x}(z-z_{0})^{n}=\pdiff{}{(\ji y)}(z-z_{0})^{n}\mperiod
+\]
 
 \end_inset
 
@@ -1398,10 +1448,13 @@ reference "sec:analysis_laurent"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \oint_{C}(z-z_{0})^{n}\tic z=\begin{cases}
 0 & \quad(n\neq-1)\\
-2\pi\ji & \quad(n=-1)\end{cases}\mperiod\]
+2\pi\ji & \quad(n=-1)
+\end{cases}\mperiod
+\]
 
 \end_inset
 
@@ -1429,7 +1482,7 @@ Stammfunktion
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1443,7 +1496,7 @@ Für eine analytische Funktion
 \end_inset
 
  ist die Existenz einer Stammfunktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1453,7 +1506,7 @@ Stammfunktion
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1471,7 +1524,7 @@ Integral!Stammfunktion
 \end_inset
 
  dann gegeben, wenn die Integrabilitätsbedingung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1516,10 +1569,12 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 F(z) & =\int f(z)\tic z\nonumber \\
  & =\int\left[u(x,y)+\ji v(x,y)\right]\,(\tdc x+\ji\tic y)\nonumber \\
- & =\int\,\underbrace{u(x,y)\tic x-v(x,y)\tic y}_{\tdc U}+\ji\int\,\underbrace{u(x,y)\tic y+v(x,y)\tic x}_{\tdc V}\label{eq:analysis_cauchy_antiderivative}\end{align}
+ & =\int\,\underbrace{u(x,y)\tic x-v(x,y)\tic y}_{\tdc U}+\ji\int\,\underbrace{u(x,y)\tic y+v(x,y)\tic x}_{\tdc V}\label{eq:analysis_cauchy_antiderivative}
+\end{align}
 
 \end_inset
 
@@ -1554,8 +1609,10 @@ reference "eq:analysis_derivative_separated"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f(z)=u(x,y)+\ji v(x,y)=F'(z)=\pdiff{U(x,y)}{x}+\ji\pdiff{V(x,y)}{x}=\pdiff{V(x,y)}{y}-\ji\pdiff{U(x,y)}{y}\]
+\begin_inset Formula 
+\[
+f(z)=u(x,y)+\ji v(x,y)=F'(z)=\pdiff{U(x,y)}{x}+\ji\pdiff{V(x,y)}{x}=\pdiff{V(x,y)}{y}-\ji\pdiff{U(x,y)}{y}
+\]
 
 \end_inset
 
@@ -1567,8 +1624,10 @@ und äquivalent dazu:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-u(x,y) & =\pdiff{U(x,y)}{x}=\pdiff{V(x,y)}{y} & v(x,y) & =-\pdiff{U(x,y)}{y}=\pdiff{V(x,y)}{x}\mperiod\label{eq:analysis_cauchy_equivalence}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+u(x,y) & =\pdiff{U(x,y)}{x}=\pdiff{V(x,y)}{y} & v(x,y) & =-\pdiff{U(x,y)}{y}=\pdiff{V(x,y)}{x}\mperiod\label{eq:analysis_cauchy_equivalence}
+\end{xalignat}
 
 \end_inset
 
@@ -1631,8 +1690,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-\tdc U & =\pdiff{U(x,y)}{x}\tic x+\pdiff{U(x,y)}{y}\tic y & \tdc V & =\pdiff{V(x,y)}{x}\tic x+\pdiff{V(x,y)}{y}\tic y\label{eq:analysis_cauchy_total_diff}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\tdc U & =\pdiff{U(x,y)}{x}\tic x+\pdiff{U(x,y)}{y}\tic y & \tdc V & =\pdiff{V(x,y)}{x}\tic x+\pdiff{V(x,y)}{y}\tic y\label{eq:analysis_cauchy_total_diff}
+\end{xalignat}
 
 \end_inset
 
@@ -1685,7 +1746,7 @@ Bestimmtes Integral
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1695,7 +1756,7 @@ Integral!unbestimmtes
 \end_inset
 
 Nach dem Hauptsatz der Differential- und Integralrechnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1722,8 +1783,10 @@ key "Brown:1996"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\tdiff{}{z}\int_{a+\ji b}^{z}f(\xi)\tic\xi=f(z)\]
+\begin_inset Formula 
+\[
+\tdiff{}{z}\int_{a+\ji b}^{z}f(\xi)\tic\xi=f(z)
+\]
 
 \end_inset
 
@@ -1746,7 +1809,7 @@ Anders als im eindimensionalen Fall muß man berücksichtigen, daß bei der
 \end_inset
 
  für das Kurvenintegral
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1759,8 +1822,10 @@ Integral!Kurven-
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-F(z)=\int_{C}f(z)\tic z=\int_{C}f\left[\varphi(t)\right]\varphi'(t)\tic t\mperiod\]
+\begin_inset Formula 
+\[
+F(z)=\int_{C}f(z)\tic z=\int_{C}f\left[\varphi(t)\right]\varphi'(t)\tic t\mperiod
+\]
 
 \end_inset
 
@@ -1792,7 +1857,7 @@ Man sagt auch, die Funktion
 \end_inset
 
  dann ist das Integral wegunabhängig
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1802,7 +1867,7 @@ Wegunabhängigkeit
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1815,8 +1880,10 @@ Integral!Wegunabhängigkeit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{C}f(z)\tic z=\int_{z_{1}}^{z_{2}}f(z)\tic z=F(z_{2})-F(z_{1})\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{C}f(z)\tic z=\int_{z_{1}}^{z_{2}}f(z)\tic z=F(z_{2})-F(z_{1})
+\end{equation}
 
 \end_inset
 
@@ -1970,10 +2037,12 @@ reference "eq:analysis_cauchy_equivalence"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \hat{U}(t) & =U\left[\psi(t),\phi(t)\right] & \hat{V}(t) & =V\left[\psi(t),\phi(t)\right]\\
 \tdiff{\hat{U}}{t} & =\pdiff{U(x,y)}{x}\psi'(t)+\pdiff{U(x,y)}{y}\phi'(t) & \tdiff{\hat{V}}{t} & =\pdiff{V(x,y)}{x}\psi'(t)+\pdiff{V(x,y)}{y}\phi'(t)\\
-\hat{U}'(t) & =u(x,y)\psi'(t)-v(x,y)\phi'(t) & \hat{V}'(t) & =v(x,y)\psi'(t)+u(x,y)\phi'(t)\end{xalignat*}
+\hat{U}'(t) & =u(x,y)\psi'(t)-v(x,y)\phi'(t) & \hat{V}'(t) & =v(x,y)\psi'(t)+u(x,y)\phi'(t)
+\end{xalignat*}
 
 \end_inset
 
@@ -1996,11 +2065,13 @@ reference "eq:analysis_cauchy_antiderivative"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xxalignat}{2}
+\begin_inset Formula 
+\begin{xxalignat}{2}
 U(x,y) & =\int_{C}\left[u(x,y)\psi'(t)-v(x,y)\phi'(t)\right]\tic t & V(x,y) & =\int_{C}\left[u(x,y)\psi'(t)+v(x,y)\phi'(t)\right]\tic t\\
  & =\int_{t_{1}}^{t_{2}}\hat{U}'(t)\tic t &  & =\int_{t_{1}}^{t_{2}}\hat{V}'(t)\tic t\\
  & =\hat{U}(t_{2})-\hat{U}(t_{1}) &  & =\hat{V}(t_{2})-\hat{V}(t_{1})\\
- & =U(x_{2},y_{2})-U(x_{1},y_{1}) &  & =V(x_{2},y_{2})-V(x_{1},y_{1})\end{xxalignat}
+ & =U(x_{2},y_{2})-U(x_{1},y_{1}) &  & =V(x_{2},y_{2})-V(x_{1},y_{1})
+\end{xxalignat}
 
 \end_inset
 
@@ -2034,7 +2105,7 @@ ie
 \end_inset
 
 , dann kommt man zum Hauptsatz der Funktionentheorie
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2061,7 +2132,7 @@ resp
 Cauchy
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2086,7 +2157,7 @@ noun{Cauchy}
 
 \noun on
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2122,7 +2193,7 @@ noun{Cauchy}}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2132,7 +2203,7 @@ Funktion!analytische!Kurvenintegral
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2235,8 +2306,10 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\oint_{C}f(z)\tic z=0\mperiod\label{eq:analysis_cauchy_integral}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\oint_{C}f(z)\tic z=0\mperiod\label{eq:analysis_cauchy_integral}
+\end{equation}
 
 \end_inset
 
@@ -2308,7 +2381,7 @@ Der Beweis der umgekehrten Behauptung, nämlich daß ein Verschwinden des
 Morera
 \noun default
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2367,7 +2440,7 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2453,8 +2526,10 @@ reference "fig:analysis_cauchy_step1"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{1}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}}\frac{f(z)}{z-z_{0}}\tic z\]
+\begin_inset Formula 
+\[
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{1}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}}\frac{f(z)}{z-z_{0}}\tic z
+\]
 
 \end_inset
 
@@ -2679,8 +2754,10 @@ reference "eq:analysis_cauchy_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C_{\nu}}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=0,\qquad\textrm{mit }\nu=1,2\]
+\begin_inset Formula 
+\[
+\oint_{C_{\nu}}\frac{f(z)}{z-z_{0}}\tic z=\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=0,\qquad\textrm{mit }\nu=1,2
+\]
 
 \end_inset
 
@@ -2692,8 +2769,10 @@ und deshalb
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
-\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z & =-\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z\mperiod\end{align*}
+\begin_inset Formula 
+\begin{align*}
+\int_{C_{\nu}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z & =-\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z\mperiod
+\end{align*}
 
 \end_inset
 
@@ -2705,8 +2784,10 @@ Mit der Substitution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
-z-z_{0} & =r\expf^{\ji\theta} & \tdiff{z}{\theta} & =\ji r\expf^{\ji\theta}\label{eq:analysis_cauchy_substitution}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+z-z_{0} & =r\expf^{\ji\theta} & \tdiff{z}{\theta} & =\ji r\expf^{\ji\theta}\label{eq:analysis_cauchy_substitution}
+\end{xalignat}
 
 \end_inset
 
@@ -2718,8 +2799,10 @@ kann man für jeden der Integralausdrücke auf den inneren Kurven
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{r\expf^{\ji\theta}}r\expf^{\ji\theta}\tic\theta=\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\expf^{\ji\theta})\tic\theta\]
+\begin_inset Formula 
+\[
+\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{C_{\nu}^{\prime\prime}}\frac{f(z)}{r\expf^{\ji\theta}}r\expf^{\ji\theta}\tic\theta=\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\expf^{\ji\theta})\tic\theta
+\]
 
 \end_inset
 
@@ -2757,8 +2840,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{r\rightarrow0}\;\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\expf^{\ji\theta})\tic\theta=-\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0})\tic\theta=-\ji\, f(z_{0})\left.\theta\,\right|_{C_{\nu}^{\prime\prime}}\mperiod\]
+\begin_inset Formula 
+\[
+\lim_{r\rightarrow0}\;\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0}+r\expf^{\ji\theta})\tic\theta=-\ji\int_{C_{\nu}^{\prime\prime}}f(z_{0})\tic\theta=-\ji\, f(z_{0})\left.\theta\,\right|_{C_{\nu}^{\prime\prime}}\mperiod
+\]
 
 \end_inset
 
@@ -2782,10 +2867,12 @@ glattgezogenen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\int_{C_{1}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z+\int_{C_{2}^{\prime}}\frac{f(z)}{z-z_{0}}\tic z\\
  & =-\ji\, f(z_{0})\,\left(\left.\theta\,\right|_{C_{1}^{\prime\prime}}+\left.\theta\,\right|_{C_{2}^{\prime\prime}}\right)\\
- & =-\ji\, f(z_{0})(-2\pi-0)=2\pi\ji\, f(z_{0})\mperiod\end{align*}
+ & =-\ji\, f(z_{0})(-2\pi-0)=2\pi\ji\, f(z_{0})\mperiod
+\end{align*}
 
 \end_inset
 
@@ -2797,9 +2884,11 @@ Ein ausschließlich rechnerischer Beweis ist folgendermaßen zu erbringen:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \oint_{C}\frac{f(z)}{z-z_{0}}\tic z & =\oint_{C}\frac{f(z)-f(z_{0})+f(z_{0})}{z-z_{0}}\tic z\\
- & =\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}\end{align*}
+ & =\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}
+\end{align*}
 
 \end_inset
 
@@ -2812,7 +2901,7 @@ Der erste Summand stellt für
 \end_inset
 
  eine hebbare Singularität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2862,8 +2951,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{z\rightarrow z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}=f'(z)\]
+\begin_inset Formula 
+\[
+\lim_{z\rightarrow z_{0}}\frac{f(z)-f(z_{0})}{z-z_{0}}=f'(z)
+\]
 
 \end_inset
 
@@ -2884,8 +2975,10 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z=0\mperiod\]
+\begin_inset Formula 
+\[
+\oint_{C}\frac{f(z)-f(z_{0})}{z-z_{0}}\tic z=0\mperiod
+\]
 
 \end_inset
 
@@ -2908,8 +3001,10 @@ reference "eq:analysis_cauchy_substitution"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji\, f(z_{0})\oint_{C}\tic\theta=\ji\, f(z_{0})\int_{0}^{2\pi}\tic\theta=2\pi\ji\, f(z_{0})\label{eq:analysis_cauchy_circle}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z_{0})\oint_{C}\frac{\tdc z}{z-z_{0}}=\ji\, f(z_{0})\oint_{C}\tic\theta=\ji\, f(z_{0})\int_{0}^{2\pi}\tic\theta=2\pi\ji\, f(z_{0})\label{eq:analysis_cauchy_circle}
+\end{equation}
 
 \end_inset
 
@@ -2921,8 +3016,10 @@ und somit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\, f(z_{0})\mperiod\label{eq:analysis_cauchy_formula_implicit}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\, f(z_{0})\mperiod\label{eq:analysis_cauchy_formula_implicit}
+\end{equation}
 
 \end_inset
 
@@ -2943,7 +3040,7 @@ Benennt man noch die Variablen um (
 Cauchy
 \noun default
 'sche Integralformel
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -2968,7 +3065,7 @@ noun{Cauchy}
 
 \noun on
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3021,8 +3118,10 @@ key "Brown:1996"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\label{eq:analysis_cauchy_formula}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\label{eq:analysis_cauchy_formula}
+\end{equation}
 
 \end_inset
 
@@ -3040,7 +3139,7 @@ Bei der Interpretation fällt sofort die bemerkenswerte Eigenschaft einer
 \end_inset
 
  eindeutig durch die Randwerte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3061,7 +3160,7 @@ Integralformel für Ableitungen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3118,8 +3217,10 @@ reference "eq:analysis_derivative_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f^{\prime}(z)=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}=\frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\left[\oint_{C}\frac{f(\xi)}{\xi-z-h}\tic\xi-\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\right]\]
+\begin_inset Formula 
+\[
+f^{\prime}(z)=\lim_{h\rightarrow0}\frac{f(z+h)-f(z)}{h}=\frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\left[\oint_{C}\frac{f(\xi)}{\xi-z-h}\tic\xi-\oint_{C}\frac{f(\xi)}{\xi-z}\tic\xi\right]
+\]
 
 \end_inset
 
@@ -3158,11 +3259,13 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 f^{\prime}(z) & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\oint_{C}\frac{f(\xi)}{\xi-z-h}-\frac{f(\xi)}{\xi-z}\tic\xi\\
  & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\frac{1}{h}\oint_{C}\frac{f(\xi)(\xi-z)-f(\xi)(\xi-z-h)}{(\xi-z-h)(\xi-z)}\tic\xi\\
  & = & \frac{1}{2\pi\ji}\lim_{h\rightarrow0}\oint_{C}\frac{f(\xi)}{(\xi-z-h)(\xi-z)}\tic\xi\\
- & = & \frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)(\xi-z)}\tic\xi\end{eqnarray*}
+ & = & \frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)(\xi-z)}\tic\xi
+\end{eqnarray*}
 
 \end_inset
 
@@ -3174,8 +3277,10 @@ Der so gewonnene Ausdruck
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f^{\prime}(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{2}}\tic\xi\label{eq:analysis_derivative_first_integral}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f^{\prime}(z)=\frac{1}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{2}}\tic\xi\label{eq:analysis_derivative_first_integral}
+\end{equation}
 
 \end_inset
 
@@ -3226,8 +3331,10 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f^{\prime\prime}(z)=\frac{2}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{3}}\tic\xi\]
+\begin_inset Formula 
+\[
+f^{\prime\prime}(z)=\frac{2}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{3}}\tic\xi
+\]
 
 \end_inset
 
@@ -3241,7 +3348,7 @@ Für weitere Ableitungen ergibt sich in der Fortsetzung die Verallgemeinerte
 Cauchy
 \noun default
 'sche Integralformel
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3268,8 +3375,10 @@ noun{Cauchy}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f^{(n)}(z)=\frac{n!}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{n+1}}\tic\xi,\label{eq:analysis_derivative_integral}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f^{(n)}(z)=\frac{n!}{2\pi\ji}\oint_{C}\frac{f(\xi)}{(\xi-z)^{n+1}}\tic\xi,\label{eq:analysis_derivative_integral}
+\end{equation}
 
 \end_inset
 
@@ -3337,11 +3446,13 @@ reference "eq:analysis_derivative_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 f^{(n)}(z) & =\frac{n!}{2\pi\ji}\int_{0}^{2\pi}\frac{f\left(z+r\expf^{\ji\theta}\right)}{r^{n+1}\expf^{\ji(n+1)\theta}}\ji r\expf^{\ji\theta}\tic\theta\nonumber \\
 f^{(n)}(z) & =\frac{n!}{2\pi r^{n}}\int_{0}^{2\pi}f\left(z+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\tic\theta\label{eq:analysis_derivative_integral_circle}\\
 f'(z) & =\frac{1}{2\pi r}\int_{0}^{2\pi}f\left(z+r\expf^{\ji\theta}\right)\expf^{-\ji\theta}\tic\theta\nonumber \\
-f(z) & =\frac{1}{2\pi}\int_{0}^{2\pi}f\left(z+r\expf^{\ji\theta}\right)\tic\theta\label{eq:analysis_derivative_integral_mean}\end{align}
+f(z) & =\frac{1}{2\pi}\int_{0}^{2\pi}f\left(z+r\expf^{\ji\theta}\right)\tic\theta\label{eq:analysis_derivative_integral_mean}
+\end{align}
 
 \end_inset
 
@@ -3357,7 +3468,7 @@ reference "eq:analysis_derivative_integral_mean"
 \end_inset
 
 ) wird die sogenannte Mittelwerteigenschaft
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3388,7 +3499,7 @@ Laurent
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3427,8 +3538,10 @@ Laurent
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}\label{eq:analysis_laurent_series}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z)=\sum_{n=-\infty}^{\infty}a_{n}(z-z_{0})^{n}\label{eq:analysis_laurent_series}
+\end{equation}
 
 \end_inset
 
@@ -3496,8 +3609,10 @@ dann ergibt sich mit der Darstellung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-f(z)=\cdots+a_{-2}(z-z_{0})^{-2}+a_{-1}(z-z_{0})^{-1}+\underbrace{a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots}_{\Phi(z)}\label{eq:analysis_laurent_series_expanded}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z)=\cdots+a_{-2}(z-z_{0})^{-2}+a_{-1}(z-z_{0})^{-1}+\underbrace{a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots}_{\Phi(z)}\label{eq:analysis_laurent_series_expanded}
+\end{equation}
 
 \end_inset
 
@@ -3519,7 +3634,7 @@ Die Funktion
 Taylor
 \noun default
 -Reihenentwicklung (Potenzreihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3549,8 +3664,10 @@ key "Brown:1996"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}f(z)\tic z=\sum_{n=-\infty}^{-2}\left[\oint_{C}a_{n}(z-z_{0})^{n}\tic z\right]+\oint_{C}a_{-1}(z-z_{0})^{-1}\tic z+\oint_{C}\Phi(z)\tic z\mperiod\]
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\tic z=\sum_{n=-\infty}^{-2}\left[\oint_{C}a_{n}(z-z_{0})^{n}\tic z\right]+\oint_{C}a_{-1}(z-z_{0})^{-1}\tic z+\oint_{C}\Phi(z)\tic z\mperiod
+\]
 
 \end_inset
 
@@ -3563,7 +3680,7 @@ Die Funktion
 \end_inset
 
 , der sogenannte Regulärteil
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3587,7 +3704,7 @@ noun{Laurent}
 
 , ist analytisch, weshalb dieses Integral verschwindet.
  Gleiches gilt für das Integral über den Hauptteil
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3621,8 +3738,10 @@ Laurent
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\sum_{n=2}^{\infty}\oint_{C}\frac{a_{-n}}{(z-z_{0})^{n}}\tic z=0,\]
+\begin_inset Formula 
+\[
+\sum_{n=2}^{\infty}\oint_{C}\frac{a_{-n}}{(z-z_{0})^{n}}\tic z=0,
+\]
 
 \end_inset
 
@@ -3645,10 +3764,12 @@ reference "eq:analysis_cauchy_substitution"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \oint_{C}\frac{1}{(z-z_{0})^{n}}\tic z & =\oint_{C}\frac{\ji r\expf^{\ji\theta}}{r^{n}\expf^{\ji n\theta}}\tic\theta\\
  & =\ji r^{-(n-1)}\oint_{C}\expf^{-\ji(n-1)\theta}\tic\theta\\
- & =-\frac{1}{(n-1)r^{n-1}}\left.\expf^{-\ji(n-1)\theta}\right|_{0}^{2\pi}=0\quad\textrm{für}\msp n\neq1\end{align*}
+ & =-\frac{1}{(n-1)r^{n-1}}\left.\expf^{-\ji(n-1)\theta}\right|_{0}^{2\pi}=0\quad\textrm{für}\msp n\neq1
+\end{align*}
 
 \end_inset
 
@@ -3717,7 +3838,7 @@ Cauchy
 \end_inset
 
  nennt man das Residuum
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3740,7 +3861,7 @@ noun{Laurent}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3774,8 +3895,10 @@ description "Residuum von $f(z)$ an der Stelle $z_{0}$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=2\pi\ji\, a_{-1}=2\pi\ji\,\res{z_{0}}{f(z)}\label{eq:analysis_laurent_residue_integral}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\oint_{C}f(z)\tic z=\oint_{C}\frac{a_{-1}}{z-z_{0}}\tic z=2\pi\ji\, a_{-1}=2\pi\ji\,\res{z_{0}}{f(z)}\label{eq:analysis_laurent_residue_integral}
+\end{equation}
 
 \end_inset
 
@@ -3806,8 +3929,10 @@ reference "eq:analysis_laurent_series_expanded"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{f(z)}{(z-z_{0})^{n+1}}=\cdots+a_{n-1}(z-z_{0})^{-2}+a_{n}(z-z_{0})^{-1}+a_{n+1}+a_{n+2}(z-z_{0})+a_{n+3}(z-z_{0})^{2}+\cdots\]
+\begin_inset Formula 
+\[
+\frac{f(z)}{(z-z_{0})^{n+1}}=\cdots+a_{n-1}(z-z_{0})^{-2}+a_{n}(z-z_{0})^{-1}+a_{n+1}+a_{n+2}(z-z_{0})+a_{n+3}(z-z_{0})^{2}+\cdots
+\]
 
 \end_inset
 
@@ -3841,8 +3966,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=2\pi\ji\, a_{n}\]
+\begin_inset Formula 
+\[
+\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=2\pi\ji\, a_{n}
+\]
 
 \end_inset
 
@@ -3862,8 +3989,10 @@ Durch Kombination der Beziehungen kann man für die Koeffizienten
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z\label{eq:analysis_laurent_coeffs}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+a_{n}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z\label{eq:analysis_laurent_coeffs}
+\end{equation}
 
 \end_inset
 
@@ -3878,7 +4007,7 @@ name "par:analysis_laurent_taylor_association"
 \end_inset
 
 Aus vorangegangener Formel ist der Zusammenhang zwischen Holomorphie
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3888,7 +4017,7 @@ Funktion!analytische!Holomorphie
 \end_inset
 
  und Analytizität
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3898,7 +4027,7 @@ Analytizität
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3952,7 +4081,7 @@ entsprechen die mit positivem Index genau den Koeffizienten einer
 Taylor
 \noun default
 -Reihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -3992,7 +4121,7 @@ resp
 MacLaurin
 \noun default
 -Reihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4068,10 +4197,13 @@ Für die Existenz der Reihenentwicklung ist Voraussetzung, daß
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 a_{n}=\begin{cases}
 \mbig{\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{(z-z_{0})^{n+1}}\tic z=\frac{f^{(n)}(z_{0})}{n!}} & \quad(n\geq0)\\
-\mbig{\frac{1}{2\pi\ji}\oint_{C}f(z)\,(z-z_{0})^{|n|-1}\tic z=0} & \quad(n<0)\end{cases}\label{eq:analysis_laurent_analytic_taylor}\end{equation}
+\mbig{\frac{1}{2\pi\ji}\oint_{C}f(z)\,(z-z_{0})^{|n|-1}\tic z=0} & \quad(n<0)
+\end{cases}\label{eq:analysis_laurent_analytic_taylor}
+\end{equation}
 
 \end_inset
 
@@ -4084,7 +4216,7 @@ Die
 Laurent
 \noun default
 -Reihe entartet in diesem Sinne zu einer Potenzreihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4144,7 +4276,7 @@ Residuensatz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4229,7 +4361,7 @@ Einleitend müssen wir uns aber mit der Frage befassen, wie sich der Einschluß
 mehrerer
 \emph default
  singulärer Punkte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4482,8 +4614,10 @@ key "Needham:1998"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}f(z)\tic z=\int_{C_{1}}f(z)\tic z+\int_{C_{2}}f(z)\tic z+\underbrace{\int_{C_{3}}f(z)\tic z+\int_{C_{4}}f(z)\tic z}_{0}\]
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\tic z=\int_{C_{1}}f(z)\tic z+\int_{C_{2}}f(z)\tic z+\underbrace{\int_{C_{3}}f(z)\tic z+\int_{C_{4}}f(z)\tic z}_{0}
+\]
 
 \end_inset
 
@@ -4507,8 +4641,10 @@ reference "fig:analysis_curve_step3"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}f(z)\tic z=\oint_{C_{1}}f(z)\tic z+\oint_{C_{2}}f(z)\tic z\mperiod\]
+\begin_inset Formula 
+\[
+\oint_{C}f(z)\tic z=\oint_{C_{1}}f(z)\tic z+\oint_{C_{2}}f(z)\tic z\mperiod
+\]
 
 \end_inset
 
@@ -4521,7 +4657,7 @@ Umschließt ein Kurvenintegral auf seinem Weg
 \end_inset
 
  Singularitäten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4563,8 +4699,10 @@ reference "fig:analysis_curve"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\oint_{C}f(z)\tic z=\sum_{n}\left[\oint_{C_{n}}f(z)\tic z\right]\label{eq:analysis_cauchy_singularities}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\oint_{C}f(z)\tic z=\sum_{n}\left[\oint_{C_{n}}f(z)\tic z\right]\label{eq:analysis_cauchy_singularities}
+\end{equation}
 
 \end_inset
 
@@ -4595,8 +4733,10 @@ reference "eq:analysis_laurent_residue_integral"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\oint_{C}f(z)\tic z=2\pi\ji\sum_{n}\res{z_{n}}{f(z)}\label{eq:analysis_residue_theorem}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\oint_{C}f(z)\tic z=2\pi\ji\sum_{n}\res{z_{n}}{f(z)}\label{eq:analysis_residue_theorem}
+\end{equation}
 
 \end_inset
 
@@ -4619,7 +4759,7 @@ en
 \end_inset
 
 , welche sich durch die Art des Hauptteils
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4673,7 +4813,7 @@ Hebbare Singularitäten
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4691,7 +4831,7 @@ Hebbare Singularitäten sind solche, für die
 \end_inset
 
  beschränkt
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4722,7 +4862,7 @@ key "Freitag:2000"
 Riemann
 \noun default
 'sche Hebbarkeitsatz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4732,7 +4872,7 @@ Hebbarkeitsatz
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4758,8 +4898,10 @@ noun{Riemann}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\lim_{z\rightarrow z_{0}}(z-z_{0})\, f(z)=0\mperiod\label{eq:analysis_residue_removable_singularity}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{z\rightarrow z_{0}}(z-z_{0})\, f(z)=0\mperiod\label{eq:analysis_residue_removable_singularity}
+\end{equation}
 
 \end_inset
 
@@ -4849,7 +4991,7 @@ Pole
 
 \begin_layout Standard
 Singularitäten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4859,7 +5001,7 @@ Singularitäten!Pole
 \end_inset
 
 , bei denen man von einem Pol
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4869,7 +5011,7 @@ Pol
 \end_inset
 
  der Ordnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4886,8 +5028,10 @@ Pol!Ordnung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-h(z)=\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-2}}{(z-z_{0})^{2}}+\frac{a_{-1}}{z-z_{0}}\]
+\begin_inset Formula 
+\[
+h(z)=\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-2}}{(z-z_{0})^{2}}+\frac{a_{-1}}{z-z_{0}}
+\]
 
 \end_inset
 
@@ -4943,7 +5087,7 @@ Damit ist gemeint, daß
 \end_inset
 
  selbst analytisch, denn alle Pole sind entsprechend ihrer Vielfachheit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4978,7 +5122,7 @@ herausgezogen
 \end_inset
 
  in eine Potenzreihe
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -4988,7 +5132,7 @@ Potenzreihe
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5046,8 +5190,10 @@ reference "par:analysis_laurent_taylor_association"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\phi(z)=c_{0}+c_{1}(z-z_{0})+c_{2}(z-z_{0})^{2}+c_{3}(z-z_{0})^{3}+\cdots\]
+\begin_inset Formula 
+\[
+\phi(z)=c_{0}+c_{1}(z-z_{0})+c_{2}(z-z_{0})^{2}+c_{3}(z-z_{0})^{3}+\cdots
+\]
 
 \end_inset
 
@@ -5067,10 +5213,12 @@ Laurent
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 f(z) & =(z-z_{0})^{-n}\phi(z)\nonumber \\
  & =\frac{c_{0}}{(z-z_{0})^{n}}+\frac{c_{1}}{(z-z_{0})^{n-1}}+\cdots+\frac{c_{n-1}}{z-z_{0}}+c_{n}+c_{n+1}(z-z_{0})+c_{n+2}(z-z_{0})^{2}+\cdots\nonumber \\
- & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots,\label{eq:analysis_residue_pole_laurent}\end{align}
+ & =\underbrace{\frac{a_{-n}}{(z-z_{0})^{n}}+\frac{a_{-n+1}}{(z-z_{0})^{n-1}}+\cdots+\frac{a_{-1}}{z-z_{0}}}_{h(z)}+a_{0}+a_{1}(z-z_{0})+a_{2}(z-z_{0})^{2}+\cdots,\label{eq:analysis_residue_pole_laurent}
+\end{align}
 
 \end_inset
 
@@ -5091,7 +5239,7 @@ ie
 \end_inset
 
  der Hauptteil
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5123,7 +5271,7 @@ noun{Laurent}
 
 .
  Diese Eigenschaft ermöglicht die Berechnung des Residuums
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5136,8 +5284,10 @@ Residuum!eines Pols
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[(z-z_{0})^{n}\, f(z)\right]\mperiod\label{eq:analysis_residue_pole}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[(z-z_{0})^{n}\, f(z)\right]\mperiod\label{eq:analysis_residue_pole}
+\end{equation}
 
 \end_inset
 
@@ -5181,9 +5331,11 @@ reference "eq:analysis_residue_pole_laurent"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{multline*}
+\begin_inset Formula 
+\begin{multline*}
 \res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\frac{\tdc^{(n-1)}}{\tdc z^{n-1}}\left[\vphantom{a_{-1}(z-z_{0})^{n-1}}a_{-n}+a_{-n+1}(z-z_{0})+\cdots\right.\\
-\left.+a_{-1}(z-z_{0})^{n-1}+a_{0}(z-z_{0})^{n}+a_{1}(z-z_{0})^{n+1}+\cdots\right]\end{multline*}
+\left.+a_{-1}(z-z_{0})^{n-1}+a_{0}(z-z_{0})^{n}+a_{1}(z-z_{0})^{n+1}+\cdots\right]
+\end{multline*}
 
 \end_inset
 
@@ -5207,9 +5359,11 @@ reference "eq:analysis_residue_pole"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{multline*}
+\begin_inset Formula 
+\begin{multline*}
 \res{z_{0}}{f(z)}=\frac{1}{(n-1)!}\lim_{z\rightarrow z_{0}}\left[(n-1)!\, a_{-1}+\frac{n!}{1!}a_{0}(z-z_{0})+\frac{(n+1)!}{2!}a_{1}(z-z_{0})^{2}\right.\\
-\left.+\frac{(n+2)!}{3!}a_{2}(z-z_{0})^{3}+\frac{(n+3)!}{4!}a_{3}(z-z_{0})^{4}+\cdots\right]=a_{-1}\end{multline*}
+\left.+\frac{(n+2)!}{3!}a_{2}(z-z_{0})^{3}+\frac{(n+3)!}{4!}a_{3}(z-z_{0})^{4}+\cdots\right]=a_{-1}
+\end{multline*}
 
 \end_inset
 
@@ -5268,8 +5422,10 @@ Speziell für einfache Pole (
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\res{z_{0}}{f(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, f(z)\right],\label{eq:analysis_residue_pole_simple}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\res{z_{0}}{f(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, f(z)\right],\label{eq:analysis_residue_pole_simple}
+\end{equation}
 
 \end_inset
 
@@ -5278,7 +5434,7 @@ Speziell für einfache Pole (
 
 \begin_layout Standard
 was bei gebrochen rationalen Funktionen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5291,8 +5447,10 @@ Funktion!gebrochen rationale
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\res{z_{0}}{\frac{u(z)}{v(z)}}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{u(z)}{v(z)}\right]=u(z_{0})\lim_{z\rightarrow z_{0}}\frac{z-z_{0}}{v(z)}=\frac{u(z_{0})}{v'(z_{0})}\label{eq:analysis_residue_pole_rational}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\res{z_{0}}{\frac{u(z)}{v(z)}}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{u(z)}{v(z)}\right]=u(z_{0})\lim_{z\rightarrow z_{0}}\frac{z-z_{0}}{v(z)}=\frac{u(z_{0})}{v'(z_{0})}\label{eq:analysis_residue_pole_rational}
+\end{equation}
 
 \end_inset
 
@@ -5343,7 +5501,7 @@ Wesentliche Singularitäten
 
 \begin_layout Standard
 Wesentliche Singularitäten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5381,8 +5539,10 @@ key "Freitag:2000"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-h(z)=\sum_{k=1}^{\infty}\frac{a_{-k}}{(z-z_{0})^{k}},\]
+\begin_inset Formula 
+\[
+h(z)=\sum_{k=1}^{\infty}\frac{a_{-k}}{(z-z_{0})^{k}},
+\]
 
 \end_inset
 
@@ -5458,7 +5618,7 @@ status collapsed
 \begin_layout Plain Layout
 Funktionen, die im Endlichen nur hebbare Singularitäten oder Pole besitzen
  (also keinen wesentlich singulären Punkt), werden meromorph
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5492,8 +5652,10 @@ key "Hurwitz:1922"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{z\rightarrow z_{0}}(z-z_{0})^{n}f(z)=0\]
+\begin_inset Formula 
+\[
+\lim_{z\rightarrow z_{0}}(z-z_{0})^{n}f(z)=0
+\]
 
 \end_inset
 
@@ -5548,7 +5710,7 @@ Liouville
 \begin_layout Standard
 
 \noun on
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5571,7 +5733,7 @@ noun{Liouville}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5660,7 +5822,7 @@ Soll uns die Frage beschäftigen, ob man eine Supremum (kleinste obere Schranke)
 \end_inset
 
  beschränkt ist
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5691,8 +5853,10 @@ key "Brown:1996"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\int_{z_{1}}^{z_{2}}f(z)\tic z\right|\leq\int_{a}^{b}|f(z)|\,|\tdc z|\leq\int_{a}^{b}M\,|\tic z|=M\int_{a}^{b}|\tdc z|\mperiod\]
+\begin_inset Formula 
+\[
+\left|\int_{z_{1}}^{z_{2}}f(z)\tic z\right|\leq\int_{a}^{b}|f(z)|\,|\tdc z|\leq\int_{a}^{b}M\,|\tic z|=M\int_{a}^{b}|\tdc z|\mperiod
+\]
 
 \end_inset
 
@@ -5726,8 +5890,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{\tdc t}\right|\tdc t=M\int_{a}^{b}\sqrt{\left(\frac{\tdc x}{\tdc t}\right)^{2}+\left(\frac{\tdc y}{\tdc t}\right)^{2}}\tic t,\]
+\begin_inset Formula 
+\[
+M\int_{a}^{b}|\tdc z|=M\int_{a}^{b}\left|\frac{\tdc x}{\tdc t}+\ji\frac{\tdc y}{\tdc t}\right|\tdc t=M\int_{a}^{b}\sqrt{\left(\frac{\tdc x}{\tdc t}\right)^{2}+\left(\frac{\tdc y}{\tdc t}\right)^{2}}\tic t,
+\]
 
 \end_inset
 
@@ -5769,8 +5935,10 @@ key "Brown:1996"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\left|\int_{C}f(z)\tic z\right|\leq L\cdot M=L\,\sup_{z\in C}|f(z)|\mperiod\label{eq:analysis_integral_abs_limit}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left|\int_{C}f(z)\tic z\right|\leq L\cdot M=L\,\sup_{z\in C}|f(z)|\mperiod\label{eq:analysis_integral_abs_limit}
+\end{equation}
 
 \end_inset
 
@@ -5784,7 +5952,7 @@ Sei
 Cauchy
 \noun default
 's Ungleichung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5868,8 +6036,10 @@ resp
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\left|f^{(n)}(z_{0})\right|=\frac{n!}{2\pi r^{n}}\left|\int_{0}^{2\pi}f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\tic\theta\right|\]
+\begin_inset Formula 
+\[
+\left|f^{(n)}(z_{0})\right|=\frac{n!}{2\pi r^{n}}\left|\int_{0}^{2\pi}f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\tic\theta\right|
+\]
 
 \end_inset
 
@@ -5900,8 +6070,10 @@ reference "eq:analysis_integral_abs_limit"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\int_{0}^{2\pi}f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\tic\theta\right|\leq2\pi\,\sup_{0\leq\theta\leq2\pi}\left|f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\right|=2\pi\, M\]
+\begin_inset Formula 
+\[
+\left|\int_{0}^{2\pi}f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\tic\theta\right|\leq2\pi\,\sup_{0\leq\theta\leq2\pi}\left|f\left(z_{0}+r\expf^{\ji\theta}\right)\expf^{-\ji n\theta}\right|=2\pi\, M
+\]
 
 \end_inset
 
@@ -5910,7 +6082,7 @@ reference "eq:analysis_integral_abs_limit"
 
 \begin_layout Standard
 und damit direkt weiter zur Relation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -5936,8 +6108,10 @@ noun{Cauchy}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\left|f^{(n)}(z_{0})\right|\leq\frac{M\, n!}{r^{n}}\mperiod\label{eq:analysis_derivative_abs_limit}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left|f^{(n)}(z_{0})\right|\leq\frac{M\, n!}{r^{n}}\mperiod\label{eq:analysis_derivative_abs_limit}
+\end{equation}
 
 \end_inset
 
@@ -5988,7 +6162,7 @@ Sei
 ganze
 \emph default
  Funktion
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6024,8 +6198,10 @@ reference "eq:analysis_derivative_abs_limit"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\tdiff{f(z)}{z}\right|\leq\frac{M}{r}\mperiod\]
+\begin_inset Formula 
+\[
+\left|\tdiff{f(z)}{z}\right|\leq\frac{M}{r}\mperiod
+\]
 
 \end_inset
 
@@ -6046,8 +6222,10 @@ Läßt man nun
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\tdiff{f(z)}{z}\right|=0,\]
+\begin_inset Formula 
+\[
+\left|\tdiff{f(z)}{z}\right|=0,
+\]
 
 \end_inset
 
@@ -6107,7 +6285,7 @@ reference "eq:analysis_derivative_abs_limit"
 \end_inset
 
  das sogenannte Maximumprinzip
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6133,8 +6311,10 @@ key "Cauer:1954"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\left|f(z_{0})\right|\leq\sup_{|z-z_{0}|=r}|f(z)|,\]
+\begin_inset Formula 
+\[
+\left|f(z_{0})\right|\leq\sup_{|z-z_{0}|=r}|f(z)|,
+\]
 
 \end_inset
 
@@ -6176,7 +6356,7 @@ ie
 \end_deeper
 \begin_layout Enumerate
 Der Beweis des Hauptsatzes der Algebra
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6242,7 +6422,7 @@ Lemma von Jordan
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6265,7 +6445,7 @@ noun{Jordan}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -6361,8 +6541,10 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z=0,\qquad\alpha\in\mathbb{R}\mperiod\label{eq:analysis_jordan_lemma}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z=0,\qquad\alpha\in\mathbb{R}\mperiod\label{eq:analysis_jordan_lemma}
+\end{equation}
 
 \end_inset
 
@@ -6386,8 +6568,10 @@ key "Whittaker:1927"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\label{eq:analysis_jordan_lemma_abs}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\label{eq:analysis_jordan_lemma_abs}
+\end{equation}
 
 \end_inset
 
@@ -6405,8 +6589,10 @@ Liouville
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\leq\int_{C_{\infty}}\left|\expf^{\ji\alpha z}\right|\cdot\left|f(z)\vphantom{\expf^{\ji\alpha z}}\right|\cdot\left|\tdc z\vphantom{\expf^{\ji\alpha z}}\right|\]
+\begin_inset Formula 
+\[
+\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\leq\int_{C_{\infty}}\left|\expf^{\ji\alpha z}\right|\cdot\left|f(z)\vphantom{\expf^{\ji\alpha z}}\right|\cdot\left|\tdc z\vphantom{\expf^{\ji\alpha z}}\right|
+\]
 
 \end_inset
 
@@ -6434,8 +6620,10 @@ Mit der Parameterdarstellung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\expf^{-\alpha r\sin\theta}\left|f\left(r\expf^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{-\alpha r\sin\theta}\tic\theta\mperiod\label{eq:analysis_jordan_inequ1}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\expf^{-\alpha r\sin\theta}\left|f\left(r\expf^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{-\alpha r\sin\theta}\tic\theta\mperiod\label{eq:analysis_jordan_inequ1}
+\end{equation}
 
 \end_inset
 
@@ -6512,8 +6700,10 @@ key "Marko:1995"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\int_{0}^{\frac{\pi}{2}}\expf^{-\alpha r\sin\theta}\tic\theta\leq\int_{0}^{\frac{\pi}{2}}\expf^{-\frac{2}{\pi}\alpha r\theta}\tic\theta\label{eq:analysis_jordan_inequ_sine}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{0}^{\frac{\pi}{2}}\expf^{-\alpha r\sin\theta}\tic\theta\leq\int_{0}^{\frac{\pi}{2}}\expf^{-\frac{2}{\pi}\alpha r\theta}\tic\theta\label{eq:analysis_jordan_inequ_sine}
+\end{equation}
 
 \end_inset
 
@@ -6526,8 +6716,10 @@ ableiten, welche nun bei der Berechnung des (vereinfachten) Integrals verwendet
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-2\int_{0}^{\frac{\pi}{2}}\expf^{-\frac{2}{\pi}\alpha r\theta}\tic\theta=-\frac{\pi}{\alpha r}\left.\expf^{-\frac{2}{\pi}\alpha r\theta}\right|_{\theta=0}^{\frac{\pi}{2}}=\frac{\pi}{\alpha r}\left(1-\expf^{-\alpha r}\right)\label{eq:analysis_jordan_integral_sine}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+2\int_{0}^{\frac{\pi}{2}}\expf^{-\frac{2}{\pi}\alpha r\theta}\tic\theta=-\frac{\pi}{\alpha r}\left.\expf^{-\frac{2}{\pi}\alpha r\theta}\right|_{\theta=0}^{\frac{\pi}{2}}=\frac{\pi}{\alpha r}\left(1-\expf^{-\alpha r}\right)\label{eq:analysis_jordan_integral_sine}
+\end{equation}
 
 \end_inset
 
@@ -6550,9 +6742,11 @@ reference "eq:analysis_jordan_inequ1"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \lim_{r\rightarrow\infty}r\int_{0}^{\pi}\expf^{-\alpha r\sin\theta}\tic\theta & \leq\frac{\pi}{\alpha}\qquad(\alpha\geq0)\label{eq:analysis_jordan_inequ3}\\
-\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right| & \leq\frac{\pi}{\alpha}\,\lim_{r\rightarrow\infty}\sup_{z\in C_{\infty}}|f(z)|,\label{eq:analysis_jordan_inequ2}\end{align}
+\lim_{r\rightarrow\infty}\left|\,\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z\right| & \leq\frac{\pi}{\alpha}\,\lim_{r\rightarrow\infty}\sup_{z\in C_{\infty}}|f(z)|,\label{eq:analysis_jordan_inequ2}
+\end{align}
 
 \end_inset
 
@@ -6794,8 +6988,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{\pi}^{2\pi}\expf^{-\alpha r\sin\theta}\tic\theta=\int_{\pi}^{2\pi}\expf^{|\alpha|r\sin\theta}\tic\theta=\int_{0}^{\pi}\expf^{-|\alpha|r\sin\phi}\tic\phi\]
+\begin_inset Formula 
+\[
+\int_{\pi}^{2\pi}\expf^{-\alpha r\sin\theta}\tic\theta=\int_{\pi}^{2\pi}\expf^{|\alpha|r\sin\theta}\tic\theta=\int_{0}^{\pi}\expf^{-|\alpha|r\sin\phi}\tic\phi
+\]
 
 \end_inset
 
@@ -6845,8 +7041,10 @@ reference "eq:analysis_jordan_lemma"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z=0\label{eq:analysis_jordan_lemma_vanish}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z=0\label{eq:analysis_jordan_lemma_vanish}
+\end{equation}
 
 \end_inset
 
@@ -6883,8 +7081,10 @@ reference "eq:analysis_jordan_lemma_abs"
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\,\int_{C_{\infty}}\expf^{\beta z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\expf^{\beta r\cos\theta}\left|f\left(r\expf^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{\beta r\cos\theta}\tic\theta\]
+\begin_inset Formula 
+\[
+\left|\,\int_{C_{\infty}}\expf^{\beta z}f(z)\tic z\right|\leq r\int_{0}^{\pi}\expf^{\beta r\cos\theta}\left|f\left(r\expf^{\ji\theta}\right)\right|\tic\theta\leq r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{\beta r\cos\theta}\tic\theta
+\]
 
 \end_inset
 
@@ -6987,9 +7187,11 @@ Sollte jedoch
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{eqnarray*}
+\begin_inset Formula 
+\begin{eqnarray*}
 r\sup_{z\in C_{\infty}}|f(z)|\,\int_{0}^{\pi}\expf^{\beta r\cos\theta}\tic\theta & \Rightarrow & r\sup_{z\in C_{\infty}'}|f(z)|\,\int_{\frac{\pi}{2}}^{3\frac{\pi}{2}}\expf^{\beta r\cos\theta}\tic\theta\\
- & = & r\sup_{z\in C_{\infty}'}|f(z)|\,\int_{0}^{\pi}\expf^{-\beta r\sin\varphi}\tic\varphi\end{eqnarray*}
+ & = & r\sup_{z\in C_{\infty}'}|f(z)|\,\int_{0}^{\pi}\expf^{-\beta r\sin\varphi}\tic\varphi
+\end{eqnarray*}
 
 \end_inset
 
@@ -7008,7 +7210,7 @@ Uneigentliche Integrale
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7018,7 +7220,7 @@ Uneigentliche Integrale|(
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7043,7 +7245,7 @@ status collapsed
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 alpha=0}{Alpha gleich 0}
 \end_layout
@@ -7058,7 +7260,7 @@ Stetige Funktionen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7113,8 +7315,10 @@ reference "eq:analysis_jordan_lemma_vanish"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}f(x)\tic x\mperiod\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}f(x)\tic x\mperiod
+\]
 
 \end_inset
 
@@ -7202,8 +7406,10 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{r\rightarrow\infty}\oint_{C}f(z)\tic z=2\pi\ji\sum_{\imop z_{n}>0}\res{z_{n}}{f(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}f(z)\tic z}_{0}+\int_{-\infty}^{\infty}f(z)\tic z\label{eq:analysis_inf_integral_start}
+\end{equation}
 
 \end_inset
 
@@ -7219,8 +7425,10 @@ Jordan
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}\mperiod\label{eq:analysis_inf_integral_residue}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\infty}^{\infty}f(x)\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{f(z)}\mperiod\label{eq:analysis_inf_integral_residue}
+\end{equation}
 
 \end_inset
 
@@ -7287,7 +7495,7 @@ Jordan
 
 \begin_layout Itemize
 das uneigentliche Integral konvergiert
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7313,7 +7521,7 @@ key "Whittaker:1927"
 
 \begin_layout Standard
 Kann man sogar absolute Konvergenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7343,8 +7551,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\int_{-\infty}^{\infty}\left|f(x)\right|\tic x<\infty\label{eq:analysis_improper_int_convabs}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\int_{-\infty}^{\infty}\left|f(x)\right|\tic x<\infty\label{eq:analysis_improper_int_convabs}
+\end{equation}
 
 \end_inset
 
@@ -7353,7 +7563,7 @@ ie
 
 \begin_layout Standard
 der letzte Punkt der notwendigen Bedingungen (gewöhnliche Konvergenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7406,8 +7616,10 @@ ristik
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{3}
-\left|z^{\sigma}f(z)\right| & \leq M<\infty & \textrm{\resp} &  & |f(x)| & \leq M\,|x|^{-\sigma},\qquad\sigma>1\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{3}
+\left|z^{\sigma}f(z)\right| & \leq M<\infty & \textrm{\resp} &  & |f(x)| & \leq M\,|x|^{-\sigma},\qquad\sigma>1
+\end{xalignat*}
 
 \end_inset
 
@@ -7449,8 +7661,10 @@ key "Gellert:1979"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{\alpha}^{\infty}|f(x)|\tic x\leq\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x\]
+\begin_inset Formula 
+\[
+\int_{\alpha}^{\infty}|f(x)|\tic x\leq\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x
+\]
 
 \end_inset
 
@@ -7462,8 +7676,10 @@ und mit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x=M\lim_{r\rightarrow\infty}\left.\frac{1}{1-\sigma}x^{1-\sigma}\right|_{\alpha}^{r}=\frac{M}{1-\sigma}\lim_{r\rightarrow\infty}\left(r^{1-\sigma}-\alpha^{1-\sigma}\right)=\frac{M}{\sigma-1}\alpha^{1-\sigma}\]
+\begin_inset Formula 
+\[
+\lim_{r\rightarrow\infty}\int_{\alpha}^{r}Mx^{-\sigma}\tic x=M\lim_{r\rightarrow\infty}\left.\frac{1}{1-\sigma}x^{1-\sigma}\right|_{\alpha}^{r}=\frac{M}{1-\sigma}\lim_{r\rightarrow\infty}\left(r^{1-\sigma}-\alpha^{1-\sigma}\right)=\frac{M}{\sigma-1}\alpha^{1-\sigma}
+\]
 
 \end_inset
 
@@ -7494,8 +7710,10 @@ Der Nachweis läßt sich für das Integral
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{+0}^{\infty}|f(x)|\tic x\leq\frac{M}{\sigma-1}\lim_{\alpha\rightarrow+0}\alpha^{1-\sigma}<\infty\]
+\begin_inset Formula 
+\[
+\int_{+0}^{\infty}|f(x)|\tic x\leq\frac{M}{\sigma-1}\lim_{\alpha\rightarrow+0}\alpha^{1-\sigma}<\infty
+\]
 
 \end_inset
 
@@ -7511,8 +7729,10 @@ Jordan
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{z\rightarrow\infty}\left|z\, f(z)\right|=\lim_{z\rightarrow\infty}\left|z^{1-\sigma}f(z)\, z^{\sigma}\right|\leq M\lim_{z\rightarrow\infty}|z|^{1-\sigma}=0\mperiod\]
+\begin_inset Formula 
+\[
+\lim_{z\rightarrow\infty}\left|z\, f(z)\right|=\lim_{z\rightarrow\infty}\left|z^{1-\sigma}f(z)\, z^{\sigma}\right|\leq M\lim_{z\rightarrow\infty}|z|^{1-\sigma}=0\mperiod
+\]
 
 \end_inset
 
@@ -7521,7 +7741,7 @@ Jordan
 
 \begin_layout Standard
 In ähnlicher Art und Weise ist bei exponentiell abfallenden Funktionen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7579,8 +7799,10 @@ reference "eq:analysis_improper_int_convabs"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}|f(x)|\tic x\leq\int_{-\infty}^{\infty}M\expf^{-\sigma|x|}\tic x\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}|f(x)|\tic x\leq\int_{-\infty}^{\infty}M\expf^{-\sigma|x|}\tic x
+\]
 
 \end_inset
 
@@ -7592,8 +7814,10 @@ und löst das rechtsseitige Integral auf,
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}M\expf^{-\sigma|x|}\tic x=2M\int_{0}^{\infty}\expf^{-\sigma x}\tic x=-\frac{M}{\sigma}\lim_{T\rightarrow\infty}\left.\expf^{-\sigma x}\right|_{0}^{T}=\frac{M}{\sigma}\left(1-\lim_{T\rightarrow\infty}\expf^{-\sigma T}\right)=\frac{M}{\sigma}\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}M\expf^{-\sigma|x|}\tic x=2M\int_{0}^{\infty}\expf^{-\sigma x}\tic x=-\frac{M}{\sigma}\lim_{T\rightarrow\infty}\left.\expf^{-\sigma x}\right|_{0}^{T}=\frac{M}{\sigma}\left(1-\lim_{T\rightarrow\infty}\expf^{-\sigma T}\right)=\frac{M}{\sigma}
+\]
 
 \end_inset
 
@@ -7602,7 +7826,7 @@ und löst das rechtsseitige Integral auf,
 
 \begin_layout Standard
 so wird die Beschränktheit
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7615,8 +7839,10 @@ Integral!Beschränkheit
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\frac{M}{\sigma}<\infty\]
+\begin_inset Formula 
+\[
+\left|\int_{-\infty}^{\infty}f(x)\tic x\right|\leq\frac{M}{\sigma}<\infty
+\]
 
 \end_inset
 
@@ -7629,7 +7855,7 @@ Gebrochen rationale Funktionen
 
 \begin_layout Standard
 Speziell für gebrochen rationale Funktionen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7651,7 +7877,7 @@ reference "eq:analysis_residue_pole_rational"
 
  möglich, noch folgende Vereinfachung anzugeben (vorausgesetzt alle Pole
  sind von erster Ordnung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7664,8 +7890,10 @@ Pol!erster Ordnung
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\frac{p(z_{n})}{q'(z_{n})}\mperiod\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{p(x)}{q(x)}\tic x=2\pi\ji\sum_{\imop(z_{n})>0}\frac{p(z_{n})}{q'(z_{n})}\mperiod
+\]
 
 \end_inset
 
@@ -7706,7 +7934,7 @@ status collapsed
 
 
 \backslash
-headingspecial{
+toccmd{
 \backslash
 protect
 \backslash
@@ -7726,7 +7954,7 @@ mathbb{C}} analytisch sind.}}{}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7772,8 +8000,10 @@ reference "eq:analysis_cauchy_formula"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-g(z)=\frac{f(z)}{z-z_{0}}\label{eq:analysis_halfplane_singular_function}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+g(z)=\frac{f(z)}{z-z_{0}}\label{eq:analysis_halfplane_singular_function}
+\end{equation}
 
 \end_inset
 
@@ -7814,8 +8044,10 @@ reference "eq:analysis_residue_pole_simple"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\res{z_{0}}{g(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, g(z)\right]=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{f(z)}{z-z_{0}}\right]=f(z_{0})\]
+\begin_inset Formula 
+\[
+\res{z_{0}}{g(z)}=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\, g(z)\right]=\lim_{z\rightarrow z_{0}}\left[(z-z_{0})\frac{f(z)}{z-z_{0}}\right]=f(z_{0})
+\]
 
 \end_inset
 
@@ -7853,8 +8085,10 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}g(z)\tic z=2\pi\ji f(z_{0})=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}g(z)\tic z}_{0}+\int_{-\infty}^{\infty}\frac{f(z)}{z-z_{0}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x\mperiod\]
+\begin_inset Formula 
+\[
+\lim_{r\rightarrow\infty}\oint_{C}g(z)\tic z=2\pi\ji f(z_{0})=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}g(z)\tic z}_{0}+\int_{-\infty}^{\infty}\frac{f(z)}{z-z_{0}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x\mperiod
+\]
 
 \end_inset
 
@@ -7867,7 +8101,7 @@ Im Ergebnis erhält man
 Cauchy
 \noun default
 's Integralformel
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -7948,8 +8182,10 @@ reference "tab:analysis_inf_integrals_poisson"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x,\qquad\imop(z_{0})>0\label{eq:analysis_halfplane_cauchy_formula}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x,\qquad\imop(z_{0})>0\label{eq:analysis_halfplane_cauchy_formula}
+\end{equation}
 
 \end_inset
 
@@ -8071,8 +8307,10 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\res{z_{0}}{g(z)}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=f(z_{0})\mperiod\]
+\begin_inset Formula 
+\[
+\res{z_{0}}{g(z)}=\frac{1}{2\pi\ji}\oint_{C}\frac{f(z)}{z-z_{0}}\tic z=f(z_{0})\mperiod
+\]
 
 \end_inset
 
@@ -8116,8 +8354,10 @@ reference "sec:analysis_jordan"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\int_{C_{y}}\frac{f(z)}{z-z_{0}}\tic z=-\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\,\res{z_{0}}{\frac{f(z)}{z-z_{0}}}=2\pi\ji\, f(z_{0})\]
+\begin_inset Formula 
+\[
+\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\int_{C_{y}}\frac{f(z)}{z-z_{0}}\tic z=-\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=2\pi\ji\,\res{z_{0}}{\frac{f(z)}{z-z_{0}}}=2\pi\ji\, f(z_{0})
+\]
 
 \end_inset
 
@@ -8133,8 +8373,10 @@ und somit für den Funktionswert an der Stelle
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z,\qquad\reop(z_{0})>0\mperiod\label{eq:analysis_halfplane_right_cauchy_imint}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z_{0})=-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z,\qquad\reop(z_{0})>0\mperiod\label{eq:analysis_halfplane_right_cauchy_imint}
+\end{equation}
 
 \end_inset
 
@@ -8162,8 +8404,10 @@ reference "tab:analysis_inf_integrals_poisson"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y,\qquad\reop(z_{0})>0\label{eq:analysis_halfplane_right_cauchy_reint}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y,\qquad\reop(z_{0})>0\label{eq:analysis_halfplane_right_cauchy_reint}
+\end{equation}
 
 \end_inset
 
@@ -8289,8 +8533,10 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\oint_{C}\frac{f(z)}{z-z_{1}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{1}}\tic x=0\]
+\begin_inset Formula 
+\[
+\oint_{C}\frac{f(z)}{z-z_{1}}\tic z=\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{1}}\tic x=0
+\]
 
 \end_inset
 
@@ -8318,9 +8564,11 @@ reference "eq:analysis_halfplane_cauchy_formula"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{0}}\tic x & 0 & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{f(x)}{x-z_{1}}\tic x\\
-f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{1})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x & 0 & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{0})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\end{xalignat*}
+f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{1})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x & 0 & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{0})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x
+\end{xalignat*}
 
 \end_inset
 
@@ -8332,9 +8580,11 @@ f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(x-z_{1})\, f(x)}{(x-z
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{0}}\tic y & 0 & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{\ji y-z_{1}}\tic y\\
-f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y & 0 & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{0})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\end{xalignat*}
+f(z_{0}) & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y & 0 & =-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(\ji y-z_{0})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y
+\end{xalignat*}
 
 \end_inset
 
@@ -8377,8 +8627,10 @@ Welche die Austauschbarkeit von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{x\, f(x)}{(x-z_{0})(x-z_{1})}\tic x=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{z_{0}\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\label{eq:analysis_halfplane_nonregular}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{x\, f(x)}{(x-z_{0})(x-z_{1})}\tic x=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{z_{0}\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\label{eq:analysis_halfplane_nonregular}
+\end{equation}
 
 \end_inset
 
@@ -8394,8 +8646,10 @@ Für die rechte Halbebene
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}\frac{\ji y\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y=\int_{-\infty}^{\infty}\frac{z_{0}\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}\frac{\ji y\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y=\int_{-\infty}^{\infty}\frac{z_{0}\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y
+\]
 
 \end_inset
 
@@ -8429,10 +8683,12 @@ ermitteln.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{x\, f(x)}{(x-z_{0})(x-z_{1})}\tic x-\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{z_{1}\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\\
  & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{z_{0}\, f(x)}{(x-z_{0})(x-z_{1})}\tic x-\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{z_{1}\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\\
- & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-z_{1})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\mperiod\end{align*}
+ & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-z_{1})\, f(x)}{(x-z_{0})(x-z_{1})}\tic x\mperiod
+\end{align*}
 
 \end_inset
 
@@ -8444,8 +8700,10 @@ f(z_{0}) & =\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{x\, f(x)}{(x-z_{0})(x-
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(z_{0}-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y\]
+\begin_inset Formula 
+\[
+f(z_{0})=-\frac{1}{2\pi}\int_{-\infty}^{\infty}\frac{(z_{0}-z_{1})\, f(\ji y)}{(\ji y-z_{0})(\ji y-z_{1})}\tic y
+\]
 
 \end_inset
 
@@ -8474,8 +8732,10 @@ Wählt man den Punkt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-\cjgt{z_{0}})\, f(x)}{(x-z_{0})(x-\cjgt{z_{0}})}\tic x=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-\cjgt{z_{0}})\, f(x)}{(x-z_{0})\cjgt{(x-z_{0})}}\tic x,\]
+\begin_inset Formula 
+\[
+f(z_{0})=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-\cjgt{z_{0}})\, f(x)}{(x-z_{0})(x-\cjgt{z_{0}})}\tic x=\frac{1}{2\pi\ji}\int_{-\infty}^{\infty}\frac{(z_{0}-\cjgt{z_{0}})\, f(x)}{(x-z_{0})\cjgt{(x-z_{0})}}\tic x,
+\]
 
 \end_inset
 
@@ -8506,9 +8766,11 @@ reference "eq:analysis_halfplane_right_cauchy_imint"
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 f(z_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(\ji y-x_{0}-\ji y_{0})(\ji y+x_{0}-\ji y_{0})}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{[(y-y_{0})+\ji x_{0}][(y-y_{0})-\ji x_{0}]}\tic y\\
- & =\frac{\ji}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{x_{0}\, f(y)}{(y-x_{0}-\ji y_{0})(y+x_{0}-\ji y_{0})}\tic y\end{align*}
+ & =\frac{\ji}{\pi}\int_{-\ji\infty}^{\ji\infty}\frac{x_{0}\, f(y)}{(y-x_{0}-\ji y_{0})(y+x_{0}-\ji y_{0})}\tic y
+\end{align*}
 
 \end_inset
 
@@ -8541,8 +8803,10 @@ key "Brown:1996"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x,\qquad y_{0}>0\mperiod\label{eq:analysis_halfplane_boundary1}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, f(x)}{|x-z_{0}|^{2}}\tic x,\qquad y_{0}>0\mperiod\label{eq:analysis_halfplane_boundary1}
+\end{equation}
 
 \end_inset
 
@@ -8554,8 +8818,10 @@ f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, f(x)}{|x-z_{0}|^{2}}\
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|(y-y_{0})+\ji x_{0}|^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y\]
+\begin_inset Formula 
+\[
+f(z_{0})=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|(y-y_{0})+\ji x_{0}|^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y
+\]
 
 \end_inset
 
@@ -8571,8 +8837,10 @@ und mit der schon erwähnten Ersetzbarkeit
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
-f(z_{0})=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\]
+\begin_inset Formula 
+\[
+f(z_{0})=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, f(\ji y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y
+\]
 
 \end_inset
 
@@ -8593,9 +8861,11 @@ Durch Einsetzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep1}\\
- & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x+\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep2}\end{align}
+ & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x+\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_sep2}
+\end{align}
 
 \end_inset
 
@@ -8607,9 +8877,11 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
- & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
+ & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y+\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y
+\end{align*}
 
 \end_inset
 
@@ -8627,7 +8899,7 @@ gewinnen, wobei die Realteil-Beziehung auch
 Poisson
 \noun default
 's Integralformel
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8650,7 +8922,7 @@ noun{Poisson}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8729,9 +9001,11 @@ key "Cauer:1932"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat}{2}
+\begin_inset Formula 
+\begin{alignat}{2}
 u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x\label{eq:analysis_halfplane_boundary_real}\\
-v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x,\label{eq:analysis_halfplane_boundary_imag}\end{alignat}
+v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x &  & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})\, u(x,0)}{(x-x_{0})^{2}+y_{0}^{2}}\tic x,\label{eq:analysis_halfplane_boundary_imag}
+\end{alignat}
 
 \end_inset
 
@@ -8743,9 +9017,11 @@ v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}\, v(x,0)}{(x-x
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 u(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\\
-v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y\end{align*}
+v(x_{0},y_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})\, u(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y=\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}\, v(0,y)}{(y-y_{0})^{2}+x_{0}^{2}}\tic y
+\end{align*}
 
 \end_inset
 
@@ -8785,7 +9061,7 @@ reference "eq:analysis_halfplane_boundary_sep2"
 \end_inset
 
  aus den Randwerten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8798,10 +9074,12 @@ Randwerte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat}{2}
+\begin_inset Formula 
+\begin{xalignat}{2}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}-\ji(x-x_{0})}{|x-z_{0}|^{2}}u(x,0)\tic x & f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(x-x_{0})+\ji y_{0}}{|x-z_{0}|^{2}}v(x,0)\tic x\nonumber \\
  & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{\cjgt{(x-z_{0})}}{|x-z_{0}|^{2}}u(x,0)\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{\cjgt{(x-z_{0})}}{|x-z_{0}|^{2}}v(x,0)\tic x\nonumber \\
- & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x\label{eq:analysis_halfplane_boundary2}\end{xalignat}
+ & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{x-z_{0}}\tic x &  & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{v(x,0)}{x-z_{0}}\tic x\label{eq:analysis_halfplane_boundary2}
+\end{xalignat}
 
 \end_inset
 
@@ -8813,9 +9091,11 @@ f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{y_{0}-\ji(x-x_{0})}{|x-z_{
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 f(z_{0}) & =\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{x_{0}+\ji(y-y_{0})}{|\ji y-z_{0}|^{2}}u(0,y)\tic y & f(z_{0}) & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{(y-y_{0})-\ji x_{0}}{|\ji y-z_{0}|^{2}}v(0,y)\tic y\\
- & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-z_{0}}\tic y &  & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{v(0,y)}{\ji y-z_{0}}\tic y\end{xalignat*}
+ & =-\frac{1}{\pi}\int_{-\infty}^{\infty}\frac{u(0,y)}{\ji y-z_{0}}\tic y &  & =\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{v(0,y)}{\ji y-z_{0}}\tic y
+\end{xalignat*}
 
 \end_inset
 
@@ -8852,7 +9132,7 @@ reference "eq:analysis_complex_derivative"
 \end_inset
 
  ausgehend von den Randwerten
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -8898,8 +9178,10 @@ reference "eq:analysis_derivative_first_integral"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\tdiff{f(z_{0})}{x_{0}}=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\pdiff{}{x_{0}}\,\left[\frac{u(x,0)}{x-z_{0}}\right]\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{(x-z_{0})^{2}}\tic x\label{eq:analysis_halfplane_derivative}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\tdiff{f(z_{0})}{x_{0}}=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\pdiff{}{x_{0}}\,\left[\frac{u(x,0)}{x-z_{0}}\right]\tic x=\frac{1}{\pi\ji}\int_{-\infty}^{\infty}\frac{u(x,0)}{(x-z_{0})^{2}}\tic x\label{eq:analysis_halfplane_derivative}
+\end{equation}
 
 \end_inset
 
@@ -8934,7 +9216,7 @@ Berechnungsformeln für halbanalytische Funktionen
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="4">
-<features>
+<features tabularvalignment="middle">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
 <column alignment="left" valignment="top" width="0">
@@ -8988,7 +9270,8 @@ Bedingung
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop(z)>0
+}
 }\! f(z)=0}$
 \end_inset
 
@@ -9101,7 +9384,8 @@ Bedingung
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop(z)<0
+}
 }\! f(z)=0}$
 \end_inset
 
@@ -9214,7 +9498,8 @@ Bedingung
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop(z)>0
+}
 }\! f(z)=0}$
 \end_inset
 
@@ -9327,7 +9612,8 @@ Bedingung
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop(z)<0
+}
 }\! f(z)=0}$
 \end_inset
 
@@ -9480,9 +9766,11 @@ Jordan
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 2\pi\ji\, f(z_{0}) & =\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z-\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\\
-f(z_{0}) & =\frac{1}{2\pi}\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(z_{0}+r\expf^{\ji\theta})\tic\theta-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z\end{align*}
+f(z_{0}) & =\frac{1}{2\pi}\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f(z_{0}+r\expf^{\ji\theta})\tic\theta-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z
+\end{align*}
 
 \end_inset
 
@@ -9494,9 +9782,11 @@ f(z_{0}) & =\frac{1}{2\pi}\lim_{r\rightarrow\infty}\int_{-\frac{\pi}{2}}^{\frac{
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \frac{1}{2\pi\ji}\,\overbrace{\ji\,\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\tic\theta}^{\int_{C_{\infty}}\frac{f(z)}{z-z_{0}}\tic z}-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}} & =1\\
-\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}} & =\frac{1}{2\pi}\left.\theta\right|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}-1\end{align*}
+\frac{1}{2\pi\ji}\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}} & =\frac{1}{2\pi}\left.\theta\right|_{-\frac{\pi}{2}}^{\frac{\pi}{2}}-1
+\end{align*}
 
 \end_inset
 
@@ -9508,8 +9798,10 @@ das uneigentliche Integral
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}}=-\ji\pi,\qquad x_{0}>0\label{eq:analysis_halfplane_right_z_z0}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{-\ji\infty}^{\ji\infty}\frac{\tdc z}{z-z_{0}}=-\ji\pi,\qquad x_{0}>0\label{eq:analysis_halfplane_right_z_z0}
+\end{equation}
 
 \end_inset
 
@@ -9558,7 +9850,7 @@ Fourier
 Laplace
 \noun default
 -Transformation
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -9653,8 +9945,10 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\infty}}-\lim_{\varepsilon\rightarrow\infty}\left[\int_{-\ji\infty}^{\ji(y_{0}-\varepsilon)}+\int_{\ji(y_{0}+\varepsilon)}^{\ji\infty}+\int_{C_{\varepsilon}}\right]=0\mperiod\]
+\begin_inset Formula 
+\[
+\int_{C_{\infty}}-\lim_{\varepsilon\rightarrow\infty}\left[\int_{-\ji\infty}^{\ji(y_{0}-\varepsilon)}+\int_{\ji(y_{0}+\varepsilon)}^{\ji\infty}+\int_{C_{\varepsilon}}\right]=0\mperiod
+\]
 
 \end_inset
 
@@ -9692,8 +9986,10 @@ Cauchy
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z\label{eq:analysis_halfplane_right_x0}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z\label{eq:analysis_halfplane_right_x0}
+\end{equation}
 
 \end_inset
 
@@ -9714,8 +10010,10 @@ Mit der Substitution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f\left(z_{0}+\varepsilon\expf^{-\ji\theta}\right)\tic\theta\]
+\begin_inset Formula 
+\[
+\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}f\left(z_{0}+\varepsilon\expf^{-\ji\theta}\right)\tic\theta
+\]
 
 \end_inset
 
@@ -9740,8 +10038,10 @@ an.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\, f(z_{0})\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\tic\theta=\ji\pi\, f(z_{0})\label{eq:analysis_halfplane_indented_path}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\lim_{\varepsilon\rightarrow0}\int_{C_{\varepsilon}}\frac{f(z)}{z-z_{0}}\tic z=\ji\, f(z_{0})\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\tic\theta=\ji\pi\, f(z_{0})\label{eq:analysis_halfplane_indented_path}
+\end{equation}
 
 \end_inset
 
@@ -9834,8 +10134,10 @@ Jordan
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\ji\pi\, f(z_{0})\]
+\begin_inset Formula 
+\[
+\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-z_{0}}\tic z=-\ji\pi\, f(z_{0})
+\]
 
 \end_inset
 
@@ -9847,8 +10149,10 @@ und deshalb
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-f(\ji y_{0})=\frac{\ji}{\pi}\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-\ji y_{0}}\tic z=\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y\label{eq:analysis_halfplane_indented_result}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+f(\ji y_{0})=\frac{\ji}{\pi}\vp\int_{-\ji\infty}^{\ji\infty}\frac{f(z)}{z-\ji y_{0}}\tic z=\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y\label{eq:analysis_halfplane_indented_result}
+\end{equation}
 
 \end_inset
 
@@ -9887,8 +10191,10 @@ reference "tab:analysis_inf_integrals_poisson"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{x_{0}\rightarrow0}f(z_{0})=\frac{\ji}{\pi}\lim_{x_{0}\rightarrow0}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y,\qquad\reop(z_{0})\geq0\]
+\begin_inset Formula 
+\[
+\lim_{x_{0}\rightarrow0}f(z_{0})=\frac{\ji}{\pi}\lim_{x_{0}\rightarrow0}\int_{-\infty}^{\infty}\frac{(y-y_{0})f(\ji y)}{|\ji y-z_{0}|^{2}}\tic y=\frac{\ji}{\pi}\int_{-\infty}^{\infty}\frac{f(\ji y)}{y-y_{0}}\tic y,\qquad\reop(z_{0})\geq0
+\]
 
 \end_inset
 
@@ -9922,7 +10228,7 @@ reference "eq:analysis_halfplane_indented_result"
 Hilbert
 \noun default
 -Transformation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10016,8 +10322,10 @@ Hilbert
 
 \begin_deeper
 \begin_layout Standard
-\begin_inset Formula \[
-u(0,y_{0})+\ji v(0,y_{0})=-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y+\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y\]
+\begin_inset Formula 
+\[
+u(0,y_{0})+\ji v(0,y_{0})=-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y+\frac{\ji}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y
+\]
 
 \end_inset
 
@@ -10038,9 +10346,11 @@ description "\\noun{Hilbert}-Transformation"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat*}{2}
+\begin_inset Formula 
+\begin{alignat*}{2}
 u(0,y_{0}) & =-\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{v(0,y)}{y-y_{0}}\tic y &  & =\mathcal{H}\{v(0,y_{0})\}\\
-v(0,y_{0}) & =\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y &  & =-\mathcal{H}\{u(0,y_{0})\}\end{alignat*}
+v(0,y_{0}) & =\frac{1}{\pi}\vp\int_{-\infty}^{\infty}\frac{u(0,y)}{y-y_{0}}\tic y &  & =-\mathcal{H}\{u(0,y_{0})\}
+\end{alignat*}
 
 \end_inset
 
@@ -10083,8 +10393,10 @@ Jordan
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{|z|\rightarrow\infty}\left|z\frac{f(z)}{z-z_{0}}\right|=\lim_{|z|\rightarrow\infty}\left|\frac{f(z)}{1-z_{0}/z}\right|=\lim_{|z|\rightarrow\infty}|f(z)|=0\mperiod\]
+\begin_inset Formula 
+\[
+\lim_{|z|\rightarrow\infty}\left|z\frac{f(z)}{z-z_{0}}\right|=\lim_{|z|\rightarrow\infty}\left|\frac{f(z)}{1-z_{0}/z}\right|=\lim_{|z|\rightarrow\infty}|f(z)|=0\mperiod
+\]
 
 \end_inset
 
@@ -10136,7 +10448,7 @@ Weitere Voraussetzungen für die Anwendbarkeit der Berechnungsformeln bestehen
 
  auf dem jeweiligen Integrationsweg analytisch (sowie beschränkt) und das
  zugeordnete Integral konvergent
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10172,7 +10484,7 @@ status collapsed
 
 
 \backslash
-headingmath{
+tocmath{
 \backslash
 alpha 
 \backslash
@@ -10190,7 +10502,7 @@ Um
 Jordan
 \noun default
 's Lemma
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10245,8 +10557,10 @@ reference "fig:analysis_real_inf_integral"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z\]
+\begin_inset Formula 
+\[
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{w(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z
+\]
 
 \end_inset
 
@@ -10258,8 +10572,10 @@ Ausgehend von dem Ergebnis
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z,\label{eq:analysis_inf_integral}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+2\pi\ji\sum_{\imop(z_{n})>0}\res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}=\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z,\label{eq:analysis_inf_integral}
+\end{equation}
 
 \end_inset
 
@@ -10280,9 +10596,11 @@ l separieren.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 -2\pi\sum_{\imop(z_{n})>0}\imop\left\{ \res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}\right\}  & =\reop\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z\\
-2\pi\sum_{\imop(z_{n})>0}\reop\left\{ \res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z\end{align*}
+2\pi\sum_{\imop(z_{n})>0}\reop\left\{ \res{z_{n}}{\left[\expf^{\ji\alpha z}f(z)\right]}\right\}  & =\imop\int_{-\infty}^{\infty}\expf^{\ji\alpha z}f(z)\tic z
+\end{align*}
 
 \end_inset
 
@@ -10306,7 +10624,7 @@ reference "eq:analysis_inf_integral"
 Laplace
 \noun default
 -Transformation
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -10492,8 +10810,10 @@ reference "sec:analysis_jordan"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\expf^{\beta z}f(z)\tic z\]
+\begin_inset Formula 
+\[
+\lim_{r\rightarrow\infty}\oint_{C}w(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{g(z)}=\underbrace{\lim_{r\rightarrow\infty}\int_{C_{\infty}}\expf^{\ji\alpha z}f(z)\tic z}_{0}+\int_{z=-\ji\infty}^{\ji\infty}\expf^{\beta z}f(z)\tic z
+\]
 
 \end_inset
 
@@ -10501,8 +10821,10 @@ reference "sec:analysis_jordan"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\int_{z=-\ji\infty}^{\ji\infty}\expf^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\expf^{\beta z}f(z)\right]},\qquad\beta>0\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\int_{z=-\ji\infty}^{\ji\infty}\expf^{\beta z}f(z)\tic z=2\pi\ji\sum_{\reop(z_{n})<0}\res{z_{n}}{\left[\expf^{\beta z}f(z)\right]},\qquad\beta>0
+\end{equation}
 
 \end_inset
 
@@ -10612,8 +10934,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\sum_{\imop(z_{n})>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop(z_{n})<0}\left[\res{z_{n}}{f(z)}\right]\mperiod\]
+\begin_inset Formula 
+\[
+\sum_{\imop(z_{n})>0}\left[\res{z_{n}}{f(z)}\right]=-\sum_{\imop(z_{n})<0}\left[\res{z_{n}}{f(z)}\right]\mperiod
+\]
 
 \end_inset
 
@@ -10649,7 +10973,7 @@ Berechnung uneigentlicher Integrale mit Hilfe von Residuen
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="9" columns="3">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -10716,7 +11040,8 @@ pos.-reell
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop(z)>0
+}
 }f(z)=0}$
 \end_inset
 
@@ -10757,7 +11082,8 @@ neg.-reell
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop(z)<0
+}
 }f(z)=0}$
 \end_inset
 
@@ -10798,7 +11124,8 @@ pos.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop(z)>0
+}
 }f(z)=0}$
 \end_inset
 
@@ -10839,7 +11166,8 @@ neg.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop(z)<0
+}
 }f(z)=0}$
 \end_inset
 
@@ -10883,7 +11211,8 @@ neg.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)>0}
+\imop(z)>0
+}
 }z\, f(z)=0}$
 \end_inset
 
@@ -10927,7 +11256,8 @@ neg.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\imop(z)<0}
+\imop(z)<0
+}
 }z\, f(z)=0}$
 \end_inset
 
@@ -10971,7 +11301,8 @@ neg.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)>0}
+\reop(z)>0
+}
 }z\, f(z)=0}$
 \end_inset
 
@@ -11015,7 +11346,8 @@ neg.-imag.
 
 \size footnotesize
 \begin_inset Formula $\mtab{\lim_{\substack{|z|\rightarrow\infty\\
-\reop(z)<0}
+\reop(z)<0
+}
 }z\, f(z)=0}$
 \end_inset
 
@@ -11038,7 +11370,7 @@ neg.-imag.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11048,7 +11380,7 @@ Uneigentliche Integrale|)
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11061,7 +11393,7 @@ Integral!uneigentliches|)
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -11094,7 +11426,7 @@ thisjob{analysis}%
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,math"
+bibfiles "math,electrical"
 options "geralpha"
 
 \end_inset
@@ -11105,6 +11437,7 @@ options "geralpha"
 \begin_layout Standard
 \begin_inset CommandInset index_print
 LatexCommand printindex
+type "idx"
 
 \end_inset
 

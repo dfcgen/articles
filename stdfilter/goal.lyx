@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -79,7 +97,7 @@ name "sec:approx_ampl"
 \begin_layout Standard
 Bei der Annäherung einer Zielfunktion im Frequenzbereich sind im allgemeinen
  zwei systemtheoretische Größen interessant: die Dämpfung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -110,7 +128,7 @@ description "Betrag von $\\lps$"
 \end_inset
 
  sowie der Phasengang
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -147,7 +165,7 @@ description "Phase"
 Tschebyscheff
 \noun default
 -) Approximation des Amplitudenganges
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -229,7 +247,7 @@ key "Henderson:1958"
 \end_inset
 
  Dazu wird üblicherweise statt der Amplitudencharakteristik
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -256,7 +274,7 @@ description "Drosselung"
 \end_inset
 
 , welche auch Drosselung
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -270,8 +288,10 @@ Drosselung
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\mperiod\label{eq:approx_discrimination}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\drf^{2}(\omega)}}\mperiod\label{eq:approx_discrimination}
+\end{equation}
 
 \end_inset
 
@@ -410,8 +430,10 @@ Für die Verwendung bekannter mathematischer Lösungsfunktionen der gleichmäßi
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\, g(\omega)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\drf(\omega)=\sigma\, g(\omega)
+\end{equation}
 
 \end_inset
 
@@ -475,7 +497,7 @@ Approximationskenngrößen
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="4" columns="5">
-<features>
+<features tabularvalignment="middle">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
 <column alignment="center" valignment="top" width="0">
@@ -845,8 +867,10 @@ Im Zusammenhang mit der Approximationsfunktion soll noch kurz angemerkt
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\sigma^{2}g^{2}(\omega)\right]\]
+\begin_inset Formula 
+\[
+\atf(\omega)=-20\log\left|\trf(\ji\omega)\right|=10\log\left[1+{\drf}^{2}(\omega)\right]=10\log\left[1+\sigma^{2}g^{2}(\omega)\right]
+\]
 
 \end_inset
 
@@ -866,8 +890,10 @@ aus den Nullstellen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\tdiff{\atf(\omega)}{\omega}=\frac{10}{\ln10}\cdot\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}\]
+\begin_inset Formula 
+\[
+\tdiff{\atf(\omega)}{\omega}=\frac{10}{\ln10}\cdot\frac{2\sigma^{2}g(\omega)\, g'(\omega)}{1+\sigma^{2}g^{2}(\omega)}\qquad\Rightarrow\qquad\left.g(\omega)\, g'(\omega)=0\right|_{\omega=\zn{\omega}{}}
+\]
 
 \end_inset
 
@@ -977,8 +1003,10 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Quotation
-\begin_inset Formula \begin{equation}
-\left\Vert f-g_{n}\right\Vert _{\infty}=\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\mbox{Min.}\label{eq:approx_cheby_goal}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\left\Vert f-g_{n}\right\Vert _{\infty}=\max_{a\leq x\leq b}\left|f(x)-g_{n}(x)\right|\Rightarrow\mbox{Min.}\label{eq:approx_cheby_goal}
+\end{equation}
 
 \end_inset
 
@@ -1078,10 +1106,13 @@ key "Gumowski:1958"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 f(\omega)=\left\{ \begin{array}{ll}
 0 & \quad(0\leq\omega\leq\omega_{g})\\
-\infty & \quad(\omega_{s}\leq\omega<\infty)\end{array}\right.\]
+\infty & \quad(\omega_{s}\leq\omega<\infty)
+\end{array}\right.
+\]
 
 \end_inset
 
@@ -1164,8 +1195,10 @@ reference "fig:lp_tol_scheme"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat*}{2}
-\atf_{\textup{min}} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{\textup{max}} & =10\log[1+\drf^{2}(\omega_{g})]\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\atf_{\textup{min}} & =10\log[1+\drf^{2}(\omega_{s})] & \atf_{\textup{max}} & =10\log[1+\drf^{2}(\omega_{g})]
+\end{xalignat*}
 
 \end_inset
 
@@ -1182,8 +1215,10 @@ Umgekehrt kann man aus vorgegebenen Dämpfungswerten den Skalierungsfaktor
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\sigma=\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{\textup{max}}/10}-1}}{\drf(\omega_{g})}\]
+\begin_inset Formula 
+\[
+\sigma=\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\drf(\omega_{s})}=\frac{\sqrt{10^{\atf_{\textup{max}}/10}-1}}{\drf(\omega_{g})}
+\]
 
 \end_inset
 

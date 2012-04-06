@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 2
 \tocdepth 2
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -76,7 +94,7 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -106,7 +124,7 @@ Amplitudencharakteristik
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -120,7 +138,7 @@ Der erste Typ des
  Tschebyscheff
 \noun default
 -Tiefpaß
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -143,7 +161,7 @@ noun{Tschebyscheff}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -195,8 +213,10 @@ key "Zverev:1967,Chen:1995,Fritzsche:1979a"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\Tn_{n}(\omega)\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\drf(\omega)=\sigma\Tn_{n}(\omega)
+\end{equation}
 
 \end_inset
 
@@ -272,10 +292,13 @@ key "Meinardus:1964"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \Tn_{n}(\omega)=\begin{cases}
 \cos(n\arccos\omega) & \quad(\left|\omega\right|\leq1)\\
-\cosh(n\arcosh\omega) & \quad(\left|\omega\right|>1)\end{cases}\]
+\cosh(n\arcosh\omega) & \quad(\left|\omega\right|>1)
+\end{cases}
+\]
 
 \end_inset
 
@@ -342,8 +365,10 @@ reference "fig:chebyt_plot"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\Tn_{n}^{2}(\omega)}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\Tn_{n}^{2}(\omega)}}
+\end{equation}
 
 \end_inset
 
@@ -489,8 +514,10 @@ ngangs.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\omega_{k}=\cos\left(k\frac{\pi}{2n}\right),\qquad k=0,1,2,\ldots,n-1\]
+\begin_inset Formula 
+\[
+\omega_{k}=\cos\left(k\frac{\pi}{2n}\right),\qquad k=0,1,2,\ldots,n-1
+\]
 
 \end_inset
 
@@ -529,8 +556,10 @@ reference "tab:approx_ampl_interval"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\varepsilon=1-\frac{1}{\sqrt{1+\sigma^{2}}}\mperiod\]
+\begin_inset Formula 
+\[
+\varepsilon=1-\frac{1}{\sqrt{1+\sigma^{2}}}\mperiod
+\]
 
 \end_inset
 
@@ -547,9 +576,11 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
+\begin_inset Formula 
+\begin{xalignat*}{2}
 \atf_{\textup{max}} & =-20\log\trf(\omega_{g})=10\log(1+\sigma^{2}), & \sigma & =\sqrt{10^{\atf_{\textup{max}}/10}-1}\\
-\atf_{\textup{min}} & =-20\log\trf(\omega_{s})=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right], & \sigma & =\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\cosh(n\arcosh\omega_{s})}\end{xalignat*}
+\atf_{\textup{min}} & =-20\log\trf(\omega_{s})=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right], & \sigma & =\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\cosh(n\arcosh\omega_{s})}
+\end{xalignat*}
 
 \end_inset
 
@@ -566,8 +597,10 @@ Aus diesen Abhängigkeiten kann man durch Gleichsetzen der Ausdrücke für
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-n\geq\frac{\arcosh\sqrt{\frac{10^{\atf_{\textup{min}}/10}-1}{10^{\atf_{\textup{max}}/10}-1}}}{\arcosh\omega_{s}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+n\geq\frac{\arcosh\sqrt{\frac{10^{\atf_{\textup{min}}/10}-1}{10^{\atf_{\textup{max}}/10}-1}}}{\arcosh\omega_{s}}
+\end{equation}
 
 \end_inset
 
@@ -594,8 +627,10 @@ Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega)}\]
+\begin_inset Formula 
+\[
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega)}
+\]
 
 \end_inset
 
@@ -615,8 +650,10 @@ Laplace
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\lps/\ji)}\mperiod\]
+\begin_inset Formula 
+\[
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\lps/\ji)}\mperiod
+\]
 
 \end_inset
 
@@ -628,9 +665,11 @@ An den Polstellen muß der Nenner verschwinden, was heißt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 1+\sigma^{2}\Tn_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
-\Tn_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\mperiod\label{eq:filter_cheby1_pole_cond}\end{align}
+\Tn_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\mperiod\label{eq:filter_cheby1_pole_cond}
+\end{align}
 
 \end_inset
 
@@ -655,8 +694,10 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\cos(nu+\ji nv)=\pm\ji\frac{1}{\sigma}\mperiod\]
+\begin_inset Formula 
+\[
+\cos(nu+\ji nv)=\pm\ji\frac{1}{\sigma}\mperiod
+\]
 
 \end_inset
 
@@ -672,9 +713,11 @@ Nimmt man das Additionstheorem
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \cos(nu+\ji nv)=\cos(nu)\cos(\ji nv)-\sin(nu)\sin(\ji nv) & =\pm\ji\frac{1}{\sigma}\\
-\cos(nu)\cosh(nv)-\ji\sin(nu)\sinh(nv) & =\pm\ji\frac{1}{\sigma}\end{align*}
+\cos(nu)\cosh(nv)-\ji\sin(nu)\sinh(nv) & =\pm\ji\frac{1}{\sigma}
+\end{align*}
 
 \end_inset
 
@@ -687,8 +730,10 @@ Nimmt man das Additionstheorem
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\cos(nu)\cosh(nv) & =0 & -\sin(nu)\sinh(nv) & =\pm\frac{1}{\sigma}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\cos(nu)\cosh(nv) & =0 & -\sin(nu)\sinh(nv) & =\pm\frac{1}{\sigma}
+\end{xalignat*}
 
 \end_inset
 
@@ -726,10 +771,12 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 -\sin\left(k\pi-\frac{\pi}{2}\right)\:\sinh(nv) & =\pm\frac{1}{\sigma}\\
 \pm\sinh(nv) & =\pm\frac{1}{\sigma}\\
-v & =\frac{1}{n}\arsinh\frac{1}{\sigma}=\textrm{konstant.}\end{align*}
+v & =\frac{1}{n}\arsinh\frac{1}{\sigma}=\textrm{konstant.}
+\end{align*}
 
 \end_inset
 
@@ -749,9 +796,11 @@ Mit diesen Ergebnissen kehren wir zur Substitution
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \pn{\lps}{k} & =\ji\cos\pn{z}{k}=\ji\cos(\pn{u}{k}+\ji v)\\
- & =\ji\cos\pn{u}{k}\,\cosh v+\sin\pn{u}{k}\,\sinh v\end{align*}
+ & =\ji\cos\pn{u}{k}\,\cosh v+\sin\pn{u}{k}\,\sinh v
+\end{align*}
 
 \end_inset
 
@@ -779,9 +828,11 @@ Einsetzen von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \reop\pn{\lps}{k} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\sin\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\\
-\imop\pn{\lps}{k} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\mperiod\end{align*}
+\imop\pn{\lps}{k} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\,\cos\left(\frac{2k-1}{2}\cdot\frac{\pi}{n}\right)\mperiod
+\end{align*}
 
 \end_inset
 
@@ -794,8 +845,10 @@ Interpretiert man beide Anteile geometrisch, dann ist zu bemerken, daß alle
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right) & \omega_{H} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+\alpha_{H} & =\sinh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right) & \omega_{H} & =\cosh\left(\frac{1}{n}\arsinh\frac{1}{\sigma}\right)
+\end{xalignat}
 
 \end_inset
 
@@ -1011,8 +1064,10 @@ Wobei praktischerweise mit
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pn{\lps}{\nu}=-\alpha_{H}\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\omega_{H}\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n
+\end{equation}
 
 \end_inset
 
@@ -1074,7 +1129,7 @@ key "Fritzsche:1979a"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

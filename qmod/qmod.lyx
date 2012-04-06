@@ -4,14 +4,17 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
+%%\input{all-inc}
 
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
+\options noprefix
 \use_default_options true
 \begin_modules
-emphasized
+helpers
+mathext
+electrical
 \end_modules
 \maintain_unincluded_children false
 \language german
@@ -28,7 +31,7 @@ emphasized
 \font_sf_scale 100
 \font_tt_scale 100
 
-\graphics default
+\graphics dvips
 \default_output_format default
 \output_sync 0
 \bibtex_command default
@@ -36,10 +39,20 @@ emphasized
 \float_placement !h
 \paperfontsize default
 \spacing single
-\use_hyperref false
+\use_hyperref true
+\pdf_bookmarks true
+\pdf_bookmarksnumbered false
+\pdf_bookmarksopen true
+\pdf_bookmarksopenlevel 1
+\pdf_breaklinks false
+\pdf_pdfborder true
+\pdf_colorlinks true
+\pdf_backref false
+\pdf_pdfusetitle true
+\pdf_quoted_options "ps2pdf,pdfpagemode=UseOutlines,pdfview=FitH,pdfstartview=FitH,pdfpagelayout=SinglePage"
 \papersize a4paper
 \use_geometry false
-\use_amsmath 1
+\use_amsmath 2
 \use_esint 0
 \use_mhchem 1
 \use_mathdots 1
@@ -3210,7 +3223,7 @@ Quadraturmodulator|)
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp"
+bibfiles "electrical"
 options "geralpha"
 
 \end_inset

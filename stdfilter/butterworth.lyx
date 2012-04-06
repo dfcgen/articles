@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !tbh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \leftmargin 2cm
 \rightmargin 2cm
 \secnumdepth 3
@@ -44,8 +61,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -72,7 +90,7 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -107,7 +125,7 @@ Der
 Butterworth
 \noun default
 -Tiefpaß
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -130,7 +148,7 @@ noun{Butterworth}
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -160,8 +178,10 @@ noun{Butterworth}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\omega^{2n}}}\label{eq:filter_butter_amplitude}
+\end{equation}
 
 \end_inset
 
@@ -195,8 +215,10 @@ reference "eq:approx_discrimination"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\drf(\omega)=\sigma\omega^{n}\mperiod\label{eq:filter_butter_chfunc}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\drf(\omega)=\sigma\omega^{n}\mperiod\label{eq:filter_butter_chfunc}
+\end{equation}
 
 \end_inset
 
@@ -210,7 +232,7 @@ Da die Kreisfrequenz
 
  nur in der höchsten Potenz vorhanden ist, werden solche Systeme auch Potenzfilt
 er
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -220,7 +242,7 @@ Potenzfilter
 \end_inset
 
  genannt und als maximal
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -387,8 +409,10 @@ reference "sec:approx_ampl"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\trf(\omega_{g}) & =\frac{1}{\sqrt{1+\sigma^{2}}} & \sigma & =\sqrt{\frac{1}{\trf^{2}(1)}-1},\qquad(\omega_{g}=1)\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\trf(\omega_{g}) & =\frac{1}{\sqrt{1+\sigma^{2}}} & \sigma & =\sqrt{\frac{1}{\trf^{2}(1)}-1},\qquad(\omega_{g}=1)
+\end{xalignat*}
 
 \end_inset
 
@@ -400,8 +424,10 @@ gilt und deshalb für die maximale Dämpfung:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\atf_{\textup{max}} & =-20\log\trf(\omega_{g})=10\log(1+\sigma^{2}), & \sigma & =\sqrt{10^{\atf_{\textup{max}}/10}-1}\mperiod\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\atf_{\textup{max}} & =-20\log\trf(\omega_{g})=10\log(1+\sigma^{2}), & \sigma & =\sqrt{10^{\atf_{\textup{max}}/10}-1}\mperiod
+\end{xalignat*}
 
 \end_inset
 
@@ -413,8 +439,10 @@ In gleicher Art und Weise kann man für die minimale Dämpfung im Sperrbereich
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{xalignat*}{2}
-\atf_{\textup{min}} & =-20\log\trf(\omega_{s})=10\log(1+\sigma^{2}\omega_{s}^{2n}), & \sigma & =\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\omega_{s}^{n}}\end{xalignat*}
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\atf_{\textup{min}} & =-20\log\trf(\omega_{s})=10\log(1+\sigma^{2}\omega_{s}^{2n}), & \sigma & =\frac{\sqrt{10^{\atf_{\textup{min}}/10}-1}}{\omega_{s}^{n}}
+\end{xalignat*}
 
 \end_inset
 
@@ -464,8 +492,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-10^{\atf_{\textup{min}}/10}-1=\omega_{s}^{2n}(10^{\atf_{\textup{max}}/10}-1)\]
+\begin_inset Formula 
+\[
+10^{\atf_{\textup{min}}/10}-1=\omega_{s}^{2n}(10^{\atf_{\textup{max}}/10}-1)
+\]
 
 \end_inset
 
@@ -486,8 +516,10 @@ Butterworth
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-n\geq\frac{\log\sqrt{\frac{10^{\atf_{\textup{min}}/10}-1}{10^{\atf_{\textup{max}}/10}-1}}}{\log\omega_{s}}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+n\geq\frac{\log\sqrt{\frac{10^{\atf_{\textup{min}}/10}-1}{10^{\atf_{\textup{max}}/10}-1}}}{\log\omega_{s}}
+\end{equation}
 
 \end_inset
 
@@ -525,8 +557,10 @@ ie
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\left(\frac{\omega}{\omega_{\textup{3dB}}}\right)^{2n}}}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\omega)=\frac{1}{\sqrt{1+\left(\frac{\omega}{\omega_{\textup{3dB}}}\right)^{2n}}}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -566,8 +600,10 @@ etc
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\omega^{2n}}\]
+\begin_inset Formula 
+\[
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\omega^{2n}}
+\]
 
 \end_inset
 
@@ -617,8 +653,10 @@ key "Papoulis:1962"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\left(\lps/\ji\right)^{2n}}\mperiod\label{eq:filter_butter_amplitude_inf}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\left(\lps/\ji\right)^{2n}}\mperiod\label{eq:filter_butter_amplitude_inf}
+\end{equation}
 
 \end_inset
 
@@ -645,9 +683,11 @@ reference "eq:filter_butter_amplitude_inf"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 1+\sigma^{2}\left(\frac{\lps}{\ji}\right)^{2n} & =0\\
-\lps^{2n} & =(-1)^{n+1}\sigma^{-2}\mperiod\end{align*}
+\lps^{2n} & =(-1)^{n+1}\sigma^{-2}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -693,12 +733,16 @@ In seiner Exponentialform
 status open
 
 \begin_layout Plain Layout
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\left\{ \begin{array}{l}
 \expf^{\ji\frac{2k\pi}{2n}}\\
-\expf^{\ji\frac{\pi+2k\pi}{2n}}\end{array}\right.=\frac{1}{\sqrt[n]{\sigma}}\cdot\left\{ \begin{array}{ll}
+\expf^{\ji\frac{\pi+2k\pi}{2n}}
+\end{array}\right.=\frac{1}{\sqrt[n]{\sigma}}\cdot\left\{ \begin{array}{ll}
 \expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
-\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.,\qquad k=0,1,\ldots,2n-1\]
+\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})
+\end{array}\right.,\qquad k=0,1,\ldots,2n-1
+\]
 
 \end_inset
 
@@ -711,10 +755,13 @@ status open
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \pn{\lps}{k}=\frac{1}{\sqrt[n]{\sigma}}\,\left\{ \begin{array}{ll}
 \expf^{\ji k\frac{\pi}{n}} & \qquad(n\textrm{ ungerade})\\
-\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})\end{array}\right.,\qquad k=0,1,\ldots,2n-1\mperiod\]
+\expf^{\ji\left(k+\frac{1}{2}\right)\frac{\pi}{n}} & \qquad(n\textrm{ gerade})
+\end{array}\right.,\qquad k=0,1,\ldots,2n-1\mperiod
+\]
 
 \end_inset
 
@@ -747,8 +794,10 @@ Butterworth
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}},\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\expf^{\ji\frac{\pi}{2}}\expf^{\ji\left(\nu-\frac{1}{2}\right)\frac{\pi}{n}}=\frac{\ji}{\sqrt[n]{\sigma}}\expf^{\ji\frac{2\nu-1}{2}\cdot\frac{\pi}{n}},\qquad\nu=1,2,\ldots,n\label{eq:filter_butter_poles}
+\end{equation}
 
 \end_inset
 
@@ -775,8 +824,10 @@ Euler
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right],\qquad\nu=1,2,\ldots,n\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\pn{\lps}{\nu}=\frac{1}{\sqrt[n]{\sigma}}\left[-\sin\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)+\ji\cos\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)\right],\qquad\nu=1,2,\ldots,n
+\end{equation}
 
 \end_inset
 
@@ -955,7 +1006,7 @@ amm) verschoben werden.
 
 \begin_layout Standard
 Allgemein gelten Polkenngrößen
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -967,7 +1018,7 @@ Pol!kenngrößen@-kenngrößen
  als geeignet zur Abschätzung des Systemverhaltens im Frequenzbereich.
  Dabei sind es vor allem zwei Größen, die entsprechende Bedeutung erlangt
  haben -- die Polfrequenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -981,7 +1032,7 @@ Pol!frequenz@-frequenz
 \end_inset
 
  und die Polgüte
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1034,8 +1085,10 @@ resp
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})\]
+\begin_inset Formula 
+\[
+(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})
+\]
 
 \end_inset
 
@@ -1055,8 +1108,10 @@ Laplace
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2},\end{equation}
+\begin_inset Formula 
+\begin{equation}
+(\lps-\pn{\lps}{})(\lps-\cjgt{\pn{\lps}{}})=\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2},
+\end{equation}
 
 \end_inset
 
@@ -1066,8 +1121,10 @@ Laplace
 \begin_layout Standard
 wodurch Polfrequenz und -güte letztlich definiert werden.
  Koeffizientenvergleich beider Darstellungen, also
-\begin_inset Formula \[
-\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})\]
+\begin_inset Formula 
+\[
+\lps^{2}+\frac{\omega_{0}}{Q}\lps+\omega_{0}^{2}=\lps^{2}-2\lps\reop(\pn{\lps}{})+\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})
+\]
 
 \end_inset
 
@@ -1087,8 +1144,10 @@ führt sofort zur Definition der Polfrequenz
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-\omega_{0}=\sqrt{\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})}=\left|\pn{\lps}{}\right|\label{eq:filter_pole_frequency}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\omega_{0}=\sqrt{\reop^{2}(\pn{\lps}{})+\imop^{2}(\pn{\lps}{})}=\left|\pn{\lps}{}\right|\label{eq:filter_pole_frequency}
+\end{equation}
 
 \end_inset
 
@@ -1104,10 +1163,12 @@ Die Polgüte
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \frac{\omega_{0}}{Q} & =-2\reop(\pn{\lps}{})\\
 Q & =-\frac{\omega_{0}}{2\reop(\pn{\lps}{})}=-\frac{\left|\pn{\lps}{}\right|}{2\reop(\pn{\lps}{})}\\
-Q & =\frac{1}{2}\sqrt{1+\left[\frac{\imop(\pn{\lps}{})}{\reop(\pn{\lps}{})}\right]^{2}}=\frac{1}{2}\sqrt{1+\tan^{2}(\ang\pn{\lps}{})}\end{align*}
+Q & =\frac{1}{2}\sqrt{1+\left[\frac{\imop(\pn{\lps}{})}{\reop(\pn{\lps}{})}\right]^{2}}=\frac{1}{2}\sqrt{1+\tan^{2}(\ang\pn{\lps}{})}
+\end{align*}
 
 \end_inset
 
@@ -1133,8 +1194,10 @@ Wobei hier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
-Q=-\frac{1}{2\cos(\ang\pn{\lps}{})}=-\frac{1}{2}\sec(\ang\pn{\lps}{})\mperiod\label{eq:filter_pole_quality}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Q=-\frac{1}{2\cos(\ang\pn{\lps}{})}=-\frac{1}{2}\sec(\ang\pn{\lps}{})\mperiod\label{eq:filter_pole_quality}
+\end{equation}
 
 \end_inset
 
@@ -1150,8 +1213,10 @@ Butterworth
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\omega_{0}=\left|\pn{\lps}{\nu}\right|=\frac{1}{\sqrt[n]{\sigma}}=\textrm{ konstant}\]
+\begin_inset Formula 
+\[
+\omega_{0}=\left|\pn{\lps}{\nu}\right|=\frac{1}{\sqrt[n]{\sigma}}=\textrm{ konstant}
+\]
 
 \end_inset
 
@@ -1163,8 +1228,10 @@ und Polgüte:
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-Q_{\nu}=-\frac{1}{2}\sec\left(\frac{\pi}{2}+\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)=\frac{1}{2}\cosec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+Q_{\nu}=-\frac{1}{2}\sec\left(\frac{\pi}{2}+\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right)=\frac{1}{2}\cosec\left(\frac{2\nu-1}{2}\cdot\frac{\pi}{n}\right),\qquad\nu=1,2,\ldots,n\mperiod
+\end{equation}
 
 \end_inset
 
@@ -1199,7 +1266,7 @@ Pole mit dieser Lage reagieren dann im allgemeinen auch viel empfindlicher
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout

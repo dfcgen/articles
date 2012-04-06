@@ -1,5 +1,5 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrbook
@@ -7,20 +7,28 @@
 \master stdfilter.lyx
 \begin_modules
 theorems-ams
-emphasized
+helpers
 \end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
-\font_roman default
+\language_package default
+\inputencoding auto
+\fontencoding global
+\font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \float_placement !bh
 \paperfontsize default
 \spacing single
@@ -29,9 +37,18 @@ emphasized
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -42,8 +59,9 @@ emphasized
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -70,7 +88,7 @@ Fourier
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -104,7 +122,7 @@ status open
 \end_inset
 
 
-\begin_inset Index
+\begin_inset Index idx
 status open
 
 \begin_layout Plain Layout
@@ -171,7 +189,7 @@ Definition
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -197,8 +215,10 @@ noun{Fourier}
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{xalignat}{2}
-F(\ji\omega) & =\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t & f(t) & =\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\ji\omega)\expf^{\ji\omega t}\tic\omega\label{eq:fourier_transform_def}\end{xalignat}
+\begin_inset Formula 
+\begin{xalignat}{2}
+F(\ji\omega) & =\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t & f(t) & =\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\ji\omega)\expf^{\ji\omega t}\tic\omega\label{eq:fourier_transform_def}
+\end{xalignat}
 
 \end_inset
 
@@ -248,7 +268,7 @@ Dirac
 \end_inset
 
  mit der Eigenschaft (absoluter Konvergenz
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -261,8 +281,10 @@ Konvergenz!absolute
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
-\int_{-\infty}^{\infty}|f(t)|\tic t<\infty\]
+\begin_inset Formula 
+\[
+\int_{-\infty}^{\infty}|f(t)|\tic t<\infty
+\]
 
 \end_inset
 
@@ -313,8 +335,10 @@ Für reelle Zeitfunktionen, welche sich immer in einen geraden und einen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-F(\ji\omega)=2\int_{0}^{\infty}f_{g}(t)\cos(\omega t)\tic t-2\ji\int_{0}^{\infty}f_{u}(t)\sin(\omega t)\tic t\mperiod\]
+\begin_inset Formula 
+\[
+F(\ji\omega)=2\int_{0}^{\infty}f_{g}(t)\cos(\omega t)\tic t-2\ji\int_{0}^{\infty}f_{u}(t)\sin(\omega t)\tic t\mperiod
+\]
 
 \end_inset
 
@@ -338,7 +362,7 @@ Regeln
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -366,7 +390,7 @@ noun{Fourier}
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="12" columns="4">
-<features islongtable="true" headTopDL="true" headBottomDL="true">
+<features islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="top" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
@@ -914,7 +938,7 @@ Korrespondenzen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -941,8 +965,8 @@ noun{Fourier}
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="19" columns="4">
-<features islongtable="true" headTopDL="true" headBottomDL="true">
+<lyxtabular version="3" rows="21" columns="4">
+<features islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
 <column alignment="center" valignment="middle" width="3.5cm">
 <column alignment="center" valignment="top" width="3.5cm">
@@ -1180,7 +1204,8 @@ Rechteckimpuls
 \begin_layout Plain Layout
 \begin_inset Formula $\rect(t)=\begin{cases}
 0, & |t|>T/2\\
-1, & |t|\leq T/2\end{cases}$
+1, & |t|\leq T/2
+\end{cases}$
 \end_inset
 
 
@@ -1510,7 +1535,7 @@ Kreisfunktionen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1522,7 +1547,7 @@ Kreisfunktionen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1554,7 +1579,7 @@ Kreisfunktionen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
+<cell multicolumn="1" alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1566,7 +1591,95 @@ Kreisfunktionen
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Modulation
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(t)\sin(\omega_{0}t)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{\frac{\ji}{2}[F(\omega+\omega_{0})-F(\omega-\omega_{0})]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $f(t)\cos(\omega_{0}t)$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="1" alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{\frac{1}{2}[F(\omega+\omega_{0})+F(\omega-\omega_{0})]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell multicolumn="2" alignment="center" valignment="top" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -1819,7 +1932,7 @@ Systembeziehungen
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="7" columns="2">
-<features islongtable="true" headTopDL="true" headBottomDL="true">
+<features islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="8cm">
 <column alignment="center" valignment="top" width="6cm">
 <row endhead="true">
@@ -2047,7 +2160,7 @@ Uneigentliche Integrale
 \begin_layout Standard
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="3">
-<features islongtable="true" headTopDL="true" headBottomDL="true">
+<features islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="5cm">
 <column alignment="center" valignment="top" width="5cm">
 <column alignment="center" valignment="top" width="4cm">

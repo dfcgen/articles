@@ -1,28 +1,37 @@
-#LyX 1.6.9 created this file. For more info see http://www.lyx.org/
-\lyxformat 345
+#LyX 2.0 created this file. For more info see http://www.lyx.org/
+\lyxformat 413
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\input{all-inc}
-
-%% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
-\options reqno
+\options noprefix,reqno
 \use_default_options false
+\begin_modules
+helpers
+mathext
+\end_modules
+\maintain_unincluded_children false
 \language german
-\inputencoding latin1
+\language_package default
+\inputencoding auto
+\fontencoding global
 \font_roman times
 \font_sans default
 \font_typewriter default
 \font_default_family default
+\use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
 
 \graphics default
+\default_output_format default
+\output_sync 0
+\bibtex_command default
+\index_command default
 \paperfontsize default
 \spacing single
 \use_hyperref true
@@ -41,9 +50,18 @@
 \use_geometry false
 \use_amsmath 2
 \use_esint 0
+\use_mhchem 1
+\use_mathdots 1
 \cite_engine basic
 \use_bibtopic false
+\use_indices false
 \paperorientation portrait
+\suppress_date false
+\use_refstyle 0
+\index Stichwortverzeichnis
+\shortcut idx
+\color #008000
+\end_index
 \secnumdepth 3
 \tocdepth 3
 \paragraph_separation skip
@@ -54,8 +72,9 @@
 \paperpagestyle default
 \tracking_changes false
 \output_changes false
-\author "" 
-\author "" 
+\html_math_output 0
+\html_css_as_file 0
+\html_be_strict false
 \end_header
 
 \begin_body
@@ -148,6 +167,7 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
+set_width "none"
 
 \end_inset
 
@@ -294,7 +314,7 @@ key "Press:1992"
 \begin_layout Section
 
 \noun on
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -351,8 +371,10 @@ description "\\noun{Tschebyscheff}-Funktion erster Art der Ordnung $n$"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\Tn_{n}(x)=\cos(n\arccos x)\mperiod\label{eq:chebyt_cos_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\Tn_{n}(x)=\cos(n\arccos x)\mperiod\label{eq:chebyt_cos_def}
+\end{equation}
 
 \end_inset
 
@@ -376,8 +398,10 @@ Wegen
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{n}(x)=\cosh(n\arcosh x)\]
+\begin_inset Formula 
+\[
+\Tn_{n}(x)=\cosh(n\arcosh x)
+\]
 
 \end_inset
 
@@ -397,8 +421,10 @@ Nimmt man die Substitutionen
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{alignat}{2}
-\Tn_{n}(x) & =\cos(n\varphi), & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}\end{alignat}
+\begin_inset Formula 
+\begin{alignat}{2}
+\Tn_{n}(x) & =\cos(n\varphi), & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}
+\end{alignat}
 
 \end_inset
 
@@ -496,8 +522,10 @@ ie
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{alignat}{2}
-\Tn_{n}(x) & =\cosh(n|\varphi|), & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\mperiod\label{eq:chebyt_iparam_def}\end{alignat}
+\begin_inset Formula 
+\begin{alignat}{2}
+\Tn_{n}(x) & =\cosh(n|\varphi|), & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\mperiod\label{eq:chebyt_iparam_def}
+\end{alignat}
 
 \end_inset
 
@@ -542,8 +570,10 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\Tn_{n}(x)=2x\Tn_{n-1}(x)-\Tn_{n-2}(x)\label{eq:chebyt_recursiv_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\Tn_{n}(x)=2x\Tn_{n-1}(x)-\Tn_{n-2}(x)\label{eq:chebyt_recursiv_def}
+\end{equation}
 
 \end_inset
 
@@ -563,11 +593,13 @@ Die Rekursionsformel kann ausgehend von der Ordnung
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{n+1}(x) & =\cos\left[(n+1)\varphi\right]\\
  & =\cos(n\varphi+\varphi)\\
  & =\cos(n\varphi)\cos\varphi-\sin(n\varphi)\sin\varphi\\
- & =x\Tn_{n}(x)-\sin(n\varphi)\sin\varphi\end{align*}
+ & =x\Tn_{n}(x)-\sin(n\varphi)\sin\varphi
+\end{align*}
 
 \end_inset
 
@@ -583,11 +615,13 @@ Mit der trigonometrischen Multiplikationsformel
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{n+1}(x) & =x\Tn_{n}(x)-\sin(n\varphi)\sin\varphi\\
 2\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\cos\left[(n-1)\varphi\right]+\cos\left[(n+1)\varphi\right]\\
 2\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\Tn_{n-1}(x)+\Tn_{n+1}(x)\\
-\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\Tn_{n-1}(x)\end{align*}
+\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\Tn_{n-1}(x)
+\end{align*}
 
 \end_inset
 
@@ -629,8 +663,10 @@ reference "eq:chebyt_cos_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{0}(x)=1,\qquad\Tn_{1}(x)=x\]
+\begin_inset Formula 
+\[
+\Tn_{0}(x)=1,\qquad\Tn_{1}(x)=x
+\]
 
 \end_inset
 
@@ -681,11 +717,13 @@ key "Abramowitz:1972"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{2}(x) & =2x^{2}-1\\
 \Tn_{3}(x) & =4x^{3}-3x\\
 \Tn_{4}(x) & =8x^{4}-8x^{2}+1\\
-\Tn_{5}(x) & =16x^{5}-20x^{3}+5x\end{align*}
+\Tn_{5}(x) & =16x^{5}-20x^{3}+5x
+\end{align*}
 
 \end_inset
 
@@ -747,10 +785,12 @@ Euler
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{n}(x) & =\cos\varphi=\frac{e^{\ji n\varphi}+e^{-\ji n\varphi}}{2}\\
  & =\frac{(\cos\varphi+\ji\sin\varphi)^{n}+(\cos\varphi-\ji\sin\varphi)^{n}}{2}\\
- & =\frac{(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\,)^{n}+(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\,)^{n}}{2}\end{align*}
+ & =\frac{(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\,)^{n}+(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\,)^{n}}{2}
+\end{align*}
 
 \end_inset
 
@@ -758,8 +798,10 @@ Euler
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\Tn_{n}(x)=\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2}\mperiod\label{eq:chebyt_irrat_def}\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\Tn_{n}(x)=\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2}\mperiod\label{eq:chebyt_irrat_def}
+\end{equation}
 
 \end_inset
 
@@ -808,8 +850,10 @@ reference "eq:chebyt_recursiv_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}\]
+\begin_inset Formula 
+\[
+\Tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}
+\]
 
 \end_inset
 
@@ -821,10 +865,12 @@ und bildet einen Grenzwert wiefolgt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \lim_{x\rightarrow\infty}\frac{\Tn_{n}(x)}{x^{n}} & =\lim_{x\rightarrow\infty}\frac{\sum\limits _{k=0}^{n}a_{k}x^{k}}{x^{n}}\\
  & =\sum_{k=0}^{n}\lim_{x\rightarrow\infty}a_{k}x^{k-n}\\
- & =a_{n}\mperiod\end{align*}
+ & =a_{n}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -851,11 +897,13 @@ reference "eq:chebyt_irrat_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 a_{n} & =\lim_{x\rightarrow\infty}\frac{\Tn_{n}(x)}{x^{n}}\\
  & =\lim_{x\rightarrow\infty}\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2x^{n}}\\
  & =\frac{1}{2}\lim_{x\rightarrow\infty}(1+\sqrt{1-x^{-1}}\,)^{n}+\frac{1}{2}\lim_{x\rightarrow\infty}(1-\sqrt{1-x^{-1}}\,)^{n}\\
-a_{n} & =2^{n-1}\end{align*}
+a_{n} & =2^{n-1}
+\end{align*}
 
 \end_inset
 
@@ -882,15 +930,19 @@ reference "eq:chebyt_cos_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{n}(-1) & =\begin{cases}
 +1 & \quad(n=0,2,4,\ldots)\\
--1 & \quad(n=1,3,5,\ldots)\end{cases}\\
+-1 & \quad(n=1,3,5,\ldots)
+\end{cases}\\
 \Tn_{n}(0) & =\begin{cases}
 +1 & \quad(n=0,4,8,\ldots)\\
 -1 & \quad(n=2,6,10,\ldots)\\
-0 & \quad(n=1,3,5,\ldots)\end{cases}\\
-\Tn_{n}(1) & =1\end{align*}
+0 & \quad(n=1,3,5,\ldots)
+\end{cases}\\
+\Tn_{n}(1) & =1
+\end{align*}
 
 \end_inset
 
@@ -918,11 +970,13 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \Tn_{n}(-x) & =\cos\left[n\arccos(-x)\right]\nonumber \\
  & =\cos\left[n(\arccos x-\pi)\right]\nonumber \\
  & =\cos(n\arccos x-n\pi)\nonumber \\
-\Tn_{n}(-x) & =(-1)^{n}\cos(n\arccos x)=(-1)^{n}\Tn_{n}(x)\label{eq:chebyt_negx}\end{align}
+\Tn_{n}(-x) & =(-1)^{n}\cos(n\arccos x)=(-1)^{n}\Tn_{n}(x)\label{eq:chebyt_negx}
+\end{align}
 
 \end_inset
 
@@ -934,10 +988,13 @@ Die Form des Polynoms kann deshalb folgendermaßen angenommen werden.
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \Tn_{n}(x)=\begin{cases}
 \sum\limits _{k=0}^{n/2}c_{k}x^{2k} & \quad(n=0,2,4,\ldots)\\
-x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \quad(n=1,3,5,\ldots)\end{cases}\label{eq:chebyt_poly}\end{equation}
+x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \quad(n=1,3,5,\ldots)
+\end{cases}\label{eq:chebyt_poly}
+\end{equation}
 
 \end_inset
 
@@ -1084,10 +1141,13 @@ key "Koerner:1988,Oelschlaegel:1974"
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \delta_{n\, m}=\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\begin{cases}
 0 & \quad(n\neq m)\\
-1 & \quad(n=m)\end{cases}\]
+1 & \quad(n=m)
+\end{cases}
+\]
 
 \end_inset
 
@@ -1135,8 +1195,10 @@ reference "eq:chebyt_param_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\mperiod\]
+\begin_inset Formula 
+\[
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\mperiod
+\]
 
 \end_inset
 
@@ -1152,8 +1214,10 @@ Durch Erweiterung des Integrationsintervalls auf
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\, n}\]
+\begin_inset Formula 
+\[
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\, n}
+\]
 
 \end_inset
 
@@ -1166,7 +1230,7 @@ Die rechte Seite der letzten Gleichung enthält das sogenannte
 Kronecker
 \noun default
 -Symbol
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1192,10 +1256,13 @@ noun{Kronecker}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
+\begin_inset Formula 
+\[
 \delta_{m\, n}=\begin{cases}
 0 & \quad(n\neq m)\\
-1 & \quad(n=m)\end{cases}\mperiod\]
+1 & \quad(n=m)
+\end{cases}\mperiod
+\]
 
 \end_inset
 
@@ -1244,10 +1311,12 @@ Imaginäre (oder komplexe) Nullstellen existieren nicht, da
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 y & =0\\
 n\varphi_{k} & =\frac{\pi}{2}+k\pi\\
-\varphi_{k} & =\left(k+\frac{1}{2}\right)\frac{\pi}{n},\qquad k\in\mathbb{Z}\end{align*}
+\varphi_{k} & =\left(k+\frac{1}{2}\right)\frac{\pi}{n},\qquad k\in\mathbb{Z}
+\end{align*}
 
 \end_inset
 
@@ -1263,10 +1332,12 @@ Damit gilt für
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \zn{x}{k} & =\cos\varphi_{k}\nonumber \\
  & =\cos\left[\left(k+\frac{1}{2}\right)\frac{\pi}{n}\right]\nonumber \\
-\zn{x}{k} & =\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right],\qquad k=1,2,\ldots,n-1,n\mperiod\label{eq:chebyt_roots}\end{align}
+\zn{x}{k} & =\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right],\qquad k=1,2,\ldots,n-1,n\mperiod\label{eq:chebyt_roots}
+\end{align}
 
 \end_inset
 
@@ -1501,11 +1572,13 @@ key "Haemmerlin:1992"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \zn{x}{n-k+1} & =\cos\left[\left(n-k+\frac{1}{2}\right)\frac{\pi}{n}\right]\\
  & =\cos\left[\pi-\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right]\\
  & =-\cos\left[\left(k-\frac{1}{2}\right)\frac{\pi}{n}\right]\\
- & =-\zn{x}{k}\end{align*}
+ & =-\zn{x}{k}
+\end{align*}
 
 \end_inset
 
@@ -1530,10 +1603,12 @@ Die Linearfaktordarstellung des Polynoms
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \Tn_{n}(x) & =2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})\\
  & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x-\zn{x}{k})(x+\zn{x}{k})\\
- & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x^{2}-\zn[2]{x}{k})\end{align*}
+ & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x^{2}-\zn[2]{x}{k})
+\end{align*}
 
 \end_inset
 
@@ -1549,8 +1624,10 @@ Für gerades
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Tn_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}(x^{2}-\zn[2]{x}{k})\mperiod\]
+\begin_inset Formula 
+\[
+\Tn_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}(x^{2}-\zn[2]{x}{k})\mperiod
+\]
 
 \end_inset
 
@@ -1598,10 +1675,12 @@ reference "eq:chebyt_cos_def"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \tdiff{x}{\varphi} & =-\sin\varphi\\
  & =-\sqrt{1-\cos^{2}\varphi}\\
- & =-\sqrt{1-x^{2}}\end{align*}
+ & =-\sqrt{1-x^{2}}
+\end{align*}
 
 \end_inset
 
@@ -1621,10 +1700,12 @@ Mit der (in gleicher Art und Weise gewonnenen) Ableitung von
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align*}
+\begin_inset Formula 
+\begin{align*}
 \tdiff{y}{\varphi} & =-n\sin(n\varphi)\\
  & =-n\sqrt{1-\cos^{2}(n\varphi)}\\
- & =-n\sqrt{1-y^{2}}\end{align*}
+ & =-n\sqrt{1-y^{2}}
+\end{align*}
 
 \end_inset
 
@@ -1640,12 +1721,14 @@ ergibt sich
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \Tn'_{n}(x) & =\tdiff{y}{x}\nonumber \\
  & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\Tn_{n}^{2}(x)}{1-\Tn_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
  & =\frac{n\sqrt{1-\cos^{2}(n\arccos x)}}{\sqrt{1-x^{2}}}\nonumber \\
  & =\frac{n\sin(n\arccos x)}{\sqrt{1-x^{2}}}\nonumber \\
-\Tn'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\mperiod\label{eq:chebyt_diff_trigo}\end{align}
+\Tn'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\mperiod\label{eq:chebyt_diff_trigo}
+\end{align}
 
 \end_inset
 
@@ -1685,10 +1768,13 @@ reference "eq:chebyt_poly"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{equation}
+\begin_inset Formula 
+\begin{equation}
 \Tn'_{n}(x)=\begin{cases}
 2x\sum\limits _{k=0}^{n/2}kc_{k}x^{2(k-1)} & \quad(n=0,2,4,\ldots)\\
-\sum\limits _{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & \quad(n=1,3,5,\ldots)\end{cases}\label{eq:chebyt_diff_explicit}\end{equation}
+\sum\limits _{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & \quad(n=1,3,5,\ldots)
+\end{cases}\label{eq:chebyt_diff_explicit}
+\end{equation}
 
 \end_inset
 
@@ -1712,11 +1798,13 @@ reference "eq:chebyt_poly"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \Tn'_{n}(-x) & =\frac{n\sin\left[n\arccos(-x)\right]}{\sin\left[\arccos(-x)\right]}\nonumber \\
  & =\frac{n\sin\left[n(\arccos x-\pi)\right]}{\sin(\arccos x-\pi)}\nonumber \\
  & =-\frac{n\sin(n\arccos x-n\pi)}{\sin(\arccos x)}\nonumber \\
-\Tn'_{n}(-x) & =\frac{n(-1)^{n+1}\sin(n\arccos x)}{\sin(\arccos x)}=(-1)^{n+1}\Tn'_{n}(x)\label{eq:chebyu_negx}\end{align}
+\Tn'_{n}(-x) & =\frac{n(-1)^{n+1}\sin(n\arccos x)}{\sin(\arccos x)}=(-1)^{n+1}\Tn'_{n}(x)\label{eq:chebyu_negx}
+\end{align}
 
 \end_inset
 
@@ -1791,10 +1879,12 @@ reference "eq:chebyt_diff_irrat"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \begin{align}
+\begin_inset Formula 
+\begin{align}
 \tdc\varphi=-\frac{\tdc x}{\sqrt{1-x^{2}}} & =-\frac{\tdc y}{n\sqrt{1-y^{2}}}\nonumber \\
 \frac{\tdc y}{n\sqrt{1-y^{2}}} & =\frac{\tdc x}{\sqrt{1-x^{2}}}\nonumber \\
-(1-x^{2})\left[\Tn'_{n}(x)\right]^{2} & =n^{2}\left[1-\Tn_{n}^{2}(x)\right]\label{eq:chebyt_deqn}\end{align}
+(1-x^{2})\left[\Tn'_{n}(x)\right]^{2} & =n^{2}\left[1-\Tn_{n}^{2}(x)\right]\label{eq:chebyt_deqn}
+\end{align}
 
 \end_inset
 
@@ -1922,7 +2012,7 @@ bestimmt werden können.
 \begin_layout Section
 
 \noun on
-\begin_inset Index
+\begin_inset Index idx
 status collapsed
 
 \begin_layout Plain Layout
@@ -1958,8 +2048,10 @@ Tschebyscheff
 \end_layout
 
 \begin_layout Emph(asized)
-\begin_inset Formula \begin{equation}
-\Un_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\mperiod\end{equation}
+\begin_inset Formula 
+\begin{equation}
+\Un_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\mperiod
+\end{equation}
 
 \end_inset
 
@@ -1990,8 +2082,10 @@ reference "eq:chebyt_diff_trigo"
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Un_{n}(x)=\frac{1}{n+1}\Tn'_{n+1}\]
+\begin_inset Formula 
+\[
+\Un_{n}(x)=\frac{1}{n+1}\Tn'_{n+1}
+\]
 
 \end_inset
 
@@ -2004,8 +2098,10 @@ Es handelt sich bei diesen Funktionen ebenfalls um orthogonale Polynome,
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula \[
-\Un_{n}(x)=2x\Un_{n-1}(x)-\Un_{n-2}(x)\]
+\begin_inset Formula 
+\[
+\Un_{n}(x)=2x\Un_{n-1}(x)-\Un_{n-2}(x)
+\]
 
 \end_inset
 
@@ -2154,7 +2250,7 @@ thisjob{cheby}%
 \begin_layout Standard
 \begin_inset CommandInset bibtex
 LatexCommand bibtex
-bibfiles "adsp,computers,math"
+bibfiles "computers,math,electrical"
 options "geralpha"
 
 \end_inset
