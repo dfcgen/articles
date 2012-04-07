@@ -1984,7 +1984,7 @@ Imaginäre Transformation
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\eF{\ji\xi}{k}=\ji\ellF\left[\epar{\arctan(\sinh\xi)}{k'}\right]\mperiod\label{eq:ellf_imag}
+\eF{\ji\xi}{k}=\ji\ellF\left[\eargs{\arctan(\sinh\xi)}{k'}\right]\mperiod\label{eq:ellf_imag}
 \end{equation}
 
 \end_inset
@@ -2047,7 +2047,7 @@ und deren Ableitung
 \end_inset
 
  kann man das Differential 
-\begin_inset Formula $\tdc\phi/\sqrt{1-k^{2}\sin^{2}\phi}$
+\begin_inset Formula $\tdc\phi/\smash[b]{\sqrt{1-k^{2}\sin^{2}\phi}}$
 \end_inset
 
  relativ einfach mit Hilfe des komplementären Moduls 
@@ -2516,7 +2516,7 @@ reference "eq:ellf_ab"
 \begin_inset Formula 
 \begin{align}
 \int_{x=0}^{\infty}\frac{\tdc x}{\sqrt{(x^{2}+a^{2})(x^{2}+b^{2})}} & =\frac{1}{a}\int_{0}^{\frac{\pi}{2}}\frac{\tdc\phi}{\sqrt{1-(1-b^{2}/a^{2})\sin^{2}\phi}}\nonumber \\
- & =\frac{1}{a}\ellF\left[\epar{\frac{\pi}{2}}{\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp}\right]\nonumber \\
+ & =\frac{1}{a}\ellF\left[\eargs{\frac{\pi}{2}}{\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp}\right]\nonumber \\
  & =\frac{1}{a}\jK\left[\sqrt{1-\left(\frac{b}{a}\right)^{2}}\msp\right]\mperiod\label{eq:ellk_ab_k}
 \end{align}
 
@@ -4771,7 +4771,7 @@ reference "eq:ellf_imag_subst"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-u=\eF{\varphi}{k}=\eF{\ji\xi}{k}=\ji\ellF\left[\epar{\arctan(\sinh\xi)}{k'}\right]=\ji v\mperiod
+u=\eF{\varphi}{k}=\eF{\ji\xi}{k}=\ji\ellF\left[\eargs{\arctan(\sinh\xi)}{k'}\right]=\ji v\mperiod
 \]
 
 \end_inset
@@ -4786,7 +4786,7 @@ Ausgehend von der Zusammenfassung
 \begin_layout Standard
 \begin_inset Formula 
 \[
-v=\ellF\left[\epar{\arctan(\sinh\xi)}{k'}\right]=\eF{\theta}{k'},\qquad\theta=\eam{v}{k'},\qquad\esn{v}{k'}=\sin\theta
+v=\ellF\left[\eargs{\arctan(\sinh\xi)}{k'}\right]=\eF{\theta}{k'},\qquad\theta=\eam{v}{k'},\qquad\esn{v}{k'}=\sin\theta
 \]
 
 \end_inset
@@ -9286,7 +9286,7 @@ name "fig:elltr_general_contour"
 \end_inset
 
 Elliptischer Sinus 
-\begin_inset Formula $\jsn\left[\epar{\reop(u)+\ji\imop(u)}{k}\right]$
+\begin_inset Formula $\jsn\left[\eargs{\reop(u)+\ji\imop(u)}{k}\right]$
 \end_inset
 
  mit Parameterlinien
@@ -10565,7 +10565,7 @@ Weg
 \begin_layout Plain Layout
 
 \size small
-\begin_inset Formula $\jnd\left[\epar{\imop(u)}{k'}\right]$
+\begin_inset Formula $\jnd\left[\eargs{\imop(u)}{k'}\right]$
 \end_inset
 
 
@@ -10580,8 +10580,8 @@ Weg
 
 \size small
 \begin_inset Formula $\begin{array}{rl}
-\incircle{a} & \ji\jsc\left[\epar{\imop(u)/M}{\lambda'}\right]\\
-\incircle{b} & \jnd\left[\epar{\imop(u)/M}{\lambda'}\right]
+\incircle{a} & \ji\jsc\left[\eargs{\imop(u)/M}{\lambda'}\right]\\
+\incircle{b} & \jnd\left[\eargs{\imop(u)/M}{\lambda'}\right]
 \end{array}$
 \end_inset
 
@@ -10637,7 +10637,7 @@ Weg
 \begin_layout Plain Layout
 
 \size small
-\begin_inset Formula $k^{-1}\jns\left[\epar{\reop(u)}{k}\right]$
+\begin_inset Formula $k^{-1}\jns\left[\eargs{\reop(u)}{k}\right]$
 \end_inset
 
 
@@ -10653,7 +10653,7 @@ Weg
 \size small
 \begin_inset Formula $\begin{array}{rl}
 \incircle{a} & \esn{u/M}{\lambda}\\
-\incircle{b} & \lambda^{-1}\jns\left[\epar{\reop(u)/M}{\lambda}\right]
+\incircle{b} & \lambda^{-1}\jns\left[\eargs{\reop(u)/M}{\lambda}\right]
 \end{array}$
 \end_inset
 
@@ -11721,7 +11721,7 @@ reference "eq:ellf_imag"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \[
-\eF{\varphi}{k}=\ji\ellF[\epar{\arctan(\sinh\ji\varphi)}{k'}]
+\eF{\varphi}{k}=\ji\ellF[\eargs{\arctan(\sinh\ji\varphi)}{k'}]
 \]
 
 \end_inset
@@ -16380,7 +16380,7 @@ reference "eq:elltr_general_x"
 \end_inset
 
  die Werte 
-\begin_inset Formula $\jsn\left[\epar{(2\nu+1)K/n}{k}\right]$
+\begin_inset Formula $\jsn\left[\eargs{(2\nu+1)K/n}{k}\right]$
 \end_inset
 
  an.
@@ -16587,7 +16587,7 @@ reference "tab:elliptic_chgarg"
 \end_inset
 
  an den Nullstellen die Werte 
-\begin_inset Formula $k^{-1}\jns\left[\epar{(2\nu+1)K/n}{k}\right]$
+\begin_inset Formula $k^{-1}\jns\left[\eargs{(2\nu+1)K/n}{k}\right]$
 \end_inset
 
  an.
@@ -17153,7 +17153,7 @@ Mit
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\lambda' & =\frac{k'\prod\limits _{\mu=1,3,5,\ldots}^{n-2}{k'}^{2}}{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}\jdn^{2}\left[\epar{(n-\mu)\frac{K}{n}}{k}\right]\,\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\edn[2]{\nu\frac{K}{n}}{k}}\\
+\lambda' & =\frac{k'\prod\limits _{\mu=1,3,5,\ldots}^{n-2}{k'}^{2}}{\prod\limits _{\mu=1,3,5,\ldots}^{n-2}\jdn^{2}\left[\eargs{(n-\mu)\frac{K}{n}}{k}\right]\,\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\edn[2]{\nu\frac{K}{n}}{k}}\\
  & =\frac{{k'}^{n}}{\prod\limits _{\nu=2,4,6,\ldots}^{n-1}\edn[4]{\nu\frac{K}{n}}{k}}
 \end{align*}
 
@@ -17524,7 +17524,7 @@ status collapsed
 \begin_layout Plain Layout
 Diese Relation ist, wenn man die Koeffizientenformel kennt, auch sofort
  aus 
-\begin_inset Formula $\esn{K-\nu\frac{K}{n}}{k}=\jcd\left[\epar{\nu\frac{K}{n}}{k}\right]$
+\begin_inset Formula $\esn{K-\nu\frac{K}{n}}{k}=\jcd\left[\eargs{\nu\frac{K}{n}}{k}\right]$
 \end_inset
 
  abzuleiten.
@@ -18630,9 +18630,9 @@ reference "eq:ellsn_mult"
 \begin_layout Proof
 \begin_inset Formula 
 \begin{align*}
-\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\prod_{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\frac{\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
- & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\mperiod
+\efunc{f'}{\zn{x}{m}}{k} & =\frac{(-2)^{\frac{n}{2}}}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]}\prod_{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\frac{\jsn\left[\eargs{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\eargs{(m+\nu)\frac{K}{n}}{k}\right]}{\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\eargs{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\eargs{(m+\nu)\frac{K}{n}}{k}\right]}{\esn{m\frac{K}{n}}{k}\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\\
+ & =\frac{(-2)^{\frac{n}{2}}\esn{m\frac{K}{n}}{k}\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\eargs{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\eargs{(m+\nu)\frac{K}{n}}{k}\right]}{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\prod\limits _{\nu=1,3,5,\ldots}^{n-1}\esn[2]{\nu\frac{K}{n}}{k}}\mperiod
 \end{align*}
 
 \end_inset
@@ -18700,7 +18700,7 @@ resp
 \begin_layout Proof
 \begin_inset Formula 
 \[
-\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{\esn{2m\frac{K}{n}}{k}}\mperiod
+\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\eargs{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\eargs{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{\esn{2m\frac{K}{n}}{k}}\mperiod
 \]
 
 \end_inset
@@ -18727,7 +18727,7 @@ reference "eq:ellsn_double_arg"
 \begin_layout Proof
 \begin_inset Formula 
 \begin{align*}
-\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\epar{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\epar{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\,\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\,\ecn{m\frac{K}{n}}{k}\,\edn{m\frac{K}{n}}{k}}
+\prod\limits _{{\nu=1,3,5,\ldots\atop \nu\neq m}}^{n-1}\jsn\left[\eargs{(m-\nu)\frac{K}{n}}{k}\right]\,\jsn\left[\eargs{(m+\nu)\frac{K}{n}}{k}\right]=\frac{\left[1-k^{2}\esn[4]{m\frac{K}{n}}{k}\right]\,\left[\prod\limits _{\mu=2,4,\ldots}^{n-2}\esn{\mu\frac{K}{n}}{k}\right]^{2}}{2\esn{m\frac{K}{n}}{k}\,\ecn{m\frac{K}{n}}{k}\,\edn{m\frac{K}{n}}{k}}
 \end{align*}
 
 \end_inset
