@@ -4,8 +4,6 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-%%\input{all-inc}
-
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
 \date{\small{$Revision$}}
 \end_preamble
@@ -31,7 +29,7 @@ electrical
 \font_sf_scale 100
 \font_tt_scale 100
 
-\graphics dvips
+\graphics default
 \default_output_format default
 \output_sync 0
 \bibtex_command default
@@ -49,7 +47,7 @@ electrical
 \pdf_colorlinks true
 \pdf_backref false
 \pdf_pdfusetitle true
-\pdf_quoted_options "ps2pdf,pdfpagemode=UseOutlines,pdfview=FitH,pdfstartview=FitH,pdfpagelayout=SinglePage"
+\pdf_quoted_options "pdfpagemode=UseOutlines,pdfview=FitH,pdfstartview=FitH,pdfpagelayout=SinglePage"
 \papersize a4paper
 \use_geometry false
 \use_amsmath 2
@@ -426,6 +424,15 @@ Wirkung im Frequenzbereich
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Quadraturmodulator!Spektrum
+\end_layout
+
+\end_inset
+
 Das Spektrum 
 \begin_inset Formula $M(\omega)$
 \end_inset
@@ -437,16 +444,196 @@ Das Spektrum
 
 \begin_inset CommandInset ref
 LatexCommand ref
+reference "eq:qmod_main_time"
+
+\end_inset
+
+ oder von Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
 reference "eq:qmod_main_complex"
 
 \end_inset
 
- durch (mehrfache) Anwendung der komplexen Modulationsformel 
+ ermitteln
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Oswald:1956,Bedrosian:1962,Papoulis:1967,Proakis:2001"
+
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Paragraph*
+Reelle Darstellung
+\end_layout
+
+\begin_layout Standard
+Gehen wir in der Betrachtung zunächst von Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmod_main_time"
+
+\end_inset
+
+ aus und berücksichtigen die Transformationsbeziehungen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{alignat*}{2}
+ & \cos(\omega_{0}t) & \lft & \pi[\dirac(\omega+\omega_{0})+\dirac(\omega-\omega_{0})]\\
+ & \sin(\omega_{0}t) & \lft & \ji\pi[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})]
+\end{alignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+sowie den Faltungssatz der 
+\noun on
+Fourier
+\noun default
+-Transformation.
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\dirac(t)$"
+description "\\noun{Dirac}-Impuls"
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+prefix "FT"
+symbol "$\\ft$"
+description "\\noun{Fourier}-Transformation"
+
+\end_inset
+
+ Dann ergeben sich für die Modulationsprodukte der I/Q-Signale die folgenden
+ Spektralverhältnisse:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Auch bekannt als Modulationsformel der 
+\noun on
+Fourier
+\noun default
+-Transformation.
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Modulationsformel
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula 
+\begin{alignat}{3}
+ & x(t)\cos(\omega_{0}t) & \lft & \frac{1}{2\pi}X(\omega)*\pi[\dirac(\omega-\omega_{0})+\dirac(\omega+\omega_{0})] &  & =\frac{1}{2}[X(\omega-\omega_{0})+X(\omega+\omega_{0})]\label{eq:qmod_main_spectrum_i}\\
+ & -y(t)\sin(\omega_{0}t) & \lft & \frac{\ji}{2\pi}Y(\omega)*\pi[\dirac(\omega-\omega_{0})-\dirac(\omega+\omega_{0})] &  & =\frac{\ji}{2}[Y(\omega-\omega_{0})-Y(\omega+\omega_{0})]\mperiod\label{eq:qmod_main_spectrum_q}
+\end{alignat}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beachtenswert (aber auch logisch) dabei ist, daß beide Spektren orthogonal
+ zueinander stehen.
+ Es liegt deshalb nahe diese als getrennte Kanäle anzusehen und auch verwendbar
+ zu machen -- worauf bei der Demodulation noch zurückzukommen sein wird.
+\end_layout
+
+\begin_layout Standard
+Zu guter Letzt steht noch die Addition beider Komponenten aus:
+\end_layout
+
+\begin_layout Emph(asized)
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\strikeout off
+\uuline off
+\uwave off
+\noun off
+\color none
+\lang english
+\begin_inset Formula 
+\begin{equation}
+M(\omega)=\frac{1}{2}\left[X(\omega-\omega_{0})+\ji Y(\omega-\omega_{0})+X(\omega+\omega_{0})-\ji Y(\omega+\omega_{0})\right]\mperiod\label{eq:qmod_main_spectrum}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Kompexe Darstellung
+\end_layout
+
+\begin_layout Standard
+Geht man von der komplexen Darstellung in Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmod_main_complex"
+
+\end_inset
+
+ aus, dann läßt sich das Spektrum durch (mehrfache) Anwendung der Modulationsfor
+mel
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Modulationsformel!komplexe
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $g(t)\expf^{\ji\omega_{0}t}\lft G(\omega-\omega_{0})$
 \end_inset
 
  ermitteln.
- Definieren wir dazu eine neue Zwischengröße 
+ Definieren wir dazu eine Zwischengröße 
 \begin_inset Formula $w(t)=z(t)\expf^{\ji\omega_{0}t}=x(t)\expf^{\ji\omega_{0}t}+\ji y(t)\expf^{\ji\omega_{0}t}$
 \end_inset
 
@@ -523,96 +710,14 @@ Mit
 \noun off
 \color none
 \begin_inset Formula 
-\[
-M(\omega)=\ft\{m(t)\}=\ft\{\reop[w(t)]\}=\frac{1}{2}\left[\ft\{w(t)\}+\ft\{\cjgt[w]{t}\}\right],
-\]
+\begin{align*}
+M(\omega) & =\ft\{m(t)\}=\ft\{\reop[w(t)]\}=\frac{1}{2}\left[\ft\{w(t)\}+\ft\{\cjgt[w]{t}\}\right]\\
+M(\omega) & =\frac{1}{2}\left[X(\omega-\omega_{0})+\ji Y(\omega-\omega_{0})+X(\omega+\omega_{0})-\ji Y(\omega+\omega_{0})\right]\mperiod
+\end{align*}
 
 \end_inset
 
 
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- es setzt sich aus vier komplexen Modulationsprodukten zusammen:
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Quadraturmodulator!Spektrum
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Emph(asized)
-\begin_inset Formula 
-\begin{equation}
-M(\omega)=\frac{1}{2}\left[X(\omega-\omega_{0})+X(\omega+\omega_{0})+\ji Y(\omega-\omega_{0})-\ji Y(\omega+\omega_{0})\right]\mperiod\label{eq:qmod_main_spectrum}
-\end{equation}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Transformiert man die Modulationsprodukte der I/Q-Signale ausgehend von
- Gleichung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:qmod_main_time"
-
-\end_inset
-
- direkt in den Bildbereich, dann werden die Spektralverhältnisse noch anschaulic
-her.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\begin{alignat}{3}
- & x(t)\cos(\omega_{0}t) & \lft & \frac{1}{2\pi}X(\omega)*\pi[\dirac(\omega+\omega_{0})+\dirac(\omega-\omega_{0})] &  & =\frac{1}{2}[X(\omega+\omega_{0})+X(\omega-\omega_{0})]\label{eq:qmod_main_spectrum_i}\\
- & y(t)\sin(\omega_{0}t) & \lft & \frac{1}{2\pi}Y(\omega)*\ji\pi[\dirac(\omega+\omega_{0})-\dirac(\omega-\omega_{0})] &  & =\frac{\ji}{2}[Y(\omega+\omega_{0})-Y(\omega-\omega_{0})]\label{eq:qmod_main_spectrum_q}
-\end{alignat}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Das Ergebnis von Formel
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:qmod_main_spectrum"
-
-\end_inset
-
- bestätigt sich hiermit noch einmal.
- Was in jedem Fall aber auffällt ist die wichtige Tatsache, daß beide Spektren
- orthogonal zueinander stehen.
 \end_layout
 
 \begin_layout Subsection
@@ -622,6 +727,26 @@ Realisierung klassischer Modulationsarten
 \begin_layout Standard
 Die Universalität der Anordnung ergibt sich daraus, daß praktisch jede Art
  der Trägermodulation:
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Phasenmodulation
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Amplitudenmodulation
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Emph(asized)
@@ -651,6 +776,7 @@ mit den Modulationsgrößen
 
 \begin_inset CommandInset citation
 LatexCommand cite
+after "Kapitel~3"
 key "Anderson:2005"
 
 \end_inset
@@ -751,7 +877,20 @@ Einhüllende
 
 \end_inset
 
- oder Hüllkurve
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ Hüllkurve
 \begin_inset Index idx
 status collapsed
 
@@ -855,17 +994,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Zweiseitenband-AM
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{AM}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -901,30 +1029,7 @@ Das dabei entstehende Sendespektrum
 \noun on
 Fourier
 \noun default
--Transformation
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Fourier-Transformation@
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noun{Fourier}
-\end_layout
-
-\end_inset
-
--Transformation
-\end_layout
-
-\end_inset
-
- von Formel
+-Transformation von Formel
 \begin_inset space ~
 \end_inset
 
@@ -953,22 +1058,6 @@ reference "eq:qmod_am_dsb_time"
 \end_inset
 
 .
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$\\dirac(t)$"
-description "\\noun{Dirac}-Impuls"
-
-\end_inset
-
-
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-prefix "FT"
-symbol "$\\ft$"
-description "\\noun{Fourier}-Transformation"
-
-\end_inset
-
  Weil die Faltung mit einem 
 \noun on
 Dirac
@@ -1018,29 +1107,6 @@ Deshalb bezeichnet man
 Fourier
 \noun default
 -Transformation.
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Fourier-Transformation@
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-noun{Fourier}
-\end_layout
-
-\end_inset
-
--Transformation!Modulationsformel
 \end_layout
 
 \end_inset
@@ -1402,7 +1468,17 @@ Zweiseitenband-AM mit Träger
 \end_layout
 
 \begin_layout Standard
-Soll (wie bei der konventionellen AM) auch ein Träger 
+Soll (wie bei der konventionellen AM) auch ein Träger
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Träger
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $A_{0}\cos(\omega_{0}t)$
 \end_inset
 
@@ -1440,6 +1516,12 @@ wobei der erste Summand den Träger repräsentiert.
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:qmod_ssb_am"
+
+\end_inset
+
 Einseitenband-AM
 \end_layout
 
@@ -1459,17 +1541,6 @@ status collapsed
 
 \begin_layout Plain Layout
 Einseitenband-AM
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{AM}
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -1478,12 +1549,12 @@ Im allgemeinen kann man auf die Übertragung derselben Information
 \begin_inset Formula $F(\omega)$
 \end_inset
 
- in zwei Seitenbändern verzichten, denn sie kostet nur Bandbreite.
+ in zwei Seitenbändern verzichten, denn sie kostet vor allem Bandbreite.
  Es gibt nun zwei Möglichkeiten ein Seitenband zu eliminieren:
 \end_layout
 
 \begin_layout Enumerate
-man benutzt die Zweiseitenband-AM, unterdrückt aber ein Seitenband vor der
+man benutzt die Zweiseitenband-AM, unterdrückt das Seitenband aber vor der
  Übertragung;
 \end_layout
 
@@ -1493,18 +1564,7 @@ die Entstehung eines zweiten Seitenbands wird von vornherein vermieden.
 
 \begin_layout Standard
 Gerade die zweite Möglichkeit wird in Verbindung mit dem Quadraturmodulator
- oftmals angewendet
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Oswald:1956,Bedrosian:1962,Proakis:2001"
-
-\end_inset
-
-.
+ oftmals angewendet.
 \end_layout
 
 \begin_layout Paragraph*
@@ -1539,7 +1599,15 @@ gnal
 \begin_inset Formula $f(t)$
 \end_inset
 
- ein komplexes Signal
+ ein 
+\begin_inset Quotes eld
+\end_inset
+
+komplexes
+\begin_inset Quotes erd
+\end_inset
+
+ Signal
 \begin_inset Index idx
 status collapsed
 
@@ -1705,8 +1773,8 @@ Fourier
 \noun on
 Hilbert
 \noun default
--Transformator, nämlich die konstante (frequenzunabhängige) 
-\begin_inset Formula $90^{\circ}$
+-Transformator, nämlich die (frequenzunabhängige) konstante 
+\begin_inset Formula $-90^{\circ}$
 \end_inset
 
  Phasenverschiebung von 
@@ -1758,21 +1826,11 @@ Z(\omega) & =\ft\{x(t)\}+\ji\ft\{y(t)\}\\
 
 \begin_layout Standard
 und unter Verwendung des Einheitssprunges
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Einheitssprung
-\end_layout
-
-\end_inset
-
-
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "s(t)"
 symbol "$\\usf(\\omega)$"
-description "Einheitssprung (\\noun{Heaviside}-Funktion)"
+description "Einheitssprung (\\noun{Heaviside}-Funktion) im Frequenzbereich"
 
 \end_inset
 
@@ -1803,20 +1861,28 @@ Einsatz des Quadraturmodulators
 \end_layout
 
 \begin_layout Standard
-Erzeugen wir jetzt 
+Erzeugen wir jetzt ein analytisches 
 \begin_inset Formula $z(t)$
 \end_inset
 
- so, daß dessen Realteil 
+ wie gerade besprochen, dann gilt für dessen Realteil 
 \begin_inset Formula $x(t)=f(t)$
 \end_inset
 
- und der Imaginärteil 
+ und für den Imaginärteil 
 \begin_inset Formula $y(t)=\mathcal{H}\{f(t)\}$
 \end_inset
 
- entspricht, dann kann darauf der Quadraturmodulator angewendet werden.
- Abbildung
+.
+ Nach dieser 
+\begin_inset Quotes eld
+\end_inset
+
+Vorverarbeitung
+\begin_inset Quotes erd
+\end_inset
+
+ kann darauf der Quadraturmodulator angewendet werden, wie das Blockbild
 \begin_inset space ~
 \end_inset
 
@@ -1827,7 +1893,7 @@ reference "fig:qmod_ssb_arch"
 
 \end_inset
 
- illustriert die Verhältnisse im Sinne eines Blockbildes.
+ illustriert.
  Dabei stellt 
 \begin_inset Formula $\Delta$
 \end_inset
@@ -1841,24 +1907,6 @@ Hilbert
 H
 \series default
  ausgleicht.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Bei einer (typisch) digitalen Implementierung des 
-\noun on
-Hilbert
-\noun default
--Tranformators als FIR-Filter, realisiert 
-\begin_inset Formula $\Delta$
-\end_inset
-
- eine frequenzunabhängige Verzögerung.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -1950,9 +1998,9 @@ Wegen der Analytizität des Trägers
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{xalignat*}{2}
-X(\omega) & =F(\omega) & Y(\omega) & =-\ji\sign(\omega)\, F(\omega)
-\end{xalignat*}
+\begin{xalignat}{2}
+X(\omega) & =F(\omega) & Y(\omega) & =-\ji\sign(\omega)\, F(\omega)\label{eq:qmod_ssb_signals}
+\end{xalignat}
 
 \end_inset
 
@@ -1972,6 +2020,24 @@ reference "eq:qmod_main_spectrum"
 \end_inset
 
  nachprüfen läßt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Ersetzt man 
+\begin_inset Formula $H(\omega)$
+\end_inset
+
+ durch 
+\begin_inset Formula $-H(\omega)$
+\end_inset
+
+, dann wird das untere Seitenband übertragen.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1998,7 +2064,7 @@ reference "fig:qmod_ssb_spectrum"
 
 \end_inset
 
- stellt das zugehörige Spektrum dar.
+ stellt das zugehörige Einseitenband-Spektrum dar.
 \end_layout
 
 \begin_layout Standard
@@ -2069,7 +2135,7 @@ Phasenmodulation
 
 \end_inset
 
-Spezialisierung der allgemeinen (Träger-) Modulationsformel
+Spezialisierung von Modulationsformel
 \begin_inset space ~
 \end_inset
 
@@ -2089,7 +2155,7 @@ reference "eq:qmod_main_generic_cos"
 \begin_inset Formula $\phi(t)$
 \end_inset
 
- voraussetzt, in diesem Fall zu:
+ voraussetzt, im Fall der Phasenmodulation zu:
 \end_layout
 
 \begin_layout Standard
@@ -2330,68 +2396,6 @@ Quadratur-Amplitudenmodulation (QAM)
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Quadratur-AM
-\end_layout
-
-\end_inset
-
-QAM
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-QAM
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-|see{Quadratur-AM}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
- führt direkt zum Quadraturmodulator, wobei 
-\begin_inset Formula $x(t)$
-\end_inset
-
- und 
-\begin_inset Formula $y(t)$
-\end_inset
-
- orthogonal zueinander liegen und so die Übertragungskapazität verdoppelt
- wird
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "4.3.1"
-key "Proakis:2001"
-
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Anderson:2005"
-
-\end_inset
-
-.
-\end_layout
-
-\begin_layout Plain Layout
 Noch einige Bemerkungen:
 \end_layout
 
@@ -2512,11 +2516,11 @@ Modulation|)
 \end_layout
 
 \begin_layout Section
-Demodulation
+(Homodyne) Demodulation
 \end_layout
 
 \begin_layout Subsection
-Kohärente Demodulation
+I/Q-Demodulation
 \end_layout
 
 \begin_layout Standard
@@ -2534,25 +2538,92 @@ Demodulation|(
 status collapsed
 
 \begin_layout Plain Layout
-Demodulation!kohärente
+Demodulation!I/Q-
 \end_layout
 
 \end_inset
 
-Grundsätzlich kann eine Demodulation in gleicher Art und Weise wie die Modulatio
-n erfolgen
+Unter der Voraussetzung, daß zwei Seitenbänder übertragen werden, kann die
+ Demodulation grundsätzlich in gleicher Art und Weise wie die Modulation
+ erfolgen.
+ Beim homodynen Empfänger
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Empfänger!Homodyn-
+\end_layout
+
+\end_inset
+
+ (Direct Conversion Receiver
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Empfänger!Direct Conversion
+\end_layout
+
+\end_inset
+
+, DCR) wird das Modulationsprodukt direkt in das Basisband verschoben, wobei
+ in der Grundstruktur nach Abbildung
 \begin_inset space ~
 \end_inset
 
 
-\begin_inset CommandInset citation
-LatexCommand cite
-key "Mirabbasi:2000"
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:qmod_demod_arch"
 
 \end_inset
 
-.
- Dabei wird das Empfangsspektrum 
+ wieder der Quadratur(de)modulator zum Einsatz kommen kann.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset External
+	template XFig
+	filename qmod_demod.fig
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:qmod_demod_arch"
+
+\end_inset
+
+Homodyner Quadratur-Empfänger
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei wird das Empfangsspektrum 
 \begin_inset Formula $M'(\omega)$
 \end_inset
 
@@ -2595,7 +2666,7 @@ reference "fig:qmod_demod_spectrum"
 
 \end_inset
 
- heraus gefiltert.
+ herausgefiltert.
 \end_layout
 
 \begin_layout Standard
@@ -2626,7 +2697,7 @@ name "fig:qmod_demod_spectrum"
 
 \end_inset
 
-Spektrum bei der Demodulation
+Spektrum bei der Zweiseitenband-Demodulation
 \end_layout
 
 \end_inset
@@ -2640,18 +2711,7 @@ Spektrum bei der Demodulation
 \end_layout
 
 \begin_layout Standard
-Betrachten wir dazu die Demodulatorstruktur nach Abbildung
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:qmod_demod_arch"
-
-\end_inset
-
- und nehmen an, daß a)
+Um dies auch mathematisch zu erfassen nehmen wir zunächst an, daß a)
 \begin_inset space ~
 \end_inset
 
@@ -2669,6 +2729,26 @@ Synchrondemodulation
 
 \end_inset
 
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Demodulation!Synchron-
+\end_layout
+
+\end_inset
+
+, kohärente Demodulation
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Demodulation!kohärente
+\end_layout
+
+\end_inset
+
 ) und b)
 \begin_inset space ~
 \end_inset
@@ -2681,48 +2761,7 @@ keine Übertragungsstörungen vorliegen (
 \end_layout
 
 \begin_layout Standard
-\begin_inset Float figure
-wide false
-sideways false
-status open
-
-\begin_layout Plain Layout
-\noindent
-\align center
-\begin_inset External
-	template XFig
-	filename qmod_demod.fig
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset Caption
-
-\begin_layout Plain Layout
-\begin_inset CommandInset label
-LatexCommand label
-name "fig:qmod_demod_arch"
-
-\end_inset
-
-Kohärente Demodulation mittels Quadraturmodulator
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Analysiert man die I/Q-Signalpfade getrennt, ausgehend von den Formeln
+Analysiert man die I/Q-Signalpfade ausgehend von den Formeln
 \begin_inset space ~
 \end_inset
 
@@ -2751,7 +2790,7 @@ ter:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{xalignat}{2}
-X''(\omega) & =\frac{1}{2}[M(\omega+\omega_{0})+M(\omega-\omega_{0})] & Y''(\omega) & =-\frac{\ji}{2}[M(\omega+\omega_{0})-M(\omega-\omega_{0})]\mperiod\label{eq:qmod_demod_base_comp}
+X''(\omega) & =\frac{1}{2}[M'(\omega-\omega_{0})+M'(\omega+\omega_{0})] & Y''(\omega) & =\frac{\ji}{2}[M'(\omega-\omega_{0})-M'(\omega+\omega_{0})]\mperiod\label{eq:qmod_demod_base}
 \end{xalignat}
 
 \end_inset
@@ -2760,15 +2799,19 @@ X''(\omega) & =\frac{1}{2}[M(\omega+\omega_{0})+M(\omega-\omega_{0})] & Y''(\ome
 \end_layout
 
 \begin_layout Standard
-Einsetzen der Argumente 
-\begin_inset Formula $\omega+\omega_{0}$
+Unter der eingangs erwähnten Voraussetzung 
+\begin_inset Formula $M'(\omega)=M(\omega)$
+\end_inset
+
+ kann man 
+\begin_inset Formula $M'(\omega+\omega_{0})$
 \end_inset
 
  und 
-\begin_inset Formula $\omega-\omega_{0}$
+\begin_inset Formula $M'(\omega-\omega_{0})$
 \end_inset
 
- in Formel
+ mit Hilfe von Formel
 \begin_inset space ~
 \end_inset
 
@@ -2779,25 +2822,55 @@ reference "eq:qmod_main_spectrum"
 
 \end_inset
 
- zeigt die Verschiebung des Spektrums nach Abbildung
-\begin_inset space ~
+ ersetzen.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+M'(\omega-\omega_{0}) & =\frac{1}{2}[X(\omega)-\ji Y(\omega)+X(\omega-2\omega_{0})+\ji Y(\omega-2\omega_{0})]\\
+M'(\omega+\omega_{0}) & =\frac{1}{2}[X(\omega)+\ji Y(\omega)+X(\omega+2\omega_{0})-\ji Y(\omega+2\omega_{0})]
+\end{align*}
+
 \end_inset
 
 
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "fig:qmod_demod_spectrum"
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\SpecialChar \ldots{}
+und exakt:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+X''(\omega) & =\frac{1}{2}\left[X(\omega)+\frac{1}{2}X(\omega+2\omega_{0})-\frac{\ji}{2}Y(\omega+2\omega_{0})+\frac{1}{2}X(\omega-2\omega_{0})+\frac{\ji}{2}Y(\omega-2\omega_{0})\right]\\
+Y''(\omega) & =-\frac{\ji}{2}\left[\ji Y(\omega)+\frac{1}{2}X(\omega+2\omega_{0})-\frac{\ji}{2}Y(\omega+2\omega_{0})-\frac{1}{2}X(\omega-2\omega_{0})-\frac{\ji}{2}Y(\omega-2\omega_{0})\right]
+\end{align*}
 
 \end_inset
 
-.
- Wenn man die höherfrequenten Anteile vernachlässigt, dann gilt mit
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vernachlässigt man die höherfrequenten Anteile, dann wird
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{xalignat}{2}
-M'(\omega-\omega_{0}) & =\frac{1}{2}[X(\omega)-\ji Y(\omega)] & M'(\omega+\omega_{0}) & =\frac{1}{2}[X(\omega)+\ji Y(\omega)]\label{eq:qmod_demod_iqlp}
+M'(\omega-\omega_{0}) & \approxeq\frac{1}{2}[X(\omega)-\ji Y(\omega)] & M'(\omega+\omega_{0}) & \approxeq\frac{1}{2}[X(\omega)+\ji Y(\omega)],\label{eq:qmod_demod_iqlp}
 \end{xalignat}
 
 \end_inset
@@ -2806,49 +2879,18 @@ M'(\omega-\omega_{0}) & =\frac{1}{2}[X(\omega)-\ji Y(\omega)] & M'(\omega+\omega
 \end_layout
 
 \begin_layout Standard
-hinter dem Tiefpaßfilter für die I/Q-Signale:
+weshalb (wegen 
+\begin_inset Formula $X''\approxeq X'$
+\end_inset
+
+ und 
+\begin_inset Formula $Y''\approxeq Y'$
+\end_inset
+
+) hinter dem jeweiligen Tiefpaßfilter für die I/Q-Signale gilt:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula 
-\begin{xalignat*}{2}
-X'(\omega) & =\frac{1}{2}[M'(\omega+\omega_{0})+M'(\omega-\omega_{0})] & Y'(\omega) & =-\frac{\ji}{2}[M'(\omega+\omega_{0})-M'(\omega-\omega_{0})]\mperiod
-\end{xalignat*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Durch die Addition 
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- Subtraktion löscht sich die jeweils orthogonale Komponente in Gleichung(en)
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:qmod_demod_iqlp"
-
-\end_inset
-
- aus und so wird:
-\end_layout
-
-\begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{xalignat}{2}
 X'(\omega) & =\frac{1}{2}X(\omega) & Y'(\omega) & =\frac{1}{2}Y(\omega)\mperiod\label{eq:qmod_demod_iq}
@@ -2860,10 +2902,39 @@ X'(\omega) & =\frac{1}{2}X(\omega) & Y'(\omega) & =\frac{1}{2}Y(\omega)\mperiod\
 \end_layout
 
 \begin_layout Standard
+Man kann (wegen der Orthogonalität
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Orthogonalität
+\end_layout
+
+\end_inset
+
+ der Signalkomponenten) also beide 
+\begin_inset Quotes eld
+\end_inset
+
+Kanäle
+\begin_inset Quotes erd
+\end_inset
+
+ unabhängig voneinander verwenden.
+\end_layout
+
+\begin_layout Subsubsection*
+Problempunkte
+\end_layout
+
+\begin_layout Standard
 Für eine korrekte Demodulation in das Basisband müssen Sender und Empfänger
- (wie schon erwähnt) exakt frequenz- und phasensynchron arbeiten, denn sonst
- käme es nicht zur Auslöschung der jeweils anderen Komponente in den Signalpfade
-n.
+ (wie schon erwähnt) exakt frequenzsynchron arbeiten, denn sonst würde 
+\begin_inset Formula $M'(\omega-\omega_{0})$
+\end_inset
+
+ nicht auf Null-Lage, sondern geringfügig abweichend davon heruntergemischt
+ werden.
 \begin_inset Foot
 status collapsed
 
@@ -2930,11 +3001,40 @@ reference "sec:qmod_dsb_carrier"
  zeigen würde.
 \end_layout
 
-\begin_layout Subsubsection*
-AM-Demodulation
+\begin_layout Subsection
+Zweiseitenband-AM
 \end_layout
 
 \begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Amplitudenmodulation!Zweiseitenband-
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Zweiseitenband-AM
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Demodulation!Zweiseitenband-
+\end_layout
+
+\end_inset
+
 Speziell für die Zweiseitenband-AM nach Abschnitt
 \begin_inset space ~
 \end_inset
@@ -2947,10 +3047,14 @@ reference "sec:qmod_dsb_canonic"
 \end_inset
 
 , für welche ja 
-\begin_inset Formula $X(\omega)=F(\omega),\: Y(\omega)=0$
+\begin_inset Formula $X(\omega)=F(\omega)$
 \end_inset
 
- galt, handelt es sich bei 
+, 
+\begin_inset Formula $Y(\omega)=0$
+\end_inset
+
+ gilt, handelt es sich bei 
 \begin_inset Formula $x'(t)$
 \end_inset
 
@@ -2995,7 +3099,7 @@ reference "sec:qmod_dsb_alternative"
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "fig:qmod_demod_am"
+reference "fig:qmod_demod_dsb"
 
 \end_inset
 
@@ -3020,22 +3124,7 @@ reference "fig:qmod_dsb_arch"
 
 \end_inset
 
- Die Begründung für 
-\begin_inset Formula $X'(\omega)+Y'(\omega)=F(\omega)$
-\end_inset
 
- kann man direkt Formel(n)
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "eq:qmod_demod_iq"
-
-\end_inset
-
- entnehmen.
 \end_layout
 
 \begin_layout Standard
@@ -3062,11 +3151,11 @@ status open
 \begin_layout Plain Layout
 \begin_inset CommandInset label
 LatexCommand label
-name "fig:qmod_demod_am"
+name "fig:qmod_demod_dsb"
 
 \end_inset
 
-Kohärente AM-Demodulation
+Zweiseitenband-Demodulator
 \end_layout
 
 \end_inset
@@ -3077,10 +3166,29 @@ Kohärente AM-Demodulation
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+ Die Begründung für 
+\begin_inset Formula $X'(\omega)+Y'(\omega)=F(\omega)$
+\end_inset
+
+ ist direkt Formel(n)
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmod_demod_iq"
+
+\end_inset
+
+ zu entnehmen.
 \end_layout
 
 \begin_layout Subsection
-Inkohärente Demodulation
+Einseitenband-AM
 \end_layout
 
 \begin_layout Standard
@@ -3088,12 +3196,237 @@ Inkohärente Demodulation
 status collapsed
 
 \begin_layout Plain Layout
-Demodulation!inkohärente
+Amplitudenmodulation!Einseitenband-
 \end_layout
 
 \end_inset
 
-Dem Nachteil der Übertragung eines Hilfsträgers (
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Einseitenband-AM
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Demodulation!Einseitenband-
+\end_layout
+
+\end_inset
+
+In ähnlicher Art und Weise wie bei der Zweiseitenband-AM kann man auch bei
+ der Einseitenband-AM vorgehen.
+ Abgesehen von einem nicht existierenden Seitenband entsteht bei der Demodulatio
+n wieder das originale Basisfrequenzband (siehe Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:qmod_demod_spectrum"
+
+\end_inset
+
+).
+ Wegen der kompexen Modulation (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:qmod_ssb_am"
+
+\end_inset
+
+) muß man jedoch Spektralanteile, die im Bereich des zweiten Seitenbandes
+ liegen, unterdrücken
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Mirabbasi:2000"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In der Literatur werden diese Signalanteile mit 
+\begin_inset Quotes eld
+\end_inset
+
+Image Band
+\begin_inset Quotes erd
+\end_inset
+
+ und der Prozeß ihrer Unterdrückung mit 
+\begin_inset Quotes eld
+\end_inset
+
+Image Rejection
+\begin_inset Quotes erd
+\end_inset
+
+ bezeichnet.
+\end_layout
+
+\end_inset
+
+ Eine mögliche Archtitektur, welche dies leistet, ist zum Beispiel der 
+\noun on
+Hartley
+\noun default
+-Empfänger
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Hartley-Empfänger@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hartley}
+\end_layout
+
+\end_inset
+
+-Empfänger
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Empfänger!Hartley-@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Hartley}
+\end_layout
+
+\end_inset
+
+-
+\end_layout
+
+\end_inset
+
+ nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:qmod_demod_hartley"
+
+\end_inset
+
+.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Eine andere Möglichkeit stellt der (genauso bekannte) 
+\noun on
+Weaver
+\noun default
+-Demodulator dar.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\noindent
+\align center
+\begin_inset External
+	template XFig
+	filename qmod_demod_hartley.fig
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:qmod_demod_hartley"
+
+\end_inset
+
+
+\noun on
+Hartley
+\noun default
+-Demodulator
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Ausgangspunkt der Beschreibung von 
+\begin_inset Formula $X'(\omega)$
+\end_inset
+
+ 
 \begin_inset ERT
 status open
 
@@ -3106,21 +3439,173 @@ resp
 
 \end_inset
 
- eines Synchronisationssignals) kann man durch Einsatz des sogenannten Hüllkurve
-ndemodulators
-\begin_inset Index idx
-status collapsed
+ 
+\begin_inset Formula $Y'(\omega)$
+\end_inset
+
+ sind die Formeln
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmod_demod_iq"
+
+\end_inset
+
+ und
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:qmod_ssb_signals"
+
+\end_inset
+
+, wobei letztere für die Übertragung eines oberen Seitenbandes gelten.
+ Kombination der Formeln ergibt nun: 
+\begin_inset Formula 
+\begin{xalignat*}{2}
+X'(\omega) & =\frac{1}{2}X(\omega)=\frac{1}{2}F(\omega) & Y'(\omega) & =\frac{1}{2}Y(\omega)=-\frac{\ji}{2}\sign(\omega)\, F(\omega)\mperiod
+\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Vor der abschließenden Addition muß ein 
+\noun on
+Hilbert
+\noun default
+-Transformator (jetzt mit 
+\begin_inset Formula $+90^{\circ}$
+\end_inset
+
+ Phasendrehung, 
+\begin_inset ERT
+status open
 
 \begin_layout Plain Layout
-Hüllkurvendemodulator
+
+
+\backslash
+ie
 \end_layout
 
 \end_inset
 
- begegnen.
- Herausragender Vorteil ist außerdem, daß alle klassischen Modulationsverfahren
- damit realisiert werden können.
- Ausgangspunkt sind dazu vornehmlich die Gleichungen
+ 
+\begin_inset Formula $-H(\omega)=\ji\sign(\omega)$
+\end_inset
+
+) dafür sorgen,
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Denselben Effekt wie ein negatives Vorzeichen am 
+\noun on
+Hilbert
+\noun default
+-Transformator hätte a)
+\begin_inset space ~
+\end_inset
+
+eine Umkehrung des Vorzeichens am lokalen Oszillator 
+\begin_inset Formula $\sin(\omega_{0}t)$
+\end_inset
+
+ oder b)
+\begin_inset space ~
+\end_inset
+
+eine abschließende Subtraktion statt der Addition.
+ Genausogut kann man durch Weglassen des negativen Vorzeichens das untere
+ Seitenband (anstatt des oberen) selektieren.
+\end_layout
+
+\end_inset
+
+ daß unser Zeitsignal wieder reel wird.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+F'(\omega) & =X'(\omega)-H(\omega)Y'(\omega)\\
+ & =X'(\omega)+\ji\sign(\omega)\, Y'(\omega)\\
+ & =\frac{1}{2}[F(\omega)-\ji^{2}\underbrace{\sign^{2}(\omega)}_{1}\, F(\omega)]\\
+F'(\omega) & =F(\omega)\rft f(t)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
+Quadratur-AM
+\end_layout
+
+\begin_layout Standard
+Der QAM
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+QAM
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Demodulation!QAM
+\end_layout
+
+\end_inset
+
+-Empfänger nach Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:qmod_demod_qam"
+
+\end_inset
+
+ liefert sowohl die 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Phasenmodulation
+\end_layout
+
+\end_inset
+
+Phasen- als auch die Amplitudeninformation der Einhüllenden
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Einhüllende
+\end_layout
+
+\end_inset
+
+.
+ Die Begründung dafür haben wir schon in den allgemeinen Gleichungen
 \begin_inset space ~
 \end_inset
 
@@ -3142,8 +3627,7 @@ reference "eq:qmod_main_phase"
 
 \end_inset
 
-.
- Grundvoraussetzung stellt aber eine digitale Implementierung dar!?
+ zur Trägermodulation erbracht.
 \end_layout
 
 \begin_layout Standard
@@ -3157,7 +3641,7 @@ status open
 \align center
 \begin_inset External
 	template XFig
-	filename qmod_demod_env.fig
+	filename qmod_demod_qam.fig
 
 \end_inset
 
@@ -3168,7 +3652,13 @@ status open
 \begin_inset Caption
 
 \begin_layout Plain Layout
-Hüllkurvendemodulator
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:qmod_demod_qam"
+
+\end_inset
+
+Quadratur-Amplitudendemodulation
 \end_layout
 
 \end_inset
@@ -3182,16 +3672,17 @@ Hüllkurvendemodulator
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Hüllkurve
-\end_layout
-
+Als Nachteil der Phasenbestimmung ist anzusehen, daß für 
+\begin_inset Formula $|\phi|\geq90^{\circ}$
 \end_inset
 
+ praktisch das Vorzeichen verloren geht.
+ Eine digitale Implementierung müßte dies anderweitig mitführen, denn sonst
+ wäre die Phase auf 
+\begin_inset Formula $\pm90^{\circ}$
+\end_inset
 
+ beschränkt.
 \end_layout
 
 \begin_layout Standard
