@@ -117,7 +117,7 @@ Zahlentheorie
 \end_layout
 
 \begin_layout Subject
-Grundlagen für Informatiker & Ingenieure
+Grundlagen für Ingenieure & Informatiker
 \end_layout
 
 \begin_layout Author
@@ -4368,7 +4368,7 @@ Betrachten wir jetzt die
 \begin_inset Formula $l=|s|$
 \end_inset
 
- die jeweilige Ordnung, so gilt entsprechend Beziehung
+ die jeweilige Ordnung, so gilt nach Beziehung
 \begin_inset space ~
 \end_inset
 
@@ -7265,7 +7265,7 @@ key "Welschenbach:2001"
 \end_inset
 
 .
- Dazu geht man von der Modulo-Arithmetik entsprechend Gleichung
+ Dazu geht man von der Modulo-Arithmetik nach Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -10024,18 +10024,34 @@ key "Menezes:1992"
 
 \end_inset
 
-:
+.
 \end_layout
 
-\begin_layout Description
-\begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
-\end_inset
-
- Polynom-Restklassenring auf dem Grundkörper 
+\begin_layout Paragraph*
+Der Polynom-Restklassenring auf dem Grundkörper 
 \begin_inset Formula $\mathbb{Z}_{p}$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+Im Beispiel des Restklassenringes 
+\begin_inset Formula $\mathbb{Z}_{p}{[x]}/m(x)$
+\end_inset
+
+ lassen sich die Eigenschaften eines Ringes (siehe Abschnitt
+\begin_inset space \thinspace{}
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_ring"
+
+\end_inset
+
+) wiefolgt nachweisen:
 \end_layout
 
 \begin_layout Enumerate
@@ -10049,7 +10065,7 @@ Da bei einer Polynomaddition die einzelnen Koeffizienten unabhängig voneinander
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "deg(h(x))"
-symbol "$\\deg[h(x)]$"
+symbol "$\\deg h(x)$"
 description "Grad des Polynoms $h(x)$"
 
 \end_inset
@@ -12021,9 +12037,9 @@ name "sec:algebra_euclid_generic"
 
 \end_inset
 
-
+Euklid
 \noun default
-Euklidischer Algorithmus
+'s Algorithmus
 \end_layout
 
 \begin_layout Standard
@@ -12141,27 +12157,18 @@ reference "alg:algebra_euclid_generic"
 
 \end_inset
 
- beschreibt das klassische Verfahren (
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-cf
-\end_layout
-
+ beschreibt das klassische Verfahren
+\begin_inset space ~
 \end_inset
 
- 
+
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Knuth:TAOCP2:1998,Shoup:2005,Crandall:2005"
+key "Knuth:TAOCP2:1998,Shoup:2005,Crandall:2005,Menezes:1992,Berlekamp:1984"
 
 \end_inset
 
-).
+.
  Es beginnt unter der Voraussetzung 
 \begin_inset Formula $a>b$
 \end_inset
@@ -12473,44 +12480,6 @@ end{algorithmic}
 
 \begin_layout Paragraph*
 Beweis
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Siehe auch
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "2.4.2"
-key "Menezes:1992"
-
-\end_inset
-
-, 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "2.1"
-key "Berlekamp:1984"
-
-\end_inset
-
-, 
-\begin_inset CommandInset citation
-LatexCommand cite
-after "10.1"
-key "Welschenbach:2001"
-
-\end_inset
-
-.
-\end_layout
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Standard
@@ -12595,7 +12564,10 @@ bis
 \end_inset
 
  verschwindet.
- Warum 
+\end_layout
+
+\begin_layout Standard
+Warum 
 \begin_inset Formula $d=c_{k}$
 \end_inset
 
@@ -12692,11 +12664,10 @@ description "$a$ und $b$ sind teilerfremd"
 \end_inset
 
  enthalten.
- 
 \end_layout
 
 \begin_layout Standard
-Viel kürzer kann man auch damit argumentieren, daß die Modulo-Division 
+Viel kürzer kann man damit argumentieren, daß die Modulo-Division 
 \begin_inset Formula $c_{i+1}=c_{i-1}\bmod c_{i}$
 \end_inset
 
@@ -12705,22 +12676,29 @@ Viel kürzer kann man auch damit argumentieren, daß die Modulo-Division
 \begin_inset Formula $c_{i}=\overline{c}_{i}d$
 \end_inset
 
- gilt (ausgehend von 
-\begin_inset Formula $c_{0}=a$
+ gilt ausgehend von Formel
+\begin_inset space ~
 \end_inset
 
-, 
-\begin_inset Formula $c_{1}=b$
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_mod_reverse"
+
 \end_inset
 
-) folgende Beziehung:
+:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\[
-c_{i+1}=c_{i-1}\bmod c_{i}=c_{i-1}-q_{i}c_{i}=\overline{c}_{i-1}d-q_{i}\overline{c}_{i}d=d(\overline{c}_{i-1}-q_{i}\overline{c}_{i})
-\]
+\begin{align}
+c_{i+1} & =c_{i-1}\bmod c_{i}\nonumber \\
+ & =c_{i-1}-q_{i}c_{i}\nonumber \\
+ & =\overline{c}_{i-1}d-q_{i}\overline{c}_{i}d\nonumber \\
+ & =d(\overline{c}_{i-1}-q_{i}\overline{c}_{i})\nonumber \\
+ & =d(\overline{c}_{i-1}\bmod\overline{c}_{i})
+\end{align}
 
 \end_inset
 
@@ -12773,7 +12751,7 @@ So gilt allgemein:
 
 \end_layout
 
-\begin_layout Standard
+\begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
 \gcd(c_{i-1},c_{i})=\gcd(c_{i+1},c_{i})=\gcd(c_{i-1}\bmod c_{i},c_{i})
@@ -12907,7 +12885,7 @@ noun{B
 
  genannt wird,
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Die 
@@ -12961,7 +12939,7 @@ reference "eq:algebra_euclid_bezout"
 \end_inset
 
 .
- Dann würde dieser als Faktor auf der rechten Seite von Gleichung
+ Dann würde dieser (auf der rechten Seite von Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -12972,13 +12950,21 @@ reference "eq:algebra_euclid_bezout"
 
 \end_inset
 
+) als Faktor von 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $b$
+\end_inset
+
  auszuklammern sein und deshalb (wenn man die linke Seite betrachtet) als
  Teiler von 
 \begin_inset Formula $d$
 \end_inset
 
  auftreten.
- Anders formuliert, stecken alle weiteren Teiler (schon) in 
+ Mit anderen Worten stecken alle weiteren Teiler (schon) in 
 \begin_inset Formula $d$
 \end_inset
 
@@ -13000,7 +12986,7 @@ Es existieren unendlich viele lineare Darstellungen für
 \begin_inset Formula $d$
 \end_inset
 
- als Funktion von 
+ als Linearkombination von 
 \begin_inset Formula $a$
 \end_inset
 
@@ -13084,7 +13070,7 @@ reference "eq:algebra_euclid_bezout"
 
 \end_inset
 
-.
+ ebenso.
 \end_layout
 
 \begin_layout Standard
@@ -13135,7 +13121,24 @@ Die kleinsten Werte für
 \begin_inset Formula $\beta$
 \end_inset
 
- subtrahieren/addieren oder man reduziert die Kofaktoren mit Hilfe von
+ subtrahieren/addieren oder man reduziert die 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Kofaktoren mit Hilfe von
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 symbol "$\\lfloor x \\rfloor$"
@@ -13357,7 +13360,7 @@ c_{i}=c_{i-2}-q_{i}c_{i-1}=d\overline{c}_{i}=\alpha_{i}a+\beta_{i}b\label{eq:alg
 \end_layout
 
 \begin_layout Standard
-durch Einsetzen von 
+mittels 
 \begin_inset Formula $c_{i-1}=\alpha_{i-1}a+\beta_{i-1}b$
 \end_inset
 
@@ -13542,27 +13545,27 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $c_{0}\Leftarrow a$
+\begin_inset Formula $(c_{0},\alpha_{0},\beta_{0})\Leftarrow(a,1,0)$
 \end_inset
 
-, 
-\begin_inset Formula $c_{1}\Leftarrow b$
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
 \end_inset
 
-, 
-\begin_inset Formula $\alpha_{0}\Leftarrow1$
-\end_inset
-
-, 
-\begin_inset Formula $\alpha_{1}\Leftarrow0$
-\end_inset
-
-, 
-\begin_inset Formula $\beta_{0}\Leftarrow0$
-\end_inset
-
-, 
-\begin_inset Formula $\beta_{1}\Leftarrow1$
+ 
+\begin_inset Formula $(c_{1},\alpha_{1},\beta_{1})\Leftarrow(b,0,1)$
 \end_inset
 
 
@@ -13686,7 +13689,7 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $c_{k+1}\Leftarrow c_{k-1}-qc_{k}$
+\begin_inset Formula $(c_{k+1},\alpha_{k+1},\beta_{k+1})\Leftarrow(c_{k-1},\alpha_{k-1},\beta_{k-1})-q(c_{k},\alpha_{k},\beta_{k})$
 \end_inset
 
  
@@ -13706,7 +13709,7 @@ COMMENT{
 
 \end_inset
 
-Modulo-Division 
+
 \begin_inset Formula $c_{k+1}=c_{k-1}\bmod c_{k}$
 \end_inset
 
@@ -13719,46 +13722,6 @@ status collapsed
 }
 \end_layout
 
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-STATE
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\alpha_{k+1}\Leftarrow\alpha_{k-1}-q\alpha_{k}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Plain Layout
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-STATE
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $\beta_{k+1}\Leftarrow\beta_{k-1}-q\beta_{k}$
 \end_inset
 
 
@@ -13809,15 +13772,782 @@ STATE
 \end_inset
 
  
-\begin_inset Formula $d\Leftarrow c_{k}$
+\begin_inset Formula $(d,\alpha,\beta)\Leftarrow(c_{k},\alpha_{k},\beta_{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_euclid_ext_hint"
+
+\end_inset
+
+Hinweis
+\end_layout
+
+\begin_layout Standard
+Als Ergänzung zum Hinweis von Seite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:algebra_euclid_hint"
+
+\end_inset
+
+ kann man sogar feststellen, daß die 
+\begin_inset Quotes gld
+\end_inset
+
+Wahl
+\begin_inset Quotes grd
+\end_inset
+
+ von 
+\begin_inset Formula $q$
+\end_inset
+
+ nicht unbedingt mit einer Modulo-Division verbunden sein muß.
+ Ganz im Gegenteil könnte man 
+\begin_inset Formula $q$
+\end_inset
+
+ einfach so wählen, daß
+\end_layout
+
+\begin_layout Itemize
+die Folge der 
+\begin_inset Formula $c_{k}$
+\end_inset
+
+ eine absteigende Sequenz ist;
+\end_layout
+
+\begin_layout Itemize
+und in jedem Iterationsschritt 
+\begin_inset Formula $qc_{k}\leq c_{k-1}$
+\end_inset
+
+ gilt (wodurch 
+\begin_inset Formula $c_{k+1}\geq0$
+\end_inset
+
+ gewährleistet ist).
+\end_layout
+
+\begin_layout Standard
+Den steilsten Abstieg 
+\begin_inset Formula $\varDelta=c_{k+1}-c_{k}$
+\end_inset
+
+ erreicht man allerdings, wenn 
+\begin_inset Formula $q$
+\end_inset
+
+ im jeweiligen Iterationsschritt maximal ist.
+ Dies ist aber unter der Voraussetzung 
+\begin_inset Formula $c_{k+1}\geq0$
+\end_inset
+
+ genau bei einer Modulo-Division 
+\begin_inset Formula $c_{k+1}=c_{k-1}\bmod c_{k}$
+\end_inset
+
+ der Fall.
+ Ansonsten ist jeder Wert 
+\begin_inset Formula $q=0\ldots\left\lfloor c_{i-1}/c_{i}\right\rfloor $
+\end_inset
+
+ geeignet --- einzig die Konvergenzgeschwindigkeit nimmt mit kleineren Werten
+ von 
+\begin_inset Formula $q$
+\end_inset
+
+ ab.
+\begin_inset Foot
+status open
+
+\begin_layout Plain Layout
+Für den Fall 
+\begin_inset Formula $q<\left\lfloor c_{i-1}/c_{i}\right\rfloor $
+\end_inset
+
+ bezeichnet man die Folge der 
+\begin_inset Formula $c_{i}$
+\end_inset
+
+ auch als eine Folge von 
+\begin_inset CommandInset href
+LatexCommand href
+name "Pseudo-Divisionsresten"
+target "http://en.wikipedia.org/wiki/Polynomial_greatest_common_divisor#Pseudo-remainder_sequences"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Größter gemeinsamer Teiler!Euklidischer Algorithmus!erweiterter|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_euclid_polynomials"
+
+\end_inset
+
+
+\noun on
+Euklid
+\noun default
+'s Algorithmus für Polynome über 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocmath{
+\backslash
+mathbb{Z}_2}{GF(2)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Polynom!binäres
+\end_layout
+
+\end_inset
+
+Für Polynome mit Koeffizienten aus 
+\begin_inset Formula $\GF(2)$
+\end_inset
+
+ kann man ganz ähnlich verfahren
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.2.1"
+key "Crandall:2005"
+
 \end_inset
 
 , 
-\begin_inset Formula $\alpha\Leftarrow\alpha_{k}$
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.3.6"
+key "Hankerson:2004"
+
 \end_inset
 
 , 
-\begin_inset Formula $\beta\Leftarrow\beta_{k}$
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.1"
+key "Berlekamp:1984"
+
+\end_inset
+
+.
+ Man muß nur folgendes beachten:
+\end_layout
+
+\begin_layout Enumerate
+Addition und Subtraktion sind gleichwertig (und die Addition wird zu einem
+ 
+\emph on
+Exklusiv-Oder
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Exklusiv-Oder
+\end_layout
+
+\end_inset
+
+
+\emph default
+ 
+\begin_inset Formula $\oplus$
+\end_inset
+
+);
+\end_layout
+
+\begin_layout Enumerate
+An die Stelle eines wertbehafteten Vergleichs 
+\begin_inset Formula $a\geq b$
+\end_inset
+
+ tritt ein Vergleich des Polynomgrades 
+\begin_inset Formula $\deg a\geq\deg b$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Die Ermittlung von 
+\begin_inset Formula $q(x)$
+\end_inset
+
+ läßt sich in folgende Einzelfälle zerlegen:
+\end_layout
+
+\begin_deeper
+\begin_layout Itemize
+\begin_inset Formula $\deg c_{k-1}(x)<\deg c_{k}(x)$
+\end_inset
+
+ führt zu 
+\begin_inset Formula $q(x)=0$
+\end_inset
+
+, was nach Algorithmus
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:algebra_euclid_ext_poly"
+
+\end_inset
+
+ einer Vertauschung 
+\begin_inset Formula $(c_{k},\alpha_{k},\beta_{k})\Longleftrightarrow(c_{k-1},\alpha_{k-1},\beta_{k-1})$
+\end_inset
+
+ entspricht.
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\deg c_{k-1}(x)=\deg c_{k}(x)$
+\end_inset
+
+ ergibt 
+\begin_inset Formula $q(x)=1$
+\end_inset
+
+, was mit 
+\begin_inset Formula $(c_{k+1},\alpha_{k+1},\beta_{k+1})\Leftarrow(c_{k-1},\alpha_{k-1},\beta_{k-1})+(c_{k},\alpha_{k},\beta_{k})$
+\end_inset
+
+ im nachfolgenden Fall aufgeht.
+\end_layout
+
+\begin_layout Itemize
+Für 
+\begin_inset Formula $\deg c_{k-1}(x)>\deg c_{k}(x)$
+\end_inset
+
+ müßte man 
+\begin_inset Formula $q(x)=\left\lfloor c_{k-1}(x)/c_{k}(x)\right\rfloor $
+\end_inset
+
+ berechnen.
+ Mit der Option auch ein kleineres 
+\begin_inset Formula $q(x)$
+\end_inset
+
+ zu verwenden (siehe Hinweis auf Seite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:algebra_euclid_ext_hint"
+
+\end_inset
+
+), kann man sich eine vollständige Polynomdivision sparen.
+ Stattdessen ist eine sinnvolle Vorgehensweise sich bei der Divison auf
+ das höchstwertige Bit von 
+\begin_inset Formula $c_{k-1}(x)$
+\end_inset
+
+ und 
+\begin_inset Formula $c_{k}(x)$
+\end_inset
+
+ beschränken.
+ In einer monischen Polynomrepräsentation (der höchstwertige Koeffizient
+ ist
+\begin_inset space ~
+\end_inset
+
+1
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Polynom!monisches
+\end_layout
+
+\end_inset
+
+) führt die Division so zu: 
+\begin_inset Formula $x^{\deg c_{k-1}-\deg c_{k}}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:algebra_euclid_ext_poly"
+
+\end_inset
+
+Erweiterter euklidischer Algorithmus für Polynome in 
+\begin_inset Formula $\mathbb{Z}_{2}{[x]}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+REQUIRE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\deg a\geq\deg b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(c_{0},\alpha_{0},\beta_{0})\Leftarrow(a,1,0)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(c_{1},\alpha_{1},\beta_{1})\Leftarrow(b,0,1)$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+REPEAT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $k\Leftarrow k+1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\deg c_{k-1}\geq\deg c_{k}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $q\Leftarrow x^{\deg c_{k-1}-\deg c_{k}}$
+\end_inset
+
+ 
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $q(x)=1$
+\end_inset
+
+ im Fall: 
+\begin_inset Formula $\deg c_{k-1}(x)=\deg c_{k}(x)$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $q\Leftarrow0$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+führt zu: 
+\begin_inset Formula $(c_{k+1},\alpha_{k+1},\beta_{k+1})\Leftarrow(c_{k-1},\alpha_{k-1},\beta_{k-1})$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(c_{k+1},\alpha_{k+1},\beta_{k+1})\Leftarrow(c_{k-1},\alpha_{k-1},\beta_{k-1})\oplus q(c_{k},\alpha_{k},\beta_{k})$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+UNTIL{
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $c_{k+1}=0$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $(d,\alpha,\beta)\Leftarrow(c_{k},\alpha_{k},\beta_{k})$
 \end_inset
 
 
@@ -13845,16 +14575,6 @@ end{algorithmic}
 \end_layout
 
 \begin_layout Standard
-\begin_inset Index idx
-status open
-
-\begin_layout Plain Layout
-Größter gemeinsamer Teiler!Euklidischer Algorithmus!erweiterter|)
-\end_layout
-
-\end_inset
-
-
 \begin_inset Index idx
 status open
 
@@ -13905,7 +14625,7 @@ Der binäre GCD-Algorithmus kommt im Gegensatz zum klassischen euklidischen
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Stein:1967,Knuth:TAOCP2:1998"
+key "Crandall:2005,Knuth:TAOCP2:1998,Stein:1967,Welschenbach:2001"
 
 \end_inset
 
@@ -16401,7 +17121,7 @@ An diesem Punkt stellen wir jedoch fest, daß es sich bei den Größen
 
  handelt.
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Für Anwendungen, die im weiteren eine 
@@ -18772,7 +19492,24 @@ resp
 \begin_inset Formula $t_{k}$
 \end_inset
 
- direkt die gesuchten Kofaktoren 
+ direkt die gesuchten 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Kofaktoren 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -19764,7 +20501,24 @@ reference "alg:algebra_gcd_penk"
 
 \end_inset
 
- nur dann die kleinsten Kofaktoren 
+ nur dann die kleinsten 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Kofaktoren 
 \begin_inset Formula $\alpha$
 \end_inset
 
@@ -21101,7 +21855,24 @@ Eine partikuläre Lösung (
 \begin_inset Formula $y_{2}\mequiv y$
 \end_inset
 
-) kann deshalb mit Hilfe der Kofaktoren 
+) kann deshalb mit Hilfe der 
+\noun on
+B
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+'{e}
+\end_layout
+
+\end_inset
+
+zout
+\noun default
+-Kofaktoren 
 \begin_inset Formula $\alpha,\beta$
 \end_inset
 
