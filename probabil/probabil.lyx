@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -21,13 +21,13 @@ electrical
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -49,15 +49,24 @@ electrical
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Stichwortverzeichnis
 \shortcut idx
@@ -379,7 +388,7 @@ Oftmals auch geschrieben als typischer Operator
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\mean(X)=\sum_{i=1}^{N}p_{i}\, x_{i}\label{eq:prob_discrete_mean}
+\mean(X)=\sum_{i=1}^{N}p_{i}\,x_{i}\label{eq:prob_discrete_mean}
 \end{equation}
 
 \end_inset
@@ -550,7 +559,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\var(X)=\sum_{i=1}^{N}p_{i}\, x_{i}^{2}\mperiod
+\var(X)=\sum_{i=1}^{N}p_{i}\,x_{i}^{2}\mperiod
 \]
 
 \end_inset
@@ -986,7 +995,7 @@ key "Gnedenko:1958"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x\label{eq:prob_continuous_mean}
+\mean(X)=\int_{-\infty}^{\infty}x\,p(x)\tic x\label{eq:prob_continuous_mean}
 \end{equation}
 
 \end_inset
@@ -1059,8 +1068,8 @@ und im weiteren
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\var(X) & =\int_{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\, p(x)+\mean^{2}(X)p(x)\tic x\\
- & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-2\mean(X)\int_{-\infty}^{\infty}x\, p(x)\tic x+\mean^{2}(X)\int_{-\infty}^{\infty}p(x)\tic x\\
+\var(X) & =\int_{-\infty}^{\infty}x^{2}p(x)-2x\mean(X)\,p(x)+\mean^{2}(X)p(x)\tic x\\
+ & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-2\mean(X)\int_{-\infty}^{\infty}x\,p(x)\tic x+\mean^{2}(X)\int_{-\infty}^{\infty}p(x)\tic x\\
  & =\int_{-\infty}^{\infty}x^{2}p(x)\tic x-\mean^{2}(X)\mperiod
 \end{align*}
 
@@ -1220,7 +1229,7 @@ muß sie folgender Gleichung für die Dichtefunktion genügen:
 \begin_inset Formula 
 \begin{equation}
 p(x)=\left\{ \begin{array}{ll}
-\mbig{\frac{1}{b-a}} & \; a\leq x\leq b\\
+\mbig{\frac{1}{b-a}} & \;a\leq x\leq b\\
 0 & \textrm{\;\ sonst.}
 \end{array}\right.\label{eq:prob_equal_distribution}
 \end{equation}
@@ -1248,7 +1257,7 @@ reference "eq:prob_continuous_mean"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mean(X)=\int_{-\infty}^{\infty}x\, p(x)\tic x=\int_{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\mperiod\label{eq:prob_equal_mean}
+\mean(X)=\int_{-\infty}^{\infty}x\,p(x)\tic x=\int_{a}^{b}\frac{x}{b-a}\tdc x=\frac{1}{2}\cdot\frac{b^{2}-a^{2}}{b-a}=\frac{a+b}{2}\mperiod\label{eq:prob_equal_mean}
 \end{equation}
 
 \end_inset
@@ -2255,7 +2264,7 @@ Für kontinuierliche Zufallsgrößen kann die Kovarianz wiefolgt konkretisiert
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\cov(X_{1},X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\label{eq:prob_cov_continuous}
+\cov(X_{1},X_{2})=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\,p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\label{eq:prob_cov_continuous}
 \end{equation}
 
 \end_inset
@@ -2314,9 +2323,9 @@ reference "eq:prob_cov_continuous"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\cov(X_{1},X_{2}) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\, p_{1}(x_{1})p_{2}(x_{2})\tic x_{1}\tic x_{2}\\
- & =\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\tic x_{2}\\
- & =\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\, p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\, p_{2}(x_{2})\tic x_{2}
+\cov(X_{1},X_{2}) & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\left[x_{2}-\mean(X_{2})\right]\,p_{1}(x_{1})p_{2}(x_{2})\tic x_{1}\tic x_{2}\\
+ & =\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\,p_{2}(x_{2})\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\,p_{1}(x_{1})\tic x_{1}\tic x_{2}\\
+ & =\int_{-\infty}^{\infty}\left[x_{1}-\mean(X_{1})\right]\,p_{1}(x_{1})\tic x_{1}\cdot\int_{-\infty}^{\infty}\left[x_{2}-\mean(X_{2})\right]\,p_{2}(x_{2})\tic x_{2}
 \end{align*}
 
 \end_inset
@@ -2331,8 +2340,8 @@ Wegen der allgemeingültigen Beziehung
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\int_{-\infty}^{\infty}\left[x-\mean(X)\right]\, p(x)\tic x & =\int_{-\infty}^{\infty}x\, p(x)\tic x-\int_{-\infty}^{\infty}\mean(X)\, p(x)\tic x\\
- & =\mean(X)-\mean(X)\int_{-\infty}^{\infty}\, p(x)\tic x=0
+\int_{-\infty}^{\infty}\left[x-\mean(X)\right]\,p(x)\tic x & =\int_{-\infty}^{\infty}x\,p(x)\tic x-\int_{-\infty}^{\infty}\mean(X)\,p(x)\tic x\\
+ & =\mean(X)-\mean(X)\int_{-\infty}^{\infty}\,p(x)\tic x=0
 \end{align*}
 
 \end_inset
@@ -2801,7 +2810,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -3013,7 +3022,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -3714,7 +3723,7 @@ reference "eq:prob_transform_jacobian_det"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-p_{Y}(\mvec{y})=\left|\mvec J_{h}\right|\, p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}
+p_{Y}(\mvec{y})=\left|\mvec J_{h}\right|\,p_{X}(\mvec{x})\label{eq:prob_transform_density_multi}
 \end{equation}
 
 \end_inset
@@ -3804,7 +3813,7 @@ Man kann sich die Verteilungsfunktion auch hier wieder als infinitesimale
 \begin_inset Formula 
 \begin{align}
 F_{Y}(\mvec{y}) & =\int_{-\infty}^{y_{1}}\int_{-\infty}^{y_{2}}\cdots\int_{-\infty}^{y_{n}}p_{Y}(u_{1},u_{2},\ldots,u_{n})\tic u_{n}\cdots\tdc u_{2}\tic u_{1}\nonumber \\
- & =\underbrace{\int\int\cdots\int}_{B}\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\label{eq:prob_distribution_func_generic}
+ & =\underbrace{\int\int\cdots\int}_{B}\,p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}\label{eq:prob_distribution_func_generic}
 \end{align}
 
 \end_inset
@@ -3864,7 +3873,7 @@ reference "eq:prob_transform_density_differential"
 \begin_inset Formula 
 \begin{eqnarray*}
 \mean(Y_{i}) & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}y_{i}p_{Y}(y_{1},y_{2},\ldots,y_{n})\tic y_{n}\cdots\tdc y_{2}\tic y_{1}\\
- & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\, p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}
+ & = & \int_{-\infty}^{\infty}\int_{-\infty}^{\infty}\cdots\int_{-\infty}^{\infty}f_{i}(x_{1},x_{2},\ldots,x_{n})\,p_{X}(x_{1},x_{2},\ldots,x_{n})\tic x_{n}\cdots\tdc x_{2}\tic x_{1}
 \end{eqnarray*}
 
 \end_inset
@@ -3883,7 +3892,7 @@ Für den zweidimensionalen Spezialfall
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\mean(Y)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x_{1},x_{2})\, p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\label{eq:prob_mean_func_dual}
+\mean(Y)=\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}f(x_{1},x_{2})\,p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}\label{eq:prob_mean_func_dual}
 \end{equation}
 
 \end_inset
@@ -4123,7 +4132,7 @@ reference "eq:prob_transform_density_multi"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)
+p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\,p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}(x_{1},x_{2})=-\frac{1}{2}p_{X}\left(\frac{y_{1}+y_{2}}{2},\frac{y_{1}-y_{2}}{2}\right)
 \]
 
 \end_inset
@@ -4325,7 +4334,7 @@ ie
 \end_inset
 
  es gilt 
-\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\, p_{2}(x_{2})$
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\,p_{2}(x_{2})$
 \end_inset
 
 , so vereinfacht sich Gleichung
@@ -4345,7 +4354,7 @@ reference "eq:prob_continuous_add_dep"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\, p_{2}(y-z)\tic z\label{eq:prob_continuous_convolution}
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{1}(z)\,p_{2}(y-z)\tic z\label{eq:prob_continuous_convolution}
 \end{equation}
 
 \end_inset
@@ -4462,7 +4471,7 @@ reference "eq:prob_continuous_mean"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\mean(Y)=\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}y\, p_{Y}(y)\tic y
+\mean(Y)=\mean(X_{1}+X_{2})=\int_{-\infty}^{\infty}y\,p_{Y}(y)\tic y
 \]
 
 \end_inset
@@ -4493,7 +4502,7 @@ reference "eq:prob_continuous_add_dep"
 \begin_inset Formula 
 \begin{align*}
 \mean(X_{1}+X_{2}) & =\int_{y=-\infty}^{\infty}y\int_{x_{1}=-\infty}^{\infty}p_{X}(x_{1},y-x_{1})\tic x_{1}\tic y\\
- & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}(x_{1}+x_{2})\, p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
+ & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}(x_{1}+x_{2})\,p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
  & =\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{1}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int_{-\infty}^{\infty}\int_{-\infty}^{\infty}x_{2}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\\
  & =\int_{-\infty}^{\infty}x_{1}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{2}\tic x_{1}+\int_{-\infty}^{\infty}x_{2}\int_{-\infty}^{\infty}p_{X}(x_{1},x_{2})\tic x_{1}\tic x_{2}\mperiod
 \end{align*}
@@ -5338,7 +5347,7 @@ Einleuchtende Erklärung notwendig
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\, p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)
+p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\,p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\,p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)
 \]
 
 \end_inset
@@ -5395,7 +5404,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\, y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\,y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}
 \]
 
 \end_inset
@@ -5405,7 +5414,7 @@ p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\inft
 
 \begin_layout Standard
 Die abschließende Substitution 
-\begin_inset Formula $z=\sqrt{\smash[b]{y\, y_{2}}}$
+\begin_inset Formula $z=\sqrt{\smash[b]{y\,y_{2}}}$
 \end_inset
 
 , 
@@ -5426,7 +5435,7 @@ ie
 \end_inset
 
  und 
-\begin_inset Formula $2\,\tdc z=\tdc y_{2}\sqrt{\smash[b]{y/y_{2}}}=\tdc y_{2}\, y/z$
+\begin_inset Formula $2\,\tdc z=\tdc y_{2}\sqrt{\smash[b]{y/y_{2}}}=\tdc y_{2}\,y/z$
 \end_inset
 
  ergibt:
@@ -5437,7 +5446,7 @@ ie
 \begin{eqnarray*}
 p_{Y}(y) & = & \int_{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\tic z\\
  & = & \int_{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\tic z\\
- & = & \int_{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int_{-\infty}^{\infty}z\, p_{X}\left(z,y/z\right)\tic z\mperiod
+ & = & \int_{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int_{-\infty}^{\infty}z\,p_{X}\left(z,y/z\right)\tic z\mperiod
 \end{eqnarray*}
 
 \end_inset
@@ -5495,7 +5504,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\int z\, p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0
+\int z\,p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0
 \]
 
 \end_inset
@@ -5655,7 +5664,7 @@ reference "eq:prob_continuous_prd"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\, p_{2}(y/z)}{z}\tic z\mperiod
+p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\,p_{2}(y/z)}{z}\tic z\mperiod
 \end{equation}
 
 \end_inset
@@ -5738,7 +5747,7 @@ ie
 \end_inset
 
  es gibt die Faktorisierung 
-\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\, p_{2}(x_{2})$
+\begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\,p_{2}(x_{2})$
 \end_inset
 
 , dann kann man weiter vereinfachen
@@ -5848,7 +5857,7 @@ reference "eq:prob_prd_mean"
 \begin_inset Formula 
 \begin{align*}
 \var(Y) & =\int_{-\infty}^{\infty}y^{2}p(y)\tic y-\mean^{2}(Y)\\
- & =\int_{x=-\infty}^{\infty}y^{2}\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\, p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
+ & =\int_{x=-\infty}^{\infty}y^{2}\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\,p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\int_{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean(X_{1})\mean(X_{2})\\
@@ -6695,7 +6704,7 @@ noun{Cauchy-Schwarz}
 \end_inset
 
  in der Form 
-\begin_inset Formula $\left|\int f(x)\, g(x)\tic x\right|^{2}\leq\int|f(x)|^{2}\tic x\,\int|g(x)|^{2}\tic x$
+\begin_inset Formula $\left|\int f(x)\,g(x)\tic x\right|^{2}\leq\int|f(x)|^{2}\tic x\,\int|g(x)|^{2}\tic x$
 \end_inset
 
 .
@@ -6710,7 +6719,7 @@ status open
 \begin_layout Plain Layout
 \begin_inset Formula 
 \begin{eqnarray*}
-\left[\int_{a}^{b}f(x)\, g(x)\tic x\right]^{2} & \leq & \int_{a}^{b}f^{2}(x)\tic x\,\int_{a}^{b}g^{2}(x)\tic x,\qquad x\in\mathbb{R}\\
+\left[\int_{a}^{b}f(x)\,g(x)\tic x\right]^{2} & \leq & \int_{a}^{b}f^{2}(x)\tic x\,\int_{a}^{b}g^{2}(x)\tic x,\qquad x\in\mathbb{R}\\
 \left|\int_{a}^{b}f(z)\,\cjgt[g]{z}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}
 \end{eqnarray*}
 
@@ -6866,7 +6875,7 @@ description "Kreuzkorrelationsfunktion der Zufallsprozesse $\\mvec{X}(t),\\mvec{
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\acf_{xy}(\tau)=\mean\left[X(t)\, Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\, y(t+\tau)\tic t\label{eq:prob_ccf_def}
+\acf_{xy}(\tau)=\mean\left[X(t)\,Y(t+\tau)\right]=\lim_{T\rightarrow\infty}\frac{1}{T}\int_{T}x(t)\,y(t+\tau)\tic t\label{eq:prob_ccf_def}
 \end{equation}
 
 \end_inset
@@ -7341,7 +7350,7 @@ reference "eq:prob_psd_wiener_chintchin"
 status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Formula $(f*g)(t)\lft F(\ji\omega)\, G(\ji\omega)$
+\begin_inset Formula $(f*g)(t)\lft F(\ji\omega)\,G(\ji\omega)$
 \end_inset
 
 
@@ -8066,7 +8075,7 @@ tution entstehenden Ausdruck
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-Y(\ji\omega)\cjgt[Y]{\ji\omega} & = & \trf(\ji\omega)\cjgt[\trf]{\ji\omega}\, X(\ji\omega)\cjgt[X]{\ji\omega}\\
+Y(\ji\omega)\cjgt[Y]{\ji\omega} & = & \trf(\ji\omega)\cjgt[\trf]{\ji\omega}\,X(\ji\omega)\cjgt[X]{\ji\omega}\\
 \left|Y(\ji\omega)\right|^{2} & = & \left|\trf(\ji\omega)\right|^{2}\left|X(\ji\omega)\right|^{2}
 \end{eqnarray*}
 
@@ -8521,7 +8530,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -8892,7 +8901,7 @@ Korrelationskoeffizient
 \end_inset
 
  dann am größten, wenn beide Funktionen linear abhängig sind, also 
-\begin_inset Formula $\irf(t)=k\, x(t_{0}-t)$
+\begin_inset Formula $\irf(t)=k\,x(t_{0}-t)$
 \end_inset
 
  gilt.
@@ -8907,7 +8916,7 @@ Fourier
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\trf_{opt}=k\,\cjgt{X}\expf^{-\ji\omega t_{0}}\rft k\, x(t_{0}-t)
+\trf_{opt}=k\,\cjgt{X}\expf^{-\ji\omega t_{0}}\rft k\,x(t_{0}-t)
 \]
 
 \end_inset
@@ -8955,8 +8964,8 @@ reference "eq:prob_acf_conv"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-y(t) & =x(t)*\irf(t)=k\, x(t)*x(t_{0}-t)\\
-Y(\ji\omega) & =\trf(\ji\omega)\, X(\ji\omega)=k\, X(\ji\omega)\cjgt{X}\expf^{-\ji\omega t_{0}}=k\,\left|X(\ji\omega)\right|^{2}\expf^{-\ji\omega t_{0}}\mperiod
+y(t) & =x(t)*\irf(t)=k\,x(t)*x(t_{0}-t)\\
+Y(\ji\omega) & =\trf(\ji\omega)\,X(\ji\omega)=k\,X(\ji\omega)\cjgt{X}\expf^{-\ji\omega t_{0}}=k\,\left|X(\ji\omega)\right|^{2}\expf^{-\ji\omega t_{0}}\mperiod
 \end{align*}
 
 \end_inset
@@ -9106,7 +9115,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -9624,7 +9633,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
