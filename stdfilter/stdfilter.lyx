@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrbook
@@ -32,13 +32,13 @@ algorithm
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -60,15 +60,24 @@ algorithm
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \branch WITH_APPENDIX
 \selected 0
@@ -102,6 +111,11 @@ status open
 
 \begin_layout Plain Layout
 Version $Id$
+\end_layout
+
+\begin_layout Plain Layout
+ATTENTION: TeX4ht does not work currently with class 'scrbook' (but works
+ with 'scrartcl') !!!
 \end_layout
 
 \end_inset
@@ -169,7 +183,7 @@ status open
 
 \begin_layout Plain Layout
 
-
+%
 \backslash
 setlength{
 \backslash
@@ -179,6 +193,37 @@ nomlabelwidth}{1in}
 \end_inset
 
 
+\end_layout
+
+\begin_layout Standard
+\begin_inset CommandInset nomencl_print
+LatexCommand printnomenclature
+set_width "custom"
+width "1in"
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+frontmatter
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Chapter
+Intention
 \end_layout
 
 \begin_layout Standard
@@ -345,36 +390,6 @@ description "Realteil"
 \end_layout
 
 \begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "none"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-frontmatter
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Chapter
-Intention
-\end_layout
-
-\begin_layout Standard
 Vorliegendes Papier soll dem Ingenieur 
 \begin_inset ERT
 status collapsed
@@ -528,16 +543,6 @@ LTI-Systeme
 \begin_inset CommandInset include
 LatexCommand include
 filename "ltisys.lyx"
-
-\end_inset
-
-
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-TeX4ht conversion of ltisys.lyx fails
-\end_layout
 
 \end_inset
 
