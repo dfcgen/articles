@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrartcl
@@ -13,6 +13,9 @@
 helpers
 mathext
 algorithm
+eqs-within-sections
+figs-within-sections
+tabs-within-sections
 \end_modules
 \maintain_unincluded_children false
 \language german
@@ -22,13 +25,13 @@ algorithm
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -50,15 +53,24 @@ algorithm
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Stichwortverzeichnis
 \shortcut idx
@@ -188,16 +200,8 @@ fi
 
 \end_layout
 
-\begin_layout Standard
-
-\end_layout
-
 \begin_layout Section
 Algebraische Grundstrukturen
-\end_layout
-
-\begin_layout Standard
-
 \end_layout
 
 \begin_layout Subsection
@@ -380,11 +384,11 @@ description "neutrales Element"
 \end_inset
 
  muß existieren, so daß gilt: 
-\begin_inset Formula $x\diamond e=x$
+\begin_inset Formula $a\diamond e=a$
 \end_inset
 
  mit 
-\begin_inset Formula $x\in G$
+\begin_inset Formula $a\in G$
 \end_inset
 
  (Identität
@@ -2620,10 +2624,6 @@ Koerper@Körper!Schief-
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Standard
 Tabelle
 \begin_inset space ~
 \end_inset
@@ -2641,13 +2641,12 @@ reference "tab:algebraic_structures"
 
 \begin_layout Standard
 \begin_inset Float table
-placement H
-wide false
+wide true
 sideways false
-status open
+status collapsed
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2665,20 +2664,21 @@ Eigenschaften algebraischer Strukturen
 \end_layout
 
 \begin_layout Plain Layout
+\noindent
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="10" columns="10">
-<features tabularvalignment="middle">
-<column alignment="left" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="left" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
@@ -2772,7 +2772,7 @@ Multiplikation
 </cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2781,43 +2781,7 @@ Multiplikation
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-assoziativ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-kommutativ
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-neutral
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" rotate="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-invers
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2826,7 +2790,7 @@ assoziativ
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2835,7 +2799,7 @@ kommutativ
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2844,7 +2808,7 @@ neutral
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" leftline="true" rightline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -2853,7 +2817,43 @@ invers
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="true" usebox="none">
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+assoziativ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+kommutativ
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+neutral
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="90" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+invers
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" bottomline="true" rightline="true" rotate="90" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -4193,7 +4193,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -4211,10 +4211,6 @@ Zyklische Untergruppe
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4287,7 +4283,7 @@ Element!Ordnung
 
 .
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Und dies ist das einzige Element mit der Eigenschaft 
@@ -4343,6 +4339,12 @@ r^{-1} & =r^{k-1}\mperiod\label{eq:algebra_multgrp_inv}
 \end_layout
 
 \begin_layout Subsubsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_multgrp_elem_pwr"
+
+\end_inset
+
 Potenzen eines Elements
 \end_layout
 
@@ -4360,7 +4362,27 @@ Betrachten wir jetzt die
 \end_inset
 
 .
- Bezeichnet man dazu mit 
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.8"
+key "Niven:1991"
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bezeichnet man dazu mit 
 \begin_inset Formula $k=|r|$
 \end_inset
 
@@ -4502,7 +4524,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -4516,10 +4538,6 @@ Potenzen eines Elements
 
 \end_inset
 
-
-\end_layout
-
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -4544,7 +4562,7 @@ description "Kleinstes gemeinsames Vielfaches von $a$ und $b$"
 
  auch eine Berechnungsvorschrift
 \begin_inset Note Comment
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Das kleinste gemeinsame Vielfache von 
@@ -4839,12 +4857,19 @@ Untergruppe!Index
 \begin_inset Formula $\left\langle s\right\rangle $
 \end_inset
 
-, gilt deshalb: 
-\begin_inset Formula $|\left\langle r\right\rangle :\left\langle s\right\rangle |=\gcd(|r|,n)$
+, gilt deshalb:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+|\left\langle r\right\rangle :\left\langle s\right\rangle |=\gcd(|r|,n)\qquad(s=r^{n})\mperiod
+\]
+
 \end_inset
 
-.
- Die Ordnung 
+Die Ordnung 
 \begin_inset Formula $|s|$
 \end_inset
 
@@ -4860,6 +4885,7 @@ Untergruppe!Index
 .
 \end_layout
 
+\end_deeper
 \begin_layout Enumerate
 Bei Kenntnis der Ordnung 
 \begin_inset Formula $k=|r|$
@@ -4870,7 +4896,20 @@ Bei Kenntnis der Ordnung
 \begin_inset Formula $\left\langle s\right\rangle $
 \end_inset
 
- bekannt (vergleiche Formel
+ bekannt (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Formel
 \begin_inset space ~
 \end_inset
 
@@ -4948,9 +4987,32 @@ reference "eq:algebra_ord_power"
 \noun on
 Euler
 \noun default
-'s Totient-Funktion
-\begin_inset Foot
+'s 
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Euler@
+\begin_inset ERT
 status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Euler}
+\end_layout
+
+\end_inset
+
+!Totient-Funktion
+\end_layout
+
+\end_inset
+
+Totient-Funktion
+\begin_inset Foot
+status collapsed
 
 \begin_layout Plain Layout
 
@@ -5253,7 +5315,7 @@ Zur gleichen Schlußfolgerung kommt man übrigens auch unter Verwendung der
 r^{|G^{*}|}-1=r^{ik}-1 & =(r^{k}-1)\,\left[r^{(i-1)k}+r^{(i-2)k}+\dots+r^{2k}+r^{k}+1\right]\\
  & =(r^{k}-1)\,\left[(r^{k})^{i-1}+(r^{k})^{i-2}+\dots+(r^{k})^{2}+(r^{k})^{1}+(r^{k})^{0}\right]\\
  & =(r^{k}-1)\,\underbrace{(1+1+\dots+1+1+1)}_{i\text{-mal}}\\
- & =(r^{k}-1)\, i
+ & =(r^{k}-1)\,i
 \end{align*}
 
 \end_inset
@@ -5891,7 +5953,7 @@ reference "eq:algebra_ord_divider"
 \begin_inset Formula $\totient(|G^{*}|/d)$
 \end_inset
 
- 
+ wieder 
 \noun on
 Euler
 \noun default
@@ -6101,7 +6163,7 @@ reference "eq:algebra_zeroes_poly"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.|G^{*}|\, x^{|G^{*}|-1}\right|_{x=\alpha}=|G^{*}|\,\alpha^{-1}\alpha^{|G^{*}|}=|G^{*}|\,\alpha^{-1}\neq0
+\left.\tdiff{\varphi(x)}{x}\right|_{x=\alpha}=\left.|G^{*}|\,x^{|G^{*}|-1}\right|_{x=\alpha}=|G^{*}|\,\alpha^{-1}\alpha^{|G^{*}|}=|G^{*}|\,\alpha^{-1}\neq0
 \]
 
 \end_inset
@@ -7870,6 +7932,29 @@ Euler
 status collapsed
 
 \begin_layout Plain Layout
+Euler@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Euler}
+\end_layout
+
+\end_inset
+
+!Totient-Funktion
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
 Totient-Funktion
 \end_layout
 
@@ -7897,14 +7982,6 @@ ie
 \end_inset
 
  
-\begin_inset CommandInset nomenclature
-LatexCommand nomenclature
-symbol "$a \\subseteq b$"
-description "$a$ ist Teilmenge von $b$"
-
-\end_inset
-
-
 \begin_inset Formula $\mathbb{F}_{q}\subseteq\mathbb{Z}_{m}$
 \end_inset
 
@@ -8341,7 +8418,7 @@ Gruppe!zyklische
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N},\: r\in\mathbb{Z}\}\mperiod\label{eq:algebra_rcls_mod}
+\left\langle r\right\rangle =\{\left.r^{n}\bmod(r^{k}-1)\,\right|n\in\mathbb{N},\:r\in\mathbb{Z}\}\mperiod\label{eq:algebra_rcls_mod}
 \end{equation}
 
 \end_inset
@@ -8662,7 +8739,17 @@ Multiplikation mit
 
  gibt uns eine weitere Ausdrucksmöglichkeit für das Quadrat eines Elements.
 \begin_inset Index idx
-status collapsed
+status open
+
+\begin_layout Plain Layout
+Quadrat eines Elements
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
 
 \begin_layout Plain Layout
 Element!Quadrat eines
@@ -8672,20 +8759,10 @@ Element!Quadrat eines
 
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Element!Potenzierung
-\end_layout
-
-\end_inset
-
-
-\begin_inset Index idx
-status collapsed
-
-\begin_layout Plain Layout
-Quadrat ein Elements
 \end_layout
 
 \end_inset
@@ -8707,11 +8784,7 @@ r^{2}=r^{q+1}
 
 \end_deeper
 \begin_layout Enumerate
-Für den Spezialfall, daß 
-\begin_inset Formula $q$
-\end_inset
-
- gerade ist, ermöglicht der kleine Satz von 
+Für einige Spezialfälle ermöglicht der kleine Satz von 
 \noun on
 Fermat
 \noun default
@@ -8739,20 +8812,8 @@ Wurzel aus einem Element
 \end_layout
 
 \begin_deeper
-\begin_layout Standard
-\begin_inset Formula 
-\begin{align*}
-r & =r^{q}\\
-\sqrt{r} & =\sqrt{r^{q}}=r^{\frac{q}{2}}
-\end{align*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Beispielsweise erhält man im Erweiterungskörper 
+\begin_layout Enumerate
+Beispielsweise kann man im Erweiterungskörper 
 \begin_inset Formula $\mathbb{F}_{2^{n}}$
 \end_inset
 
@@ -8780,13 +8841,18 @@ reference "sec:algebra_extfield"
 
 \end_inset
 
-) folgende Formel:
+), in welchem 
+\begin_inset Formula $q=2^{n}$
+\end_inset
+
+ ja immer gerade ist, direkt folgende Formel angeben:
 \end_layout
 
+\begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\sqrt{r}=r^{2^{n-1}}\mperiod
+\sqrt{r}=\sqrt{r^{q}}=r^{\frac{q}{2}}=r^{2^{n-1}}
 \]
 
 \end_inset
@@ -8794,6 +8860,98 @@ reference "sec:algebra_extfield"
 
 \end_layout
 
+\end_deeper
+\begin_layout Enumerate
+Aber auch im Körper 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+ kann man, zumindest für den Fall 
+\begin_inset Formula $p\equiv3\bmod4$
+\end_inset
+
+, eine einfache Lösung präsentieren:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Für eine generelle Lösungsmöglichkeit sei auf den 
+\noun on
+Tonelli
+\noun default
+-
+\noun on
+Shanks
+\noun default
+ Algorithmus (siehe Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_quadratic_residue"
+
+\end_inset
+
+, Seite
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand pageref
+reference "sec:algebra_quadratic_residue"
+
+\end_inset
+
+) verwiesen
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tonelli:1891,Shanks:1973"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\sqrt{r}=r^{\frac{p+1}{4}}\pmod{p}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit einer kurzen Probe läßt sie sich schnell verifizieren:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(r^{\frac{p+1}{4}}\right)^{2}=r^{\frac{p+1}{2}}=\sqrt{r^{p+1}}=\sqrt{r^{2}r^{p-1}}=\sqrt{r^{2}}=r\pmod{p}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
 \end_deeper
 \begin_layout Paragraph
 Satz von Wilson
@@ -8943,7 +9101,30 @@ Euler
 
 \begin_layout Standard
 \begin_inset Index idx
-status collapsed
+status open
+
+\begin_layout Plain Layout
+Euler@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Euler}
+\end_layout
+
+\end_inset
+
+!Totient-Funktion
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
 
 \begin_layout Plain Layout
 Totient-Funktion
@@ -9087,7 +9268,7 @@ Da die Eins immer als teilerfremd angesehen wird, gilt:
 status collapsed
 
 \begin_layout Plain Layout
-Euler, Satz von@
+Euler@
 \begin_inset ERT
 status open
 
@@ -9100,7 +9281,7 @@ noun{Euler}
 
 \end_inset
 
-, Satz von
+!Satz von
 \end_layout
 
 \end_inset
@@ -9195,7 +9376,7 @@ Manchmal wird
 \noun on
 Euler
 \noun default
-'s Totient-Funktion auch als Ordnung der multiplikativen Gruppe 
+'s Totient-Funktion auch als  der multiplikativen Gruppe 
 \begin_inset Formula $\mathbb{Z}_{m}^{*}$
 \end_inset
 
@@ -9204,7 +9385,7 @@ Euler
 
 \end_inset
 
- Berücksichtigt man jetzt noch die Gruppenordnung nach Formel
+ Berücksichtigt man jetzt noch die Gruppen nach Formel
 \begin_inset space ~
 \end_inset
 
@@ -9692,11 +9873,11 @@ Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{5}$
 \end_inset
 
-, also dem Fall einer multiplikativen Gruppe der Ordnung 
+, also dem Fall einer multiplikativen Gruppe der  
 \begin_inset Formula $|\mathbb{Z}_{5}^{*}|=q-1=4$
 \end_inset
 
-, gilt für die Ordnung der Elemente:
+, gilt für die  der Elemente:
 \begin_inset Index idx
 status collapsed
 
@@ -9711,7 +9892,7 @@ Totient-Funktion
 status collapsed
 
 \begin_layout Plain Layout
-Element!Ordnung
+Element!
 \end_layout
 
 \end_inset
@@ -9764,11 +9945,11 @@ Koerper@Körper!
 \begin_inset Formula $\mathbb{Z}_{7}$
 \end_inset
 
-, also dem Fall einer multiplikativen Gruppe der Ordnung 
+, also dem Fall einer multiplikativen Gruppe der  
 \begin_inset Formula $|\mathbb{Z}_{7}^{*}|=q-1=6$
 \end_inset
 
-, gilt für die Ordnung der Elemente:
+, gilt für die  der Elemente:
 \begin_inset Index idx
 status collapsed
 
@@ -9783,7 +9964,7 @@ Totient-Funktion
 status collapsed
 
 \begin_layout Plain Layout
-Element!Ordnung
+Element!
 \end_layout
 
 \end_inset
@@ -10065,7 +10246,7 @@ description "Polynomring"
  
 \begin_inset Formula 
 \begin{align}
-K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\dots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{f(x)\right|n\in\mathbb{N},\; a_{i}\in K\}\label{eq:algebra_residue_poly}\\
+K[x] & :=\left\{ a_{n-1}x^{n-1}+a_{n-2}x^{n-2}+\dots+a_{2}x^{2}+a_{1}x+a_{0}\right\} =\left.\{f(x)\right|n\in\mathbb{N},\;a_{i}\in K\}\label{eq:algebra_residue_poly}\\
 f(x) & =\sum_{\nu=0}^{n-1}a_{\nu}x^{\nu}\label{eq:algebra_residue_poly_def}
 \end{align}
 
@@ -10396,7 +10577,7 @@ ie
 \end_inset
 
  angenommen wird, dann gilt für die Multiplikation 
-\begin_inset Formula $r(x)\, g(x)\equiv h(x)\pmod{m(x)}$
+\begin_inset Formula $r(x)\,g(x)\equiv h(x)\pmod{m(x)}$
 \end_inset
 
  gleichfalls 
@@ -10408,7 +10589,7 @@ ie
 
 \begin_layout Enumerate
 Auch das Assoziativgesetz 
-\begin_inset Formula $r(x)\left[g(x)\, h(x)\right]=\left[r(x)\, g(x)\right]h(x)$
+\begin_inset Formula $r(x)\left[g(x)\,h(x)\right]=\left[r(x)\,g(x)\right]h(x)$
 \end_inset
 
  ist in einem Restklassenring von Polynomen erfüllt.
@@ -10910,7 +11091,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Ein Erweiterungskörper schafft dadurch die Möglichkeit, daß auch Potenzen
- von Primelementen noch als Körperordnung zulässig sind.
+ von Primelementen noch als Körper zulässig sind.
 \end_layout
 
 \end_inset
@@ -11219,7 +11400,7 @@ reference "eq:algebra_ord_mod_factor"
 \end_inset
 
  ist, also die Zerlegung 
-\begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\, m(x)$
+\begin_inset Formula $\left[r(x)\right]^{q-1}-1=h(x)\,m(x)$
 \end_inset
 
  hat.
@@ -11242,7 +11423,7 @@ reference "eq:algebra_ord_mod_factor"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-x^{q-1}-1 & =h(x)\, m(x)\\
+x^{q-1}-1 & =h(x)\,m(x)\\
 x^{q-1}-1 & \equiv0\pmod{m(x)}\\
 x^{q}-x & \equiv0\pmod{m(x)},
 \end{align*}
@@ -11254,7 +11435,7 @@ x^{q}-x & \equiv0\pmod{m(x)},
 
 \begin_layout Standard
 welche auch die Kongruenz 
-\begin_inset Formula $h(x)\, m(x)\equiv0\pmod{x^{q-1}-1}$
+\begin_inset Formula $h(x)\,m(x)\equiv0\pmod{x^{q-1}-1}$
 \end_inset
 
  rechtfertigen.
@@ -11351,7 +11532,7 @@ Primfaktorzerlegung
 \begin_layout Standard
 \begin_inset Formula 
 \[
-m_{1}^{e_{1}}\, m_{2}^{e_{2}}\, m_{3}^{e_{3}}\dotsm
+m_{1}^{e_{1}}\,m_{2}^{e_{2}}\,m_{3}^{e_{3}}\dotsm
 \]
 
 \end_inset
@@ -12151,7 +12332,7 @@ Außerdem sind alle Elemente (abgesehen von
 \end_inset
 
 ) wirklich Nullstellen des Polynoms 
-\begin_inset Formula $x^{q-1}-1=x^{3}-1=(x-1)\, m(x)$
+\begin_inset Formula $x^{q-1}-1=x^{3}-1=(x-1)\,m(x)$
 \end_inset
 
 .
@@ -12359,7 +12540,7 @@ Euklid
 status collapsed
 
 \begin_layout Plain Layout
-Die asymptotische Komplexität des klassischen Algorithmus wird in
+Die Komplexität des klassischen Algorithmus wird in
 \begin_inset space ~
 \end_inset
 
@@ -12372,12 +12553,12 @@ key "Menezes:1992"
 \end_inset
 
  mit 
-\begin_inset Formula $\mathcal{O}(\lg^{2}n)$
+\begin_inset Formula $\mathcal{O}(\ld^{2}n)$
 \end_inset
 
  angegeben, was in starkem Maße durch die fortlaufenden Divisionen bestimmt
  wird.
- Zur Komplexität verschiedener Varianten des GCD-Algorithmus' siehe auch
+ Zur Komplexität verschiedener Varianten des GCD-Algorithmus siehe auch
 \begin_inset space ~
 \end_inset
 
@@ -12492,7 +12673,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -12554,6 +12735,13 @@ REQUIRE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -12592,6 +12780,13 @@ STATE
 
  
 \begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -12679,6 +12874,13 @@ status collapsed
 }
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -13762,7 +13964,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -13810,6 +14012,13 @@ REQUIRE
 
  
 \begin_inset Formula $a\geq b$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -13870,6 +14079,13 @@ STATE
 
  
 \begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -14037,6 +14253,13 @@ status collapsed
 }
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -14564,7 +14787,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -14656,6 +14879,13 @@ STATE
 
  
 \begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -14920,6 +15150,13 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -15113,7 +15350,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -15135,10 +15372,10 @@ Reduktionsschema des binären GCD-Algorithmus
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="8" columns="4">
-<features headTopDL="true" headBottomDL="true" tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" headTopDL="true" headBottomDL="true" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="left" valignment="top" width="3in">
 <row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
@@ -15726,7 +15963,7 @@ status collapsed
 Wodurch zwar mehr Schritte als beim euklidischen Algorithmus nötig sind,
  sich die Ausführungszeit (durch Vermeidung von Langzahldivisionen) aber
  typischerweise verringert.
- Die Komplexität des Algorithmus' bleibt unverändert quadratisch, kann aber
+ Die Komplexität des Algorithmus bleibt unverändert quadratisch, kann aber
  durch eine systolische Implementierung nach 
 \begin_inset CommandInset citation
 LatexCommand cite
@@ -15974,7 +16211,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -16022,6 +16259,13 @@ STATE
 
  
 \begin_inset Formula $n\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -16137,6 +16381,13 @@ status collapsed
 ENDWHILE
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -16335,7 +16586,7 @@ toccmd{
 
 
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Auch 
@@ -16416,7 +16667,7 @@ noun{Kaliski}
 
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Kaliski GCD-Algorithmus@
@@ -16542,8 +16793,8 @@ Andere mögliche Anfangsbedingung wären:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{3}
-a_{0} & =u_{i}a_{i}+v_{i}b_{i} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_kaliski_a0}\\
-b_{0} & =s_{i}a_{i}+t_{i}b_{i} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_kaliski_b0}
+a_{0} & =u_{i}a_{i}+v_{i}b_{i} & \qquad(u_{0} & =1, & \;v_{0} & =0)\label{eq:algebra_gcd_kaliski_a0}\\
+b_{0} & =s_{i}a_{i}+t_{i}b_{i} & \qquad(s_{0} & =0, & \;t_{0} & =1)\label{eq:algebra_gcd_kaliski_b0}
 \end{alignat}
 
 \end_inset
@@ -16653,7 +16904,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -16677,16 +16928,16 @@ Kaliski
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="6" columns="9">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -17403,7 +17654,7 @@ reference "eq:algebra_gcd_kaliski_b0"
 \begin{xxalignat}{2}
 s_{i}a_{0}-u_{i}b_{0} & =s_{i}(u_{i}a_{i}+v_{i}b_{i})-u_{i}(s_{i}a_{i}+t_{i}b_{i}) & t_{i}a_{0}-v_{i}b_{0} & =t_{i}(u_{i}a_{i}+v_{i}b_{i})-v_{i}(s_{i}a_{i}+t_{i}b_{i})\\
  & =(s_{i}v_{i}-u_{i}t_{i})b_{i} &  & =(u_{i}t_{i}-s_{i}v_{i})a_{i}\\
- & =-\mdet{D_{i}}\, b_{i} &  & =\mdet{D_{i}}\, a_{i}
+ & =-\mdet{D_{i}}\,b_{i} &  & =\mdet{D_{i}}\,a_{i}
 \end{xxalignat}
 
 \end_inset
@@ -17883,7 +18134,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -17951,10 +18202,13 @@ REQUIRE
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset space \hfill{}
+\begin_inset VSpace defskip
 \end_inset
 
 
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -18096,6 +18350,13 @@ STATE
 
  
 \begin_inset Formula $k\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -18602,6 +18863,13 @@ ENDWHILE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -18654,10 +18922,6 @@ status collapsed
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset space \hfill{}
-\end_inset
-
-
 \begin_inset ERT
 status collapsed
 
@@ -18703,6 +18967,13 @@ STATE
 
  
 \begin_inset Formula $i\Leftarrow k$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -19087,6 +19358,13 @@ ENDWHILE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -19359,7 +19637,7 @@ key "Kaliski:1995"
 
 \end_inset
 
- wird bewiesen, daß keine dieser Größen während der Ausführung des Algorithmus'
+ wird bewiesen, daß keine dieser Größen während der Ausführung des Algorithmus
  den Maximalwert 
 \begin_inset Formula $2a_{0}-1$
 \end_inset
@@ -19406,7 +19684,7 @@ zout
 \end_inset
 
  geschlußfolgert, was jedoch nicht für die Zwischenwerte eines bestimmten
- Algorithmus' gelten muß (hier anwendbar auf das Ende von Phase
+ Algorithmus gelten muß (hier anwendbar auf das Ende von Phase
 \begin_inset space ~
 \end_inset
 
@@ -19831,8 +20109,8 @@ Andere mögliche Anfangsbedingung wären:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{3}
-a_{i} & =u_{i}a_{0}+v_{i}b_{0} & \qquad(u_{0} & =1, & \; v_{0} & =0)\label{eq:algebra_gcd_penk_a0}\\
-b_{i} & =s_{i}a_{0}+t_{i}b_{0} & \qquad(s_{0} & =0, & \; t_{0} & =1)\label{eq:algebra_gcd_penk_b0}
+a_{i} & =u_{i}a_{0}+v_{i}b_{0} & \qquad(u_{0} & =1, & \;v_{0} & =0)\label{eq:algebra_gcd_penk_a0}\\
+b_{i} & =s_{i}a_{0}+t_{i}b_{0} & \qquad(s_{0} & =0, & \;t_{0} & =1)\label{eq:algebra_gcd_penk_b0}
 \end{alignat}
 
 \end_inset
@@ -20138,7 +20416,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -20162,15 +20440,15 @@ Penk
 \align center
 \begin_inset Tabular
 <lyxtabular version="3" rows="5" columns="8">
-<features tabularvalignment="middle">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
-<column alignment="center" valignment="top" width="0">
+<features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <row>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -20861,7 +21139,7 @@ reference "alg:algebra_gcd_penk"
 \end_inset
 
  formulieren.
- Der Vorteil des Algorithmus' (gegenüber 
+ Der Vorteil des Algorithmus (gegenüber 
 \noun on
 Kaliski
 \noun default
@@ -20938,7 +21216,7 @@ ie
 \end_inset
 
 ).
- Sollte als Resultat des Algorithmus' jedoch 
+ Sollte als Resultat des Algorithmus jedoch 
 \begin_inset Formula $|\alpha|\geq\overline{b}_{0}$
 \end_inset
 
@@ -21007,7 +21285,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -21067,6 +21345,13 @@ REQUIRE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -21121,6 +21406,13 @@ STATE
 
  
 \begin_inset Formula $i\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -21881,6 +22173,13 @@ ENDWHILE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -22277,7 +22576,7 @@ x_{2}=\alpha\overline{c} & =\alpha\frac{c}{d} & y_{2} & =\beta\overline{c}=\beta
 \end_layout
 
 \begin_layout Standard
-Die Vielfalt aller Lösungen stellt sich dadurch wie folgt dar:
+Die Vielfalt aller Lösungen stellt sich dadurch wiefolgt dar:
 \end_layout
 
 \begin_layout Emph(asized)
@@ -22874,7 +23173,7 @@ Das kleinste gemeinsame Vielfache zweier ganzer Zahlen
 \begin_inset Formula $n$
 \end_inset
 
- ist (Wikipedia).
+ ist.
 \end_layout
 
 \end_inset
@@ -23039,7 +23338,7 @@ noun{Kronecker}
 \end_inset
 
  
-\begin_inset Formula $\delta_{i\, k}$
+\begin_inset Formula $\delta_{i\,k}$
 \end_inset
 
  
@@ -23057,7 +23356,7 @@ ausgedrückt werden:
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\alpha_{k}\overline{m}_{k}\bmod m_{i}=\delta_{i\, k}=\begin{cases}
+\alpha_{k}\overline{m}_{k}\bmod m_{i}=\delta_{i\,k}=\begin{cases}
 0 & \quad(i\neq k)\\
 1 & \quad(i=k)
 \end{cases}\mperiod
@@ -23079,7 +23378,7 @@ Die endgültige Lösungsidee besteht nun darin, für jede Kongruenz
 \begin_layout Standard
 \begin_inset Formula 
 \[
-{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}\bmod m_{i}}={\displaystyle \sum_{k=1}^{n}a_{k}\delta_{i\, k}\bmod m_{i}}=a_{i}\bmod m_{i}\equiv x\pmod{m_{i}}
+{\displaystyle \sum_{k=1}^{n}\alpha_{k}a_{k}\overline{m}_{k}\bmod m_{i}}={\displaystyle \sum_{k=1}^{n}a_{k}\delta_{i\,k}\bmod m_{i}}=a_{i}\bmod m_{i}\equiv x\pmod{m_{i}}
 \]
 
 \end_inset
@@ -23234,6 +23533,2917 @@ Chinesischer Restsatz|)
 \end_layout
 
 \begin_layout Subsection
+\begin_inset CommandInset label
+LatexCommand label
+name "sec:algebra_quadratic_residue"
+
+\end_inset
+
+Quadratwurzeln in 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocmath{
+\backslash
+mathbb{F}_p}{GF(p)}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Quadratwurzel aus einem Element|(
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Element!Quadratwurzel aus|(
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Vorbetrachtungen
+\end_layout
+
+\begin_layout Standard
+Das Bestimmen der Quadratwurzel kann man im Körper 
+\begin_inset Formula $\mathbb{F}_{p}$
+\end_inset
+
+ recht effizient mit dem 
+\noun on
+Tonelli-Shanks
+\noun default
+ Algorithmus erledigen.
+ Bevor man aber dazu übergehen kann den Algorithmus zu erläutern, muß man
+ sich unbedingt über einige Fakten in Bezug auf das Quadrieren
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Quadrat eines Elements
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Element!Quadrat eines
+\end_layout
+
+\end_inset
+
+ von Körperelementen klar werden.
+ Ohne wesentlich an Allgemeinheit zu verlieren, betrachten wird dazu die
+ multiplikative Gruppe 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}=(\mathbb{Z}_{p}\setminus\{0\})$
+\end_inset
+
+ und formulieren zuerst die folgenden Grundaussagen in Bezug auf:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Siehe 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ auch
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "9.1"
+key "Rosen:1999"
+
+\end_inset
+
+ oder
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "3.1"
+key "Niven:1991"
+
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y=x^{2}\pmod{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Enumerate
+Wegen Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_ord_power"
+
+\end_inset
+
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_elem_order"
+
+\end_inset
+
+) in der Ausprägung:
+\end_layout
+
+\begin_deeper
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+|y|=\left|x^{2}\right|=\frac{|x|}{\gcd(2,|x|)}=\begin{cases}
+|x|, & x\mbox{ ungerade}\\
+\frac{|x|}{2}, & x\mbox{ gerade}
+\end{cases}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+bleibt beim Quadrieren eines Elements dessen Ordnung entweder erhalten (
+\begin_inset Formula $x$
+\end_inset
+
+ ist eine ungerade Zahl) oder wird halbiert (
+\begin_inset Formula $x$
+\end_inset
+
+ ist eine gerade Zahl).
+ Mehrfaches (
+\begin_inset Formula $n$
+\end_inset
+
+-maliges) Quadrieren kann die Ordnung deshalb maximal durch 
+\begin_inset Formula $2^{n}$
+\end_inset
+
+ teilen:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\[
+\left|x^{2^{n}}\right|\geq\frac{|x|}{2^{n}}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\end_inset
+
+
+\end_layout
+
+\begin_layout Enumerate
+Aus der Beziehung 
+\begin_inset Formula $y=x^{2}\pmod{p}$
+\end_inset
+
+ ersieht man sofort, daß immer zwei Elemente 
+\begin_inset Formula $x,x'$
+\end_inset
+
+ genau zum selben 
+\begin_inset Formula $y$
+\end_inset
+
+ führen -- ein 
+\begin_inset Quotes gld
+\end_inset
+
+Positives
+\begin_inset Quotes grd
+\end_inset
+
+ und ein 
+\begin_inset Quotes gld
+\end_inset
+
+Negatives
+\begin_inset Quotes grd
+\end_inset
+
+: 
+\begin_inset Formula $x'\equiv-x\pmod{p}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Da 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ genau 
+\begin_inset Formula $p-1$
+\end_inset
+
+ Elemente enthält (besitzt die Ordnung 
+\begin_inset Formula $|\mathbb{Z}_{p}^{*}|=|\mathbb{Z}_{p}|-1=p-1$
+\end_inset
+
+), können 
+\begin_inset Formula $(p-1)/2$
+\end_inset
+
+ Elemente 
+\begin_inset Formula $y\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ keine Quadratwurzel besitzen.
+ Denn umgekehrt betrachtet sind ja die verfügbaren 
+\begin_inset Formula $p-1$
+\end_inset
+
+ Elemente 
+\begin_inset Formula $x$
+\end_inset
+
+ wegen der Paarbildung beim Quadrieren (welche zu 
+\begin_inset Formula $(p-1)/2$
+\end_inset
+
+ Elementen 
+\begin_inset Formula $y$
+\end_inset
+
+ führt) schon 
+\begin_inset Quotes gld
+\end_inset
+
+aufgebraucht
+\begin_inset Quotes grd
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Enumerate
+Für die 
+\begin_inset Formula $(p-1)/2$
+\end_inset
+
+ Elemente 
+\begin_inset Formula $y$
+\end_inset
+
+, welche der Beziehung 
+\begin_inset Formula $y=x^{2}\pmod{p}$
+\end_inset
+
+ genügen, gilt wegen des kleinen Satzes von 
+\noun on
+Fermat
+\noun default
+ (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_residue_multgrp"
+
+\end_inset
+
+):
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y^{\frac{p-1}{2}}=(x^{2})^{\frac{p-1}{2}}=x^{p-1}\equiv1\pmod{p}\mperiod\label{eq:algebra_residue_exist_criterion}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Für die restlichen 
+\begin_inset Formula $(p-1)/2$
+\end_inset
+
+ Elemente 
+\begin_inset Formula $y$
+\end_inset
+
+, welche keine zugeordnete Quadratwurzel 
+\begin_inset Formula $x$
+\end_inset
+
+ besitzen, gilt hingegen:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Äquivalent ist die folgende Schreibweise: 
+\begin_inset Formula $y^{(p-1)/2}\equiv p-1\pmod{p}$
+\end_inset
+
+.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+y^{\frac{p-1}{2}}\equiv-1\pmod{p}\mperiod
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für einen kurzen Beweis nehmen wir uns ein bestimmtes (konstantes) Element
+ 
+\begin_inset Formula $y$
+\end_inset
+
+ heraus und betrachten die Zerlegung 
+\begin_inset Formula $y=ax\pmod{p}$
+\end_inset
+
+, welche es in 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ immer geben muß: 
+\begin_inset Formula $a=x^{-1}y\pmod{p}$
+\end_inset
+
+.
+ Wenn man nun für 
+\begin_inset Formula $x$
+\end_inset
+
+ alle möglichen Werte 
+\begin_inset Formula $1\ldots p-1$
+\end_inset
+
+ setzt, dann muß auch 
+\begin_inset Formula $a$
+\end_inset
+
+ entsprechend variieren.
+ Wegen:
+\end_layout
+
+\begin_layout Itemize
+der Abgeschlossenheit der Multiplikation;
+\end_layout
+
+\begin_layout Itemize
+der Eindeutigkeit des Inversen;
+\end_layout
+
+\begin_layout Itemize
+und der Kommutativität von Elementen
+\end_layout
+
+\begin_layout Standard
+in 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ wird 
+\begin_inset Formula $a$
+\end_inset
+
+ einerseits alle möglichen Werte 
+\begin_inset Formula $1\ldots p-1$
+\end_inset
+
+ annehmen und andererseits wird jedes Produkt 
+\begin_inset Formula $ax$
+\end_inset
+
+ insofern doppelt vorkommen, daß 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $x$
+\end_inset
+
+ nur die Rolle getauscht haben.
+ In Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:algebra_mul_z11"
+
+\end_inset
+
+ sind mögliche Produkte für 
+\begin_inset Formula $y=8$
+\end_inset
+
+ (hat keine Wurzel) und 
+\begin_inset Formula $y=9$
+\end_inset
+
+ (Wurzeln sind 
+\begin_inset Formula $\pm3$
+\end_inset
+
+) beispielhaft in 
+\begin_inset Formula $\mathbb{Z}_{11}^{*}$
+\end_inset
+
+ dargestellt (wobei gestrichelte Linien Produkte kennzeichnen, bei denen
+ 
+\begin_inset Formula $a$
+\end_inset
+
+ und 
+\begin_inset Formula $x$
+\end_inset
+
+ nur die Rolle getauscht haben).
+\end_layout
+
+\begin_layout Standard
+\begin_inset Float figure
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:algebra_mul8z11"
+
+\end_inset
+
+
+\begin_inset Formula $y=8$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename z11mul8.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset Float figure
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:algebra_sqr9z11"
+
+\end_inset
+
+
+\begin_inset Formula $y=(\pm3)^{2}=9$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Graphics
+	filename z11sqr9.eps
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "fig:algebra_mul_z11"
+
+\end_inset
+
+Beispiele für Produkte in 
+\begin_inset Formula $\mathbb{Z}_{11}^{*}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Multiplizieren wir alle Produkte 
+\begin_inset Formula $ax$
+\end_inset
+
+ miteinander und schließen dabei die Doppelungen aus (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ berücksichtigen nur die Produkte in Abbildung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "fig:algebra_mul8z11"
+
+\end_inset
+
+, welche mit durchgezogenen Linien dargestellt sind), dann hat man alle
+ Elemente 
+\begin_inset Formula $x\in\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ miteinander multipliziert.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\prod_{i=1}^{\frac{p-1}{2}}a_{i}x_{i}=\prod_{i=1}^{\frac{p-1}{2}}a_{i}\cdot\prod_{i=1}^{\frac{p-1}{2}}x_{i}=\prod_{i=1}^{p-1}x_{i}=(p-1)!
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Bei den 
+\begin_inset Formula $(p-1)/2$
+\end_inset
+
+ Produkten 
+\begin_inset Formula $a_{i}x_{i}$
+\end_inset
+
+ handelt es sich aber genau um die Potenz
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y^{\frac{p-1}{2}}=\prod_{i=1}^{\frac{p-1}{2}}y_{i}=\prod_{i=1}^{\frac{p-1}{2}}a_{i}x_{i}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und so kann man mit dem Satz von 
+\noun on
+Wilson
+\noun default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Wilson, Satz von@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Wilson}
+\end_layout
+
+\end_inset
+
+, Satz von
+\end_layout
+
+\end_inset
+
+ (siehe Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_lemma_wilson"
+
+\end_inset
+
+) den Beweis abschließen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y^{\frac{p-1}{2}}=(p-1)!\equiv-1\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Noch bevor man also versucht die Quadratwurzel 
+\begin_inset Formula $x=\sqrt{\smash[b]{y}}$
+\end_inset
+
+ zu berechnen, kann man mit Hilfe des gerade eingeführten (
+\noun on
+Euler
+\noun default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Euler@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Euler}
+\end_layout
+
+\end_inset
+
+!-Kriterium
+\end_layout
+
+\end_inset
+
+-) Kriteriums prüfen, ob diese überhaupt existiert.
+ Die Nomenklatur für das 
+\noun on
+Euler
+\noun default
+-Kriterium stammt allerdings von 
+\noun on
+A.-M.
+ Legendre
+\noun default
+ und wird als 
+\noun on
+Legendre
+\noun default
+-Symbol
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Legendre-Symbol@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Legendre}
+\end_layout
+
+\end_inset
+
+-Symbol
+\end_layout
+
+\end_inset
+
+
+\begin_inset CommandInset nomenclature
+LatexCommand nomenclature
+symbol "$\\left(\\dfrac{a}{b}\\right)$"
+description "\\noun{Legendre}-Symbol: $a$ {\\\"u}ber $b$, auch geschrieben als $(a \\mid b)$"
+
+\end_inset
+
+ bezeichnet:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{y}{p}\right)=y^{\frac{p-1}{2}}=\begin{cases}
+1 & \mbox{wenn }y\mbox{ eine Quadratwurzel in }\mathbb{Z}_{p}\mbox{ besitzt;}\\
+-1 & \mbox{wenn }y\mbox{ keine Quadratwurzel in }\mathbb{Z}_{p}\mbox{ besitzt.}
+\end{cases}\label{eq:algebra_residue_euler_criterion}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Der Spezialfall 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+tocmath{p
+\backslash
+bmod{4}=3}{p mod 4 = 3}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Im speziellen Fall 
+\begin_inset Formula $p\equiv3\pmod{4}$
+\end_inset
+
+ kann man eine sehr einfache Lösung für die Quadratwurzel 
+\begin_inset Formula $x=\sqrt{\smash[b]{y}}$
+\end_inset
+
+ erhalten, sofern sie denn existiert
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Theorem~9.3"
+key "Rosen:1999"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "D.1.4"
+key "ANSI:X9.62"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+x=y^{s+1}\pmod{p},\label{eq:algebra_residue_gfp3mod4}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+mit 
+\begin_inset Formula $s=(p-3)/4$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Ausgangspunkt für einen kurzen Beweis könnte die folgende Darstellung für
+ das Modul 
+\begin_inset Formula $p$
+\end_inset
+
+ sein:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+In einer binären Darstellung für 
+\begin_inset Formula $p$
+\end_inset
+
+ gilt so: Bit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $1=1$
+\end_inset
+
+ (auch Bit
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset Formula $0=1$
+\end_inset
+
+ gilt, da 
+\begin_inset Formula $p>2$
+\end_inset
+
+ als Primzahl ungerade ist).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{align*}
+p & =4s+3=2(2s+1)+1\\
+\frac{p-1}{2} & =2s+1\mperiod
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Wird sie im Zusammenhang mit dem 
+\noun on
+Euler
+\noun default
+-Kriterium von Gleichung
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_exist_criterion"
+
+\end_inset
+
+ angewendet, dann bestätigt sich Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_gfp3mod4"
+
+\end_inset
+
+ wiefolgt:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+x^{2}=y^{2(s+1)}=y\cdot y^{2s+1}=y\cdot y^{\frac{p-1}{2}}\equiv y\pmod{p}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Der 
+\noun on
+Tonelli-Shanks
+\noun default
+ Algorithmus
+\end_layout
+
+\begin_layout Paragraph*
+Idee
+\end_layout
+
+\begin_layout Standard
+Der 
+\noun on
+Tonelli-Shanks
+\noun default
+ Algorithmus
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Tonelli-Shanks Algorithmus@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Tonelli-Shanks}
+\end_layout
+
+\end_inset
+
+ Algorithmus
+\end_layout
+
+\end_inset
+
+ nach
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Tonelli:1891,Shanks:1973"
+
+\end_inset
+
+ reduziert, ausgehend von einem Anfangswert 
+\begin_inset Formula $x_{0}\in\mathbb{Z}_{p>2}$
+\end_inset
+
+, den Exponenten 
+\begin_inset Formula $2^{t_{i}}$
+\end_inset
+
+ im Ausdruck
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\left(\frac{x_{i}^{2}}{y}\right)^{2^{t_{i}}}\equiv1\pmod{p}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+immer weiter, bis schließlich 
+\begin_inset Formula $t_{n}=0$
+\end_inset
+
+ wird und deshalb 
+\begin_inset Formula $x_{n}^{2}\equiv y\pmod{p}$
+\end_inset
+
+ die gesuchte Lösung darstellt (siehe 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ auch
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.9"
+key "Niven:1991"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.3.2"
+key "Crandall:2005"
+
+\end_inset
+
+).
+ Mit 
+\begin_inset Formula $2^{t_{i}}$
+\end_inset
+
+ soll es sich aber nicht um irgendeine Zweierpotenz handeln, sondern um
+ die Ordnung des Elements 
+\begin_inset Formula $z_{i}=x_{i}^{2}y^{-1}$
+\end_inset
+
+.
+\end_layout
+
+\begin_layout Standard
+Es gilt also einen Algorithmus zu beschreiben, bei dem sowohl für den Startwert
+ 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ als auch für alle Werte 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ in
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+z_{i}^{2^{t_{i}}}\equiv1\pmod{p}\label{eq:algebra_residue_shanks_idea}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+die Ordnung 
+\begin_inset Formula $|z_{i}|=2^{t_{i}}$
+\end_inset
+
+ einerseits (und überhaupt) eine Zweierpotenz ist und andererseits (auch
+ noch) abnimmt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Im weiteren soll mit 
+\begin_inset Formula $t_{i}^{\prime}$
+\end_inset
+
+ ein Exponent bezeichnet sein, bei dem 
+\begin_inset Formula $2^{t_{i}^{\prime}}$
+\end_inset
+
+ entweder die Ordnung von 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ oder aber ein Vielfaches dessen darstellt.
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Paragraph*
+Startwerte
+\end_layout
+
+\begin_layout Standard
+Als Anfangswerte setzt man:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{xalignat*}{2}
+x_{0} & =y^{\frac{s+1}{2}}\bmod p & t_{0}^{\prime} & =r-1\\
+x_{0}^{2} & \equiv y^{s+1}\bmod p & 2^{t_{0}^{\prime}} & =2^{r-1}\\
+(z_{0} & \equiv y^{s}\bmod p)\mperiod
+\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Dabei entspricht der Wert 
+\begin_inset Formula $2^{t_{0}^{\prime}}$
+\end_inset
+
+ zwar noch nicht genau der Ordnung 
+\begin_inset Formula $|z_{0}|=2^{t_{0}}$
+\end_inset
+
+, er befriedigt aber Kongruenz
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_shanks_idea"
+
+\end_inset
+
+ grundsätzlich (zumindest für 
+\begin_inset Formula $t_{0}:=t_{0}^{\prime}$
+\end_inset
+
+):
+\end_layout
+
+\begin_layout Enumerate
+Da es sich bei 
+\begin_inset Formula $p$
+\end_inset
+
+ um eine Primzahl mit 
+\begin_inset Formula $p>2$
+\end_inset
+
+ handeln soll (
+\begin_inset Formula $p$
+\end_inset
+
+ ist zwingendermaßen ungerade), kann man
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+p-1=2^{r}s\label{eq:algebra_residue_shanks_order}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+setzen (mit 
+\begin_inset Formula $r\geq1$
+\end_inset
+
+, maximal) und erhält so:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\frac{p-1}{2}=2^{r-1}s\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Soll die Quadratwurzel 
+\begin_inset Formula $x=\sqrt{\smash[b]{y}}$
+\end_inset
+
+ wirklich existieren (wovon wir ausgehen) dann gilt mit dem 
+\noun on
+Euler
+\noun default
+-Kriterium
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_euler_criterion"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{y}{p}\right)=y^{\frac{p-1}{2}}\equiv1\pmod{p}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Enumerate
+Faßt man beide Punkte zusammen, dann bestätigt sich:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+z_{0}^{2^{t_{0}^{\prime}}}=\left(\frac{x_{0}^{2}}{y}\right)^{2^{r-1}}=\left(\frac{y^{s+1}}{y}\right)^{2^{r-1}}\equiv y^{2^{r-1}s}\equiv y^{\frac{p-1}{2}}\equiv1\pmod{p}\mperiod\label{eq:algebra_residue_shanks_z0pwr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Interpretieren wir Kongruenz
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_shanks_z0pwr"
+
+\end_inset
+
+ jetzt mit dem Wissen aus Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_elem_pwr"
+
+\end_inset
+
+, dann muß es sich bei 
+\begin_inset Formula $2^{t_{0}^{\prime}}$
+\end_inset
+
+ entweder um die Ordnung 
+\begin_inset Formula $|z_{0}|$
+\end_inset
+
+ selbst oder aber um ein Vielfaches davon handeln: 
+\begin_inset Formula $2^{t_{0}^{\prime}}=K|z_{0}|$
+\end_inset
+
+.
+ Deshalb können 
+\begin_inset Formula $K$
+\end_inset
+
+ und 
+\begin_inset Formula $|z_{0}|$
+\end_inset
+
+ nur Zweierpotenzen sein (was 
+\begin_inset Formula $K=1$
+\end_inset
+
+ nicht ausschließt), 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ für die Ordnung kann man ohne weitere Bedenken 
+\begin_inset Formula $|z_{0}|=2^{t_{0}}$
+\end_inset
+
+ ansetzen (mit 
+\begin_inset Formula $t_{0}\leq t_{0}^{\prime}$
+\end_inset
+
+).
+ Um nun aus 
+\begin_inset Formula $t_{0}^{\prime}$
+\end_inset
+
+ den exakten Exponenten 
+\begin_inset Formula $t_{0}$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ die Ordnung 
+\begin_inset Formula $|z_{0}|$
+\end_inset
+
+ zu ermitteln, kann man 
+\begin_inset Formula $z_{0}$
+\end_inset
+
+ einfach so oft quadrieren bis (nach 
+\noun on
+Fermat
+\noun default
+'s kleinem Satz) die Bedingung 
+\begin_inset Formula $z_{0}^{|z_{0}|}\equiv1\pmod{p}$
+\end_inset
+
+ erfüllt ist.
+\end_layout
+
+\begin_layout Paragraph*
+Iteration
+\end_layout
+
+\begin_layout Standard
+Bevor wir zum iterativen Teil des Algorithmus übergehen können, benötigen
+ wir noch die Mithilfe irgendeines (zufällig gewählten) Elements 
+\begin_inset Formula $\alpha\in\mathbb{Z}_{p}$
+\end_inset
+
+, welches keine Wurzel in 
+\begin_inset Formula $\mathbb{Z}_{p}^{*}$
+\end_inset
+
+ haben darf.
+ Für 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ muß das 
+\noun on
+Euler
+\noun default
+-Kriterium
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_euler_criterion"
+
+\end_inset
+
+ dann den Wert
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\left(\frac{\alpha}{p}\right)\equiv-1\pmod{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+annehmen.
+ Aus diesem Element 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ erzeugen wir ein neues Element 
+\begin_inset Formula $\beta=\alpha^{s}\pmod{p}$
+\end_inset
+
+ mit den Eigenschaften:
+\end_layout
+
+\begin_layout Itemize
+potenziert zu 
+\begin_inset Formula $2^{r}$
+\end_inset
+
+ ergibt sich mit 
+\noun on
+Fermat
+\noun default
+'s kleinem Satz:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta^{2^{r}}=\alpha^{2^{r}s}=\alpha^{p-1}\equiv1\pmod{p};
+\]
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Itemize
+aus dem 
+\noun on
+Euler
+\noun default
+-Kriterium für 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ läßt sich schlußfolgern:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{equation}
+\beta^{2^{r-1}}=\alpha^{2^{r-1}s}=\alpha^{\frac{p-1}{2}}\equiv-1\pmod{p}\mperiod\label{eq:algebra_residue_shanks_wpwr}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Nun wird die Näherung schrittweise nach folgender Vorschrift verbessert:
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Wobei maximal 
+\begin_inset Formula $\ld(p)$
+\end_inset
+
+ Iterationen nötig sind (die Komplexität des Algorithmus wird 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+eg
+\end_layout
+
+\end_inset
+
+ in
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+key "Knuth:TAOCP2:1998"
+
+\end_inset
+
+ mit 
+\begin_inset Formula $\mathcal{O}(\ld^{3}p)$
+\end_inset
+
+ angegeben).
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula 
+\begin{equation}
+x_{i+1}=x_{i}\,\beta^{2^{r-t_{i}-1}}\pmod{p},\label{eq:algebra_residue_shanks_iterate}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+wobei sich der Exponent 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ jeweils um 
+\begin_inset Formula $1$
+\end_inset
+
+ verringert (
+\begin_inset Formula $t_{i+1}^{\prime}=t_{i}-1$
+\end_inset
+
+, mit 
+\begin_inset Formula $2^{t_{i+1}^{\prime}}$
+\end_inset
+
+ einem 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+mbox{mglw.}
+\end_layout
+
+\end_inset
+
+ Vielfachen der Ordnung 
+\begin_inset Formula $|z_{i+1}|$
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Standard
+Um die Verringerung des Exponenten nachzuweisen bilden wir einfach 
+\begin_inset Formula $z_{i+1}^{2^{t_{i}-1}}$
+\end_inset
+
+ mit Hilfe von Iterationsformel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_shanks_iterate"
+
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z_{i+1}^{2^{t_{i+1}^{\prime}}}=\left(x_{i+1}^{2}y^{-1}\right)^{2^{t_{i+1}^{\prime}}}=\left(x_{i}^{2}\beta^{2\cdot2^{r-t_{i}-1}}y^{-1}\right)^{2^{t_{i}-1}}=\left(x_{i}^{2}y^{-1}\right)^{2^{t_{i}-1}}\left(\beta^{2^{r-t_{i}}}\right)^{2^{t_{i}-1}}=z_{i}^{2^{t_{i}-1}}\beta^{2^{r-1}}\pmod{p}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Beide Faktoren auf der rechten Seite sind aber vom Wert 
+\begin_inset Formula $-1\pmod{p}$
+\end_inset
+
+, was letztlich
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z_{i+1}^{2^{t_{i+1}^{\prime}}}\equiv1\pmod{p}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+bedeutet.
+ Zur Begründung folgende Argumentation:
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\beta^{2^{r-1}}\equiv-1\pmod{p}$
+\end_inset
+
+ gilt wegen des 
+\noun on
+Euler
+\noun default
+-Kriteriums für 
+\begin_inset Formula $\alpha$
+\end_inset
+
+ (siehe Kongruenz
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_shanks_wpwr"
+
+\end_inset
+
+).
+\end_layout
+
+\begin_layout Itemize
+Der Beweis für 
+\begin_inset Formula $z_{i}^{2^{t_{i}-1}}\equiv-1\pmod{p}$
+\end_inset
+
+ stützt sich auf die Darstellung:
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\[
+z_{i}^{2^{t_{i}}}=\left(z_{i}^{2^{t_{i}-1}}\right)^{2},
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+welche ja bei jeder Iteration als 
+\begin_inset Formula $+1\pmod{p}$
+\end_inset
+
+ vorausgesetzt wird.
+ Aus diesem Grund kann der Wert innerhalb des Klammerausdrucks nur 
+\begin_inset Formula $+1$
+\end_inset
+
+ oder 
+\begin_inset Formula $-1$
+\end_inset
+
+ sein
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Hilfssatz~2.10"
+key "Niven:1991"
+
+\end_inset
+
+.
+ Wenn 
+\begin_inset Formula $2^{t_{i}}$
+\end_inset
+
+ aber die Ordnung von 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ derstellt, dann muß 
+\begin_inset Formula $t_{i}$
+\end_inset
+
+ der kleinste Wert sein, welcher zu 
+\begin_inset Formula $z_{i}^{2^{t_{i}}}\equiv+1\pmod{p}$
+\end_inset
+
+ führt.
+ Deshalb kann 
+\begin_inset Formula $2^{t_{i}-1}$
+\end_inset
+
+ nicht (ebenfalls) die Ordnung von 
+\begin_inset Formula $z_{i}$
+\end_inset
+
+ sein und es bleibt nur die Schlußfolgerung: 
+\begin_inset Formula $z_{i}^{2^{t_{i}-1}}\equiv-1\pmod{p}$
+\end_inset
+
+.
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+Aus dem letzten Punkt ergibt sich die Notwendigkeit, daß man am Anfang des
+ Iterationszyklus jedesmal die exakte Ordnung 
+\begin_inset Formula $|z_{i}|$
+\end_inset
+
+ 
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ den zugehörigen Exponenten 
+\begin_inset Formula $t_{i}\leq t_{i}^{\prime}$
+\end_inset
+
+ bestimmt (
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+cf
+\end_layout
+
+\end_inset
+
+ auch die Erläuterungen zu den Startwerten).
+\end_layout
+
+\begin_layout Paragraph*
+Algorithmus
+\end_layout
+
+\begin_layout Standard
+Bevor wir in Algorithmus
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "alg:algebra_gfp_sqrt_shanks"
+
+\end_inset
+
+ alle Erkenntnisse zusammenfassen, soll noch auf zwei kleinere 
+\begin_inset Quotes gld
+\end_inset
+
+Tricks
+\begin_inset Quotes grd
+\end_inset
+
+ hingewiesen sein:
+\end_layout
+
+\begin_layout Enumerate
+Die Berechnung des inversen Elements 
+\begin_inset Formula $y^{-1}$
+\end_inset
+
+ ist unnötig, da es letztlich nur gebraucht wird, um die Ordnung von 
+\begin_inset Formula $z_{i}=x_{i}y^{-1}$
+\end_inset
+
+ zu bestimmen.
+ Aus Abschnitt
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "sec:algebra_multgrp_elem_pwr"
+
+\end_inset
+
+ wissen wir aber, daß sich die Ordnung eines Elements beim Invertieren nicht
+ verändert.
+ Da die Ordnung eines Produktes von Elementen nur von beiden Einzelordnungen
+ abhängt, kann man auch einfach die Ordnung von 
+\begin_inset Formula $x_{i}y$
+\end_inset
+
+ bestimmen.
+\end_layout
+
+\begin_layout Enumerate
+Setzt man für die Reduktion der Ordnung in jedem Schritt 
+\begin_inset Formula $\varDelta_{i}=t_{i-1}-t_{i}$
+\end_inset
+
+ und führt in Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:algebra_residue_shanks_iterate"
+
+\end_inset
+
+ die Abkürzung
+\end_layout
+
+\begin_deeper
+\begin_layout Standard
+\begin_inset Formula 
+\begin{xalignat*}{2}
+\gamma_{i} & =\beta^{2^{r-t_{i}-1}} & x_{i+1} & =x_{i}\gamma_{i}\bmod p
+\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+ein, dann kann man auch 
+\begin_inset Formula $\gamma_{i}$
+\end_inset
+
+ rekursiv berechnen:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\gamma_{i}=\beta^{2^{r-t_{i-1}-1+\varDelta_{i}}}=\left(\beta^{2^{r-t_{i-1}-1}}\right)^{2^{\varDelta_{i}}}=\gamma_{i-1}^{2^{\varDelta_{i}}}\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Um den korrekten Startwert 
+\begin_inset Formula $\gamma_{0}=\beta^{2^{r-t_{0}-1}}$
+\end_inset
+
+ zu erzielen, vergleichen wir jetzt noch die Werte für 
+\begin_inset Formula $i=0$
+\end_inset
+
+:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\beta^{2^{r-1-t_{0}}}=\gamma_{-1}^{2^{\varDelta_{0}}}=\gamma_{-1}^{2^{t_{-1}-t_{0}}}
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und erhalten:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{xalignat*}{2}
+t_{-1} & =r-1 & \gamma_{-1} & =\beta\mperiod
+\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\end_deeper
+\begin_layout Standard
+\begin_inset Float algorithm
+placement H
+wide false
+sideways false
+status open
+
+\begin_layout Plain Layout
+\begin_inset Caption Standard
+
+\begin_layout Plain Layout
+\begin_inset CommandInset label
+LatexCommand label
+name "alg:algebra_gfp_sqrt_shanks"
+
+\end_inset
+
+Quadratwurzel eines Elements 
+\begin_inset Formula $y\in\mathbb{Z}_{p}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+begin{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+REQUIRE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $p>2$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENSURE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $x=\sqrt{\smash[b]{y}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $r,s\Leftarrow$
+\end_inset
+
+ aus 
+\begin_inset Formula $p-1=2^{r}s$
+\end_inset
+
+, mit 
+\begin_inset Formula $r$
+\end_inset
+
+ maximal
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+REPEAT
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\alpha\Leftarrow$
+\end_inset
+
+ zufälliges Element aus 
+\begin_inset Formula $\mathbb{Z}_{p}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+UNTIL{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\alpha^{(p-1)/2}\bmod p=p-1$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\noun on
+Euler
+\noun default
+-Kriterium: 
+\begin_inset Formula $\alpha^{(p-1)/2}\equiv-1\pmod{p}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\gamma\Leftarrow\alpha^{s}\bmod p$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\gamma_{-1}=\beta$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $x\Leftarrow y^{(s+1)/2}\bmod p$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $x_{0}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $t^{\prime}\Leftarrow r-1$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $t\Leftarrow$
+\end_inset
+
+ aus 
+\begin_inset Formula $2^{t}=\ord(x^{2}y\bmod p)$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Ordnung von 
+\begin_inset Formula $z_{0}=x_{0}^{2}y^{-1}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+WHILE{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $t>0$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\varDelta\Leftarrow t^{\prime}-t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $\gamma\Leftarrow\gamma^{2^{\varDelta}}\bmod p$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $\gamma_{i}=\beta^{2^{r-t_{i}-1}}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $x\Leftarrow x\gamma\bmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $t^{\prime}\Leftarrow t$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $t$
+\end_inset
+
+ aus 
+\begin_inset Formula $2^{t}=\ord(x^{2}y\bmod p)$
+\end_inset
+
+
+\begin_inset space \hfill{}
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Ordnung von 
+\begin_inset Formula $x_{i}^{2}y\pmod{p}$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDWHILE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+COMMENT{
+\end_layout
+
+\end_inset
+
+Probe (siehe auch 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "Appendix~C"
+key "RFC6090"
+
+\end_inset
+
+),
+\begin_inset Newline newline
+\end_inset
+
+anstatt zu Beginn das 
+\noun on
+Euler
+\noun default
+-Kriterium 
+\begin_inset Formula $(y|p)=1$
+\end_inset
+
+ zu verifizieren
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace smallskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y'\Leftarrow x^{2}\bmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+IF{
+\end_layout
+
+\end_inset
+
+
+\begin_inset Formula $y'=y$
+\end_inset
+
+
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RETURN
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ELSE
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+RETURN
+\end_layout
+
+\end_inset
+
+ keine Lösung
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENDIF
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+end{algorithmic}
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Element!Quadratwurzel aus|)
+\end_layout
+
+\end_inset
+
+
+\begin_inset Index idx
+status open
+
+\begin_layout Plain Layout
+Quadratwurzel aus einem Element|)
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsection
 Quadratische Gleichungen in 
 \begin_inset ERT
 status open
@@ -23244,7 +26454,7 @@ status open
 \backslash
 tocmath{
 \backslash
-mathbb{F}_2^n}{GF(2^n)}
+mathbb{F}_{2^n}}{GF(2^n)}
 \end_layout
 
 \end_inset
@@ -24178,10 +27388,14 @@ Grundlage des Beweises bilden die folgenden beiden Reduktionsfälle:
 \end_layout
 
 \begin_layout Standard
-\begin_inset Formula $\trace^{i}(\alpha)=\begin{cases}
+\begin_inset Formula 
+\[
+\trace^{i}(\alpha)=\begin{cases}
 \trace^{i/2}(\alpha) & \quad(i\mbox{ gerade})\\
 \trace^{(i+1)/2}(\alpha) & \quad(i\mbox{ ungerade)}\mperiod
-\end{cases}$
+\end{cases}
+\]
+
 \end_inset
 
 
@@ -24488,7 +27702,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -24498,11 +27712,7 @@ name "alg:algebra_trace"
 \end_inset
 
 Trace eines Elements 
-\begin_inset Formula $\alpha$
-\end_inset
-
- in 
-\begin_inset Formula $\mathbb{F}_{2^{n}}$
+\begin_inset Formula $\alpha\in\mathbb{F}_{2^{n}}$
 \end_inset
 
 
@@ -24550,6 +27760,13 @@ ENSURE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -24564,6 +27781,13 @@ STATE
 
  
 \begin_inset Formula $\lambda\Leftarrow\alpha$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -24932,11 +28156,11 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Halb-Trace eines Elements 
-\begin_inset Formula $\alpha$
+\begin_inset Formula $\alpha\in\mathbb{F}_{2^{n}}$
 \end_inset
 
 
@@ -24984,6 +28208,13 @@ ENSURE
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
 \begin_inset ERT
 status collapsed
 
@@ -24998,6 +28229,13 @@ STATE
 
  
 \begin_inset Formula $h\Leftarrow0$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -25471,7 +28709,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -25527,6 +28765,13 @@ ENSURE
 
 , mit 
 \begin_inset Formula $\lambda_{i}=\sum_{k=0}^{i-1}\alpha^{2^{k}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -25639,6 +28884,13 @@ status collapsed
 }
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -25815,6 +29067,13 @@ status collapsed
 ENDFOR
 \end_layout
 
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
 \end_inset
 
 
@@ -26602,18 +29861,14 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 
 \noun on
 Montgomery
 \noun default
--Reduktion 
-\begin_inset Formula $y=xr^{-1}\bmod m$
-\end_inset
-
-
+-Reduktion
 \end_layout
 
 \end_inset
@@ -26638,6 +29893,30 @@ begin{algorithmic}
 \end_layout
 
 \begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENSURE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y=xr^{-1}\bmod m$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
 \begin_inset ERT
 status collapsed
 
@@ -27279,14 +30558,10 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
-Inversion 
-\begin_inset Formula $y\cdot x\equiv1\pmod{2^{s}}$
-\end_inset
-
-
+Inversion modulo einer Zweierpotenz
 \end_layout
 
 \end_inset
@@ -27328,6 +30603,33 @@ REQUIRE
 \end_inset
 
  ungerade
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ENSURE
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $yx\equiv1\pmod{2^{s}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset VSpace defskip
+\end_inset
+
+
 \end_layout
 
 \begin_layout Plain Layout
