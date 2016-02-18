@@ -190,7 +190,7 @@ resp
 
 \end_inset
 
- Ausbildung zugeschrieben werden muß.
+ meiner Ausbildung zugeschrieben werden muß.
 \end_layout
 
 \begin_layout Abstract
@@ -5860,9 +5860,9 @@ reference "eq:prob_prd_mean"
  & =\int_{x=-\infty}^{\infty}y^{2}\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\,p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
- & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\int_{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean(X_{1})\mean(X_{2})\\
- & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean(X_{1})\mean(X_{2})\\
- & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean(X_{1})\mean(X_{2})
+ & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\int_{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean^{2}(X_{1})\mean^{2}(X_{2})\\
+ & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean^{2}(X_{1})\mean^{2}(X_{2})\\
+ & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean^{2}(X_{1})\mean^{2}(X_{2})
 \end{align*}
 
 \end_inset
@@ -5887,7 +5887,7 @@ Zufallsgrößen!mittelwertfreie
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean(X_{1})\mean(X_{2})\label{eq:prob_prd_var}
+\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean^{2}(X_{1})\mean^{2}(X_{2})\label{eq:prob_prd_var}
 \end{equation}
 
 \end_inset
