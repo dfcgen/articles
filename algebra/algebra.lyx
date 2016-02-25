@@ -24708,7 +24708,7 @@ key "Crandall:2005"
 
  soll es sich aber nicht um irgendeine Zweierpotenz handeln, sondern um
  die Ordnung des Elements 
-\begin_inset Formula $z_{i}=x_{i}^{2}y^{-1}$
+\begin_inset Formula $z_{i}\equiv x_{i}^{2}y^{-1}\pmod{p}$
 \end_inset
 
 .
@@ -24757,11 +24757,11 @@ Im weiteren soll mit
 \begin_inset Formula $2^{t_{i}^{\prime}}$
 \end_inset
 
- entweder die Ordnung von 
+ entweder die Ordnung des Elements 
 \begin_inset Formula $z_{i}$
 \end_inset
 
- oder aber ein Vielfaches dessen darstellt.
+ selbst oder aber ein Vielfaches dessen darstellt.
 \end_layout
 
 \end_inset
@@ -24795,7 +24795,7 @@ Dabei entspricht der Wert
 \begin_inset Formula $2^{t_{0}^{\prime}}$
 \end_inset
 
- zwar noch nicht genau der Ordnung 
+ nicht zwingendermaßen der Ordnung 
 \begin_inset Formula $|z_{0}|=2^{t_{0}}$
 \end_inset
 
@@ -24810,11 +24810,7 @@ reference "eq:algebra_residue_shanks_idea"
 
 \end_inset
 
- grundsätzlich (zumindest für 
-\begin_inset Formula $t_{0}:=t_{0}^{\prime}$
-\end_inset
-
-):
+ grundsätzlich:
 \end_layout
 
 \begin_layout Enumerate
@@ -25448,15 +25444,7 @@ reference "alg:algebra_gfp_sqrt_shanks"
 
 \end_inset
 
- alle Erkenntnisse zusammenfassen, soll noch auf zwei kleinere 
-\begin_inset Quotes gld
-\end_inset
-
-Tricks
-\begin_inset Quotes grd
-\end_inset
-
- hingewiesen sein:
+ alle Erkenntnisse zusammenfassen, noch zwei Hinweise zur Umsetzung:
 \end_layout
 
 \begin_layout Enumerate
@@ -25464,30 +25452,7 @@ Die Berechnung des inversen Elements
 \begin_inset Formula $y^{-1}$
 \end_inset
 
- ist unnötig, da es letztlich nur gebraucht wird, um die Ordnung von 
-\begin_inset Formula $z_{i}=x_{i}y^{-1}$
-\end_inset
-
- zu bestimmen.
- Aus Abschnitt
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset ref
-LatexCommand ref
-reference "sec:algebra_multgrp_elem_pwr"
-
-\end_inset
-
- wissen wir aber, daß sich die Ordnung eines Elements beim Invertieren nicht
- verändert.
- Da die Ordnung eines Produktes von Elementen nur von beiden Einzelordnungen
- abhängt, kann man auch einfach die Ordnung von 
-\begin_inset Formula $x_{i}y$
-\end_inset
-
- bestimmen.
+ kann man einmalig zu Beginn des Algorithmus durchführen.
 \end_layout
 
 \begin_layout Enumerate
@@ -25506,14 +25471,14 @@ reference "eq:algebra_residue_shanks_iterate"
 
 \end_inset
 
- die Abkürzung
+ die Abkürzungen
 \end_layout
 
 \begin_deeper
 \begin_layout Standard
 \begin_inset Formula 
 \begin{xalignat*}{2}
-\gamma_{i} & =\beta^{2^{r-t_{i}-1}} & x_{i+1} & =x_{i}\gamma_{i}\bmod p
+\gamma_{i} & =\beta^{2^{r-t_{i}-1}} & x_{i+1} & =x_{i}\gamma_{i}\pmod{p}
 \end{xalignat*}
 
 \end_inset
@@ -25935,6 +25900,26 @@ STATE
 \end_inset
 
  
+\begin_inset Formula $y_{\mbox{inv}}=y^{-1}\bmod p$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+STATE
+\end_layout
+
+\end_inset
+
+ 
 \begin_inset Formula $t^{\prime}\Leftarrow r-1$
 \end_inset
 
@@ -25959,7 +25944,7 @@ STATE
 \end_inset
 
  aus 
-\begin_inset Formula $2^{t}=\ord(x^{2}y\bmod p)$
+\begin_inset Formula $2^{t}=\ord(x^{2}y_{\mbox{inv}}\bmod p)$
 \end_inset
 
 
@@ -26165,7 +26150,7 @@ STATE
 \end_inset
 
  aus 
-\begin_inset Formula $2^{t}=\ord(x^{2}y\bmod p)$
+\begin_inset Formula $2^{t}=\ord(x^{2}y_{\mbox{inv}}\bmod p)$
 \end_inset
 
 
