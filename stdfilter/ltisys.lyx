@@ -1,5 +1,5 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrbook
@@ -20,13 +20,13 @@ helpers
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -38,15 +38,24 @@ helpers
 \use_hyperref false
 \papersize default
 \use_geometry false
-\use_amsmath 1
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 1
+\use_package amssymb 1
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Stichwortverzeichnis
 \shortcut idx
@@ -144,7 +153,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 Systemgrößen in Original- und Bildbereich
@@ -415,7 +424,7 @@ Integral!rechnung@-rechnung!Mittelwertsatz der
 \end_inset
 
  berücksichtigt: 
-\begin_inset Formula $\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\mbox{ mit }\xi\in[a,b]$
+\begin_inset Formula $\int_{a}^{b}f(x)\,g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\mbox{ mit }\xi\in[a,b]$
 \end_inset
 
 .
@@ -558,7 +567,7 @@ Aus dem Mittelwertsatz der Integralrechnung
 \begin_layout Plain Layout
 \begin_inset Formula 
 \[
-\int_{a}^{b}f(x)\, g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)
+\int_{a}^{b}f(x)\,g(x)\tic x=f(\xi)\int_{a}^{b}g(x)\tic x,\qquad\xi\in(-\infty,\infty)
 \]
 
 \end_inset
@@ -1191,7 +1200,7 @@ Der geradlinigste Ansatz formuliert das Verschwinden des Signals
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\usf(-t)\, y(t)\equiv0\mperiod
+\usf(-t)\,y(t)\equiv0\mperiod
 \]
 
 \end_inset
@@ -1216,7 +1225,7 @@ Faltungssatz
 \end_inset
 
  
-\begin_inset Formula $f_{1}(t)\, f_{2}(t)\lft F_{1}(\ji\omega)*F_{2}(\ji\omega)/2\pi$
+\begin_inset Formula $f_{1}(t)\,f_{2}(t)\lft F_{1}(\ji\omega)*F_{2}(\ji\omega)/2\pi$
 \end_inset
 
  sowie der Korrespondenz 
@@ -1398,9 +1407,17 @@ key "Fritzsche:1985"
 
 \end_inset
 
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "11.9"
+key "Kanasewich:1973"
+
+\end_inset
+
 .
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Alle vorgenannten Fakten müssen sicherlich auch dann gelten, wenn das System
@@ -1470,6 +1487,14 @@ key "Papoulis:1962"
 , 
 \begin_inset CommandInset citation
 LatexCommand cite
+after "Appendix~1"
+key "Kanasewich:1973"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
 after "4.1"
 key "Fritzsche:1985"
 
@@ -1513,7 +1538,7 @@ ie
 
  und deshalb auch wechselseitig abhängig.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Man beachte aber, daß mögliche 
@@ -1733,7 +1758,7 @@ Faltungssatz
 \end_inset
 
  
-\begin_inset Formula $f_{1}(t)\, f_{2}(t)\lft F_{1}(\ji\omega)*F_{2}(\ji\omega)/2\pi$
+\begin_inset Formula $f_{1}(t)\,f_{2}(t)\lft F_{1}(\ji\omega)*F_{2}(\ji\omega)/2\pi$
 \end_inset
 
  sowie der Korrespondenz 
@@ -1758,7 +1783,7 @@ Faltungssatz
 
 \begin_layout Subsection
 \begin_inset ERT
-status collapsed
+status open
 
 \begin_layout Plain Layout
 
@@ -1993,7 +2018,7 @@ Zur Rücktransformation der letzten Darstellung in den Zeitbereich wenden
 Laplace
 \noun default
 -Transformation 
-\begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\Omega)F_{2}(\lps-\Omega)\tic\Omega\rlt[]2\pi\ji\, f_{1}(t)\, f_{2}(t)$
+\begin_inset Formula $(F_{1}*F_{2})(\lps)=\int_{-\ji\infty}^{\ji\infty}F_{1}(\Omega)F_{2}(\lps-\Omega)\tic\Omega\rlt[]2\pi\ji\,f_{1}(t)\,f_{2}(t)$
 \end_inset
 
  an
@@ -2109,7 +2134,7 @@ Funktion!kausale
 
  in der gesamten rechten Halbebene analytisch ist.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Wegen des Integrationsintervalls in 
@@ -3469,7 +3494,7 @@ Betrachten wir zuerst den Integrationsweg
 \end_inset
 
  mit 
-\begin_inset Formula $\tdc\Omega=\ji\, r\expf^{\ji\theta}\tdc\theta$
+\begin_inset Formula $\tdc\Omega=\ji\,r\expf^{\ji\theta}\tdc\theta$
 \end_inset
 
  zur Anwendung.
@@ -4288,7 +4313,7 @@ key "Fritzsche:1979a"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\trf(\lps)=\frac{U(\lps)}{V(\lps)}=\frac{U_{-}(\lps)\, U_{+}(\lps)}{V(\lps)}
+\trf(\lps)=\frac{U(\lps)}{V(\lps)}=\frac{U_{-}(\lps)\,U_{+}(\lps)}{V(\lps)}
 \]
 
 \end_inset
@@ -4311,7 +4336,7 @@ Hurwitz
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\, U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textup{ALP}}},\label{eq:ltisys_mps_split_rational}
+\trf(\lps)=\underbrace{\frac{U_{-}(\lps)\,U_{+}(-\lps)}{V(\lps)}}_{\trf_{\textup{MPS}}}\cdot\underbrace{\frac{U_{+}(\lps)}{U_{+}(-\lps)}}_{\trf_{\textup{ALP}}},\label{eq:ltisys_mps_split_rational}
 \end{equation}
 
 \end_inset
@@ -4346,7 +4371,7 @@ ein minimalphasiges System
 
 -Halbebene besitzt;
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Die Nullstellen von 
@@ -5208,7 +5233,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\, k\pi,\qquad k\in\mathbb{Z}
+\atf(\lps)=-\ln\trf(\lps)=-\ln|\trf(\lps)|-\ji\,\ang\trf(\lps)+2\ji\,k\pi,\qquad k\in\mathbb{Z}
 \]
 
 \end_inset
