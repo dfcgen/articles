@@ -1096,7 +1096,7 @@ Kausalität
 
 \begin_layout Standard
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 LTI-System!kausales
@@ -1106,7 +1106,7 @@ LTI-System!kausales
 
 
 \begin_inset Index idx
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Kausalität|see
@@ -1417,7 +1417,7 @@ key "Kanasewich:1973"
 
 .
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Alle vorgenannten Fakten müssen sicherlich auch dann gelten, wenn das System
@@ -1448,7 +1448,7 @@ Dirac
 
 \begin_layout Standard
 Ein anderer, aber sehr einfacher Ansatz geht davon aus, daß grundsätzlich
- jede Zeitfunktion in eine gerade und eine ungerade Teilfunktion
+ jede Funktion in eine gerade und eine ungerade Teilfunktion
 \begin_inset Index idx
 status collapsed
 
@@ -1501,17 +1501,88 @@ key "Fritzsche:1985"
 \end_inset
 
 .
- Dann gilt wegen 
-\begin_inset Formula $y(-t)=y_{g}(t)-y_{u}(t)$
+\end_layout
+
+\begin_layout Standard
+Für einen kurzen Beweis betrachten wir zuerst die Summe und Differenz von
+ 
+\begin_inset Formula $y(t)$
 \end_inset
 
- bei Addition und Subtraktion beider Formeln:
+ und 
+\begin_inset Formula $y(-t)$
+\end_inset
+
+.
+ Dann ist festzustellen, daß es sich bei 
+\begin_inset Formula $y_{+}(t)=y(t)+y(-t)$
+\end_inset
+
+ um eine gerade, bei 
+\begin_inset Formula $y_{-}(t)=y(t)-y(-t)$
+\end_inset
+
+ hingegen um eine ungerade Funktion handelt.
+\begin_inset Foot
+status collapsed
+
+\begin_layout Plain Layout
+Auch in der graphischen Darstellung von 
+\begin_inset Formula $y(-t)$
+\end_inset
+
+ als Spiegelung an der y-Achse eine plausible Aussage.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{xalignat*}{2}
-y(t)+y(-t) & =2y_{g}(t) & y(t)-y(-t) & =2y_{u}(t),
+y_{+}(t) & =y(t)+y(-t) & y_{-}(t) & =y(t)-y(-t)\\
+y_{+}(-t) & =y(-t)+y(t)=y_{+}(t) & y_{-}(-t) & =y(-t)-y(t)=-y_{-}(t)
+\end{xalignat*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Mit der (ebenfalls) geraden Funktion 
+\begin_inset Formula $y_{g}(t)=y_{+}(t)/2$
+\end_inset
+
+ sowie der ungeraden Funktion 
+\begin_inset Formula $y_{u}(t)=y_{-}(t)/2$
+\end_inset
+
+ gilt dann:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+y_{g}(t)+y_{u}(t)=\frac{y_{+}(t)}{2}+\frac{y_{-}(t)}{2}=\frac{y(t)+y(-t)+y(t)-y(-t)}{2}=y(t)
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+und wir sind schon fertig.
+ Die Berechnungsvorschrift für die Teilfunktionen lautet:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\begin{xalignat*}{2}
+y_{g}(t) & =\frac{y(t)+y(-t)}{2} & y_{u}(t) & =\frac{y(t)-y(-t)}{2},
 \end{xalignat*}
 
 \end_inset
@@ -1532,13 +1603,63 @@ ie
 
 \end_inset
 
- beide Teilfunktionen sind von 
+ beide Funktionen sind von 
 \begin_inset Formula $y(t)$
 \end_inset
 
  und deshalb auch wechselseitig abhängig.
+\end_layout
+
+\begin_layout Standard
+Im speziellen Fall eines 
+\emph on
+kausalen
+\emph default
+ Signals, 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+ie
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y(t)=0$
+\end_inset
+
+ für 
+\begin_inset Formula $t<0$
+\end_inset
+
+ 
+\begin_inset ERT
+status collapsed
+
+\begin_layout Plain Layout
+
+
+\backslash
+resp
+\end_layout
+
+\end_inset
+
+ 
+\begin_inset Formula $y(-t)=0$
+\end_inset
+
+ für 
+\begin_inset Formula $t>0$
+\end_inset
+
+, kann folgendermaßen vereinfacht werden:
 \begin_inset Foot
-status open
+status collapsed
 
 \begin_layout Plain Layout
 Man beachte aber, daß mögliche 
@@ -1639,49 +1760,7 @@ resp
 
 \end_inset
 
- Im speziellen Fall eines kausalen Signals, 
-\begin_inset ERT
-status collapsed
 
-\begin_layout Plain Layout
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $y(t)=0$
-\end_inset
-
- für 
-\begin_inset Formula $t<0$
-\end_inset
-
- 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-resp
-\end_layout
-
-\end_inset
-
- 
-\begin_inset Formula $y(-t)=0$
-\end_inset
-
- für 
-\begin_inset Formula $t>0$
-\end_inset
-
- kann folgendermaßen vereinfacht werden:
 \begin_inset Formula 
 \begin{alignat*}{2}
 y(t) & =2y_{g}(t)=2y_{u}(t), & \qquad t & \geq0\\
@@ -1702,11 +1781,11 @@ Hieraus läßt sich die Abhängigkeit zwischen geradem und ungeradem Anteil
  direkt ablesen.
 \end_layout
 
-\begin_layout Standard
+\begin_layout Emph(asized)
 \begin_inset Formula 
-\begin{xalignat*}{2}
+\begin{xalignat}{2}
 y_{g}(t) & =\sign(t)y_{u}(t) & y_{u}(t) & =\sign(t)y_{g}(t)
-\end{xalignat*}
+\end{xalignat}
 
 \end_inset
 
@@ -1718,8 +1797,7 @@ Berücksichtigt man jetzt noch die Eigenschaft der
 \noun on
 Fourier
 \noun default
--Transformation reeller Zeitfunktion, nämlich daß der gerade Anteil von
- 
+-Transformation (reeller Zeitfunktion), daß der gerade Anteil von 
 \begin_inset Formula $y(t)$
 \end_inset
 
@@ -2637,7 +2715,7 @@ reference "eq:ltisys_causal_boundary"
 \end_layout
 
 \begin_layout Standard
-Bedenkt man nun, daß:
+Bedenkt man nun, daß
 \end_layout
 
 \begin_layout Itemize
@@ -2653,7 +2731,7 @@ die Integration von
 \end_layout
 
 \begin_layout Itemize
-Integration einer geraden Funktion durch Verdoppelung in den neuen Grenzen
+die Integration einer geraden Funktion durch Verdoppelung in den neuen Grenzen
  
 \begin_inset Formula $[0,\infty]$
 \end_inset
@@ -3058,7 +3136,7 @@ Beide Gleichungen bestätigen augenscheinlich
 
 \begin_layout Standard
 \begin_inset Note Note
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Mit
