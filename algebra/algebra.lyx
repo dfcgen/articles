@@ -4,8 +4,7 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\setlength{\nomlabelwidth}{5em}
-\date{\small{$Revision$}}
+\renewcommand{\nomname}{Symbolverzeichnis}
 \end_preamble
 \options noprefix
 \use_default_options false
@@ -94,19 +93,6 @@ tabs-within-sections
 \begin_body
 
 \begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Version $Id$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset ERT
 status open
 
@@ -177,7 +163,8 @@ LatexCommand tableofcontents
 \begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
-set_width "none"
+set_width "custom"
+width "1in"
 
 \end_inset
 

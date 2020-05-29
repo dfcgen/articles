@@ -1,10 +1,10 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\date{\small{$Revision$}}
+\renewcommand{\nomname}{Symbolverzeichnis}
 \end_preamble
 \options noprefix,reqno
 \use_default_options false
@@ -20,13 +20,13 @@ mathext
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -48,15 +48,24 @@ mathext
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \index Stichwortverzeichnis
 \shortcut idx
@@ -78,19 +87,6 @@ mathext
 \end_header
 
 \begin_body
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Version $Id$
-\end_layout
-
-\end_inset
-
-
-\end_layout
 
 \begin_layout Standard
 \begin_inset ERT
@@ -1041,7 +1037,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -1143,7 +1139,7 @@ key "Koerner:1988,Oelschlaegel:1974"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \[
-\delta_{n\, m}=\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\begin{cases}
+\delta_{n\,m}=\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\begin{cases}
 0 & \quad(n\neq m)\\
 1 & \quad(n=m)
 \end{cases}
@@ -1216,7 +1212,7 @@ Durch Erweiterung des Integrationsintervalls auf
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\, n}
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\,n}
 \]
 
 \end_inset
@@ -1258,7 +1254,7 @@ noun{Kronecker}
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\delta_{m\, n}=\begin{cases}
+\delta_{m\,n}=\begin{cases}
 0 & \quad(n\neq m)\\
 1 & \quad(n=m)
 \end{cases}\mperiod
@@ -1413,7 +1409,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset Formula $n=6$
@@ -1450,7 +1446,7 @@ sideways false
 status open
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset Formula $n=5$
@@ -1480,7 +1476,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -2149,7 +2145,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label

@@ -1,13 +1,12 @@
-#LyX 2.0 created this file. For more info see http://www.lyx.org/
-\lyxformat 413
+#LyX 2.1 created this file. For more info see http://www.lyx.org/
+\lyxformat 474
 \begin_document
 \begin_header
 \textclass scrartcl
 \begin_preamble
 \DeclareMathOperator{\crc}{CRC}
-
+\renewcommand{\nomname}{Symbolverzeichnis}
 %% \date{\small{\number\day. \space \textit{\month@german} \space \number\year, \space\space $Revision$}}
-\date{\small{$Revision$}}
 \end_preamble
 \options noprefix,reqno
 \use_default_options false
@@ -23,13 +22,13 @@ mathext
 \font_roman times
 \font_sans default
 \font_typewriter default
+\font_math auto
 \font_default_family default
 \use_non_tex_fonts false
 \font_sc false
 \font_osf false
 \font_sf_scale 100
 \font_tt_scale 100
-
 \graphics default
 \default_output_format default
 \output_sync 0
@@ -51,15 +50,24 @@ mathext
 \pdf_pdfusetitle true
 \papersize a4paper
 \use_geometry false
-\use_amsmath 2
-\use_esint 0
-\use_mhchem 1
-\use_mathdots 1
+\use_package amsmath 2
+\use_package amssymb 2
+\use_package cancel 1
+\use_package esint 0
+\use_package mathdots 1
+\use_package mathtools 1
+\use_package mhchem 1
+\use_package stackrel 1
+\use_package stmaryrd 1
+\use_package undertilde 1
 \cite_engine basic
+\cite_engine_type default
+\biblio_style plain
 \use_bibtopic false
 \use_indices false
 \paperorientation portrait
 \suppress_date false
+\justification true
 \use_refstyle 0
 \branch WITH_APPENDIX
 \selected 0
@@ -780,7 +788,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=\left[E(x)\, x^{k}\right]\bmod{G(x)}
+\left\{ [C(x)+E(x)]x^{k}\right\} \bmod{G(x)}=\left[E(x)\,x^{k}\right]\bmod{G(x)}
 \]
 
 \end_inset
@@ -1296,7 +1304,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label
@@ -1396,7 +1404,7 @@ status open
 \end_layout
 
 \begin_layout Plain Layout
-\begin_inset Caption
+\begin_inset Caption Standard
 
 \begin_layout Plain Layout
 \begin_inset CommandInset label

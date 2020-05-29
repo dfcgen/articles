@@ -4,7 +4,7 @@
 \begin_header
 \textclass scrartcl
 \begin_preamble
-\date{\small{$Revision$}}
+\renewcommand{\nomname}{Symbolverzeichnis}
 \end_preamble
 \options noprefix,reqno
 \use_default_options false
@@ -94,20 +94,7 @@ electrical
 status open
 
 \begin_layout Plain Layout
-Version $Id$
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Todo: 
+TODO: 
 \begin_inset CommandInset citation
 LatexCommand cite
 key "Papoulis:2002"
@@ -223,27 +210,10 @@ LatexCommand tableofcontents
 \end_layout
 
 \begin_layout Standard
-\begin_inset ERT
-status open
-
-\begin_layout Plain Layout
-
-
-\backslash
-setlength{
-\backslash
-nomlabelwidth}{1in}
-\end_layout
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
 \begin_inset CommandInset nomencl_print
 LatexCommand printnomenclature
-set_width "none"
+set_width "custom"
+width "1in"
 
 \end_inset
 
