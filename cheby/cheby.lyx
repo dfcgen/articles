@@ -351,14 +351,14 @@ Die
 Tschebyscheff
 \noun default
 'sche Funktion erster Art 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  ist definiert als
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "Tn"
-symbol "$\\Tn_n$"
+symbol "$\\tn_n$"
 description "\\noun{Tschebyscheff}-Funktion erster Art der Ordnung $n$"
 
 \end_inset
@@ -369,7 +369,7 @@ description "\\noun{Tschebyscheff}-Funktion erster Art der Ordnung $n$"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\Tn_{n}(x)=\cos(n\arccos x)\mperiod\label{eq:chebyt_cos_def}
+\tn_{n}(x)=\cos(n\arccos x)\mperiod\label{eq:chebyt_cos_def}
 \end{equation}
 
 \end_inset
@@ -383,7 +383,7 @@ Wegen
 \end_inset
 
  geht 
-\begin_inset Formula $\Tn_{n}$
+\begin_inset Formula $\tn_{n}$
 \end_inset
 
  für 
@@ -396,7 +396,7 @@ Wegen
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}(x)=\cosh(n\arcosh x)
+\tn_{n}(x)=\cosh(n\arcosh x)
 \]
 
 \end_inset
@@ -419,7 +419,7 @@ Nimmt man die Substitutionen
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{alignat}{2}
-\Tn_{n}(x) & =\cos(n\varphi), & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}
+\tn_{n}(x) & =\cos(n\varphi), & \qquad x & =\cos\varphi,\qquad x\in\mathbb{R},\qquad|x|\leq1\label{eq:chebyt_param_def}
 \end{alignat}
 
 \end_inset
@@ -440,7 +440,7 @@ reference "eq:chebyt_cos_def"
 \end_inset
 
  vor, dann erhält man für 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  eine Parameterdarstellung durch transzendente Funktionen.
@@ -520,7 +520,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \begin{alignat}{2}
-\Tn_{n}(x) & =\cosh(n|\varphi|), & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\mperiod\label{eq:chebyt_iparam_def}
+\tn_{n}(x) & =\cosh(n|\varphi|), & \qquad x & =\cosh|\varphi|,\qquad x\in\mathbb{R},\qquad|x|>1\mperiod\label{eq:chebyt_iparam_def}
 \end{alignat}
 
 \end_inset
@@ -568,7 +568,7 @@ Tschebyscheff
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\Tn_{n}(x)=2x\Tn_{n-1}(x)-\Tn_{n-2}(x)\label{eq:chebyt_recursiv_def}
+\tn_{n}(x)=2x\tn_{n-1}(x)-\tn_{n-2}(x)\label{eq:chebyt_recursiv_def}
 \end{equation}
 
 \end_inset
@@ -591,10 +591,10 @@ Die Rekursionsformel kann ausgehend von der Ordnung
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{n+1}(x) & =\cos\left[(n+1)\varphi\right]\\
+\tn_{n+1}(x) & =\cos\left[(n+1)\varphi\right]\\
  & =\cos(n\varphi+\varphi)\\
  & =\cos(n\varphi)\cos\varphi-\sin(n\varphi)\sin\varphi\\
- & =x\Tn_{n}(x)-\sin(n\varphi)\sin\varphi
+ & =x\tn_{n}(x)-\sin(n\varphi)\sin\varphi
 \end{align*}
 
 \end_inset
@@ -613,10 +613,10 @@ Mit der trigonometrischen Multiplikationsformel
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{n+1}(x) & =x\Tn_{n}(x)-\sin(n\varphi)\sin\varphi\\
-2\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\cos\left[(n-1)\varphi\right]+\cos\left[(n+1)\varphi\right]\\
-2\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\Tn_{n-1}(x)+\Tn_{n+1}(x)\\
-\Tn_{n+1}(x) & =2x\Tn_{n}(x)-\Tn_{n-1}(x)
+\tn_{n+1}(x) & =x\tn_{n}(x)-\sin(n\varphi)\sin\varphi\\
+2\tn_{n+1}(x) & =2x\tn_{n}(x)-\cos\left[(n-1)\varphi\right]+\cos\left[(n+1)\varphi\right]\\
+2\tn_{n+1}(x) & =2x\tn_{n}(x)-\tn_{n-1}(x)+\tn_{n+1}(x)\\
+\tn_{n+1}(x) & =2x\tn_{n}(x)-\tn_{n-1}(x)
 \end{align*}
 
 \end_inset
@@ -661,7 +661,7 @@ reference "eq:chebyt_cos_def"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{0}(x)=1,\qquad\Tn_{1}(x)=x
+\tn_{0}(x)=1,\qquad\tn_{1}(x)=x
 \]
 
 \end_inset
@@ -715,10 +715,10 @@ key "Abramowitz:1972"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{2}(x) & =2x^{2}-1\\
-\Tn_{3}(x) & =4x^{3}-3x\\
-\Tn_{4}(x) & =8x^{4}-8x^{2}+1\\
-\Tn_{5}(x) & =16x^{5}-20x^{3}+5x
+\tn_{2}(x) & =2x^{2}-1\\
+\tn_{3}(x) & =4x^{3}-3x\\
+\tn_{4}(x) & =8x^{4}-8x^{2}+1\\
+\tn_{5}(x) & =16x^{5}-20x^{3}+5x
 \end{align*}
 
 \end_inset
@@ -739,7 +739,7 @@ reference "eq:chebyt_recursiv_def"
 \end_inset
 
  ist außerdem erkennbar, daß das Polynom 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  den Grad 
@@ -759,7 +759,7 @@ Eine weitere Form der
 Tschebyscheff
 \noun default
 'schen Funktion 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  kann man aus der Parameterbeziehung
@@ -783,7 +783,7 @@ Euler
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{n}(x) & =\cos\varphi=\frac{e^{\ji n\varphi}+e^{-\ji n\varphi}}{2}\\
+\tn_{n}(x) & =\cos\varphi=\frac{e^{\ji n\varphi}+e^{-\ji n\varphi}}{2}\\
  & =\frac{(\cos\varphi+\ji\sin\varphi)^{n}+(\cos\varphi-\ji\sin\varphi)^{n}}{2}\\
  & =\frac{(\cos\varphi+\sqrt{\cos^{2}\varphi-1}\,)^{n}+(\cos\varphi-\sqrt{\cos^{2}\varphi-1}\,)^{n}}{2}
 \end{align*}
@@ -796,7 +796,7 @@ Euler
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\Tn_{n}(x)=\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2}\mperiod\label{eq:chebyt_irrat_def}
+\tn_{n}(x)=\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2}\mperiod\label{eq:chebyt_irrat_def}
 \end{equation}
 
 \end_inset
@@ -848,7 +848,7 @@ reference "eq:chebyt_recursiv_def"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}
+\tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}
 \]
 
 \end_inset
@@ -863,7 +863,7 @@ und bildet einen Grenzwert wiefolgt:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\lim_{x\rightarrow\infty}\frac{\Tn_{n}(x)}{x^{n}} & =\lim_{x\rightarrow\infty}\frac{\sum\limits _{k=0}^{n}a_{k}x^{k}}{x^{n}}\\
+\lim_{x\rightarrow\infty}\frac{\tn_{n}(x)}{x^{n}} & =\lim_{x\rightarrow\infty}\frac{\sum\limits _{k=0}^{n}a_{k}x^{k}}{x^{n}}\\
  & =\sum_{k=0}^{n}\lim_{x\rightarrow\infty}a_{k}x^{k-n}\\
  & =a_{n}\mperiod
 \end{align*}
@@ -895,7 +895,7 @@ reference "eq:chebyt_irrat_def"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-a_{n} & =\lim_{x\rightarrow\infty}\frac{\Tn_{n}(x)}{x^{n}}\\
+a_{n} & =\lim_{x\rightarrow\infty}\frac{\tn_{n}(x)}{x^{n}}\\
  & =\lim_{x\rightarrow\infty}\frac{(x+\sqrt{x^{2}-1}\,)^{n}+(x-\sqrt{x^{2}-1}\,)^{n}}{2x^{n}}\\
  & =\frac{1}{2}\lim_{x\rightarrow\infty}(1+\sqrt{1-x^{-1}}\,)^{n}+\frac{1}{2}\lim_{x\rightarrow\infty}(1-\sqrt{1-x^{-1}}\,)^{n}\\
 a_{n} & =2^{n-1}
@@ -928,16 +928,16 @@ reference "eq:chebyt_cos_def"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{n}(-1) & =\begin{cases}
+\tn_{n}(-1) & =\begin{cases}
 +1 & \quad(n=0,2,4,\ldots)\\
 -1 & \quad(n=1,3,5,\ldots)
 \end{cases}\\
-\Tn_{n}(0) & =\begin{cases}
+\tn_{n}(0) & =\begin{cases}
 +1 & \quad(n=0,4,8,\ldots)\\
 -1 & \quad(n=2,6,10,\ldots)\\
 0 & \quad(n=1,3,5,\ldots)
 \end{cases}\\
-\Tn_{n}(1) & =1
+\tn_{n}(1) & =1
 \end{align*}
 
 \end_inset
@@ -955,7 +955,7 @@ Die
 Tschebyscheff
 \noun default
 'sche Funktion 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  ist für geraden Grad 
@@ -968,10 +968,10 @@ Tschebyscheff
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\Tn_{n}(-x) & =\cos\left[n\arccos(-x)\right]\nonumber \\
+\tn_{n}(-x) & =\cos\left[n\arccos(-x)\right]\nonumber \\
  & =\cos\left[n(\arccos x-\pi)\right]\nonumber \\
  & =\cos(n\arccos x-n\pi)\nonumber \\
-\Tn_{n}(-x) & =(-1)^{n}\cos(n\arccos x)=(-1)^{n}\Tn_{n}(x)\label{eq:chebyt_negx}
+\tn_{n}(-x) & =(-1)^{n}\cos(n\arccos x)=(-1)^{n}\tn_{n}(x)\label{eq:chebyt_negx}
 \end{align}
 
 \end_inset
@@ -986,7 +986,7 @@ Die Form des Polynoms kann deshalb folgendermaßen angenommen werden.
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Tn_{n}(x)=\begin{cases}
+\tn_{n}(x)=\begin{cases}
 \sum\limits _{k=0}^{n/2}c_{k}x^{2k} & \quad(n=0,2,4,\ldots)\\
 x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \quad(n=1,3,5,\ldots)
 \end{cases}\label{eq:chebyt_poly}
@@ -999,7 +999,7 @@ x\sum\limits _{k=0}^{(n-1)/2}c_{k}x^{2k} & \quad(n=1,3,5,\ldots)
 
 \begin_layout Standard
 Der Funktionsverlauf von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  ist für einige Werte 
@@ -1051,7 +1051,7 @@ name "fig:chebyt_plot"
 Tschebyscheff
 \noun default
 -Funktionen 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
 
@@ -1069,7 +1069,7 @@ Tschebyscheff
 
 \begin_layout Standard
 Die Funktionen 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  approximieren im Intervall 
@@ -1082,7 +1082,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Die Funktion 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  erfüllt im Sinne der gleichmäßigen Approximation 
@@ -1139,7 +1139,7 @@ key "Koerner:1988,Oelschlaegel:1974"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \[
-\delta_{n\,m}=\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\begin{cases}
+\delta_{n\,m}=\frac{2}{\pi}\int_{-1}^{+1}\frac{\tn_{n}(x)\tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\begin{cases}
 0 & \quad(n\neq m)\\
 1 & \quad(n=m)
 \end{cases}
@@ -1193,7 +1193,7 @@ reference "eq:chebyt_param_def"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\mperiod
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\tn_{n}(x)\tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{2}{\pi}\int_{0}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi\mperiod
 \]
 
 \end_inset
@@ -1212,7 +1212,7 @@ Durch Erweiterung des Integrationsintervalls auf
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\frac{2}{\pi}\int_{-1}^{+1}\frac{\Tn_{n}(x)\Tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\,n}
+\frac{2}{\pi}\int_{-1}^{+1}\frac{\tn_{n}(x)\tn_{m}(x)}{\sqrt{1-x^{2}}}\tic x=\frac{1}{\pi}\int_{-\pi}^{\pi}\cos(n\varphi)\cos(m\varphi)\tic\varphi=\delta_{m\,n}
 \]
 
 \end_inset
@@ -1286,7 +1286,7 @@ reference "eq:chebyt_param_def"
 \end_inset
 
  von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  zu bestimmen.
@@ -1295,7 +1295,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Imaginäre (oder komplexe) Nullstellen existieren nicht, da 
-\begin_inset Formula $\Tn_{n}(\ji x)=\cosh(n\arcosh|x|)$
+\begin_inset Formula $\tn_{n}(\ji x)=\cosh(n\arcosh|x|)$
 \end_inset
 
  die x-Achse niemals schneidet.
@@ -1361,7 +1361,7 @@ Die Anzahl der Nullstellen deckt sich außerdem ausgezeichnet mit dem Grad
 \end_inset
 
  des Polynoms 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  in Gleichung
@@ -1583,7 +1583,7 @@ key "Haemmerlin:1992"
 
 \begin_layout Standard
 Die Linearfaktordarstellung des Polynoms 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  kann mit dieser Erkenntnis und dem schon bekannten Leitkoeffizienten 
@@ -1601,7 +1601,7 @@ Die Linearfaktordarstellung des Polynoms
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\Tn_{n}(x) & =2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})\\
+\tn_{n}(x) & =2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})\\
  & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x-\zn{x}{k})(x+\zn{x}{k})\\
  & =2^{n-1}x\prod_{k=1}^{(n-1)/2}(x^{2}-\zn[2]{x}{k})
 \end{align*}
@@ -1622,7 +1622,7 @@ Für gerades
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}(x^{2}-\zn[2]{x}{k})\mperiod
+\tn_{n}(x)=2^{n-1}\prod_{k=1}^{n/2}(x^{2}-\zn[2]{x}{k})\mperiod
 \]
 
 \end_inset
@@ -1710,7 +1710,7 @@ Mit der (in gleicher Art und Weise gewonnenen) Ableitung von
 
 \begin_layout Standard
 ergibt sich 
-\begin_inset Formula $\Tn'_{n}(x)$
+\begin_inset Formula $\tn'_{n}(x)$
 \end_inset
 
  zu
@@ -1719,11 +1719,11 @@ ergibt sich
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\Tn'_{n}(x) & =\tdiff{y}{x}\nonumber \\
- & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\Tn_{n}^{2}(x)}{1-\Tn_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
+\tn'_{n}(x) & =\tdiff{y}{x}\nonumber \\
+ & =\frac{n\sqrt{1-y^{2}}}{\sqrt{1-x^{2}}}=n\sqrt{\frac{1-\tn_{n}^{2}(x)}{1-\tn_{1}^{2}(x)}}\label{eq:chebyt_diff_irrat}\\
  & =\frac{n\sqrt{1-\cos^{2}(n\arccos x)}}{\sqrt{1-x^{2}}}\nonumber \\
  & =\frac{n\sin(n\arccos x)}{\sqrt{1-x^{2}}}\nonumber \\
-\Tn'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\mperiod\label{eq:chebyt_diff_trigo}
+\tn'_{n}(x) & =\frac{n\sin(n\arccos x)}{\sin(\arccos x)}\mperiod\label{eq:chebyt_diff_trigo}
 \end{align}
 
 \end_inset
@@ -1737,7 +1737,7 @@ Die Extremwerte liegen offensichtlich bei
 \end_inset
 
  wobei 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  an diesen Stellen abwechselnd die Werte 
@@ -1746,7 +1746,7 @@ Die Extremwerte liegen offensichtlich bei
 
  annimmt.
  In Polynomform kann man die Ableitung von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  recht einfach aus Formel
@@ -1766,7 +1766,7 @@ reference "eq:chebyt_poly"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\Tn'_{n}(x)=\begin{cases}
+\tn'_{n}(x)=\begin{cases}
 2x\sum\limits _{k=0}^{n/2}kc_{k}x^{2(k-1)} & \quad(n=0,2,4,\ldots)\\
 \sum\limits _{k=0}^{(n-1)/2}(2k+1)c_{k}x^{2k} & \quad(n=1,3,5,\ldots)
 \end{cases}\label{eq:chebyt_diff_explicit}
@@ -1779,11 +1779,11 @@ reference "eq:chebyt_poly"
 
 \begin_layout Standard
 Ähnlich wie 
-\begin_inset Formula $\Tn_{n}$
+\begin_inset Formula $\tn_{n}$
 \end_inset
 
  ist auch 
-\begin_inset Formula $\Tn'_{n}(x)$
+\begin_inset Formula $\tn'_{n}(x)$
 \end_inset
 
  in Abhängigkeit von 
@@ -1796,10 +1796,10 @@ reference "eq:chebyt_poly"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-\Tn'_{n}(-x) & =\frac{n\sin\left[n\arccos(-x)\right]}{\sin\left[\arccos(-x)\right]}\nonumber \\
+\tn'_{n}(-x) & =\frac{n\sin\left[n\arccos(-x)\right]}{\sin\left[\arccos(-x)\right]}\nonumber \\
  & =\frac{n\sin\left[n(\arccos x-\pi)\right]}{\sin(\arccos x-\pi)}\nonumber \\
  & =-\frac{n\sin(n\arccos x-n\pi)}{\sin(\arccos x)}\nonumber \\
-\Tn'_{n}(-x) & =\frac{n(-1)^{n+1}\sin(n\arccos x)}{\sin(\arccos x)}=(-1)^{n+1}\Tn'_{n}(x)\label{eq:chebyu_negx}
+\tn'_{n}(-x) & =\frac{n(-1)^{n+1}\sin(n\arccos x)}{\sin(\arccos x)}=(-1)^{n+1}\tn'_{n}(x)\label{eq:chebyu_negx}
 \end{align}
 
 \end_inset
@@ -1879,7 +1879,7 @@ reference "eq:chebyt_diff_irrat"
 \begin{align}
 \tdc\varphi=-\frac{\tdc x}{\sqrt{1-x^{2}}} & =-\frac{\tdc y}{n\sqrt{1-y^{2}}}\nonumber \\
 \frac{\tdc y}{n\sqrt{1-y^{2}}} & =\frac{\tdc x}{\sqrt{1-x^{2}}}\nonumber \\
-(1-x^{2})\left[\Tn'_{n}(x)\right]^{2} & =n^{2}\left[1-\Tn_{n}^{2}(x)\right]\label{eq:chebyt_deqn}
+(1-x^{2})\left[\tn'_{n}(x)\right]^{2} & =n^{2}\left[1-\tn_{n}^{2}(x)\right]\label{eq:chebyt_deqn}
 \end{align}
 
 \end_inset
@@ -1893,7 +1893,7 @@ Sie wird durch die
 Tschebyscheff
 \noun default
 -Polynome 
-\begin_inset Formula $\Tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}$
+\begin_inset Formula $\tn_{n}(x)=\sum_{k=0}^{n}a_{k}x^{k}$
 \end_inset
 
  erfüllt, deren Koeffizienten 
@@ -1931,7 +1931,7 @@ reference "eq:chebyt_roots"
 \end_inset
 
  gefolgt von Ausmultiplizieren der Linearfaktordarstellung 
-\begin_inset Formula $\Tn_{n}(x)=2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})$
+\begin_inset Formula $\tn_{n}(x)=2^{n-1}\prod_{k=1}^{n}(x-\zn{x}{k})$
 \end_inset
 
 ;
@@ -2046,7 +2046,7 @@ Tschebyscheff
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\Un_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\mperiod
+\un_{n}(x)=\frac{\sin\left[(n+1)\arccos x\right]}{\sin(\arccos x)}\mperiod
 \end{equation}
 
 \end_inset
@@ -2067,11 +2067,11 @@ reference "eq:chebyt_diff_trigo"
 \end_inset
 
  zeigt, daß es sich bei 
-\begin_inset Formula $\Un_{n}(x)$
+\begin_inset Formula $\un_{n}(x)$
 \end_inset
 
  um die erste Ableitung der Funktion 
-\begin_inset Formula $\Tn_{n+1}(x)$
+\begin_inset Formula $\tn_{n+1}(x)$
 \end_inset
 
  handelt.
@@ -2080,7 +2080,7 @@ reference "eq:chebyt_diff_trigo"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Un_{n}(x)=\frac{1}{n+1}\Tn'_{n+1}
+\un_{n}(x)=\frac{1}{n+1}\tn'_{n+1}
 \]
 
 \end_inset
@@ -2096,7 +2096,7 @@ Es handelt sich bei diesen Funktionen ebenfalls um orthogonale Polynome,
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Un_{n}(x)=2x\Un_{n-1}(x)-\Un_{n-2}(x)
+\un_{n}(x)=2x\un_{n-1}(x)-\un_{n-2}(x)
 \]
 
 \end_inset
@@ -2117,7 +2117,7 @@ reference "fig:chebyu_plot"
 \end_inset
 
  ist der Verlauf von 
-\begin_inset Formula $\Un_{n}(x)$
+\begin_inset Formula $\un_{n}(x)$
 \end_inset
 
  für unterschiedlichen Grad 
@@ -2159,7 +2159,7 @@ name "fig:chebyu_plot"
 Tschebyscheff
 \noun default
 -Funktionen 
-\begin_inset Formula $\Un_{n}(x)$
+\begin_inset Formula $\un_{n}(x)$
 \end_inset
 
 
