@@ -6690,7 +6690,7 @@ status open
 \begin_inset Formula 
 \begin{eqnarray*}
 \left[\int_{a}^{b}f(x)\,g(x)\tic x\right]^{2} & \leq & \int_{a}^{b}f^{2}(x)\tic x\,\int_{a}^{b}g^{2}(x)\tic x,\qquad x\in\mathbb{R}\\
-\left|\int_{a}^{b}f(z)\,\cjgt[g]{z}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}
+\left|\int_{a}^{b}f(z)\,\cjgt[g]{(z)}\tic x\right|^{2} & \leq & \int_{a}^{b}|f(z)|^{2}\tic z\,\int_{a}^{b}|g(z)|^{2}\tic z,\qquad z\in\mathbb{C}
 \end{eqnarray*}
 
 \end_inset
@@ -6779,7 +6779,7 @@ Energie-AKF
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "x(-t)"
-symbol "$\\cjgt[x]{t}$"
+symbol "$\\cjgt[x]{(t)}$"
 description "Konjugierte Funktion $x(-t)$ im Zeitbereich"
 
 \end_inset
@@ -7777,7 +7777,7 @@ description "Spektrale Kreuzleistungsdichte der Zufallsprozesse $\\mvec{X}(t),\\
 \begin_inset CommandInset nomenclature
 LatexCommand nomenclature
 prefix "X(-jomega)"
-symbol "$\\cjgt[X]{\\ji\\omega}$"
+symbol "$\\cjgt[X]{(\\ji\\omega)}$"
 description "Konjugiert komplexe Funktion $X(-\\ji\\omega)$ im Bildbereich"
 
 \end_inset
@@ -7788,7 +7788,7 @@ description "Konjugiert komplexe Funktion $X(-\\ji\\omega)$ im Bildbereich"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\spd_{xy}(\ji\omega)=\lim_{T\rightarrow\infty}\frac{1}{T}X(\ji\omega)\,\cjgt[Y]{\ji\omega}
+\spd_{xy}(\ji\omega)=\lim_{T\rightarrow\infty}\frac{1}{T}X(\ji\omega)\,\cjgt[Y]{(\ji\omega)}
 \]
 
 \end_inset
@@ -7915,7 +7915,7 @@ Kreuzenergiedichte
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\spd_{xy}^{(E)}(\ji\omega)=X(\ji\omega)\,\cjgt[Y]{\ji\omega}\rft\acf_{xy}^{(E)}(\tau)
+\spd_{xy}^{(E)}(\ji\omega)=X(\ji\omega)\,\cjgt[Y]{(\ji\omega)}\rft\acf_{xy}^{(E)}(\tau)
 \]
 
 \end_inset
@@ -8027,7 +8027,7 @@ tution entstehenden Ausdruck
 \end_inset
 
  oder äquivalent 
-\begin_inset Formula $\cjgt[Y]{\ji\omega}=\cjgt[\trf]{\ji\omega}\,\cjgt[X]{\ji\omega}$
+\begin_inset Formula $\cjgt[Y]{(\ji\omega)}=\cjgt[\trf]{(\ji\omega)}\,\cjgt[X]{(\ji\omega)}$
 \end_inset
 
 .
@@ -8036,7 +8036,7 @@ tution entstehenden Ausdruck
 \end_inset
 
  und 
-\begin_inset Formula $\cjgt[Y]{\ji\omega}$
+\begin_inset Formula $\cjgt[Y]{(\ji\omega)}$
 \end_inset
 
  miteinander, dann erhält man den quadratischen Amplitudengang des Systems.
@@ -8045,7 +8045,7 @@ tution entstehenden Ausdruck
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-Y(\ji\omega)\cjgt[Y]{\ji\omega} & = & \trf(\ji\omega)\cjgt[\trf]{\ji\omega}\,X(\ji\omega)\cjgt[X]{\ji\omega}\\
+Y(\ji\omega)\cjgt[Y]{(\ji\omega)} & = & \trf(\ji\omega)\cjgt[\trf]{(\ji\omega)}\,X(\ji\omega)\cjgt[X]{(\ji\omega)}\\
 \left|Y(\ji\omega)\right|^{2} & = & \left|\trf(\ji\omega)\right|^{2}\left|X(\ji\omega)\right|^{2}
 \end{eqnarray*}
 
@@ -8211,7 +8211,7 @@ description "Impulsantwort"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{xalignat*}{2}
-\trf(\ji\omega)\; & \rft\irf(t) & \cjgt[\trf]{\ji\omega}\; & \rft\cjgt[\irf]{t}=\irf(-t)
+\trf(\ji\omega)\; & \rft\irf(t) & \cjgt[\trf]{(\ji\omega)}\; & \rft\cjgt[\irf]{(t)}=\irf(-t)
 \end{xalignat*}
 
 \end_inset
@@ -8221,7 +8221,7 @@ description "Impulsantwort"
 
 \begin_layout Standard
 und immer die Beziehung 
-\begin_inset Formula $\left|\trf(\ji\omega)\right|^{2}=\trf(\ji\omega)\,\cjgt[\trf]{\ji\omega}$
+\begin_inset Formula $\left|\trf(\ji\omega)\right|^{2}=\trf(\ji\omega)\,\cjgt[\trf]{(\ji\omega)}$
 \end_inset
 
  gilt, so kann man (wieder mit dem Faltungssatz der 
