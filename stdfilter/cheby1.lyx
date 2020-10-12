@@ -215,7 +215,7 @@ key "Zverev:1967,Chen:1995,Fritzsche:1979a"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\drf(\omega)=\sigma\Tn_{n}(\omega)
+\drf(\omega)=\sigma\tn_{n}(\omega)
 \end{equation}
 
 \end_inset
@@ -225,7 +225,7 @@ key "Zverev:1967,Chen:1995,Fritzsche:1979a"
 
 \begin_layout Standard
 Man kann sich auch leicht an Hand der folgenden Definition für 
-\begin_inset Formula $\Tn_{n}(\omega)$
+\begin_inset Formula $\tn_{n}(\omega)$
 \end_inset
 
  davon überzeugen, daß die Funktion im Intervall 
@@ -294,7 +294,7 @@ key "Meinardus:1964"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}(\omega)=\begin{cases}
+\tn_{n}(\omega)=\begin{cases}
 \cos(n\arccos\omega) & \quad(\left|\omega\right|\leq1)\\
 \cosh(n\arcosh\omega) & \quad(\left|\omega\right|>1)
 \end{cases}
@@ -322,7 +322,7 @@ reference "eq:chebyt_recursiv_def"
 \end_inset
 
  für 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  im Anhang
@@ -358,7 +358,7 @@ reference "fig:chebyt_plot"
 
 ) gegeben.
  Wie spezielle Werte des Funktionsverlaufs von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  sich auf den normierten Amplitudengang nach
@@ -367,7 +367,7 @@ reference "fig:chebyt_plot"
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\Tn_{n}^{2}(\omega)}}
+\trf(\omega)=\frac{1}{\sqrt{1+\sigma^{2}\tn_{n}^{2}(\omega)}}
 \end{equation}
 
 \end_inset
@@ -629,7 +629,7 @@ Um die Verteilung der Polstellen zu bestimmen, gehen wir von der komplexen
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega)}
+\trf^{2}(\omega)=\trf(\ji\omega)\trf(-\ji\omega)=\frac{1}{1+\sigma^{2}\tn_{n}^{2}(\omega)}
 \]
 
 \end_inset
@@ -652,7 +652,7 @@ Laplace
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\lps/\ji)}\mperiod
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\tn_{n}^{2}(\lps/\ji)}\mperiod
 \]
 
 \end_inset
@@ -667,8 +667,8 @@ An den Polstellen muß der Nenner verschwinden, was heißt:
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align}
-1+\sigma^{2}\Tn_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
-\Tn_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\mperiod\label{eq:filter_cheby1_pole_cond}
+1+\sigma^{2}\tn_{n}^{2}\left(\frac{\lps}{\ji}\right) & =0\nonumber \\
+\tn_{n}\left(\frac{\lps}{\ji}\right)=\cos\left(n\arccos\frac{\lps}{\ji}\right) & =\pm\ji\frac{1}{\sigma}\mperiod\label{eq:filter_cheby1_pole_cond}
 \end{align}
 
 \end_inset

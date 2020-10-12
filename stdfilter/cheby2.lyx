@@ -283,7 +283,7 @@ Tschebyscheff
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{equation}
-\drf(\omega)=\sigma\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}
+\drf(\omega)=\sigma\frac{\tn_{n}(\omega_{s})}{\tn_{n}\left(\omega_{s}/\omega\right)}\mperiod\label{eq:filter_cheby2_chfunc}
 \end{equation}
 
 \end_inset
@@ -349,7 +349,7 @@ werte
 \end_inset
 
  an den Extremstellen von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  bestimmt (
@@ -382,7 +382,7 @@ reference "sec:cheby"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]
+A_{\textup{min}}=10\log\left[1+{\drf}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\tn_{n}^{2}(\omega_{s})\right]=10\log\left[1+\sigma^{2}\cosh^{2}(n\arcosh\omega_{s})\right]
 \]
 
 \end_inset
@@ -400,7 +400,7 @@ Die zugehörigen
 \end_inset
 
 , also bezüglich 
-\begin_inset Formula $\Tn_{n}(\omega_{s}/\omega)$
+\begin_inset Formula $\tn_{n}(\omega_{s}/\omega)$
 \end_inset
 
  an den Stellen 
@@ -513,9 +513,9 @@ Aufgrund der für
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\Tn_{n}(\omega_{s})}{\Tn_{n}\left(0\right)}=\left\{ \begin{array}{ll}
+\lim_{\omega\rightarrow\infty}\drf(\omega)=\sigma\,\frac{\tn_{n}(\omega_{s})}{\tn_{n}\left(0\right)}=\left\{ \begin{array}{ll}
 \infty & \qquad(n\textrm{ ungerade})\\
-\pm\sigma\,\Tn_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})
+\pm\sigma\,\tn_{n}(\omega_{s}) & \qquad(n\textrm{ gerade})
 \end{array}\right.
 \]
 
@@ -562,7 +562,7 @@ Laplace
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\Tn_{n}^{2}(\omega_{s})/\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\Tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\Tn_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}
+\trf(\lps)\trf(-\lps)=\frac{1}{1+\sigma^{2}\tn_{n}^{2}(\omega_{s})/\tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}=\frac{\tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)}{\tn_{n}^{2}\left(\ji\omega_{s}/\lps\right)+\sigma^{2}\tn_{n}^{2}(\omega_{s})}\label{eq:filter_cheby2_trf_laplace}
 \end{equation}
 
 \end_inset
@@ -577,7 +577,7 @@ und setzen den Zähler Null.
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0
+\tn_{n}^{2}\left(\ji\frac{\omega_{s}}{\lps}\right)=0
 \]
 
 \end_inset
@@ -611,7 +611,7 @@ reference "sec:cheby"
 \end_inset
 
 ) ist schon bekannt, daß die Nullstellen von 
-\begin_inset Formula $\Tn_{n}(x)$
+\begin_inset Formula $\tn_{n}(x)$
 \end_inset
 
  bei
@@ -736,7 +736,7 @@ reference "eq:filter_cheby2_chfunc"
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\sigma\Tn_{n}(\omega_{s})=\pm\ji\Tn_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod
+\sigma\tn_{n}(\omega_{s})=\pm\ji\tn_{n}\left(\ji\frac{\omega_{s}}{\lps}\right)\mperiod
 \]
 
 \end_inset
@@ -765,7 +765,7 @@ I Tiefpaß substituieren wir
 \end_inset
 
  und 
-\begin_inset Formula $1/\sigma'=\sigma\Tn_{n}(\omega_{s})$
+\begin_inset Formula $1/\sigma'=\sigma\tn_{n}(\omega_{s})$
 \end_inset
 
  und erhalten:
@@ -774,7 +774,7 @@ I Tiefpaß substituieren wir
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\Tn_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod
+\tn_{n}\left(\frac{\lps'}{\ji}\right)=\pm\ji\frac{1}{\sigma'}\mperiod
 \]
 
 \end_inset
@@ -866,7 +866,7 @@ sowie die Halbachsen (mit
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{xalignat}{2}
-\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\Tn_{n}(\omega_{s})\right]\right\} \mperiod
+\alpha_{H} & =\sinh\left\{ \frac{1}{n}\arsinh\left[\sigma\tn_{n}(\omega_{s})\right]\right\}  & \omega_{H} & =\cosh\left\{ \frac{1}{n}\arsinh\left[\sigma\tn_{n}(\omega_{s})\right]\right\} \mperiod
 \end{xalignat}
 
 \end_inset
