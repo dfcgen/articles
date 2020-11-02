@@ -5,6 +5,9 @@
 \textclass scrartcl
 \begin_preamble
 \renewcommand{\nomname}{Symbolverzeichnis}
+
+\newcommand{\tabvstretch} {\renewcommand{\arraystretch}{1.5}} % table/array vertical stretching
+\newcommand{\tabvnormal}  {\renewcommand{\arraystretch}{1.0}} % reset to default
 \end_preamble
 \options noprefix,reqno
 \use_default_options false
