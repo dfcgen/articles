@@ -213,7 +213,7 @@ noun{Fourier}
 \begin_layout Emph(asized)
 \begin_inset Formula 
 \begin{xalignat}{2}
-F(\ji\omega) & =\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t & f(t) & =\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\ji\omega)\expf^{\ji\omega t}\tic\omega\label{eq:fourier_transform_def}
+F(\omega) & =\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t & f(t) & =\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)\expf^{\ji\omega t}\tic\omega\label{eq:fourier_transform_def}
 \end{xalignat}
 
 \end_inset
@@ -289,7 +289,7 @@ Konvergenz!absolute
 
 \begin_layout Standard
 existiert 
-\begin_inset Formula $F(\ji\omega)$
+\begin_inset Formula $F(\omega)$
 \end_inset
 
  jedoch grundsätzlich
@@ -310,7 +310,7 @@ status collapsed
 
 \begin_layout Plain Layout
 Wegen 
-\begin_inset Formula $|F(\ji\omega)|=\left|\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|f(t)\expf^{-\ji\omega t}\right|\tic t=\int_{-\infty}^{\infty}|f(t)|\tic t$
+\begin_inset Formula $|F(\omega)|=\left|\int_{-\infty}^{\infty}f(t)\expf^{-\ji\omega t}\tic t\right|\leq\int_{-\infty}^{\infty}\left|f(t)\expf^{-\ji\omega t}\right|\tic t=\int_{-\infty}^{\infty}|f(t)|\tic t$
 \end_inset
 
 .
@@ -333,7 +333,7 @@ Für reelle Zeitfunktionen, welche sich immer in einen geraden und einen
 \begin_layout Standard
 \begin_inset Formula 
 \[
-F(\ji\omega)=2\int_{0}^{\infty}f_{g}(t)\cos(\omega t)\tic t-2\ji\int_{0}^{\infty}f_{u}(t)\sin(\omega t)\tic t\mperiod
+F(\omega)=2\int_{0}^{\infty}f_{g}(t)\cos(\omega t)\tic t-2\ji\int_{0}^{\infty}f_{u}(t)\sin(\omega t)\tic t\mperiod
 \]
 
 \end_inset
@@ -343,11 +343,11 @@ F(\ji\omega)=2\int_{0}^{\infty}f_{g}(t)\cos(\omega t)\tic t-2\ji\int_{0}^{\infty
 
 \begin_layout Standard
 Aus diesem Gund muß es sich bei 
-\begin_inset Formula $\reop F(\ji\omega)$
+\begin_inset Formula $\reop F(\omega)$
 \end_inset
 
  auch um eine gerade, bei 
-\begin_inset Formula $\imop F(\ji\omega)$
+\begin_inset Formula $\imop F(\omega)$
 \end_inset
 
  jedoch um eine ungerade Funktion handeln.
@@ -388,9 +388,9 @@ noun{Fourier}
 <lyxtabular version="3" rows="12" columns="4">
 <features rotate="0" islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
-<column alignment="center" valignment="top" width="3.5cm">
-<column alignment="center" valignment="top" width="3.5cm">
-<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="middle" width="3.75cm">
+<column alignment="center" valignment="middle" width="3.75cm">
+<column alignment="center" valignment="top" width="3.25cm">
 <row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -443,7 +443,7 @@ Linearität
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\,f(t)+b\,g(t)$
+\begin_inset Formula $af(t)+bg(t)$
 \end_inset
 
 
@@ -455,7 +455,7 @@ Linearität
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $a\,F(\omega)+b\,G(\omega)$
+\begin_inset Formula $\mtab{aF(\omega)+bG(\omega)}$
 \end_inset
 
 
@@ -904,7 +904,7 @@ Vertauschung
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2\pi f(-\omega)$
+\begin_inset Formula $\mtab{2\pi f(-\omega)}$
 \end_inset
 
 
@@ -964,9 +964,9 @@ noun{Fourier}
 <lyxtabular version="3" rows="21" columns="4">
 <features rotate="0" islongtable="true" headTopDL="true" headBottomDL="true" longtabularalignment="center">
 <column alignment="center" valignment="top" width="3cm">
-<column alignment="center" valignment="middle" width="3.5cm">
-<column alignment="center" valignment="top" width="3.5cm">
-<column alignment="center" valignment="top" width="3.5cm">
+<column alignment="center" valignment="middle" width="3.75cm">
+<column alignment="center" valignment="middle" width="3.75cm">
+<column alignment="center" valignment="top" width="3.25cm">
 <row endhead="true">
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
@@ -1019,7 +1019,7 @@ Dirac-Stoß
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\dirac(t)$
+\begin_inset Formula $\mtab{\dirac(t)}$
 \end_inset
 
 
@@ -1075,7 +1075,7 @@ Dirac-Stoß
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $2\pi\dirac(\omega)$
+\begin_inset Formula $\mtab{2\pi\dirac(\omega)}$
 \end_inset
 
 
@@ -1110,7 +1110,10 @@ Einheitssprung
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\usf(t)$
+\begin_inset Formula $\mtab{\usf(t)=\begin{cases}
+0, & t<0\\
+1, & t>0
+\end{cases}}$
 \end_inset
 
 
@@ -1166,7 +1169,10 @@ Einheitssprung
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\usf(\omega)$
+\begin_inset Formula $\mtab{\usf(\omega)=\begin{cases}
+0, & \omega<0\\
+1, & \omega>0
+\end{cases}}$
 \end_inset
 
 
@@ -1189,7 +1195,7 @@ Einheitssprung
 \begin_inset Text
 
 \begin_layout Plain Layout
-Rechteckimpuls
+Rechteck-Funktion
 \end_layout
 
 \end_inset
@@ -1198,10 +1204,10 @@ Rechteckimpuls
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\rect(t)=\begin{cases}
+\begin_inset Formula $\mtab{\rect(t)=\begin{cases}
 0, & |t|>T/2\\
-1, & |t|\leq T/2
-\end{cases}$
+1, & |t|<T/2
+\end{cases}}$
 \end_inset
 
 
@@ -1234,8 +1240,7 @@ description "Rechteckfunktion"
 \begin_inset Text
 
 \begin_layout Plain Layout
-Breite 
-\begin_inset Formula $T$
+\begin_inset Formula $T=\mtab{\int_{-\infty}^{\infty}\rect(t)\tic t}$
 \end_inset
 
 
@@ -1249,6 +1254,18 @@ Breite
 \begin_inset Text
 
 \begin_layout Plain Layout
+(Idealer Tiefpaß)
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\mtab{\frac{\omega_{0}}{2\pi}\si\frac{\omega_{0}}{2}t}$
+\end_inset
+
 
 \end_layout
 
@@ -1258,15 +1275,12 @@ Breite
 \begin_inset Text
 
 \begin_layout Plain Layout
-
-\end_layout
-
+\begin_inset Formula $\mtab{\rect(\omega)=\begin{cases}
+0, & |\omega|>\omega_{0}/2\\
+1, & |\omega|<\omega_{0}/2
+\end{cases}}$
 \end_inset
-</cell>
-<cell alignment="center" valignment="top" leftline="true" usebox="none">
-\begin_inset Text
 
-\begin_layout Plain Layout
 
 \end_layout
 
@@ -1276,6 +1290,9 @@ Breite
 \begin_inset Text
 
 \begin_layout Plain Layout
+\begin_inset Formula $\omega_{0}=\mtab{\int_{-\infty}^{\infty}\rect(\omega)\tic\omega}$
+\end_inset
+
 
 \end_layout
 
@@ -1287,7 +1304,7 @@ Breite
 \begin_inset Text
 
 \begin_layout Plain Layout
-Signumfunktion
+Signum-Funktion
 \end_layout
 
 \end_inset
@@ -1889,7 +1906,7 @@ Dirac
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\sum_{n=-\infty}^{\infty}\dirac(t-nT_{0})}$
+\begin_inset Formula $\mtab{\dcomb(t)=\sum_{n=-\infty}^{\infty}\dirac(t-nT)}$
 \end_inset
 
 
@@ -1913,7 +1930,7 @@ Dirac
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\omega_{0}=\frac{2\pi}{T_{0}}}$
+\begin_inset Formula $\mtab{\omega_{0}=\frac{2\pi}{T}}$
 \end_inset
 
 
@@ -2016,7 +2033,7 @@ Bemerkungen
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\ji\omega)\tic\omega=\frac{1}{\pi}\int_{0}^{\infty}\reop[F(\ji\omega)]\tic\omega=f(0)}$
+\begin_inset Formula $\mtab{\frac{1}{2\pi}\int_{-\infty}^{\infty}F(\omega)\tic\omega=\frac{1}{\pi}\int_{0}^{\infty}\reop[F(\omega)]\tic\omega=f(0)}$
 \end_inset
 
 
@@ -2097,7 +2114,7 @@ key "Papoulis:1962"
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\lim_{\omega\rightarrow\infty}\omega F(\ji\omega)=f(+0)}$
+\begin_inset Formula $\mtab{\lim_{\omega\rightarrow\infty}\omega F(\omega)=f(+0)}$
 \end_inset
 
 
@@ -2110,7 +2127,7 @@ key "Papoulis:1962"
 
 \begin_layout Plain Layout
 Bedingung: 
-\begin_inset Formula $F(\ji\omega)$
+\begin_inset Formula $F(\omega)$
 \end_inset
 
  konvergiert ohne Einsatz von 
@@ -2128,7 +2145,7 @@ Bedingung:
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}f^{2}(t)\tic t=\frac{1}{2\pi}\int_{-\infty}^{\infty}|F(\ji\omega)|^{2}\tic t}$
+\begin_inset Formula $\mtab{\int_{-\infty}^{\infty}[f(t)]^{2}\tic t=\frac{1}{2\pi}\int_{-\infty}^{\infty}|F(\omega)|^{2}\tic t}$
 \end_inset
 
 
