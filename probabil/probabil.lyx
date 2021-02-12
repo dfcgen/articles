@@ -1114,7 +1114,7 @@ description "Quadratischer Effektivwert der Zufallsgröße $X$"
 
 .
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
@@ -1123,7 +1123,7 @@ Der Effektivwert einer (oftmals elektrischen) Größe ist als Wurzel aus dem
 \end_inset
 
  definiert: 
-\begin_inset Formula $\tilde{X}=\sqrt{\mean(X^{2})}=\sqrt{\int_{-\infty}^{\infty}x^{2}p(x)\tic x}$
+\begin_inset Formula $\tilde{X}^{2}=\mean(X^{2})=\int_{-\infty}^{\infty}x^{2}p(x)\tic x$
 \end_inset
 
 .
@@ -3304,7 +3304,7 @@ Funktionen mehrdimensionaler Zufallsgrößen
 
 \begin_layout Standard
 Ausgehend von der eindimensionalen Transformation einer Zufallsgröße (im
- vorigen Abschnitt) läßt sich das Problem von Funktionen mehrdimensionaler
+ vorherigen Abschnitt) läßt sich das Problem von Funktionen mehrdimensionaler
  Zufallsgrößen wiefolgt formulieren:
 \end_layout
 
@@ -3690,7 +3690,35 @@ reference "eq:prob_transform_jacobian_det"
 \begin_inset Formula $\mvec{Y}$
 \end_inset
 
- sofort offensichtlich.
+ sofort offensichtlich
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "6"
+key "Papoulis:2002"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "2.5"
+key "Ross:2004"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S\\,23"
+key "Gnedenko:1958"
+
+\end_inset
+
+.
 \end_layout
 
 \begin_layout Emph(asized)
@@ -3744,19 +3772,7 @@ reference "eq:prob_transform_density_differential"
 
 \end_inset
 
- gewinnen
-\begin_inset space ~
-\end_inset
-
-
-\begin_inset CommandInset citation
-LatexCommand cite
-after "\\S\\,23"
-key "Gnedenko:1958"
-
-\end_inset
-
-.
+ gewinnen.
 \begin_inset Foot
 status collapsed
 
@@ -4546,7 +4562,7 @@ key "Gnedenko:1958"
 
 .
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Gleichgültig ob beide Zufallsgrößen abhängig oder unabhängig sind.
@@ -5205,25 +5221,7 @@ Auch diesmal ermitteln wir zuerst die Umkehrfunktionen
 \begin_inset Formula $X_{2}$
 \end_inset
 
- sowie die Radikanden.
-\begin_inset Foot
-status collapsed
-
-\begin_layout Plain Layout
-Den Verlust der halben (differentiellen) Wahrscheinlichkeit durch die 
-\begin_inset Quotes eld
-\end_inset
-
-Vorzeichen-Mehrdeutigkeit
-\begin_inset Quotes erd
-\end_inset
-
- gleichen wir später wieder aus.
-\end_layout
-
-\end_inset
-
-
+ sowie positive Radikanden.
 \end_layout
 
 \begin_layout Standard
@@ -5261,13 +5259,13 @@ tabvstretch
 \begin_layout Standard
 \begin_inset Formula 
 \[
-\left|\mvec J_{h}\right|=\left|\begin{array}{cc}
+\mvec J_{h}=\left|\begin{array}{cc}
 \mbig{\pdiff{h_{1}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{1}(\mvec{y})}{y_{2}}}\\
 \mbig{\pdiff{h_{2}(\mvec{y})}{y_{1}}} & \mbig{\pdiff{h_{2}(\mvec{y})}{y_{2}}}
 \end{array}\right|=\frac{1}{4}\left|\begin{array}{cc}
 \mbig{\sqrt{\frac{y_{2}}{y_{1}}}} & \mbig{\sqrt{\frac{y_{1}}{y_{2}}}}\\
 \mbig{\frac{1}{\sqrt{y_{1}y_{2}}}} & \mbig{-\sqrt{\frac{y_{1}}{y_{2}^{3}}}}
-\end{array}\right|=-\frac{1}{4}\left(\frac{1}{y_{2}}+y_{1}\right)
+\end{array}\right|=-\frac{1}{2y_{2}}
 \]
 
 \end_inset
@@ -5303,24 +5301,13 @@ reference "eq:prob_transform_density_multi"
 
 \end_inset
 
- an, berücksichtigen aber, daß die differentielle Wahrscheinlichkeit doppelt
- so groß ausfällt
-\begin_inset Note Note
-status open
-
-\begin_layout Plain Layout
-Einleuchtende Erklärung notwendig
-\end_layout
-
-\end_inset
-
-.
+ an.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{Y}(y_{1},y_{2})=2\left|\mvec J_{h}\right|\,p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)\,p_{X}(x_{1},x_{2})=\frac{1}{2}\left(\frac{1}{y_{2}}+y_{1}\right)p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)
+p_{Y}(y_{1},y_{2})=\left|\mvec J_{h}\right|\,p_{X}(x_{1},x_{2})=\frac{p_{X}(x_{1},x_{2})}{2y_{2}}=\frac{1}{2y_{2}}p_{X}\left(\sqrt{y_{1}y_{2}},\sqrt{\frac{y_{1}}{y_{2}}}\,\right)
 \]
 
 \end_inset
@@ -5377,7 +5364,7 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \[
-p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\frac{1}{2}\int_{-\infty}^{\infty}\left(\frac{1}{y_{2}}+y\right)p_{X}\left(\sqrt{y\,y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}
+p_{Y}(y)=\int_{-\infty}^{\infty}p_{Y}(y,y_{2})\tic y_{2}=\int_{-\infty}^{\infty}\frac{1}{2y_{2}}p_{X}\left(\sqrt{y\,y_{2}},\sqrt{\frac{y}{y_{2}}}\,\right)\tic y_{2}
 \]
 
 \end_inset
@@ -5408,7 +5395,7 @@ ie
 \end_inset
 
  und 
-\begin_inset Formula $2\,\tdc z=\tdc y_{2}\sqrt{\smash[b]{y/y_{2}}}=\tdc y_{2}\,y/z$
+\begin_inset Formula $2\,\tdc z=\tdc y_{2}\sqrt{\smash[b]{y/y_{2}}}=y/z\;\tdc{y_{2}}$
 \end_inset
 
  ergibt:
@@ -5417,68 +5404,9 @@ ie
 \begin_layout Standard
 \begin_inset Formula 
 \begin{eqnarray*}
-p_{Y}(y) & = & \int_{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1+z^{2}}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\tic z\\
- & = & \int_{-\infty}^{\infty}\frac{1+z^{2}}{z}p_{X}\left(z,y/z\right)\tic z\\
- & = & \int_{-\infty}^{\infty}\frac{p_{X}\left(z,y/z\right)}{z}\tic z+\int_{-\infty}^{\infty}z\,p_{X}\left(z,y/z\right)\tic z\mperiod
+p_{Y}(y) & = & \int_{-\infty}^{\infty}\frac{z}{y}\cdot\frac{1}{y_{2}}p_{X}\left(z,\frac{y}{z}\right)\tic z\\
+ & = & \int_{-\infty}^{\infty}z^{-1}p_{X}\left(z,y/z\right)\tic z\mperiod
 \end{eqnarray*}
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-Das zweite Integral ist aber Null, was sich durch Anwendung partieller Integrati
-on (
-\begin_inset Formula $\int uv'=uv-\int vu'$
-\end_inset
-
-) mit 
-\begin_inset Formula $u=z$
-\end_inset
-
- und 
-\begin_inset Formula $v'=p_{X}(z,y/z)$
-\end_inset
-
- zeigen läßt.
- Dabei ist zu berücksichtigen, daß mit den Integrationsgrenzen 
-\begin_inset Formula $\pm\infty$
-\end_inset
-
- die Funktion 
-\begin_inset Formula $v=\int_{-\infty}^{\infty}p_{X}(z,y/z)\tic z$
-\end_inset
-
- nur noch eine Funktion von 
-\begin_inset Formula $y$
-\end_inset
-
- ist, 
-\begin_inset ERT
-status collapsed
-
-\begin_layout Plain Layout
-
-
-\backslash
-ie
-\end_layout
-
-\end_inset
-
- bezüglich der Integration nach 
-\begin_inset Formula $\tdc z$
-\end_inset
-
- eine Konstante darstellt.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\int z\,p_{X}\left(z,y/z\right)\tic z=zv-v\int\tic z=zv-vz=0
-\]
 
 \end_inset
 
@@ -5637,7 +5565,7 @@ reference "eq:prob_continuous_prd"
 \begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
-p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\,p_{2}(y/z)}{z}\tic z\mperiod
+p_{Y}(y)=\int_{-\infty}^{\infty}\frac{p_{1}(z)\,p_{2}(y/z)}{z}\tic z\mperiod\label{eq:prob_prd_indep}
 \end{equation}
 
 \end_inset
@@ -5674,7 +5602,7 @@ reference "eq:prob_mean_func_dual"
 
 \end_inset
 
- für die Funktion einer zweidimensionalen Zufallsgröße bestimmen.
+ bestimmen.
  Dazu setzt man als Funktion 
 \begin_inset Formula $f(X_{1},X_{2})=X_{1}X_{2}$
 \end_inset
@@ -5719,7 +5647,7 @@ ie
 
 \end_inset
 
- es gibt die Faktorisierung 
+ es gibt die Zerlegung 
 \begin_inset Formula $p_{X}(x_{1},x_{2})=p_{1}(x_{1})\,p_{2}(x_{2})$
 \end_inset
 
@@ -5754,11 +5682,11 @@ und erhält als Ergebnis:
 \end_layout
 
 \begin_layout Standard
-Verschwindet der Erwartungswert des Produkts sogar überall, also gilt 
+Verschwindet der Erwartungswert des Produkts sogar überall (
 \begin_inset Formula $\mean(X_{1}X_{2})=0$
 \end_inset
 
-, dann werden die beiden Zufallsgrößen als orthogonal
+), dann werden die beiden Zufallsgrößen als orthogonal
 \begin_inset Index idx
 status collapsed
 
@@ -5785,7 +5713,7 @@ Varianz
 
 \end_inset
 
-Einsetzen von Gleichung
+In einer ganz allgemeinen Darstellung führt das Einsetzen von Gleichung
 \begin_inset space ~
 \end_inset
 
@@ -5796,7 +5724,7 @@ reference "eq:prob_continuous_prd"
 
 \end_inset
 
- in die Definitionsgleichung der Varianz (Formel
+ in die Formel
 \begin_inset space ~
 \end_inset
 
@@ -5807,35 +5735,56 @@ reference "eq:prob_continuous_var"
 
 \end_inset
 
-) führt auch hier schnell zum Ergebnis.
- Außerdem wird die im vorigen Abschnitt abgeleitete Gleichung
+ der Varianz zu:
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula 
+\[
+\var(Y)=\int_{-\infty}^{\infty}y^{2}p(y)\tic y-\mean^{2}(Y)\mperiod
+\]
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Eine weitere Vereinfachung scheint hier ohne genaue Kenntnis von 
+\begin_inset Formula $p(y)$
+\end_inset
+
+ nicht möglich --- allerdings kann man für stochastisch 
+\emph on
+unabhängige
+\emph default
+ Zufallsgrößen mit Hilfe von Formel
 \begin_inset space ~
 \end_inset
 
 
 \begin_inset CommandInset ref
 LatexCommand ref
-reference "eq:prob_prd_mean"
+reference "eq:prob_prd_indep"
 
 \end_inset
 
- sowie die Substitution 
+ (und der Substitution 
 \begin_inset Formula $w=y/u$
 \end_inset
 
- angewendet.
+) noch einen Schritt weiter gehen:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\var(Y) & =\int_{-\infty}^{\infty}y^{2}p(y)\tic y-\mean^{2}(Y)\\
- & =\int_{x=-\infty}^{\infty}y^{2}\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\,p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
+\var(Y) & =\int_{x=-\infty}^{\infty}y^{2}\:\int_{u=-\infty}^{\infty}\frac{p_{1}(u)\,p_{2}(y/u)}{u}\tdc u\tdc y-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{x=-\infty}^{\infty}y^{2}p_{2}(y/u)\tdc y\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}\frac{p_{1}(u)}{u}\int_{w=-\infty}^{\infty}w^{2}u^{3}p_{2}(w)\tdc w\tdc u-\mean^{2}(Y)\\
  & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\int_{w=-\infty}^{\infty}w^{2}p_{2}(w)\tdc w\tdc u-\mean^{2}(X_{1})\mean^{2}(X_{2})\\
  & =\int_{u=-\infty}^{\infty}u^{2}p_{1}(u)\,\left[\var(X_{2})+\mean^{2}(X_{2})\right]\tdc u-\mean^{2}(X_{1})\mean^{2}(X_{2})\\
- & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean^{2}(X_{1})\mean^{2}(X_{2})
+ & =\left[\var(X_{2})+\mean^{2}(X_{2})\right]\,\left[\var(X_{1})+\mean^{2}(X_{1})\right]-\mean^{2}(X_{1})\mean^{2}(X_{2})\mperiod
 \end{align*}
 
 \end_inset
@@ -5844,7 +5793,33 @@ reference "eq:prob_prd_mean"
 \end_layout
 
 \begin_layout Standard
-Bemerkenswert ist hierbei, daß abgesehen von mittelwertfreien Zufallsgrößen
+Nimmt man die Definition der Varianz nach Formel
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset ref
+LatexCommand ref
+reference "eq:prob_continuous_var_rms"
+
+\end_inset
+
+ hinzu, dann ist die folgende Darstellung gleichwertig:
+\end_layout
+
+\begin_layout Emph(asized)
+\begin_inset Formula 
+\begin{equation}
+\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean^{2}(X_{1})\mean^{2}(X_{2})\mperiod\label{eq:prob_prd_var}
+\end{equation}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+Für mittelwertfreie Zufallsgrößen
 \begin_inset Index idx
 status collapsed
 
@@ -5854,14 +5829,18 @@ Zufallsgrößen!mittelwertfreie
 
 \end_inset
 
-, nicht einfach die Varianzen zu multiplizieren sind.
+ (
+\begin_inset Formula $\mean(X)=0$
+\end_inset
+
+) geht es dann sogar noch etwas einfacher:
 \end_layout
 
-\begin_layout Emph(asized)
+\begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\var(X_{1}X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean^{2}(X_{1})\mean^{2}(X_{2})\label{eq:prob_prd_var}
-\end{equation}
+\[
+\var(X_{1}X_{2})=\var(X_{1})\var(X_{2})=\mean(X_{1}^{2})\mean(X_{2}^{2})\mperiod
+\]
 
 \end_inset
 
@@ -5893,7 +5872,11 @@ reference "eq:prob_continuous_rms"
 
 \end_inset
 
- kann der Effektivwert sofort angegeben werden, wenn man die Formeln
+ kann der Effektivwert (bei stochastisch 
+\emph on
+unabhängigen
+\emph default
+ Zufallsgrößen) durch Einsetzen der Formeln
 \begin_inset space ~
 \end_inset
 
@@ -5915,14 +5898,17 @@ reference "eq:prob_prd_var"
 
 \end_inset
 
- einsetzt.
+ leicht ermittelt werden.
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
 \begin{align*}
-\mean(Y^{2}) & =\var(Y)+\mean^{2}(Y)=\mean(X_{1}^{2})\mean(X_{2}^{2})\\
-\tilde{Y}^{2} & =\tilde{X}_{1}^{2}\,\tilde{X}_{2}^{2}
+\tilde{Y}^{2} & =\mean(Y^{2})\\
+ & =\var(Y)+\mean^{2}(Y)\\
+ & =\mean(X_{1}^{2})\mean(X_{2}^{2})-\mean^{2}(X_{1})\mean^{2}(X_{2})+\mean^{2}(X_{1})\mean^{2}(X_{2})\\
+ & =\mean(X_{1}^{2})\mean(X_{2}^{2})\\
+ & =\tilde{X}_{1}^{2}\tilde{X}_{2}^{2}
 \end{align*}
 
 \end_inset
@@ -5931,18 +5917,16 @@ reference "eq:prob_prd_var"
 \end_layout
 
 \begin_layout Standard
-Für den Effektivwert des Produkts 
-\begin_inset Formula $n$
-\end_inset
-
- unabhängiger Zufallsgrößen gilt dann:
+Das Ergebnis ist entsprechend wenig überraschend:
 \end_layout
 
 \begin_layout Standard
 \begin_inset Formula 
-\begin{equation}
-\tilde{Y}=\tilde{X}_{1}\tilde{X}_{2}\tilde{X}_{3}\cdots\tilde{X}_{n-1}\tilde{X}_{n}\mperiod
-\end{equation}
+\begin{align*}
+\tilde{Y} & =\tilde{X}_{1}\tilde{X}_{2}\\
+ & \mbox{\resp}\\
+\tilde{Y} & =\tilde{X}_{1}\tilde{X}_{2}\tilde{X}_{3}\cdots\tilde{X}_{n-1}\tilde{X}_{n}\mperiod
+\end{align*}
 
 \end_inset
 
@@ -6015,7 +5999,17 @@ ergodische
 \begin_inset Formula $t$
 \end_inset
 
- unabhängig sind (Stationarität) und eine ausgewählte Realisierung 
+ unabhängig sind (Stationarität
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Stationarität
+\end_layout
+
+\end_inset
+
+) und eine ausgewählte Realisierung 
 \begin_inset Formula $X(t)$
 \end_inset
 
@@ -6023,7 +6017,60 @@ ergodische
 \begin_inset Formula $\mvec{X}(t)$
 \end_inset
 
- zur Bestimmung seiner statistischen Parameter ausreicht (Ergodizität).
+ zur Bestimmung seiner statistischen Parameter ausreicht (Ergodensatz
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Ergodensatz
+\end_layout
+
+\end_inset
+
+ von 
+\noun on
+Birkhoff
+\noun default
+-
+\noun on
+Chintchin
+\noun default
+
+\begin_inset Index idx
+status collapsed
+
+\begin_layout Plain Layout
+Birkhoff-Chintchin-Theorem@
+\begin_inset ERT
+status open
+
+\begin_layout Plain Layout
+
+
+\backslash
+noun{Birkhoff-Chintchin}
+\end_layout
+
+\end_inset
+
+-Theorem
+\end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "\\S\\,57"
+key "Gnedenko:1958"
+
+\end_inset
+
+).
  Dies bedeutet unter anderem, daß alle statistischen Kenngrößen (Momente,
  wie Erwartungswert, Varianz 
 \begin_inset ERT
@@ -6057,7 +6104,7 @@ einer
 
 \begin_inset CommandInset citation
 LatexCommand cite
-key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979,Gnedenko:1958"
+key "Embree:1991,Mildenberger:1990,Kaden:1968,Kress:1979"
 
 \end_inset
 
@@ -6929,7 +6976,7 @@ Leistungsdichte!Spektrale
 \end_inset
 
 Machen wir nun einen weiteren Schritt von den Zufallsprozessen zu Zufallssignale
-n, der allerdings eher eine Notationsfrage als etwas Grundsätzliches ist.
+n, der aber eher eine Notationsfrage als etwas Grundsätzliches ist.
 \begin_inset Foot
 status collapsed
 
@@ -7214,7 +7261,7 @@ resp
 
  endlich.
 \begin_inset Foot
-status collapsed
+status open
 
 \begin_layout Plain Layout
 Man kann sich auch vorstellen, daß 
@@ -7303,6 +7350,26 @@ noun{Wiener-Chintchin}
 
 -Theorem
 \end_layout
+
+\end_inset
+
+
+\begin_inset space ~
+\end_inset
+
+
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.2"
+key "Kanasewich:1973"
+
+\end_inset
+
+, 
+\begin_inset CommandInset citation
+LatexCommand cite
+after "7.3"
+key "Schruefer:1990"
 
 \end_inset
 
