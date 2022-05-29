@@ -100,7 +100,7 @@ mathext
 status open
 
 \begin_layout Plain Layout
-Version $Id$
+TODO: Vollständig zu überarbeiten!
 \end_layout
 
 \end_inset
@@ -156,7 +156,7 @@ LatexCommand tableofcontents
 
 \begin_layout Standard
 \begin_inset Branch WITH_APPENDIX
-status collapsed
+status open
 
 \begin_layout Standard
 \begin_inset FloatList algorithm
@@ -171,27 +171,15 @@ status collapsed
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset CommandInset nomencl_print
-LatexCommand printnomenclature
-set_width "none"
-
-\end_inset
-
-
-\end_layout
-
 \begin_layout Section
-Einführung
+Einleitung
 \end_layout
 
 \begin_layout Standard
-Oft besteht die Forderung den Verlust (oder auch die Manipulation) von Daten
- mit relativ einfachen Mitteln nachzuweisen.
- Einer der häufigsten Anwendungsfälle ist die Datenübertragung, bei welcher
- die Informationen meist blockweise strukturiert sind.
- Ein bevorzugtes Verfahren für diese Aufgabe ist das sogenannte CRC (Cyclic
- Redundancy Check), welches häufig als 
+Oft besteht die Forderung eine Veränderung von blockweise strukturierten
+ Daten mit relativ einfachen Mitteln nachzuweisen.
+ Ein bevorzugtes Verfahren für diese Aufgabe ist das CRC (Cyclic Redundancy
+ Check), welches häufig auch als 
 \emph on
 Frame Check Sequence
 \emph default
@@ -199,21 +187,10 @@ Frame Check Sequence
 \emph on
 Error Detection Code
 \emph default
- (EDC) angewendet wird.
-\end_layout
-
-\begin_layout Standard
-Das CRC-Verfahren ist eine relativ leistungsfähige (als auch einfach zu
- implementierende) Methode zur Fehlererkennung.
- Grundlage bilden sogenannte zyklische Codes (ein Spezialfall der linearen
- Block-Codes), welche aus theoretischer Sicht mittlerweile hinreichend untersuch
-t sind.
- Dieser Beitrag wird die wesentlichen Eigenschaften solcher Codes präsentieren
- sowie den Zusammenhang mit dem häufig zitierten Begriff 
-\emph on
-CRC
-\emph default
- herstellen
+ (EDC) daher kommt.
+ Es handelt sich dabei um eine relativ leistungsfähige, als auch einfach
+ zu implementierende Methode zur Fehlererkennung.
+ Grundlage bilden zyklische Codes, ein Spezialfall der linearen Block-Codes
 \begin_inset space ~
 \end_inset
 
@@ -296,7 +273,7 @@ In der Sprachweise der Mathematiker auch
 \noun on
 Galois
 \noun default
--Feld genannt (
+-Körper genannt (
 \begin_inset ERT
 status collapsed
 
@@ -419,6 +396,19 @@ Bit nach links verschoben.
 \end_layout
 
 \begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Polynom-Restklassen
+\end_layout
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
 \begin_inset Formula 
 \begin{equation}
 \frac{x^{k}M(x)}{G(x)}=F(x)+\frac{R(x)}{G(x)}\label{eq:crc_base_div}
@@ -532,6 +522,48 @@ resp
 \end_inset
 
  auch Generatorpolynom genannt.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Note Note
+status open
+
+\begin_layout Plain Layout
+Jedes Codewort 
+\begin_inset Formula $C(x)$
+\end_inset
+
+ ist durch 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ teilbar:
+\end_layout
+
+\begin_layout Plain Layout
+\begin_inset Formula 
+\begin{align*}
+R(x) & =x^{k}M(x)-F(x)G(x)\\
+C(x) & =x^{k}M(x)+R(x)=F(x)G(x)
+\end{align*}
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Plain Layout
+Ist 
+\begin_inset Formula $G(x)$
+\end_inset
+
+ irreduzibel (und so quasi eine Primzahl), dann kommt man von einer Restklassena
+lgebra zu einem endlichen Körper.
+\end_layout
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
@@ -1738,7 +1770,7 @@ Werte ist es grundsätzlich kein Problem den CRC-Rest vorauszuberechnen und
 
 \begin_layout Standard
 \begin_inset Branch WITH_APPENDIX
-status collapsed
+status open
 
 \begin_layout Standard
 \start_of_appendix
@@ -1761,16 +1793,6 @@ filename "../algebra/algebra.lyx"
 LatexCommand bibtex
 bibfiles "computers,crypto,math,electrical"
 options "gerplain"
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset CommandInset index_print
-LatexCommand printindex
-type "idx"
 
 \end_inset
 
